@@ -1,0 +1,347 @@
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  h1 {
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .form-container {
+    position: fixed;
+    flex: 1;
+  }
+  .header {
+    /* position: fixed; */
+    width: 720px;
+  }
+  .table-container {
+    margin-left: calc(720px + 1rem);
+    flex: 2;
+    min-width: 600px;
+    max-width: 600px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead {
+    position: sticky;
+    top: -1px;
+  }
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: center;
+  }
+  th {
+    background-color: #ff9e25;
+  }
+  /* Appliquer un fond gris à chaque ligne impaire */
+  tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+
+  /* Appliquer un fond blanc à chaque ligne paire */
+  tbody tr:nth-child(even) {
+    background-color: white;
+  }
+  .Speedster {
+    background-color: #28d3fd;
+  }
+  .Brawler {
+    background-color: #ff5a5a;
+  }
+  .Trickster {
+    background-color: #e93fff;
+  }
+  .Defender {
+    background-color: #21e221;
+  }
+  .Common {
+    background-color: #25ffff;
+  }
+  .Rare {
+    background-color: #bb3aee;
+  }
+  .Epic {
+    background-color: #ff590d;
+  }
+  .shards-needed-close {
+    background-color: yellow;
+    color: black;
+  }
+  .shards-needed-warning {
+    background-color: red;
+    color: white;
+  }
+  .shards-needed-zero {
+    background-color: black;
+    color: white;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 200px 200px 1fr;
+    gap: .5rem;
+  }
+  label {
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    height: fit-content;
+    padding: .25rem .5rem;
+    color: white;
+  }
+  select,
+  input[type="number"],
+  input[type="text"] {
+    width: 200px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  input[type="checkbox"] {
+    margin-bottom: 5px;
+  }
+  button {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7f4caf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #4546a0;
+  }
+  .search-filter-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .search-filter-container input,
+  .search-filter-container select {
+    width: calc(20% - 10px);
+    box-sizing: border-box;
+  }
+  .level-gray {
+    background-color: #d3d3d3; /* Gris */
+    color: #000; /* Texte noir */
+  }
+  .level-light-red {
+    background-color: #ff6666; /* Rouge pâle */
+    color: #000; /* Texte noir */
+  }
+  .level-yellow {
+    background-color: #ffff00; /* Jaune */
+    color: #000; /* Texte noir */
+  }
+  .level-green {
+    background-color: #00ff00; /* Vert */
+    color: #000; /* Texte noir */
+  }
+  .level-light-blue {
+    background-color: #00ffff; /* Bleu ciel */
+    color: #000; /* Texte noir */
+  }
+  .level-dark-blue {
+    background-color: #3399ff; /* Bleu foncé */
+    color: #000; /* Texte noir */
+  }
+  .level-purple {
+    background-color: #cc66ff; /* Pourpre */
+    color: #000; /* Texte noir */
+  }
+  .level-violet {
+    background-color: #9933ff; /* Violet */
+    color: #000; /* Texte noir */
+  }
+  .level-black {
+    background-color: #000; /* Noir */
+    color: #fff; /* Texte blanc */
+  }
+  .error-message {
+    padding: 2px;
+    opacity: 0;
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    white-space: pre-wrap;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.932);
+    width: fit-content;
+    align-self: center;
+  }
+  #pilotNameError, #pilotDuplicateError, #crewNameError, #crewDuplicateError {
+    opacity : 1;
+    display: none;
+  }
+  .rmj-bronze {
+    background-image: url("img/Bronze.webp");
+  }
+  .rmj-argent {
+    background-image: url("img/Silver.webp");
+  }
+  .rmj-gold {
+    background-image: url("img/Gold.webp");
+  }
+  .rmj-platine {
+    background-image: url("img/Platinum.webp");
+  }
+  .rmj-emeraude {
+    background-image: url("img/Emerald.webp");
+  }
+  .rmj-diamant {
+    background-image: url("img/Diamond.webp");
+  }
+  .rmj-champion {
+    background-image: url("img/Champion.webp");
+  }
+  .rmj-grand-champion {
+    background-image: url("img/GrandChampion.webp");
+  }
+  .rmj-ultime {
+    background-image: url("img/UltimateChampion.webp");
+  }
+  .rmj-bronze,
+  .rmj-argent,
+  .rmj-gold,
+  .rmj-platine,
+  .rmj-emeraude,
+  .rmj-diamant,
+  .rmj-champion,
+  .rmj-grand-champion,
+  .rmj-ultime {
+    height: 50px; /* Ajustez selon les besoins */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #goal {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  .upgradeCoin {
+    background-image: url("img/Upgrade Coins.webp");
+  }
+  .star {
+    background-image: url("img/Star.webp");
+  }
+  th.star,
+  td.star,
+  th.upgradeCoin,
+  td.upgradeCoin {
+    /* width: 100%; */
+    min-width: 60px; /* Adjust width based on desired image size */
+    height: 60px; /* Adjust height to match */
+  }
+  .star,
+  .upgradeCoin {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px; /* Match the height of .upgradeCoin */
+    height: 50px; /* Set the height to match the aspect ratio or adjust as needed */
+    margin: 0 auto; /* Center the image within the cell */
+  }
+  .display {
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    width: auto; /* Ajustement automatique de la largeur en fonction du texte */
+    background-color: #4caf50;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  .display.active {
+    background-color: rgb(223, 85, 85);
+    color: white;
+  }
+  .display.active:hover {
+    background-color: black; /* Couleur de fond au survol pour les boutons actifs */
+    color: white; /* Couleur du texte au survol pour les boutons actifs */
+  }
+  summary {
+    cursor: pointer;
+    color: white;
+    background-color: #0002;
+    width: fit-content;
+    padding: 5px;
+  }
+  .escape {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  #pilotSubmitBtn, #crewSubmitBtn {
+    width: fit-content;
+  }
+  #settings {
+    padding: 0;
+    display: grid;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  #settingsPanel {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+  }
+  
+  #settingsPanel div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+    border-radius: 10px;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  #settingsPanel div label {
+    background-color: #00000086;
+  }
+
+  #settingsPanel div button, #settingsPanel div select {
+    height: max-content;
+    width: max-content;
+  }
