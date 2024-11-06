@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
     <title>Disney Speedstorm Tracker</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/icon.png" />
@@ -205,6 +204,16 @@
                   id="togglePilotBox"
                   class="display"
                   data-trad="hide_box"
+                ></button>
+                <button
+                  id="togglePilotShardNextLevel"
+                  class="display active"
+                  data-trad="hide_shards_next_level"
+                ></button>
+                <button
+                  id="togglePilotCoinLevel"
+                  class="display active"
+                  data-trad="hide_coins_next_level"
                 ></button>
               </div>
             </details>
@@ -441,16 +450,21 @@
               <th data-trad="rarity"></th>
               <th data-trad="role"></th>
               <th data-trad="pilot_name_table"></th>
-              <th class="star"></th>
-              <th data-trad="current_shards_table"></th>
-              <th data-trad="current_level_table"></th>
-              <th data-trad="current_MPR_table"></th>
-              <th data-trad="highest_MPR_table"></th>
+              <th data-sort="currentStars" class="star"></th>
+              <th
+                data-sort="currentShards"
+                data-trad="current_shards_table"
+              ></th>
+              <th data-sort="currentLevel" data-trad="current_level_table"></th>
+              <th data-sort="currentRMJ" data-trad="current_MPR_table"></th>
+              <th data-sort="highestRMJ" data-trad="highest_MPR_table"></th>
               <th data-trad="max_MPR_table"></th>
               <th data-trad="shards_needed_table"></th>
               <th data-trad="shards_MPR_table"></th>
               <th class="upgradeCoin"></th>
               <th data-trad="free_table"></th>
+              <th data-trad="shards_to_next_star" style="display: none"></th>
+              <th data-trad="coins_to_next_star" style="display: none"></th>
               <th data-trad="actions"></th>
             </tr>
           </thead>

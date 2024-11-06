@@ -3,9 +3,12 @@ import {
   calculateCoinsNeeded,
   calculatePilotShardsToGet,
   calculateTotal,
+  calculatePilotShardsNextStar,
 } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
+
+const pilotTableBody = document.getElementById("pilotTableBody");
 const pilotSearchInput = document.getElementById("pilotSearchInput");
 
 // Fonction pour ajouter un pilote à la table
@@ -14,6 +17,11 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const shardsNeeded = calculatePilotShardsNeeded(
     pilot.currentLevel,
     pilot.currentShards
+  );
+  const shardsToNextStar = calculatePilotShardsNextStar(
+    pilot.currentLevel,
+    pilot.currentShards,
+    pilot.currentStars
   );
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
@@ -96,6 +104,8 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
           <td class="${shardsClass}">${shardsToGet}</td>
           <td>${coinsNeeded}</td>
           <td>${pilot.universalBox ? "✔️" : "❌"}</td>
+          <td style="display: none;">${shardsToNextStar}</td>
+          <td style="display: none;">???</td>
           <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
       `;
   pilotTableBody.appendChild(row);
@@ -128,7 +138,7 @@ function savePilotData(pilot, editingPilotIndex) {
 }
 
 // fonction pour ordonner les pilotes automatiquement selon l'ordre du fichier pilots_blank
-function sortPilots() {
+function sortPilotsBlank() {
   // load pilots
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   let orderedPilots = {};
@@ -247,7 +257,7 @@ function submitPilotForm(
       old: pilot.old ? true : false,
     };
     savePilotData(editPilot, editingPilotIndex);
-    sortPilots();
+    sortPilotsBlank();
     updatePilotFormFranchise(lang);
     pilotTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
     addPilotsToTable(lang, pilotTableBody);
@@ -482,8 +492,23 @@ function filterPilotTable(lang) {
   });
 }
 
+export function sortPilotsByColumn(column, order) {
+  // load pilots
+  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+
+  pilots.sort((pilotA, pilotB) => {
+    if (order === "asc") return pilotA[column] - pilotB[column];
+    return pilotB[column] - pilotA[column];
+  });
+  localStorage.setItem("pilots", JSON.stringify(pilots));
+}
+
+export function emptyPilotsTable() {
+  pilotTableBody.innerHTML = "";
+}
+
 export {
-  sortPilots,
+  sortPilotsBlank,
   populatePilotForm,
   updatePilotFormFranchise,
   addPilotsToTable,

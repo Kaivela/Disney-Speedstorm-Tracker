@@ -12,6 +12,9 @@ const coinsCosts = [
   5700, 6200, 6700, 7300, 8000, 8900, 10000,
 ];
 
+// Définir le passage de star pour les pilotes
+const starLevel = [20, 30, 40, 50];
+
 // Définir les upgrade coins rewards en RMJ pour chaque Rang (OLD PILOTS)
 const rmjOldCoinsReward = [
   0, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0, 300,
@@ -68,4 +71,5 @@ export {
   rmjCosmeticReward,
   normalCrewShardCost,
   epicCrewShardCost,
+  starLevel,
 };

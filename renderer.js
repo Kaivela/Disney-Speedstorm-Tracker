@@ -15,7 +15,9 @@ import {
   addPilotsToTable,
   submitPilotForm,
   filterPilotTable,
-  sortPilots,
+  sortPilotsBlank,
+  emptyPilotsTable,
+  sortPilotsByColumn,
 } from "./pilotTable.js";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
@@ -24,7 +26,7 @@ import { createGetTrad, translate } from "./trad.js";
 let getTrad = createGetTrad("fr");
 
 let theme = "";
-let lang = "fr";
+let lang = "en";
 let mode = "pilot";
 let goal = 40;
 let levelGoal = 50;
@@ -72,6 +74,10 @@ const togglePilotShardNeeded = document.getElementById(
 const togglePilotShardMPR = document.getElementById("togglePilotShardMPR");
 const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
 const togglePilotBox = document.getElementById("togglePilotBox");
+const togglePilotShardLevel = document.getElementById(
+  "togglePilotShardNextLevel"
+);
+const togglePilotCoinLevel = document.getElementById("togglePilotCoinLevel");
 const toggleCrewImage = document.getElementById("toggleCrewImage");
 const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
 const toggleCrewRarity = document.getElementById("toggleCrewRarity");
@@ -85,8 +91,31 @@ const toggleCrewBox = document.getElementById("toggleCrewBox");
 const pilotSearchInput = document.getElementById("pilotSearchInput");
 const goalSelect = document.getElementById("goalSelect");
 const levelGoalSelect = document.getElementById("levelGoalSelect");
+const sortButtons = document.querySelectorAll("th[data-sort]");
 let editingPilotIndex = null; // Pour suivre quel pilote est en cours de modification
 let editingCrewIndex = null; // Pour suivre quel equipier est en cours de modification
+
+function bindSortButtons() {
+  sortButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      sortButtons.forEach((b) => {
+        if (b !== button) b.dataset.order = "default";
+      });
+      const column = button.dataset.sort;
+      const currentOrder = button.dataset.order || "default";
+      const nextOrder = {
+        default: "desc",
+        desc: "asc",
+        asc: "default",
+      }[currentOrder];
+      button.dataset.order = nextOrder;
+      if (nextOrder === "default") sortPilotsBlank();
+      else sortPilotsByColumn(column, nextOrder);
+      emptyPilotsTable();
+      addPilotsToTable(lang, pilotTableBody /*, goal */);
+    });
+  });
+}
 
 //Fonction pour changer de language
 function changeLang() {
@@ -204,21 +233,29 @@ saveButton.addEventListener("click", () => saveSettings());
 settingsButton.addEventListener("click", () => openSettings());
 
 // Gérer l'affichage des colonnes pour les Pilots
-togglePilotImage.addEventListener("click", () => togglePilotColumn(0));
-togglePilotFranchise.addEventListener("click", () => togglePilotColumn(1));
-togglePilotRarity.addEventListener("click", () => togglePilotColumn(2));
-togglePilotRole.addEventListener("click", () => togglePilotColumn(3));
-togglePilotName.addEventListener("click", () => togglePilotColumn(4));
-togglePilotStar.addEventListener("click", () => togglePilotColumn(5));
-togglePilotCurrentShard.addEventListener("click", () => togglePilotColumn(6));
-togglePilotLevel.addEventListener("click", () => togglePilotColumn(7));
-togglePilotCurrentMPR.addEventListener("click", () => togglePilotColumn(8));
-togglePilotHighestMPR.addEventListener("click", () => togglePilotColumn(9));
-togglePilotGrade.addEventListener("click", () => togglePilotColumn(10));
-togglePilotShardNeeded.addEventListener("click", () => togglePilotColumn(11));
-togglePilotShardMPR.addEventListener("click", () => togglePilotColumn(12));
-togglePilotUpgrade.addEventListener("click", () => togglePilotColumn(13));
-togglePilotBox.addEventListener("click", () => togglePilotColumn(14));
+togglePilotImage.addEventListener("click", (e) => togglePilotColumn(0, e));
+togglePilotFranchise.addEventListener("click", (e) => togglePilotColumn(1, e));
+togglePilotRarity.addEventListener("click", (e) => togglePilotColumn(2, e));
+togglePilotRole.addEventListener("click", (e) => togglePilotColumn(3, e));
+togglePilotName.addEventListener("click", (e) => togglePilotColumn(4, e));
+togglePilotStar.addEventListener("click", (e) => togglePilotColumn(5, e));
+togglePilotCurrentShard.addEventListener("click", (e) =>
+  togglePilotColumn(6, e)
+);
+togglePilotLevel.addEventListener("click", (e) => togglePilotColumn(7, e));
+togglePilotCurrentMPR.addEventListener("click", (e) => togglePilotColumn(8, e));
+togglePilotHighestMPR.addEventListener("click", (e) => togglePilotColumn(9, e));
+togglePilotGrade.addEventListener("click", (e) => togglePilotColumn(10, e));
+togglePilotShardNeeded.addEventListener("click", (e) =>
+  togglePilotColumn(11, e)
+);
+togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(12, e));
+togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(13, e));
+togglePilotBox.addEventListener("click", (e) => togglePilotColumn(14, e));
+togglePilotShardLevel.addEventListener("click", (e) =>
+  togglePilotColumn(15, e)
+);
+togglePilotCoinLevel.addEventListener("click", (e) => togglePilotColumn(16, e));
 
 // Gérer l'affichage des colonnes pour les Crew
 toggleCrewImage.addEventListener("click", () => toggleCrewColumn(0));
@@ -303,7 +340,7 @@ function download(filename, text) {
 }
 
 // Fonction pour afficher / masquer une colonne du tableau pilot
-function togglePilotColumn(index) {
+function togglePilotColumn(index, event) {
   const table = document.getElementById("pilotTable");
   const rows = table.rows;
   const isHidden = rows[0].cells[index].style.display === "none";
@@ -467,6 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mergePilotsAndCrews();
   updatePilotFormFranchise(lang);
   updateCrewFormFranchise(lang);
+  sortPilotsBlank();
   addPilotsToTable(lang, pilotTableBody);
   addCrewsToTable(lang, crewTableBody);
   updateFilterOptions(lang);
@@ -477,6 +515,6 @@ document.addEventListener("DOMContentLoaded", () => {
   switchTheme();
   bindSettingsEvents();
   loadSettings();
-  sortPilots();
   sortCrews();
+  bindSortButtons();
 });

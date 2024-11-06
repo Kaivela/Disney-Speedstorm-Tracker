@@ -9,6 +9,7 @@ import {
   rmjCosmeticReward,
   normalCrewShardCost,
   epicCrewShardCost,
+  starLevel,
 } from "./data/data.js";
 import { createGetTrad } from "./trad.js";
 
@@ -25,6 +26,28 @@ function calculatePilotShardsNeeded(currentLevel, currentShards) {
   return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
 }
 
+// Fonction pour calculer les shards nécéssaires pour gagner la prochaine star
+function calculatePilotShardsNextStar(
+  currentLevel,
+  currentShards,
+  currentStars
+) {
+  let shardsToNextStar = 0;
+  let nextStarLevel = starLevel[currentStars - 1];
+  if (currentStars === 0) {
+    shardsToNextStar = 10 - currentShards;
+  }
+  if (1 <= currentStars < 5) {
+    for (let level = currentLevel + 1; level <= nextStarLevel; level++) {
+      if (level <= pilotShardCosts.length) {
+        shardsToNextStar += pilotShardCosts[level - 1];
+      }
+    }
+
+    return Math.max(shardsToNextStar - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
+  }
+}
+
 // Fonction pour calculer les coins nécessaires en fonction du niveau actuel
 function calculateCoinsNeeded(currentLevel) {
   let totalCoinsNeeded = 0;
@@ -38,7 +61,7 @@ function calculateCoinsNeeded(currentLevel) {
   return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-// Fonction pour calculer les coins nécessaires en fonction du niveau actuel
+// Fonction pour calculer les coins nécessaires pour le goal en fonction du niveau actuel
 function calculateCoinsNeededForGoal(currentLevel, levelGoal) {
   let totalCoinsNeeded = 0;
   for (let level = currentLevel + 1; level <= levelGoal; level++) {
@@ -278,6 +301,7 @@ function calculateTotal(lang, goal, levelGoal) {
 
 export {
   calculatePilotShardsNeeded,
+  calculatePilotShardsNextStar,
   calculateCoinsNeeded,
   calculateCoinsNeededForGoal,
   calculatePilotShardsToGet,

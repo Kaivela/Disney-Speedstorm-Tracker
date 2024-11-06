@@ -41,6 +41,8 @@
     "pilot_name_table": "Pilot Name",
     "free_table": "Free",
     "shards_needed_table": "Shards needed",
+    "shards_to_next_star": "Shards to next star",
+    "coins_to_next_star": "Coins to next star",
     "current_MPR_table": "Current MPR",
     "highest_MPR_table": "Highest MPR",
     "max_MPR_table": "Max MPR Grade",
@@ -83,6 +85,8 @@
     "modify": "Modify",
 
     "hide": "Hide column",
+    "hide_coins_next_level": "Coins Level",
+    "hide_shards_next_level": "Shards Level",
     "hide_box": "Box",
     "hide_upgrade": "Upgrade",
     "hide_shards_needed": "Shards Needed",

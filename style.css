@@ -272,6 +272,25 @@
     height: 50px; /* Set the height to match the aspect ratio or adjust as needed */
     margin: 0 auto; /* Center the image within the cell */
   }
+  th[data-sort] {
+    cursor: pointer;
+  }
+  th[data-order="asc"], th[data-order="desc"] {
+    position: relative;
+  }
+  th[data-order="asc"]::after {
+    position: absolute;
+    content: " ▲";
+    bottom: 0;
+    right: 0;
+    
+  }
+  th[data-order="desc"]::after {
+    position: absolute;
+    content: " ▼";
+    bottom: 0;
+    right: 0;
+  }
   .display {
     padding: 4px 8px;
     font-size: 14px;
