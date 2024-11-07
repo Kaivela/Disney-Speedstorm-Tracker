@@ -486,7 +486,7 @@ function loadSettings() {
   goal = settings.goal || 40;
   goalSelect.value = goal;
 
-  lang = settings.lang || "fr";
+  lang = settings.lang || "en";
   translate(lang);
 
   levelGoal = settings.levelGoal || 50;
