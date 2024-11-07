@@ -61,6 +61,21 @@ function calculateCoinsNeeded(currentLevel) {
   return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
+// Fonction pour calculer les coins nécessaires pour gagner la prochaine star
+function calculateCoinsNextStar(currentLevel, currentStars) {
+  let coinsNextStar = 0;
+  let nextStarLevel = starLevel[currentStars - 1];
+  if (1 <= currentStars < 5) {
+    for (let level = currentLevel + 1; level <= nextStarLevel; level++) {
+      if (level <= coinsCosts.length) {
+        coinsNextStar += coinsCosts[level - 1];
+      }
+    }
+
+    return Math.max(coinsNextStar, 0); // Assure que les coins nécessaires ne sont pas négatifs
+  }
+}
+
 // Fonction pour calculer les coins nécessaires pour le goal en fonction du niveau actuel
 function calculateCoinsNeededForGoal(currentLevel, levelGoal) {
   let totalCoinsNeeded = 0;
@@ -307,4 +322,5 @@ export {
   calculatePilotShardsToGet,
   calculateCrewShardsNeeded,
   calculateTotal,
+  calculateCoinsNextStar,
 };

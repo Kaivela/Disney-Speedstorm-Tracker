@@ -4,6 +4,7 @@ import {
   calculatePilotShardsToGet,
   calculateTotal,
   calculatePilotShardsNextStar,
+  calculateCoinsNextStar,
 } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
@@ -21,6 +22,10 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const shardsToNextStar = calculatePilotShardsNextStar(
     pilot.currentLevel,
     pilot.currentShards,
+    pilot.currentStars
+  );
+  const coinsToNextStar = calculateCoinsNextStar(
+    pilot.currentLevel,
     pilot.currentStars
   );
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
@@ -105,7 +110,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
           <td>${coinsNeeded}</td>
           <td>${pilot.universalBox ? "✔️" : "❌"}</td>
           <td style="display: none;">${shardsToNextStar}</td>
-          <td style="display: none;">???</td>
+          <td style="display: none;">${coinsToNextStar}</td>
           <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
       `;
   pilotTableBody.appendChild(row);
