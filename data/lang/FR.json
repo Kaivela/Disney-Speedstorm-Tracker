@@ -85,8 +85,8 @@
     "modify": "Modifier",
 
     "hide": "Masquer colonne",
-    "hide_coins_next_level": "Pièces Niveau",
-    "hide_shards_next_level": "Eclats Niveau",
+    "hide_coins_next_star": "Pièces Etoile",
+    "hide_shards_next_star": "Eclats Etoile",
     "hide_box": "Boite",
     "hide_upgrade": "Amélioration",
     "hide_shards_needed": "Eclat restant",

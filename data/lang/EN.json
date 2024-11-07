@@ -85,8 +85,8 @@
     "modify": "Modify",
 
     "hide": "Hide column",
-    "hide_coins_next_level": "Coins Level",
-    "hide_shards_next_level": "Shards Level",
+    "hide_coins_next_star": "Coins star",
+    "hide_shards_next_star": "Shards star",
     "hide_box": "Box",
     "hide_upgrade": "Upgrade",
     "hide_shards_needed": "Shards Needed",

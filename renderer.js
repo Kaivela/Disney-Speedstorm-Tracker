@@ -74,10 +74,10 @@ const togglePilotShardNeeded = document.getElementById(
 const togglePilotShardMPR = document.getElementById("togglePilotShardMPR");
 const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
 const togglePilotBox = document.getElementById("togglePilotBox");
-const togglePilotShardLevel = document.getElementById(
-  "togglePilotShardNextLevel"
+const togglePilotShardStar = document.getElementById(
+  "togglePilotShardNextStar"
 );
-const togglePilotCoinLevel = document.getElementById("togglePilotCoinLevel");
+const togglePilotCoinStar = document.getElementById("togglePilotCoinStar");
 const toggleCrewImage = document.getElementById("toggleCrewImage");
 const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
 const toggleCrewRarity = document.getElementById("toggleCrewRarity");
@@ -252,10 +252,8 @@ togglePilotShardNeeded.addEventListener("click", (e) =>
 togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(12, e));
 togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(13, e));
 togglePilotBox.addEventListener("click", (e) => togglePilotColumn(14, e));
-togglePilotShardLevel.addEventListener("click", (e) =>
-  togglePilotColumn(15, e)
-);
-togglePilotCoinLevel.addEventListener("click", (e) => togglePilotColumn(16, e));
+togglePilotShardStar.addEventListener("click", (e) => togglePilotColumn(15, e));
+togglePilotCoinStar.addEventListener("click", (e) => togglePilotColumn(16, e));
 
 // Gérer l'affichage des colonnes pour les Crew
 toggleCrewImage.addEventListener("click", () => toggleCrewColumn(0));
