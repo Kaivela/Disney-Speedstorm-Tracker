@@ -56,7 +56,16 @@
     <div class="main-container">
       <div class="form-container">
         <div class="header">
-          <button id="buttonMode" data-trad="Pilots"></button>
+          <div>
+            <button id="buttonMode" data-trad="Pilots"></button>
+            <button id="pilotDownloadJSON">Export racer.json</button>
+            <button id="pilotImportJSON">Import racer.json</button>
+          </div>
+          <div>
+            <button id="crewMode" data-trad="Crews"></button>
+            <button id="crewDownloadJSON">Export .json</button>
+            <button id="crewImportJSON">Import .json</button>
+          </div>
 
           <div id="goal">
             <div class="calcul">
@@ -108,11 +117,9 @@
               <select id="pilotRarityFilter" class="pilotFilter"></select>
               <select id="roleFilter" class="pilotFilter"></select>
               <select id="pilotShardsFilter" class="pilotFilter"></select>
-              <select id="pilotBoxesFilter" class="pilotFilter"></select>
               <select id="rmjFilter" class="pilotFilter"></select>
               <select id="levelFilter" class="pilotFilter"></select>
-              <button id="pilotDownloadJSON">Export .json</button>
-              <button id="pilotImportJSON">Import .json</button>
+              <select id="pilotBoxesFilter" class="pilotFilter"></select>
             </div>
             <!-- Conteneur pour la recherche et les filtres des Equipiers -->
             <div
@@ -126,8 +133,6 @@
               <select id="crewStarsFilter" class="crewFilter"></select>
               <select id="crewShardsFilter" class="crewFilter"></select>
               <select id="crewBoxesFilter" class="crewFilter"></select>
-              <button id="crewDownloadJSON">Export .json</button>
-              <button id="crewImportJSON">Import .json</button>
             </div>
           </div>
 
