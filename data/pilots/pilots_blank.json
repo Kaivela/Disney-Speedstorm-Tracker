@@ -960,5 +960,18 @@
     "highestRMJ": 0,
     "universalBox": false,
     "old": false
+  },
+  {
+    "franchise": "Tangled",
+    "rarity": "Epic",
+    "role": "Defender",
+    "name": "Rapunzel",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": false,
+    "old": false
   }
 ]

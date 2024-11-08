@@ -2298,13 +2298,53 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Cruella De Vil"
+  },
+
+
+
+
+
+  {
+    "franchise": "Tangled",
+    "rarity": "Common",
+    "name": "Shorty",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Tangled",
+    "rarity": "Common",
+    "name": "Vladimir",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Tangled",
+    "rarity": "Rare",
+    "name": "Hook Hand",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Tangled",
+    "rarity": "Rare",
+    "name": "King Frederic And Queen Arianna",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Tangled",
+    "rarity": "Epic",
+    "name": "Pascal",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Rapunzel"
   }
-
-
-
-
-
-
 
 
 

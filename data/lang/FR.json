@@ -208,6 +208,7 @@
     "Sadness": "Tristesse",
     "Cruella De Vil": "Cruella D'Enfer",
     "Maleficent": "Maléfique",
+    "Rapunzel": "Raiponce",
 
     "Mickey & Friends": "Mickey et ses Amis",
     "Pirates of the Caribbean": "Pirates des Caraïbes",
@@ -226,6 +227,7 @@
     "Inside Out": "Vice-Versa",
     "101 Dalmatians": "101 Dalmatiens",
     "Sleeping Beauty": "La Belle Au Bois Dormant",
+    "Tangled": "Raiponce",
 
     "Tanglefoot": "Pieds-Mêlés",
     "Clara Cluck": "Clara Cluck",
@@ -476,5 +478,10 @@
     "Goon Leader": "Chef Sbire",
     "King Hubert": "Le Roi Hubert",
     "King Stefan": "Le Roi Stéphane",
-    "Diablo": "Diablo"
+    "Diablo": "Diablo",
+    "Shorty": "Le Satyre",
+    "Vladimir": "Vladimir",
+    "Hook Hand": "Le Crochet",
+    "King Frederic And Queen Arianna": "Le Roi Frédéric Et La Reine Arianna",
+    "Pascal": "Pascal"
 }
