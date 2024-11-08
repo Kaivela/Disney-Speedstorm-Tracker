@@ -286,15 +286,19 @@ function updateFilterOptions(lang) {
   });
 
   crewStarsFilter.innerHTML =
-    '<option value="" data-trad="stars_filter">' +
-    getTrad("stars_filter") +
+    '<option value="" data-trad="level_filter">' +
+    getTrad("level_filter") +
     "</option>";
-  crewStars.forEach((currentStars) => {
-    const option = document.createElement("option");
-    option.value = currentStars;
-    option.textContent = currentStars;
-    crewStarsFilter.appendChild(option);
-  });
+  if (crewStars.length > 0) {
+    for (let level = 0; level <= 5; level++) {
+      if (crewStars.some((value) => value === level)) {
+        const option = document.createElement("option");
+        option.value = level.toString();
+        option.textContent = level.toString();
+        crewStarsFilter.appendChild(option);
+      }
+    }
+  }
 
   crewShardsFilter.innerHTML =
     '<option value="" data-trad="shards_needed_filter">' +

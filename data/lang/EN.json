@@ -27,8 +27,8 @@
     "select_theme": "Select a Theme",
     
     "search_placeholder": "Search...",
-    "level_filter": "Filter per Level",
-    "MPR_filter": "Filter per MPR",
+    "level_filter": "All level",
+    "MPR_filter": "All MPR",
     "box_filter": "Universal Box",
     "shards_needed_filter": "Shards Needed",
     "role_filter": "All roles",

@@ -27,8 +27,8 @@
     "select_theme": "Changer le Thème",
     
     "search_placeholder": "Rechercher...",
-    "level_filter": "Trier par Niveau",
-    "MPR_filter": "Trier par RMJ",
+    "level_filter": "Tous les niveau",
+    "MPR_filter": "Tous les RMJ",
     "box_filter": "Boite Universelle",
     "shards_needed_filter": "Eclat nécéssaire",
     "role_filter": "Tous les rôles",
