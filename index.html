@@ -56,15 +56,25 @@
     <div class="main-container">
       <div class="form-container">
         <div class="header">
-          <div>
-            <button id="buttonMode" data-trad="Pilots"></button>
-            <button id="pilotDownloadJSON">Export racer.json</button>
-            <button id="pilotImportJSON">Import racer.json</button>
-          </div>
-          <div>
+          <div style="display: flex; justify-content: space-around">
+            <button
+              style="background-color: greenyellow; color: black"
+              id="buttonMode"
+              data-trad="Pilots"
+            ></button>
             <button id="crewMode" data-trad="Crews"></button>
-            <button id="crewDownloadJSON">Export .json</button>
-            <button id="crewImportJSON">Import .json</button>
+            <button style="background-color: black" id="pilotDownloadJSON">
+              Export racers.json
+            </button>
+            <button style="background-color: black" id="pilotImportJSON">
+              Import racers.json
+            </button>
+            <button style="display: none" id="crewDownloadJSON">
+              Export crews.json
+            </button>
+            <button style="display: none" id="crewImportJSON">
+              Import crews.json
+            </button>
           </div>
 
           <div id="goal">
@@ -264,37 +274,46 @@
         </div>
         <!-- pilot form -->
         <form novalidate id="pilotForm">
-          <label for="pilotFranchise">Franchise:</label>
-          <div style="display: flex; flex-direction: column">
+          <label style="display: none" for="pilotFranchise">Franchise:</label>
+          <div style="display: none; flex-direction: column">
             <input type="text" id="pilotFranchise" required />
             <select id="pilotFranchise2" required></select>
           </div>
           <div
+            style="display: none"
             id="pilotFranchiseError"
             class="error-message"
             data-trad="pilot_franchise_error"
           ></div>
 
-          <label for="pilotRarity" data-trad="rarity_form"></label>
-          <select id="pilotRarity" required>
+          <label
+            style="display: none"
+            for="pilotRarity"
+            data-trad="rarity_form"
+          ></label>
+          <select style="display: none" id="pilotRarity" required>
             <option value="Common" data-trad="Common"></option>
             <option value="Rare" data-trad="Rare"></option>
             <option value="Epic" data-trad="Epic"></option>
           </select>
-          <span></span>
+          <span style="display: none"></span>
 
-          <label for="role" data-trad="role"></label>
-          <select id="role" required>
+          <label style="display: none" for="role" data-trad="role"></label>
+          <select style="display: none" id="role" required>
             <option value="Speedster" data-trad="Speedster"></option>
             <option value="Brawler" data-trad="Brawler"></option>
             <option value="Trickster" data-trad="Trickster"></option>
             <option value="Defender" data-trad="Defender"></option>
           </select>
-          <span></span>
+          <span style="display: none"></span>
 
-          <label for="pilotName" data-trad="pilot_name_form"></label>
-          <input type="text" id="pilotName" required />
-          <div>
+          <label
+            style="display: none"
+            for="pilotName"
+            data-trad="pilot_name_form"
+          ></label>
+          <input style="display: none" type="text" id="pilotName" required />
+          <div style="display: none">
             <div
               id="pilotNameError"
               class="error-message"
@@ -362,11 +381,16 @@
             data-trad="highest_mpr_error"
           ></div>
 
-          <label for="pilotUniversalBox" data-trad="universal_box_form"></label>
-          <input type="checkbox" id="pilotUniversalBox" />
-          <span></span>
+          <label
+            style="display: none"
+            for="pilotUniversalBox"
+            data-trad="universal_box_form"
+          ></label>
+          <input style="display: none" type="checkbox" id="pilotUniversalBox" />
+          <span style="display: none"></span>
 
           <button
+            style="display: none"
             id="pilotSubmitBtn"
             type="submit"
             data-trad="add_pilot"
@@ -374,28 +398,37 @@
         </form>
         <!-- crew form -->
         <form novalidate id="crewForm" style="display: none">
-          <label for="crewFranchise">Franchise:</label>
-          <div>
+          <label style="display: none" for="crewFranchise">Franchise:</label>
+          <div style="display: none">
             <input type="text" id="crewFranchise" required />
             <select id="crewFranchise2" required></select>
           </div>
           <div
+            style="display: none"
             id="crewFranchiseError"
             class="error-message"
             data-trad="crew_franchise_error"
           ></div>
 
-          <label for="crewRarity" data-trad="rarity_form"></label>
-          <select id="crewRarity" required>
+          <label
+            style="display: none"
+            for="crewRarity"
+            data-trad="rarity_form"
+          ></label>
+          <select style="display: none" id="crewRarity" required>
             <option value="Common" data-trad="Common"></option>
             <option value="Rare" data-trad="Rare"></option>
             <option value="Epic" data-trad="Epic"></option>
           </select>
-          <span></span>
+          <span style="display: none"></span>
 
-          <label for="crewName" data-trad="crew_name_form"></label>
-          <input type="text" id="crewName" required />
-          <div>
+          <label
+            style="display: none"
+            for="crewName"
+            data-trad="crew_name_form"
+          ></label>
+          <input style="display: none" type="text" id="crewName" required />
+          <div style="display: none">
             <div
               id="crewNameError"
               class="error-message"
@@ -408,10 +441,10 @@
             ></div>
           </div>
 
-          <label for="crewCurrentLevel" data-trad="current_level_form"></label>
-          <input type="number" id="crewCurrentLevel" min="0" max="5" required />
+          <label for="crewCurrentStars" data-trad="current_level_form"></label>
+          <input type="number" id="crewCurrentStars" min="0" max="5" required />
           <div
-            id="crewCurrentLevelError"
+            id="crewCurrentStarsError"
             class="error-message"
             data-trad="star_error"
           ></div>
@@ -433,11 +466,16 @@
             data-trad="crew_shard_error"
           ></div>
 
-          <label for="crewUniversalBox" data-trad="universal_box_form"></label>
-          <input type="checkbox" id="crewUniversalBox" />
-          <span></span>
+          <label
+            style="display: none"
+            for="crewUniversalBox"
+            data-trad="universal_box_form"
+          ></label>
+          <input style="display: none" type="checkbox" id="crewUniversalBox" />
+          <span style="display: none"></span>
 
           <button
+            style="display: none"
             id="crewSubmitBtn"
             type="submit"
             data-trad="add_crew"
