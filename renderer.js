@@ -25,8 +25,11 @@ import { createGetTrad, translate } from "./trad.js";
 
 let getTrad = createGetTrad("fr");
 
+const settingsStr = localStorage.getItem("settings");
+const settings = settingsStr ? JSON.parse(settingsStr) : {};
+
 let theme = "";
-let lang = "en";
+let lang = settings.lang || "en";
 let mode = "pilot";
 let goal = 40;
 let levelGoal = 50;
@@ -50,7 +53,8 @@ const pilotImportButton = document.getElementById("pilotImportJSON");
 const crewExportButton = document.getElementById("crewDownloadJSON");
 const crewImportButton = document.getElementById("crewImportJSON");
 const tradButton = document.getElementById("tradButton");
-const buttonMode = document.getElementById("buttonMode");
+const pilotMode = document.getElementById("pilotMode");
+const crewMode = document.getElementById("crewMode");
 const selectTheme = document.getElementById("selectTheme");
 const background = document.getElementById("background");
 const saveButton = document.getElementById("saveSetting");
@@ -113,6 +117,7 @@ function bindSortButtons() {
       else sortPilotsByColumn(column, nextOrder);
       emptyPilotsTable();
       addPilotsToTable(lang, pilotTableBody /*, goal */);
+      filterPilotTable(lang);
     });
   });
 }
@@ -223,7 +228,8 @@ document.querySelectorAll(".crewFilter").forEach((filter) => {
   filter.addEventListener("change", () => filterCrewTable(lang));
 });
 
-buttonMode.addEventListener("click", () => switchTable());
+pilotMode.addEventListener("click", () => switchTable("pilot"));
+crewMode.addEventListener("click", () => switchTable("crew"));
 goalSelect.addEventListener("change", () => switchGoal());
 levelGoalSelect.addEventListener("change", () => switchLevelGoal());
 selectTheme.addEventListener("change", () => {
@@ -396,8 +402,8 @@ function switchTheme() {
   }
 }
 
-function switchTable() {
-  mode = mode === "pilot" ? "crew" : "pilot";
+function switchTable(newMode) {
+  mode = newMode;
   const pilotTable = document.getElementById("pilotTable");
   const pilotForm = document.getElementById("pilotForm");
   const pilotFilter = document.getElementById("pilot-filter-container");
@@ -406,6 +412,10 @@ function switchTable() {
   const crewForm = document.getElementById("crewForm");
   const crewFilter = document.getElementById("crew-filter-container");
   const crewhide = document.getElementById("crewHide");
+  const pilotImportBtn = document.getElementById("pilotImportJSON");
+  const pilotExportBtn = document.getElementById("pilotDownloadJSON");
+  const crewImportBtn = document.getElementById("crewImportJSON");
+  const crewExportBtn = document.getElementById("crewDownloadJSON");
 
   if (mode === "pilot") {
     pilotTable.style.display = "table"; // Affiche le tableau des pilotes
@@ -416,7 +426,14 @@ function switchTable() {
     crewForm.style.display = "none"; // Cache le formulaire des Equipiers
     crewFilter.style.display = "none"; // Cache le filtrage des Equipiers
     crewhide.style.display = "none"; // Cache le masqueur de colonne des Equipiers
-    buttonMode.dataset.trad = "Pilots";
+    pilotMode.style.backgroundColor = "greenyellow";
+    pilotMode.style.color = "black";
+    crewMode.style.backgroundColor = "";
+    crewMode.style.color = "";
+    crewExportBtn.style.display = "none";
+    crewImportBtn.style.display = "none";
+    pilotExportBtn.style.display = "";
+    pilotImportBtn.style.display = "";
   } else {
     pilotTable.style.display = "none"; // Cache le tableau des pilotes
     pilotForm.style.display = "none"; // Cache le formulaire des pilotes
@@ -426,7 +443,14 @@ function switchTable() {
     crewForm.style.display = "grid"; // Affiche le formulaire des Equipiers
     crewFilter.style.display = "flex"; // Affiche le filtrage des Equipiers
     crewhide.style.display = ""; // Affiche le masqueur de colonne des Equipiers
-    buttonMode.dataset.trad = "Crews";
+    crewMode.style.backgroundColor = "greenyellow";
+    crewMode.style.color = "black";
+    pilotMode.style.backgroundColor = "";
+    pilotMode.style.color = "";
+    crewExportBtn.style.display = "";
+    crewImportBtn.style.display = "";
+    pilotExportBtn.style.display = "none";
+    pilotImportBtn.style.display = "none";
   }
   translate(lang);
 }

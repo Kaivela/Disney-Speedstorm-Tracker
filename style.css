@@ -280,14 +280,14 @@
   }
   th[data-order="asc"]::after {
     position: absolute;
-    content: " ▲";
+    content: "▲";
     bottom: 0;
     right: 0;
     
   }
   th[data-order="desc"]::after {
     position: absolute;
-    content: " ▼";
+    content: "▼";
     bottom: 0;
     right: 0;
   }

@@ -3,12 +3,15 @@ import {
   calculateCrewShardsNeeded,
 } from "./compute";
 import { createGetTrad } from "./trad";
+import pilotsBlank from "./data/pilots/pilots_blank.json";
+import crewsBlank from "./data/crews/crews_blank.json";
 
 // Mise à jour dynamique des options de filtre
 function updateFilterOptions(lang) {
   const getTrad = createGetTrad(lang);
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   let crews = JSON.parse(localStorage.getItem("crews")) || [];
+
   const pilotFranchiseFilter = document.getElementById("pilotFranchiseFilter");
   const pilotRarityFilter = document.getElementById("pilotRarityFilter");
   const roleFilter = document.getElementById("roleFilter");
@@ -42,7 +45,9 @@ function updateFilterOptions(lang) {
   const pilotShardsNeededValues = [
     ...new Set(pilots.map((pilot) => parseInt(pilot.shardsNeeded, 10))),
   ];
-  const pilotBoxes = [...new Set(pilots.map((pilot) => pilot.universalBox))];
+  const pilotBoxes = [
+    ...new Set(pilotsBlank.map((pilot) => pilot.universalBox)),
+  ];
   const rmj = [
     ...new Set(pilots.map((pilot) => parseInt(pilot.currentRMJ, 10))),
   ];
@@ -57,7 +62,7 @@ function updateFilterOptions(lang) {
   const crewShardsNeededValues = [
     ...new Set(crews.map((crew) => parseInt(crew.shardsNeeded, 10))),
   ];
-  const crewBoxes = [...new Set(crews.map((crew) => crew.universalBox))];
+  const crewBoxes = [...new Set(crewsBlank.map((crew) => crew.universalBox))];
 
   // Mettre à jour les options de filtre
   pilotFranchiseFilter.innerHTML =
@@ -130,8 +135,13 @@ function updateFilterOptions(lang) {
     "</option>";
   pilotBoxes.forEach((universalBox) => {
     const option = document.createElement("option");
-    option.value = universalBox ? "✔️" : "❌";
-    option.textContent = universalBox ? "✔️" : "❌";
+    if (universalBox === "season") {
+      option.value = "🟣";
+      option.textContent = "🟣";
+    } else {
+      option.value = universalBox ? "✔️" : "❌";
+      option.textContent = universalBox ? "✔️" : "❌";
+    }
     pilotBoxesFilter.appendChild(option);
   });
 
@@ -337,8 +347,13 @@ function updateFilterOptions(lang) {
     "</option>";
   crewBoxes.forEach((universalBox) => {
     const option = document.createElement("option");
-    option.value = universalBox ? "✔️" : "❌";
-    option.textContent = universalBox ? "✔️" : "❌";
+    if (universalBox === "season") {
+      option.value = "🟣";
+      option.textContent = "🟣";
+    } else {
+      option.value = universalBox ? "✔️" : "❌";
+      option.textContent = universalBox ? "✔️" : "❌";
+    }
     crewBoxesFilter.appendChild(option);
   });
 }

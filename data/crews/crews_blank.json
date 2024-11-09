@@ -1830,7 +1830,7 @@
     "name": "Clown With The Tear-Away Face",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1838,7 +1838,7 @@
     "name": "The Vampire Brothers",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1846,7 +1846,7 @@
     "name": "Mummy Boy",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1854,7 +1854,7 @@
     "name": "Man-Eating Wreath",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1862,7 +1862,7 @@
     "name": "Toy Duck",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1870,7 +1870,7 @@
     "name": "Igor",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1878,7 +1878,7 @@
     "name": "Wolfman",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1886,7 +1886,7 @@
     "name": "Santa Claus",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true
+    "universalBox": "season"
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1894,7 +1894,7 @@
     "name": "Jewel",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "exclusiveTo": "Dr. Finkelstein"
   },
   {
@@ -1903,7 +1903,7 @@
     "name": "Zero",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "exclusiveTo": "Jack Skellington"
   },
   {
@@ -1912,7 +1912,7 @@
     "name": "Lock, Shock, And Barrel",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "exclusiveTo": "Oogie Boogie"
   },
   {
@@ -1921,7 +1921,7 @@
     "name": "The Mayor",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "exclusiveTo": "Sally"
   },
 
@@ -2161,7 +2161,7 @@
     "name": "Ennuyé Riley",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": true,
+    "universalBox": false,
     "exclusiveTo": "Ennui"
   },
   {

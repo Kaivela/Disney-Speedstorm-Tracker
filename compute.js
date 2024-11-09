@@ -12,6 +12,7 @@ import {
   starLevel,
 } from "./data/data.js";
 import { createGetTrad } from "./trad.js";
+import crewsBlank from "./data/crews/crews_blank.json";
 
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
 function calculatePilotShardsNeeded(currentLevel, currentShards) {
@@ -179,13 +180,16 @@ function calculateFreeCrewShardsNeeded(crews) {
   let totalRareShardsNeeded = 0;
   let totalEpicShardsNeeded = 0;
   crews.forEach((crew) => {
-    if (crew.rarity === "Common" && crew.universalBox) {
+    const crewBlank = crewsBlank.find(
+      (crewBlank) => crewBlank.name === crew.name
+    );
+    if (crew.rarity === "Common" && crewBlank.universalBox === true) {
       totalCommonShardsNeeded += crew.shardsNeeded;
     }
-    if (crew.rarity === "Rare" && crew.universalBox) {
+    if (crew.rarity === "Rare" && crewBlank.universalBox === true) {
       totalRareShardsNeeded += crew.shardsNeeded;
     }
-    if (crew.rarity === "Epic" && crew.universalBox) {
+    if (crew.rarity === "Epic" && crewBlank.universalBox === true) {
       totalEpicShardsNeeded += crew.shardsNeeded;
     }
   });

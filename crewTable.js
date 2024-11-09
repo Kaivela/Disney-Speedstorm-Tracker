@@ -49,6 +49,11 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   //  Cette fonction crée et ajoute une nouvelle ligne dans un tableau HTML représentant les détails d'un equipier.
   const row = document.createElement("tr");
   row.classList.add("crew-row");
+
+  const crewBlank = crewsBlank.find((blank) => blank.name === crew.name);
+  let universalBox;
+  if (crewBlank.universalBox === "season") universalBox = "🟣";
+  else universalBox = crewBlank.universalBox ? "✔️" : "❌";
   row.innerHTML = `
             <td style="padding: 0;"><img onerror="this.src='img/Locked.webp'" src="img/crews/${
               crew.name
@@ -61,7 +66,7 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
             <td class="${starclass}">${crew.currentStars}</td>
             <td class="${shardsClass}">${crew.currentShards}</td>
             <td class="${shardsClass}">${crew.shardsNeeded}</td>
-            <td>${crew.universalBox ? "✔️" : "❌"}</td>
+            <td>${universalBox}</td>
             <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
         `;
   crewTableBody.appendChild(row);

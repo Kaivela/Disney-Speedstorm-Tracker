@@ -776,7 +776,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "old": false
   },
   {
@@ -789,7 +789,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "old": false
   },
   {
@@ -802,7 +802,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "old": false
   },
   {
@@ -815,7 +815,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": true,
+    "universalBox": "season",
     "old": false
   },
   {

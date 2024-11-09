@@ -11,6 +11,29 @@ import pilotsBlank from "./data/pilots/pilots_blank.json";
 
 const pilotTableBody = document.getElementById("pilotTableBody");
 const pilotSearchInput = document.getElementById("pilotSearchInput");
+const togglePilotImage = document.getElementById("togglePilotImage");
+const togglePilotFranchise = document.getElementById("togglePilotFranchise");
+const togglePilotRarity = document.getElementById("togglePilotRarity");
+const togglePilotRole = document.getElementById("togglePilotRole");
+const togglePilotName = document.getElementById("togglePilotName");
+const togglePilotStar = document.getElementById("togglePilotStar");
+const togglePilotCurrentShard = document.getElementById(
+  "togglePilotCurrentShard"
+);
+const togglePilotLevel = document.getElementById("togglePilotLevel");
+const togglePilotCurrentMPR = document.getElementById("togglePilotCurrentMPR");
+const togglePilotHighestMPR = document.getElementById("togglePilotHighestMPR");
+const togglePilotGrade = document.getElementById("togglePilotGrade");
+const togglePilotShardNeeded = document.getElementById(
+  "togglePilotShardNeeded"
+);
+const togglePilotShardMPR = document.getElementById("togglePilotShardMPR");
+const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
+const togglePilotBox = document.getElementById("togglePilotBox");
+const togglePilotShardStar = document.getElementById(
+  "togglePilotShardNextStar"
+);
+const togglePilotCoinStar = document.getElementById("togglePilotCoinStar");
 
 // Fonction pour ajouter un pilote à la table
 function addPilotToTable(pilot, index, lang, pilotTableBody) {
@@ -87,11 +110,25 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   //  Cette fonction crée et ajoute une nouvelle ligne dans un tableau HTML représentant les détails d'un pilote.
   const row = document.createElement("tr");
   row.classList.add("pilot-row");
+  const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
+  let universalBox;
+  if (pilotBlank.universalBox === "season") universalBox = "🟣";
+  else universalBox = pilotBlank.universalBox ? "✔️" : "❌";
+
+  const pilotImageStyle = togglePilotImage.classList.contains("active")
+    ? "display: none;"
+    : "";
+  const pilotFranchiseStyle = togglePilotFranchise.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+
   row.innerHTML = `
-          <td style="padding: 0;"><img src="img/pilots/${
-            pilot.name
-          }.webp" style="width: 50px; height: auto;"></td>
-          <td data-trad="${pilot.franchise}">${getTrad(pilot.franchise)}</td>
+          <td style="padding: 0;${pilotImageStyle}"><img src="img/pilots/${
+    pilot.name
+  }.webp" style="width: 50px; height: auto;"></td>
+          <td data-trad="${pilot.franchise}" ${pilotFranchiseStyle}>${getTrad(
+    pilot.franchise
+  )}</td>
           <td data-trad="${pilot.rarity}" class="${pilot.rarity}">${getTrad(
     pilot.rarity
   )}</td>
@@ -108,11 +145,12 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
           <td class="${shardsClass}">${shardsNeeded}</td>
           <td class="${shardsClass}">${shardsToGet}</td>
           <td>${coinsNeeded}</td>
-          <td>${pilot.universalBox ? "✔️" : "❌"}</td>
+          <td>${universalBox}</td>
           <td style="display: none;">${shardsToNextStar}</td>
           <td style="display: none;">${coinsToNextStar}</td>
           <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
       `;
+  // 🟣
   pilotTableBody.appendChild(row);
   // Applique le `onerror` dynamiquement à l'image pour qu'elle affiche une image de secours si besoin
   const img = row.querySelector("img");
@@ -262,7 +300,14 @@ function submitPilotForm(
       old: pilot.old ? true : false,
     };
     savePilotData(editPilot, editingPilotIndex);
-    sortPilotsBlank();
+    const sortColumn = document.querySelector(
+      "th[data-order]:not([data-order='default'])"
+    );
+    if (sortColumn) {
+      sortPilotsByColumn(sortColumn.dataset.sort, sortColumn.dataset.order);
+    } else {
+      sortPilotsBlank();
+    }
     updatePilotFormFranchise(lang);
     pilotTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
     addPilotsToTable(lang, pilotTableBody);
