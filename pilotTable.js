@@ -270,6 +270,7 @@ function submitPilotForm(
     pilotForm.reset();
     calculateTotal(lang, goal, levelGoal);
     pilotSubmitBtn.textContent = getTrad("add_pilot"); // Réinitialiser le texte du bouton après ajout
+    pilotSubmitBtn.style.display = "none";
     editingPilotIndex = null; // Réinitialiser l'index d'édition
   }
 }

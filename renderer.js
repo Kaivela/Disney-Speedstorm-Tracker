@@ -166,6 +166,7 @@ function clickModifyPilot(event) {
     const pilot = pilots[index];
     populatePilotForm(pilot, lang);
     pilotSubmitBtn.textContent = getTrad("update_pilot"); // Changer le texte du bouton lors de la modification
+    pilotSubmitBtn.style.display = "";
     editingPilotIndex = index; // Enregistrer l'index du pilote en cours de modification
   }
 }
@@ -177,6 +178,7 @@ function clickModifyCrew(event) {
     const crew = crews[index];
     populateCrewForm(crew, lang);
     crewSubmitBtn.textContent = getTrad("update_crew"); // Changer le texte du bouton lors de la modification
+    crewSubmitBtn.style.display = "";
     editingCrewIndex = index; // Enregistrer l'index de l'Equipier en cours de modification
   }
 }

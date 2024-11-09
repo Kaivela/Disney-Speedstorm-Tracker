@@ -177,6 +177,7 @@ function submitCrewForm(
     crewForm.reset();
     calculateTotal(lang, goal, levelGoal);
     crewSubmitBtn.textContent = getTrad("add_crew"); // Réinitialiser le texte du bouton après ajout
+    crewSubmitBtn.style.display = "none";
     editingCrewIndex = null; // Réinitialiser l'index d'édition
   }
 }
