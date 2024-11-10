@@ -121,36 +121,93 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const pilotFranchiseStyle = togglePilotFranchise.classList.contains("active")
     ? 'style="display: none;"'
     : "";
+  const pilotRarityStyle = togglePilotRarity.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotRoleStyle = togglePilotRole.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotNameStyle = togglePilotName.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotStarStyle = togglePilotStar.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotCurrentShardStyle = togglePilotCurrentShard.classList.contains(
+    "active"
+  )
+    ? 'style="display: none;"'
+    : "";
+  const pilotLevelStyle = togglePilotLevel.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotCurrentMPRStyle = togglePilotCurrentMPR.classList.contains(
+    "active"
+  )
+    ? 'style="display: none;"'
+    : "";
+  const pilotHighestMPRStyle = togglePilotHighestMPR.classList.contains(
+    "active"
+  )
+    ? 'style="display: none;"'
+    : "";
+  const pilotGradeStyle = togglePilotGrade.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotShardNeededStyle = togglePilotShardNeeded.classList.contains(
+    "active"
+  )
+    ? 'style="display: none;"'
+    : "";
+  const pilotShardMPRStyle = togglePilotShardMPR.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotUpgradeStyle = togglePilotUpgrade.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotBoxStyle = togglePilotBox.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotShardStarStyle = togglePilotShardStar.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+  const pilotCoinStarStyle = togglePilotCoinStar.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
 
   row.innerHTML = `
-          <td style="padding: 0;${pilotImageStyle}"><img src="img/pilots/${
+        <td style="padding: 0;${pilotImageStyle}"><img src="img/pilots/${
     pilot.name
   }.webp" style="width: 50px; height: auto;"></td>
-          <td data-trad="${pilot.franchise}" ${pilotFranchiseStyle}>${getTrad(
+        <td data-trad="${pilot.franchise}" ${pilotFranchiseStyle}>${getTrad(
     pilot.franchise
   )}</td>
-          <td data-trad="${pilot.rarity}" class="${pilot.rarity}">${getTrad(
+        <td data-trad="${pilot.rarity}" ${pilotRarityStyle} class="${
     pilot.rarity
-  )}</td>
-          <td data-trad="${pilot.role}" class="${pilot.role}">${getTrad(
+  }">${getTrad(pilot.rarity)}</td>
+        <td data-trad="${pilot.role}" ${pilotRoleStyle} class="${
     pilot.role
+  }">${getTrad(pilot.role)}</td>
+        <td data-trad="${pilot.name}" ${pilotNameStyle}>${getTrad(
+    pilot.name
   )}</td>
-      <td data-trad="${pilot.name}">${getTrad(pilot.name)}</td>
-          <td>${pilot.currentStars}</td>
-          <td class="${shardsClass}">${pilot.currentShards}</td>
-          <td class="${levelClass}">${pilot.currentLevel}</td>
-          <td>${pilot.currentRMJ}</td>
-          <td>${pilot.highestRMJ}</td>
-          <td class="${RMJClass}"></td>
-          <td class="${shardsClass}">${shardsNeeded}</td>
-          <td class="${shardsClass}">${shardsToGet}</td>
-          <td>${coinsNeeded}</td>
-          <td>${universalBox}</td>
-          <td style="display: none;">${shardsToNextStar}</td>
-          <td style="display: none;">${coinsToNextStar}</td>
-          <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
-      `;
-  // 🟣
+        <td ${pilotStarStyle}>${pilot.currentStars}</td>
+        <td class="${shardsClass}" ${pilotCurrentShardStyle}>${
+    pilot.currentShards
+  }</td>
+        <td class="${levelClass}" ${pilotLevelStyle}>${pilot.currentLevel}</td>
+        <td ${pilotCurrentMPRStyle}>${pilot.currentRMJ}</td>
+        <td ${pilotHighestMPRStyle}>${pilot.highestRMJ}</td>
+        <td class="${RMJClass}" ${pilotGradeStyle}></td>
+        <td class="${shardsClass}" ${pilotShardNeededStyle}>${shardsNeeded}</td>
+        <td class="${shardsClass}" ${pilotShardMPRStyle}>${shardsToGet}</td>
+        <td ${pilotUpgradeStyle}>${coinsNeeded}</td>
+        <td ${pilotBoxStyle}>${universalBox}</td>
+        <td ${pilotShardStarStyle}>${shardsToNextStar}</td>
+        <td ${pilotCoinStarStyle}>${coinsToNextStar}</td>
+        <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
+    `;
+
   pilotTableBody.appendChild(row);
   // Applique le `onerror` dynamiquement à l'image pour qu'elle affiche une image de secours si besoin
   const img = row.querySelector("img");
