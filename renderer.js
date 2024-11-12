@@ -23,13 +23,12 @@ import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
 import { createGetTrad, translate } from "./trad.js";
 
-let getTrad = createGetTrad("fr");
-
 const settingsStr = localStorage.getItem("settings");
 const settings = settingsStr ? JSON.parse(settingsStr) : {};
 
 let theme = "";
 let lang = settings.lang || "en";
+let getTrad = createGetTrad(lang);
 let mode = "pilot";
 let goal = 40;
 let levelGoal = 50;
