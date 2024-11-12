@@ -364,3 +364,7 @@
     height: max-content;
     width: max-content;
   }
+
+  a:visited {
+    color: rgb(228, 64, 64);
+  }
