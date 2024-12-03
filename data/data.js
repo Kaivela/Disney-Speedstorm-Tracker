@@ -17,15 +17,29 @@ const starLevel = [20, 30, 40, 50];
 
 // Définir les upgrade coins rewards en RMJ pour chaque Rang (OLD PILOTS)
 const rmjOldCoinsReward = [
-  0, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0, 300,
-  300, 300, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 500, 0, 500, 500, 700,
-  700, 0, 1000, 0,
+  300, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0,
+  300, 300, 300, 300, 0, 300, 300, 0, 300, 0, 300, 300, 0, 500, 0, 500, 500,
+  700, 700, 0, 1000, 0,
 ];
 
 // Définir les upgrade coins rewards en RMJ pour chaque Rang (NEW PILOTS)
 const rmjNewCoinsReward = [
   300, 0, 0, 300, 300, 0, 0, 0, 300, 300, 0, 300, 0, 300, 300, 0, 300, 0, 300,
   300, 0, 300, 0, 300, 300, 0, 500, 0, 500, 500, 0, 500, 0, 700, 700, 700, 700,
+  0, 1000, 0,
+];
+
+// Définir les upgrade coins rewards en RMJ pour chaque Rang (S10)
+const rmjS10CoinsReward = [
+  300, 0, 0, 300, 300, 0, 0, 0, 300, 300, 0, 900, 0, 300, 300, 0, 300, 0, 300,
+  300, 0, 300, 0, 300, 300, 0, 500, 0, 500, 500, 0, 500, 0, 700, 700, 700, 700,
+  0, 1000, 0,
+];
+
+// Définir les upgrade coins rewards en RMJ pour chaque Rang (S10 Mid)
+const rmjS10MidCoinsReward = [
+  300, 0, 0, 300, 300, 0, 0, 0, 300, 300, 0, 900, 0, 300, 300, 0, 300, 0, 300,
+  300, 0, 300, 0, 300, 300, 0, 500, 0, 500, 500, 0, 1500, 0, 700, 700, 700, 700,
   0, 1000, 0,
 ];
 
@@ -65,6 +79,8 @@ export {
   coinsCosts,
   rmjOldCoinsReward,
   rmjNewCoinsReward,
+  rmjS10CoinsReward,
+  rmjS10MidCoinsReward,
   rmjShardsReward,
   rmjOldTokensReward,
   rmjNewTokensReward,

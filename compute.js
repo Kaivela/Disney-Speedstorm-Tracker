@@ -3,6 +3,8 @@ import {
   coinsCosts,
   rmjOldCoinsReward,
   rmjNewCoinsReward,
+  rmjS10CoinsReward,
+  rmjS10MidCoinsReward,
   rmjShardsReward,
   rmjOldTokensReward,
   rmjNewTokensReward,
@@ -13,6 +15,7 @@ import {
 } from "./data/data.js";
 import { createGetTrad } from "./trad.js";
 import crewsBlank from "./data/crews/crews_blank.json";
+import pilotsBlank from "./data/pilots/pilots_blank.json";
 
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
 function calculatePilotShardsNeeded(currentLevel, currentShards) {
@@ -90,19 +93,23 @@ function calculateCoinsNeededForGoal(currentLevel, levelGoal) {
 }
 
 // function pour calculer les CoinsToGet en fonction du HighestRMJ
-function calculateCoinsToGet(highestRMJ, oldPilot, goal) {
+function calculateCoinsToGet(highestRMJ, rmjCoin, goal) {
   let totalCoinsToGet = 0;
-  if (oldPilot) {
-    for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
-      if (rmj <= rmjOldCoinsReward.length) {
-        totalCoinsToGet += rmjOldCoinsReward[rmj - 1];
-      }
-    }
-  } else {
-    for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
-      if (rmj <= rmjNewCoinsReward.length) {
-        totalCoinsToGet += rmjNewCoinsReward[rmj - 1];
-      }
+  let table;
+
+  if (rmjCoin === "old") {
+    table = rmjOldCoinsReward;
+  } else if (rmjCoin === "new") {
+    table = rmjNewCoinsReward;
+  } else if (rmjCoin === "S10") {
+    table = rmjS10CoinsReward;
+  } else if (rmjCoin === "S10Mid") {
+    table = rmjS10MidCoinsReward;
+  }
+
+  for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
+    if (rmj <= table.length) {
+      totalCoinsToGet += table[rmj - 1];
     }
   }
 
@@ -123,10 +130,10 @@ function calculatePilotShardsToGet(highestRMJ, goal) {
 }
 
 // function pour calculer les TokensToGet en fonction du HighestRMJ
-function calculateTokensToGet(highestRMJ, oldPilot, goal) {
+function calculateTokensToGet(highestRMJ, rmjTokenOld, goal) {
   let totalTokensToGet = 0;
 
-  if (oldPilot) {
+  if (rmjTokenOld) {
     for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
       if (rmj <= rmjOldTokensReward.length) {
         totalTokensToGet += rmjOldTokensReward[rmj - 1];
@@ -217,24 +224,26 @@ function calculateTotal(lang, goal, levelGoal) {
   let cosmeticToGet = 0;
   let allFreeShards = 0;
 
-  // Calculer les coinsNeeded pour chaque pilote
   pilots.forEach((pilot) => {
+    const pilotBlank = pilotsBlank.find(
+      (pilotBlank) => pilotBlank.name === pilot.name
+    );
+
+    // Calculer les coinsNeeded pour chaque pilote
     pilot.coinsNeeded = calculateCoinsNeededForGoal(
       pilot.currentLevel,
       levelGoal
     );
     allCoins = allCoins + pilot.coinsNeeded;
-  });
-  // Calculer les shardsNeeded pour chaque pilote
-  pilots.forEach((pilot) => {
+
+    // Calculer les shardsNeeded pour chaque pilote
     pilot.shardsNeeded = calculatePilotShardsNeeded(
       pilot.currentLevel,
       pilot.currentShards
     );
     allShardsNeeded = allShardsNeeded + pilot.shardsNeeded;
-  });
-  // Calculer les shardsNeeded pour chaque pilote non saisonier
-  pilots.forEach((pilot) => {
+
+    // Calculer les shardsNeeded pour chaque pilote non saisonier
     if (pilot.universalBox) {
       pilot.shardsNeeded = calculatePilotShardsNeeded(
         pilot.currentLevel,
@@ -242,16 +251,14 @@ function calculateTotal(lang, goal, levelGoal) {
       );
       allRegularShards = allRegularShards + pilot.shardsNeeded;
     }
-  });
-  // Calculer les shardsToGet pour chaque pilote
-  pilots.forEach((pilot) => {
+
+    // Calculer les shardsToGet pour chaque pilote
     if (pilot.shardsNeeded === 0) {
       pilot.shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, goal);
       shardsToGet = shardsToGet + pilot.shardsToGet;
     }
-  });
-  // Calculer les seasonCoins available in rmj
-  pilots.forEach((pilot) => {
+
+    // Calculer les seasonCoins available in rmj
     if (pilot.shardsToGet) {
       if (pilot.rarity === "Common") {
         seasonCoins = seasonCoins + pilot.shardsToGet * 400;
@@ -263,19 +270,24 @@ function calculateTotal(lang, goal, levelGoal) {
         seasonCoins = seasonCoins + pilot.shardsToGet * 1000;
       }
     }
-  });
-  // Calculer les upgradeCoins available in rmj
-  pilots.forEach((pilot) => {
-    pilot.upgradeCoins = calculateCoinsToGet(pilot.highestRMJ, pilot.old, goal);
+
+    // Calculer les upgradeCoins available in rmj
+    pilot.upgradeCoins = calculateCoinsToGet(
+      pilot.highestRMJ,
+      pilotBlank.rmjCoin,
+      goal
+    );
     upgradeCoins = upgradeCoins + pilot.upgradeCoins;
-  });
-  // Calculer les Tokens available in rmj
-  pilots.forEach((pilot) => {
-    pilot.tokensToGet = calculateTokensToGet(pilot.highestRMJ, pilot.old, goal);
+
+    // Calculer les Tokens available in rmj
+    pilot.tokensToGet = calculateTokensToGet(
+      pilot.highestRMJ,
+      pilotBlank.rmjTokenOld,
+      goal
+    );
     tokensToGet = tokensToGet + pilot.tokensToGet;
-  });
-  // Calculer les cosmetic available in rmj
-  pilots.forEach((pilot) => {
+
+    // Calculer les cosmetic available in rmj
     pilot.cosmeticToGet = calculateCosmeticToGet(pilot.highestRMJ, goal);
     cosmeticToGet = cosmeticToGet + pilot.cosmeticToGet;
   });

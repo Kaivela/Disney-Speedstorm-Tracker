@@ -324,7 +324,6 @@ function submitPilotForm(
       currentRMJ: parseInt(document.getElementById("currentRMJ").value, 10),
       highestRMJ: parseInt(document.getElementById("highestRMJ").value, 10),
       universalBox: document.getElementById("pilotUniversalBox").checked,
-      old: pilot.old ? true : false,
     };
     savePilotData(editPilot, editingPilotIndex);
     const sortColumn = document.querySelector(
