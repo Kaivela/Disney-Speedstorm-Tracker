@@ -146,10 +146,12 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   };
 
   row.innerHTML = `
-  <td style="padding: 0; ${styles.pilotImage}">
+  <td style="padding: 0; border: none; display: block; height: 80px; ${
+    styles.pilotImage
+  }">
       <img src="img/pilots/${
         pilot.name
-      }.webp" style="width: 70px; height: auto;">
+      }.webp" style="width: 80px; height: auto;">
   </td>
   <td data-trad="${pilot.franchise}" ${styles.pilotFranchise}>${getTrad(
     pilot.franchise
