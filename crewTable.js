@@ -55,9 +55,9 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   if (crewBlank.universalBox === "season") universalBox = "🟣";
   else universalBox = crewBlank.universalBox ? "✔️" : "❌";
   row.innerHTML = `
-            <td style="padding: 0;"><img onerror="this.src='img/Locked.webp'" src="img/crews/${
+            <td style="padding: 0; border: none; display: block; height: 80px"><img onerror="this.src='img/Locked.webp'" src="img/crews/${
               crew.name
-            }.webp" style="width: 50px; height: auto;"></td>
+            }.webp" style="width: 80px; height: auto;"></td>
             <td data-trad="${crew.franchise}">${getTrad(crew.franchise)}</td>
             <td data-trad="${crew.rarity}" class="${crew.rarity}">${getTrad(
     crew.rarity
