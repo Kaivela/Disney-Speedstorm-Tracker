@@ -339,6 +339,12 @@ function updateFilterOptions(lang) {
       option20.textContent = getTrad("between1and20");
       crewShardsFilter.appendChild(option20);
     }
+    if (crewShardsNeededValues.some((value) => value >= 1)) {
+      const optionMoreThan0 = document.createElement("option");
+      optionMoreThan0.value = "not_finished";
+      optionMoreThan0.textContent = getTrad("not_finished");
+      crewShardsFilter.appendChild(optionMoreThan0);
+    }
     if (crewShardsNeededValues.some((value) => value === 0)) {
       const option0 = document.createElement("option");
       option0.value = "0";

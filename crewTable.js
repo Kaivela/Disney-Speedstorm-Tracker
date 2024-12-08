@@ -318,6 +318,8 @@ function filterCrewTable(lang) {
       matchesShards =
         parseInt(shardsNeededText, 10) > 0 &&
         parseInt(shardsNeededText, 10) <= 20;
+    } else if (shardsFilter === "not_finished") {
+      matchesShards = parseInt(shardsNeededText, 10) >= 1;
     } else if (shardsFilter !== "") {
       matchesShards =
         parseInt(shardsNeededText, 10) <= parseInt(shardsFilter, 10);
