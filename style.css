@@ -368,3 +368,11 @@
   a:visited {
     color: rgb(228, 64, 64);
   }
+
+  .copyright {
+    color: white;
+    background-color: rgb(54, 54, 54);
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+  }
