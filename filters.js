@@ -121,6 +121,12 @@ function updateFilterOptions(lang) {
       option20.textContent = getTrad("between1and20");
       pilotShardsFilter.appendChild(option20);
     }
+    if (pilotShardsNeededValues.some((value) => value >= 1)) {
+      const optionNot0 = document.createElement("option");
+      optionNot0.value = "not_finished";
+      optionNot0.textContent = getTrad("not_finished");
+      pilotShardsFilter.appendChild(optionNot0);
+    }
     if (pilotShardsNeededValues.some((value) => value === 0)) {
       const option0 = document.createElement("option");
       option0.value = "0";
