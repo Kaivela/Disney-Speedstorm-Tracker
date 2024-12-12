@@ -24,6 +24,7 @@
     "season8": "Season 8 : Inside Out",
     "season9": "Season 9 : Pirates Of The Caribbean",
     "season10": "Season 10 : The Nightmare Before Christmas",
+    "season11": "Season 11 : The Incredibles",
     "select_theme": "Select a Theme",
     
     "search_placeholder": "Search...",
@@ -67,7 +68,7 @@
     "total_shards_calcul": "Racer Shards left to collect: ",
     "regular_shards_calcul": "Shards left in the Universal Box:",
     "soit": "or",
-    "open": "Universal Boxes left to open",
+    "open": "Universal Boxes max left to open",
     "season_calcul": "Season Coins you can collect in MPR:",
     "upgrade_calcul": "Upgrade Coins you can collect in MPR:",
     "cosmetic_calcul": "Vanity Coins you can collect in MPR:",
@@ -210,6 +211,11 @@
     "Cruella De Vil": "Cruella De Vil",
     "Maleficent": "Maleficent",
     "Rapunzel": "Rapunzel",
+    "Dash": "Dash",
+    "Frozone": "Frozone",
+    "Mr. Incredible": "Mr. Incredible",
+    "Mrs. Incredible": "Mrs. Incredible",
+    "Violet": "Violet",
     
     "Mickey & Friends": "Mickey & Friends",
     "Pirates of the Caribbean": "Pirates of The Caribbean",
@@ -229,6 +235,7 @@
     "101 Dalmatians": "101 Dalmatians",
     "Sleeping Beauty": "Sleeping Beauty",
     "Tangled": "Tangled",
+    "The Incredibles": "The Incredibles",
 
     "Tanglefoot": "Tanglefoot",
     "Clara Cluck": "Clara Cluck",
@@ -484,5 +491,20 @@
     "Vladimir": "Vladimir",
     "Hook Hand": "Hook Hand",
     "King Frederic And Queen Arianna": "King Frederic and Queen Arianna",
-    "Pascal": "Pascal"
+    "Pascal": "Pascal",
+    "Screenslaver": "Screenslaver",
+    "Lady Lightbug": "Lady Lightbug",
+    "Underminer": "Underminer",
+    "Gazerbeam": "Gazerbeam",
+    "Winston Deavor": "Winston Deavor",
+    "Evelyn Deavor": "Evelyn Deavor",
+    "Rusty McAllister": "Rusty McAllister",
+    "Gilbert Huph": "Gilbert Huph",
+    "Raccoon": "Raccoon",
+    "Bomb Voyage": "Bomb Voyage",
+    "Bernie Kropp": "Bernie Kropp",
+    "Mr. Skipperdoo": "Mr. Skipperdoo",
+    "Rick Dicker": "Rick Dicker",
+    "Edna Mode": "Edna Mode",
+    "Tony Rydinger": "Tony Rydinger"
 }

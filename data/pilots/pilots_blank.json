@@ -835,7 +835,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -849,7 +849,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -863,7 +863,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -877,7 +877,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1048,5 +1048,75 @@
     "universalBox": false,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10Mid"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "role": "Speedster",
+    "name": "Dash",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "role": "Defender",
+    "name": "Frozone",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "role": "Brawler",
+    "name": "Mr. Incredible",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "role": "Trickster",
+    "name": "Mrs. Incredible",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "role": "Defender",
+    "name": "Violet",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
   }
 ]

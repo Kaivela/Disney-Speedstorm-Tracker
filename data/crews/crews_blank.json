@@ -1830,7 +1830,7 @@
     "name": "Clown With The Tear-Away Face",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1838,7 +1838,7 @@
     "name": "The Vampire Brothers",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1846,7 +1846,7 @@
     "name": "Mummy Boy",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1854,7 +1854,7 @@
     "name": "Man-Eating Wreath",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1862,7 +1862,7 @@
     "name": "Toy Duck",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1870,7 +1870,7 @@
     "name": "Igor",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1878,7 +1878,7 @@
     "name": "Wolfman",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1886,7 +1886,7 @@
     "name": "Santa Claus",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -1894,7 +1894,7 @@
     "name": "Jewel",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Dr. Finkelstein"
   },
   {
@@ -1903,7 +1903,7 @@
     "name": "Zero",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Jack Skellington"
   },
   {
@@ -1912,7 +1912,7 @@
     "name": "Lock, Shock, And Barrel",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Oogie Boogie"
   },
   {
@@ -1921,7 +1921,7 @@
     "name": "The Mayor",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Sally"
   },
 
@@ -2344,12 +2344,136 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Rapunzel"
+  },
+
+
+
+
+
+
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Screenslaver",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Lady Lightbug",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Underminer",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Gazerbeam",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Winston Deavor",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Evelyn Deavor",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Rusty McAllister",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Gilbert Huph",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Raccoon",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Bomb Voyage",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Bernie Kropp",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Dash"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Mr. Skipperdoo",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Frozone"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Rick Dicker",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Mr. Incredible"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Edna Mode",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Mrs. Incredible"
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Tony Rydinger",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Violet"
   }
-
-
-
-
-
-
-  
 ]

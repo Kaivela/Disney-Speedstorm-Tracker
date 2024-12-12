@@ -393,7 +393,7 @@ function switchTheme() {
     getTrad("select_theme") +
     "</option>";
 
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 11; i++) {
     const season = document.createElement("option");
     season.value = i;
     season.textContent = getTrad("season" + i);
