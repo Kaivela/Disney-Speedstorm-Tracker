@@ -2475,5 +2475,81 @@
     "currentShards": 0,
     "universalBox": "season",
     "exclusiveTo": "Violet"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Pua",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Chief Tui",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Kakamora",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Gramma Tala",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Rare",
+    "name": "Sina",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Rare",
+    "name": "Tamatoa",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Rare",
+    "name": "Heihei",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Epic",
+    "name": "Mini Maui",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Maui"
   }
 ]
