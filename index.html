@@ -2,11 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <title>Disney Speedstorm Tracker</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/icon.png" />
   </head>
   <body id="background" class="background">
+    <h1 style="display: fixed">Disney Speedstorm Tracker</h1>
     <div id="settingsPanel">
       <div>
         <h2 data-trad="settings"></h2>
@@ -46,17 +51,24 @@
         <span></span>
         <button id="saveSetting" data-trad="save"></button>
       </div>
+      <span class="copyright">
+        The character images used in this are purely for entertainment and
+        informational purposes.<br />
+        No ownership is claimed upon the images used, and no copyright
+        infringement is intended.<br />
+        All rights go to their respective owners.</span
+      >
     </div>
-    <div>
-      <button id="settings">
-        <img src="./img/settings.svg" width="30px" />
-      </button>
-    </div>
+    <button id="settings">
+      <img src="./img/settings.svg" width="30px" />
+    </button>
 
     <div class="main-container">
       <div class="form-container">
-        <div class="header">
-          <div style="display: flex; justify-content: space-around">
+        <div class="buttons">
+          <div
+            style="display: flex; justify-content: space-around; gap: 0.25rem"
+          >
             <button
               style="background-color: greenyellow; color: black"
               id="pilotMode"
@@ -125,158 +137,6 @@
               </div>
             </div>
           </div>
-          <div>
-            <!-- Conteneur pour la recherche et les filtres des pilotes -->
-            <div id="pilot-filter-container" class="search-filter-container">
-              <input type="text" id="pilotSearchInput" />
-              <select id="pilotFranchiseFilter" class="pilotFilter"></select>
-              <select id="pilotRarityFilter" class="pilotFilter"></select>
-              <select id="roleFilter" class="pilotFilter"></select>
-              <select id="pilotShardsFilter" class="pilotFilter"></select>
-              <select id="rmjFilter" class="pilotFilter"></select>
-              <select id="levelFilter" class="pilotFilter"></select>
-              <select id="pilotBoxesFilter" class="pilotFilter"></select>
-            </div>
-            <!-- Conteneur pour la recherche et les filtres des Equipiers -->
-            <div
-              id="crew-filter-container"
-              class="search-filter-container"
-              style="display: none"
-            >
-              <input type="text" id="crewSearchInput" />
-              <select id="crewFranchiseFilter" class="crewFilter"></select>
-              <select id="crewRarityFilter" class="crewFilter"></select>
-              <select id="crewStarsFilter" class="crewFilter"></select>
-              <select id="crewShardsFilter" class="crewFilter"></select>
-              <select id="crewBoxesFilter" class="crewFilter"></select>
-            </div>
-          </div>
-
-          <div class="escape">
-            <!-- masqueur de colonne pour les pilotes -->
-            <details id="pilotHide">
-              <summary data-trad="hide"></summary>
-              <div>
-                <button id="togglePilotImage" class="display">image</button>
-                <button id="togglePilotFranchise" class="display">
-                  Franchise
-                </button>
-                <button
-                  id="togglePilotRarity"
-                  class="display"
-                  data-trad="rarity"
-                ></button>
-                <button
-                  id="togglePilotRole"
-                  class="display"
-                  data-trad="role"
-                ></button>
-                <button
-                  id="togglePilotName"
-                  class="display"
-                  data-trad="hide_name"
-                ></button>
-                <button
-                  id="togglePilotStar"
-                  class="display"
-                  data-trad="hide_stars"
-                ></button>
-                <button
-                  id="togglePilotCurrentShard"
-                  class="display"
-                  data-trad="hide_current_shards"
-                ></button>
-                <button
-                  id="togglePilotLevel"
-                  class="display"
-                  data-trad="hide_current_level"
-                ></button>
-                <button
-                  id="togglePilotCurrentMPR"
-                  class="display"
-                  data-trad="hide_current_MPR"
-                ></button>
-                <button
-                  id="togglePilotHighestMPR"
-                  class="display"
-                  data-trad="hide_highest_MPR"
-                ></button>
-                <button
-                  id="togglePilotGrade"
-                  class="display"
-                  data-trad="hide_grade_MPR"
-                ></button>
-                <button
-                  id="togglePilotShardNeeded"
-                  class="display"
-                  data-trad="hide_shards_needed"
-                ></button>
-                <button
-                  id="togglePilotShardMPR"
-                  class="display"
-                  data-trad="hide_shards_MPR"
-                ></button>
-                <button
-                  id="togglePilotUpgrade"
-                  class="display"
-                  data-trad="hide_upgrade"
-                ></button>
-                <button
-                  id="togglePilotBox"
-                  class="display"
-                  data-trad="hide_box"
-                ></button>
-                <button
-                  id="togglePilotShardNextStar"
-                  class="display active"
-                  data-trad="hide_shards_next_star"
-                ></button>
-                <button
-                  id="togglePilotCoinStar"
-                  class="display active"
-                  data-trad="hide_coins_next_star"
-                ></button>
-              </div>
-            </details>
-            <!-- masqueur de colonne pour les Equipiers -->
-            <details id="crewHide" style="display: none">
-              <summary data-trad="hide"></summary>
-              <button id="toggleCrewImage" class="display">image</button>
-              <button id="toggleCrewFranchise" class="display">
-                Franchise
-              </button>
-              <button
-                id="toggleCrewRarity"
-                class="display"
-                data-trad="rarity"
-              ></button>
-              <button
-                id="toggleCrewName"
-                class="display"
-                data-trad="hide_name"
-              ></button>
-              <button
-                id="toggleCrewStar"
-                class="display"
-                data-trad="hide_stars"
-              ></button>
-              <button
-                id="toggleCrewCurrentShard"
-                class="display"
-                data-trad="hide_current_shards"
-              ></button>
-              <button
-                id="toggleCrewShardNeeded"
-                class="display"
-                data-trad="hide_shards_needed"
-              ></button>
-              <button
-                id="toggleCrewBox"
-                class="display"
-                data-trad="hide_box"
-              ></button>
-            </details>
-          </div>
         </div>
         <!-- pilot form -->
         <form novalidate id="pilotForm">
@@ -285,12 +145,12 @@
             <input type="text" id="pilotFranchise" required />
             <select id="pilotFranchise2" required></select>
           </div>
-          <div
+          <!-- <div
             style="display: none"
             id="pilotFranchiseError"
             class="error-message"
             data-trad="pilot_franchise_error"
-          ></div>
+          ></div> -->
 
           <label
             style="display: none"
@@ -302,7 +162,6 @@
             <option value="Rare" data-trad="Rare"></option>
             <option value="Epic" data-trad="Epic"></option>
           </select>
-          <span style="display: none"></span>
 
           <label style="display: none" for="role" data-trad="role"></label>
           <select style="display: none" id="role" required>
@@ -311,7 +170,6 @@
             <option value="Trickster" data-trad="Trickster"></option>
             <option value="Defender" data-trad="Defender"></option>
           </select>
-          <span style="display: none"></span>
 
           <label
             style="display: none"
@@ -487,22 +345,162 @@
             data-trad="add_crew"
           ></button>
         </form>
-        <span class="copyright">
-          The character images used in this are purely for entertainment and
-          informational purposes.<br />
-          No ownership is claimed upon the images used, and no copyright
-          infringement is intended.<br />
-          All rights go to their respective owners.</span
+      </div>
+
+      <div class="escape">
+        <!-- masqueur de colonne pour les pilotes -->
+        <details id="pilotHide">
+          <summary data-trad="hide"></summary>
+          <div>
+            <button id="togglePilotImage" class="display">image</button>
+            <button id="togglePilotFranchise" class="display">Franchise</button>
+            <button
+              id="togglePilotRarity"
+              class="display"
+              data-trad="rarity"
+            ></button>
+            <button
+              id="togglePilotRole"
+              class="display"
+              data-trad="role"
+            ></button>
+            <button
+              id="togglePilotName"
+              class="display"
+              data-trad="hide_name"
+            ></button>
+            <button
+              id="togglePilotStar"
+              class="display"
+              data-trad="hide_stars"
+            ></button>
+            <button
+              id="togglePilotCurrentShard"
+              class="display"
+              data-trad="hide_current_shards"
+            ></button>
+            <button
+              id="togglePilotLevel"
+              class="display"
+              data-trad="hide_current_level"
+            ></button>
+            <button
+              id="togglePilotCurrentMPR"
+              class="display"
+              data-trad="hide_current_MPR"
+            ></button>
+            <button
+              id="togglePilotHighestMPR"
+              class="display"
+              data-trad="hide_highest_MPR"
+            ></button>
+            <button
+              id="togglePilotGrade"
+              class="display"
+              data-trad="hide_grade_MPR"
+            ></button>
+            <button
+              id="togglePilotShardNeeded"
+              class="display"
+              data-trad="hide_shards_needed"
+            ></button>
+            <button
+              id="togglePilotShardMPR"
+              class="display"
+              data-trad="hide_shards_MPR"
+            ></button>
+            <button
+              id="togglePilotUpgrade"
+              class="display"
+              data-trad="hide_upgrade"
+            ></button>
+            <button
+              id="togglePilotBox"
+              class="display"
+              data-trad="hide_box"
+            ></button>
+            <button
+              id="togglePilotShardNextStar"
+              class="display active"
+              data-trad="hide_shards_next_star"
+            ></button>
+            <button
+              id="togglePilotCoinStar"
+              class="display active"
+              data-trad="hide_coins_next_star"
+            ></button>
+          </div>
+        </details>
+        <!-- masqueur de colonne pour les Equipiers -->
+        <details id="crewHide" style="display: none">
+          <summary data-trad="hide"></summary>
+          <button id="toggleCrewImage" class="display">image</button>
+          <button id="toggleCrewFranchise" class="display">Franchise</button>
+          <button
+            id="toggleCrewRarity"
+            class="display"
+            data-trad="rarity"
+          ></button>
+          <button
+            id="toggleCrewName"
+            class="display"
+            data-trad="hide_name"
+          ></button>
+          <button
+            id="toggleCrewStar"
+            class="display"
+            data-trad="hide_stars"
+          ></button>
+          <button
+            id="toggleCrewCurrentShard"
+            class="display"
+            data-trad="hide_current_shards"
+          ></button>
+          <button
+            id="toggleCrewShardNeeded"
+            class="display"
+            data-trad="hide_shards_needed"
+          ></button>
+          <button
+            id="toggleCrewBox"
+            class="display"
+            data-trad="hide_box"
+          ></button>
+        </details>
+      </div>
+      <div class="filters-container">
+        <!-- Conteneur pour la recherche et les filtres des pilotes -->
+        <div id="pilot-filter-container" class="search-filter-container">
+          <input type="text" id="pilotSearchInput" />
+          <select id="pilotFranchiseFilter" class="pilotFilter"></select>
+          <select id="pilotRarityFilter" class="pilotFilter"></select>
+          <select id="roleFilter" class="pilotFilter"></select>
+          <select id="pilotShardsFilter" class="pilotFilter"></select>
+          <select id="rmjFilter" class="pilotFilter"></select>
+          <select id="levelFilter" class="pilotFilter"></select>
+          <select id="pilotBoxesFilter" class="pilotFilter"></select>
+        </div>
+        <!-- Conteneur pour la recherche et les filtres des Equipiers -->
+        <div
+          id="crew-filter-container"
+          class="search-filter-container"
+          style="display: none"
         >
+          <input type="text" id="crewSearchInput" />
+          <select id="crewFranchiseFilter" class="crewFilter"></select>
+          <select id="crewRarityFilter" class="crewFilter"></select>
+          <select id="crewStarsFilter" class="crewFilter"></select>
+          <select id="crewShardsFilter" class="crewFilter"></select>
+          <select id="crewBoxesFilter" class="crewFilter"></select>
+        </div>
       </div>
       <!-- total des différent calculs -->
       <div class="table-container">
-        <h1>Disney Speedstorm Tracker</h1>
         <table id="pilotTable">
           <thead>
             <tr>
               <th>Image</th>
-              <th>Franchise</th>
+              <th>Collection</th>
               <th data-trad="rarity"></th>
               <th data-trad="role"></th>
               <th data-trad="pilot_name_table"></th>

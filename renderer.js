@@ -163,8 +163,11 @@ crewForm.addEventListener("submit", (event) =>
   )
 );
 
+window.saveScroll = 0;
 function clickModifyPilot(event) {
   if (event.target.classList.contains("edit-btn")) {
+    saveScroll = document.documentElement.scrollTop;
+    document.getElementById("pilotCurrentStars").focus();
     const index = event.target.dataset.index;
     let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
     const pilot = pilots[index];
@@ -177,6 +180,7 @@ function clickModifyPilot(event) {
 
 function clickModifyCrew(event) {
   if (event.target.classList.contains("edit-btn")) {
+    document.getElementById("crewCurrentStars").focus();
     const index = event.target.dataset.index;
     let crews = JSON.parse(localStorage.getItem("crews")) || [];
     const crew = crews[index];

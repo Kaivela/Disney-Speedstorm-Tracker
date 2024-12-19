@@ -345,6 +345,8 @@ function submitPilotForm(
     pilotSubmitBtn.textContent = getTrad("add_pilot"); // Réinitialiser le texte du bouton après ajout
     pilotSubmitBtn.style.display = "none";
     editingPilotIndex = null; // Réinitialiser l'index d'édition
+
+    document.documentElement.scrollTop = window.saveScroll;
   }
 }
 
@@ -373,14 +375,14 @@ function checkFormValidity(
   const currentRMJError = document.getElementById("currentRMJError");
   const highestRMJ = parseInt(document.getElementById("highestRMJ").value, 10);
   const highestRMJError = document.getElementById("highestRMJError");
-  if (franchise === "" && franchise2 === "") {
-    // pilotFranchiseError.style.display = "block";
-    showElement(pilotFranchiseError);
-    isValid = false;
-  } else {
-    // pilotFranchiseError.style.display = "none";
-    hideElement(pilotFranchiseError);
-  }
+  // if (franchise === "" && franchise2 === "") {
+  //   pilotFranchiseError.style.display = "block";
+  //   showElement(pilotFranchiseError);
+  //   isValid = false;
+  // } else {
+  //   pilotFranchiseError.style.display = "none";
+  //   hideElement(pilotFranchiseError);
+  // }
   if (pilotName === "") {
     pilotNameError.style.display = "block";
     isValid = false;
@@ -439,11 +441,11 @@ function checkFormValidity(
 }
 
 function hideElement(element) {
-  element.style.opacity = 0;
+  element.style.display = "none";
 }
 
 function showElement(element) {
-  element.style.opacity = 1;
+  element.style.display = "block";
 }
 
 function applyPilotSearch(searchTerm) {

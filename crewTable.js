@@ -184,6 +184,8 @@ function submitCrewForm(
     crewSubmitBtn.textContent = getTrad("add_crew"); // Réinitialiser le texte du bouton après ajout
     crewSubmitBtn.style.display = "none";
     editingCrewIndex = null; // Réinitialiser l'index d'édition
+
+    document.documentElement.scrollTop = window.saveScroll;
   }
 }
 
@@ -250,11 +252,11 @@ function checkFormValidity(
 }
 
 function hideElement(element) {
-  element.style.opacity = 0;
+  element.style.display = "none";
 }
 
 function showElement(element) {
-  element.style.opacity = 1;
+  element.style.display = "block";
 }
 
 function applyCrewSearch(searchTerm) {
