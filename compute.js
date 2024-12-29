@@ -93,7 +93,7 @@ function calculateCoinsNeededForGoal(currentLevel, levelGoal) {
 }
 
 // function pour calculer les CoinsToGet en fonction du HighestRMJ
-function calculateCoinsToGet(highestRMJ, rmjCoin, goal) {
+function calculateCoinsToGet(highestRMJ, rmjCoin, goal, star) {
   let totalCoinsToGet = 0;
   let table;
 
@@ -106,10 +106,11 @@ function calculateCoinsToGet(highestRMJ, rmjCoin, goal) {
   } else if (rmjCoin === "S10Mid") {
     table = rmjS10MidCoinsReward;
   }
-
-  for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
-    if (rmj <= table.length) {
-      totalCoinsToGet += table[rmj - 1];
+  if (star > 0) {
+    for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
+      if (rmj <= table.length) {
+        totalCoinsToGet += table[rmj - 1];
+      }
     }
   }
 
@@ -130,19 +131,21 @@ function calculatePilotShardsToGet(highestRMJ, goal) {
 }
 
 // function pour calculer les TokensToGet en fonction du HighestRMJ
-function calculateTokensToGet(highestRMJ, rmjTokenOld, goal) {
+function calculateTokensToGet(highestRMJ, rmjTokenOld, goal, star) {
   let totalTokensToGet = 0;
 
-  if (rmjTokenOld) {
-    for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
-      if (rmj <= rmjOldTokensReward.length) {
-        totalTokensToGet += rmjOldTokensReward[rmj - 1];
+  if (star > 0) {
+    if (rmjTokenOld) {
+      for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
+        if (rmj <= rmjOldTokensReward.length) {
+          totalTokensToGet += rmjOldTokensReward[rmj - 1];
+        }
       }
-    }
-  } else {
-    for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
-      if (rmj <= rmjNewTokensReward.length) {
-        totalTokensToGet += rmjNewTokensReward[rmj - 1];
+    } else {
+      for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
+        if (rmj <= rmjNewTokensReward.length) {
+          totalTokensToGet += rmjNewTokensReward[rmj - 1];
+        }
       }
     }
   }
@@ -151,11 +154,13 @@ function calculateTokensToGet(highestRMJ, rmjTokenOld, goal) {
 }
 
 // Fonction pour calculer les cosmeticToGet en fonction du HighestRMJ
-function calculateCosmeticToGet(highestRMJ, goal) {
+function calculateCosmeticToGet(highestRMJ, goal, star) {
   let cosmeticToGet = 0;
-  for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
-    if (rmj <= rmjCosmeticReward.length) {
-      cosmeticToGet += rmjCosmeticReward[rmj - 1];
+  if (star > 0) {
+    for (let rmj = highestRMJ + 1; rmj <= goal; rmj++) {
+      if (rmj <= rmjCosmeticReward.length) {
+        cosmeticToGet += rmjCosmeticReward[rmj - 1];
+      }
     }
   }
 
@@ -275,7 +280,8 @@ function calculateTotal(lang, goal, levelGoal) {
     pilot.upgradeCoins = calculateCoinsToGet(
       pilot.highestRMJ,
       pilotBlank.rmjCoin,
-      goal
+      goal,
+      pilot.star
     );
     upgradeCoins = upgradeCoins + pilot.upgradeCoins;
 
@@ -283,12 +289,17 @@ function calculateTotal(lang, goal, levelGoal) {
     pilot.tokensToGet = calculateTokensToGet(
       pilot.highestRMJ,
       pilotBlank.rmjTokenOld,
-      goal
+      goal,
+      pilot.star
     );
     tokensToGet = tokensToGet + pilot.tokensToGet;
 
     // Calculer les cosmetic available in rmj
-    pilot.cosmeticToGet = calculateCosmeticToGet(pilot.highestRMJ, goal);
+    pilot.cosmeticToGet = calculateCosmeticToGet(
+      pilot.highestRMJ,
+      goal,
+      pilot.star
+    );
     cosmeticToGet = cosmeticToGet + pilot.cosmeticToGet;
   });
 
