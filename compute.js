@@ -281,7 +281,7 @@ function calculateTotal(lang, goal, levelGoal) {
       pilot.highestRMJ,
       pilotBlank.rmjCoin,
       goal,
-      pilot.star
+      pilot.currentStars
     );
     upgradeCoins = upgradeCoins + pilot.upgradeCoins;
 
@@ -290,7 +290,7 @@ function calculateTotal(lang, goal, levelGoal) {
       pilot.highestRMJ,
       pilotBlank.rmjTokenOld,
       goal,
-      pilot.star
+      pilot.currentStars
     );
     tokensToGet = tokensToGet + pilot.tokensToGet;
 
@@ -298,7 +298,7 @@ function calculateTotal(lang, goal, levelGoal) {
     pilot.cosmeticToGet = calculateCosmeticToGet(
       pilot.highestRMJ,
       goal,
-      pilot.star
+      pilot.currentStars
     );
     cosmeticToGet = cosmeticToGet + pilot.cosmeticToGet;
   });
