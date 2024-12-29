@@ -1925,7 +1925,7 @@
     "exclusiveTo": "Sally"
   },
 
-
+  
 
 
 
@@ -1936,7 +1936,7 @@
   {
     "franchise": "The Muppets",
     "rarity": "Common",
-    "name": "Scooter",
+    "name": "Sweetums",
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
@@ -1944,7 +1944,7 @@
   {
     "franchise": "The Muppets",
     "rarity": "Common",
-    "name": "Sweetums",
+    "name": "Scooter",
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
