@@ -81,11 +81,13 @@ function calculateCoinsNextStar(currentLevel, currentStars) {
 }
 
 // Fonction pour calculer les coins nécessaires pour le goal en fonction du niveau actuel
-function calculateCoinsNeededForGoal(currentLevel, levelGoal) {
+function calculateCoinsNeededForGoal(currentLevel, levelGoal, star) {
   let totalCoinsNeeded = 0;
-  for (let level = currentLevel + 1; level <= levelGoal; level++) {
-    if (level <= coinsCosts.length) {
-      totalCoinsNeeded += coinsCosts[level - 1];
+  if (star > 0) {
+    for (let level = currentLevel + 1; level <= levelGoal; level++) {
+      if (level <= coinsCosts.length) {
+        totalCoinsNeeded += coinsCosts[level - 1];
+      }
     }
   }
 
@@ -237,7 +239,8 @@ function calculateTotal(lang, goal, levelGoal) {
     // Calculer les coinsNeeded pour chaque pilote
     pilot.coinsNeeded = calculateCoinsNeededForGoal(
       pilot.currentLevel,
-      levelGoal
+      levelGoal,
+      pilot.currentStars
     );
     allCoins = allCoins + pilot.coinsNeeded;
 
