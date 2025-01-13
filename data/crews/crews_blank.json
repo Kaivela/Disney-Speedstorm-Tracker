@@ -2551,5 +2551,14 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Maui"
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Epic",
+    "name": "Simea",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Moana"
   }
 ]

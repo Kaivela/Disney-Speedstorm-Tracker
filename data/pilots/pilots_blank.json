@@ -1132,5 +1132,19 @@
     "universalBox": false,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10Mid"
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Epic",
+    "role": "Trickster",
+    "name": "Moana",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": false,
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10Mid"
   }
 ]
