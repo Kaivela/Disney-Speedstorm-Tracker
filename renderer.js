@@ -537,11 +537,9 @@ function loadSettings() {
 function toggleDarkMode() {
   if (darkMode.checked) {
     styleSheet.href = "dark_style.css";
-    console.log("dark mode is checked");
     dark = true;
   } else {
     styleSheet.href = "style.css";
-    console.log("dark mode is unchecked");
     dark = false;
   }
 }
