@@ -91,45 +91,45 @@
   }
   /* Appliquer un fond gris à chaque ligne impaire */
   tbody tr:nth-child(odd) {
-    background-color: #000b1a;
+    background-color: #000b1ab3;
   }
 
   /* Appliquer un fond blanc à chaque ligne paire */
   tbody tr:nth-child(even) {
-    background-color: #001b40;
+    background-color: #001b40b3;
   }
   .Speedster {
-    background-color: #004f63;
+    background-color: #004f63b3;
   }
   .Brawler {
-    background-color: #a20000;
+    background-color: #a20000b3;
   }
   .Trickster {
-    background-color: #5b0080;
+    background-color: #5b0080b3;
   }
   .Defender {
-    background-color: #006400;
+    background-color: #006400b3;
   }
   .Common {
-    background-color: #004f63;
+    background-color: #004f63b3;
   }
   .Rare {
-    background-color: #5b0080;
+    background-color: #5b0080b3;
   }
   .Epic {
-    background-color: #9f3200;
+    background-color: #9f3200b3;
   }
   .shards-needed-close {
     background-color: rgba(163, 144, 0, 0.7);
-    color: #ffffff;
+    color: #ffffffb3;
   }
   .shards-needed-warning {
     background-color: rgba(163, 2, 2, 0.7);
-    color: #ffffff;
+    color: #ffffffb3;
   }
   .shards-needed-zero {
-    background-color: rgb(84, 84, 84);
-    color: black;
+    background-color: rgb(84, 84, 84, 0.7);
+    color: #000000b3;
   }
   form {
     display: grid;
@@ -229,7 +229,7 @@
     color: #fff; /* Texte noir */
   }
   .level-purple {
-    background-color: #590e7e; /* Pourpre */
+    background-color: #590e7eb3; /* Pourpre */
     color: #fff; /* Texte noir */
   }
   .level-violet {
@@ -237,7 +237,7 @@
     color: #fff; /* Texte noir */
   }
   .level-black {
-    background-color: rgb(84, 84, 84); /* Noir */
+    background-color: rgb(84, 84, 84, 0.7); /* Noir */
     color: #000; /* Texte blanc */
   }
   .error-message {
