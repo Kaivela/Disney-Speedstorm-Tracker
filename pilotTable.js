@@ -159,9 +159,9 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   <td data-trad="${pilot.rarity}" ${styles.pilotRarity} class="${
     pilot.rarity
   }">${getTrad(pilot.rarity)}</td>
-  <td data-trad="${pilot.role}" ${styles.pilotRole} class="${
-    pilot.role
-  }">${getTrad(pilot.role)}</td>
+  <td data-trad="${pilotBlank.role}" ${styles.pilotRole} class="${
+    pilotBlank.role
+  }">${getTrad(pilotBlank.role)}</td>
   <td data-trad="${pilot.name}" ${styles.pilotName}>${getTrad(pilot.name)}</td>
   <td ${styles.pilotStar}>${pilot.currentStars}</td>
   <td class="${shardsClass}" ${styles.pilotCurrentShard}>${

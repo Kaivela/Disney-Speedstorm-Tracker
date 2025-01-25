@@ -27,6 +27,7 @@ const settingsStr = localStorage.getItem("settings");
 const settings = settingsStr ? JSON.parse(settingsStr) : {};
 
 let theme = "";
+let dark = false;
 let lang = settings.lang || "en";
 let getTrad = createGetTrad(lang);
 let mode = "pilot";
@@ -41,6 +42,8 @@ window.onload = function () {
 };
 
 // Récupère le formulaire et le corps du tableau
+const darkMode = document.getElementById("dark");
+const styleSheet = document.getElementById("styleSheet");
 const pilotForm = document.getElementById("pilotForm");
 const crewForm = document.getElementById("crewForm");
 let pilotTableBody = document.getElementById("pilotTableBody");
@@ -331,6 +334,8 @@ crewExportButton.addEventListener("click", () => {
   download(filename, text);
 });
 
+darkMode.addEventListener("click", () => toggleDarkMode());
+
 // Fonction pour export les data dans un fichier json
 function download(filename, text) {
   var element = document.createElement("a");
@@ -502,6 +507,7 @@ function saveSettings() {
     theme,
     goal,
     levelGoal,
+    dark,
   };
   localStorage.setItem("settings", JSON.stringify(settings));
   closeSettings();
@@ -524,6 +530,27 @@ function loadSettings() {
   selectTheme.value = settings.theme || "";
   theme = settings.theme || "";
   background.style.backgroundImage = `url("img/backgrounds/background season${selectTheme.value}.webp")`;
+
+  dark = settings.dark || false;
+}
+
+function toggleDarkMode() {
+  if (darkMode.checked) {
+    styleSheet.href = "dark_style.css";
+    console.log("dark mode is checked");
+    dark = true;
+  } else {
+    styleSheet.href = "style.css";
+    console.log("dark mode is unchecked");
+    dark = false;
+  }
+}
+
+function isDarkModeActive() {
+  if (dark === true) {
+    styleSheet.href = "dark_style.css";
+    darkMode.checked = true;
+  }
 }
 
 // Charger les données des pilotes au démarrage
@@ -544,4 +571,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSettings();
   sortCrews();
   bindSortButtons();
+  isDarkModeActive();
 });

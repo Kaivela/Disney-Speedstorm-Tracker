@@ -1,7 +1,25 @@
 import { calculateCrewShardsNeeded, calculateTotal } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import crewsBlank from "./data/crews/crews_blank.json";
+
 const crewSearchInput = document.getElementById("crewSearchInput");
+const toggleCrewImage = document.getElementById("toggleCrewImage");
+const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
+const toggleCrewRarity = document.getElementById("toggleCrewRarity");
+const toggleCrewName = document.getElementById("toggleCrewName");
+const toggleCrewLevel = document.getElementById("toggleCrewStar");
+const toggleCrewCurrentShard = document.getElementById(
+  "toggleCrewCurrentShard"
+);
+const toggleCrewShardNeeded = document.getElementById("toggleCrewShardNeeded");
+const toggleCrewBox = document.getElementById("toggleCrewBox");
+
+// Fonction utilitaire pour déterminer si le style doit être caché
+function getStyleIfActive(toggleElement) {
+  return toggleElement.classList.contains("active")
+    ? 'style="display: none;"'
+    : "";
+}
 
 function updateCrewWithShardsNeeded(crew, index) {
   const shardsNeeded = calculateCrewShardsNeeded(crew);
@@ -54,19 +72,46 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   let universalBox;
   if (crewBlank.universalBox === "season") universalBox = "🟣";
   else universalBox = crewBlank.universalBox ? "✔️" : "❌";
+
+  // Tableau des propriétés à appliquer
+  const styles = {
+    crewImage: toggleCrewImage.classList.contains("active")
+      ? "display: none;"
+      : "",
+    crewFranchise: getStyleIfActive(toggleCrewFranchise),
+    crewRarity: getStyleIfActive(toggleCrewRarity),
+    crewName: getStyleIfActive(toggleCrewName),
+    crewCurrentShard: getStyleIfActive(toggleCrewCurrentShard),
+    crewLevel: getStyleIfActive(toggleCrewLevel),
+    crewShardNeeded: getStyleIfActive(toggleCrewShardNeeded),
+    crewBox: getStyleIfActive(toggleCrewBox),
+  };
+
   row.innerHTML = `
-            <td style="padding: 0; border: none; display: block; height: 80px"><img onerror="this.src='img/Locked.webp'" src="img/crews/${
-              crew.name
-            }.webp" style="width: 80px; height: auto;"></td>
-            <td data-trad="${crew.franchise}">${getTrad(crew.franchise)}</td>
-            <td data-trad="${crew.rarity}" class="${crew.rarity}">${getTrad(
-    crew.rarity
+            <td style="padding: 0; border: none; display: block; height: 80px; ${
+              styles.crewImage
+            }"><img onerror="this.src='img/Locked.webp'" src="img/crews/${
+    crew.name
+  }.webp" style="width: 80px; height: auto;"></td>
+            <td data-trad="${crew.franchise}" ${styles.crewFranchise}>${getTrad(
+    crew.franchise
   )}</td>
-        <td data-trad="${crew.name}">${getTrad(crew.name)}</td>
-            <td class="${starclass}">${crew.currentStars}</td>
-            <td class="${shardsClass}">${crew.currentShards}</td>
-            <td class="${shardsClass}">${crew.shardsNeeded}</td>
-            <td>${universalBox}</td>
+            <td data-trad="${crew.rarity}" ${styles.crewRarity} class="${
+    crew.rarity
+  }">${getTrad(crew.rarity)}</td>
+        <td data-trad="${crew.name}" ${styles.crewName}>${getTrad(
+    crew.name
+  )}</td>
+            <td class="${starclass}" ${styles.crewLevel}>${
+    crew.currentStars
+  }</td>
+            <td class="${shardsClass}" ${styles.crewCurrentShard}>${
+    crew.currentShards
+  }</td>
+            <td class="${shardsClass}" ${styles.crewShardNeeded}>${
+    crew.shardsNeeded
+  }</td>
+            <td ${styles.crewBox}>${universalBox}</td>
             <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
         `;
   crewTableBody.appendChild(row);

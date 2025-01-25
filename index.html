@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
     <title>Disney Speedstorm Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+    <link id="styleSheet" rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/icon.png" />
   </head>
   <body id="background" class="background">
@@ -23,6 +23,13 @@
           class="tradButton"
           data-trad="trad_button"
         ></button>
+
+        <label for="darkMode" data-trad="dark_mode"></label>
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input id="dark" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
 
         <label for="buttonGoal" data-trad="change_goal"></label>
         <select id="goalSelect">
