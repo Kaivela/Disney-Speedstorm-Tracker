@@ -28,6 +28,7 @@ const settings = settingsStr ? JSON.parse(settingsStr) : {};
 
 let theme = "";
 let dark = false;
+// let transparant = false;
 let lang = settings.lang || "en";
 let getTrad = createGetTrad(lang);
 let mode = "pilot";
@@ -43,11 +44,11 @@ window.onload = function () {
 
 // Récupère le formulaire et le corps du tableau
 const darkMode = document.getElementById("dark");
-const styleSheet = document.getElementById("styleSheet");
+// const transparantMode = document.getElementById("transparant_table");
 const pilotForm = document.getElementById("pilotForm");
 const crewForm = document.getElementById("crewForm");
-let pilotTableBody = document.getElementById("pilotTableBody");
-let crewTableBody = document.getElementById("crewTableBody");
+const pilotTableBody = document.getElementById("pilotTableBody");
+const crewTableBody = document.getElementById("crewTableBody");
 const pilotSubmitBtn = document.getElementById("pilotSubmitBtn");
 const crewSubmitBtn = document.getElementById("crewSubmitBtn");
 const pilotExportButton = document.getElementById("pilotDownloadJSON");
@@ -335,6 +336,7 @@ crewExportButton.addEventListener("click", () => {
 });
 
 darkMode.addEventListener("click", () => toggleDarkMode());
+// transparantMode.addEventListener("click", () => toggleTransparancy());
 
 // Fonction pour export les data dans un fichier json
 function download(filename, text) {
@@ -498,7 +500,6 @@ function bindSettingsEvents() {
   document.addEventListener("keyup", (e) => {
     if (e.key === "Escape") closeSettings();
   });
-  // document.querySelector("").addEventListener("click", closeSettings);
 }
 
 function saveSettings() {
@@ -507,7 +508,8 @@ function saveSettings() {
     theme,
     goal,
     levelGoal,
-    dark,
+    // dark,
+    // transparant,
   };
   localStorage.setItem("settings", JSON.stringify(settings));
   closeSettings();
@@ -532,24 +534,72 @@ function loadSettings() {
   background.style.backgroundImage = `url("img/backgrounds/background season${selectTheme.value}.webp")`;
 
   dark = settings.dark || false;
+
+  // transparant = settings.transparant || false;
 }
 
 function toggleDarkMode() {
-  if (darkMode.checked) {
-    styleSheet.href = "dark_style.css";
-    dark = true;
-  } else {
-    styleSheet.href = "style.css";
-    dark = false;
-  }
+  dark = document.documentElement.getAttribute("data-theme") === "dark";
+  dark = !dark;
+  darkMode.checked = dark;
+  const newTheme = dark ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
 }
 
 function isDarkModeActive() {
   if (dark === true) {
-    styleSheet.href = "dark_style.css";
     darkMode.checked = true;
   }
 }
+
+// const odd = document.querySelectorAll("tbody tr:nth-child(odd)");
+// const even = document.querySelectorAll("tbody tr:nth-child(even)");
+// const speedster = document.querySelectorAll(".Speedster");
+// const brawler = document.querySelectorAll(".Brawler");
+// const trickster = document.querySelectorAll(".Trickster");
+// const defender = document.querySelectorAll(".Defender");
+// const common = document.querySelectorAll(".Common");
+// const rare = document.querySelectorAll(".Rare");
+// const epic = document.querySelectorAll(".Epic");
+// const close = document.querySelectorAll(".shards-needed-close");
+// const warning = document.querySelectorAll(".shards-needed-warning");
+// const zero = document.querySelectorAll(".shards-needed-zero");
+// const gray = document.querySelectorAll(".level-gray");
+// const red = document.querySelectorAll(".level-light-red")
+// const yellow = document.querySelectorAll(".level-yellow")
+// const green = document.querySelectorAll(".level-green");
+// const cyan = document.querySelectorAll(".level-light-blue");
+// const blue = document.querySelectorAll(".level-dark-blue");
+// const purple = document.querySelectorAll(".level-purple");
+// const violet = document.querySelectorAll(".level-violet");
+// const black = document.querySelectorAll(".level-black");
+
+// function toggleTransparancy() {
+//   if (transparantMode.checked) {
+//     if (dark === true) {
+//       document.documentElement.style.setProperty("--bg-color-odd", `#000b1ab3`);
+//     } else {
+//       document.documentElement.style.setProperty("--bg-color-odd", `#ccccccb3`);
+//     }
+//     transparant = true;
+//   } else {
+//     if (dark === true) {
+//       document.documentElement.style.setProperty("--bg-color-odd", `#000b1a`);
+//     } else {
+//       document.documentElement.style.setProperty("--bg-color-odd", `#cccccc`);
+//     }
+//     transparant = false;
+//   }
+// }
+
+// function isTransparancyActive() {
+//   if (transparant === true) {
+//     if (darkMode === true)
+//       // des choses a faire
+//       transparantMode.checked = true;
+//   }
+// }
 
 // Charger les données des pilotes au démarrage
 document.addEventListener("DOMContentLoaded", () => {
@@ -570,4 +620,5 @@ document.addEventListener("DOMContentLoaded", () => {
   sortCrews();
   bindSortButtons();
   isDarkModeActive();
+  // isTransparancyActive();
 });
