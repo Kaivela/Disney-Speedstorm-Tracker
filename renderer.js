@@ -28,7 +28,7 @@ const settings = settingsStr ? JSON.parse(settingsStr) : {};
 
 let theme = "";
 let dark = false;
-// let transparant = false;
+let transparant = true;
 let lang = settings.lang || "en";
 let getTrad = createGetTrad(lang);
 let mode = "pilot";
@@ -44,7 +44,7 @@ window.onload = function () {
 
 // Récupère le formulaire et le corps du tableau
 const darkMode = document.getElementById("dark");
-// const transparantMode = document.getElementById("transparant_table");
+const transparantMode = document.getElementById("transparant_table");
 const pilotForm = document.getElementById("pilotForm");
 const crewForm = document.getElementById("crewForm");
 const pilotTableBody = document.getElementById("pilotTableBody");
@@ -336,7 +336,7 @@ crewExportButton.addEventListener("click", () => {
 });
 
 darkMode.addEventListener("click", () => toggleDarkMode());
-// transparantMode.addEventListener("click", () => toggleTransparancy());
+transparantMode.addEventListener("click", () => toggleTransparancy());
 
 // Fonction pour export les data dans un fichier json
 function download(filename, text) {
@@ -509,7 +509,7 @@ function saveSettings() {
     goal,
     levelGoal,
     // dark,
-    // transparant,
+    transparant,
   };
   localStorage.setItem("settings", JSON.stringify(settings));
   closeSettings();
@@ -535,7 +535,7 @@ function loadSettings() {
 
   dark = settings.dark || false;
 
-  // transparant = settings.transparant || false;
+  transparant = settings.transparant || false;
 }
 
 function toggleDarkMode() {
@@ -545,15 +545,20 @@ function toggleDarkMode() {
   const newTheme = dark ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
+
+  if (transparantMode.checked) {
+    activateTransparancy();
+  } else {
+    deactivateTransparancy();
+  }
 }
 
 function isDarkModeActive() {
-  if (dark === true) {
+  if (localStorage.getItem("theme") === "dark") {
     darkMode.checked = true;
   }
 }
 
-// const odd = document.querySelectorAll("tbody tr:nth-child(odd)");
 // const even = document.querySelectorAll("tbody tr:nth-child(even)");
 // const speedster = document.querySelectorAll(".Speedster");
 // const brawler = document.querySelectorAll(".Brawler");
@@ -575,31 +580,58 @@ function isDarkModeActive() {
 // const violet = document.querySelectorAll(".level-violet");
 // const black = document.querySelectorAll(".level-black");
 
-// function toggleTransparancy() {
-//   if (transparantMode.checked) {
-//     if (dark === true) {
-//       document.documentElement.style.setProperty("--bg-color-odd", `#000b1ab3`);
-//     } else {
-//       document.documentElement.style.setProperty("--bg-color-odd", `#ccccccb3`);
-//     }
-//     transparant = true;
-//   } else {
-//     if (dark === true) {
-//       document.documentElement.style.setProperty("--bg-color-odd", `#000b1a`);
-//     } else {
-//       document.documentElement.style.setProperty("--bg-color-odd", `#cccccc`);
-//     }
-//     transparant = false;
-//   }
-// }
+function toggleTransparancy() {
+  if (transparantMode.checked) {
+    activateTransparancy();
+    transparant = true;
+  } else {
+    deactivateTransparancy();
+    transparant = false;
+  }
+}
 
-// function isTransparancyActive() {
-//   if (transparant === true) {
-//     if (darkMode === true)
-//       // des choses a faire
-//       transparantMode.checked = true;
-//   }
-// }
+function deactivateTransparancy() {
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.style.setProperty("--bg-color-odd", `#000b1a`);
+    document.documentElement.style.setProperty("--bg-color-even", `#001b40`);
+  } else {
+    document.documentElement.style.setProperty("--bg-color-odd", `#cccccc`);
+    document.documentElement.style.setProperty("--bg-color-even", `#ffffff`);
+  }
+}
+
+function activateTransparancy() {
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.style.setProperty("--bg-color-odd", `#000b1ab3`);
+    document.documentElement.style.setProperty("--bg-color-even", `#001b40b3`);
+  } else {
+    document.documentElement.style.setProperty("--bg-color-odd", `#ccccccb3`);
+    document.documentElement.style.setProperty("--bg-color-even", `#ffffffb3`);
+  }
+}
+
+function isTransparancyActive() {
+  if (transparant === true) {
+    activateTransparancy;
+    transparantMode.checked = true;
+    // if (darkMode === true) {
+    // }
+  } else {
+    deactivateTransparancy();
+  }
+}
+
+function applyTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  const userPreferedTheme = window.matchMedia("(prefers-color-scheme: dark)")
+    .matches
+    ? "dark"
+    : "light";
+
+  const theme = savedTheme || userPreferedTheme;
+
+  document.documentElement.setAttribute("data-theme", theme);
+}
 
 // Charger les données des pilotes au démarrage
 document.addEventListener("DOMContentLoaded", () => {
@@ -620,5 +652,6 @@ document.addEventListener("DOMContentLoaded", () => {
   sortCrews();
   bindSortButtons();
   isDarkModeActive();
-  // isTransparancyActive();
+  isTransparancyActive();
+  applyTheme();
 });

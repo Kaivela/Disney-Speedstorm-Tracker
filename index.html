@@ -11,20 +11,6 @@
     <link rel="icon" type="image/png" href="img/icon.png" />
   </head>
   <body id="background" class="background">
-    <script>
-      (function () {
-        const savedTheme = localStorage.getItem("theme");
-        const userPreferedTheme = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches
-          ? "dark"
-          : "light";
-
-        const theme = savedTheme || userPreferedTheme;
-
-        document.documentElement.setAttribute("data-theme", theme);
-      })();
-    </script>
     <h1 style="display: fixed">Disney Speedstorm Tracker</h1>
     <div id="settingsPanel">
       <div>
@@ -44,11 +30,11 @@
           <span class="slider round"></span>
         </label>
 
-        <!-- <label for="transparantTable" data-trad="transparant_table"></label>
+        <label for="transparantTable" data-trad="transparant_table"></label>
         <label class="switch">
           <input id="transparant_table" type="checkbox" />
           <span class="slider round"></span>
-        </label> -->
+        </label>
 
         <label for="buttonGoal" data-trad="change_goal"></label>
         <select id="goalSelect">
