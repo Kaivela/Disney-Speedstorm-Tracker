@@ -22,30 +22,32 @@
  --bg-color-warning: #A30202B3;
  --color-warning: #ffffffb3;
  --bg-color-zero: #545454B3;
- --color-zero: #000000b3;
+ --color-zero: black;
+ --font-weight-zero: 1000;
  --bg-color-label: #31313180;
  --color-label: #f5f5f5;
  --bg-color-select-input: black;
  --color-select-input: white;
  --bg-color-button: #700074;
  --bg-color-level-gray: #d3d3d3b3;
- --color-level-gray: #000;
+ --color-level-gray: black;
  --bg-color-level-red: #9d0e0eb3;
- --color-level-red: #fff;
+ --color-level-red: white;
  --bg-color-level-yellow: #c8c82bb3;
- --color-level-yellow: #fff;
+ --color-level-yellow: white;
  --bg-color-level-green: #005f00b3;
- --color-level-green: #fff;
+ --color-level-green: white;
  --bg-color-level-light-blue: #008c8cb3;
- --color-level-light-blue: #fff;
+ --color-level-light-blue: white;
  --bg-color-level-dark-blue: #004283b3;
- --color-level-dark-blue: #fff;
+ --color-level-dark-blue: white;
  --bg-color-level-purple: #590e7eb3;
- --color-level-purple: #fff;
+ --color-level-purple: white;
  --bg-color-level-violet: #3d0a70b3;
- --color-level-violet: #fff;
+ --color-level-violet: white;
  --bg-color-level-black: #545454B3;
- --color-level-black: #000;
+ --color-level-black: black;
+ --font-weight-level-black: 1000;
  --bg-color-display: #006703;
  --color-display: white;
  --bg-color-display-active: #8C0000;
@@ -60,7 +62,7 @@
   --bg-color-background: white;
   --color-h1: white;
   --color-h2: black;
- --bg-color-summary: #00000080;
+ --bg-color-summary: black#00000080;
  --border-th-td: 1px solid #ddd;
  --color-th-td: black;
  --bg-color-th: #ff9e25;
@@ -80,29 +82,31 @@
  --color-warning: white;
  --bg-color-zero: #000000B3;
  --color-zero: white;
+ --font-weight-zero: 400;
  --bg-color-label: #00000080;
  --color-label: white;
  --bg-color-select-input: white;
  --color-select-input: black;
  --bg-color-button: #7f4caf;
  --bg-color-level-gray: #d3d3d3b3;
- --color-level-gray: #000;
+ --color-level-gray: black;
  --bg-color-level-red: #ff6666b3;
- --color-level-red: #000;
+ --color-level-red: black;
  --bg-color-level-yellow: #ffff00b3;
- --color-level-yellow: #000;
+ --color-level-yellow: black;
  --bg-color-level-green: #00ff00b3;
- --color-level-green: #000;
+ --color-level-green: black;
  --bg-color-level-light-blue: #00ffffb3;
- --color-level-light-blue: #000;
+ --color-level-light-blue: black;
  --bg-color-level-dark-blue: #3399ffb3;
- --color-level-dark-blue: #000;
+ --color-level-dark-blue: black;
  --bg-color-level-purple: #cc66ff;
- --color-level-purple: #000;
+ --color-level-purple: black;
  --bg-color-level-violet: #7f00ffb3;
- --color-level-violet: #000;
+ --color-level-violet: black;
  --bg-color-level-black: #000000b3;
  --color-level-black: #fff;
+ --font-weight-level-black: 1000;
  --bg-color-display: #4caf50;
  --color-display: black;
  --bg-color-display-active: #DF5555;
@@ -245,6 +249,7 @@ tbody tr:nth-child(even) {
 .shards-needed-zero {
   background-color: var(--bg-color-zero);
   color: var(--color-zero);
+  font-weight: var(--font-weight-zero);
 }
 form {
   display: grid;
@@ -354,6 +359,7 @@ button:hover {
 .level-black {
   background-color: var(--bg-color-level-black);
   color: var(--color-level-black);
+  font-weight: var(--font-weight-level-black);
 }
 .error-message {
   grid-column: 1 / span 2;
