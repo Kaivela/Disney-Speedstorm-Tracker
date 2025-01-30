@@ -633,6 +633,34 @@ function applyTheme() {
   document.documentElement.setAttribute("data-theme", theme);
 }
 
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+const scrollBottomBtn = document.getElementById("scrollBottomBtn");
+
+// Remonter en haut
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Aller en bas
+scrollBottomBtn.addEventListener("click", () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+});
+
+// Gérer l'affichage des boutons selon le scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    scrollTopBtn.classList.remove("hidden");
+  } else {
+    scrollTopBtn.classList.add("hidden");
+  }
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+    scrollBottomBtn.classList.add("hidden");
+  } else {
+    scrollBottomBtn.classList.remove("hidden");
+  }
+});
+
 // Charger les données des pilotes au démarrage
 document.addEventListener("DOMContentLoaded", () => {
   mergePilotsAndCrews();
