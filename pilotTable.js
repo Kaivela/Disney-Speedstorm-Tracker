@@ -17,47 +17,29 @@ const togglePilotRarity = document.getElementById("togglePilotRarity");
 const togglePilotRole = document.getElementById("togglePilotRole");
 const togglePilotName = document.getElementById("togglePilotName");
 const togglePilotStar = document.getElementById("togglePilotStar");
-const togglePilotCurrentShard = document.getElementById(
-  "togglePilotCurrentShard"
-);
+const togglePilotCurrentShard = document.getElementById("togglePilotCurrentShard");
 const togglePilotLevel = document.getElementById("togglePilotLevel");
 const togglePilotCurrentMPR = document.getElementById("togglePilotCurrentMPR");
 const togglePilotHighestMPR = document.getElementById("togglePilotHighestMPR");
 const togglePilotGrade = document.getElementById("togglePilotGrade");
-const togglePilotShardNeeded = document.getElementById(
-  "togglePilotShardNeeded"
-);
+const togglePilotShardNeeded = document.getElementById("togglePilotShardNeeded");
 const togglePilotShardMPR = document.getElementById("togglePilotShardMPR");
 const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
 const togglePilotBox = document.getElementById("togglePilotBox");
-const togglePilotShardStar = document.getElementById(
-  "togglePilotShardNextStar"
-);
+const togglePilotShardStar = document.getElementById("togglePilotShardNextStar");
 const togglePilotCoinStar = document.getElementById("togglePilotCoinStar");
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement) {
-  return toggleElement.classList.contains("active")
-    ? 'style="display: none;"'
-    : "";
+  return toggleElement.classList.contains("active") ? 'style="display: none;"' : "";
 }
 
 // Fonction pour ajouter un pilote à la table
 function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const getTrad = createGetTrad(lang);
-  const shardsNeeded = calculatePilotShardsNeeded(
-    pilot.currentLevel,
-    pilot.currentShards
-  );
-  const shardsToNextStar = calculatePilotShardsNextStar(
-    pilot.currentLevel,
-    pilot.currentShards,
-    pilot.currentStars
-  );
-  const coinsToNextStar = calculateCoinsNextStar(
-    pilot.currentLevel,
-    pilot.currentStars
-  );
+  const shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
+  const shardsToNextStar = calculatePilotShardsNextStar(pilot.currentLevel, pilot.currentShards, pilot.currentStars);
+  const coinsToNextStar = calculateCoinsNextStar(pilot.currentLevel, pilot.currentStars);
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
 
@@ -124,9 +106,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
 
   // Tableau des propriétés à appliquer
   const styles = {
-    pilotImage: togglePilotImage.classList.contains("active")
-      ? "display: none;"
-      : "",
+    pilotImage: togglePilotImage.classList.contains("active") ? "display: none;" : "",
     pilotFranchise: getStyleIfActive(togglePilotFranchise),
     pilotRarity: getStyleIfActive(togglePilotRarity),
     pilotRole: getStyleIfActive(togglePilotRole),
@@ -146,27 +126,15 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   };
 
   row.innerHTML = `
-  <td style="padding: 0; border: none; display: block; height: 80px; ${
-    styles.pilotImage
-  }">
-      <img src="img/pilots/${
-        pilot.name
-      }.webp" style="width: 80px; height: auto;">
+  <td style="padding: 0; border: none; display: block; height: 80px; ${styles.pilotImage}">
+      <img src="img/pilots/${pilot.name}.webp" style="width: 80px; height: auto;">
   </td>
-  <td data-trad="${pilot.franchise}" ${styles.pilotFranchise}>${getTrad(
-    pilot.franchise
-  )}</td>
-  <td data-trad="${pilot.rarity}" ${styles.pilotRarity} class="${
-    pilot.rarity
-  }">${getTrad(pilot.rarity)}</td>
-  <td data-trad="${pilotBlank.role}" ${styles.pilotRole} class="${
-    pilotBlank.role
-  }">${getTrad(pilotBlank.role)}</td>
+  <td data-trad="${pilot.franchise}" ${styles.pilotFranchise}>${getTrad(pilot.franchise)}</td>
+  <td data-trad="${pilot.rarity}" ${styles.pilotRarity} class="${pilot.rarity}">${getTrad(pilot.rarity)}</td>
+  <td data-trad="${pilotBlank.role}" ${styles.pilotRole} class="${pilotBlank.role}">${getTrad(pilotBlank.role)}</td>
   <td data-trad="${pilot.name}" ${styles.pilotName}>${getTrad(pilot.name)}</td>
   <td ${styles.pilotStar}>${pilot.currentStars}</td>
-  <td class="${shardsClass}" ${styles.pilotCurrentShard}>${
-    pilot.currentShards
-  }</td>
+  <td class="${shardsClass}" ${styles.pilotCurrentShard}>${pilot.currentShards}</td>
   <td class="${levelClass}" ${styles.pilotLevel}>${pilot.currentLevel}</td>
   <td ${styles.pilotCurrentMPR}>${pilot.currentRMJ}</td>
   <td ${styles.pilotHighestMPR}>${pilot.highestRMJ}</td>
@@ -249,8 +217,7 @@ function updatePilotFormFranchise(lang) {
     franchises.add(pilot.franchise);
   });
   // Récupérer les clés de la map
-  franchiseNames.innerHTML =
-    '<option value="" data-trad="all_franchises"></option>';
+  franchiseNames.innerHTML = '<option value="" data-trad="all_franchises"></option>';
   for (const name of franchises) {
     const option = document.createElement("option");
     option.value = name; // Utiliser la clé comme valeur de l'option
@@ -259,16 +226,7 @@ function updatePilotFormFranchise(lang) {
   }
 }
 
-function submitPilotForm(
-  event,
-  lang,
-  editingPilotIndex,
-  pilotTableBody,
-  pilotForm,
-  pilotSubmitBtn,
-  goal,
-  levelGoal
-) {
+function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, goal, levelGoal) {
   const getTrad = createGetTrad(lang);
   event.preventDefault();
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
@@ -278,27 +236,12 @@ function submitPilotForm(
     }) || {};
 
   // Récupérer les valeurs du formulaire
-  const franchise = getTradKey(
-    document.getElementById("pilotFranchise").value,
-    lang
-  );
-  const pilotName = getTradKey(
-    document.getElementById("pilotName").value,
-    lang
-  );
-  const pilotcurrentStars = parseInt(
-    document.getElementById("pilotCurrentStars").value,
-    10
-  );
-  const pilotCurrentShards = parseInt(
-    document.getElementById("pilotCurrentShards").value,
-    10
-  );
+  const franchise = getTradKey(document.getElementById("pilotFranchise").value, lang);
+  const pilotName = getTradKey(document.getElementById("pilotName").value, lang);
+  const pilotcurrentStars = parseInt(document.getElementById("pilotCurrentStars").value, 10);
+  const pilotCurrentShards = parseInt(document.getElementById("pilotCurrentShards").value, 10);
 
-  const currentLevel = parseInt(
-    document.getElementById("currentLevel").value,
-    10
-  );
+  const currentLevel = parseInt(document.getElementById("currentLevel").value, 10);
 
   let isValid = checkFormValidity(
     pilotName,
@@ -314,9 +257,7 @@ function submitPilotForm(
     // Créer l'objet pilote
     const editPilot = {
       franchise:
-        document.getElementById("pilotFranchise2").value === ""
-          ? franchise
-          : document.getElementById("pilotFranchise2").value,
+        document.getElementById("pilotFranchise2").value === "" ? franchise : document.getElementById("pilotFranchise2").value,
       rarity: document.getElementById("pilotRarity").value,
       role: document.getElementById("role").value,
       name: pilotName,
@@ -328,9 +269,7 @@ function submitPilotForm(
       universalBox: document.getElementById("pilotUniversalBox").checked,
     };
     savePilotData(editPilot, editingPilotIndex);
-    const sortColumn = document.querySelector(
-      "th[data-order]:not([data-order='default'])"
-    );
+    const sortColumn = document.querySelector("th[data-order]:not([data-order='default'])");
     if (sortColumn) {
       sortPilotsByColumn(sortColumn.dataset.sort, sortColumn.dataset.order);
     } else {
@@ -350,24 +289,12 @@ function submitPilotForm(
   }
 }
 
-function checkFormValidity(
-  pilotName,
-  editingPilotIndex,
-  pilots,
-  pilotCurrentStars,
-  currentLevel,
-  pilotCurrentShards,
-  franchise
-) {
+function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentStars, currentLevel, pilotCurrentShards, franchise) {
   let isValid = true;
-  const pilotCurrentShardsError = document.getElementById(
-    "pilotCurrentShardsError"
-  );
+  const pilotCurrentShardsError = document.getElementById("pilotCurrentShardsError");
   const pilotNameError = document.getElementById("pilotNameError");
   const pilotDuplicateError = document.getElementById("pilotDuplicateError");
-  const pilotcurrentStarsError = document.getElementById(
-    "pilotCurrentStarsError"
-  );
+  const pilotcurrentStarsError = document.getElementById("pilotCurrentStarsError");
   const franchise2 = document.getElementById("pilotFranchise2").value;
   const pilotFranchiseError = document.getElementById("pilotFranchiseError");
   const currentLevelError = document.getElementById("currentLevelError");
@@ -398,11 +325,7 @@ function checkFormValidity(
       pilotDuplicateError.style.display = "none";
     }
   }
-  if (
-    pilotCurrentStars < 0 ||
-    pilotCurrentStars > 5 ||
-    isNaN(pilotCurrentStars)
-  ) {
+  if (pilotCurrentStars < 0 || pilotCurrentStars > 5 || isNaN(pilotCurrentStars)) {
     showElement(pilotcurrentStarsError);
     isValid = false;
   } else {
@@ -414,11 +337,7 @@ function checkFormValidity(
   } else {
     hideElement(currentLevelError);
   }
-  if (
-    pilotCurrentShards < 0 ||
-    pilotCurrentShards > 200 ||
-    isNaN(pilotCurrentShards)
-  ) {
+  if (pilotCurrentShards < 0 || pilotCurrentShards > 200 || isNaN(pilotCurrentShards)) {
     showElement(pilotCurrentShardsError);
     isValid = false;
   } else {
@@ -480,30 +399,21 @@ function filterPilotTable(lang) {
     const rmjText = row.cells[8].textContent;
     const shardsNeededText = row.cells[11].textContent;
     const boxesText = row.cells[14].textContent;
-    const matchesFranchise =
-      franchiseText.includes(getTrad(franchiseFilter)) ||
-      franchiseFilter === "";
-    const matchesRarity =
-      rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
-    const matchesRole =
-      roleText.includes(getTrad(roleFilter)) || roleFilter === "";
+    const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
+    const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
+    const matchesRole = roleText.includes(getTrad(roleFilter)) || roleFilter === "";
 
     let matchesShards = true;
     if (shardsFilter === "above50") {
       matchesShards = parseInt(shardsNeededText, 10) > 50;
     } else if (shardsFilter === "between21and50") {
-      matchesShards =
-        parseInt(shardsNeededText, 10) <= 50 &&
-        parseInt(shardsNeededText, 10) > 20;
+      matchesShards = parseInt(shardsNeededText, 10) <= 50 && parseInt(shardsNeededText, 10) > 20;
     } else if (shardsFilter === "between1and20") {
-      matchesShards =
-        parseInt(shardsNeededText, 10) > 0 &&
-        parseInt(shardsNeededText, 10) <= 20;
+      matchesShards = parseInt(shardsNeededText, 10) > 0 && parseInt(shardsNeededText, 10) <= 20;
     } else if (shardsFilter === "not_finished") {
       matchesShards = parseInt(shardsNeededText, 10) >= 1;
     } else if (shardsFilter !== "") {
-      matchesShards =
-        parseInt(shardsNeededText, 10) <= parseInt(shardsFilter, 10);
+      matchesShards = parseInt(shardsNeededText, 10) <= parseInt(shardsFilter, 10);
     }
 
     const matchesBoxes = boxesText.includes(boxesFilter) || boxesFilter === "";
@@ -539,27 +449,20 @@ function filterPilotTable(lang) {
     if (levelFilter === "0") {
       matchesLevel = parseInt(levelText, 10) === 0;
     } else if (levelFilter === "19") {
-      matchesLevel =
-        parseInt(levelText, 10) > 0 && parseInt(levelText, 10) < 20;
+      matchesLevel = parseInt(levelText, 10) > 0 && parseInt(levelText, 10) < 20;
     } else if (levelFilter === "20") {
-      matchesLevel =
-        parseInt(levelText, 10) > 19 && parseInt(levelText, 10) < 30;
+      matchesLevel = parseInt(levelText, 10) > 19 && parseInt(levelText, 10) < 30;
     } else if (levelFilter === "30") {
-      matchesLevel =
-        parseInt(levelText, 10) > 29 && parseInt(levelText, 10) < 40;
+      matchesLevel = parseInt(levelText, 10) > 29 && parseInt(levelText, 10) < 40;
     } else if (levelFilter === "40") {
-      matchesLevel =
-        parseInt(levelText, 10) > 39 && parseInt(levelText, 10) < 45;
+      matchesLevel = parseInt(levelText, 10) > 39 && parseInt(levelText, 10) < 45;
     } else if (levelFilter === "45") {
-      matchesLevel =
-        parseInt(levelText, 10) > 44 && parseInt(levelText, 10) < 50;
+      matchesLevel = parseInt(levelText, 10) > 44 && parseInt(levelText, 10) < 50;
     } else if (levelFilter === "50") {
       matchesLevel = parseInt(levelText, 10) === 50;
     }
 
-    const matchesSearch = row.textContent
-      .toLowerCase()
-      .includes(pilotSearchInput.value.toLowerCase());
+    const matchesSearch = row.textContent.toLowerCase().includes(pilotSearchInput.value.toLowerCase());
     if (
       matchesFranchise &&
       matchesRarity &&

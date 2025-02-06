@@ -68,31 +68,23 @@ const togglePilotRarity = document.getElementById("togglePilotRarity");
 const togglePilotRole = document.getElementById("togglePilotRole");
 const togglePilotName = document.getElementById("togglePilotName");
 const togglePilotStar = document.getElementById("togglePilotStar");
-const togglePilotCurrentShard = document.getElementById(
-  "togglePilotCurrentShard"
-);
+const togglePilotCurrentShard = document.getElementById("togglePilotCurrentShard");
 const togglePilotLevel = document.getElementById("togglePilotLevel");
 const togglePilotCurrentMPR = document.getElementById("togglePilotCurrentMPR");
 const togglePilotHighestMPR = document.getElementById("togglePilotHighestMPR");
 const togglePilotGrade = document.getElementById("togglePilotGrade");
-const togglePilotShardNeeded = document.getElementById(
-  "togglePilotShardNeeded"
-);
+const togglePilotShardNeeded = document.getElementById("togglePilotShardNeeded");
 const togglePilotShardMPR = document.getElementById("togglePilotShardMPR");
 const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
 const togglePilotBox = document.getElementById("togglePilotBox");
-const togglePilotShardStar = document.getElementById(
-  "togglePilotShardNextStar"
-);
+const togglePilotShardStar = document.getElementById("togglePilotShardNextStar");
 const togglePilotCoinStar = document.getElementById("togglePilotCoinStar");
 const toggleCrewImage = document.getElementById("toggleCrewImage");
 const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
 const toggleCrewRarity = document.getElementById("toggleCrewRarity");
 const toggleCrewName = document.getElementById("toggleCrewName");
 const toggleCrewStar = document.getElementById("toggleCrewStar");
-const toggleCrewCurrentShard = document.getElementById(
-  "toggleCrewCurrentShard"
-);
+const toggleCrewCurrentShard = document.getElementById("toggleCrewCurrentShard");
 const toggleCrewShardNeeded = document.getElementById("toggleCrewShardNeeded");
 const toggleCrewBox = document.getElementById("toggleCrewBox");
 const pilotSearchInput = document.getElementById("pilotSearchInput");
@@ -141,30 +133,12 @@ function changeLang() {
 
 // Gère la soumission du formulaire de pilote
 pilotForm.addEventListener("submit", (event) =>
-  submitPilotForm(
-    event,
-    lang,
-    editingPilotIndex,
-    pilotTableBody,
-    pilotForm,
-    pilotSubmitBtn,
-    goal,
-    levelGoal
-  )
+  submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, goal, levelGoal)
 );
 
 // Gère la soumission du formulaire de crew
 crewForm.addEventListener("submit", (event) =>
-  submitCrewForm(
-    event,
-    lang,
-    editingCrewIndex,
-    crewTableBody,
-    crewForm,
-    crewSubmitBtn,
-    goal,
-    levelGoal
-  )
+  submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, crewSubmitBtn, goal, levelGoal)
 );
 
 window.saveScroll = 0;
@@ -208,22 +182,18 @@ function updatePlaceholders() {
 }
 
 // Fonction de recherche globale pour les pilotes
-document
-  .getElementById("pilotSearchInput")
-  .addEventListener("keyup", () => filterPilotTable(lang));
+document.getElementById("pilotSearchInput").addEventListener("keyup", () => filterPilotTable(lang));
 
 // Fonction de recherche globale pour les crews
-document
-  .getElementById("crewSearchInput")
-  .addEventListener("keyup", function () {
-    const searchTerm = this.value.toLowerCase();
-    const rows = document.querySelectorAll("#crewTableBody tr");
+document.getElementById("crewSearchInput").addEventListener("keyup", function () {
+  const searchTerm = this.value.toLowerCase();
+  const rows = document.querySelectorAll("#crewTableBody tr");
 
-    rows.forEach((row) => {
-      const rowText = row.textContent.toLowerCase();
-      row.style.display = rowText.includes(searchTerm) ? "" : "none";
-    });
+  rows.forEach((row) => {
+    const rowText = row.textContent.toLowerCase();
+    row.style.display = rowText.includes(searchTerm) ? "" : "none";
   });
+});
 
 // Fonction de filtrage par colonnes pour les pilotes
 document.querySelectorAll(".pilotFilter").forEach((filter) => {
@@ -254,16 +224,12 @@ togglePilotRarity.addEventListener("click", (e) => togglePilotColumn(2, e));
 togglePilotRole.addEventListener("click", (e) => togglePilotColumn(3, e));
 togglePilotName.addEventListener("click", (e) => togglePilotColumn(4, e));
 togglePilotStar.addEventListener("click", (e) => togglePilotColumn(5, e));
-togglePilotCurrentShard.addEventListener("click", (e) =>
-  togglePilotColumn(6, e)
-);
+togglePilotCurrentShard.addEventListener("click", (e) => togglePilotColumn(6, e));
 togglePilotLevel.addEventListener("click", (e) => togglePilotColumn(7, e));
 togglePilotCurrentMPR.addEventListener("click", (e) => togglePilotColumn(8, e));
 togglePilotHighestMPR.addEventListener("click", (e) => togglePilotColumn(9, e));
 togglePilotGrade.addEventListener("click", (e) => togglePilotColumn(10, e));
-togglePilotShardNeeded.addEventListener("click", (e) =>
-  togglePilotColumn(11, e)
-);
+togglePilotShardNeeded.addEventListener("click", (e) => togglePilotColumn(11, e));
 togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(12, e));
 togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(13, e));
 togglePilotBox.addEventListener("click", (e) => togglePilotColumn(14, e));
@@ -341,10 +307,7 @@ transparantMode.addEventListener("click", () => toggleTransparancy());
 // Fonction pour export les data dans un fichier json
 function download(filename, text) {
   var element = document.createElement("a");
-  element.setAttribute(
-    "href",
-    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
-  );
+  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(text));
   element.setAttribute("download", filename);
 
   element.style.display = "none";
@@ -399,10 +362,7 @@ function switchLevelGoal() {
 }
 
 function switchTheme() {
-  selectTheme.innerHTML =
-    '<option value="" data-trad="select_theme">' +
-    getTrad("select_theme") +
-    "</option>";
+  selectTheme.innerHTML = '<option value="" data-trad="select_theme">' + getTrad("select_theme") + "</option>";
 
   for (let i = 1; i <= 11; i++) {
     const season = document.createElement("option");
@@ -494,9 +454,7 @@ function closeSettings(e) {
 }
 
 function bindSettingsEvents() {
-  document
-    .querySelector("#settingsPanel")
-    .addEventListener("click", closeSettings);
+  document.querySelector("#settingsPanel").addEventListener("click", closeSettings);
   document.addEventListener("keyup", (e) => {
     if (e.key === "Escape") closeSettings();
   });
@@ -623,10 +581,7 @@ function isTransparancyActive() {
 
 function applyTheme() {
   const savedTheme = localStorage.getItem("theme");
-  const userPreferedTheme = window.matchMedia("(prefers-color-scheme: dark)")
-    .matches
-    ? "dark"
-    : "light";
+  const userPreferedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
   const theme = savedTheme || userPreferedTheme;
 

@@ -8,17 +8,13 @@ const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
 const toggleCrewRarity = document.getElementById("toggleCrewRarity");
 const toggleCrewName = document.getElementById("toggleCrewName");
 const toggleCrewLevel = document.getElementById("toggleCrewStar");
-const toggleCrewCurrentShard = document.getElementById(
-  "toggleCrewCurrentShard"
-);
+const toggleCrewCurrentShard = document.getElementById("toggleCrewCurrentShard");
 const toggleCrewShardNeeded = document.getElementById("toggleCrewShardNeeded");
 const toggleCrewBox = document.getElementById("toggleCrewBox");
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement) {
-  return toggleElement.classList.contains("active")
-    ? 'style="display: none;"'
-    : "";
+  return toggleElement.classList.contains("active") ? 'style="display: none;"' : "";
 }
 
 function updateCrewWithShardsNeeded(crew, index) {
@@ -75,9 +71,7 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
 
   // Tableau des propriétés à appliquer
   const styles = {
-    crewImage: toggleCrewImage.classList.contains("active")
-      ? "display: none;"
-      : "",
+    crewImage: toggleCrewImage.classList.contains("active") ? "display: none;" : "",
     crewFranchise: getStyleIfActive(toggleCrewFranchise),
     crewRarity: getStyleIfActive(toggleCrewRarity),
     crewName: getStyleIfActive(toggleCrewName),
@@ -88,39 +82,24 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   };
 
   row.innerHTML = `
-            <td style="padding: 0; border: none; display: block; height: 80px; ${
-              styles.crewImage
-            }"><img onerror="this.src='img/Locked.webp'" src="img/crews/${
-    crew.name
-  }.webp" style="width: 80px; height: auto;"></td>
-            <td data-trad="${crew.franchise}" ${styles.crewFranchise}>${getTrad(
-    crew.franchise
-  )}</td>
-            <td data-trad="${crew.rarity}" ${styles.crewRarity} class="${
-    crew.rarity
-  }">${getTrad(crew.rarity)}</td>
-        <td data-trad="${crew.name}" ${styles.crewName}>${getTrad(
-    crew.name
-  )}</td>
-            <td class="${starclass}" ${styles.crewLevel}>${
-    crew.currentStars
-  }</td>
-            <td class="${shardsClass}" ${styles.crewCurrentShard}>${
-    crew.currentShards
-  }</td>
-            <td class="${shardsClass}" ${styles.crewShardNeeded}>${
-    crew.shardsNeeded
-  }</td>
-            <td ${styles.crewBox}>${universalBox}</td>
-            <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
-        `;
+    <td style="padding: 0; border: none; display: block; height: 80px; ${styles.crewImage}">
+      <img onerror="this.src='img/Locked.webp'" src="img/crews/${crew.name}.webp" style="width: 80px; height: auto;">
+    </td>
+    <td data-trad="${crew.franchise}" ${styles.crewFranchise}>${getTrad(crew.franchise)}</td>
+    <td data-trad="${crew.rarity}" ${styles.crewRarity} class="${crew.rarity}">${getTrad(crew.rarity)}</td>
+    <td data-trad="${crew.name}" ${styles.crewName}>${getTrad(crew.name)}</td>
+    <td class="${starclass}" ${styles.crewLevel}>${crew.currentStars}</td>
+    <td class="${shardsClass}" ${styles.crewCurrentShard}>${crew.currentShards}</td>
+    <td class="${shardsClass}" ${styles.crewShardNeeded}>${crew.shardsNeeded}</td>
+    <td ${styles.crewBox}>${universalBox}</td>
+    <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
+    `;
   crewTableBody.appendChild(row);
   translate(lang);
 }
 
 function addCrewsToTable(lang, crewTableBody) {
-  let crews;
-  crews = JSON.parse(localStorage.getItem("crews")) || [];
+  let crews = JSON.parse(localStorage.getItem("crews")) || [];
   crews.forEach((crew, index) => {
     addCrewToTable(crew, index, lang, crewTableBody);
   });
@@ -158,8 +137,7 @@ function updateCrewFormFranchise(lang) {
     franchises.add(crew.franchise);
   });
   // Récupérer les clés de la map
-  franchiseNames.innerHTML =
-    '<option value="" data-trad="all_franchises"></option>';
+  franchiseNames.innerHTML = '<option value="" data-trad="all_franchises"></option>';
   for (const name of franchises) {
     const option = document.createElement("option");
     option.value = name; // Utiliser la clé comme valeur de l'option
@@ -168,51 +146,23 @@ function updateCrewFormFranchise(lang) {
   }
 }
 
-function submitCrewForm(
-  event,
-  lang,
-  editingCrewIndex,
-  crewTableBody,
-  crewForm,
-  crewSubmitBtn,
-  goal,
-  levelGoal
-) {
+function submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, crewSubmitBtn, goal, levelGoal) {
   const getTrad = createGetTrad(lang);
   event.preventDefault();
 
   // Récupérer les valeurs du formulaire
-  const franchise = getTradKey(
-    document.getElementById("crewFranchise").value,
-    lang
-  );
-
+  const franchise = getTradKey(document.getElementById("crewFranchise").value, lang);
   const crewName = getTradKey(document.getElementById("crewName").value, lang);
-  const crewCurrentStars = parseInt(
-    document.getElementById("crewCurrentStars").value,
-    10
-  );
+  const crewCurrentStars = parseInt(document.getElementById("crewCurrentStars").value, 10);
+  const crewCurrentShards = parseInt(document.getElementById("crewCurrentShards").value, 10);
 
-  const crewCurrentShards = parseInt(
-    document.getElementById("crewCurrentShards").value,
-    10
-  );
-
-  let isValid = checkFormValidity(
-    crewName,
-    editingCrewIndex,
-    crewCurrentStars,
-    franchise,
-    crewCurrentShards
-  );
+  let isValid = checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards);
 
   if (isValid) {
     // Créer l'objet crew
     const editCrew = {
       franchise:
-        document.getElementById("crewFranchise2").value === ""
-          ? franchise
-          : document.getElementById("crewFranchise2").value,
+        document.getElementById("crewFranchise2").value === "" ? franchise : document.getElementById("crewFranchise2").value,
       rarity: document.getElementById("crewRarity").value,
       name: crewName,
       currentStars: crewCurrentStars,
@@ -234,25 +184,15 @@ function submitCrewForm(
   }
 }
 
-function checkFormValidity(
-  crewName,
-  editingCrewIndex,
-  crewCurrentStars,
-  franchise,
-  crewCurrentShards
-) {
+function checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards) {
   let isValid = true;
   let crews = JSON.parse(localStorage.getItem("crews")) || [];
   const franchise2 = document.getElementById("crewFranchise2").value;
   const crewFranchiseError = document.getElementById("crewFranchiseError");
-  const crewcurrentStarsError = document.getElementById(
-    "crewCurrentStarsError"
-  );
+  const crewcurrentStarsError = document.getElementById("crewCurrentStarsError");
   const crewNameError = document.getElementById("crewNameError");
   const crewDuplicateError = document.getElementById("crewDuplicateError");
-  const crewCurrentShardsError = document.getElementById(
-    "crewCurrentShardsError"
-  );
+  const crewCurrentShardsError = document.getElementById("crewCurrentShardsError");
 
   // Valider les champs
   if (franchise === "" && franchise2 === "") {
@@ -282,11 +222,7 @@ function checkFormValidity(
   } else {
     hideElement(crewcurrentStarsError);
   }
-  if (
-    crewCurrentShards < 0 ||
-    crewCurrentShards > 100 ||
-    isNaN(crewCurrentShards)
-  ) {
+  if (crewCurrentShards < 0 || crewCurrentShards > 100 || isNaN(crewCurrentShards)) {
     showElement(crewCurrentShardsError);
     isValid = false;
   } else {
@@ -346,46 +282,26 @@ function filterCrewTable(lang) {
     const starsText = row.cells[4].textContent;
     const shardsNeededText = row.cells[6].textContent;
     const boxesText = row.cells[7].textContent;
-
-    const matchesFranchise =
-      franchiseText.includes(getTrad(franchiseFilter)) ||
-      franchiseFilter === "";
-    const matchesRarity =
-      rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
+    const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
+    const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
     const matchesStars = starsText.includes(starsFilter) || starsFilter === "";
-
+    const matchesBoxes = boxesText.includes(boxesFilter) || boxesFilter === "";
+    const matchesSearch = row.textContent.toLowerCase().includes(crewSearchInput.value.toLowerCase());
     let matchesShards = true;
+
     if (shardsFilter === "above50") {
       matchesShards = parseInt(shardsNeededText, 10) > 50;
     } else if (shardsFilter === "between21and50") {
-      matchesShards =
-        parseInt(shardsNeededText, 10) <= 50 &&
-        parseInt(shardsNeededText, 10) > 20;
+      matchesShards = parseInt(shardsNeededText, 10) <= 50 && parseInt(shardsNeededText, 10) > 20;
     } else if (shardsFilter === "between1and20") {
-      matchesShards =
-        parseInt(shardsNeededText, 10) > 0 &&
-        parseInt(shardsNeededText, 10) <= 20;
+      matchesShards = parseInt(shardsNeededText, 10) > 0 && parseInt(shardsNeededText, 10) <= 20;
     } else if (shardsFilter === "not_finished") {
       matchesShards = parseInt(shardsNeededText, 10) >= 1;
     } else if (shardsFilter !== "") {
-      matchesShards =
-        parseInt(shardsNeededText, 10) <= parseInt(shardsFilter, 10);
+      matchesShards = parseInt(shardsNeededText, 10) <= parseInt(shardsFilter, 10);
     }
 
-    const matchesBoxes = boxesText.includes(boxesFilter) || boxesFilter === "";
-
-    const matchesSearch = row.textContent
-      .toLowerCase()
-      .includes(crewSearchInput.value.toLowerCase());
-
-    if (
-      matchesFranchise &&
-      matchesRarity &&
-      matchesStars &&
-      matchesShards &&
-      matchesBoxes &&
-      matchesSearch
-    ) {
+    if (matchesFranchise && matchesRarity && matchesStars && matchesShards && matchesBoxes && matchesSearch) {
       row.style.display = "";
     }
   });

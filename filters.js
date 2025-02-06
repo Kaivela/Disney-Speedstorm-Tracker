@@ -1,7 +1,4 @@
-import {
-  calculatePilotShardsNeeded,
-  calculateCrewShardsNeeded,
-} from "./compute";
+import { calculatePilotShardsNeeded, calculateCrewShardsNeeded } from "./compute";
 import { createGetTrad } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
@@ -27,10 +24,7 @@ function updateFilterOptions(lang) {
 
   // Calculer les shardsNeeded pour chaque pilote avant de mettre à jour les options de filtre
   pilots.forEach((pilot) => {
-    pilot.shardsNeeded = calculatePilotShardsNeeded(
-      pilot.currentLevel,
-      pilot.currentShards
-    );
+    pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
   });
 
   // Calculer les shardsNeeded pour chaque equipier avant de mettre à jour les options de filtre
@@ -42,33 +36,18 @@ function updateFilterOptions(lang) {
   const pilotFranchises = [...new Set(pilots.map((pilot) => pilot.franchise))];
   const pilotRarities = [...new Set(pilots.map((pilot) => pilot.rarity))];
   const roles = [...new Set(pilots.map((pilot) => pilot.role))];
-  const pilotShardsNeededValues = [
-    ...new Set(pilots.map((pilot) => parseInt(pilot.shardsNeeded, 10))),
-  ];
-  const pilotBoxes = [
-    ...new Set(pilotsBlank.map((pilot) => pilot.universalBox)),
-  ];
-  const rmj = [
-    ...new Set(pilots.map((pilot) => parseInt(pilot.currentRMJ, 10))),
-  ];
-  const level = [
-    ...new Set(pilots.map((pilot) => parseInt(pilot.currentLevel, 10))),
-  ];
+  const pilotShardsNeededValues = [...new Set(pilots.map((pilot) => parseInt(pilot.shardsNeeded, 10)))];
+  const pilotBoxes = [...new Set(pilotsBlank.map((pilot) => pilot.universalBox))];
+  const rmj = [...new Set(pilots.map((pilot) => parseInt(pilot.currentRMJ, 10)))];
+  const level = [...new Set(pilots.map((pilot) => parseInt(pilot.currentLevel, 10)))];
   const crewFranchises = [...new Set(crews.map((crew) => crew.franchise))];
   const crewRarities = [...new Set(crews.map((crew) => crew.rarity))];
-  const crewStars = [
-    ...new Set(crews.map((crew) => parseInt(crew.currentStars, 10))),
-  ];
-  const crewShardsNeededValues = [
-    ...new Set(crews.map((crew) => parseInt(crew.shardsNeeded, 10))),
-  ];
+  const crewStars = [...new Set(crews.map((crew) => parseInt(crew.currentStars, 10)))];
+  const crewShardsNeededValues = [...new Set(crews.map((crew) => parseInt(crew.shardsNeeded, 10)))];
   const crewBoxes = [...new Set(crewsBlank.map((crew) => crew.universalBox))];
 
   // Mettre à jour les options de filtre
-  pilotFranchiseFilter.innerHTML =
-    '<option value="" data-trad="franchise_filter">' +
-    getTrad("franchise_filter") +
-    "</option>";
+  pilotFranchiseFilter.innerHTML = '<option value="" data-trad="franchise_filter">' + getTrad("franchise_filter") + "</option>";
   pilotFranchises.forEach((franchise) => {
     const option = document.createElement("option");
     option.value = franchise;
@@ -76,10 +55,7 @@ function updateFilterOptions(lang) {
     pilotFranchiseFilter.appendChild(option);
   });
 
-  pilotRarityFilter.innerHTML =
-    '<option value="" data-trad="rarity_filter">' +
-    getTrad("rarity_filter") +
-    "</option>";
+  pilotRarityFilter.innerHTML = '<option value="" data-trad="rarity_filter">' + getTrad("rarity_filter") + "</option>";
   pilotRarities.forEach((rarity) => {
     const option = document.createElement("option");
     option.value = rarity;
@@ -87,10 +63,7 @@ function updateFilterOptions(lang) {
     pilotRarityFilter.appendChild(option);
   });
 
-  roleFilter.innerHTML =
-    '<option value="" data-trad="role_filter">' +
-    getTrad("role_filter") +
-    "</option>";
+  roleFilter.innerHTML = '<option value="" data-trad="role_filter">' + getTrad("role_filter") + "</option>";
   roles.forEach((role) => {
     const option = document.createElement("option");
     option.value = role;
@@ -99,9 +72,7 @@ function updateFilterOptions(lang) {
   });
 
   pilotShardsFilter.innerHTML =
-    '<option value="" data-trad="shards_needed_filter">' +
-    getTrad("shards_needed_filter") +
-    "</option>";
+    '<option value="" data-trad="shards_needed_filter">' + getTrad("shards_needed_filter") + "</option>";
   if (pilotShardsNeededValues.length > 0) {
     if (pilotShardsNeededValues.some((value) => value > 50)) {
       const optionAbove50 = document.createElement("option");
@@ -135,10 +106,7 @@ function updateFilterOptions(lang) {
     }
   }
 
-  pilotBoxesFilter.innerHTML =
-    '<option value="" data-trad="box_filter">' +
-    getTrad("box_filter") +
-    "</option>";
+  pilotBoxesFilter.innerHTML = '<option value="" data-trad="box_filter">' + getTrad("box_filter") + "</option>";
   pilotBoxes.forEach((universalBox) => {
     const option = document.createElement("option");
     if (universalBox === "season") {
@@ -151,10 +119,7 @@ function updateFilterOptions(lang) {
     pilotBoxesFilter.appendChild(option);
   });
 
-  rmjFilter.innerHTML =
-    '<option value="" data-trad="MPR_filter">' +
-    getTrad("MPR_filter") +
-    "</option>";
+  rmjFilter.innerHTML = '<option value="" data-trad="MPR_filter">' + getTrad("MPR_filter") + "</option>";
   if (rmj.length > 0) {
     if (rmj.some((value) => value === 0)) {
       const option0 = document.createElement("option");
@@ -230,10 +195,7 @@ function updateFilterOptions(lang) {
     }
   }
 
-  levelFilter.innerHTML =
-    '<option value="" data-trad="level_filter">' +
-    getTrad("level_filter") +
-    "</option>";
+  levelFilter.innerHTML = '<option value="" data-trad="level_filter">' + getTrad("level_filter") + "</option>";
   if (level.length > 0) {
     if (level.some((value) => value === 0)) {
       const option0 = document.createElement("option");
@@ -279,10 +241,7 @@ function updateFilterOptions(lang) {
     }
   }
 
-  crewFranchiseFilter.innerHTML =
-    '<option value="" data-trad="franchise_filter">' +
-    getTrad("franchise_filter") +
-    "</option>";
+  crewFranchiseFilter.innerHTML = '<option value="" data-trad="franchise_filter">' + getTrad("franchise_filter") + "</option>";
   crewFranchises.forEach((franchise) => {
     const option = document.createElement("option");
     option.value = franchise;
@@ -290,10 +249,7 @@ function updateFilterOptions(lang) {
     crewFranchiseFilter.appendChild(option);
   });
 
-  crewRarityFilter.innerHTML =
-    '<option value="" data-trad="rarity_filter">' +
-    getTrad("rarity_filter") +
-    "</option>";
+  crewRarityFilter.innerHTML = '<option value="" data-trad="rarity_filter">' + getTrad("rarity_filter") + "</option>";
   crewRarities.forEach((rarity) => {
     const option = document.createElement("option");
     option.value = rarity;
@@ -301,10 +257,7 @@ function updateFilterOptions(lang) {
     crewRarityFilter.appendChild(option);
   });
 
-  crewStarsFilter.innerHTML =
-    '<option value="" data-trad="level_filter">' +
-    getTrad("level_filter") +
-    "</option>";
+  crewStarsFilter.innerHTML = '<option value="" data-trad="level_filter">' + getTrad("level_filter") + "</option>";
   if (crewStars.length > 0) {
     for (let level = 0; level <= 5; level++) {
       if (crewStars.some((value) => value === level)) {
@@ -317,9 +270,7 @@ function updateFilterOptions(lang) {
   }
 
   crewShardsFilter.innerHTML =
-    '<option value="" data-trad="shards_needed_filter">' +
-    getTrad("shards_needed_filter") +
-    "</option>";
+    '<option value="" data-trad="shards_needed_filter">' + getTrad("shards_needed_filter") + "</option>";
   if (crewShardsNeededValues.length > 0) {
     if (crewShardsNeededValues.some((value) => value > 50)) {
       const optionAbove50 = document.createElement("option");
@@ -353,10 +304,7 @@ function updateFilterOptions(lang) {
     }
   }
 
-  crewBoxesFilter.innerHTML =
-    '<option value="" data-trad="box_filter">' +
-    getTrad("box_filter") +
-    "</option>";
+  crewBoxesFilter.innerHTML = '<option value="" data-trad="box_filter">' + getTrad("box_filter") + "</option>";
   crewBoxes.forEach((universalBox) => {
     const option = document.createElement("option");
     if (universalBox === "season") {

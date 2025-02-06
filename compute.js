@@ -31,11 +31,7 @@ function calculatePilotShardsNeeded(currentLevel, currentShards) {
 }
 
 // Fonction pour calculer les shards nécéssaires pour gagner la prochaine star
-function calculatePilotShardsNextStar(
-  currentLevel,
-  currentShards,
-  currentStars
-) {
+function calculatePilotShardsNextStar(currentLevel, currentShards, currentStars) {
   let shardsToNextStar = 0;
   let nextStarLevel = starLevel[currentStars - 1];
   if (currentStars === 0) {
@@ -194,9 +190,7 @@ function calculateFreeCrewShardsNeeded(crews) {
   let totalRareShardsNeeded = 0;
   let totalEpicShardsNeeded = 0;
   crews.forEach((crew) => {
-    const crewBlank = crewsBlank.find(
-      (crewBlank) => crewBlank.name === crew.name
-    );
+    const crewBlank = crewsBlank.find((crewBlank) => crewBlank.name === crew.name);
     if (crew.rarity === "Common" && crewBlank.universalBox === true) {
       totalCommonShardsNeeded += crew.shardsNeeded;
     }
@@ -232,31 +226,19 @@ function calculateTotal(lang, goal, levelGoal) {
   let allFreeShards = 0;
 
   pilots.forEach((pilot) => {
-    const pilotBlank = pilotsBlank.find(
-      (pilotBlank) => pilotBlank.name === pilot.name
-    );
+    const pilotBlank = pilotsBlank.find((pilotBlank) => pilotBlank.name === pilot.name);
 
     // Calculer les coinsNeeded pour chaque pilote
-    pilot.coinsNeeded = calculateCoinsNeededForGoal(
-      pilot.currentLevel,
-      levelGoal,
-      pilot.currentStars
-    );
+    pilot.coinsNeeded = calculateCoinsNeededForGoal(pilot.currentLevel, levelGoal, pilot.currentStars);
     allCoins = allCoins + pilot.coinsNeeded;
 
     // Calculer les shardsNeeded pour chaque pilote
-    pilot.shardsNeeded = calculatePilotShardsNeeded(
-      pilot.currentLevel,
-      pilot.currentShards
-    );
+    pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
     allShardsNeeded = allShardsNeeded + pilot.shardsNeeded;
 
     // Calculer les shardsNeeded pour chaque pilote non saisonier
     if (pilot.universalBox) {
-      pilot.shardsNeeded = calculatePilotShardsNeeded(
-        pilot.currentLevel,
-        pilot.currentShards
-      );
+      pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
       allRegularShards = allRegularShards + pilot.shardsNeeded;
     }
 
@@ -280,29 +262,15 @@ function calculateTotal(lang, goal, levelGoal) {
     }
 
     // Calculer les upgradeCoins available in rmj
-    pilot.upgradeCoins = calculateCoinsToGet(
-      pilot.highestRMJ,
-      pilotBlank.rmjCoin,
-      goal,
-      pilot.currentStars
-    );
+    pilot.upgradeCoins = calculateCoinsToGet(pilot.highestRMJ, pilotBlank.rmjCoin, goal, pilot.currentStars);
     upgradeCoins = upgradeCoins + pilot.upgradeCoins;
 
     // Calculer les Tokens available in rmj
-    pilot.tokensToGet = calculateTokensToGet(
-      pilot.highestRMJ,
-      pilotBlank.rmjTokenOld,
-      goal,
-      pilot.currentStars
-    );
+    pilot.tokensToGet = calculateTokensToGet(pilot.highestRMJ, pilotBlank.rmjTokenOld, goal, pilot.currentStars);
     tokensToGet = tokensToGet + pilot.tokensToGet;
 
     // Calculer les cosmetic available in rmj
-    pilot.cosmeticToGet = calculateCosmeticToGet(
-      pilot.highestRMJ,
-      goal,
-      pilot.currentStars
-    );
+    pilot.cosmeticToGet = calculateCosmeticToGet(pilot.highestRMJ, goal, pilot.currentStars);
     cosmeticToGet = cosmeticToGet + pilot.cosmeticToGet;
   });
 
