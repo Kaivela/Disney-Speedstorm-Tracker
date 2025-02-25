@@ -21,8 +21,8 @@
  --color-close: #ffffffb3;
  --bg-color-warning: #A30202B3;
  --color-warning: #ffffffb3;
- --bg-color-zero: #545454B3;
- --color-zero: black;
+ --bg-color-zero: #000000B3;
+ --color-zero: white;
  --font-weight-zero: 1000;
  --bg-color-label: #31313180;
  --color-label: #f5f5f5;
