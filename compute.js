@@ -30,6 +30,12 @@ function calculatePilotShardsNeeded(currentLevel, currentShards) {
   return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
 }
 
+// Fonction pour calculer les shards nécéssaires si le joueur farm le RMJ 38
+function calculatePilotShardIfMaxMPR(shardsNeeded, shardsToGet) {
+  const shardIfMaxMPR = shardsNeeded - shardsToGet;
+  return Math.max(shardIfMaxMPR, 0); // Assure que les shards nécessaires ne sont pas négatifs
+}
+
 // Fonction pour calculer les shards nécéssaires pour gagner la prochaine star
 function calculatePilotShardsNextStar(currentLevel, currentShards, currentStars) {
   let shardsToNextStar = 0;
@@ -321,4 +327,5 @@ export {
   calculateCrewShardsNeeded,
   calculateTotal,
   calculateCoinsNextStar,
+  calculatePilotShardIfMaxMPR,
 };

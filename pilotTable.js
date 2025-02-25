@@ -5,6 +5,7 @@ import {
   calculateTotal,
   calculatePilotShardsNextStar,
   calculateCoinsNextStar,
+  calculatePilotShardIfMaxMPR,
 } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
@@ -43,7 +44,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const coinsToNextStar = calculateCoinsNextStar(pilot.currentLevel, pilot.currentStars);
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
-  const shardsIfMaxMPR = shardsNeeded - shardsToGet;
+  const shardsIfMaxMPR = calculatePilotShardIfMaxMPR(shardsNeeded, shardsToGet);
 
   // Déterminez la classe en fonction de shardsNeeded
   let shardsClass = "";
