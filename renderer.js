@@ -79,6 +79,7 @@ const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
 const togglePilotBox = document.getElementById("togglePilotBox");
 const togglePilotShardStar = document.getElementById("togglePilotShardNextStar");
 const togglePilotCoinStar = document.getElementById("togglePilotCoinStar");
+const togglePilotShardIfMaxMPR = document.getElementById("togglePilotShardIfMax");
 const toggleCrewImage = document.getElementById("toggleCrewImage");
 const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
 const toggleCrewRarity = document.getElementById("toggleCrewRarity");
@@ -235,6 +236,7 @@ togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(13, e));
 togglePilotBox.addEventListener("click", (e) => togglePilotColumn(14, e));
 togglePilotShardStar.addEventListener("click", (e) => togglePilotColumn(15, e));
 togglePilotCoinStar.addEventListener("click", (e) => togglePilotColumn(16, e));
+togglePilotShardIfMaxMPR.addEventListener("click", (e) => togglePilotColumn(17, e));
 
 // Gérer l'affichage des colonnes pour les Crew
 toggleCrewImage.addEventListener("click", () => toggleCrewColumn(0));

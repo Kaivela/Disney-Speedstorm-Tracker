@@ -28,6 +28,7 @@ const togglePilotUpgrade = document.getElementById("togglePilotUpgrade");
 const togglePilotBox = document.getElementById("togglePilotBox");
 const togglePilotShardStar = document.getElementById("togglePilotShardNextStar");
 const togglePilotCoinStar = document.getElementById("togglePilotCoinStar");
+const togglePilotShardIfMaxMPR = document.getElementById("togglePilotShardIfMax");
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement) {
@@ -42,6 +43,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const coinsToNextStar = calculateCoinsNextStar(pilot.currentLevel, pilot.currentStars);
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
+  const shardsIfMaxMPR = shardsNeeded - shardsToGet;
 
   // Déterminez la classe en fonction de shardsNeeded
   let shardsClass = "";
@@ -123,6 +125,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
     pilotBox: getStyleIfActive(togglePilotBox),
     pilotShardStar: getStyleIfActive(togglePilotShardStar),
     pilotCoinStar: getStyleIfActive(togglePilotCoinStar),
+    pilotShardIfMaxMPR: getStyleIfActive(togglePilotShardIfMaxMPR),
   };
 
   row.innerHTML = `
@@ -145,6 +148,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   <td ${styles.pilotBox}>${universalBox}</td>
   <td ${styles.pilotShardStar}>${shardsToNextStar}</td>
   <td ${styles.pilotCoinStar}>${coinsToNextStar}</td>
+  <td ${styles.pilotShardIfMaxMPR}>${shardsIfMaxMPR}</td>
   <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
 `;
 
