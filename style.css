@@ -23,7 +23,7 @@
  --color-warning: #ffffffb3;
  --bg-color-zero: #000000B3;
  --color-zero: white;
- --font-weight-zero: 1000;
+ --font-weight-zero: 400;
  --bg-color-label: #31313180;
  --color-label: #f5f5f5;
  --bg-color-select-input: black;
@@ -45,9 +45,9 @@
  --color-level-purple: white;
  --bg-color-level-violet: #3d0a70b3;
  --color-level-violet: white;
- --bg-color-level-black: #545454B3;
- --color-level-black: black;
- --font-weight-level-black: 1000;
+ --bg-color-level-black: #000000b3;
+ --color-level-black: #fff;
+ --font-weight-level-black: 400;
  --bg-color-display: #006703;
  --color-display: white;
  --bg-color-display-active: #8C0000;
