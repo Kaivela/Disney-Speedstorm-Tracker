@@ -371,11 +371,11 @@ function switchTheme() {
     season.value = i;
     season.textContent = getTrad("season" + i);
     selectTheme.appendChild(season);
-    // Ajout de "Saison 11 Alt" après la saison 11
+
     if (i === 11) {
       const seasonAlt = document.createElement("option");
       seasonAlt.value = "11alt";
-      seasonAlt.textContent = getTrad("season11alt"); // Assurez-vous que cette clé existe dans vos traductions
+      seasonAlt.textContent = getTrad("season11alt");
       selectTheme.appendChild(seasonAlt);
     }
   }
