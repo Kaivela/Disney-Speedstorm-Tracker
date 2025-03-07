@@ -27,6 +27,8 @@
     "season9": "Saison 9 : Pirates Des Caraïbes",
     "season10": "Saison 10 : L'Étrange Noël De Monsieur Jack",
     "season11": "Saison 11 : Les Indestructibles",
+    "season11alt": "Saison 11 Alt : Les Indestructibles",
+    "season12": "Saison 12 : Tron",
     "select_theme": "Changer le Thème",
     
     "search_placeholder": "Rechercher...",
@@ -221,6 +223,10 @@
     "Mrs. Incredible": "Mme Indestructible",
     "Violet": "Violette",
     "Maui": "Maui",
+    "Quorra": "Quorra",
+    "Rinzler": "Rinzler",
+    "Sam Flynn": "Sam Flynn",
+    "Zuse": "Zuse",
 
     "Mickey & Friends": "Mickey et ses Amis",
     "Pirates of the Caribbean": "Pirates des Caraïbes",
@@ -242,6 +248,7 @@
     "Tangled": "Raiponce",
     "The Incredibles": "Les Indestructibles",
     "Moana": "Vaiana",
+    "Tron": "Tron",
 
     "Tanglefoot": "Pieds-Mêlés",
     "Clara Cluck": "Clara Cluck",
@@ -521,5 +528,17 @@
     "Tamatoa": "Tamatoa",
     "Heihei": "Heihei",
     "Mini Maui": "Mini Maui",
-    "Simea": "Simea"
+    "Simea": "Simea",
+    "Grandpa And Grandma Flynn": "Grand-Père Et Grand-Mère Flynn",
+    "Sirens": "Sirènes",
+    "Edward Dillinger Jr.": "Edward Dillinger Junior",
+    "Black Guards": "Gardes Noirs",
+    "Sentry": "Sentinelle",
+    "Anon": "Anon",
+    "Marv": "Marv",
+    "Alan Bradley": "Alan Bradley",
+    "ISO": "ISO",
+    "Jarvis": "Jarvis",
+    "Kevin Flynn": "Kevin Flynn",
+    "Gem": "Gem"
 }

@@ -366,11 +366,18 @@ function switchLevelGoal() {
 function switchTheme() {
   selectTheme.innerHTML = '<option value="" data-trad="select_theme">' + getTrad("select_theme") + "</option>";
 
-  for (let i = 1; i <= 11; i++) {
+  for (let i = 1; i <= 12; i++) {
     const season = document.createElement("option");
     season.value = i;
     season.textContent = getTrad("season" + i);
     selectTheme.appendChild(season);
+    // Ajout de "Saison 11 Alt" après la saison 11
+    if (i === 11) {
+      const seasonAlt = document.createElement("option");
+      seasonAlt.value = "11alt";
+      seasonAlt.textContent = getTrad("season11alt"); // Assurez-vous que cette clé existe dans vos traductions
+      selectTheme.appendChild(seasonAlt);
+    }
   }
 }
 

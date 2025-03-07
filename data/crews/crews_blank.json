@@ -2357,7 +2357,7 @@
     "name": "Screenslaver",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2365,7 +2365,7 @@
     "name": "Lady Lightbug",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2373,7 +2373,7 @@
     "name": "Underminer",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2381,7 +2381,7 @@
     "name": "Gazerbeam",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2389,7 +2389,7 @@
     "name": "Winston Deavor",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2397,7 +2397,7 @@
     "name": "Evelyn Deavor",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2405,7 +2405,7 @@
     "name": "Rusty McAllister",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2413,7 +2413,7 @@
     "name": "Gilbert Huph",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2421,7 +2421,7 @@
     "name": "Raccoon",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2429,7 +2429,7 @@
     "name": "Bomb Voyage",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "The Incredibles",
@@ -2437,7 +2437,7 @@
     "name": "Bernie Kropp",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Dash"
   },
   {
@@ -2446,7 +2446,7 @@
     "name": "Mr. Skipperdoo",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Frozone"
   },
   {
@@ -2455,7 +2455,7 @@
     "name": "Rick Dicker",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Mr. Incredible"
   },
   {
@@ -2464,7 +2464,7 @@
     "name": "Edna Mode",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Mrs. Incredible"
   },
   {
@@ -2473,7 +2473,7 @@
     "name": "Tony Rydinger",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Violet"
   },
 
@@ -2560,5 +2560,121 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Moana"
+  },
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Grandpa And Grandma Flynn",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Sirens",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Edward Dillinger Jr.",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Black Guards",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Sentry",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Anon",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Marv",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Alan Bradley",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "ISO",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Quorra"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "Jarvis",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Rinzler"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "Kevin Flynn",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Sam Flynn"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "Gem",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Zuse"
   }
 ]

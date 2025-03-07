@@ -1059,7 +1059,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1073,7 +1073,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1087,7 +1087,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1101,7 +1101,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1115,7 +1115,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1146,5 +1146,61 @@
     "universalBox": false,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10Mid"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "role": "Defender",
+    "name": "Quorra",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "role": "Brawler",
+    "name": "Rinzler",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "role": "Speedster",
+    "name": "Sam Flynn",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "role": "Trickster",
+    "name": "Zuse",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
   }
 ]

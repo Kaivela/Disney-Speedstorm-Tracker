@@ -27,6 +27,8 @@
     "season9": "Season 9 : Pirates Of The Caribbean",
     "season10": "Season 10 : The Nightmare Before Christmas",
     "season11": "Season 11 : The Incredibles",
+    "season11alt": "Season 11 Alt : The Incredibles",
+    "season12": "Season 12 : Tron",
     "select_theme": "Select a Theme",
     
     "search_placeholder": "Search...",
@@ -221,6 +223,10 @@
     "Mrs. Incredible": "Mrs. Incredible",
     "Violet": "Violet",
     "Maui": "Maui",
+    "Quorra": "Quorra",
+    "Rinzler": "Rinzler",
+    "Sam Flynn": "Sam Flynn",
+    "Zuse": "Zuse",
     
     "Mickey & Friends": "Mickey & Friends",
     "Pirates of the Caribbean": "Pirates of The Caribbean",
@@ -242,6 +248,7 @@
     "Tangled": "Tangled",
     "The Incredibles": "The Incredibles",
     "Moana": "Moana",
+    "Tron": "Tron",
 
     "Tanglefoot": "Tanglefoot",
     "Clara Cluck": "Clara Cluck",
@@ -521,5 +528,17 @@
     "Tamatoa": "Tamatoa",
     "Heihei": "Heihei",
     "Mini Maui": "Mini Maui",
-    "Simea": "Simea"
+    "Simea": "Simea",
+    "Grandpa And Grandma Flynn": "Grandpa and Grandma Flynn",
+    "Sirens": "Sirens",
+    "Edward Dillinger Jr.": "Edward Dillinger Jr.",
+    "Black Guards": "Black Guards",
+    "Sentry": "Sentry",
+    "Anon": "Anon",
+    "Marv": "Marv",
+    "Alan Bradley": "Alan Bradley",
+    "ISO": "ISO",
+    "Jarvis": "Jarvis",
+    "Kevin Flynn": "Kevin Flynn",
+    "Gem": "Gem"
 }
