@@ -2676,5 +2676,89 @@
     "currentShards": 0,
     "universalBox": "season",
     "exclusiveTo": "Zuse"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Huntsman",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Bashful",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Doc",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Sleepy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Sneezy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Dopey",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Happy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Grumpy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Epic",
+    "name": "The Prince",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Snow White"
   }
 ]

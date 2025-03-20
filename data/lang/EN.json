@@ -227,6 +227,7 @@
     "Rinzler": "Rinzler",
     "Sam Flynn": "Sam Flynn",
     "Zuse": "Zuse",
+    "Snow White": "Snow White",
     
     "Mickey & Friends": "Mickey & Friends",
     "Pirates of the Caribbean": "Pirates of The Caribbean",
@@ -249,6 +250,7 @@
     "The Incredibles": "The Incredibles",
     "Moana": "Moana",
     "Tron": "Tron",
+    "Snow White and the Seven Dwarfs": "Snow White and the Seven Dwarfs",
 
     "Tanglefoot": "Tanglefoot",
     "Clara Cluck": "Clara Cluck",
@@ -540,5 +542,14 @@
     "ISO": "ISO",
     "Jarvis": "Jarvis",
     "Kevin Flynn": "Kevin Flynn",
-    "Gem": "Gem"
+    "Gem": "Gem",
+    "Huntsman": "Huntsman",
+    "Bashful": "Bashful",
+    "Doc": "Doc",
+    "Sleepy": "Sleepy",
+    "Sneezy": "Sneezy",
+    "Dopey": "Dopey",
+    "Happy": "Happy",
+    "Grumpy": "Grumpy",
+    "The Prince": "The Prince"
 }

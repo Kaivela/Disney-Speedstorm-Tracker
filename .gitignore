@@ -24,4 +24,4 @@ dist-ssr
 *.sln
 *.sw?
 public/img/pilots/Evil Queen.webp
-public/img/pilots/Snow White.webp
+data/toDo.js
