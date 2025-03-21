@@ -252,7 +252,7 @@ function applyCrewSearch(searchTerm) {
 }
 
 // fonction pour ordonner les équipiers automatiquement selon l'ordre du fichier crews_blank
-function sortCrews() {
+function sortCrewsBlank() {
   // load crews
   let crews = JSON.parse(localStorage.getItem("crews")) || [];
   let orderedCrews = {};
@@ -307,6 +307,21 @@ function filterCrewTable(lang) {
   });
 }
 
+export function sortCrewsByColumn(column, order) {
+  // load pilots
+  let crews = JSON.parse(localStorage.getItem("crews")) || [];
+
+  crews.sort((crewA, crewB) => {
+    if (order === "asc") return crewA[column] - crewB[column];
+    return crewB[column] - crewA[column];
+  });
+  localStorage.setItem("crews", JSON.stringify(crews));
+}
+
+export function emptyCrewsTable() {
+  crewTableBody.innerHTML = "";
+}
+
 export {
   updateCrewsWithShardsNeeded,
   addCrewToTable,
@@ -317,5 +332,5 @@ export {
   submitCrewForm,
   filterCrewTable,
   applyCrewSearch,
-  sortCrews,
+  sortCrewsBlank,
 };

@@ -6,7 +6,9 @@ import {
   submitCrewForm,
   filterCrewTable,
   updateCrewsWithShardsNeeded,
-  sortCrews,
+  sortCrewsBlank,
+  emptyCrewsTable,
+  sortCrewsByColumn,
 } from "./crewTable.js";
 import { updateFilterOptions } from "./filters.js";
 import {
@@ -91,14 +93,15 @@ const toggleCrewBox = document.getElementById("toggleCrewBox");
 const pilotSearchInput = document.getElementById("pilotSearchInput");
 const goalSelect = document.getElementById("goalSelect");
 const levelGoalSelect = document.getElementById("levelGoalSelect");
-const sortButtons = document.querySelectorAll("th[data-sort]");
+const sortPilotButtons = document.querySelectorAll("#pilotTable th[data-sort]");
+const sortCrewButtons = document.querySelectorAll("#crewTable th[data-sort]");
 let editingPilotIndex = null; // Pour suivre quel pilote est en cours de modification
 let editingCrewIndex = null; // Pour suivre quel equipier est en cours de modification
 
-function bindSortButtons() {
-  sortButtons.forEach((button) => {
+function bindSortPilotButtons() {
+  sortPilotButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      sortButtons.forEach((b) => {
+      sortPilotButtons.forEach((b) => {
         if (b !== button) b.dataset.order = "default";
       });
       const column = button.dataset.sort;
@@ -114,6 +117,29 @@ function bindSortButtons() {
       emptyPilotsTable();
       addPilotsToTable(lang, pilotTableBody /*, goal */);
       filterPilotTable(lang);
+    });
+  });
+}
+
+function bindSortCrewButtons() {
+  sortCrewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      sortCrewButtons.forEach((b) => {
+        if (b !== button) b.dataset.order = "default";
+      });
+      const column = button.dataset.sort;
+      const currentOrder = button.dataset.order || "default";
+      const nextOrder = {
+        default: "desc",
+        desc: "asc",
+        asc: "default",
+      }[currentOrder];
+      button.dataset.order = nextOrder;
+      if (nextOrder === "default") sortCrewsBlank();
+      else sortCrewsByColumn(column, nextOrder);
+      emptyCrewsTable();
+      addCrewsToTable(lang, crewTableBody /*, goal */);
+      filterCrewTable(lang);
     });
   });
 }
@@ -641,8 +667,9 @@ document.addEventListener("DOMContentLoaded", () => {
   switchTheme();
   bindSettingsEvents();
   loadSettings();
-  sortCrews();
-  bindSortButtons();
+  sortCrewsBlank();
+  bindSortPilotButtons();
+  bindSortCrewButtons();
   isDarkModeActive();
   isTransparancyActive();
   applyTheme();
