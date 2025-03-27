@@ -45,6 +45,7 @@
     "current_level_table": "Current Level",
     "pilot_name_table": "Racer Name",
     "free_table": "Uni. Box",
+    "current_super_shards_table": "Current Super Shards",
     "shards_needed_table": "Shards Needed",
     "shards_to_next_star": "Shards to Next Star",
     "shards_needed_if_max_MPR" : "Shards if Max MPR",
@@ -61,6 +62,7 @@
     "crew_name_form": "Crew Name",
     "rarity_form": "Rarity:",
     "current_level_form": "Current Level:",
+    "super_shards_form": "Current Super Shards:",
     "current_rmj_form": "Current MPR:",
     "highest_rmj_form": "Highest MPR:",
     "universal_box_form": "Universal Box ?:",
@@ -141,6 +143,7 @@
     "crew_name_error": "Crew must have a name.",
     "crew_duplicate_name": "Crew already exists.",
     "crew_shard_error": "Current Shards must be between 0 and 100.",
+    "super_shard_error": "Current Supercharge Shards must be between 0 and 60.",
 
     "Daisy Duck": "Daisy Duck",
     "Donald Duck": "Donald Duck",

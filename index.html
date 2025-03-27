@@ -162,7 +162,7 @@
           </div>
 
           <label for="pilotCurrentStars" data-trad="current_stars_form"></label>
-          <input type="number" id="pilotCurrentStars" min="0" max="5" required />
+          <input type="number" id="pilotCurrentStars" min="0" max="7" required />
           <div id="pilotCurrentStarsError" class="error-message" data-trad="star_error"></div>
 
           <label for="pilotCurrentShards" data-trad="current_shards_form"></label>
@@ -180,6 +180,10 @@
           <label for="highestRMJ" data-trad="highest_rmj_form"></label>
           <input type="number" id="highestRMJ" min="0" max="40" required />
           <div id="highestRMJError" class="error-message" data-trad="highest_mpr_error"></div>
+
+          <label for="pilotSuperShards" data-trad="super_shards_form"></label>
+          <input type="number" id="pilotSuperShards" min="0" max="60" required />
+          <div id="pilotSuperShardsError" class="error-message" data-trad="super_shard_error"></div>
 
           <label style="display: none" for="pilotUniversalBox" data-trad="universal_box_form"></label>
           <input style="display: none" type="checkbox" id="pilotUniversalBox" />
@@ -300,6 +304,7 @@
               <th data-sort="currentStars" class="star"></th>
               <th data-sort="currentShards" data-trad="current_shards_table"></th>
               <th data-sort="currentLevel" data-trad="current_level_table"></th>
+              <th data-trad="current_super_shards_table"></th>
               <th data-sort="currentRMJ" data-trad="current_MPR_table"></th>
               <th data-sort="highestRMJ" data-trad="highest_MPR_table"></th>
               <th data-trad="max_MPR_table"></th>

@@ -6,6 +6,7 @@ import {
   calculatePilotShardsNextStar,
   calculateCoinsNextStar,
   calculatePilotShardIfMaxMPR,
+  calculatePilotSuperShards
 } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
@@ -45,6 +46,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
   const shardsIfMaxMPR = calculatePilotShardIfMaxMPR(shardsNeeded, shardsToGet);
+  const superCharge = calculatePilotSuperShards(pilot.name, pilot.currentSuperShards);
 
   // Déterminez la classe en fonction de shardsNeeded
   let shardsClass = "";
@@ -140,6 +142,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   <td ${styles.pilotStar}>${pilot.currentStars}</td>
   <td class="${shardsClass}" ${styles.pilotCurrentShard}>${pilot.currentShards}</td>
   <td class="${levelClass}" ${styles.pilotLevel}>${pilot.currentLevel}</td>
+  <td>${superCharge}</td>
   <td ${styles.pilotCurrentMPR}>${pilot.currentRMJ}</td>
   <td ${styles.pilotHighestMPR}>${pilot.highestRMJ}</td>
   <td class="${RMJClass}" ${styles.pilotGrade}></td>
@@ -206,6 +209,7 @@ function populatePilotForm(pilot, lang) {
   document.getElementById("pilotName").value = getTrad(pilot.name);
   document.getElementById("pilotCurrentStars").value = pilot.currentStars;
   document.getElementById("pilotCurrentShards").value = pilot.currentShards;
+  document.getElementById("pilotSuperShards").value = pilot.currentSuperShards;
   document.getElementById("currentLevel").value = pilot.currentLevel;
   document.getElementById("currentRMJ").value = pilot.currentRMJ;
   document.getElementById("highestRMJ").value = pilot.highestRMJ;
@@ -245,7 +249,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
   const pilotName = getTradKey(document.getElementById("pilotName").value, lang);
   const pilotcurrentStars = parseInt(document.getElementById("pilotCurrentStars").value, 10);
   const pilotCurrentShards = parseInt(document.getElementById("pilotCurrentShards").value, 10);
-
+  const pilotCurrentSuperShards = parseInt(document.getElementById("pilotSuperShards").value, 10);
   const currentLevel = parseInt(document.getElementById("currentLevel").value, 10);
 
   let isValid = checkFormValidity(
@@ -255,7 +259,8 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
     pilotcurrentStars,
     currentLevel,
     pilotCurrentShards,
-    franchise
+    franchise,
+    pilotCurrentSuperShards
   );
 
   if (isValid) {
@@ -268,6 +273,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
       name: pilotName,
       currentStars: pilotcurrentStars,
       currentShards: pilotCurrentShards,
+      currentSuperShards: pilotCurrentSuperShards,
       currentLevel: currentLevel,
       currentRMJ: parseInt(document.getElementById("currentRMJ").value, 10),
       highestRMJ: parseInt(document.getElementById("highestRMJ").value, 10),
@@ -294,7 +300,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
   }
 }
 
-function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentStars, currentLevel, pilotCurrentShards, franchise) {
+function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentStars, currentLevel, pilotCurrentShards, franchise, pilotCurrentSuperShards) {
   let isValid = true;
   const pilotCurrentShardsError = document.getElementById("pilotCurrentShardsError");
   const pilotNameError = document.getElementById("pilotNameError");
@@ -307,6 +313,7 @@ function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentSta
   const currentRMJError = document.getElementById("currentRMJError");
   const highestRMJ = parseInt(document.getElementById("highestRMJ").value, 10);
   const highestRMJError = document.getElementById("highestRMJError");
+  const pilotCurrentSuperShardsError = document.getElementById("pilotSuperShardsError");
   // if (franchise === "" && franchise2 === "") {
   //   pilotFranchiseError.style.display = "block";
   //   showElement(pilotFranchiseError);
@@ -330,7 +337,7 @@ function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentSta
       pilotDuplicateError.style.display = "none";
     }
   }
-  if (pilotCurrentStars < 0 || pilotCurrentStars > 5 || isNaN(pilotCurrentStars)) {
+  if (pilotCurrentStars < 0 || pilotCurrentStars > 7 || isNaN(pilotCurrentStars)) {
     showElement(pilotcurrentStarsError);
     isValid = false;
   } else {
@@ -347,6 +354,12 @@ function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentSta
     isValid = false;
   } else {
     hideElement(pilotCurrentShardsError);
+  }
+  if (pilotCurrentSuperShards < 0 || pilotCurrentSuperShards > 60 || isNaN(pilotCurrentSuperShards)) {
+    showElement(pilotCurrentSuperShardsError);
+    isValid = false;
+  } else {
+    hideElement(pilotCurrentSuperShardsError);
   }
   if (currentRMJ < 0 || currentRMJ > 40 || isNaN(currentRMJ)) {
     showElement(currentRMJError);

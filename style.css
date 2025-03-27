@@ -193,7 +193,6 @@ table {
 }
 thead {
   position: sticky;
-  top: -1px;
 }
 th,
 td {
@@ -260,12 +259,12 @@ form {
 }
 @media (min-width: 768px) {
   form {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 }
 label {
   background-color: var(--bg-color-label);
-  width: fit-content;
+  width: max-content;
   height: fit-content;
   padding: .25rem .5rem;
   color: var(--color-label);
@@ -273,12 +272,13 @@ label {
 select,
 input[type="number"],
 input[type="text"] {
-  width: 150px;
+  width: 50px;
   height: fit-content;
   padding: 4px;
   box-sizing: border-box;
   color: var(--color-select-input);
   background-color: var(--bg-color-select-input);
+  margin-inline: 20px;
 }
 input[type="checkbox"] {
   margin-bottom: 5px;

@@ -12,6 +12,7 @@ import {
   normalCrewShardCost,
   epicCrewShardCost,
   starLevel,
+  superChargeCost
 } from "./data/data.js";
 import { createGetTrad } from "./trad.js";
 import crewsBlank from "./data/crews/crews_blank.json";
@@ -28,6 +29,18 @@ function calculatePilotShardsNeeded(currentLevel, currentShards) {
   }
 
   return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
+}
+
+// Fonction pour calculer les superShards nécessaires pour activer la superCharge
+function calculatePilotSuperShards(name, currentSuperShards) {
+  const superChargedPilotsName = ["Mickey Mouse"] ;
+  const superChargedPilots = superChargedPilotsName.includes(name);
+
+  if (!superChargedPilots) {
+    currentSuperShards = "❌"
+  }
+
+  return currentSuperShards;
 }
 
 // Fonction pour calculer les shards nécéssaires si le joueur farm le RMJ 38
@@ -328,4 +341,5 @@ export {
   calculateTotal,
   calculateCoinsNextStar,
   calculatePilotShardIfMaxMPR,
+  calculatePilotSuperShards,
 };

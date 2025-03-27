@@ -66,6 +66,9 @@ const normalCrewShardCost = [5, 15, 25, 45, 75];
 // Définir le nombre de shards nécéssaire pour un crew (epic) pour gagner une étoile
 const epicCrewShardCost = [10, 20, 35, 50, 100];
 
+// Définir le nombre de superShards nécéssaire pour activer la superCharge
+const superChargeCost = [20, 40];
+
 export {
   pilotShardCosts,
   coinsCosts,
@@ -80,4 +83,5 @@ export {
   normalCrewShardCost,
   epicCrewShardCost,
   starLevel,
+  superChargeCost,
 };

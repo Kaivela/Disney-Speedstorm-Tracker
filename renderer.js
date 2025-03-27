@@ -253,16 +253,16 @@ togglePilotName.addEventListener("click", (e) => togglePilotColumn(4, e));
 togglePilotStar.addEventListener("click", (e) => togglePilotColumn(5, e));
 togglePilotCurrentShard.addEventListener("click", (e) => togglePilotColumn(6, e));
 togglePilotLevel.addEventListener("click", (e) => togglePilotColumn(7, e));
-togglePilotCurrentMPR.addEventListener("click", (e) => togglePilotColumn(8, e));
-togglePilotHighestMPR.addEventListener("click", (e) => togglePilotColumn(9, e));
-togglePilotGrade.addEventListener("click", (e) => togglePilotColumn(10, e));
-togglePilotShardNeeded.addEventListener("click", (e) => togglePilotColumn(11, e));
-togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(12, e));
-togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(13, e));
-togglePilotBox.addEventListener("click", (e) => togglePilotColumn(14, e));
-togglePilotShardStar.addEventListener("click", (e) => togglePilotColumn(15, e));
-togglePilotCoinStar.addEventListener("click", (e) => togglePilotColumn(16, e));
-togglePilotShardIfMaxMPR.addEventListener("click", (e) => togglePilotColumn(17, e));
+togglePilotCurrentMPR.addEventListener("click", (e) => togglePilotColumn(9, e));
+togglePilotHighestMPR.addEventListener("click", (e) => togglePilotColumn(10, e));
+togglePilotGrade.addEventListener("click", (e) => togglePilotColumn(11, e));
+togglePilotShardNeeded.addEventListener("click", (e) => togglePilotColumn(12, e));
+togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(13, e));
+togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(14, e));
+togglePilotBox.addEventListener("click", (e) => togglePilotColumn(15, e));
+togglePilotShardStar.addEventListener("click", (e) => togglePilotColumn(16, e));
+togglePilotCoinStar.addEventListener("click", (e) => togglePilotColumn(17, e));
+togglePilotShardIfMaxMPR.addEventListener("click", (e) => togglePilotColumn(18, e));
 
 // Gérer l'affichage des colonnes pour les Crew
 toggleCrewImage.addEventListener("click", () => toggleCrewColumn(0));
@@ -651,12 +651,27 @@ window.addEventListener("scroll", () => {
   }
 });
 
+function updateLocalStorage(params) {
+  const newProps = ['currentSuperShards'];
+  const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  pilots.forEach(pilot => {
+    newProps.forEach(newProp => {
+      if (!Object.hasOwn(pilot, newProp)) {
+        const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
+        pilot[newProp] = pilotBlank[newProp];
+      }
+    })
+  })
+  localStorage.setItem("pilots", JSON.stringify(pilots));
+}
+
 // Charger les données des pilotes au démarrage
 document.addEventListener("DOMContentLoaded", () => {
   mergePilotsAndCrews();
   updatePilotFormFranchise(lang);
   updateCrewFormFranchise(lang);
   sortPilotsBlank();
+  updateLocalStorage();
   addPilotsToTable(lang, pilotTableBody);
   addCrewsToTable(lang, crewTableBody);
   updateFilterOptions(lang);
