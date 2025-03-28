@@ -414,9 +414,9 @@ function filterPilotTable(lang) {
     const rarityText = row.cells[2].textContent;
     const roleText = row.cells[3].textContent;
     const levelText = row.cells[7].textContent;
-    const rmjText = row.cells[8].textContent;
-    const shardsNeededText = row.cells[11].textContent;
-    const boxesText = row.cells[14].textContent;
+    const rmjText = row.cells[9].textContent;
+    const shardsNeededText = row.cells[12].textContent;
+    const boxesText = row.cells[15].textContent;
     const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
     const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
     const matchesRole = roleText.includes(getTrad(roleFilter)) || roleFilter === "";
