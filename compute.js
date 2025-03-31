@@ -33,7 +33,7 @@ function calculatePilotShardsNeeded(currentLevel, currentShards) {
 
 // Fonction pour calculer les superShards nécessaires pour activer la superCharge
 function calculatePilotSuperShards(name, currentSuperShards) {
-  const superChargedPilotsName = ["Mickey Mouse"] ;
+  const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann"] ;
   const superChargedPilots = superChargedPilotsName.includes(name);
 
   if (!superChargedPilots) {
