@@ -1303,5 +1303,20 @@
     "universalBox": false,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10Mid"
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "role": "Trickster",
+    "name": "The Evil Queen",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentSuperShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": false,
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10Mid"
   }
 ]

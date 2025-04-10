@@ -2760,5 +2760,14 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Snow White"
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Epic",
+    "name": "Magic Mirror",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "The Evil Queen"
   }
 ]
