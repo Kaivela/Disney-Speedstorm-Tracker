@@ -256,7 +256,7 @@ function calculateTotal(lang, goal, levelGoal) {
     allShardsNeeded = allShardsNeeded + pilot.shardsNeeded;
 
     // Calculer les shardsNeeded pour chaque pilote non saisonier
-    if (pilot.universalBox) {
+    if (pilot.universalBox === true) {
       pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
       allRegularShards = allRegularShards + pilot.shardsNeeded;
     }
