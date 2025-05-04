@@ -240,7 +240,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
   event.preventDefault();
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   const pilot =
-    pilots.find((pilot) => {
+    pilotsBlank.find((pilot) => {
       return getTrad(pilot.name) === document.getElementById("pilotName").value;
     }) || {};
 
@@ -277,7 +277,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
       currentLevel: currentLevel,
       currentRMJ: parseInt(document.getElementById("currentRMJ").value, 10),
       highestRMJ: parseInt(document.getElementById("highestRMJ").value, 10),
-      universalBox: document.getElementById("pilotUniversalBox").checked,
+      universalBox: pilot.universalBox,
     };
     savePilotData(editPilot, editingPilotIndex);
     const sortColumn = document.querySelector("th[data-order]:not([data-order='default'])");
@@ -511,6 +511,19 @@ export function emptyPilotsTable() {
   pilotTableBody.innerHTML = "";
 }
 
+function synchronizePilotsUniBoxWithPilotsBlank() {
+  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  
+  pilots.forEach((pilot) => {
+    const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
+    if (pilotBlank) {
+      pilot.universalBox = pilotBlank.universalBox; // Update universalBox to match pilots_blank.json
+    }
+  });
+
+  localStorage.setItem("pilots", JSON.stringify(pilots)); // Save updated pilots back to local storage
+}
+
 export {
   sortPilotsBlank,
   populatePilotForm,
@@ -519,4 +532,5 @@ export {
   submitPilotForm,
   filterPilotTable,
   applyPilotSearch,
+  synchronizePilotsUniBoxWithPilotsBlank
 };

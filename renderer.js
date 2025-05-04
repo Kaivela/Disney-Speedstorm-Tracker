@@ -20,6 +20,7 @@ import {
   sortPilotsBlank,
   emptyPilotsTable,
   sortPilotsByColumn,
+  synchronizePilotsUniBoxWithPilotsBlank
 } from "./pilotTable.js";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
@@ -678,6 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePlaceholders();
   translate(lang);
   updateCrewsWithShardsNeeded();
+  synchronizePilotsUniBoxWithPilotsBlank();
   calculateTotal(lang, goal, levelGoal);
   switchTheme();
   bindSettingsEvents();
