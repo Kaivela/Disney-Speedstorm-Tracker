@@ -2583,7 +2583,7 @@
     "name": "Grandpa And Grandma Flynn",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2591,7 +2591,7 @@
     "name": "Sirens",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2599,7 +2599,7 @@
     "name": "Edward Dillinger Jr.",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2607,7 +2607,7 @@
     "name": "Black Guards",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2615,7 +2615,7 @@
     "name": "Sentry",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2623,7 +2623,7 @@
     "name": "Anon",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2631,7 +2631,7 @@
     "name": "Marv",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2639,7 +2639,7 @@
     "name": "Alan Bradley",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Tron",
@@ -2647,7 +2647,7 @@
     "name": "ISO",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Quorra"
   },
   {
@@ -2656,7 +2656,7 @@
     "name": "Jarvis",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Rinzler"
   },
   {
@@ -2665,7 +2665,7 @@
     "name": "Kevin Flynn",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Sam Flynn"
   },
   {
@@ -2674,7 +2674,7 @@
     "name": "Gem",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Zuse"
   },
 
@@ -2769,5 +2769,108 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "The Evil Queen"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Sergeant Gerson",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "General",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Punk Bot Fighter",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Little Yama",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Tadashi",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Bot Fight Ringleader",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Yama",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Alistair Krei",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Mochi",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Baymax"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Megabot",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Hiro"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Sofia",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Honey Lemon"
   }
 ]

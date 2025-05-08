@@ -1240,7 +1240,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1255,7 +1255,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1270,7 +1270,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1285,7 +1285,7 @@
     "currentLevel": 0,
     "currentRMJ": 0,
     "highestRMJ": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10"
   },
@@ -1318,5 +1318,50 @@
     "universalBox": false,
     "rmjTokenOld" : false,
     "rmjCoin" : "S10Mid"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "role": "Brawler",
+    "name": "Baymax",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentSuperShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "role": "Trickster",
+    "name": "Hiro",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentSuperShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "role": "Trickster",
+    "name": "Honey Lemon",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentSuperShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "season",
+    "rmjTokenOld" : false,
+    "rmjCoin" : "S10"
   }
 ]

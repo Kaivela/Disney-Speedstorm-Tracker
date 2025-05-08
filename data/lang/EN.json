@@ -29,6 +29,7 @@
     "season11": "Season 11 : The Incredibles",
     "season11alt": "Season 11 Alt : The Incredibles",
     "season12": "Season 12 : Tron",
+    "season13": "Season 13 : Big Hero 6",
     "select_theme": "Select a Theme",
     
     "search_placeholder": "Search...",
@@ -232,6 +233,9 @@
     "Zuse": "Zuse",
     "Snow White": "Snow White",
     "The Evil Queen": "The Evil Queen",
+    "Baymax": "Baymax",
+    "Hiro": "Hiro",
+    "Honey Lemon": "Honey Lemon",
     
     "Mickey & Friends": "Mickey & Friends",
     "Pirates of the Caribbean": "Pirates of The Caribbean",
@@ -255,6 +259,7 @@
     "Moana": "Moana",
     "Tron": "Tron",
     "Snow White and the Seven Dwarfs": "Snow White and the Seven Dwarfs",
+    "Big Hero 6": "Big Hero 6",
 
     "Tanglefoot": "Tanglefoot",
     "Clara Cluck": "Clara Cluck",
@@ -556,5 +561,16 @@
     "Happy": "Happy",
     "Grumpy": "Grumpy",
     "The Prince": "The Prince",
-    "Magic Mirror": "Magic Mirror"
+    "Magic Mirror": "Magic Mirror",
+    "Sergeant Gerson": "Sergeant Gerson",
+    "General": "General",
+    "Punk Bot Fighter": "Punk Bot Fighter",
+    "Little Yama": "Little Yama",
+    "Tadashi": "Tadashi",
+    "Bot Fight Ringleader": "Bot Fight Ringleader",
+    "Yama": "Yama",
+    "Alistair Krei": "Alistair Krei",
+    "Mochi": "Mochi",
+    "Megabot": "Megabot",
+    "Sofia": "Sofia"
 }

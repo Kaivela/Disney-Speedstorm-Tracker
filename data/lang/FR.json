@@ -29,6 +29,7 @@
     "season11": "Saison 11 : Les Indestructibles",
     "season11alt": "Saison 11 Alt : Les Indestructibles",
     "season12": "Saison 12 : Tron",
+    "season13": "Saison 13 : Les Nouveaux Héros",
     "select_theme": "Changer le Thème",
     
     "search_placeholder": "Rechercher...",
@@ -232,6 +233,9 @@
     "Zuse": "Zuse",
     "Snow White": "Blanche Neige",
     "The Evil Queen": "La Reine",
+    "Baymax": "Baymax",
+    "Hiro": "Hiro",
+    "Honey Lemon": "Honey Lemon",
 
     "Mickey & Friends": "Mickey et ses Amis",
     "Pirates of the Caribbean": "Pirates des Caraïbes",
@@ -255,6 +259,7 @@
     "Moana": "Vaiana",
     "Tron": "Tron",
     "Snow White and the Seven Dwarfs": "Blanche Neige Et Les Sept Nains",
+    "Big Hero 6": "Les Nouveaux Héros",
 
     "Tanglefoot": "Pieds-Mêlés",
     "Clara Cluck": "Clara Cluck",
@@ -556,5 +561,16 @@
     "Happy": "Joyeux",
     "Grumpy": "Grincheux",
     "The Prince": "Le Prince",
-    "Magic Mirror": "Miroir Magique"
+    "Magic Mirror": "Miroir Magique",
+    "Sergeant Gerson": "Sergent Gerson",
+    "General": "Général",
+    "Punk Bot Fighter": "Participante De Bot Fight Punk",
+    "Little Yama": "Petit Yama",
+    "Tadashi": "Tadashi",
+    "Bot Fight Ringleader": "Animatrice De Bot Fight",
+    "Yama": "Yama",
+    "Alistair Krei": "Alistair Krei",
+    "Mochi": "Mochi",
+    "Megabot": "Mégarobot",
+    "Sofia": "Sofia"
 }
