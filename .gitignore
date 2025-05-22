@@ -24,5 +24,4 @@ dist-ssr
 *.sln
 *.sw?
 data/toDo.js
-public/img/pilots/Aurora.webp
 public/img/pilots/Cinderella.webp

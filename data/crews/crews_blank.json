@@ -2195,7 +2195,14 @@
 
 
 
-
+{
+    "franchise": "Sleeping Beauty",
+    "rarity": "Common",
+    "name": "Queen Leah",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
   {
     "franchise": "Sleeping Beauty",
     "rarity": "Common",
@@ -2208,6 +2215,14 @@
     "franchise": "Sleeping Beauty",
     "rarity": "Common",
     "name": "Axe Goon",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Rare",
+    "name": "Prince Phillip",
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
@@ -2235,6 +2250,15 @@
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
+  },
+   {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Epic",
+    "name": "Flora, Fauna, and Merryweather",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Aurora"
   },
   {
     "franchise": "Sleeping Beauty",
