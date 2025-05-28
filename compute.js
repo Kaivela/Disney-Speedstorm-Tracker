@@ -33,7 +33,7 @@ function calculatePilotShardsNeeded(currentLevel, currentShards) {
 
 // Fonction pour calculer les superShards nécessaires pour activer la superCharge
 function calculatePilotSuperShards(name, currentSuperShards) {
-  const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff"] ;
+  const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo"] ;
   const superChargedPilots = superChargedPilotsName.includes(name);
 
   if (!superChargedPilots) {
@@ -303,6 +303,28 @@ function calculateTotal(lang, goal, levelGoal) {
   // Calculer les universalBoxCount
   universalBoxCount = Math.ceil(allFreeShards / 3);
 
+  let totalFreeCrewShardsNeededCalculated = totalFreeCrewShardsNeeded.totalCommonShardsNeeded +
+      totalFreeCrewShardsNeeded.totalRareShardsNeeded +
+      totalFreeCrewShardsNeeded.totalEpicShardsNeeded
+
+  // formater les nombres avec des points pour l'affichage
+  allCoins = formatNumberWithDots(allCoins);
+  allShardsNeeded = formatNumberWithDots(allShardsNeeded);
+  allFreeShards = formatNumberWithDots(allFreeShards);
+  universalBoxCount = formatNumberWithDots(universalBoxCount);
+  seasonCoins = formatNumberWithDots(seasonCoins);
+  upgradeCoins = formatNumberWithDots(upgradeCoins);
+  tokensToGet = formatNumberWithDots(tokensToGet);
+  cosmeticToGet = formatNumberWithDots(cosmeticToGet);
+  totalFreeCrewShardsNeeded.totalCommonShardsNeeded =
+    formatNumberWithDots(totalFreeCrewShardsNeeded.totalCommonShardsNeeded);
+  totalFreeCrewShardsNeeded.totalRareShardsNeeded =
+    formatNumberWithDots(totalFreeCrewShardsNeeded.totalRareShardsNeeded);
+  totalFreeCrewShardsNeeded.totalEpicShardsNeeded =
+    formatNumberWithDots(totalFreeCrewShardsNeeded.totalEpicShardsNeeded);
+  totalFreeCrewShardsNeededCalculated = formatNumberWithDots(totalFreeCrewShardsNeededCalculated);
+
+  // Afficher les résultats dans le HTML
   document.getElementById("allCoins").textContent = allCoins;
   document.getElementById("levelGoal").textContent = levelGoal + " : ";
   document.getElementById("allShards").textContent = allShardsNeeded;
@@ -325,11 +347,14 @@ function calculateTotal(lang, goal, levelGoal) {
     ": " +
     totalFreeCrewShardsNeeded.totalEpicShardsNeeded +
     " Total : " +
-    (totalFreeCrewShardsNeeded.totalCommonShardsNeeded +
-      totalFreeCrewShardsNeeded.totalRareShardsNeeded +
-      totalFreeCrewShardsNeeded.totalEpicShardsNeeded);
-  // console.log({ totalFreeCrewShardsNeeded });
+    totalFreeCrewShardsNeededCalculated;
 }
+
+// Fonction pour mettre un point tous les 3 caractères pour les calculs a afficher
+function formatNumberWithDots(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 
 export {
   calculatePilotShardsNeeded,
