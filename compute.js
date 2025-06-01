@@ -18,22 +18,23 @@ import { createGetTrad } from "./trad.js";
 import crewsBlank from "./data/crews/crews_blank.json";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 
+const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo"] 
+
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
 function calculatePilotShardsNeeded(currentLevel, currentShards) {
   let totalShardsNeeded = 0;
-
-  for (let level = currentLevel + 1; level <= 50; level++) {
-    if (level <= pilotShardCosts.length) {
-      totalShardsNeeded += pilotShardCosts[level - 1];
+  
+    for (let level = currentLevel + 1; level <= 50; level++) {
+      if (level <= pilotShardCosts.length) {
+        totalShardsNeeded += pilotShardCosts[level - 1];
+      }
     }
-  }
 
-  return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
+    return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
 }
 
 // Fonction pour calculer les superShards nécessaires pour activer la superCharge
 function calculatePilotSuperShards(name, currentSuperShards) {
-  const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo"] ;
   const superChargedPilots = superChargedPilotsName.includes(name);
 
   if (!superChargedPilots) {
@@ -41,6 +42,19 @@ function calculatePilotSuperShards(name, currentSuperShards) {
   }
 
   return currentSuperShards;
+}
+
+//Fonction pour calculer le nombre de supershards nécéssaire a collecter au total
+function calculatePilotSuperShardsNeeded(currentStars, currentSuperShards) {
+  let totalSuperShardsNeeded = 0;
+
+  for (let star = currentStars +1; star <= 7; star++) {
+     if (star <= superChargeCost.length) {
+      totalSuperShardsNeeded += superChargeCost[star - 1];
+     }    
+  }
+
+  return Math.max(totalSuperShardsNeeded - currentSuperShards, 0)
 }
 
 // Fonction pour calculer les shards nécéssaires si le joueur farm le RMJ 38
@@ -243,9 +257,20 @@ function calculateTotal(lang, goal, levelGoal) {
   let tokensToGet = 0;
   let cosmeticToGet = 0;
   let allFreeShards = 0;
+  let allSuperShardsNeeded = 0;
 
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((pilotBlank) => pilotBlank.name === pilot.name);
+
+  // Calculer les SuperShardsNeeded pour chaque pilote
+  const superChargedPilots = superChargedPilotsName.includes(pilot.name);
+
+  if (superChargedPilots) {
+    pilot.superShardsNeeded = calculatePilotSuperShardsNeeded(pilot.currentStars, pilot.currentSuperShards);
+    allSuperShardsNeeded = allSuperShardsNeeded + pilot.superShardsNeeded;
+    console.log(pilot.name, pilot.superShardsNeeded);
+    console.log("allSuperShardsNeeded", allSuperShardsNeeded);
+  }
 
     // Calculer les coinsNeeded pour chaque pilote
     pilot.coinsNeeded = calculateCoinsNeededForGoal(pilot.currentLevel, levelGoal, pilot.currentStars);
@@ -328,6 +353,7 @@ function calculateTotal(lang, goal, levelGoal) {
   document.getElementById("allCoins").textContent = allCoins;
   document.getElementById("levelGoal").textContent = levelGoal + " : ";
   document.getElementById("allShards").textContent = allShardsNeeded;
+  document.getElementById("allSuperShards").textContent = allSuperShardsNeeded;
   document.getElementById("allRegularShards").textContent = allFreeShards;
   document.getElementById("universalBoxCount").textContent = universalBoxCount;
   document.getElementById("seasonCoins").textContent = seasonCoins;

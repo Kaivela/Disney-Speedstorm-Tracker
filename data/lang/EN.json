@@ -74,6 +74,7 @@
 
     "total_upgrade_calcul": "Upgrade Coins required to have each Racer at Level ",
     "total_shards_calcul": "Racer Shards left to collect: ",
+    "total_super_shards_calcul": "Supercharge tokens left to collect: ",
     "regular_shards_calcul": "Shards left in the Universal Box:",
     "soit": "or",
     "open": "Universal Boxes max left to open",

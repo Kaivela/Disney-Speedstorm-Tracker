@@ -67,7 +67,7 @@ const normalCrewShardCost = [5, 15, 25, 45, 75];
 const epicCrewShardCost = [10, 20, 35, 50, 100];
 
 // Définir le nombre de superShards nécéssaire pour activer la superCharge
-const superChargeCost = [20, 40];
+const superChargeCost = [0, 0, 0, 0, 0, 20, 40];
 
 export {
   pilotShardCosts,
