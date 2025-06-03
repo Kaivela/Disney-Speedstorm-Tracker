@@ -18,7 +18,7 @@ import { createGetTrad } from "./trad.js";
 import crewsBlank from "./data/crews/crews_blank.json";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 
-const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo"] 
+const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck"] 
 
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
 function calculatePilotShardsNeeded(currentLevel, currentShards) {
