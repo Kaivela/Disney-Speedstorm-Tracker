@@ -268,8 +268,6 @@ function calculateTotal(lang, goal, levelGoal) {
   if (superChargedPilots) {
     pilot.superShardsNeeded = calculatePilotSuperShardsNeeded(pilot.currentStars, pilot.currentSuperShards);
     allSuperShardsNeeded = allSuperShardsNeeded + pilot.superShardsNeeded;
-    console.log(pilot.name, pilot.superShardsNeeded);
-    console.log("allSuperShardsNeeded", allSuperShardsNeeded);
   }
 
     // Calculer les coinsNeeded pour chaque pilote
