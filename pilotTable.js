@@ -502,10 +502,34 @@ export function sortPilotsByColumn(column, order) {
   // load pilots
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
 
-  pilots.sort((pilotA, pilotB) => {
-    if (order === "asc") return pilotA[column] - pilotB[column];
-    return pilotB[column] - pilotA[column];
-  });
+  // Map column keys to calculation functions
+  const computedColumns = {
+    shardsNeeded: (pilot) => calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards),
+    shardsToGet: (pilot) => calculatePilotShardsToGet(pilot.highestRMJ, 40),
+    upgradeCoins: (pilot) => calculateCoinsNeeded(pilot.currentLevel),
+    shardStar: (pilot) => calculatePilotShardsNextStar(pilot.currentLevel, pilot.currentShards, pilot.currentStars),
+    coinStar: (pilot) => calculateCoinsNextStar(pilot.currentLevel, pilot.currentStars),
+    shardMaxMPR: (pilot) => {
+      const needed = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
+      const toGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
+      return calculatePilotShardIfMaxMPR(needed, toGet);
+    },
+  };
+
+  if (computedColumns[column]) {
+    pilots.sort((pilotA, pilotB) => {
+      const aVal = computedColumns[column](pilotA);
+      const bVal = computedColumns[column](pilotB);
+      return order === "asc" ? aVal - bVal : bVal - aVal;
+    });
+  } else {
+    // Default: sort by property
+    pilots.sort((pilotA, pilotB) => {
+      if (order === "asc") return pilotA[column] - pilotB[column];
+      return pilotB[column] - pilotA[column];
+    });
+  }
+
   localStorage.setItem("pilots", JSON.stringify(pilots));
 }
 
