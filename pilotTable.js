@@ -21,6 +21,7 @@ const togglePilotName = document.getElementById("togglePilotName");
 const togglePilotStar = document.getElementById("togglePilotStar");
 const togglePilotCurrentShard = document.getElementById("togglePilotCurrentShard");
 const togglePilotLevel = document.getElementById("togglePilotLevel");
+const togglePilotSuperShard = document.getElementById("togglePilotSuperShard");
 const togglePilotCurrentMPR = document.getElementById("togglePilotCurrentMPR");
 const togglePilotHighestMPR = document.getElementById("togglePilotHighestMPR");
 const togglePilotGrade = document.getElementById("togglePilotGrade");
@@ -119,6 +120,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
     pilotStar: getStyleIfActive(togglePilotStar),
     pilotCurrentShard: getStyleIfActive(togglePilotCurrentShard),
     pilotLevel: getStyleIfActive(togglePilotLevel),
+    pilotSuperShard: getStyleIfActive(togglePilotSuperShard),
     pilotCurrentMPR: getStyleIfActive(togglePilotCurrentMPR),
     pilotHighestMPR: getStyleIfActive(togglePilotHighestMPR),
     pilotGrade: getStyleIfActive(togglePilotGrade),
