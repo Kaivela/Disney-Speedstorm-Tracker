@@ -597,7 +597,7 @@
   {
     "franchise": "Beauty and the Beast",
     "rarity": "Rare",
-    "name": "Gaston's Cronies",
+    "name": "Claudette, Laurette And Paulette",
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
@@ -605,7 +605,7 @@
   {
     "franchise": "Beauty and the Beast",
     "rarity": "Rare",
-    "name": "Claudette, Laurette And Paulette",
+    "name": "Gaston's Cronies",
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
@@ -2896,5 +2896,65 @@
     "currentShards": 0,
     "universalBox": "season",
     "exclusiveTo": "Honey Lemon"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+ {
+    "franchise": "Cinderella",
+    "rarity": "Common",
+    "name": "The Grand Duke",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  }, {
+    "franchise": "Cinderella",
+    "rarity": "Common",
+    "name": "The King",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Common",
+    "name": "Major And Bruno",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Rare",
+    "name": "Fairy Godmother",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Rare",
+    "name": "Prince Charming",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Epic",
+    "name": "Jaq And Gus",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Cinderella"
   }
 ]
