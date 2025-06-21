@@ -284,6 +284,10 @@ input[type="checkbox"] {
   margin-bottom: 5px;
 }
 
+#calcPilotName {
+  width: 150px;
+}
+
 
 button {
   width: auto;
@@ -418,6 +422,16 @@ button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+#calcResult {
+  padding: 1rem;
+  width: fit-content;
+  background-color: #00000080;
+  color: white;
+  display: none;
+}
+#calcButton {
+  margin-top: 0%;
 }
 #goal {
   color: white;

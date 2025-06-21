@@ -21,10 +21,10 @@ import pilotsBlank from "./data/pilots/pilots_blank.json";
 const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck","Mike Wazowski"] 
 
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
-function calculatePilotShardsNeeded(currentLevel, currentShards) {
+function calculatePilotShardsNeeded(currentLevel, currentShards, levelGoal) {
   let totalShardsNeeded = 0;
   
-    for (let level = currentLevel + 1; level <= 50; level++) {
+    for (let level = currentLevel + 1; level <= levelGoal; level++) {
       if (level <= pilotShardCosts.length) {
         totalShardsNeeded += pilotShardCosts[level - 1];
       }
@@ -275,12 +275,12 @@ function calculateTotal(lang, goal, levelGoal) {
     allCoins = allCoins + pilot.coinsNeeded;
 
     // Calculer les shardsNeeded pour chaque pilote
-    pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
+    pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50);
     allShardsNeeded = allShardsNeeded + pilot.shardsNeeded;
 
     // Calculer les shardsNeeded pour chaque pilote non saisonier
     if (pilot.universalBox === true) {
-      pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
+      pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50);
       allRegularShards = allRegularShards + pilot.shardsNeeded;
     }
 
@@ -379,6 +379,72 @@ function formatNumberWithDots(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
+// Fonction pour reset les données du formulaire caclPilotLevelGoal
+function resetForm() {
+  document.getElementById("calcPilotName").value = "";
+  document.getElementById("calcPilotLevelGoal").value = "";
+  document.getElementById("calcResult").textContent = "";
+  document.getElementById("calcResult").style = "display: none;";
+}
+
+function calculateRacerGoal(lang) {
+  const getTrad = createGetTrad(lang);
+  const racerName = document.getElementById("calcPilotName").value;
+  const racerLevelGoal = document.getElementById("calcPilotLevelGoal").value;
+  const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  document.getElementById("calcResult").style = "display: block;";
+
+
+  const pilot = pilots.find((pilot) => pilot.name === racerName);
+  if (!pilot) {
+    document.getElementById("calcResult").textContent = getTrad("pilot_not_found");
+    return;
+  }
+
+  const racer = getTrad("racer");
+  const already1 = getTrad("already1");
+  const already2 = getTrad("already2");
+  const more = getTrad("more");
+  const reach = getTrad("reach");
+  const need = getTrad("need");
+  const shards = getTrad("shards");
+  const farm1 = getTrad("farm1");
+  const farm2 = getTrad("farm2");
+  const farm3 = getTrad("farm3");
+  const boost = getTrad("boost");
+  const rmj = getTrad("rmj");
+  const and = getTrad("and");
+
+  const shardNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, racerLevelGoal);
+  const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, racerLevelGoal);
+  const shardsToFarm = shardNeeded - shardsToGet
+
+  if (pilot.currentLevel >= racerLevelGoal) {
+    document.getElementById("calcResult").innerHTML =
+      `${racer} ${racerName} ${already1} ${racerLevelGoal} ${more}`;
+  } else if (shardNeeded <= 0) {
+    document.getElementById("calcResult").innerHTML =
+      `${racer} ${racerName} ${already2} ${racerLevelGoal}`
+  } else if (5 > shardNeeded > 0) {
+    document.getElementById("calcResult").innerHTML = 
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
+      <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}.`;
+  } else if (shardsToFarm <= 0) {
+    document.getElementById("calcResult").innerHTML = 
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
+      <br>${shardsToGet} ${shards} ${rmj}.`;
+  } else if (shardsToGet < 0) {
+    document.getElementById("calcResult").innerHTML = 
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
+      <br>${shardsToFarm} ${farm3} ${boost}.`;
+  } else {
+    document.getElementById("calcResult").innerHTML = 
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
+      <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}.`;
+  }
+}
+
+
 
 export {
   calculatePilotShardsNeeded,
@@ -391,4 +457,6 @@ export {
   calculateCoinsNextStar,
   calculatePilotShardIfMaxMPR,
   calculatePilotSuperShards,
+  resetForm,
+  calculateRacerGoal
 };

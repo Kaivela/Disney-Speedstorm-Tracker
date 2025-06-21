@@ -6,8 +6,8 @@ import crewsBlank from "./data/crews/crews_blank.json";
 // Mise à jour dynamique des options de filtre
 function updateFilterOptions(lang) {
   const getTrad = createGetTrad(lang);
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
+  const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  const crews = JSON.parse(localStorage.getItem("crews")) || [];
 
   const pilotFranchiseFilter = document.getElementById("pilotFranchiseFilter");
   const pilotRarityFilter = document.getElementById("pilotRarityFilter");
@@ -24,7 +24,7 @@ function updateFilterOptions(lang) {
 
   // Calculer les shardsNeeded pour chaque pilote avant de mettre à jour les options de filtre
   pilots.forEach((pilot) => {
-    pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards);
+    pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50);
   });
 
   // Calculer les shardsNeeded pour chaque equipier avant de mettre à jour les options de filtre
@@ -318,4 +318,21 @@ function updateFilterOptions(lang) {
   });
 }
 
-export { updateFilterOptions };
+function updateCalculateOptions(lang) {
+  const getTrad = createGetTrad(lang);
+  const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+
+  const calcPilotName = document.getElementById("calcPilotName");
+
+  const pilotName = [...new Set(pilots.map((pilot) => pilot.name))];
+  
+  calcPilotName.innerHTML = '<option value="" data-trad="name_filter">' + getTrad("name_filter") + "</option>";
+  pilotName.forEach((name) => {
+    const option = document.createElement("option");
+    option.value = name;
+    option.textContent = getTrad(name);
+    calcPilotName.appendChild(option);
+  });
+}
+
+export { updateFilterOptions, updateCalculateOptions };

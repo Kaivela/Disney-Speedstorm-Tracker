@@ -233,6 +233,24 @@
 
           <button style="display: none" id="crewSubmitBtn" type="submit" data-trad="add_crew"></button>
         </form>
+        <div>
+          <form novalidate id="calcForm">
+            <button id="resetButton" type="button" data-trad="reset_all"></button>
+            <div></div>
+
+            <label for="calcPilotName" data-trad="Racer_:"></label>
+            <select id="calcPilotName" required></select>
+            <div id="calcPilotNameError" class="error-message" data-trad="pilot_name_error"></div>
+
+            <label for="calcPilotLevelGoal" data-trad="level_goal"></label>
+            <input type="number" id="calcPilotLevelGoal" min="0" max="50" required />
+            <div id="calcPilotLevelGoalError" class="error-message" data-trad="pilot_level_error"></div>
+
+            <button id="calcButton" type="button" data-trad="calculate_level"></button>
+            <div></div>
+          </form>
+          <span id="calcResult" class="calcResult"></span>
+        </div>
       </div>
 
       <div class="escape">

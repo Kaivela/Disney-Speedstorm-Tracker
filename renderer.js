@@ -1,4 +1,4 @@
-import { calculateTotal } from "./compute.js";
+import { calculateRacerGoal, calculateTotal , resetForm} from "./compute.js";
 import {
   populateCrewForm,
   updateCrewFormFranchise,
@@ -10,7 +10,7 @@ import {
   emptyCrewsTable,
   sortCrewsByColumn,
 } from "./crewTable.js";
-import { updateFilterOptions } from "./filters.js";
+import { updateFilterOptions, updateCalculateOptions } from "./filters.js";
 import {
   populatePilotForm,
   updatePilotFormFranchise,
@@ -97,8 +97,20 @@ const goalSelect = document.getElementById("goalSelect");
 const levelGoalSelect = document.getElementById("levelGoalSelect");
 const sortPilotButtons = document.querySelectorAll("#pilotTable th[data-sort]");
 const sortCrewButtons = document.querySelectorAll("#crewTable th[data-sort]");
+const calculateForm = document.getElementById("calcForm");
+const resetButton = document.getElementById("resetButton");
+const calcButton = document.getElementById("calcButton");
 let editingPilotIndex = null; // Pour suivre quel pilote est en cours de modification
 let editingCrewIndex = null; // Pour suivre quel equipier est en cours de modification
+
+// Fonction pour afficher le Formulaiure de calcul seulement si on est en Pilot Mode
+function showCalculateIfPilotMode() {
+  if (mode === "pilot") {calculateForm.style.display = "";}
+  if (mode === "crew") {calculateForm.style.display = "none"}
+}
+
+resetButton.addEventListener("click", () => {resetForm()});
+calcButton.addEventListener("click", () => {calculateRacerGoal(lang)});
 
 function bindSortPilotButtons() {
   sortPilotButtons.forEach((button) => {
@@ -157,6 +169,8 @@ function changeLang() {
   translate(lang);
   calculateTotal(lang, goal, levelGoal);
   switchTheme();
+  updateCalculateOptions(lang);
+  resetForm();
   selectTheme.value = theme;
 }
 
@@ -234,8 +248,8 @@ document.querySelectorAll(".crewFilter").forEach((filter) => {
   filter.addEventListener("change", () => filterCrewTable(lang));
 });
 
-pilotMode.addEventListener("click", () => switchTable("pilot"));
-crewMode.addEventListener("click", () => switchTable("crew"));
+pilotMode.addEventListener("click", () => {switchTable("pilot"); showCalculateIfPilotMode()});
+crewMode.addEventListener("click", () => {switchTable("crew"); showCalculateIfPilotMode()});
 goalSelect.addEventListener("change", () => switchGoal());
 levelGoalSelect.addEventListener("change", () => switchLevelGoal());
 selectTheme.addEventListener("change", () => {
@@ -678,6 +692,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addPilotsToTable(lang, pilotTableBody);
   addCrewsToTable(lang, crewTableBody);
   updateFilterOptions(lang);
+  updateCalculateOptions(lang);
   updatePlaceholders();
   translate(lang);
   updateCrewsWithShardsNeeded();

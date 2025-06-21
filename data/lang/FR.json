@@ -15,6 +15,11 @@
     "dark_mode": "Mode Sombre",
     "transparant_table": "Tableau Transparant",
     "save": "Sauvegarder",
+    "reset_all": "Reset",
+    "Racer_:":"Pilote :",
+    "level_goal": "Objectif Niveau :",
+    "calculate_level": "Calculer",
+
 
     "season1": "Saison 1 : Monstres Et Compagnies",
     "season2": "Saison 2 : Toy's Story",
@@ -40,6 +45,7 @@
     "role_filter": "Tous les rôles",
     "rarity_filter": "Toutes les raretés",
     "franchise_filter": "Toutes les franchises",
+    "name_filter": "Nom du Pilote",
     "stars_filter": "Toutes les étoiles",
     
     "current_shards_table": "Nombre d'éclat",
@@ -147,6 +153,21 @@
     "crew_duplicate_name": "L'équipier existe déjà.",
     "crew_shard_error": "Nombre d'éclat doit se situer entre 0 et 100.",
     "super_shard_error": "Nombre d'éclats surralimentation doit se situer entre 0 et 60.",
+
+    "pilot_not_found": "Pilote non trouvé.",
+    "racer": "Le pilote",
+    "already1": "est déjà au niveau",
+    "already2": "possède déjà les éclats nécéssaires pour atteindre le niveau",
+    "more": "ou plus !",
+    "reach": "Pour atteindre le niveau",
+    "need": ", il vous faut",
+    "shards": "éclats",
+    "rmj": "en RMJ",
+    "boost": "dans le Boost Pilote",
+    "farm1": "Tu peux farm",
+    "farm2": "ou farm",
+    "farm3": "à farm",
+    "and": "et",
 
     "Daisy Duck": "Daisy Duck",
     "Donald Duck": "Donald Duck",
