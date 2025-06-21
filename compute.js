@@ -433,7 +433,7 @@ function calculateRacerGoal(lang) {
     document.getElementById("calcResult").innerHTML = 
       `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
       <br>${shardsToGet} ${shards} ${rmj}.`;
-  } else if (shardsToGet < 0) {
+  } else if (shardsToGet <= 0) {
     document.getElementById("calcResult").innerHTML = 
       `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
       <br>${shardsToFarm} ${farm3} ${boost}.`;
