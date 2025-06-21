@@ -425,7 +425,7 @@ function calculateRacerGoal(lang) {
   } else if (shardNeeded <= 0) {
     document.getElementById("calcResult").innerHTML =
       `${racer} ${racerName} ${already2} ${racerLevelGoal}`
-  } else if (5 > shardNeeded > 0) {
+  } else if (5 > shardNeeded > 0 && shardsToGet > 0) {
     document.getElementById("calcResult").innerHTML = 
       `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
       <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}.`;
