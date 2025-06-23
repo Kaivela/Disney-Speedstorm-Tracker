@@ -44,7 +44,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50);
   const shardsToNextStar = calculatePilotShardsNextStar(pilot.currentLevel, pilot.currentShards, pilot.currentStars);
   const coinsToNextStar = calculateCoinsNextStar(pilot.currentLevel, pilot.currentStars);
-  const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel);
+  const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel, 50);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
   const shardsIfMaxMPR = calculatePilotShardIfMaxMPR(shardsNeeded, shardsToGet);
   const superCharge = calculatePilotSuperShards(pilot.name, pilot.currentSuperShards);
@@ -506,7 +506,7 @@ export function sortPilotsByColumn(column, order) {
   const computedColumns = {
     shardsNeeded: (pilot) => calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50),
     shardsToGet: (pilot) => calculatePilotShardsToGet(pilot.highestRMJ, 40),
-    upgradeCoins: (pilot) => calculateCoinsNeeded(pilot.currentLevel),
+    upgradeCoins: (pilot) => calculateCoinsNeeded(pilot.currentLevel, 50),
     shardStar: (pilot) => calculatePilotShardsNextStar(pilot.currentLevel, pilot.currentShards, pilot.currentStars),
     coinStar: (pilot) => calculateCoinsNextStar(pilot.currentLevel, pilot.currentStars),
     shardMaxMPR: (pilot) => {

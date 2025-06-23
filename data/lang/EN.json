@@ -159,7 +159,7 @@
     "already2": "already has enough shards to reach level",
     "more": "or more !",
     "reach": "To reach level",
-    "need": ", you need",
+    "need": "you need",
     "shards": "shards",
     "rmj": "in MPR",
     "boost": "in Boost Racer",
@@ -167,6 +167,7 @@
     "farm2": "or farm",
     "farm3": "to farm",
     "and": "and",
+    "upCoins": "Upgrade Coins",
 
     "Daisy Duck": "Daisy Duck",
     "Donald Duck": "Donald Duck",

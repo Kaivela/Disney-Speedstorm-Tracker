@@ -82,10 +82,10 @@ function calculatePilotShardsNextStar(currentLevel, currentShards, currentStars)
 }
 
 // Fonction pour calculer les coins nécessaires en fonction du niveau actuel
-function calculateCoinsNeeded(currentLevel) {
+function calculateCoinsNeeded(currentLevel, levelGoal) {
   let totalCoinsNeeded = 0;
 
-  for (let level = currentLevel + 1; level <= 50; level++) {
+  for (let level = currentLevel + 1; level <= levelGoal; level++) {
     if (level <= coinsCosts.length) {
       totalCoinsNeeded += coinsCosts[level - 1];
     }
@@ -414,7 +414,9 @@ function calculateRacerGoal(lang) {
   const boost = getTrad("boost");
   const rmj = getTrad("rmj");
   const and = getTrad("and");
+  const upCoins = getTrad("upCoins");
 
+  const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel, racerLevelGoal);
   const shardNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, racerLevelGoal);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, racerLevelGoal);
   const shardsToFarm = shardNeeded - shardsToGet
@@ -424,23 +426,28 @@ function calculateRacerGoal(lang) {
       `${racer} ${racerName} ${already1} ${racerLevelGoal} ${more}`;
   } else if (shardNeeded <= 0) {
     document.getElementById("calcResult").innerHTML =
-      `${racer} ${racerName} ${already2} ${racerLevelGoal}`
+      `${racer} ${racerName} ${already2} ${racerLevelGoal}
+      <br>${need} ${coinsNeeded} ${upCoins}`
   } else if (5 > shardNeeded > 0 && shardsToGet > 0) {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
-      <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}.`;
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}
+      <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToFarm <= 0) {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
-      <br>${shardsToGet} ${shards} ${rmj}.`;
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      <br>${shardsToGet} ${shards} ${rmj}
+      <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToGet <= 0) {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
-      <br>${shardsToFarm} ${farm3} ${boost}.`;
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      <br>${shardsToFarm} ${farm3} ${boost}
+      <br>${need} ${coinsNeeded} ${upCoins}`;
   } else {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards} !
-      <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}.`;
+      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}
+      <br>${need} ${coinsNeeded} ${upCoins}`;
   }
 }
 

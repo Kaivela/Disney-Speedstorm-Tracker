@@ -160,7 +160,7 @@
     "already2": "possède déjà les éclats nécéssaires pour atteindre le niveau",
     "more": "ou plus !",
     "reach": "Pour atteindre le niveau",
-    "need": ", il vous faut",
+    "need": "il vous faut",
     "shards": "éclats",
     "rmj": "en RMJ",
     "boost": "dans le Boost Pilote",
@@ -168,6 +168,7 @@
     "farm2": "ou farm",
     "farm3": "à farm",
     "and": "et",
+    "upCoins": "Pièces d'amélioration",
 
     "Daisy Duck": "Daisy Duck",
     "Donald Duck": "Donald Duck",
