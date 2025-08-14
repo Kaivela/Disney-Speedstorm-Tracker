@@ -59,6 +59,18 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
     shardsClass = "shards-needed-warning";
   }
 
+  // Déterminer la classe de couleur en fonction du nombre d'étoiles
+  let starClass = "";
+  if (pilot.currentStars === 0) {
+    starClass = "star-locked";
+  } else if (pilot.currentStars === 5) {
+    starClass = "star-5";
+  } else if (pilot.currentStars === 6) {
+    starClass = "star-6";
+  } else if (pilot.currentStars === 7) {
+    starClass = "star-7";
+  }
+  
   // Déterminer la classe de couleur en fonction du niveau actuel
   let levelClass;
   if (pilot.currentLevel === 0) {
@@ -141,7 +153,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   <td data-trad="${pilot.rarity}" ${styles.pilotRarity} class="${pilot.rarity}">${getTrad(pilot.rarity)}</td>
   <td data-trad="${pilotBlank.role}" ${styles.pilotRole} class="${pilotBlank.role}">${getTrad(pilotBlank.role)}</td>
   <td data-trad="${pilot.name}" ${styles.pilotName}>${getTrad(pilot.name)}</td>
-  <td ${styles.pilotStar}>${pilot.currentStars}</td>
+  <td class="${starClass}" ${styles.pilotStar}>${pilot.currentStars}</td>
   <td class="${shardsClass}" ${styles.pilotCurrentShard}>${pilot.currentShards}</td>
   <td class="${levelClass}" ${styles.pilotLevel}>${pilot.currentLevel}</td>
   <td>${superCharge}</td>

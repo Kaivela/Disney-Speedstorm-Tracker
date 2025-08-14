@@ -250,6 +250,22 @@ tbody tr:nth-child(even) {
   color: var(--color-zero);
   font-weight: var(--font-weight-zero);
 }
+.star-locked {
+  background-color: #00000080;
+  color: white;
+}
+.star-5 {
+  background-color: gold;
+  color: black;
+}
+.star-6 {
+  background-color: rgb(50, 241, 255); 
+  color: black;
+}
+.star-7 {
+  background: linear-gradient(to top right, rgb(255, 84, 232), rgb(50, 241, 255)); 
+  color: black;
+}
 form {
   display: grid;
   grid-template-columns: 150px 150px;
