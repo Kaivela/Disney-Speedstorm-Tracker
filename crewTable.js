@@ -81,6 +81,29 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
     crewBox: getStyleIfActive(toggleCrewBox),
   };
 
+  let outOf = ""
+  if (crew.currentStars === 0 && crew.rarity !== "Epic") {
+    outOf = " / 5"
+    } else if (crew.currentStars === 1 && crew.rarity !== "Epic") {
+    outOf = " / 15"
+    } else if (crew.currentStars === 2 && crew.rarity !== "Epic") {
+    outOf = " / 25"
+    } else if (crew.currentStars === 3 && crew.rarity !== "Epic") {
+    outOf = " / 45"
+    } else if (crew.currentStars === 4 && crew.rarity !== "Epic") {
+    outOf = " / 75"
+    } else if (crew.currentStars === 0 && crew.rarity === "Epic") {
+    outOf = " / 10"
+    } else if (crew.currentStars === 1 && crew.rarity === "Epic") {
+    outOf = " / 20"
+    } else if (crew.currentStars === 2 && crew.rarity === "Epic") {
+    outOf = " / 35"
+    } else if (crew.currentStars === 3 && crew.rarity === "Epic") {
+    outOf = " / 50"
+    } else if (crew.currentStars === 4 && crew.rarity === "Epic") {
+    outOf = " / 100"
+    }
+
   row.innerHTML = `
     <td style="padding: 0; border: none; display: block; height: 80px; ${styles.crewImage}">
       <img onerror="this.src='img/Locked.webp'" src="img/crews/${crew.name}.webp" style="width: 80px; height: auto;">
@@ -89,7 +112,7 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
     <td data-trad="${crew.rarity}" ${styles.crewRarity} class="${crew.rarity}">${getTrad(crew.rarity)}</td>
     <td data-trad="${crew.name}" ${styles.crewName}>${getTrad(crew.name)}</td>
     <td class="${starclass}" ${styles.crewLevel}>${crew.currentStars}</td>
-    <td class="${shardsClass}" ${styles.crewCurrentShard}>${crew.currentShards}</td>
+    <td class="${shardsClass}" ${styles.crewCurrentShard}>${crew.currentShards}${outOf}</td>
     <td class="${shardsClass}" ${styles.crewShardNeeded}>${crew.shardsNeeded}</td>
     <td ${styles.crewBox}>${universalBox}</td>
     <td><button data-trad="modify" class="edit-btn" data-index="${index}"></button></td>
