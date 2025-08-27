@@ -12,7 +12,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : true
   },
   {
     "franchise": "Mickey & Friends",
@@ -27,7 +29,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : true
   },
   {
     "franchise": "Mickey & Friends",
@@ -42,7 +46,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 1,
+    "superCharge" : true
   },
   {
     "franchise": "Mickey & Friends",
@@ -57,7 +63,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : true
   },
   {
     "franchise": "Mickey & Friends",
@@ -72,7 +80,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : false
   },
   {
     "franchise": "Mickey & Friends",
@@ -87,7 +97,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 2,
+    "superCharge" : false
   },
   {
     "franchise": "Mickey & Friends",
@@ -102,7 +114,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 2,
+    "superCharge" : false
   },
   {
     "franchise": "Mulan",
@@ -117,7 +131,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "Mulan",
@@ -132,7 +148,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "Pirates of the Caribbean",
@@ -147,7 +165,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 9,
+    "superCharge" : false
   },
   {
     "franchise": "Pirates of the Caribbean",
@@ -162,7 +182,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : true
   },
   {
     "franchise": "Pirates of the Caribbean",
@@ -177,7 +199,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 9,
+    "superCharge" : false
   },
   {
     "franchise": "Pirates of the Caribbean",
@@ -192,7 +216,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "Pirates of the Caribbean",
@@ -207,7 +233,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 9,
+    "superCharge" : false
   },
   {
     "franchise": "Pirates of the Caribbean",
@@ -222,7 +250,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 9,
+    "superCharge" : false
   },
   {
     "franchise": "Hercules",
@@ -237,7 +267,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 4,
+    "superCharge" : false
   },
   {
     "franchise": "Hercules",
@@ -252,7 +284,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : true
   },
   {
     "franchise": "Hercules",
@@ -267,7 +301,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : true
   },
   {
     "franchise": "Beauty and the Beast",
@@ -282,7 +318,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "Beauty and the Beast",
@@ -297,7 +335,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "Beauty and the Beast",
@@ -312,7 +352,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 4,
+    "superCharge" : false
   },
   {
     "franchise": "The Jungle Book",
@@ -327,7 +369,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "The Jungle Book",
@@ -342,7 +386,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 0,
+    "superCharge" : false
   },
   {
     "franchise": "Monsters inc.",
@@ -357,7 +403,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 1,
+    "superCharge" : false
   },
   {
     "franchise": "Monsters inc.",
@@ -372,7 +420,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 1,
+    "superCharge" : true
   },
   {
     "franchise": "Monsters inc.",
@@ -387,7 +437,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 1,
+    "superCharge" : false
   },
   {
     "franchise": "Monsters inc.",
@@ -402,7 +454,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 1,
+    "superCharge" : false
   },
   {
     "franchise": "Walt Disney World",
@@ -417,7 +471,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 1,
+    "superCharge" : false
   },
   {
     "franchise": "Toy Story",
@@ -432,7 +488,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 2,
+    "superCharge" : false
   },
   {
     "franchise": "Toy Story",
@@ -447,7 +505,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 2,
+    "superCharge" : false
   },
     {
     "franchise": "Toy Story",
@@ -462,7 +522,9 @@
     "highestRMJ": 0,
     "universalBox": "season",
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 14,
+    "superCharge" : false
   },
   {
     "franchise": "Toy Story",
@@ -477,7 +539,9 @@
     "highestRMJ": 0,
     "universalBox": "season",
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 14,
+    "superCharge" : false
   },
   {
     "franchise": "Toy Story",
@@ -492,7 +556,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 2,
+    "superCharge" : true
   },
    {
     "franchise": "Toy Story",
@@ -507,7 +573,9 @@
     "highestRMJ": 0,
     "universalBox": "season",
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 14,
+    "superCharge" : false
   },
   {
     "franchise": "Toy Story",
@@ -522,7 +590,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 2,
+    "superCharge" : false
   },
   {
     "franchise": "Lilo & Stitch",
@@ -537,7 +607,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : false
   },
   {
     "franchise": "Lilo & Stitch",
@@ -552,7 +624,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : false
   },
   {
     "franchise": "Lilo & Stitch",
@@ -567,7 +641,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : false
   },
   {
     "franchise": "Lilo & Stitch",
@@ -582,7 +658,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : true
   },
   {
     "franchise": "Lilo & Stitch",
@@ -597,7 +675,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 3,
+    "superCharge" : true
   },
   {
     "franchise": "Aladdin",
@@ -612,7 +692,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 4,
+    "superCharge" : false
   },
   {
     "franchise": "Aladdin",
@@ -627,7 +709,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 4,
+    "superCharge" : false
   },
   {
     "franchise": "Aladdin",
@@ -642,7 +726,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 4,
+    "superCharge" : false
   },
   {
     "franchise": "Aladdin",
@@ -657,7 +743,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "old"
+    "rmjCoin" : "old",
+    "releaseSeason" : 4,
+    "superCharge" : false
   },
   {
     "franchise": "Oswald the Lucky Rabbit",
@@ -672,7 +760,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : false
   },
   {
     "franchise": "Oswald the Lucky Rabbit",
@@ -687,7 +777,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : false
   },
   {
     "franchise": "Frozen",
@@ -702,7 +794,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : false
   },
   {
     "franchise": "Frozen",
@@ -717,7 +811,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : true
   },
   {
     "franchise": "Frozen",
@@ -732,7 +828,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : true
   },
   {
     "franchise": "Frozen",
@@ -747,7 +845,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : true
   },
   {
     "franchise": "Frozen",
@@ -762,7 +862,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : false
   },
   {
     "franchise": "WALL-E",
@@ -777,7 +879,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 6,
+    "superCharge" : true
   },
   {
     "franchise": "WALL-E",
@@ -792,7 +896,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : true,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 5,
+    "superCharge" : false
   },
   {
     "franchise": "The Little Mermaid",
@@ -807,7 +913,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 6,
+    "superCharge" : false
   },
   {
     "franchise": "The Little Mermaid",
@@ -822,7 +930,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 6,
+    "superCharge" : false
   },
   {
     "franchise": "The Little Mermaid",
@@ -837,7 +947,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 6,
+    "superCharge" : false
   },
   {
     "franchise": "The Little Mermaid",
@@ -852,7 +964,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 6,
+    "superCharge" : false
   },
   {
     "franchise": "Wreck-it-Ralph",
@@ -867,7 +981,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 7,
+    "superCharge" : false
   },
   {
     "franchise": "Wreck-it-Ralph",
@@ -882,7 +998,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 7,
+    "superCharge" : false
   },
   {
     "franchise": "Wreck-it-Ralph",
@@ -897,7 +1015,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 7,
+    "superCharge" : false
   },
   {
     "franchise": "Wreck-it-Ralph",
@@ -912,7 +1032,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 7,
+    "superCharge" : false
   },
   {
     "franchise": "Wreck-it-Ralph",
@@ -927,7 +1049,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 7,
+    "superCharge" : false
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -942,7 +1066,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 10,
+    "superCharge" : false
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -957,7 +1083,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 10,
+    "superCharge" : false
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -972,7 +1100,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 10,
+    "superCharge" : false
   },
   {
     "franchise": "The Nightmare Before Christmas",
@@ -987,7 +1117,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 10,
+    "superCharge" : false
   },
   {
     "franchise": "The Muppets",
@@ -1002,7 +1134,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 7,
+    "superCharge" : false
   },
   {
     "franchise": "The Muppets",
@@ -1017,7 +1151,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 10,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1032,7 +1168,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1047,7 +1185,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1062,7 +1202,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1077,7 +1219,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1092,7 +1236,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1107,7 +1253,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Inside Out",
@@ -1122,7 +1270,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 8,
+    "superCharge" : false
   },
   {
     "franchise": "Sleeping Beauty",
@@ -1137,7 +1287,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 13,
+    "superCharge" : false
   },
   {
     "franchise": "Sleeping Beauty",
@@ -1152,7 +1304,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 9,
+    "superCharge" : false
   },
   {
     "franchise": "101 Dalmatians",
@@ -1167,7 +1321,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "new"
+    "rmjCoin" : "new",
+    "releaseSeason" : 9,
+    "superCharge" : false
   },
   {
     "franchise": "Tangled",
@@ -1182,7 +1338,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 10,
+    "superCharge" : false
   },
   {
     "franchise": "The Incredibles",
@@ -1197,7 +1355,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "The Incredibles",
@@ -1212,7 +1372,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "The Incredibles",
@@ -1227,7 +1389,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "The Incredibles",
@@ -1242,7 +1406,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "The Incredibles",
@@ -1257,7 +1423,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "Moana",
@@ -1272,7 +1440,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "Moana",
@@ -1287,7 +1457,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 11,
+    "superCharge" : false
   },
   {
     "franchise": "Tron",
@@ -1302,7 +1474,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 12,
+    "superCharge" : false
   },
   {
     "franchise": "Tron",
@@ -1317,7 +1491,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 12,
+    "superCharge" : false
   },
   {
     "franchise": "Tron",
@@ -1332,7 +1508,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 12,
+    "superCharge" : false
   },
   {
     "franchise": "Tron",
@@ -1347,7 +1525,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 12,
+    "superCharge" : false
   },
   {
     "franchise": "Snow White and the Seven Dwarfs",
@@ -1362,7 +1542,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 12,
+    "superCharge" : false
   },
   {
     "franchise": "Snow White and the Seven Dwarfs",
@@ -1377,7 +1559,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 12,
+    "superCharge" : false
   },
   {
     "franchise": "Big Hero 6",
@@ -1392,7 +1576,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 13,
+    "superCharge" : false
   },
   {
     "franchise": "Big Hero 6",
@@ -1407,7 +1593,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 13,
+    "superCharge" : false
   },
   {
     "franchise": "Big Hero 6",
@@ -1422,7 +1610,9 @@
     "highestRMJ": 0,
     "universalBox": true,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10"
+    "rmjCoin" : "S10",
+    "releaseSeason" : 13,
+    "superCharge" : false
   },
   {
     "franchise": "Cinderella",
@@ -1437,7 +1627,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 13,
+    "superCharge" : false
   },
   {
     "franchise": "Rescue Rangers",
@@ -1452,7 +1644,9 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 14,
+    "superCharge" : false
   },
   {
     "franchise": "Rescue Rangers",
@@ -1467,6 +1661,8 @@
     "highestRMJ": 0,
     "universalBox": false,
     "rmjTokenOld" : false,
-    "rmjCoin" : "S10Mid"
+    "rmjCoin" : "S10Mid",
+    "releaseSeason" : 14,
+    "superCharge" : false
   }
 ]

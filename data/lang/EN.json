@@ -1,5 +1,6 @@
 {
     "": "",
+    "season": "Season",
     "button_mode": "Racers/Crews",
     "all_franchises": "All Franchises",
     "Common": "Common",
@@ -44,6 +45,7 @@
     "shards_needed_filter": "Shards Needed",
     "role_filter": "All Classes",
     "rarity_filter": "All Rarities",
+    "season_filter" : "All Seasons",
     "franchise_filter": "All Franchises",
     "name_filter": "Racer Name",
     "stars_filter": "All Stars",

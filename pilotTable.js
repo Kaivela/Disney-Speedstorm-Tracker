@@ -13,6 +13,7 @@ import pilotsBlank from "./data/pilots/pilots_blank.json";
 
 const pilotTableBody = document.getElementById("pilotTableBody");
 const pilotSearchInput = document.getElementById("pilotSearchInput");
+const togglePilotSeason = document.getElementById("togglePilotSeason");
 const togglePilotImage = document.getElementById("togglePilotImage");
 const togglePilotFranchise = document.getElementById("togglePilotFranchise");
 const togglePilotRarity = document.getElementById("togglePilotRarity");
@@ -124,6 +125,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
 
   // Tableau des propriétés à appliquer
   const styles = {
+    pilotSeason: getStyleIfActive(togglePilotSeason),
     pilotImage: togglePilotImage.classList.contains("active") ? "display: none;" : "",
     pilotFranchise: getStyleIfActive(togglePilotFranchise),
     pilotRarity: getStyleIfActive(togglePilotRarity),
@@ -146,6 +148,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   };
 
   row.innerHTML = `
+  <td ${styles.pilotSeason}>${pilot.releaseSeason}</td>
   <td style="padding: 0; border: none; display: block; height: 80px; ${styles.pilotImage}">
       <img src="img/pilots/${pilot.name}.webp" style="width: 80px; height: auto;">
   </td>
@@ -292,6 +295,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
       currentRMJ: parseInt(document.getElementById("currentRMJ").value, 10),
       highestRMJ: parseInt(document.getElementById("highestRMJ").value, 10),
       universalBox: pilot.universalBox,
+      season: pilot.releaseSeason,
     };
     savePilotData(editPilot, editingPilotIndex);
     const sortColumn = document.querySelector("th[data-order]:not([data-order='default'])");
@@ -412,6 +416,7 @@ function applyPilotSearch(searchTerm) {
 
 function filterPilotTable(lang) {
   const getTrad = createGetTrad(lang);
+  const seasonFilter = document.getElementById("pilotSeasonFilter").value;
   const franchiseFilter = document.getElementById("pilotFranchiseFilter").value;
   const rarityFilter = document.getElementById("pilotRarityFilter").value;
   const roleFilter = document.getElementById("roleFilter").value;
@@ -424,17 +429,19 @@ function filterPilotTable(lang) {
 
   rows.forEach((row) => {
     row.style.display = "none";
-    const franchiseText = row.cells[1].textContent;
-    const rarityText = row.cells[2].textContent;
-    const roleText = row.cells[3].textContent;
-    const levelText = row.cells[7].textContent;
-    const rmjText = row.cells[9].textContent;
-    const shardsNeededText = row.cells[12].textContent;
-    const boxesText = row.cells[15].textContent;
+    const seasonText = row.cells[0].textContent;
+    const franchiseText = row.cells[2].textContent;
+    const rarityText = row.cells[3].textContent;
+    const roleText = row.cells[4].textContent;
+    const levelText = row.cells[8].textContent;
+    const rmjText = row.cells[10].textContent;
+    const shardsNeededText = row.cells[13].textContent;
+    const boxesText = row.cells[16].textContent;
+    const matchesSeason = seasonText === seasonFilter || seasonFilter === "";
     const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
     const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
     const matchesRole = roleText.includes(getTrad(roleFilter)) || roleFilter === "";
-
+    
     let matchesShards = true;
     if (shardsFilter === "above50") {
       matchesShards = parseInt(shardsNeededText, 10) > 50;
@@ -496,6 +503,7 @@ function filterPilotTable(lang) {
 
     const matchesSearch = row.textContent.toLowerCase().includes(pilotSearchInput.value.toLowerCase());
     if (
+      matchesSeason &&
       matchesFranchise &&
       matchesRarity &&
       matchesRole &&
@@ -549,13 +557,20 @@ export function emptyPilotsTable() {
   pilotTableBody.innerHTML = "";
 }
 
-function synchronizePilotsUniBoxWithPilotsBlank() {
+function synchronizeLocalStorageWithPilotsBlank() {
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
     if (pilotBlank) {
       pilot.universalBox = pilotBlank.universalBox; // Update universalBox to match pilots_blank.json
+    }
+  });
+
+  pilots.forEach((pilot) => {
+    const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
+    if (pilotBlank) {
+      pilot.superCharge = pilotBlank.superCharge; // Update superCharge to match pilots_blank.json
     }
   });
 
@@ -570,5 +585,5 @@ export {
   submitPilotForm,
   filterPilotTable,
   applyPilotSearch,
-  synchronizePilotsUniBoxWithPilotsBlank
+  synchronizeLocalStorageWithPilotsBlank
 };

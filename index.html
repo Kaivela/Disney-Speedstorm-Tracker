@@ -258,6 +258,7 @@
         <details id="pilotHide">
           <summary data-trad="hide"></summary>
           <div>
+            <button id="togglePilotSeason" class="display active" data-trad="season"></button>
             <button id="togglePilotImage" class="display">image</button>
             <button id="togglePilotFranchise" class="display">Franchise</button>
             <button id="togglePilotRarity" class="display" data-trad="rarity"></button>
@@ -296,6 +297,7 @@
         <!-- Conteneur pour la recherche et les filtres des pilotes -->
         <div id="pilot-filter-container" class="search-filter-container">
           <input type="text" id="pilotSearchInput" />
+          <select id="pilotSeasonFilter" class="pilotFilter"></select>
           <select id="pilotFranchiseFilter" class="pilotFilter"></select>
           <select id="pilotRarityFilter" class="pilotFilter"></select>
           <select id="roleFilter" class="pilotFilter"></select>
@@ -319,6 +321,7 @@
         <table id="pilotTable">
           <thead>
             <tr>
+              <th data-sort="releaseSeason" data-trad="season" style="display: none"></th>
               <th>Image</th>
               <th>Collection</th>
               <th data-trad="rarity"></th>

@@ -20,7 +20,7 @@ import {
   sortPilotsBlank,
   emptyPilotsTable,
   sortPilotsByColumn,
-  synchronizePilotsUniBoxWithPilotsBlank
+  synchronizeLocalStorageWithPilotsBlank
 } from "./pilotTable.js";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
@@ -65,6 +65,7 @@ const selectTheme = document.getElementById("selectTheme");
 const background = document.getElementById("background");
 const saveButton = document.getElementById("saveSetting");
 const settingsButton = document.getElementById("settings");
+const togglePilotSeason = document.getElementById("togglePilotSeason");
 const togglePilotImage = document.getElementById("togglePilotImage");
 const togglePilotFranchise = document.getElementById("togglePilotFranchise");
 const togglePilotRarity = document.getElementById("togglePilotRarity");
@@ -261,25 +262,26 @@ saveButton.addEventListener("click", () => saveSettings());
 settingsButton.addEventListener("click", () => openSettings());
 
 // Gérer l'affichage des colonnes pour les Pilots
-togglePilotImage.addEventListener("click", (e) => togglePilotColumn(0, e));
-togglePilotFranchise.addEventListener("click", (e) => togglePilotColumn(1, e));
-togglePilotRarity.addEventListener("click", (e) => togglePilotColumn(2, e));
-togglePilotRole.addEventListener("click", (e) => togglePilotColumn(3, e));
-togglePilotName.addEventListener("click", (e) => togglePilotColumn(4, e));
-togglePilotStar.addEventListener("click", (e) => togglePilotColumn(5, e));
-togglePilotCurrentShard.addEventListener("click", (e) => togglePilotColumn(6, e));
-togglePilotLevel.addEventListener("click", (e) => togglePilotColumn(7, e));
-togglePilotSuperShard.addEventListener("click", (e) => togglePilotColumn(8, e));
-togglePilotCurrentMPR.addEventListener("click", (e) => togglePilotColumn(9, e));
-togglePilotHighestMPR.addEventListener("click", (e) => togglePilotColumn(10, e));
-togglePilotGrade.addEventListener("click", (e) => togglePilotColumn(11, e));
-togglePilotShardNeeded.addEventListener("click", (e) => togglePilotColumn(12, e));
-togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(13, e));
-togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(14, e));
-togglePilotBox.addEventListener("click", (e) => togglePilotColumn(15, e));
-togglePilotShardStar.addEventListener("click", (e) => togglePilotColumn(16, e));
-togglePilotCoinStar.addEventListener("click", (e) => togglePilotColumn(17, e));
-togglePilotShardIfMaxMPR.addEventListener("click", (e) => togglePilotColumn(18, e));
+togglePilotSeason.addEventListener("click", (e) => togglePilotColumn(0, e));
+togglePilotImage.addEventListener("click", (e) => togglePilotColumn(1, e));
+togglePilotFranchise.addEventListener("click", (e) => togglePilotColumn(2, e));
+togglePilotRarity.addEventListener("click", (e) => togglePilotColumn(3, e));
+togglePilotRole.addEventListener("click", (e) => togglePilotColumn(4, e));
+togglePilotName.addEventListener("click", (e) => togglePilotColumn(5, e));
+togglePilotStar.addEventListener("click", (e) => togglePilotColumn(6, e));
+togglePilotCurrentShard.addEventListener("click", (e) => togglePilotColumn(7, e));
+togglePilotLevel.addEventListener("click", (e) => togglePilotColumn(8, e));
+togglePilotSuperShard.addEventListener("click", (e) => togglePilotColumn(9, e));
+togglePilotCurrentMPR.addEventListener("click", (e) => togglePilotColumn(10, e));
+togglePilotHighestMPR.addEventListener("click", (e) => togglePilotColumn(11, e));
+togglePilotGrade.addEventListener("click", (e) => togglePilotColumn(12, e));
+togglePilotShardNeeded.addEventListener("click", (e) => togglePilotColumn(13, e));
+togglePilotShardMPR.addEventListener("click", (e) => togglePilotColumn(14, e));
+togglePilotUpgrade.addEventListener("click", (e) => togglePilotColumn(15, e));
+togglePilotBox.addEventListener("click", (e) => togglePilotColumn(16, e));
+togglePilotShardStar.addEventListener("click", (e) => togglePilotColumn(17, e));
+togglePilotCoinStar.addEventListener("click", (e) => togglePilotColumn(18, e));
+togglePilotShardIfMaxMPR.addEventListener("click", (e) => togglePilotColumn(19, e));
 
 // Gérer l'affichage des colonnes pour les Crew
 toggleCrewImage.addEventListener("click", () => toggleCrewColumn(0));
@@ -669,7 +671,7 @@ window.addEventListener("scroll", () => {
 });
 
 function updateLocalStorage(params) {
-  const newProps = ['currentSuperShards'];
+  const newProps = ['currentSuperShards', 'releaseSeason', "superCharge"];
   const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   pilots.forEach(pilot => {
     newProps.forEach(newProp => {
@@ -696,7 +698,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePlaceholders();
   translate(lang);
   updateCrewsWithShardsNeeded();
-  synchronizePilotsUniBoxWithPilotsBlank();
+  synchronizeLocalStorageWithPilotsBlank();
   calculateTotal(lang, goal, levelGoal);
   switchTheme();
   bindSettingsEvents();

@@ -8,7 +8,7 @@ function updateFilterOptions(lang) {
   const getTrad = createGetTrad(lang);
   const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   const crews = JSON.parse(localStorage.getItem("crews")) || [];
-
+  const pilotSeasonFilter = document.getElementById("pilotSeasonFilter");
   const pilotFranchiseFilter = document.getElementById("pilotFranchiseFilter");
   const pilotRarityFilter = document.getElementById("pilotRarityFilter");
   const roleFilter = document.getElementById("roleFilter");
@@ -33,6 +33,7 @@ function updateFilterOptions(lang) {
   });
 
   // Extraire les valeurs uniques pour chaque filtre
+  const pilotSeasons = [...new Set(pilotsBlank.map((pilot) => pilot.releaseSeason))];
   const pilotFranchises = [...new Set(pilots.map((pilot) => pilot.franchise))];
   const pilotRarities = [...new Set(pilots.map((pilot) => pilot.rarity))];
   const roles = [...new Set(pilots.map((pilot) => pilot.role))];
@@ -47,6 +48,14 @@ function updateFilterOptions(lang) {
   const crewBoxes = [...new Set(crewsBlank.map((crew) => crew.universalBox))];
 
   // Mettre à jour les options de filtre
+  pilotSeasonFilter.innerHTML = '<option value="" data-trad="season_filter">' + getTrad("season_filter") + "</option>";
+  for (let season = 0; season <= Math.max(...pilotSeasons); season++) {
+    const option = document.createElement("option");
+    option.value = season.toString();
+    option.textContent = season.toString();
+    pilotSeasonFilter.appendChild(option);
+  }
+
   pilotFranchiseFilter.innerHTML = '<option value="" data-trad="franchise_filter">' + getTrad("franchise_filter") + "</option>";
   pilotFranchises.forEach((franchise) => {
     const option = document.createElement("option");
