@@ -252,7 +252,7 @@ function updatePilotFormFranchise(lang) {
   }
 }
 
-function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, goal, levelGoal) {
+function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, pilotMaxBtn, goal, levelGoal) {
   const getTrad = createGetTrad(lang);
   event.preventDefault();
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
@@ -312,6 +312,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
     calculateTotal(lang, goal, levelGoal);
     pilotSubmitBtn.textContent = getTrad("add_pilot"); // Réinitialiser le texte du bouton après ajout
     pilotSubmitBtn.style.display = "none";
+    pilotMaxBtn.style.display = "none";
     editingPilotIndex = null; // Réinitialiser l'index d'édition
 
     document.documentElement.scrollTop = window.saveScroll;
@@ -577,6 +578,14 @@ function synchronizeLocalStorageWithPilotsBlank() {
   localStorage.setItem("pilots", JSON.stringify(pilots)); // Save updated pilots back to local storage
 }
 
+// Fonction pour pré-remplir le formulaire avec les données du pilote sélectionné
+function maxPilotForm() {
+  document.getElementById("pilotCurrentStars").value = 5
+  document.getElementById("currentLevel").value = 50
+  document.getElementById("currentRMJ").value = 40
+  document.getElementById("highestRMJ").value = 40
+}
+
 export {
   sortPilotsBlank,
   populatePilotForm,
@@ -585,5 +594,6 @@ export {
   submitPilotForm,
   filterPilotTable,
   applyPilotSearch,
-  synchronizeLocalStorageWithPilotsBlank
+  synchronizeLocalStorageWithPilotsBlank,
+  maxPilotForm
 };

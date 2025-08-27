@@ -20,7 +20,8 @@ import {
   sortPilotsBlank,
   emptyPilotsTable,
   sortPilotsByColumn,
-  synchronizeLocalStorageWithPilotsBlank
+  synchronizeLocalStorageWithPilotsBlank,
+  maxPilotForm
 } from "./pilotTable.js";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
@@ -53,6 +54,7 @@ const crewForm = document.getElementById("crewForm");
 const pilotTableBody = document.getElementById("pilotTableBody");
 const crewTableBody = document.getElementById("crewTableBody");
 const pilotSubmitBtn = document.getElementById("pilotSubmitBtn");
+const pilotMaxBtn = document.getElementById("pilotMaxBtn");
 const crewSubmitBtn = document.getElementById("crewSubmitBtn");
 const pilotExportButton = document.getElementById("pilotDownloadJSON");
 const pilotImportButton = document.getElementById("pilotImportJSON");
@@ -177,8 +179,10 @@ function changeLang() {
 
 // Gère la soumission du formulaire de pilote
 pilotForm.addEventListener("submit", (event) =>
-  submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, goal, levelGoal)
+  submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, pilotMaxBtn, goal, levelGoal)
 );
+
+pilotMaxBtn.addEventListener("click", (event) => {maxPilotForm(event)});
 
 // Gère la soumission du formulaire de crew
 crewForm.addEventListener("submit", (event) =>
@@ -196,6 +200,7 @@ function clickModifyPilot(event) {
     populatePilotForm(pilot, lang);
     pilotSubmitBtn.textContent = getTrad("update_pilot"); // Changer le texte du bouton lors de la modification
     pilotSubmitBtn.style.display = "";
+    pilotMaxBtn.style.display = "";
     editingPilotIndex = index; // Enregistrer l'index du pilote en cours de modification
   }
 }

@@ -534,9 +534,10 @@ th[data-order="desc"]::after {
     width: max-content;
   }
 }
-#pilotSubmitBtn, #crewSubmitBtn {
+#pilotSubmitBtn, #crewSubmitBtn, #pilotMaxBtn {
   width: fit-content;
 }
+
 #settings {
   padding: 0;
   display: grid;
