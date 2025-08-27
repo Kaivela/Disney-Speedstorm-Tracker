@@ -694,3 +694,12 @@ margin-top: auto;
 .hidden {
   display: none;
 }
+.small {
+  background-color: var(--bg-color-label);
+  width: max-content;
+  height: fit-content;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: var(--color-label);
+  font-size: 12px;
+}
