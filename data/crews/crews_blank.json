@@ -2,6 +2,14 @@
   {
     "franchise": "Mickey & Friends",
     "rarity": "Common",
+    "name": "Magica De Spell",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
     "name": "Tanglefoot",
     "currentStars": 0,
     "currentShards": 0,
@@ -70,6 +78,14 @@
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": true
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Webby Vanderquack",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
   },
   {
     "franchise": "Mickey & Friends",
@@ -171,6 +187,15 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Minnie"
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Huey, Dewey And Louie",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Scrooge Mcduck"
   },
   {
     "franchise": "Mickey & Friends",
@@ -927,21 +952,21 @@
     "name": "Chunk",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },{
     "franchise": "Toy Story",
     "rarity": "Common",
     "name": "Giggle McDimples",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },{
     "franchise": "Toy Story",
     "rarity": "Common",
     "name": "Sparks",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Toy Story",
@@ -981,7 +1006,7 @@
     "name": "Twitch",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Toy Story",
@@ -989,7 +1014,7 @@
     "name": "Bonnie Anderson",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Toy Story",
@@ -997,7 +1022,7 @@
     "name": "Chuckles",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Toy Story",
@@ -1055,7 +1080,7 @@
     "name": "Stretch",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Emperor Zurg"
   },
   {
@@ -1064,7 +1089,7 @@
     "name": "Karen Beverly",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Forky"
   },
   {
@@ -1082,7 +1107,7 @@
     "name": "Big Baby",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Lotso"
   },
   {
@@ -2004,7 +2029,14 @@
 
 
 
-
+  {
+    "franchise": "The Muppets",
+    "rarity": "Common",
+    "name": "Lew Zealand",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
   {
     "franchise": "The Muppets",
     "rarity": "Common",
@@ -2032,6 +2064,14 @@
   {
     "franchise": "The Muppets",
     "rarity": "Rare",
+    "name": "Statler And Waldorf",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Rare",
     "name": "Rizzo The Rat",
     "currentStars": 0,
     "currentShards": 0,
@@ -2052,6 +2092,15 @@
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Epic",
+    "name": "Kermit The Frog-Crew",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Fozzie Bear"
   },
   {
     "franchise": "The Muppets",
@@ -3114,5 +3163,95 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Dale"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Common",
+    "name": "Bill The Lizard",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Common",
+    "name": "The Walrus And The Carpenter",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Common",
+    "name": "Tweedledee And Tweedledum",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Rare",
+    "name": "Dormouse",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Rare",
+    "name": "The Doorknob",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Rare",
+    "name": "Dodo",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Epic",
+    "name": "Dinah",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Alice"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Epic",
+    "name": "March Hare",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Mad Hatter"
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Epic",
+    "name": "King Of Hearts",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Queen Of Hearts"
   }
 ]

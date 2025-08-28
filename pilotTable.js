@@ -295,7 +295,7 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
       currentRMJ: parseInt(document.getElementById("currentRMJ").value, 10),
       highestRMJ: parseInt(document.getElementById("highestRMJ").value, 10),
       universalBox: pilot.universalBox,
-      season: pilot.releaseSeason,
+      releaseSeason: pilot.releaseSeason,
     };
     savePilotData(editPilot, editingPilotIndex);
     const sortColumn = document.querySelector("th[data-order]:not([data-order='default'])");
