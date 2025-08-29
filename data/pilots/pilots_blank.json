@@ -354,7 +354,7 @@
     "rmjTokenOld" : true,
     "rmjCoin" : "old",
     "releaseSeason" : 0,
-    "superCharge" : false
+    "superCharge" : true
   },
   {
     "franchise": "Beauty and the Beast",
