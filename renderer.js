@@ -234,15 +234,7 @@ function updatePlaceholders() {
 document.getElementById("pilotSearchInput").addEventListener("keyup", () => filterPilotTable(lang));
 
 // Fonction de recherche globale pour les crews
-document.getElementById("crewSearchInput").addEventListener("keyup", function () {
-  const searchTerm = this.value.toLowerCase();
-  const rows = document.querySelectorAll("#crewTableBody tr");
-
-  rows.forEach((row) => {
-    const rowText = row.textContent.toLowerCase();
-    row.style.display = rowText.includes(searchTerm) ? "" : "none";
-  });
-});
+document.getElementById("crewSearchInput").addEventListener("keyup", () => filterCrewTable(lang));
 
 // Fonction de filtrage par colonnes pour les pilotes
 document.querySelectorAll(".pilotFilter").forEach((filter) => {

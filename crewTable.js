@@ -298,6 +298,11 @@ function filterCrewTable(lang) {
   const boxesFilter = document.getElementById("crewBoxesFilter").value;
   const rows = document.querySelectorAll("#crewTableBody tr");
 
+  const searchTerms = crewSearchInput.value
+    .split("/")
+    .map(term => term.trim().toLowerCase())
+    .filter(term => term.length > 0);
+
   rows.forEach((row) => {
     row.style.display = "none";
     const franchiseText = row.cells[1].textContent;
@@ -309,7 +314,11 @@ function filterCrewTable(lang) {
     const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
     const matchesStars = starsText.includes(starsFilter) || starsFilter === "";
     const matchesBoxes = boxesText.includes(boxesFilter) || boxesFilter === "";
-    const matchesSearch = row.textContent.toLowerCase().includes(crewSearchInput.value.toLowerCase());
+    let matchesSearch = true;
+    if (searchTerms.length > 0) {
+      const crewName = row.cells[3].textContent.toLowerCase();
+      matchesSearch = searchTerms.some(term => crewName.includes(term));
+    }
     let matchesShards = true;
 
     if (shardsFilter === "above50") {

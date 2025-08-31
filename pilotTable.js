@@ -428,6 +428,11 @@ function filterPilotTable(lang) {
 
   const rows = document.querySelectorAll("#pilotTableBody tr");
 
+  const searchTerms = pilotSearchInput.value
+    .split("/")
+    .map(term => term.trim().toLowerCase())
+    .filter(term => term.length > 0);
+
   rows.forEach((row) => {
     row.style.display = "none";
     const seasonText = row.cells[0].textContent;
@@ -502,7 +507,11 @@ function filterPilotTable(lang) {
       matchesLevel = parseInt(levelText, 10) === 50;
     }
 
-    const matchesSearch = row.textContent.toLowerCase().includes(pilotSearchInput.value.toLowerCase());
+    let matchesSearch = true;
+    if (searchTerms.length > 0) {
+      const pilotName = row.cells[5].textContent.toLowerCase();
+      matchesSearch = searchTerms.some(term => pilotName.includes(term));
+    }
     if (
       matchesSeason &&
       matchesFranchise &&
