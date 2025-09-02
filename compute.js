@@ -430,22 +430,22 @@ function calculateRacerGoal(lang) {
       <br>${need} ${coinsNeeded} ${upCoins}`
   } else if (5 > shardNeeded > 0 && shardsToGet > 0) {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToFarm <= 0) {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToGet <= 0) {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else {
     document.getElementById("calcResult").innerHTML = 
-      `${reach} ${racerLevelGoal}${need} ${shardNeeded} ${shards}
+      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   }
