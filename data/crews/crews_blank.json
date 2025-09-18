@@ -2064,14 +2064,6 @@
   {
     "franchise": "The Muppets",
     "rarity": "Rare",
-    "name": "Statler And Waldorf",
-    "currentStars": 0,
-    "currentShards": 0,
-    "universalBox": false
-  },
-  {
-    "franchise": "The Muppets",
-    "rarity": "Rare",
     "name": "Rizzo The Rat",
     "currentStars": 0,
     "currentShards": 0,
@@ -2089,6 +2081,14 @@
     "franchise": "The Muppets",
     "rarity": "Rare",
     "name": "Rowlf The Dog",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Rare",
+    "name": "Statler And Waldorf",
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": false
