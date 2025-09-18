@@ -372,6 +372,7 @@ function calculateTotal(lang, goal, levelGoal) {
     totalFreeCrewShardsNeeded.totalEpicShardsNeeded +
     " Total : " +
     totalFreeCrewShardsNeededCalculated;
+  document.getElementById("crewSeasonCoinsNeeded").textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews());
 }
 
 // Fonction pour mettre un point tous les 3 caractères pour les calculs a afficher
@@ -451,7 +452,25 @@ function calculateRacerGoal(lang) {
   }
 }
 
+function calculateTotalSeasonCoinsForCrews() {
+  const crews = JSON.parse(localStorage.getItem("crews")) || [];
+  // Filter for Walt Disney World and Wall-E, and only Common/Rare
+  const targetCollections = ["Walt Disney World", "WALL-E"];
+  let totalCoins = 0;
 
+  crews.forEach(crew => {
+    const isTargetCollection = targetCollections.includes(crew.franchise);
+    if (!isTargetCollection) return;
+    if (crew.rarity === "Common") {
+      totalCoins += calculateCrewShardsNeeded(crew) * 3900;
+    } else if (crew.rarity === "Rare") {
+      totalCoins += calculateCrewShardsNeeded(crew) * 4600;
+    }
+    // Ignore Epic
+  });
+
+  return totalCoins;
+}
 
 export {
   calculatePilotShardsNeeded,
@@ -465,5 +484,6 @@ export {
   calculatePilotShardIfMaxMPR,
   calculatePilotSuperShards,
   resetForm,
-  calculateRacerGoal
+  calculateRacerGoal,
+  calculateTotalSeasonCoinsForCrews
 };
