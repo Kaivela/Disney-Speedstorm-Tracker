@@ -3185,7 +3185,7 @@
     "name": "Bill The Lizard",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Alice In Wonderland",
@@ -3193,7 +3193,7 @@
     "name": "The Walrus And The Carpenter",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Alice In Wonderland",
@@ -3201,7 +3201,7 @@
     "name": "Tweedledee And Tweedledum",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Alice In Wonderland",
@@ -3209,7 +3209,7 @@
     "name": "Dormouse",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Alice In Wonderland",
@@ -3217,7 +3217,7 @@
     "name": "The Doorknob",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Alice In Wonderland",
@@ -3225,7 +3225,7 @@
     "name": "Dodo",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season"
+    "universalBox": true
   },
   {
     "franchise": "Alice In Wonderland",
@@ -3233,7 +3233,7 @@
     "name": "Dinah",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Alice"
   },
   {
@@ -3242,7 +3242,7 @@
     "name": "March Hare",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Mad Hatter"
   },
   {
@@ -3251,7 +3251,165 @@
     "name": "King Of Hearts",
     "currentStars": 0,
     "currentShards": 0,
-    "universalBox": "season",
+    "universalBox": true,
     "exclusiveTo": "Queen Of Hearts"
+  },
+
+
+
+
+
+
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Common",
+    "name": "Lumpy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Common",
+    "name": "Samuel J. Gopher",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Common",
+    "name": "Owl",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Rare",
+    "name": "Rabbit",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Rare",
+    "name": "Kanga",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Rare",
+    "name": "Piglet",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Epic",
+    "name": "B'loon",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Eeyore"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Epic",
+    "name": "Roo",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Tigger"
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Epic",
+    "name": "Christopher Robin",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Winnie The Pooh"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "franchise": "Up",
+    "rarity": "Common",
+    "name": "Construction Foreman Tom",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Common",
+    "name": "Gamma",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Common",
+    "name": "Beta",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Rare",
+    "name": "Alpha",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Rare",
+    "name": "Charles F. Muntz",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Rare",
+    "name": "Georges And A.J.",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Epic",
+    "name": "Dug",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Carl Fredricksen"
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Epic",
+    "name": "Kevin",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Russell"
   }
 ]

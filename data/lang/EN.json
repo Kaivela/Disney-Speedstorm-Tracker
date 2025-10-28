@@ -37,6 +37,7 @@
     "season13": "Season 13 : Big Hero 6",
     "season14": "Season 14 : Toy Story",
     "season15": "Season 15 : Alice In Wonderland",
+    "season16": "Season 16 : Winnie The Pooh",
     "select_theme": "Select a Theme",
     
     "search_placeholder": "Search/...",
@@ -277,6 +278,10 @@
     "Alice": "Alice",
     "Mad Hatter": "Mad Hatter",
     "Queen Of Hearts": "Queen Of Hearts",
+    "Eeyore": "Eeyore",
+    "Tigger": "Tigger",
+    "Carl Fredricksen": "Carl Fredricksen",
+    "Russell": "Russell",
     
     "Mickey & Friends": "Mickey & Friends",
     "Pirates of the Caribbean": "Pirates of The Caribbean",
@@ -304,6 +309,8 @@
     "Cinderella": "Cinderella",
     "Rescue Rangers": "Rescue Rangers",
     "Alice In Wonderland": "Alice In Wonderland",
+    "Winnie The Pooh": "Winnie The Pooh",
+    "Up": "Up",
 
     "Magica De Spell": "Magica De Spell",
     "Tanglefoot": "Tanglefoot",
@@ -657,5 +664,22 @@
     "Dodo": "Dodo",
     "Dinah": "Dinah",
     "March Hare": "March Hare",
-    "King Of Hearts": "King Of Hearts"
+    "King Of Hearts": "King Of Hearts",
+    "Lumpy": "Lumpy",
+    "Samuel J. Gopher": "Samuel J. Gopher",
+    "Owl": "Owl",
+    "Rabbit": "Rabbit",
+    "Kanga": "Kanga",
+    "Piglet": "Piglet",
+    "Christopher Robin": "Christopher Robin",
+    "B'loon": "B'loon",
+    "Roo": "Roo",
+    "Construction Foreman Tom": "Construction Foreman Tom",
+    "Gamma": "Gamma",
+    "Beta": "Beta",
+    "Alpha": "Alpha",
+    "Charles F. Muntz": "Charles F. Muntz",
+    "Georges And A.J.": "Georges and A.J.",
+    "Dug": "Dug",
+    "Kevin": "Kevin"
 }

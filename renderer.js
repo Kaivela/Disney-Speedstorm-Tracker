@@ -408,7 +408,7 @@ function switchLevelGoal() {
 function switchTheme() {
   selectTheme.innerHTML = '<option value="" data-trad="select_theme">' + getTrad("select_theme") + "</option>";
 
-  for (let i = 1; i <= 15; i++) {
+  for (let i = 1; i <= 16; i++) {
     const season = document.createElement("option");
     season.value = i;
     season.textContent = getTrad("season" + i);
