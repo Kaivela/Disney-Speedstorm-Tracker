@@ -95,7 +95,10 @@
     "cosmetic_calcul": "Pièces de cosmetique à récupérer en RMJ :",
     "tokens_calcul": "Tokens à récupérer en RMJ :",
     "free_crew_shards_calcul": "Éclats d'équipier restant dans la boite universelle :",
-    "crew_shards_from_daily_deal": "Pièces de saison nécéssaire pour maxer les équipiers mi-saison dans les promo quotidiennes :",
+    "you_have": "Il vous reste ",
+    "crew_shards_from_daily_deal": " équipiers mi-saison dans les promos quotidiennes à acheter",
+    "cost": "Coùt : ",
+    "season_coins": " pièces de Saison",
     
     "trad_button": "FR",
     "role": "Rôle",
