@@ -249,6 +249,8 @@ function calculateTotal(lang, goal, levelGoal) {
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
   let allCoins = 0;
   let allShardsNeeded = 0;
+  let seasonShardsNeeded = 0;
+  let midSeasonShardsNeeded = 0;
   let allRegularShards = 0;
   let universalBoxCount = 0;
   let shardsToGet = 0;
@@ -277,6 +279,12 @@ function calculateTotal(lang, goal, levelGoal) {
     // Calculer les shardsNeeded pour chaque pilote
     pilot.shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50);
     allShardsNeeded = allShardsNeeded + pilot.shardsNeeded;
+
+    if (pilotBlank.universalBox === true) {
+      seasonShardsNeeded += pilot.shardsNeeded;
+    } else {
+      midSeasonShardsNeeded += pilot.shardsNeeded;
+    }
 
     // Calculer les shardsNeeded pour chaque pilote non saisonier
     if (pilot.universalBox === true) {
@@ -333,6 +341,8 @@ function calculateTotal(lang, goal, levelGoal) {
   // formater les nombres avec des points pour l'affichage
   allCoins = formatNumberWithDots(allCoins);
   allShardsNeeded = formatNumberWithDots(allShardsNeeded);
+  seasonShardsNeeded = formatNumberWithDots(seasonShardsNeeded);
+  midSeasonShardsNeeded = formatNumberWithDots(midSeasonShardsNeeded);
   allFreeShards = formatNumberWithDots(allFreeShards);
   universalBoxCount = formatNumberWithDots(universalBoxCount);
   seasonCoins = formatNumberWithDots(seasonCoins);
@@ -351,6 +361,8 @@ function calculateTotal(lang, goal, levelGoal) {
   document.getElementById("allCoins").textContent = allCoins;
   document.getElementById("levelGoal").textContent = levelGoal + " : ";
   document.getElementById("allShards").textContent = allShardsNeeded;
+  document.getElementById("seasonShards").textContent = seasonShardsNeeded;
+  document.getElementById("midSeasonShards").textContent = midSeasonShardsNeeded;
   document.getElementById("allSuperShards").textContent = allSuperShardsNeeded;
   document.getElementById("allRegularShards").textContent = allFreeShards;
   document.getElementById("universalBoxCount").textContent = universalBoxCount;

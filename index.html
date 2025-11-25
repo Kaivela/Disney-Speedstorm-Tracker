@@ -91,6 +91,12 @@
           </div>
           <div class="calcul">
             <span data-trad="total_shards_calcul"> </span>
+            <span data-trad="season_shards_calcul"> </span>
+            <span id="seasonShards"></span>
+            <span> - </span>
+            <span data-trad="mid_season_shards_calcul"> </span>
+            <span id="midSeasonShards"></span>
+            <span> - Total : </span>
             <span id="allShards"></span>
           </div>
           <div class="calcul">
@@ -223,7 +229,8 @@
           <input type="text" id="crewFranchise" required />
           <select id="crewFranchise2" required></select>
         </div>
-        <div style="display: none" id="crewFranchiseError" class="error-message" data-trad="crew_franchise_error"></div>
+        <div style="display: none" id="crewFranchiseError" class="error-message" data-trad="crew_franchise_error">
+        </div>
 
         <label style="display: none" for="crewRarity" data-trad="rarity_form"></label>
         <select style="display: none" id="crewRarity" required>
