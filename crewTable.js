@@ -84,25 +84,25 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   let outOf = ""
   if (crew.currentStars === 0 && crew.rarity !== "Epic") {
     outOf = " / 5"
-    } else if (crew.currentStars === 1 && crew.rarity !== "Epic") {
+  } else if (crew.currentStars === 1 && crew.rarity !== "Epic") {
     outOf = " / 15"
-    } else if (crew.currentStars === 2 && crew.rarity !== "Epic") {
+  } else if (crew.currentStars === 2 && crew.rarity !== "Epic") {
     outOf = " / 25"
-    } else if (crew.currentStars === 3 && crew.rarity !== "Epic") {
+  } else if (crew.currentStars === 3 && crew.rarity !== "Epic") {
     outOf = " / 45"
-    } else if (crew.currentStars === 4 && crew.rarity !== "Epic") {
+  } else if (crew.currentStars === 4 && crew.rarity !== "Epic") {
     outOf = " / 75"
-    } else if (crew.currentStars === 0 && crew.rarity === "Epic") {
+  } else if (crew.currentStars === 0 && crew.rarity === "Epic") {
     outOf = " / 10"
-    } else if (crew.currentStars === 1 && crew.rarity === "Epic") {
+  } else if (crew.currentStars === 1 && crew.rarity === "Epic") {
     outOf = " / 20"
-    } else if (crew.currentStars === 2 && crew.rarity === "Epic") {
+  } else if (crew.currentStars === 2 && crew.rarity === "Epic") {
     outOf = " / 35"
-    } else if (crew.currentStars === 3 && crew.rarity === "Epic") {
+  } else if (crew.currentStars === 3 && crew.rarity === "Epic") {
     outOf = " / 50"
-    } else if (crew.currentStars === 4 && crew.rarity === "Epic") {
+  } else if (crew.currentStars === 4 && crew.rarity === "Epic") {
     outOf = " / 100"
-    }
+  }
 
   row.innerHTML = `
     <td style="padding: 0; border: none; display: block; height: 80px; ${styles.crewImage}">

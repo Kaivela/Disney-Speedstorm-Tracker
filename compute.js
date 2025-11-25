@@ -18,19 +18,19 @@ import { createGetTrad } from "./trad.js";
 import crewsBlank from "./data/crews/crews_blank.json";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 
-const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck","Mike Wazowski","Meg","Jessie","Stitch","Hercules","Goofy","Elsa","EVE","Belle","Ortensia","Mulan","Celia Mae","Steamboat Pete","Fear","Shang","Vanellope"] 
+const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck", "Mike Wazowski", "Meg", "Jessie", "Stitch", "Hercules", "Goofy", "Elsa", "EVE", "Belle", "Ortensia", "Mulan", "Celia Mae", "Steamboat Pete", "Fear", "Shang", "Vanellope"]
 
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
 function calculatePilotShardsNeeded(currentLevel, currentShards, levelGoal) {
   let totalShardsNeeded = 0;
-  
-    for (let level = currentLevel + 1; level <= levelGoal; level++) {
-      if (level <= pilotShardCosts.length) {
-        totalShardsNeeded += pilotShardCosts[level - 1];
-      }
-    }
 
-    return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
+  for (let level = currentLevel + 1; level <= levelGoal; level++) {
+    if (level <= pilotShardCosts.length) {
+      totalShardsNeeded += pilotShardCosts[level - 1];
+    }
+  }
+
+  return Math.max(totalShardsNeeded - currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
 }
 
 // Fonction pour calculer les superShards nécessaires pour activer la superCharge
@@ -48,10 +48,10 @@ function calculatePilotSuperShards(name, currentSuperShards) {
 function calculatePilotSuperShardsNeeded(currentStars, currentSuperShards) {
   let totalSuperShardsNeeded = 0;
 
-  for (let star = currentStars +1; star <= 7; star++) {
-     if (star <= superChargeCost.length) {
+  for (let star = currentStars + 1; star <= 7; star++) {
+    if (star <= superChargeCost.length) {
       totalSuperShardsNeeded += superChargeCost[star - 1];
-     }    
+    }
   }
 
   return Math.max(totalSuperShardsNeeded - currentSuperShards, 0)
@@ -262,13 +262,13 @@ function calculateTotal(lang, goal, levelGoal) {
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((pilotBlank) => pilotBlank.name === pilot.name);
 
-  // Calculer les SuperShardsNeeded pour chaque pilote
-  const superChargedPilots = superChargedPilotsName.includes(pilot.name);
+    // Calculer les SuperShardsNeeded pour chaque pilote
+    const superChargedPilots = superChargedPilotsName.includes(pilot.name);
 
-  if (superChargedPilots) {
-    pilot.superShardsNeeded = calculatePilotSuperShardsNeeded(pilot.currentStars, pilot.currentSuperShards);
-    allSuperShardsNeeded = allSuperShardsNeeded + pilot.superShardsNeeded;
-  }
+    if (superChargedPilots) {
+      pilot.superShardsNeeded = calculatePilotSuperShardsNeeded(pilot.currentStars, pilot.currentSuperShards);
+      allSuperShardsNeeded = allSuperShardsNeeded + pilot.superShardsNeeded;
+    }
 
     // Calculer les coinsNeeded pour chaque pilote
     pilot.coinsNeeded = calculateCoinsNeededForGoal(pilot.currentLevel, levelGoal, pilot.currentStars);
@@ -327,8 +327,8 @@ function calculateTotal(lang, goal, levelGoal) {
   universalBoxCount = Math.ceil(allFreeShards / 3);
 
   let totalFreeCrewShardsNeededCalculated = totalFreeCrewShardsNeeded.totalCommonShardsNeeded +
-      totalFreeCrewShardsNeeded.totalRareShardsNeeded +
-      totalFreeCrewShardsNeeded.totalEpicShardsNeeded
+    totalFreeCrewShardsNeeded.totalRareShardsNeeded +
+    totalFreeCrewShardsNeeded.totalEpicShardsNeeded
 
   // formater les nombres avec des points pour l'affichage
   allCoins = formatNumberWithDots(allCoins);
@@ -374,6 +374,15 @@ function calculateTotal(lang, goal, levelGoal) {
     totalFreeCrewShardsNeededCalculated;
   document.getElementById("crewSeasonCoinsNeeded").textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCoins);
   document.getElementById("crewSeasonNumber").textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCrew);
+
+  // Calcul du nombre de pilotes à monter RMJ 40
+  let rmj40Count = 0;
+  pilots.forEach((pilot) => {
+    if (pilot.highestRMJ < 40) {
+      rmj40Count++;
+    }
+  });
+  document.getElementById("rmj40Count").textContent = rmj40Count;
 }
 
 // Fonction pour mettre un point tous les 3 caractères pour les calculs a afficher
@@ -431,22 +440,22 @@ function calculateRacerGoal(lang) {
       `${racer} ${racerName} ${already2} ${racerLevelGoal}
       <br>${need} ${coinsNeeded} ${upCoins}`
   } else if (5 > shardNeeded > 0 && shardsToGet > 0) {
-    document.getElementById("calcResult").innerHTML = 
+    document.getElementById("calcResult").innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToFarm <= 0) {
-    document.getElementById("calcResult").innerHTML = 
+    document.getElementById("calcResult").innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToGet <= 0) {
-    document.getElementById("calcResult").innerHTML = 
+    document.getElementById("calcResult").innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else {
-    document.getElementById("calcResult").innerHTML = 
+    document.getElementById("calcResult").innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
@@ -473,7 +482,7 @@ function calculateTotalSeasonCoinsForCrews() {
     // Ignore Epic
   });
 
-  return {totalCoins, totalCrew};
+  return { totalCoins, totalCrew };
 }
 
 export {

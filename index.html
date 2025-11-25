@@ -1,391 +1,397 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Disney Speedstorm Tracker</title>
-    <link id="styleSheet" rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="img/icon.png" />
-  </head>
-  <body id="background" class="background">
-    <div class="scroll-buttons">
-      <button id="scrollTopBtn" class="scroll-button hidden">▲</button>
-      <button id="scrollBottomBtn" class="scroll-button">▼</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Disney Speedstorm Tracker</title>
+  <link id="styleSheet" rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/icon.png" />
+</head>
+
+<body id="background" class="background">
+  <div class="scroll-buttons">
+    <button id="scrollTopBtn" class="scroll-button hidden">▲</button>
+    <button id="scrollBottomBtn" class="scroll-button">▼</button>
+  </div>
+  <h1 style="display: fixed">Disney Speedstorm Tracker</h1>
+  <div id="settingsPanel">
+    <div>
+      <h2 data-trad="settings"></h2>
+      <span></span>
+
+      <label for="trad_button" data-trad="change_lang"></label>
+      <button id="tradButton" class="tradButton" data-trad="trad_button"></button>
+
+      <label for="darkMode" data-trad="dark_mode"></label>
+      <label class="switch">
+        <input id="dark" type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+
+      <label for="transparantTable" data-trad="transparant_table"></label>
+      <label class="switch">
+        <input id="transparant_table" type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+
+      <label for="buttonGoal" data-trad="change_goal"></label>
+      <select id="goalSelect">
+        <option value="6">6</option>
+        <option value="11">11</option>
+        <option value="16">16</option>
+        <option value="21">21</option>
+        <option value="26">26</option>
+        <option value="31">31</option>
+        <option value="36">36</option>
+        <option value="40">40</option>
+      </select>
+
+      <label for="levelGoal" data-trad="change_level_goal"></label>
+      <select id="levelGoalSelect">
+        <option value="30">30</option>
+        <option value="35">35</option>
+        <option value="40">40</option>
+        <option value="45">45</option>
+        <option value="50">50</option>
+      </select>
+
+      <label for="selectTheme" data-trad="set_up_background"></label>
+      <select id="selectTheme"></select>
+
+      <span></span>
+      <button id="saveSetting" data-trad="save"></button>
     </div>
-    <h1 style="display: fixed">Disney Speedstorm Tracker</h1>
-    <div id="settingsPanel">
-      <div>
-        <h2 data-trad="settings"></h2>
-        <span></span>
+    <span class="copyright">
+      The character images used in this are purely for entertainment and informational purposes.<br />
+      No ownership is claimed upon the images used, and no copyright infringement is intended.<br />
+      All rights go to their respective owners.</span>
+  </div>
+  <button id="settings">
+    <img src="./img/settings.svg" width="30px" />
+  </button>
 
-        <label for="trad_button" data-trad="change_lang"></label>
-        <button id="tradButton" class="tradButton" data-trad="trad_button"></button>
+  <div class="main-container">
+    <div class="form-container">
+      <div class="buttons">
+        <div style="display: flex; justify-content: space-around; gap: 0.25rem">
+          <button style="background-color: greenyellow; color: black" id="pilotMode" data-trad="Pilots"></button>
+          <button id="crewMode" data-trad="Crews"></button>
+          <button style="background-color: black" id="pilotDownloadJSON">Export racers.json</button>
+          <button style="background-color: black" id="pilotImportJSON">Import racers.json</button>
+          <button style="background-color: black; display: none" id="crewDownloadJSON">Export crews.json</button>
+          <button style="background-color: black; display: none" id="crewImportJSON">Import crews.json</button>
+        </div>
 
-        <label for="darkMode" data-trad="dark_mode"></label>
-        <label class="switch">
-          <input id="dark" type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-
-        <label for="transparantTable" data-trad="transparant_table"></label>
-        <label class="switch">
-          <input id="transparant_table" type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-
-        <label for="buttonGoal" data-trad="change_goal"></label>
-        <select id="goalSelect">
-          <option value="6">6</option>
-          <option value="11">11</option>
-          <option value="16">16</option>
-          <option value="21">21</option>
-          <option value="26">26</option>
-          <option value="31">31</option>
-          <option value="36">36</option>
-          <option value="40">40</option>
-        </select>
-
-        <label for="levelGoal" data-trad="change_level_goal"></label>
-        <select id="levelGoalSelect">
-          <option value="30">30</option>
-          <option value="35">35</option>
-          <option value="40">40</option>
-          <option value="45">45</option>
-          <option value="50">50</option>
-        </select>
-
-        <label for="selectTheme" data-trad="set_up_background"></label>
-        <select id="selectTheme"></select>
-
-        <span></span>
-        <button id="saveSetting" data-trad="save"></button>
-      </div>
-      <span class="copyright">
-        The character images used in this are purely for entertainment and informational purposes.<br />
-        No ownership is claimed upon the images used, and no copyright infringement is intended.<br />
-        All rights go to their respective owners.</span
-      >
-    </div>
-    <button id="settings">
-      <img src="./img/settings.svg" width="30px" />
-    </button>
-
-    <div class="main-container">
-      <div class="form-container">
-        <div class="buttons">
-          <div style="display: flex; justify-content: space-around; gap: 0.25rem">
-            <button style="background-color: greenyellow; color: black" id="pilotMode" data-trad="Pilots"></button>
-            <button id="crewMode" data-trad="Crews"></button>
-            <button style="background-color: black" id="pilotDownloadJSON">Export racers.json</button>
-            <button style="background-color: black" id="pilotImportJSON">Import racers.json</button>
-            <button style="background-color: black; display: none" id="crewDownloadJSON">Export crews.json</button>
-            <button style="background-color: black; display: none" id="crewImportJSON">Import crews.json</button>
+        <div id="goal">
+          <div class="calcul">
+            <span data-trad="total_upgrade_calcul"> </span>
+            <span id="levelGoal"> :</span>
+            <span id="allCoins"></span>
           </div>
-
-          <div id="goal">
-            <div class="calcul">
-              <span data-trad="total_upgrade_calcul"> </span>
-              <span id="levelGoal"> :</span>
-              <span id="allCoins"></span>
+          <div class="calcul">
+            <span data-trad="total_shards_calcul"> </span>
+            <span id="allShards"></span>
+          </div>
+          <div class="calcul">
+            <span data-trad="total_super_shards_calcul"> </span>
+            <span id="allSuperShards"></span>
+          </div>
+          <div class="calcul">
+            <span data-trad="regular_shards_calcul"> </span>
+            <span id="allRegularShards"></span>
+            <span data-trad="soit"> </span>
+            <span id="universalBoxCount"></span>
+            <span data-trad="open"> </span>
+          </div>
+          <div class="calcul">
+            <span data-trad="season_calcul"> </span>
+            <span id="seasonCoins"></span>
+          </div>
+          <div class="calcul">
+            <span data-trad="upgrade_calcul"> </span>
+            <span id="upgradeCoins"></span>
+          </div>
+          <div class="calcul">
+            <span data-trad="cosmetic_calcul"> </span>
+            <span id="cosmetic"></span>
+          </div>
+          <div class="calcul">
+            <span data-trad="tokens_calcul"> </span>
+            <span id="tokens"></span>
+          </div>
+          <div class="calcul">
+            <span data-trad="rmj_40_calcul"> </span>
+            <span id="rmj40Count"></span>
+          </div>
+          <div class="calcul">
+            <div>
+              <span data-trad="free_crew_shards_calcul"> </span>
             </div>
-            <div class="calcul">
-              <span data-trad="total_shards_calcul"> </span>
-              <span id="allShards"></span>
+            <div>
+              <span id="crewFreeShards"></span>
             </div>
-            <div class="calcul">
-              <span data-trad="total_super_shards_calcul"> </span>
-              <span id="allSuperShards"></span>
+          </div>
+          <div class="calcul">
+            <div>
+              <span data-trad="you_have"></span>
+              <span id="crewSeasonNumber"></span>
+              <span data-trad="crew_shards_from_daily_deal"> </span>
             </div>
-            <div class="calcul">
-              <span data-trad="regular_shards_calcul"> </span>
-              <span id="allRegularShards"></span>
-              <span data-trad="soit"> </span>
-              <span id="universalBoxCount"></span>
-              <span data-trad="open"> </span>
-            </div>
-            <div class="calcul">
-              <span data-trad="season_calcul"> </span>
-              <span id="seasonCoins"></span>
-            </div>
-            <div class="calcul">
-              <span data-trad="upgrade_calcul"> </span>
-              <span id="upgradeCoins"></span>
-            </div>
-            <div class="calcul">
-              <span data-trad="cosmetic_calcul"> </span>
-              <span id="cosmetic"></span>
-            </div>
-            <div class="calcul">
-              <span data-trad="tokens_calcul"> </span>
-              <span id="tokens"></span>
-            </div>
-            <div class="calcul">
-              <div>
-                <span data-trad="free_crew_shards_calcul"> </span>
-              </div>
-              <div>
-                <span id="crewFreeShards"></span>
-              </div>
-            </div>
-            <div class="calcul">
-              <div>
-                <span data-trad="you_have"></span>
-                <span id="crewSeasonNumber"></span>
-                <span data-trad="crew_shards_from_daily_deal"> </span>
-              </div>
-              <div>
-                <span data-trad="cost"></span>
-                <span id="crewSeasonCoinsNeeded"></span>
-                <span data-trad="season_coins"></span>
-              </div>
+            <div>
+              <span data-trad="cost"></span>
+              <span id="crewSeasonCoinsNeeded"></span>
+              <span data-trad="season_coins"></span>
             </div>
           </div>
         </div>
-        <!-- pilot form -->
-        <form novalidate id="pilotForm">
-          <label style="display: none" for="pilotFranchise">Franchise:</label>
-          <div style="display: none; flex-direction: column">
-            <input type="text" id="pilotFranchise" required />
-            <select id="pilotFranchise2" required></select>
-          </div>
-          <!-- <div
+      </div>
+      <!-- pilot form -->
+      <form novalidate id="pilotForm">
+        <label style="display: none" for="pilotFranchise">Franchise:</label>
+        <div style="display: none; flex-direction: column">
+          <input type="text" id="pilotFranchise" required />
+          <select id="pilotFranchise2" required></select>
+        </div>
+        <!-- <div
             style="display: none"
             id="pilotFranchiseError"
             class="error-message"
             data-trad="pilot_franchise_error"
           ></div> -->
 
-          <label style="display: none" for="pilotRarity" data-trad="rarity_form"></label>
-          <select style="display: none" id="pilotRarity" required>
-            <option value="Common" data-trad="Common"></option>
-            <option value="Rare" data-trad="Rare"></option>
-            <option value="Epic" data-trad="Epic"></option>
-          </select>
+        <label style="display: none" for="pilotRarity" data-trad="rarity_form"></label>
+        <select style="display: none" id="pilotRarity" required>
+          <option value="Common" data-trad="Common"></option>
+          <option value="Rare" data-trad="Rare"></option>
+          <option value="Epic" data-trad="Epic"></option>
+        </select>
 
-          <label style="display: none" for="role" data-trad="role"></label>
-          <select style="display: none" id="role" required>
-            <option value="Speedster" data-trad="Speedster"></option>
-            <option value="Brawler" data-trad="Brawler"></option>
-            <option value="Trickster" data-trad="Trickster"></option>
-            <option value="Defender" data-trad="Defender"></option>
-          </select>
+        <label style="display: none" for="role" data-trad="role"></label>
+        <select style="display: none" id="role" required>
+          <option value="Speedster" data-trad="Speedster"></option>
+          <option value="Brawler" data-trad="Brawler"></option>
+          <option value="Trickster" data-trad="Trickster"></option>
+          <option value="Defender" data-trad="Defender"></option>
+        </select>
 
-          <label style="display: none" for="pilotName" data-trad="pilot_name_form"></label>
-          <input style="display: none" type="text" id="pilotName" required />
-          <div style="display: none">
-            <div id="pilotNameError" class="error-message" data-trad="pilot_name_error"></div>
-            <div id="pilotDuplicateError" class="error-message" data-trad="pilot_duplicate_name"></div>
-          </div>
+        <label style="display: none" for="pilotName" data-trad="pilot_name_form"></label>
+        <input style="display: none" type="text" id="pilotName" required />
+        <div style="display: none">
+          <div id="pilotNameError" class="error-message" data-trad="pilot_name_error"></div>
+          <div id="pilotDuplicateError" class="error-message" data-trad="pilot_duplicate_name"></div>
+        </div>
 
-          <div>
-            <label for="pilotCurrentStars" data-trad="current_stars_form"></label>
-            <span class="small" data-trad="supercharge"></span>
-          </div>
-          <input type="number" id="pilotCurrentStars" min="0" max="7" required />
-          <div id="pilotCurrentStarsError" class="error-message" data-trad="star_error"></div>
-
-          <label for="pilotCurrentShards" data-trad="current_shards_form"></label>
-          <input type="number" id="pilotCurrentShards" min="0" max="200" required />
-          <div id="pilotCurrentShardsError" class="error-message" data-trad="pilot_shard_error"></div>
-
-          <label for="currentLevel" data-trad="current_level_form"></label>
-          <input type="number" id="currentLevel" min="0" max="50" required />
-          <div id="currentLevelError" class="error-message" data-trad="level_error"></div>
-
-          <label for="currentRMJ" data-trad="current_rmj_form"></label>
-          <input type="number" id="currentRMJ" min="0" max="40" required />
-          <div id="currentRMJError" class="error-message" data-trad="current_mpr_error"></div>
-
-          <label for="highestRMJ" data-trad="highest_rmj_form"></label>
-          <input type="number" id="highestRMJ" min="0" max="40" required />
-          <div id="highestRMJError" class="error-message" data-trad="highest_mpr_error"></div>
-
-          <label for="pilotSuperShards" data-trad="super_shards_form"></label>
-          <input type="number" id="pilotSuperShards" min="0" max="60" required />
-          <div id="pilotSuperShardsError" class="error-message" data-trad="super_shard_error"></div>
-
-          <label style="display: none" for="pilotUniversalBox" data-trad="universal_box_form"></label>
-          <input style="display: none" type="checkbox" id="pilotUniversalBox" />
-          <span style="display: none"></span>
-
-          <button style="display: none" id="pilotSubmitBtn" type="submit" data-trad="add_pilot"></button>
-          <button style="display: none" id="pilotMaxBtn" type="button" data-trad="max_pilot"></button>
-        </form>
-        <!-- crew form -->
-        <form novalidate id="crewForm" style="display: none">
-          <label style="display: none" for="crewFranchise">Franchise:</label>
-          <div style="display: none">
-            <input type="text" id="crewFranchise" required />
-            <select id="crewFranchise2" required></select>
-          </div>
-          <div style="display: none" id="crewFranchiseError" class="error-message" data-trad="crew_franchise_error"></div>
-
-          <label style="display: none" for="crewRarity" data-trad="rarity_form"></label>
-          <select style="display: none" id="crewRarity" required>
-            <option value="Common" data-trad="Common"></option>
-            <option value="Rare" data-trad="Rare"></option>
-            <option value="Epic" data-trad="Epic"></option>
-          </select>
-          <span style="display: none"></span>
-
-          <label style="display: none" for="crewName" data-trad="crew_name_form"></label>
-          <input style="display: none" type="text" id="crewName" required />
-          <div style="display: none">
-            <div id="crewNameError" class="error-message" data-trad="crew_name_error"></div>
-            <div id="crewDuplicateError" class="error-message" data-trad="crew_duplicate_name"></div>
-          </div>
-
-          <label for="crewCurrentStars" data-trad="current_level_form"></label>
-          <input type="number" id="crewCurrentStars" min="0" max="5" required />
-          <div id="crewCurrentStarsError" class="error-message" data-trad="star_error"></div>
-
-          <label for="crewCurrentShards" data-trad="current_shards_form"></label>
-          <input type="number" id="crewCurrentShards" min="0" max="100" required />
-          <div id="crewCurrentShardsError" class="error-message" data-trad="crew_shard_error"></div>
-
-          <label style="display: none" for="crewUniversalBox" data-trad="universal_box_form"></label>
-          <input style="display: none" type="checkbox" id="crewUniversalBox" />
-          <span style="display: none"></span>
-
-          <button style="display: none" id="crewSubmitBtn" type="submit" data-trad="add_crew"></button>
-        </form>
         <div>
-          <form novalidate id="calcForm">
-            <button id="resetButton" type="button" data-trad="reset_all"></button>
-            <div></div>
-
-            <label for="calcPilotName" data-trad="Racer_:"></label>
-            <select id="calcPilotName" required></select>
-            <div id="calcPilotNameError" class="error-message" data-trad="pilot_name_error"></div>
-
-            <label for="calcPilotLevelGoal" data-trad="level_goal"></label>
-            <input type="number" id="calcPilotLevelGoal" min="0" max="50" required />
-            <div id="calcPilotLevelGoalError" class="error-message" data-trad="pilot_level_error"></div>
-
-            <button id="calcButton" type="button" data-trad="calculate_level"></button>
-            <div></div>
-          </form>
-          <span id="calcResult" class="calcResult"></span>
+          <label for="pilotCurrentStars" data-trad="current_stars_form"></label>
+          <span class="small" data-trad="supercharge"></span>
         </div>
-      </div>
+        <input type="number" id="pilotCurrentStars" min="0" max="7" required />
+        <div id="pilotCurrentStarsError" class="error-message" data-trad="star_error"></div>
 
-      <div class="escape">
-        <!-- masqueur de colonne pour les pilotes -->
-        <details id="pilotHide">
-          <summary data-trad="hide"></summary>
-          <div>
-            <button id="togglePilotSeason" class="display active" data-trad="season"></button>
-            <button id="togglePilotImage" class="display">image</button>
-            <button id="togglePilotFranchise" class="display">Franchise</button>
-            <button id="togglePilotRarity" class="display" data-trad="rarity"></button>
-            <button id="togglePilotRole" class="display" data-trad="role"></button>
-            <button id="togglePilotName" class="display" data-trad="hide_name"></button>
-            <button id="togglePilotStar" class="display" data-trad="hide_stars"></button>
-            <button id="togglePilotCurrentShard" class="display" data-trad="hide_current_shards"></button>
-            <button id="togglePilotLevel" class="display" data-trad="hide_current_level"></button>
-            <button id="togglePilotSuperShard" class="display" data-trad="hide_super_shards"></button>
-            <button id="togglePilotCurrentMPR" class="display" data-trad="hide_current_MPR"></button>
-            <button id="togglePilotHighestMPR" class="display" data-trad="hide_highest_MPR"></button>
-            <button id="togglePilotGrade" class="display" data-trad="hide_grade_MPR"></button>
-            <button id="togglePilotShardNeeded" class="display" data-trad="hide_shards_needed"></button>
-            <button id="togglePilotShardMPR" class="display" data-trad="hide_shards_MPR"></button>
-            <button id="togglePilotUpgrade" class="display" data-trad="hide_upgrade"></button>
-            <button id="togglePilotBox" class="display" data-trad="hide_box"></button>
-            <button id="togglePilotShardNextStar" class="display active" data-trad="hide_shards_next_star"></button>
-            <button id="togglePilotCoinStar" class="display active" data-trad="hide_coins_next_star"></button>
-            <button id="togglePilotShardIfMax" class="display active" data-trad="hide_shards_if_max"></button>
-          </div>
-        </details>
-        <!-- masqueur de colonne pour les Equipiers -->
-        <details id="crewHide" style="display: none">
-          <summary data-trad="hide"></summary>
-          <button id="toggleCrewImage" class="display">image</button>
-          <button id="toggleCrewFranchise" class="display">Franchise</button>
-          <button id="toggleCrewRarity" class="display" data-trad="rarity"></button>
-          <button id="toggleCrewName" class="display" data-trad="hide_name"></button>
-          <button id="toggleCrewStar" class="display" data-trad="hide_current_level"></button>
-          <button id="toggleCrewCurrentShard" class="display" data-trad="hide_current_shards"></button>
-          <button id="toggleCrewShardNeeded" class="display" data-trad="hide_shards_needed"></button>
-          <button id="toggleCrewBox" class="display" data-trad="hide_box"></button>
-        </details>
-      </div>
-      <div class="filters-container">
-        <!-- Conteneur pour la recherche et les filtres des pilotes -->
-        <div id="pilot-filter-container" class="search-filter-container">
-          <input type="text" id="pilotSearchInput" />
-          <select id="pilotSeasonFilter" class="pilotFilter"></select>
-          <select id="pilotFranchiseFilter" class="pilotFilter"></select>
-          <select id="pilotRarityFilter" class="pilotFilter"></select>
-          <select id="roleFilter" class="pilotFilter"></select>
-          <select id="pilotShardsFilter" class="pilotFilter"></select>
-          <select id="rmjFilter" class="pilotFilter"></select>
-          <select id="levelFilter" class="pilotFilter"></select>
-          <select id="pilotBoxesFilter" class="pilotFilter"></select>
-        </div>
-        <!-- Conteneur pour la recherche et les filtres des Equipiers -->
-        <div id="crew-filter-container" class="search-filter-container" style="display: none">
-          <input type="text" id="crewSearchInput" />
-          <select id="crewFranchiseFilter" class="crewFilter"></select>
-          <select id="crewRarityFilter" class="crewFilter"></select>
-          <select id="crewStarsFilter" class="crewFilter"></select>
-          <select id="crewShardsFilter" class="crewFilter"></select>
-          <select id="crewBoxesFilter" class="crewFilter"></select>
-        </div>
-      </div>
-      <!-- total des différent calculs -->
-      <div class="table-container">
-        <table id="pilotTable">
-          <thead>
-            <tr>
-              <th data-sort="releaseSeason" data-trad="season" style="display: none"></th>
-              <th>Image</th>
-              <th>Collection</th>
-              <th data-trad="rarity"></th>
-              <th data-trad="role"></th>
-              <th data-trad="pilot_name_table"></th>
-              <th data-sort="currentStars" class="star"></th>
-              <th data-sort="currentShards" data-trad="current_shards_table"></th>
-              <th data-sort="currentLevel" data-trad="current_level_table"></th>
-              <th data-sort="currentSuperShards" data-trad="current_super_shards_table"></th>
-              <th data-sort="currentRMJ" data-trad="current_MPR_table"></th>
-              <th data-sort="highestRMJ" data-trad="highest_MPR_table"></th>
-              <th data-trad="max_MPR_table"></th>
-              <th data-sort="shardsNeeded" data-trad="shards_needed_table"></th>
-              <th data-sort="shardsToGet" data-trad="shards_MPR_table"></th>
-              <th data-sort="upgradeCoins" class="upgradeCoin"></th>
-              <th data-trad="free_table"></th>
-              <th data-sort="shardStar" data-trad="shards_to_next_star" style="display: none"></th>
-              <th data-sort="coinStar" data-trad="coins_to_next_star" style="display: none"></th>
-              <th data-sort="shardMaxMPR" data-trad="shards_needed_if_max_MPR" style="display: none"></th>
-              <th data-trad="actions"></th>
-            </tr>
-          </thead>
-          <tbody id="pilotTableBody">
-            <!-- Les données des pilotes seront ajoutées ici -->
-          </tbody>
-        </table>
+        <label for="pilotCurrentShards" data-trad="current_shards_form"></label>
+        <input type="number" id="pilotCurrentShards" min="0" max="200" required />
+        <div id="pilotCurrentShardsError" class="error-message" data-trad="pilot_shard_error"></div>
 
-        <table id="crewTable" style="display: none">
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Collection</th>
-              <th data-trad="rarity"></th>
-              <th data-trad="crew_name_table"></th>
-              <th data-sort="currentStars" data-trad="current_level_table"></th>
-              <th data-sort="currentShards" data-trad="current_shards_table"></th>
-              <th data-sort="shardsNeeded" data-trad="shards_needed_table"></th>
-              <th data-trad="free_table"></th>
-              <th data-trad="actions"></th>
-            </tr>
-          </thead>
-          <tbody id="crewTableBody">
-            <!-- Les données des crews seront ajoutées ici -->
-          </tbody>
-        </table>
+        <label for="currentLevel" data-trad="current_level_form"></label>
+        <input type="number" id="currentLevel" min="0" max="50" required />
+        <div id="currentLevelError" class="error-message" data-trad="level_error"></div>
+
+        <label for="currentRMJ" data-trad="current_rmj_form"></label>
+        <input type="number" id="currentRMJ" min="0" max="40" required />
+        <div id="currentRMJError" class="error-message" data-trad="current_mpr_error"></div>
+
+        <label for="highestRMJ" data-trad="highest_rmj_form"></label>
+        <input type="number" id="highestRMJ" min="0" max="40" required />
+        <div id="highestRMJError" class="error-message" data-trad="highest_mpr_error"></div>
+
+        <label for="pilotSuperShards" data-trad="super_shards_form"></label>
+        <input type="number" id="pilotSuperShards" min="0" max="60" required />
+        <div id="pilotSuperShardsError" class="error-message" data-trad="super_shard_error"></div>
+
+        <label style="display: none" for="pilotUniversalBox" data-trad="universal_box_form"></label>
+        <input style="display: none" type="checkbox" id="pilotUniversalBox" />
+        <span style="display: none"></span>
+
+        <button style="display: none" id="pilotSubmitBtn" type="submit" data-trad="add_pilot"></button>
+        <button style="display: none" id="pilotMaxBtn" type="button" data-trad="max_pilot"></button>
+      </form>
+      <!-- crew form -->
+      <form novalidate id="crewForm" style="display: none">
+        <label style="display: none" for="crewFranchise">Franchise:</label>
+        <div style="display: none">
+          <input type="text" id="crewFranchise" required />
+          <select id="crewFranchise2" required></select>
+        </div>
+        <div style="display: none" id="crewFranchiseError" class="error-message" data-trad="crew_franchise_error"></div>
+
+        <label style="display: none" for="crewRarity" data-trad="rarity_form"></label>
+        <select style="display: none" id="crewRarity" required>
+          <option value="Common" data-trad="Common"></option>
+          <option value="Rare" data-trad="Rare"></option>
+          <option value="Epic" data-trad="Epic"></option>
+        </select>
+        <span style="display: none"></span>
+
+        <label style="display: none" for="crewName" data-trad="crew_name_form"></label>
+        <input style="display: none" type="text" id="crewName" required />
+        <div style="display: none">
+          <div id="crewNameError" class="error-message" data-trad="crew_name_error"></div>
+          <div id="crewDuplicateError" class="error-message" data-trad="crew_duplicate_name"></div>
+        </div>
+
+        <label for="crewCurrentStars" data-trad="current_level_form"></label>
+        <input type="number" id="crewCurrentStars" min="0" max="5" required />
+        <div id="crewCurrentStarsError" class="error-message" data-trad="star_error"></div>
+
+        <label for="crewCurrentShards" data-trad="current_shards_form"></label>
+        <input type="number" id="crewCurrentShards" min="0" max="100" required />
+        <div id="crewCurrentShardsError" class="error-message" data-trad="crew_shard_error"></div>
+
+        <label style="display: none" for="crewUniversalBox" data-trad="universal_box_form"></label>
+        <input style="display: none" type="checkbox" id="crewUniversalBox" />
+        <span style="display: none"></span>
+
+        <button style="display: none" id="crewSubmitBtn" type="submit" data-trad="add_crew"></button>
+      </form>
+      <div>
+        <form novalidate id="calcForm">
+          <button id="resetButton" type="button" data-trad="reset_all"></button>
+          <div></div>
+
+          <label for="calcPilotName" data-trad="Racer_:"></label>
+          <select id="calcPilotName" required></select>
+          <div id="calcPilotNameError" class="error-message" data-trad="pilot_name_error"></div>
+
+          <label for="calcPilotLevelGoal" data-trad="level_goal"></label>
+          <input type="number" id="calcPilotLevelGoal" min="0" max="50" required />
+          <div id="calcPilotLevelGoalError" class="error-message" data-trad="pilot_level_error"></div>
+
+          <button id="calcButton" type="button" data-trad="calculate_level"></button>
+          <div></div>
+        </form>
+        <span id="calcResult" class="calcResult"></span>
       </div>
     </div>
 
-    <script src="renderer.js" type="module"></script>
-  </body>
+    <div class="escape">
+      <!-- masqueur de colonne pour les pilotes -->
+      <details id="pilotHide">
+        <summary data-trad="hide"></summary>
+        <div>
+          <button id="togglePilotSeason" class="display active" data-trad="season"></button>
+          <button id="togglePilotImage" class="display">image</button>
+          <button id="togglePilotFranchise" class="display">Franchise</button>
+          <button id="togglePilotRarity" class="display" data-trad="rarity"></button>
+          <button id="togglePilotRole" class="display" data-trad="role"></button>
+          <button id="togglePilotName" class="display" data-trad="hide_name"></button>
+          <button id="togglePilotStar" class="display" data-trad="hide_stars"></button>
+          <button id="togglePilotCurrentShard" class="display" data-trad="hide_current_shards"></button>
+          <button id="togglePilotLevel" class="display" data-trad="hide_current_level"></button>
+          <button id="togglePilotSuperShard" class="display" data-trad="hide_super_shards"></button>
+          <button id="togglePilotCurrentMPR" class="display" data-trad="hide_current_MPR"></button>
+          <button id="togglePilotHighestMPR" class="display" data-trad="hide_highest_MPR"></button>
+          <button id="togglePilotGrade" class="display" data-trad="hide_grade_MPR"></button>
+          <button id="togglePilotShardNeeded" class="display" data-trad="hide_shards_needed"></button>
+          <button id="togglePilotShardMPR" class="display" data-trad="hide_shards_MPR"></button>
+          <button id="togglePilotUpgrade" class="display" data-trad="hide_upgrade"></button>
+          <button id="togglePilotBox" class="display" data-trad="hide_box"></button>
+          <button id="togglePilotShardNextStar" class="display active" data-trad="hide_shards_next_star"></button>
+          <button id="togglePilotCoinStar" class="display active" data-trad="hide_coins_next_star"></button>
+          <button id="togglePilotShardIfMax" class="display active" data-trad="hide_shards_if_max"></button>
+        </div>
+      </details>
+      <!-- masqueur de colonne pour les Equipiers -->
+      <details id="crewHide" style="display: none">
+        <summary data-trad="hide"></summary>
+        <button id="toggleCrewImage" class="display">image</button>
+        <button id="toggleCrewFranchise" class="display">Franchise</button>
+        <button id="toggleCrewRarity" class="display" data-trad="rarity"></button>
+        <button id="toggleCrewName" class="display" data-trad="hide_name"></button>
+        <button id="toggleCrewStar" class="display" data-trad="hide_current_level"></button>
+        <button id="toggleCrewCurrentShard" class="display" data-trad="hide_current_shards"></button>
+        <button id="toggleCrewShardNeeded" class="display" data-trad="hide_shards_needed"></button>
+        <button id="toggleCrewBox" class="display" data-trad="hide_box"></button>
+      </details>
+    </div>
+    <div class="filters-container">
+      <!-- Conteneur pour la recherche et les filtres des pilotes -->
+      <div id="pilot-filter-container" class="search-filter-container">
+        <input type="text" id="pilotSearchInput" />
+        <select id="pilotSeasonFilter" class="pilotFilter"></select>
+        <select id="pilotFranchiseFilter" class="pilotFilter"></select>
+        <select id="pilotRarityFilter" class="pilotFilter"></select>
+        <select id="roleFilter" class="pilotFilter"></select>
+        <select id="pilotShardsFilter" class="pilotFilter"></select>
+        <select id="rmjFilter" class="pilotFilter"></select>
+        <select id="levelFilter" class="pilotFilter"></select>
+        <select id="pilotBoxesFilter" class="pilotFilter"></select>
+      </div>
+      <!-- Conteneur pour la recherche et les filtres des Equipiers -->
+      <div id="crew-filter-container" class="search-filter-container" style="display: none">
+        <input type="text" id="crewSearchInput" />
+        <select id="crewFranchiseFilter" class="crewFilter"></select>
+        <select id="crewRarityFilter" class="crewFilter"></select>
+        <select id="crewStarsFilter" class="crewFilter"></select>
+        <select id="crewShardsFilter" class="crewFilter"></select>
+        <select id="crewBoxesFilter" class="crewFilter"></select>
+      </div>
+    </div>
+    <!-- total des différent calculs -->
+    <div class="table-container">
+      <table id="pilotTable">
+        <thead>
+          <tr>
+            <th data-sort="releaseSeason" data-trad="season" style="display: none"></th>
+            <th>Image</th>
+            <th>Collection</th>
+            <th data-trad="rarity"></th>
+            <th data-trad="role"></th>
+            <th data-trad="pilot_name_table"></th>
+            <th data-sort="currentStars" class="star"></th>
+            <th data-sort="currentShards" data-trad="current_shards_table"></th>
+            <th data-sort="currentLevel" data-trad="current_level_table"></th>
+            <th data-sort="currentSuperShards" data-trad="current_super_shards_table"></th>
+            <th data-sort="currentRMJ" data-trad="current_MPR_table"></th>
+            <th data-sort="highestRMJ" data-trad="highest_MPR_table"></th>
+            <th data-trad="max_MPR_table"></th>
+            <th data-sort="shardsNeeded" data-trad="shards_needed_table"></th>
+            <th data-sort="shardsToGet" data-trad="shards_MPR_table"></th>
+            <th data-sort="upgradeCoins" class="upgradeCoin"></th>
+            <th data-trad="free_table"></th>
+            <th data-sort="shardStar" data-trad="shards_to_next_star" style="display: none"></th>
+            <th data-sort="coinStar" data-trad="coins_to_next_star" style="display: none"></th>
+            <th data-sort="shardMaxMPR" data-trad="shards_needed_if_max_MPR" style="display: none"></th>
+            <th data-trad="actions"></th>
+          </tr>
+        </thead>
+        <tbody id="pilotTableBody">
+          <!-- Les données des pilotes seront ajoutées ici -->
+        </tbody>
+      </table>
+
+      <table id="crewTable" style="display: none">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Collection</th>
+            <th data-trad="rarity"></th>
+            <th data-trad="crew_name_table"></th>
+            <th data-sort="currentStars" data-trad="current_level_table"></th>
+            <th data-sort="currentShards" data-trad="current_shards_table"></th>
+            <th data-sort="shardsNeeded" data-trad="shards_needed_table"></th>
+            <th data-trad="free_table"></th>
+            <th data-trad="actions"></th>
+          </tr>
+        </thead>
+        <tbody id="crewTableBody">
+          <!-- Les données des crews seront ajoutées ici -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="renderer.js" type="module"></script>
+</body>
+
 </html>
