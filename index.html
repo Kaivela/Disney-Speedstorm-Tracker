@@ -263,6 +263,14 @@
       </form>
       <div id="calcContainer">
         <button id="showCalcBtn" data-trad="show_calculator"></button>
+        <form novalidate id="endOfSeasonCalc" style="display: none">
+          <label for="endOfSeasonCoins" data-trad="coins_form"></label>
+          <input type="number" id="endOfSeasonCoins" min="0" max="10000000" required />
+          <button id="endOfSeasonCalcButton" type="button" data-trad="calculate_end_of_season"></button>
+          <div></div>
+          <div id="endOfSeasonCoinsError" class="error-message" data-trad="coins_error"></div>
+          <span id="endOfSeasonCoinsResult" class="calcResult"></span>
+        </form>
         <form novalidate id="calcForm" style="display: none">
           <button id="resetButton" type="button" data-trad="reset_all"></button>
           <div></div>

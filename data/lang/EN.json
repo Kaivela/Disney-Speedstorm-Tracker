@@ -107,6 +107,8 @@
     "actions": "Actions",
     "modify": "Modify",
     "show_calculator": "Hide/Show",
+    "coins_form": "Coins :",
+    "calculate_end_of_season": "Calculate End of Season",
     "hide": "Hide Column",
     "hide_coins_next_star": "Coins Star",
     "hide_shards_next_star": "Shards Star",

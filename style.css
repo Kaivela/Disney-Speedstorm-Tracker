@@ -155,6 +155,10 @@ h2 {
   height: min-content;
 }
 
+#endOfSeasonCoins {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .form-container {
     flex-direction: row;
@@ -511,7 +515,8 @@ button:hover {
   background-position: center;
 }
 
-#calcResult {
+#calcResult,
+#endOfSeasonCoinsResult {
   padding: 1rem;
   width: fit-content;
   background-color: #00000080;

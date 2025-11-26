@@ -1,4 +1,4 @@
-import { calculateRacerGoal, calculateTotal, resetForm } from "./compute.js";
+import { calculateRacerGoal, calculateTotal, resetForm, calculateTokens } from "./compute.js";
 import {
   populateCrewForm,
   updateCrewFormFranchise,
@@ -102,19 +102,23 @@ const levelGoalSelect = document.getElementById("levelGoalSelect");
 const sortPilotButtons = document.querySelectorAll("#pilotTable th[data-sort]");
 const sortCrewButtons = document.querySelectorAll("#crewTable th[data-sort]");
 const calculateForm = document.getElementById("calcForm");
+const endOfSeasonCalc = document.getElementById("endOfSeasonCalc");
 const resetButton = document.getElementById("resetButton");
 const calcButton = document.getElementById("calcButton");
+const endOfSeasonCalcButton = document.getElementById("endOfSeasonCalcButton");
+const tokensResult = document.getElementById("endOfSeasonCoinsResult");
 let editingPilotIndex = null; // Pour suivre quel pilote est en cours de modification
 let editingCrewIndex = null; // Pour suivre quel equipier est en cours de modification
 
 // Fonction pour afficher le Formulaiure de calcul seulement si on est en Pilot Mode
 function showCalculateIfPilotMode() {
-  if (mode === "pilot") { calculateForm.style.display = ""; }
-  if (mode === "crew") { calculateForm.style.display = "none" }
+  if (mode === "pilot") { calculateForm.style.display = "", endOfSeasonCalc.style.display = ""; }
+  if (mode === "crew") { calculateForm.style.display = "none", endOfSeasonCalc.style.display = "none"; }
 }
 
 resetButton.addEventListener("click", () => { resetForm() });
 calcButton.addEventListener("click", () => { calculateRacerGoal(lang) });
+endOfSeasonCalcButton.addEventListener("click", () => { calculateTokens() });
 
 function bindSortPilotButtons() {
   sortPilotButtons.forEach((button) => {
@@ -188,8 +192,10 @@ pilotMaxBtn.addEventListener("click", (event) => { maxPilotForm(event) });
 showCalcBtn.addEventListener("click", () => {
   if (calculateForm.style.display === "none") {
     calculateForm.style.display = "";
+    endOfSeasonCalc.style.display = "";
   } else {
     calculateForm.style.display = "none";
+    endOfSeasonCalc.style.display = "none";
   }
 });
 

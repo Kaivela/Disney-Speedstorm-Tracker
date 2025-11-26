@@ -497,6 +497,15 @@ function calculateTotalSeasonCoinsForCrews() {
   return { totalCoins, totalCrew };
 }
 
+//for each 2500 coins in the end of season calc you get 1 token
+function calculateTokens() {
+  const endOfSeasonCoins = document.getElementById("endOfSeasonCoins").value;
+  const endOfSeasonCoinsResult = document.getElementById("endOfSeasonCoinsResult");
+  const tokens = Math.floor(endOfSeasonCoins / 2500);
+  endOfSeasonCoinsResult.textContent = "Tokens : " + tokens;
+  endOfSeasonCoinsResult.style = "display: block;"
+}
+
 export {
   calculatePilotShardsNeeded,
   calculatePilotShardsNextStar,
@@ -510,5 +519,6 @@ export {
   calculatePilotSuperShards,
   resetForm,
   calculateRacerGoal,
-  calculateTotalSeasonCoinsForCrews
+  calculateTotalSeasonCoinsForCrews,
+  calculateTokens
 };

@@ -107,6 +107,8 @@
     "actions": "Actions",
     "modify": "Modifier",
     "show_calculator": "Cacher/Afficher",
+    "coins_form": "Pièces :",
+    "calculate_end_of_season": "Calculer Fin de Saison",
     "hide": "Masquer colonne",
     "hide_coins_next_star": "Pièces Etoile",
     "hide_shards_next_star": "Éclats Etoile",
