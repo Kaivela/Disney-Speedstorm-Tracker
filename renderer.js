@@ -1,4 +1,4 @@
-import { calculateRacerGoal, calculateTotal , resetForm} from "./compute.js";
+import { calculateRacerGoal, calculateTotal, resetForm } from "./compute.js";
 import {
   populateCrewForm,
   updateCrewFormFranchise,
@@ -60,6 +60,7 @@ const pilotExportButton = document.getElementById("pilotDownloadJSON");
 const pilotImportButton = document.getElementById("pilotImportJSON");
 const crewExportButton = document.getElementById("crewDownloadJSON");
 const crewImportButton = document.getElementById("crewImportJSON");
+const showCalcBtn = document.getElementById("showCalcBtn");
 const tradButton = document.getElementById("tradButton");
 const pilotMode = document.getElementById("pilotMode");
 const crewMode = document.getElementById("crewMode");
@@ -108,12 +109,12 @@ let editingCrewIndex = null; // Pour suivre quel equipier est en cours de modifi
 
 // Fonction pour afficher le Formulaiure de calcul seulement si on est en Pilot Mode
 function showCalculateIfPilotMode() {
-  if (mode === "pilot") {calculateForm.style.display = "";}
-  if (mode === "crew") {calculateForm.style.display = "none"}
+  if (mode === "pilot") { calculateForm.style.display = ""; }
+  if (mode === "crew") { calculateForm.style.display = "none" }
 }
 
-resetButton.addEventListener("click", () => {resetForm()});
-calcButton.addEventListener("click", () => {calculateRacerGoal(lang)});
+resetButton.addEventListener("click", () => { resetForm() });
+calcButton.addEventListener("click", () => { calculateRacerGoal(lang) });
 
 function bindSortPilotButtons() {
   sortPilotButtons.forEach((button) => {
@@ -182,7 +183,15 @@ pilotForm.addEventListener("submit", (event) =>
   submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, pilotMaxBtn, goal, levelGoal)
 );
 
-pilotMaxBtn.addEventListener("click", (event) => {maxPilotForm(event)});
+pilotMaxBtn.addEventListener("click", (event) => { maxPilotForm(event) });
+
+showCalcBtn.addEventListener("click", () => {
+  if (calculateForm.style.display === "none") {
+    calculateForm.style.display = "";
+  } else {
+    calculateForm.style.display = "none";
+  }
+});
 
 // Gère la soumission du formulaire de crew
 crewForm.addEventListener("submit", (event) =>
@@ -246,8 +255,8 @@ document.querySelectorAll(".crewFilter").forEach((filter) => {
   filter.addEventListener("change", () => filterCrewTable(lang));
 });
 
-pilotMode.addEventListener("click", () => {switchTable("pilot"); showCalculateIfPilotMode()});
-crewMode.addEventListener("click", () => {switchTable("crew"); showCalculateIfPilotMode()});
+pilotMode.addEventListener("click", () => { switchTable("pilot"); showCalculateIfPilotMode() });
+crewMode.addEventListener("click", () => { switchTable("crew"); showCalculateIfPilotMode() });
 goalSelect.addEventListener("change", () => switchGoal());
 levelGoalSelect.addEventListener("change", () => switchLevelGoal());
 selectTheme.addEventListener("change", () => {
