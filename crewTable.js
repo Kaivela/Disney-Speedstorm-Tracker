@@ -38,6 +38,8 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   let shardsClass = "";
   if (crew.shardsNeeded === 0) {
     shardsClass = "shards-needed-zero";
+  } else if (crew.rarity === "Epic" && crew.shardsNeeded > 0 && crew.shardsNeeded <= 25) {
+    shardsClass = "shards-needed-warning";
   } else if (crew.shardsNeeded > 20 && crew.shardsNeeded <= 50) {
     shardsClass = "shards-needed-close";
   } else if (crew.shardsNeeded > 0 && crew.shardsNeeded <= 20) {
