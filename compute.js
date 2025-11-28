@@ -17,6 +17,7 @@ import {
 import { createGetTrad } from "./trad.js";
 import crewsBlank from "./data/crews/crews_blank.json";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
+import * as HTML from "./ElementById.js"
 
 const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck", "Mike Wazowski", "Meg", "Jessie", "Stitch", "Hercules", "Goofy", "Elsa", "EVE", "Belle", "Ortensia", "Mulan", "Celia Mae", "Steamboat Pete", "Fear", "Shang", "Vanellope"]
 
@@ -363,20 +364,20 @@ function calculateTotal(lang, goal, levelGoal) {
   totalFreeCrewShardsNeededCalculated = formatNumberWithDots(totalFreeCrewShardsNeededCalculated);
 
   // Afficher les résultats dans le HTML
-  document.getElementById("allCoins").textContent = allCoins;
-  document.getElementById("levelGoal").textContent = levelGoal + " : ";
-  document.getElementById("allShards").textContent = allShardsNeeded;
-  document.getElementById("seasonShards").textContent = seasonShardsNeeded;
-  document.getElementById("midSeasonShards").textContent = midSeasonShardsNeeded;
-  document.getElementById("allSuperShards").textContent = allSuperShardsNeeded;
-  document.getElementById("allRegularShards").textContent = allFreeShards;
-  document.getElementById("universalBoxCount").textContent = universalBoxCount;
-  document.getElementById("uniBoxCost").textContent = formatNumberWithDots(uniBoxCost);
-  document.getElementById("seasonCoins").textContent = seasonCoins;
-  document.getElementById("upgradeCoins").textContent = upgradeCoins;
-  document.getElementById("tokens").textContent = tokensToGet;
-  document.getElementById("cosmetic").textContent = cosmeticToGet;
-  document.getElementById("crewFreeShards").textContent =
+  HTML.allCoins.textContent = allCoins;
+  HTML.levelGoal.textContent = levelGoal + " : ";
+  HTML.allShards.textContent = allShardsNeeded;
+  HTML.seasonShards.textContent = seasonShardsNeeded;
+  HTML.midSeasonShards.textContent = midSeasonShardsNeeded;
+  HTML.allSuperShards.textContent = allSuperShardsNeeded;
+  HTML.allRegularShards.textContent = allFreeShards;
+  HTML.universalBoxCount.textContent = universalBoxCount;
+  HTML.uniBoxCost.textContent = formatNumberWithDots(uniBoxCost);
+  HTML.seasonCoins.textContent = seasonCoins;
+  HTML.upgradeCoins.textContent = upgradeCoins;
+  HTML.tokens.textContent = tokensToGet;
+  HTML.cosmetic.textContent = cosmeticToGet;
+  HTML.crewFreeShards.textContent =
     getTrad("Common") +
     ": " +
     totalFreeCrewShardsNeeded.totalCommonShardsNeeded +
@@ -390,8 +391,8 @@ function calculateTotal(lang, goal, levelGoal) {
     totalFreeCrewShardsNeeded.totalEpicShardsNeeded +
     " Total : " +
     totalFreeCrewShardsNeededCalculated;
-  document.getElementById("crewSeasonCoinsNeeded").textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCoins);
-  document.getElementById("crewSeasonNumber").textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCrew);
+  HTML.crewSeasonCoinsNeeded.textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCoins);
+  HTML.crewSeasonNumber.textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCrew);
 
   // Calcul du nombre de pilotes à monter RMJ 40
   let rmj40Count = 0;
@@ -400,7 +401,7 @@ function calculateTotal(lang, goal, levelGoal) {
       rmj40Count++;
     }
   });
-  document.getElementById("rmj40Count").textContent = rmj40Count;
+  HTML.rmj40Count.textContent = rmj40Count;
 }
 
 // Fonction pour mettre un point tous les 3 caractères pour les calculs a afficher
@@ -410,23 +411,23 @@ function formatNumberWithDots(number) {
 
 // Fonction pour reset les données du formulaire caclPilotLevelGoal
 function resetForm() {
-  document.getElementById("calcPilotName").value = "";
-  document.getElementById("calcPilotLevelGoal").value = "";
-  document.getElementById("calcResult").textContent = "";
-  document.getElementById("calcResult").style = "display: none;";
+  HTML.calcPilotName.value = "";
+  HTML.calcPilotLevelGoal.value = "";
+  HTML.calcResult.textContent = "";
+  HTML.calcResult.style = "display: none;";
 }
 
 function calculateRacerGoal(lang) {
   const getTrad = createGetTrad(lang);
-  const racerName = document.getElementById("calcPilotName").value;
-  const racerLevelGoal = document.getElementById("calcPilotLevelGoal").value;
+  const racerName = HTML.calcPilotName.value;
+  const racerLevelGoal = HTML.calcPilotLevelGoal.value;
   const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
-  document.getElementById("calcResult").style = "display: block;";
+  HTML.calcResult.style = "display: block;";
 
 
   const pilot = pilots.find((pilot) => pilot.name === racerName);
   if (!pilot) {
-    document.getElementById("calcResult").textContent = getTrad("pilot_not_found");
+    HTML.calcResult.textContent = getTrad("pilot_not_found");
     return;
   }
 
@@ -451,29 +452,29 @@ function calculateRacerGoal(lang) {
   const shardsToFarm = shardNeeded - shardsToGet
 
   if (pilot.currentLevel >= racerLevelGoal) {
-    document.getElementById("calcResult").innerHTML =
+    HTML.calcResult.innerHTML =
       `${racer} ${racerName} ${already1} ${racerLevelGoal} ${more}`;
   } else if (shardNeeded <= 0) {
-    document.getElementById("calcResult").innerHTML =
+    HTML.calcResult.innerHTML =
       `${racer} ${racerName} ${already2} ${racerLevelGoal}
       <br>${need} ${coinsNeeded} ${upCoins}`
   } else if (5 > shardNeeded > 0 && shardsToGet > 0) {
-    document.getElementById("calcResult").innerHTML =
+    HTML.calcResult.innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToFarm <= 0) {
-    document.getElementById("calcResult").innerHTML =
+    HTML.calcResult.innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToGet <= 0) {
-    document.getElementById("calcResult").innerHTML =
+    HTML.calcResult.innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else {
-    document.getElementById("calcResult").innerHTML =
+    HTML.calcResult.innerHTML =
       `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
@@ -505,11 +506,10 @@ function calculateTotalSeasonCoinsForCrews() {
 
 //for each 2500 coins in the end of season calc you get 1 token
 function calculateTokens() {
-  const endOfSeasonCoins = document.getElementById("endOfSeasonCoins").value;
-  const endOfSeasonCoinsResult = document.getElementById("endOfSeasonCoinsResult");
+  const endOfSeasonCoins = HTML.endOfSeasonCoins.value;
   const tokens = Math.floor(endOfSeasonCoins / 2500);
-  endOfSeasonCoinsResult.textContent = "Tokens : " + tokens;
-  endOfSeasonCoinsResult.style = "display: block;"
+  HTML.endOfSeasonCoinsResult.textContent = "Tokens : " + tokens;
+  HTML.endOfSeasonCoinsResult.style = "display: block;"
 }
 
 export {

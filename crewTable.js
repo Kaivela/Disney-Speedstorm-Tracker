@@ -1,16 +1,7 @@
 import { calculateCrewShardsNeeded, calculateTotal } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import crewsBlank from "./data/crews/crews_blank.json";
-
-const crewSearchInput = document.getElementById("crewSearchInput");
-const toggleCrewImage = document.getElementById("toggleCrewImage");
-const toggleCrewFranchise = document.getElementById("toggleCrewFranchise");
-const toggleCrewRarity = document.getElementById("toggleCrewRarity");
-const toggleCrewName = document.getElementById("toggleCrewName");
-const toggleCrewLevel = document.getElementById("toggleCrewStar");
-const toggleCrewCurrentShard = document.getElementById("toggleCrewCurrentShard");
-const toggleCrewShardNeeded = document.getElementById("toggleCrewShardNeeded");
-const toggleCrewBox = document.getElementById("toggleCrewBox");
+import * as HTML from "./ElementById.js";
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement) {
@@ -73,14 +64,14 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
 
   // Tableau des propriétés à appliquer
   const styles = {
-    crewImage: toggleCrewImage.classList.contains("active") ? "display: none;" : "",
-    crewFranchise: getStyleIfActive(toggleCrewFranchise),
-    crewRarity: getStyleIfActive(toggleCrewRarity),
-    crewName: getStyleIfActive(toggleCrewName),
-    crewCurrentShard: getStyleIfActive(toggleCrewCurrentShard),
-    crewLevel: getStyleIfActive(toggleCrewLevel),
-    crewShardNeeded: getStyleIfActive(toggleCrewShardNeeded),
-    crewBox: getStyleIfActive(toggleCrewBox),
+    crewImage: HTML.toggleCrewImage.classList.contains("active") ? "display: none;" : "",
+    crewFranchise: getStyleIfActive(HTML.toggleCrewFranchise),
+    crewRarity: getStyleIfActive(HTML.toggleCrewRarity),
+    crewName: getStyleIfActive(HTML.toggleCrewName),
+    crewCurrentShard: getStyleIfActive(HTML.toggleCrewCurrentShard),
+    crewLevel: getStyleIfActive(HTML.toggleCrewStar),
+    crewShardNeeded: getStyleIfActive(HTML.toggleCrewShardNeeded),
+    crewBox: getStyleIfActive(HTML.toggleCrewBox),
   };
 
   let outOf = ""
@@ -144,18 +135,18 @@ function saveCrewData(crew, editingCrewIndex) {
 // Fonction pour pré-remplir le formulaire avec les données de l'équipier sélectionné
 function populateCrewForm(crew, lang) {
   const getTrad = createGetTrad(lang);
-  document.getElementById("crewFranchise").value = getTrad(crew.franchise);
-  document.getElementById("crewRarity").value = crew.rarity;
-  document.getElementById("crewName").value = getTrad(crew.name);
-  document.getElementById("crewCurrentStars").value = crew.currentStars;
-  document.getElementById("crewCurrentShards").value = crew.currentShards;
-  document.getElementById("crewUniversalBox").checked = crew.universalBox;
+  HTML.crewFranchise.value = getTrad(crew.franchise);
+  HTML.crewRarity.value = crew.rarity;
+  HTML.crewName.value = getTrad(crew.name);
+  HTML.crewCurrentStars.value = crew.currentStars;
+  HTML.crewCurrentShards.value = crew.currentShards;
+  HTML.crewUniversalBox.checked = crew.universalBox;
 }
 
 //franchise list pour le crewForm
 function updateCrewFormFranchise(lang) {
   const getTrad = createGetTrad(lang);
-  const franchiseNames = document.getElementById("crewFranchise2");
+  const franchiseNames = HTML.crewFranchise2;
   let crews = JSON.parse(localStorage.getItem("crews")) || [];
   const franchises = new Set();
   crews.forEach((crew) => {
@@ -176,10 +167,10 @@ function submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, 
   event.preventDefault();
 
   // Récupérer les valeurs du formulaire
-  const franchise = getTradKey(document.getElementById("crewFranchise").value, lang);
-  const crewName = getTradKey(document.getElementById("crewName").value, lang);
-  const crewCurrentStars = parseInt(document.getElementById("crewCurrentStars").value, 10);
-  const crewCurrentShards = parseInt(document.getElementById("crewCurrentShards").value, 10);
+  const franchise = getTradKey(HTML.crewFranchise.value, lang);
+  const crewName = getTradKey(HTML.crewName.value, lang);
+  const crewCurrentStars = parseInt(HTML.crewCurrentStars.value, 10);
+  const crewCurrentShards = parseInt(HTML.crewCurrentShards.value, 10);
 
   let isValid = checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards);
 
@@ -187,12 +178,12 @@ function submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, 
     // Créer l'objet crew
     const editCrew = {
       franchise:
-        document.getElementById("crewFranchise2").value === "" ? franchise : document.getElementById("crewFranchise2").value,
-      rarity: document.getElementById("crewRarity").value,
+        HTML.crewFranchise2.value === "" ? franchise : HTML.crewFranchise2.value,
+      rarity: HTML.crewRarity.value,
       name: crewName,
       currentStars: crewCurrentStars,
       currentShards: crewCurrentShards,
-      universalBox: document.getElementById("crewUniversalBox").checked,
+      universalBox: HTML.crewUniversalBox.checked,
     };
     updateCrewWithShardsNeeded(editCrew, editingCrewIndex);
     updateCrewFormFranchise(lang);
@@ -212,12 +203,12 @@ function submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, 
 function checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards) {
   let isValid = true;
   let crews = JSON.parse(localStorage.getItem("crews")) || [];
-  const franchise2 = document.getElementById("crewFranchise2").value;
-  const crewFranchiseError = document.getElementById("crewFranchiseError");
-  const crewcurrentStarsError = document.getElementById("crewCurrentStarsError");
-  const crewNameError = document.getElementById("crewNameError");
-  const crewDuplicateError = document.getElementById("crewDuplicateError");
-  const crewCurrentShardsError = document.getElementById("crewCurrentShardsError");
+  const franchise2 = HTML.crewFranchise2.value;
+  const crewFranchiseError = HTML.crewFranchiseError;
+  const crewcurrentStarsError = HTML.crewCurrentStarsError;
+  const crewNameError = HTML.crewNameError;
+  const crewDuplicateError = HTML.crewDuplicateError;
+  const crewCurrentShardsError = HTML.crewCurrentShardsError;
 
   // Valider les champs
   if (franchise === "" && franchise2 === "") {
@@ -293,14 +284,14 @@ function sortCrewsBlank() {
 
 function filterCrewTable(lang) {
   const getTrad = createGetTrad(lang);
-  const franchiseFilter = document.getElementById("crewFranchiseFilter").value;
-  const rarityFilter = document.getElementById("crewRarityFilter").value;
-  const starsFilter = document.getElementById("crewStarsFilter").value;
-  const shardsFilter = document.getElementById("crewShardsFilter").value;
-  const boxesFilter = document.getElementById("crewBoxesFilter").value;
+  const franchiseFilter = HTML.crewFranchiseFilter.value;
+  const rarityFilter = HTML.crewRarityFilter.value;
+  const starsFilter = HTML.crewStarsFilter.value;
+  const shardsFilter = HTML.crewShardsFilter.value;
+  const boxesFilter = HTML.crewBoxesFilter.value;
   const rows = document.querySelectorAll("#crewTableBody tr");
 
-  const searchTerms = crewSearchInput.value
+  const searchTerms = HTML.crewSearchInput.value
     .split("/")
     .map(term => term.trim().toLowerCase())
     .filter(term => term.length > 0);

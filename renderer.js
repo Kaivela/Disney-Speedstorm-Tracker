@@ -26,6 +26,7 @@ import {
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
 import { createGetTrad, translate } from "./trad.js";
+import * as HTML from "./ElementById.js";
 
 const settingsStr = localStorage.getItem("settings");
 const settings = settingsStr ? JSON.parse(settingsStr) : {};
@@ -47,7 +48,6 @@ window.onload = function () {
 };
 
 // Récupère le formulaire et le corps du tableau
-const darkMode = document.getElementById("dark");
 const transparantMode = document.getElementById("transparant_table");
 const pilotForm = document.getElementById("pilotForm");
 const crewForm = document.getElementById("crewForm");
@@ -375,7 +375,7 @@ crewExportButton.addEventListener("click", () => {
   download(filename, text);
 });
 
-darkMode.addEventListener("click", () => toggleDarkMode());
+HTML.darkMode.addEventListener("click", () => toggleDarkMode());
 transparantMode.addEventListener("click", () => toggleTransparancy());
 
 // Fonction pour export les data dans un fichier json
@@ -580,7 +580,7 @@ function loadSettings() {
 function toggleDarkMode() {
   dark = document.documentElement.getAttribute("data-theme") === "dark";
   dark = !dark;
-  darkMode.checked = dark;
+  HTML.darkMode.checked = dark;
   const newTheme = dark ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
@@ -594,7 +594,7 @@ function toggleDarkMode() {
 
 function isDarkModeActive() {
   if (localStorage.getItem("theme") === "dark") {
-    darkMode.checked = true;
+    HTML.darkMode.checked = true;
   }
 }
 
@@ -653,7 +653,7 @@ function isTransparancyActive() {
   if (transparant === true) {
     activateTransparancy;
     transparantMode.checked = true;
-    // if (darkMode === true) {
+    // if (HTML.darkMode === true) {
     // }
   } else {
     deactivateTransparancy();
