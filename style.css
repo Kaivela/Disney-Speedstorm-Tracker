@@ -707,6 +707,12 @@ th[data-order="desc"]::after {
   width: fit-content;
 }
 
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 td {
   font-size: clamp(13px, 2vw, 16px);
 }

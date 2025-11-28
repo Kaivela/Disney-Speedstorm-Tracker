@@ -106,7 +106,8 @@ const endOfSeasonCalc = document.getElementById("endOfSeasonCalc");
 const resetButton = document.getElementById("resetButton");
 const calcButton = document.getElementById("calcButton");
 const endOfSeasonCalcButton = document.getElementById("endOfSeasonCalcButton");
-const tokensResult = document.getElementById("endOfSeasonCoinsResult");
+const resetPilotFiltersBtn = document.getElementById("reset");
+const resetCrewFiltersBtn = document.getElementById("reset2");
 let editingPilotIndex = null; // Pour suivre quel pilote est en cours de modification
 let editingCrewIndex = null; // Pour suivre quel equipier est en cours de modification
 
@@ -116,9 +117,23 @@ function showCalculateIfPilotMode() {
   if (mode === "crew") { calculateForm.style.display = "none", endOfSeasonCalc.style.display = "none"; }
 }
 
+function resetFilters() {
+  if (mode === "pilot") {
+    pilotSearchInput.value = "";
+    document.querySelectorAll(".pilotFilter").forEach(select => select.selectedIndex = 0);
+    filterPilotTable(lang);
+  } else {
+    document.getElementById("crewSearchInput").value = "";
+    document.querySelectorAll(".crewFilter").forEach(select => select.selectedIndex = 0);
+    filterCrewTable(lang);
+  }
+}
+
 resetButton.addEventListener("click", () => { resetForm() });
 calcButton.addEventListener("click", () => { calculateRacerGoal(lang) });
 endOfSeasonCalcButton.addEventListener("click", () => { calculateTokens() });
+resetPilotFiltersBtn.addEventListener("click", () => { resetFilters() });
+resetCrewFiltersBtn.addEventListener("click", () => { resetFilters() });
 
 function bindSortPilotButtons() {
   sortPilotButtons.forEach((button) => {
