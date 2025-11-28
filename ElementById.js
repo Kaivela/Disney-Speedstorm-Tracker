@@ -26,6 +26,7 @@ export const allShards = document.getElementById("allShards");
 export const allSuperShards = document.getElementById("allSuperShards");
 export const allRegularShards = document.getElementById("allRegularShards");
 export const universalBoxCount = document.getElementById("universalBoxCount");
+export const uniBoxCost = document.getElementById("uniBoxCost");
 export const seasonCoins = document.getElementById("seasonCoins");
 export const upgradeCoins = document.getElementById("upgradeCoins");
 export const cosmetic = document.getElementById("cosmetic");

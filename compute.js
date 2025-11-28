@@ -337,6 +337,7 @@ function calculateTotal(lang, goal, levelGoal) {
     allRegularShards;
   // Calculer les universalBoxCount
   universalBoxCount = Math.ceil(allFreeShards / 3);
+  let uniBoxCost = Math.ceil(universalBoxCount / 10) * 90000
 
   let totalFreeCrewShardsNeededCalculated = totalFreeCrewShardsNeeded.totalCommonShardsNeeded +
     totalFreeCrewShardsNeeded.totalRareShardsNeeded +
@@ -370,6 +371,7 @@ function calculateTotal(lang, goal, levelGoal) {
   document.getElementById("allSuperShards").textContent = allSuperShardsNeeded;
   document.getElementById("allRegularShards").textContent = allFreeShards;
   document.getElementById("universalBoxCount").textContent = universalBoxCount;
+  document.getElementById("uniBoxCost").textContent = formatNumberWithDots(uniBoxCost);
   document.getElementById("seasonCoins").textContent = seasonCoins;
   document.getElementById("upgradeCoins").textContent = upgradeCoins;
   document.getElementById("tokens").textContent = tokensToGet;
