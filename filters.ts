@@ -2,13 +2,14 @@ import { calculatePilotShardsNeeded, calculateCrewShardsNeeded } from "./compute
 import { createGetTrad } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import crewsBlank from "./data/crews/crews_blank.json";
-import * as HTML from "./ElementById.js";
+import * as HTML from "./ElementById";
+import { Pilot, Crew, Language } from "./types";
 
 // Mise à jour dynamique des options de filtre
-function updateFilterOptions(lang) {
+function updateFilterOptions(lang: Language) {
   const getTrad = createGetTrad(lang);
-  const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
-  const crews = JSON.parse(localStorage.getItem("crews")) || [];
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
 
   // Calculer les shardsNeeded pour chaque pilote avant de mettre à jour les options de filtre
   pilots.forEach((pilot) => {
@@ -25,19 +26,20 @@ function updateFilterOptions(lang) {
   const pilotFranchises = [...new Set(pilots.map((pilot) => pilot.franchise))];
   const pilotRarities = [...new Set(pilots.map((pilot) => pilot.rarity))];
   const roles = [...new Set(pilots.map((pilot) => pilot.role))];
-  const pilotShardsNeededValues = [...new Set(pilots.map((pilot) => parseInt(pilot.shardsNeeded, 10)))];
+  const pilotShardsNeededValues = [...new Set(pilots.map((pilot) => pilot.shardsNeeded || 0))];
   const pilotBoxes = [...new Set(pilotsBlank.map((pilot) => pilot.universalBox))];
-  const rmj = [...new Set(pilots.map((pilot) => parseInt(pilot.currentRMJ, 10)))];
-  const level = [...new Set(pilots.map((pilot) => parseInt(pilot.currentLevel, 10)))];
+  const rmj = [...new Set(pilots.map((pilot) => pilot.currentRMJ))];
+  const level = [...new Set(pilots.map((pilot) => pilot.currentLevel))];
   const crewFranchises = [...new Set(crews.map((crew) => crew.franchise))];
   const crewRarities = [...new Set(crews.map((crew) => crew.rarity))];
-  const crewStars = [...new Set(crews.map((crew) => parseInt(crew.currentStars, 10)))];
-  const crewShardsNeededValues = [...new Set(crews.map((crew) => parseInt(crew.shardsNeeded, 10)))];
+  const crewStars = [...new Set(crews.map((crew) => crew.currentStars))];
+  const crewShardsNeededValues = [...new Set(crews.map((crew) => crew.shardsNeeded || 0))];
   const crewBoxes = [...new Set(crewsBlank.map((crew) => crew.universalBox))];
 
   // Mettre à jour les options de filtre
   HTML.pilotSeasonFilter.innerHTML = '<option value="" data-trad="season_filter">' + getTrad("season_filter") + "</option>";
-  for (let season = 0; season <= Math.max(...pilotSeasons); season++) {
+  const maxSeason = Math.max(...pilotSeasons.map(s => typeof s === 'number' ? s : parseInt(s as string, 10) || 0));
+  for (let season = 0; season <= maxSeason; season++) {
     const option = document.createElement("option");
     option.value = season.toString();
     option.textContent = season.toString();
@@ -315,9 +317,9 @@ function updateFilterOptions(lang) {
   });
 }
 
-function updateCalculateOptions(lang) {
+function updateCalculateOptions(lang: Language) {
   const getTrad = createGetTrad(lang);
-  const pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
 
   const pilotName = [...new Set(pilots.map((pilot) => pilot.name))];
 
