@@ -34,11 +34,15 @@ function calculatePilotShardsNeeded(currentLevel, currentShards, levelGoal) {
 }
 
 // Fonction pour calculer les superShards nécessaires pour activer la superCharge
-function calculatePilotSuperShards(name, currentSuperShards) {
+function calculatePilotSuperShards(name, currentStars, currentSuperShards) {
   const superChargedPilots = superChargedPilotsName.includes(name);
 
   if (!superChargedPilots) {
     currentSuperShards = "❌"
+  }
+
+  if (currentStars === 7) {
+    currentSuperShards = "✔"
   }
 
   return currentSuperShards;

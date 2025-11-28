@@ -48,7 +48,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const coinsNeeded = calculateCoinsNeeded(pilot.currentLevel, 50);
   const shardsToGet = calculatePilotShardsToGet(pilot.highestRMJ, 40);
   const shardsIfMaxMPR = calculatePilotShardIfMaxMPR(shardsNeeded, shardsToGet);
-  const superCharge = calculatePilotSuperShards(pilot.name, pilot.currentSuperShards);
+  const superCharge = calculatePilotSuperShards(pilot.name, pilot.currentStars, pilot.currentSuperShards);
 
   // Déterminez la classe en fonction de shardsNeeded
   let shardsClass = "";
@@ -71,7 +71,11 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   } else if (pilot.currentStars === 7) {
     starClass = "star-7";
   }
-  
+
+  let superChargeClass = ""
+  if (pilot.currentStars === 7) {
+    superChargeClass = "superCharge";
+  }
   // Déterminer la classe de couleur en fonction du niveau actuel
   let levelClass;
   if (pilot.currentLevel === 0) {
@@ -159,7 +163,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   <td class="${starClass}" ${styles.pilotStar}>${pilot.currentStars}</td>
   <td class="${shardsClass}" ${styles.pilotCurrentShard}>${pilot.currentShards}</td>
   <td class="${levelClass}" ${styles.pilotLevel}>${pilot.currentLevel}</td>
-  <td>${superCharge}</td>
+  <td Class="${superChargeClass}">${superCharge}</td>
   <td ${styles.pilotCurrentMPR}>${pilot.currentRMJ}</td>
   <td ${styles.pilotHighestMPR}>${pilot.highestRMJ}</td>
   <td class="${RMJClass}" ${styles.pilotGrade}></td>
@@ -447,7 +451,7 @@ function filterPilotTable(lang) {
     const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
     const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
     const matchesRole = roleText.includes(getTrad(roleFilter)) || roleFilter === "";
-    
+
     let matchesShards = true;
     if (shardsFilter === "above50") {
       matchesShards = parseInt(shardsNeededText, 10) > 50;
@@ -569,7 +573,7 @@ export function emptyPilotsTable() {
 
 function synchronizeLocalStorageWithPilotsBlank() {
   let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
-  
+
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
     if (pilotBlank) {

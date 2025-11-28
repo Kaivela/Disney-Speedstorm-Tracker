@@ -17,6 +17,7 @@
   --bg-color-common: #004f63b3;
   --bg-color-rare: #5b0080b3;
   --bg-color-epic: #9f3200b3;
+  --color-superCharge: #00df00d5;
   --bg-color-close: #A39000B3;
   --color-close: #ffffffb3;
   --bg-color-warning: #A30202B3;
@@ -76,6 +77,7 @@
   --bg-color-common: #25ffffb3;
   --bg-color-rare: #bb3aeeb3;
   --bg-color-epic: #ff590db3;
+  --color-superCharge: green;
   --bg-color-close: #FFFF00B3;
   --color-close: black;
   --bg-color-warning: #FF0000B3;
@@ -271,6 +273,10 @@ tbody tr:nth-child(even) {
 
 .Epic {
   background-color: var(--bg-color-epic);
+}
+
+.superCharge {
+  color: var(--color-superCharge);
 }
 
 .shards-needed-close {
