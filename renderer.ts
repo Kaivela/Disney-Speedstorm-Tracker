@@ -350,8 +350,7 @@ function download(filename: string, text: string) {
 
 // Fonction pour afficher / masquer une colonne du tableau pilot
 function togglePilotColumn(index: number, event: Event) {
-  const table = document.getElementById("pilotTable") as HTMLTableElement;
-  const rows = table.rows;
+  const rows = HTML.pilotTable.rows;
   const isHidden = rows[0].cells[index].style.display === "none";
 
   for (let i = 0; i < rows.length; i++) {
@@ -363,8 +362,7 @@ function togglePilotColumn(index: number, event: Event) {
 
 // Fonction pour afficher / masquer une colonne du tableau crew
 function toggleCrewColumn(index: number, event: Event) {
-  const table = document.getElementById("crewTable") as HTMLTableElement;
-  const rows = table.rows;
+  const rows = HTML.crewTable.rows;
   const isHidden = rows[0].cells[index].style.display === "none";
 
   for (let i = 0; i < rows.length; i++) {
@@ -592,31 +590,29 @@ function applyTheme() {
   document.documentElement.setAttribute("data-theme", theme);
 }
 
-const scrollTopBtn = document.getElementById("scrollTopBtn") as HTMLButtonElement;
-const scrollBottomBtn = document.getElementById("scrollBottomBtn") as HTMLButtonElement;
 
 // Remonter en haut
-scrollTopBtn.addEventListener("click", () => {
+HTML.scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // Aller en bas
-scrollBottomBtn.addEventListener("click", () => {
+HTML.scrollBottomBtn.addEventListener("click", () => {
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
 });
 
 // Gérer l'affichage des boutons selon le scroll
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
-    scrollTopBtn.classList.remove("hidden");
+    HTML.scrollTopBtn.classList.remove("hidden");
   } else {
-    scrollTopBtn.classList.add("hidden");
+    HTML.scrollTopBtn.classList.add("hidden");
   }
 
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-    scrollBottomBtn.classList.add("hidden");
+    HTML.scrollBottomBtn.classList.add("hidden");
   } else {
-    scrollBottomBtn.classList.remove("hidden");
+    HTML.scrollBottomBtn.classList.remove("hidden");
   }
 });
 

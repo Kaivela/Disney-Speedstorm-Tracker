@@ -1,9 +1,11 @@
 export type Language = 'fr' | 'en';
+export type UniversalBox = boolean | "season";
+export type Rarity = "Common" | "Rare" | "Epic";
 
 export interface Pilot {
   name: string;
   franchise: string;
-  rarity: string;
+  rarity: Rarity;
   role: string;
   currentStars: number;
   currentShards: number;
@@ -11,7 +13,7 @@ export interface Pilot {
   currentLevel: number;
   currentRMJ: number;
   highestRMJ: number;
-  universalBox: boolean | "season";
+  universalBox: UniversalBox;
   releaseSeason: string | number;
 
   // Calculated properties
@@ -27,11 +29,11 @@ export interface Pilot {
 
 export interface Crew {
   name: string;
-  rarity: "Common" | "Rare" | "Epic";
+  rarity: Rarity
   currentStars: number;
   currentShards: number;
   franchise: string;
-  universalBox?: boolean | "season";
+  universalBox?: UniversalBox;
 
   // Calculated properties
   shardsNeeded?: number;

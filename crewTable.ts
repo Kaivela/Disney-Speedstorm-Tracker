@@ -2,7 +2,7 @@ import { calculateCrewShardsNeeded, calculateTotal } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import crewsBlank from "./data/crews/crews_blank.json";
 import * as HTML from "./ElementById";
-import { Crew, Language } from "./types";
+import { Crew, Language, Rarity } from "./types";
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement: HTMLElement) {
@@ -182,7 +182,7 @@ function submitCrewForm(event: Event, lang: Language, editingCrewIndex: number |
     const editCrew: Crew = {
       franchise:
         HTML.crewFranchise2.value === "" ? franchise : HTML.crewFranchise2.value,
-      rarity: HTML.crewRarity.value as "Common" | "Rare" | "Epic",
+      rarity: HTML.crewRarity.value as Rarity,
       name: crewName,
       currentStars: crewCurrentStars,
       currentShards: crewCurrentShards,
@@ -354,8 +354,7 @@ export function sortCrewsByColumn(column: keyof Crew, order: string) {
 }
 
 export function emptyCrewsTable() {
-  const crewTableBody = document.getElementById("crewTableBody") as HTMLTableSectionElement;
-  crewTableBody.innerHTML = "";
+  HTML.crewTableBody.innerHTML = "";
 }
 
 export {

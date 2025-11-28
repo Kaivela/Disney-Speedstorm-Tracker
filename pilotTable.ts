@@ -11,7 +11,7 @@ import {
 import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import * as HTML from "./ElementById";
-import { Pilot, Language } from "./types";
+import { Pilot, Language, UniversalBox, Rarity } from "./types";
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement: HTMLElement) {
@@ -270,7 +270,7 @@ function submitPilotForm(event: Event, lang: Language, editingPilotIndex: number
     const editPilot: Pilot = {
       franchise:
         HTML.pilotFranchise2.value === "" ? franchise : HTML.pilotFranchise2.value,
-      rarity: HTML.pilotRarity.value,
+      rarity: HTML.pilotRarity.value as Rarity,
       role: HTML.role.value,
       name: pilotName,
       currentStars: pilotcurrentStars,
@@ -279,7 +279,7 @@ function submitPilotForm(event: Event, lang: Language, editingPilotIndex: number
       currentLevel: currentLevel,
       currentRMJ: parseInt(HTML.currentRMJ.value, 10),
       highestRMJ: parseInt(HTML.highestRMJ.value, 10),
-      universalBox: (pilot.universalBox || false) as boolean | "season",
+      universalBox: (pilot.universalBox || false) as UniversalBox,
       releaseSeason: pilot.releaseSeason || 0,
     };
     savePilotData(editPilot, editingPilotIndex);
@@ -539,8 +539,7 @@ export function sortPilotsByColumn(column: keyof Pilot, order: "asc" | "desc") {
 }
 
 export function emptyPilotsTable() {
-  const pilotTableBody = document.getElementById("pilotTableBody") as HTMLTableSectionElement;
-  pilotTableBody.innerHTML = "";
+  HTML.pilotTableBody.innerHTML = "";
 }
 
 function synchronizeLocalStorageWithPilotsBlank() {
@@ -549,7 +548,7 @@ function synchronizeLocalStorageWithPilotsBlank() {
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
     if (pilotBlank) {
-      pilot.universalBox = pilotBlank.universalBox as boolean | "season"; // Update universalBox to match pilots_blank.json
+      pilot.universalBox = pilotBlank.universalBox as UniversalBox; // Update universalBox to match pilots_blank.json
     }
   });
 
