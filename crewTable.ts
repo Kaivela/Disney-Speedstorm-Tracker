@@ -1,44 +1,45 @@
 import { calculateCrewShardsNeeded, calculateTotal } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import crewsBlank from "./data/crews/crews_blank.json";
-import * as HTML from "./ElementById.js";
+import * as HTML from "./ElementById";
+import { Crew, Language } from "./types";
 
 // Fonction utilitaire pour déterminer si le style doit être caché
-function getStyleIfActive(toggleElement) {
+function getStyleIfActive(toggleElement: HTMLElement) {
   return toggleElement.classList.contains("active") ? 'style="display: none;"' : "";
 }
 
-function updateCrewWithShardsNeeded(crew, index) {
+function updateCrewWithShardsNeeded(crew: Crew, index: number) {
   const shardsNeeded = calculateCrewShardsNeeded(crew);
   crew.shardsNeeded = shardsNeeded;
   saveCrewData(crew, index);
 }
 
 function updateCrewsWithShardsNeeded() {
-  const crews = JSON.parse(localStorage.getItem("crews")) || [];
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
   crews.forEach((crew, index) => {
     updateCrewWithShardsNeeded(crew, index);
   });
 }
 
 // Fonction pour ajouter un crew à la table
-function addCrewToTable(crew, index, lang, crewTableBody) {
+function addCrewToTable(crew: Crew, index: number, lang: Language, crewTableBody: HTMLTableSectionElement) {
   const getTrad = createGetTrad(lang);
 
   // Déterminez la classe en fonction de shardsNeeded
   let shardsClass = "";
   if (crew.shardsNeeded === 0) {
     shardsClass = "shards-needed-zero";
-  } else if (crew.rarity === "Epic" && crew.shardsNeeded > 0 && crew.shardsNeeded <= 25) {
+  } else if (crew.rarity === "Epic" && crew.shardsNeeded && crew.shardsNeeded > 0 && crew.shardsNeeded <= 25) {
     shardsClass = "shards-needed-warning";
-  } else if (crew.shardsNeeded > 20 && crew.shardsNeeded <= 50) {
+  } else if (crew.shardsNeeded && crew.shardsNeeded > 20 && crew.shardsNeeded <= 50) {
     shardsClass = "shards-needed-close";
-  } else if (crew.shardsNeeded > 0 && crew.shardsNeeded <= 20) {
+  } else if (crew.shardsNeeded && crew.shardsNeeded > 0 && crew.shardsNeeded <= 20) {
     shardsClass = "shards-needed-warning";
   }
 
   // Déterminer la classe de couleur en fonction du nombre d'étoiles
-  let starclass;
+  let starclass = "";
   if (crew.currentStars === 0) {
     starclass = "level-gray";
   } else if (crew.currentStars === 1) {
@@ -58,6 +59,8 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   row.classList.add("crew-row");
 
   const crewBlank = crewsBlank.find((blank) => blank.name === crew.name);
+  if (!crewBlank) return;
+
   let universalBox;
   if (crewBlank.universalBox === "season") universalBox = "🟣";
   else universalBox = crewBlank.universalBox ? "✔️" : "❌";
@@ -114,16 +117,16 @@ function addCrewToTable(crew, index, lang, crewTableBody) {
   translate(lang);
 }
 
-function addCrewsToTable(lang, crewTableBody) {
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
+function addCrewsToTable(lang: Language, crewTableBody: HTMLTableSectionElement) {
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
   crews.forEach((crew, index) => {
     addCrewToTable(crew, index, lang, crewTableBody);
   });
 }
 
 // Fonction pour enregistrer les données crews dans le stockage local
-function saveCrewData(crew, editingCrewIndex) {
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
+function saveCrewData(crew: Crew, editingCrewIndex: number | null) {
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
   if (editingCrewIndex !== null) {
     crews[editingCrewIndex] = crew;
   } else {
@@ -133,22 +136,22 @@ function saveCrewData(crew, editingCrewIndex) {
 }
 
 // Fonction pour pré-remplir le formulaire avec les données de l'équipier sélectionné
-function populateCrewForm(crew, lang) {
+function populateCrewForm(crew: Crew, lang: Language) {
   const getTrad = createGetTrad(lang);
   HTML.crewFranchise.value = getTrad(crew.franchise);
   HTML.crewRarity.value = crew.rarity;
   HTML.crewName.value = getTrad(crew.name);
-  HTML.crewCurrentStars.value = crew.currentStars;
-  HTML.crewCurrentShards.value = crew.currentShards;
-  HTML.crewUniversalBox.checked = crew.universalBox;
+  HTML.crewCurrentStars.value = crew.currentStars.toString();
+  HTML.crewCurrentShards.value = crew.currentShards.toString();
+  HTML.crewUniversalBox.checked = crew.universalBox === true;
 }
 
 //franchise list pour le crewForm
-function updateCrewFormFranchise(lang) {
+function updateCrewFormFranchise(lang: Language) {
   const getTrad = createGetTrad(lang);
   const franchiseNames = HTML.crewFranchise2;
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
-  const franchises = new Set();
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const franchises = new Set<string>();
   crews.forEach((crew) => {
     franchises.add(crew.franchise);
   });
@@ -162,30 +165,30 @@ function updateCrewFormFranchise(lang) {
   }
 }
 
-function submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, crewSubmitBtn, goal, levelGoal) {
+function submitCrewForm(event: Event, lang: Language, editingCrewIndex: number | null, crewTableBody: HTMLTableSectionElement, crewForm: HTMLFormElement, crewSubmitBtn: HTMLButtonElement, goal: number, levelGoal: number) {
   const getTrad = createGetTrad(lang);
   event.preventDefault();
 
   // Récupérer les valeurs du formulaire
-  const franchise = getTradKey(HTML.crewFranchise.value, lang);
-  const crewName = getTradKey(HTML.crewName.value, lang);
+  const franchise = getTradKey(HTML.crewFranchise.value, lang) || "";
+  const crewName = getTradKey(HTML.crewName.value, lang) || "";
   const crewCurrentStars = parseInt(HTML.crewCurrentStars.value, 10);
   const crewCurrentShards = parseInt(HTML.crewCurrentShards.value, 10);
 
-  let isValid = checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards);
+  const isValid = checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards);
 
   if (isValid) {
     // Créer l'objet crew
-    const editCrew = {
+    const editCrew: Crew = {
       franchise:
         HTML.crewFranchise2.value === "" ? franchise : HTML.crewFranchise2.value,
-      rarity: HTML.crewRarity.value,
+      rarity: HTML.crewRarity.value as "Common" | "Rare" | "Epic",
       name: crewName,
       currentStars: crewCurrentStars,
       currentShards: crewCurrentShards,
       universalBox: HTML.crewUniversalBox.checked,
     };
-    updateCrewWithShardsNeeded(editCrew, editingCrewIndex);
+    updateCrewWithShardsNeeded(editCrew, editingCrewIndex!);
     updateCrewFormFranchise(lang);
     crewTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
     addCrewsToTable(lang, crewTableBody);
@@ -196,13 +199,13 @@ function submitCrewForm(event, lang, editingCrewIndex, crewTableBody, crewForm, 
     crewSubmitBtn.style.display = "none";
     editingCrewIndex = null; // Réinitialiser l'index d'édition
 
-    document.documentElement.scrollTop = window.saveScroll;
+    // document.documentElement.scrollTop = window.saveScroll;
   }
 }
 
-function checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchise, crewCurrentShards) {
+function checkFormValidity(crewName: string, editingCrewIndex: number | null, crewCurrentStars: number, franchise: string, crewCurrentShards: number) {
   let isValid = true;
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
   const franchise2 = HTML.crewFranchise2.value;
   const crewFranchiseError = HTML.crewFranchiseError;
   const crewcurrentStarsError = HTML.crewCurrentStarsError;
@@ -248,21 +251,21 @@ function checkFormValidity(crewName, editingCrewIndex, crewCurrentStars, franchi
   return isValid;
 }
 
-function hideElement(element) {
+function hideElement(element: HTMLElement) {
   element.style.display = "none";
 }
 
-function showElement(element) {
+function showElement(element: HTMLElement) {
   element.style.display = "block";
 }
 
-function applyCrewSearch(searchTerm) {
+function applyCrewSearch(searchTerm: string) {
   const rows = document.querySelectorAll("#crewTableBody tr");
 
   rows.forEach((row) => {
-    const rowText = row.textContent.toLowerCase();
+    const rowText = row.textContent?.toLowerCase() || "";
     if (rowText.includes(searchTerm)) {
-      row.style.display = "";
+      (row as HTMLElement).style.display = "";
     }
   });
 }
@@ -270,8 +273,8 @@ function applyCrewSearch(searchTerm) {
 // fonction pour ordonner les équipiers automatiquement selon l'ordre du fichier crews_blank
 function sortCrewsBlank() {
   // load crews
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
-  let orderedCrews = {};
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const orderedCrews: { [key: string]: number } = {};
   crewsBlank.forEach((crew, index) => {
     orderedCrews[crew.name] = index;
   });
@@ -282,7 +285,7 @@ function sortCrewsBlank() {
   localStorage.setItem("crews", JSON.stringify(crews));
 }
 
-function filterCrewTable(lang) {
+function filterCrewTable(lang: Language) {
   const getTrad = createGetTrad(lang);
   const franchiseFilter = HTML.crewFranchiseFilter.value;
   const rarityFilter = HTML.crewRarityFilter.value;
@@ -297,19 +300,20 @@ function filterCrewTable(lang) {
     .filter(term => term.length > 0);
 
   rows.forEach((row) => {
-    row.style.display = "none";
-    const franchiseText = row.cells[1].textContent;
-    const rarityText = row.cells[2].textContent;
-    const starsText = row.cells[4].textContent;
-    const shardsNeededText = row.cells[6].textContent;
-    const boxesText = row.cells[7].textContent;
+    const tr = row as HTMLTableRowElement;
+    tr.style.display = "none";
+    const franchiseText = tr.cells[1].textContent || "";
+    const rarityText = tr.cells[2].textContent || "";
+    const starsText = tr.cells[4].textContent || "";
+    const shardsNeededText = tr.cells[6].textContent || "0";
+    const boxesText = tr.cells[7].textContent || "";
     const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
     const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
     const matchesStars = starsText.includes(starsFilter) || starsFilter === "";
     const matchesBoxes = boxesText.includes(boxesFilter) || boxesFilter === "";
     let matchesSearch = true;
     if (searchTerms.length > 0) {
-      const crewName = row.cells[3].textContent.toLowerCase();
+      const crewName = tr.cells[3].textContent?.toLowerCase() || "";
       matchesSearch = searchTerms.some(term => crewName.includes(term));
     }
     let matchesShards = true;
@@ -327,23 +331,30 @@ function filterCrewTable(lang) {
     }
 
     if (matchesFranchise && matchesRarity && matchesStars && matchesShards && matchesBoxes && matchesSearch) {
-      row.style.display = "";
+      tr.style.display = "";
     }
   });
 }
 
-export function sortCrewsByColumn(column, order) {
+export function sortCrewsByColumn(column: keyof Crew, order: string) {
   // load pilots
-  let crews = JSON.parse(localStorage.getItem("crews")) || [];
+  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
 
   crews.sort((crewA, crewB) => {
-    if (order === "asc") return crewA[column] - crewB[column];
-    return crewB[column] - crewA[column];
+    const valA = crewA[column];
+    const valB = crewB[column];
+    if (!valA && !valB) return 0;
+    if (!valA) return order === "asc" ? -1 : 1;
+    if (!valB) return order === "asc" ? 1 : -1;
+    if (valA < valB) return order === "asc" ? -1 : 1;
+    if (valA > valB) return order === "asc" ? 1 : -1;
+    return 0;
   });
   localStorage.setItem("crews", JSON.stringify(crews));
 }
 
 export function emptyCrewsTable() {
+  const crewTableBody = document.getElementById("crewTableBody") as HTMLTableSectionElement;
   crewTableBody.innerHTML = "";
 }
 

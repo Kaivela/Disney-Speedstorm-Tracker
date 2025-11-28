@@ -10,17 +10,16 @@ import {
 } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
-import * as HTML from "./ElementById.js";
-
-const pilotTableBody = document.getElementById("pilotTableBody");
+import * as HTML from "./ElementById";
+import { Pilot, Language } from "./types";
 
 // Fonction utilitaire pour déterminer si le style doit être caché
-function getStyleIfActive(toggleElement) {
+function getStyleIfActive(toggleElement: HTMLElement) {
   return toggleElement.classList.contains("active") ? 'style="display: none;"' : "";
 }
 
 // Fonction pour ajouter un pilote à la table
-function addPilotToTable(pilot, index, lang, pilotTableBody) {
+function addPilotToTable(pilot: Pilot, index: number, lang: Language, pilotTableBody: HTMLTableSectionElement) {
   const getTrad = createGetTrad(lang);
   const shardsNeeded = calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50);
   const shardsToNextStar = calculatePilotShardsNextStar(pilot.currentLevel, pilot.currentShards, pilot.currentStars);
@@ -57,7 +56,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
     superChargeClass = "superCharge";
   }
   // Déterminer la classe de couleur en fonction du niveau actuel
-  let levelClass;
+  let levelClass = "";
   if (pilot.currentLevel === 0) {
     levelClass = "level-gray";
   } else if (pilot.currentLevel >= 1 && pilot.currentLevel <= 10) {
@@ -78,7 +77,7 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
     levelClass = "level-black";
   }
 
-  let RMJClass;
+  let RMJClass = "";
   if (pilot.highestRMJ >= 1 && pilot.highestRMJ < 6) {
     RMJClass = "rmj-bronze";
   } else if (pilot.highestRMJ >= 6 && pilot.highestRMJ < 11) {
@@ -103,6 +102,8 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   const row = document.createElement("tr");
   row.classList.add("pilot-row");
   const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
+  if (!pilotBlank) return;
+
   let universalBox;
   if (pilotBlank.universalBox === "season") universalBox = "🟣";
   else universalBox = pilotBlank.universalBox ? "✔️" : "❌";
@@ -160,24 +161,25 @@ function addPilotToTable(pilot, index, lang, pilotTableBody) {
   pilotTableBody.appendChild(row);
   // Applique le `onerror` dynamiquement à l'image pour qu'elle affiche une image de secours si besoin
   const img = row.querySelector("img");
-  img.onerror = function () {
-    this.src = "img/Locked.webp";
-  };
+  if (img) {
+    img.onerror = function () {
+      (this as HTMLImageElement).src = "img/Locked.webp";
+    };
+  }
   translate(lang);
 }
 
-function addPilotsToTable(lang, pilotTableBody, goal) {
-  let pilots;
-  pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+function addPilotsToTable(lang: Language, pilotTableBody: HTMLTableSectionElement) {
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
 
   pilots.forEach((pilot, index) => {
-    addPilotToTable(pilot, index, lang, pilotTableBody, goal);
+    addPilotToTable(pilot, index, lang, pilotTableBody);
   });
 }
 
 // Fonction pour enregistrer les données pilots dans le stockage local
-function savePilotData(pilot, editingPilotIndex) {
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+function savePilotData(pilot: Pilot, editingPilotIndex: number | null) {
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
   if (editingPilotIndex !== null) {
     pilots[editingPilotIndex] = pilot;
   } else {
@@ -189,8 +191,8 @@ function savePilotData(pilot, editingPilotIndex) {
 // fonction pour ordonner les pilotes automatiquement selon l'ordre du fichier pilots_blank
 function sortPilotsBlank() {
   // load pilots
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
-  let orderedPilots = {};
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const orderedPilots: { [key: string]: number } = {};
   pilotsBlank.forEach((pilot, index) => {
     orderedPilots[pilot.name] = index;
   });
@@ -202,27 +204,27 @@ function sortPilotsBlank() {
 }
 
 // Fonction pour pré-remplir le formulaire avec les données du pilote sélectionné
-function populatePilotForm(pilot, lang) {
+function populatePilotForm(pilot: Pilot, lang: Language) {
   const getTrad = createGetTrad(lang);
   HTML.pilotFranchise.value = getTrad(pilot.franchise);
   HTML.pilotRarity.value = pilot.rarity;
   HTML.role.value = pilot.role;
   HTML.pilotName.value = getTrad(pilot.name);
-  HTML.pilotCurrentStars.value = pilot.currentStars;
-  HTML.pilotCurrentShards.value = pilot.currentShards;
-  HTML.pilotSuperShards.value = pilot.currentSuperShards;
-  HTML.currentLevel.value = pilot.currentLevel;
-  HTML.currentRMJ.value = pilot.currentRMJ;
-  HTML.highestRMJ.value = pilot.highestRMJ;
-  HTML.pilotUniversalBox.checked = pilot.universalBox;
+  HTML.pilotCurrentStars.value = pilot.currentStars.toString();
+  HTML.pilotCurrentShards.value = pilot.currentShards.toString();
+  HTML.pilotSuperShards.value = pilot.currentSuperShards.toString();
+  HTML.currentLevel.value = pilot.currentLevel.toString();
+  HTML.currentRMJ.value = pilot.currentRMJ.toString();
+  HTML.highestRMJ.value = pilot.highestRMJ.toString();
+  HTML.pilotUniversalBox.checked = pilot.universalBox === true;
 }
 
 //franchise list pour le pilotForm
-function updatePilotFormFranchise(lang) {
+function updatePilotFormFranchise(lang: Language) {
   const getTrad = createGetTrad(lang);
   const franchiseNames = HTML.pilotFranchise2;
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
-  const franchises = new Set();
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const franchises = new Set<string>();
   pilots.forEach((pilot) => {
     franchises.add(pilot.franchise);
   });
@@ -236,37 +238,36 @@ function updatePilotFormFranchise(lang) {
   }
 }
 
-function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotForm, pilotSubmitBtn, pilotMaxBtn, goal, levelGoal) {
+function submitPilotForm(event: Event, lang: Language, editingPilotIndex: number | null, pilotTableBody: HTMLTableSectionElement, pilotForm: HTMLFormElement, pilotSubmitBtn: HTMLButtonElement, pilotMaxBtn: HTMLButtonElement, goal: number, levelGoal: number) {
   const getTrad = createGetTrad(lang);
   event.preventDefault();
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
   const pilot =
     pilotsBlank.find((pilot) => {
       return getTrad(pilot.name) === HTML.pilotName.value;
-    }) || {};
+    }) || {} as Partial<Pilot>;
 
   // Récupérer les valeurs du formulaire
-  const franchise = getTradKey(HTML.pilotFranchise.value, lang);
-  const pilotName = getTradKey(HTML.pilotName.value, lang);
+  const franchise = getTradKey(HTML.pilotFranchise.value, lang) || "";
+  const pilotName = getTradKey(HTML.pilotName.value, lang) || "";
   const pilotcurrentStars = parseInt(HTML.pilotCurrentStars.value, 10);
   const pilotCurrentShards = parseInt(HTML.pilotCurrentShards.value, 10);
   const pilotCurrentSuperShards = parseInt(HTML.pilotSuperShards.value, 10);
   const currentLevel = parseInt(HTML.currentLevel.value, 10);
 
-  let isValid = checkFormValidity(
+  const isValid = checkFormValidity(
     pilotName,
     editingPilotIndex,
     pilots,
     pilotcurrentStars,
     currentLevel,
     pilotCurrentShards,
-    franchise,
     pilotCurrentSuperShards
   );
 
   if (isValid) {
     // Créer l'objet pilote
-    const editPilot = {
+    const editPilot: Pilot = {
       franchise:
         HTML.pilotFranchise2.value === "" ? franchise : HTML.pilotFranchise2.value,
       rarity: HTML.pilotRarity.value,
@@ -278,13 +279,13 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
       currentLevel: currentLevel,
       currentRMJ: parseInt(HTML.currentRMJ.value, 10),
       highestRMJ: parseInt(HTML.highestRMJ.value, 10),
-      universalBox: pilot.universalBox,
-      releaseSeason: pilot.releaseSeason,
+      universalBox: (pilot.universalBox || false) as boolean | "season",
+      releaseSeason: pilot.releaseSeason || 0,
     };
     savePilotData(editPilot, editingPilotIndex);
-    const sortColumn = document.querySelector("th[data-order]:not([data-order='default'])");
+    const sortColumn = document.querySelector("th[data-order]:not([data-order='default'])") as HTMLElement;
     if (sortColumn) {
-      sortPilotsByColumn(sortColumn.dataset.sort, sortColumn.dataset.order);
+      sortPilotsByColumn(sortColumn.dataset.sort as keyof Pilot, sortColumn.dataset.order as "asc" | "desc");
     } else {
       sortPilotsBlank();
     }
@@ -299,11 +300,11 @@ function submitPilotForm(event, lang, editingPilotIndex, pilotTableBody, pilotFo
     pilotMaxBtn.style.display = "none";
     editingPilotIndex = null; // Réinitialiser l'index d'édition
 
-    document.documentElement.scrollTop = window.saveScroll;
+    // document.documentElement.scrollTop = window.saveScroll;
   }
 }
 
-function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentStars, currentLevel, pilotCurrentShards, franchise, pilotCurrentSuperShards) {
+function checkFormValidity(pilotName: string, editingPilotIndex: number | null, pilots: Pilot[], pilotCurrentStars: number, currentLevel: number, pilotCurrentShards: number, pilotCurrentSuperShards: number) {
   let isValid = true;
   const currentRMJ = parseInt(HTML.currentRMJ.value, 10);
   const highestRMJ = parseInt(HTML.highestRMJ.value, 10);
@@ -324,10 +325,10 @@ function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentSta
     }
   }
   if (pilotCurrentStars < 0 || pilotCurrentStars > 7 || isNaN(pilotCurrentStars)) {
-    showElement(HTML.pilotcurrentStarsError);
+    showElement(HTML.pilotCurrentStarsError);
     isValid = false;
   } else {
-    hideElement(HTML.pilotcurrentStarsError);
+    hideElement(HTML.pilotCurrentStarsError);
   }
   if (currentLevel < 0 || currentLevel > 50 || isNaN(currentLevel)) {
     showElement(HTML.currentLevelError);
@@ -363,26 +364,26 @@ function checkFormValidity(pilotName, editingPilotIndex, pilots, pilotCurrentSta
   return isValid;
 }
 
-function hideElement(element) {
+function hideElement(element: HTMLElement) {
   element.style.display = "none";
 }
 
-function showElement(element) {
+function showElement(element: HTMLElement) {
   element.style.display = "block";
 }
 
-function applyPilotSearch(searchTerm) {
+function applyPilotSearch(searchTerm: string) {
   const rows = document.querySelectorAll("#pilotTableBody tr");
 
   rows.forEach((row) => {
-    const rowText = row.textContent.toLowerCase();
+    const rowText = row.textContent?.toLowerCase() || "";
     if (rowText.includes(searchTerm)) {
-      row.style.display = "";
+      (row as HTMLElement).style.display = "";
     }
   });
 }
 
-function filterPilotTable(lang) {
+function filterPilotTable(lang: Language) {
   const getTrad = createGetTrad(lang);
   const seasonFilter = HTML.pilotSeasonFilter.value;
   const franchiseFilter = HTML.pilotFranchiseFilter.value;
@@ -401,15 +402,16 @@ function filterPilotTable(lang) {
     .filter(term => term.length > 0);
 
   rows.forEach((row) => {
-    row.style.display = "none";
-    const seasonText = row.cells[0].textContent;
-    const franchiseText = row.cells[2].textContent;
-    const rarityText = row.cells[3].textContent;
-    const roleText = row.cells[4].textContent;
-    const levelText = row.cells[8].textContent;
-    const rmjText = row.cells[10].textContent;
-    const shardsNeededText = row.cells[13].textContent;
-    const boxesText = row.cells[16].textContent;
+    const tr = row as HTMLTableRowElement;
+    tr.style.display = "none";
+    const seasonText = tr.cells[0].textContent;
+    const franchiseText = tr.cells[2].textContent || "";
+    const rarityText = tr.cells[3].textContent || "";
+    const roleText = tr.cells[4].textContent || "";
+    const levelText = tr.cells[8].textContent || "0";
+    const rmjText = tr.cells[10].textContent || "0";
+    const shardsNeededText = tr.cells[13].textContent || "0";
+    const boxesText = tr.cells[16].textContent || "";
     const matchesSeason = seasonText === seasonFilter || seasonFilter === "";
     const matchesFranchise = franchiseText.includes(getTrad(franchiseFilter)) || franchiseFilter === "";
     const matchesRarity = rarityText.includes(getTrad(rarityFilter)) || rarityFilter === "";
@@ -476,7 +478,7 @@ function filterPilotTable(lang) {
 
     let matchesSearch = true;
     if (searchTerms.length > 0) {
-      const pilotName = row.cells[5].textContent.toLowerCase();
+      const pilotName = tr.cells[5].textContent?.toLowerCase() || "";
       matchesSearch = searchTerms.some(term => pilotName.includes(term));
     }
     if (
@@ -490,17 +492,17 @@ function filterPilotTable(lang) {
       matchesLevel &&
       matchesSearch
     ) {
-      row.style.display = "";
+      tr.style.display = "";
     }
   });
 }
 
-export function sortPilotsByColumn(column, order) {
+export function sortPilotsByColumn(column: keyof Pilot, order: "asc" | "desc") {
   // load pilots
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
 
   // Map column keys to calculation functions
-  const computedColumns = {
+  const computedColumns: { [key: string]: (pilot: Pilot) => number } = {
     shardsNeeded: (pilot) => calculatePilotShardsNeeded(pilot.currentLevel, pilot.currentShards, 50),
     shardsToGet: (pilot) => calculatePilotShardsToGet(pilot.highestRMJ, 40),
     upgradeCoins: (pilot) => calculateCoinsNeeded(pilot.currentLevel, 50),
@@ -522,8 +524,14 @@ export function sortPilotsByColumn(column, order) {
   } else {
     // Default: sort by property
     pilots.sort((pilotA, pilotB) => {
-      if (order === "asc") return pilotA[column] - pilotB[column];
-      return pilotB[column] - pilotA[column];
+      const valA = pilotA[column];
+      const valB = pilotB[column];
+      if (!valA && !valB) return 0;
+      if (!valA) return order === "asc" ? -1 : 1;
+      if (!valB) return order === "asc" ? 1 : -1;
+      if (valA < valB) return order === "asc" ? -1 : 1;
+      if (valA > valB) return order === "asc" ? 1 : -1;
+      return 0;
     });
   }
 
@@ -531,23 +539,24 @@ export function sortPilotsByColumn(column, order) {
 }
 
 export function emptyPilotsTable() {
+  const pilotTableBody = document.getElementById("pilotTableBody") as HTMLTableSectionElement;
   pilotTableBody.innerHTML = "";
 }
 
 function synchronizeLocalStorageWithPilotsBlank() {
-  let pilots = JSON.parse(localStorage.getItem("pilots")) || [];
+  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
 
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
     if (pilotBlank) {
-      pilot.universalBox = pilotBlank.universalBox; // Update universalBox to match pilots_blank.json
+      pilot.universalBox = pilotBlank.universalBox as boolean | "season"; // Update universalBox to match pilots_blank.json
     }
   });
 
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
     if (pilotBlank) {
-      pilot.superCharge = pilotBlank.superCharge; // Update superCharge to match pilots_blank.json
+      // pilot.superCharge = pilotBlank.superCharge; // Update superCharge to match pilots_blank.json
     }
   });
 
@@ -556,10 +565,10 @@ function synchronizeLocalStorageWithPilotsBlank() {
 
 // Fonction pour pré-remplir le formulaire avec les données du pilote sélectionné
 function maxPilotForm() {
-  HTML.pilotCurrentStars.value = 5
-  HTML.currentLevel.value = 50
-  HTML.currentRMJ.value = 40
-  HTML.highestRMJ.value = 40
+  HTML.pilotCurrentStars.value = "5";
+  HTML.currentLevel.value = "50";
+  HTML.currentRMJ.value = "40";
+  HTML.highestRMJ.value = "40";
 }
 
 export {
