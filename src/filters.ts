@@ -1,7 +1,7 @@
 import { calculatePilotShardsNeeded, calculateCrewShardsNeeded } from "./compute";
 import { createGetTrad } from "./trad";
-import pilotsBlank from "./data/pilots/pilots_blank.json";
-import crewsBlank from "./data/crews/crews_blank.json";
+import pilotsBlank from "../data/pilots/pilots_blank.json";
+import crewsBlank from "../data/crews/crews_blank.json";
 import * as HTML from "./ElementById";
 import { Pilot, Crew, Language } from "./types";
 

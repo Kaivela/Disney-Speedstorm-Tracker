@@ -1,5 +1,5 @@
-import fr from "./data/lang/FR.json";
-import en from "./data/lang/EN.json";
+import fr from "../data/lang/FR.json";
+import en from "../data/lang/EN.json";
 import { Language, TranslationData } from "./types";
 
 const trad: Record<Language, TranslationData> = { fr: fr as TranslationData, en: en as TranslationData };

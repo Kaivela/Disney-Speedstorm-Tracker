@@ -9,7 +9,7 @@ import {
   calculatePilotSuperShards
 } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
-import pilotsBlank from "./data/pilots/pilots_blank.json";
+import pilotsBlank from "../data/pilots/pilots_blank.json";
 import * as HTML from "./ElementById";
 import { Pilot, Language, UniversalBox, Rarity } from "./types";
 import { StorageService } from "./StorageService";

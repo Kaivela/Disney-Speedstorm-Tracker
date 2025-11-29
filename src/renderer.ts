@@ -23,8 +23,8 @@ import {
   synchronizeLocalStorageWithPilotsBlank,
   maxPilotForm
 } from "./pilotTable";
-import pilotsBlank from "./data/pilots/pilots_blank.json";
-import crewsBlank from "./data/crews/crews_blank.json";
+import pilotsBlank from "../data/pilots/pilots_blank.json";
+import crewsBlank from "../data/crews/crews_blank.json";
 import { createGetTrad, translate } from "./trad";
 import * as HTML from "./ElementById";
 import { Pilot, Crew, Settings, Language } from "./types";

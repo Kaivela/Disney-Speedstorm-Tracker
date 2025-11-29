@@ -13,10 +13,10 @@ import {
   epicCrewShardCost,
   starLevel,
   superChargeCost
-} from "./data/data";
+} from "../data/data";
 import { createGetTrad } from "./trad";
-import crewsBlank from "./data/crews/crews_blank.json";
-import pilotsBlank from "./data/pilots/pilots_blank.json";
+import crewsBlank from "../data/crews/crews_blank.json";
+import pilotsBlank from "../data/pilots/pilots_blank.json";
 import { Crew, Language, TotalStats } from "./types";
 import { StorageService } from "./StorageService";
 

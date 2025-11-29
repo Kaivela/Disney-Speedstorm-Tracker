@@ -1,6 +1,6 @@
 import { calculateCrewShardsNeeded, calculateTotal } from "./compute";
 import { createGetTrad, translate, getTradKey } from "./trad";
-import crewsBlank from "./data/crews/crews_blank.json";
+import crewsBlank from "../data/crews/crews_blank.json";
 import * as HTML from "./ElementById";
 import { Crew, Language, Rarity } from "./types";
 import { StorageService } from "./StorageService";
