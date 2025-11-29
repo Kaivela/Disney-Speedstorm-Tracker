@@ -1,4 +1,4 @@
-import { calculateRacerGoal, calculateTotal, resetForm, calculateTokens } from "./compute";
+import { calculateRacerGoal, calculateTotal, calculateTokens } from "./compute";
 import {
   populateCrewForm,
   updateCrewFormFranchise,
@@ -28,9 +28,12 @@ import crewsBlank from "./data/crews/crews_blank.json";
 import { createGetTrad, translate } from "./trad";
 import * as HTML from "./ElementById";
 import { Pilot, Crew, Settings, Language } from "./types";
+import { StorageService } from "./StorageService";
+import { UIManager } from "./UIManager";
 
-const settingsStr = localStorage.getItem("settings");
-const settings = (settingsStr ? JSON.parse(settingsStr) : {}) as Settings;
+const storage = StorageService.getInstance();
+const uiManager = UIManager.getInstance();
+const settings = storage.getSettings();
 
 let theme = "";
 let dark = false;
@@ -65,9 +68,18 @@ function resetFilters() {
   }
 }
 
-HTML.resetButton.addEventListener("click", () => { resetForm() });
-HTML.calcButton.addEventListener("click", () => { calculateRacerGoal(lang) });
-HTML.endOfSeasonCalcButton.addEventListener("click", () => { calculateTokens() });
+HTML.resetButton.addEventListener("click", () => { uiManager.resetCalcForm() });
+HTML.calcButton.addEventListener("click", () => {
+  const racerName = HTML.calcPilotName.value;
+  const racerLevelGoal = parseInt(HTML.calcPilotLevelGoal.value, 10);
+  const result = calculateRacerGoal(lang, racerName, racerLevelGoal);
+  uiManager.displayRacerGoalResult(result);
+});
+HTML.endOfSeasonCalcButton.addEventListener("click", () => {
+  const endOfSeasonCoins = parseInt(HTML.endOfSeasonCoins.value, 10);
+  const result = calculateTokens(endOfSeasonCoins);
+  uiManager.displayTokensResult(result);
+});
 HTML.resetPilotFiltersBtn.addEventListener("click", () => { resetFilters() });
 HTML.resetCrewFiltersBtn.addEventListener("click", () => { resetFilters() });
 
@@ -128,10 +140,11 @@ function changeLang() {
   updateCrewFormFranchise(lang);
   updatePlaceholders();
   translate(lang);
-  calculateTotal(lang, goal, levelGoal);
+  const stats = calculateTotal(goal, levelGoal);
+  uiManager.updateTotalStats(stats, levelGoal, lang);
   switchTheme();
   updateCalculateOptions(lang);
-  resetForm();
+  uiManager.resetCalcForm();
   HTML.selectTheme.value = theme;
 }
 
@@ -169,7 +182,7 @@ function clickModifyPilot(event: Event) {
     window.saveScroll = document.documentElement.scrollTop;
     HTML.pilotCurrentStars.focus();
     const index = parseInt(target.dataset.index!, 10);
-    const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+    const pilots = storage.getPilots();
     const pilot = pilots[index];
     populatePilotForm(pilot, lang);
     HTML.pilotSubmitBtn.textContent = getTrad("update_pilot"); // Changer le texte du bouton lors de la modification
@@ -184,7 +197,7 @@ function clickModifyCrew(event: Event) {
   if (target.classList.contains("edit-btn")) {
     HTML.crewCurrentStars.focus();
     const index = parseInt(target.dataset.index!, 10);
-    const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+    const crews = storage.getCrews();
     const crew = crews[index];
     populateCrewForm(crew, lang);
     HTML.crewSubmitBtn.textContent = getTrad("update_crew"); // Changer le texte du bouton lors de la modification
@@ -277,7 +290,7 @@ HTML.pilotImportButton.addEventListener("click", () => {
       reader.onload = (event) => {
         const text = event.target?.result as string;
         const pilots = JSON.parse(text) as Pilot[];
-        localStorage.setItem("pilots", JSON.stringify(pilots));
+        storage.savePilots(pilots);
         HTML.pilotTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
         addPilotsToTable(lang, HTML.pilotTableBody);
         updatePilotFormFranchise(lang);
@@ -289,7 +302,7 @@ HTML.pilotImportButton.addEventListener("click", () => {
 });
 
 HTML.pilotExportButton.addEventListener("click", () => {
-  const pilots = JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[];
+  const pilots = storage.getPilots();
   const filename = "pilots.json";
   const text = JSON.stringify(pilots, null, 2);
   download(filename, text);
@@ -307,7 +320,7 @@ HTML.crewImportButton.addEventListener("click", () => {
       reader.onload = (event) => {
         const text = event.target?.result as string;
         const crews = JSON.parse(text) as Crew[];
-        localStorage.setItem("crews", JSON.stringify(crews));
+        storage.saveCrews(crews);
         HTML.crewTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
         addCrewsToTable(lang, HTML.crewTableBody);
         updateCrewFormFranchise(lang);
@@ -319,7 +332,7 @@ HTML.crewImportButton.addEventListener("click", () => {
 });
 
 HTML.crewExportButton.addEventListener("click", () => {
-  const crews = JSON.parse(localStorage.getItem("crews") || "[]") as Crew[];
+  const crews = storage.getCrews();
   const filename = "crews.json";
   const text = JSON.stringify(crews, null, 2);
   download(filename, text);
@@ -375,12 +388,14 @@ function changeButtonColor(button: HTMLElement) {
 function switchGoal() {
   goal = parseInt(HTML.goalSelect.value, 10);
   // goal = goal === 40 ? (goal = 31) : (goal = 40);
-  calculateTotal(lang, goal, levelGoal);
+  const stats = calculateTotal(goal, levelGoal);
+  uiManager.updateTotalStats(stats, levelGoal, lang);
 }
 
 function switchLevelGoal() {
   levelGoal = parseInt(HTML.levelGoalSelect.value, 10);
-  calculateTotal(lang, goal, levelGoal);
+  const stats = calculateTotal(goal, levelGoal);
+  uiManager.updateTotalStats(stats, levelGoal, lang);
 }
 
 function switchTheme() {
@@ -443,21 +458,21 @@ function switchTable(newMode: string) {
 }
 
 function mergePilotsAndCrews() {
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
   pilotsBlank.forEach((pilot) => {
     const existingPilot = pilots.find((p) => p.name === pilot.name);
     if (!existingPilot) {
       pilots.push(pilot as Pilot);
     }
-    localStorage.setItem("pilots", JSON.stringify(pilots));
+    storage.savePilots(pilots);
   });
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   crewsBlank.forEach((crew) => {
     const existingCrew = crews.find((c) => c.name === crew.name);
     if (!existingCrew) {
       crews.push(crew as Crew);
     }
-    localStorage.setItem("crews", JSON.stringify(crews));
+    storage.saveCrews(crews);
   });
 }
 
@@ -486,12 +501,12 @@ function saveSettings() {
     // dark,
     transparant,
   };
-  localStorage.setItem("settings", JSON.stringify(settings));
+  storage.saveSettings(settings);
   closeSettings();
 }
 
 function loadSettings() {
-  const settings = (JSON.parse(localStorage.getItem("settings") || "{}") as Settings);
+  const settings = storage.getSettings();
 
   goal = settings.goal || 40;
   HTML.goalSelect.value = goal.toString();
@@ -502,7 +517,8 @@ function loadSettings() {
   levelGoal = settings.levelGoal || 50;
   HTML.levelGoalSelect.value = levelGoal.toString();
 
-  calculateTotal(lang, goal, levelGoal);
+  const stats = calculateTotal(goal, levelGoal);
+  uiManager.updateTotalStats(stats, levelGoal, lang);
 
   HTML.selectTheme.value = settings.theme || "";
   theme = settings.theme || "";
@@ -519,7 +535,7 @@ function toggleDarkMode() {
   HTML.darkMode.checked = dark;
   const newTheme = dark ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+  storage.saveTheme(newTheme);
 
   if (HTML.transparantMode.checked) {
     activateTransparancy();
@@ -529,7 +545,7 @@ function toggleDarkMode() {
 }
 
 function isDarkModeActive() {
-  if (localStorage.getItem("theme") === "dark") {
+  if (storage.getTheme() === "dark") {
     HTML.darkMode.checked = true;
   }
 }
@@ -545,7 +561,7 @@ function toggleTransparancy() {
 }
 
 function deactivateTransparancy() {
-  if (localStorage.getItem("theme") === "dark") {
+  if (storage.getTheme() === "dark") {
     document.documentElement.style.setProperty("--bg-color-odd", `#000b1a`);
     document.documentElement.style.setProperty("--bg-color-even", `#001b40`);
   } else {
@@ -555,7 +571,7 @@ function deactivateTransparancy() {
 }
 
 function activateTransparancy() {
-  if (localStorage.getItem("theme") === "dark") {
+  if (storage.getTheme() === "dark") {
     document.documentElement.style.setProperty("--bg-color-odd", `#000b1ab3`);
     document.documentElement.style.setProperty("--bg-color-even", `#001b40b3`);
   } else {
@@ -576,7 +592,7 @@ function isTransparancyActive() {
 }
 
 function applyTheme() {
-  const savedTheme = localStorage.getItem("theme");
+  const savedTheme = storage.getTheme();
   const userPreferedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
   const theme = savedTheme || userPreferedTheme;
@@ -616,7 +632,7 @@ function assignPilotProperty<K extends keyof Pilot>(target: Pilot, source: Pilot
 
 function updateLocalStorage() {
   const newProps = ['currentSuperShards', 'releaseSeason', "superCharge"] as const;
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
   pilots.forEach(pilot => {
     newProps.forEach(newProp => {
       if (!Object.prototype.hasOwnProperty.call(pilot, newProp)) {
@@ -627,7 +643,7 @@ function updateLocalStorage() {
       }
     })
   })
-  localStorage.setItem("pilots", JSON.stringify(pilots));
+  storage.savePilots(pilots);
 }
 
 // Charger les données des pilotes au démarrage
@@ -645,7 +661,8 @@ document.addEventListener("DOMContentLoaded", () => {
   translate(lang);
   updateCrewsWithShardsNeeded();
   synchronizeLocalStorageWithPilotsBlank();
-  calculateTotal(lang, goal, levelGoal);
+  const stats = calculateTotal(goal, levelGoal);
+  uiManager.updateTotalStats(stats, levelGoal, lang);
   switchTheme();
   bindSettingsEvents();
   loadSettings();

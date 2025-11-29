@@ -51,3 +51,25 @@ export interface Settings {
 export interface TranslationData {
   [key: string]: string;
 }
+
+export interface TotalStats {
+  allCoins: number;
+  allShardsNeeded: number;
+  seasonShardsNeeded: number;
+  midSeasonShardsNeeded: number;
+  allSuperShardsNeeded: number;
+  allRegularShards: number;
+  universalBoxCount: number;
+  uniBoxCost: number;
+  seasonCoins: number;
+  upgradeCoins: number;
+  tokensToGet: number;
+  cosmeticToGet: number;
+  totalCommonShardsNeeded: number;
+  totalRareShardsNeeded: number;
+  totalEpicShardsNeeded: number;
+  totalFreeCrewShardsNeededCalculated: number;
+  crewSeasonCoinsNeeded: number;
+  crewSeasonNumber: number;
+  rmj40Count: number;
+}

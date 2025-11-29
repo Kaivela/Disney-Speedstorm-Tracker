@@ -12,6 +12,10 @@ import { createGetTrad, translate, getTradKey } from "./trad";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
 import * as HTML from "./ElementById";
 import { Pilot, Language, UniversalBox, Rarity } from "./types";
+import { StorageService } from "./StorageService";
+import { UIManager } from "./UIManager";
+
+const storage = StorageService.getInstance();
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement: HTMLElement) {
@@ -170,7 +174,7 @@ function addPilotToTable(pilot: Pilot, index: number, lang: Language, pilotTable
 }
 
 function addPilotsToTable(lang: Language, pilotTableBody: HTMLTableSectionElement) {
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
 
   pilots.forEach((pilot, index) => {
     addPilotToTable(pilot, index, lang, pilotTableBody);
@@ -179,19 +183,19 @@ function addPilotsToTable(lang: Language, pilotTableBody: HTMLTableSectionElemen
 
 // Fonction pour enregistrer les données pilots dans le stockage local
 function savePilotData(pilot: Pilot, editingPilotIndex: number | null) {
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
   if (editingPilotIndex !== null) {
     pilots[editingPilotIndex] = pilot;
   } else {
     pilots.push(pilot);
   }
-  localStorage.setItem("pilots", JSON.stringify(pilots));
+  storage.savePilots(pilots);
 }
 
 // fonction pour ordonner les pilotes automatiquement selon l'ordre du fichier pilots_blank
 function sortPilotsBlank() {
   // load pilots
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
   const orderedPilots: { [key: string]: number } = {};
   pilotsBlank.forEach((pilot, index) => {
     orderedPilots[pilot.name] = index;
@@ -200,7 +204,7 @@ function sortPilotsBlank() {
     return orderedPilots[pilotA.name] - orderedPilots[pilotB.name];
   });
 
-  localStorage.setItem("pilots", JSON.stringify(pilots));
+  storage.savePilots(pilots);
 }
 
 // Fonction pour pré-remplir le formulaire avec les données du pilote sélectionné
@@ -223,7 +227,7 @@ function populatePilotForm(pilot: Pilot, lang: Language) {
 function updatePilotFormFranchise(lang: Language) {
   const getTrad = createGetTrad(lang);
   const franchiseNames = HTML.pilotFranchise2;
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
   const franchises = new Set<string>();
   pilots.forEach((pilot) => {
     franchises.add(pilot.franchise);
@@ -241,7 +245,7 @@ function updatePilotFormFranchise(lang: Language) {
 function submitPilotForm(event: Event, lang: Language, editingPilotIndex: number | null, pilotTableBody: HTMLTableSectionElement, pilotForm: HTMLFormElement, pilotSubmitBtn: HTMLButtonElement, pilotMaxBtn: HTMLButtonElement, goal: number, levelGoal: number) {
   const getTrad = createGetTrad(lang);
   event.preventDefault();
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
   const pilot =
     pilotsBlank.find((pilot) => {
       return getTrad(pilot.name) === HTML.pilotName.value;
@@ -294,7 +298,8 @@ function submitPilotForm(event: Event, lang: Language, editingPilotIndex: number
     addPilotsToTable(lang, pilotTableBody);
     filterPilotTable(lang);
     pilotForm.reset();
-    calculateTotal(lang, goal, levelGoal);
+    const stats = calculateTotal(goal, levelGoal);
+    UIManager.getInstance().updateTotalStats(stats, levelGoal, lang);
     pilotSubmitBtn.textContent = getTrad("add_pilot"); // Réinitialiser le texte du bouton après ajout
     pilotSubmitBtn.style.display = "none";
     pilotMaxBtn.style.display = "none";
@@ -499,7 +504,7 @@ function filterPilotTable(lang: Language) {
 
 export function sortPilotsByColumn(column: keyof Pilot, order: "asc" | "desc") {
   // load pilots
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
 
   // Map column keys to calculation functions
   const computedColumns: { [key: string]: (pilot: Pilot) => number } = {
@@ -535,7 +540,7 @@ export function sortPilotsByColumn(column: keyof Pilot, order: "asc" | "desc") {
     });
   }
 
-  localStorage.setItem("pilots", JSON.stringify(pilots));
+  storage.savePilots(pilots);
 }
 
 export function emptyPilotsTable() {
@@ -543,7 +548,7 @@ export function emptyPilotsTable() {
 }
 
 function synchronizeLocalStorageWithPilotsBlank() {
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+  const pilots = storage.getPilots();
 
   pilots.forEach((pilot) => {
     const pilotBlank = pilotsBlank.find((blank) => blank.name === pilot.name);
@@ -559,7 +564,7 @@ function synchronizeLocalStorageWithPilotsBlank() {
     }
   });
 
-  localStorage.setItem("pilots", JSON.stringify(pilots)); // Save updated pilots back to local storage
+  storage.savePilots(pilots); // Save updated pilots back to local storage
 }
 
 // Fonction pour pré-remplir le formulaire avec les données du pilote sélectionné

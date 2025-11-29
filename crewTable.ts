@@ -3,6 +3,10 @@ import { createGetTrad, translate, getTradKey } from "./trad";
 import crewsBlank from "./data/crews/crews_blank.json";
 import * as HTML from "./ElementById";
 import { Crew, Language, Rarity } from "./types";
+import { StorageService } from "./StorageService";
+import { UIManager } from "./UIManager";
+
+const storage = StorageService.getInstance();
 
 // Fonction utilitaire pour déterminer si le style doit être caché
 function getStyleIfActive(toggleElement: HTMLElement) {
@@ -16,7 +20,7 @@ function updateCrewWithShardsNeeded(crew: Crew, index: number) {
 }
 
 function updateCrewsWithShardsNeeded() {
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   crews.forEach((crew, index) => {
     updateCrewWithShardsNeeded(crew, index);
   });
@@ -118,7 +122,7 @@ function addCrewToTable(crew: Crew, index: number, lang: Language, crewTableBody
 }
 
 function addCrewsToTable(lang: Language, crewTableBody: HTMLTableSectionElement) {
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   crews.forEach((crew, index) => {
     addCrewToTable(crew, index, lang, crewTableBody);
   });
@@ -126,13 +130,13 @@ function addCrewsToTable(lang: Language, crewTableBody: HTMLTableSectionElement)
 
 // Fonction pour enregistrer les données crews dans le stockage local
 function saveCrewData(crew: Crew, editingCrewIndex: number | null) {
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   if (editingCrewIndex !== null) {
     crews[editingCrewIndex] = crew;
   } else {
     crews.push(crew);
   }
-  localStorage.setItem("crews", JSON.stringify(crews));
+  storage.saveCrews(crews);
 }
 
 // Fonction pour pré-remplir le formulaire avec les données de l'équipier sélectionné
@@ -150,7 +154,7 @@ function populateCrewForm(crew: Crew, lang: Language) {
 function updateCrewFormFranchise(lang: Language) {
   const getTrad = createGetTrad(lang);
   const franchiseNames = HTML.crewFranchise2;
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   const franchises = new Set<string>();
   crews.forEach((crew) => {
     franchises.add(crew.franchise);
@@ -194,7 +198,8 @@ function submitCrewForm(event: Event, lang: Language, editingCrewIndex: number |
     addCrewsToTable(lang, crewTableBody);
     filterCrewTable(lang);
     crewForm.reset();
-    calculateTotal(lang, goal, levelGoal);
+    const stats = calculateTotal(goal, levelGoal);
+    UIManager.getInstance().updateTotalStats(stats, levelGoal, lang);
     crewSubmitBtn.textContent = getTrad("add_crew"); // Réinitialiser le texte du bouton après ajout
     crewSubmitBtn.style.display = "none";
     editingCrewIndex = null; // Réinitialiser l'index d'édition
@@ -205,7 +210,7 @@ function submitCrewForm(event: Event, lang: Language, editingCrewIndex: number |
 
 function checkFormValidity(crewName: string, editingCrewIndex: number | null, crewCurrentStars: number, franchise: string, crewCurrentShards: number) {
   let isValid = true;
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   const franchise2 = HTML.crewFranchise2.value;
   const crewFranchiseError = HTML.crewFranchiseError;
   const crewcurrentStarsError = HTML.crewCurrentStarsError;
@@ -273,7 +278,7 @@ function applyCrewSearch(searchTerm: string) {
 // fonction pour ordonner les équipiers automatiquement selon l'ordre du fichier crews_blank
 function sortCrewsBlank() {
   // load crews
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   const orderedCrews: { [key: string]: number } = {};
   crewsBlank.forEach((crew, index) => {
     orderedCrews[crew.name] = index;
@@ -282,7 +287,7 @@ function sortCrewsBlank() {
     return orderedCrews[crewA.name] - orderedCrews[crewB.name];
   });
 
-  localStorage.setItem("crews", JSON.stringify(crews));
+  storage.saveCrews(crews);
 }
 
 function filterCrewTable(lang: Language) {
@@ -338,7 +343,7 @@ function filterCrewTable(lang: Language) {
 
 export function sortCrewsByColumn(column: keyof Crew, order: string) {
   // load pilots
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
 
   crews.sort((crewA, crewB) => {
     const valA = crewA[column];
@@ -350,7 +355,7 @@ export function sortCrewsByColumn(column: keyof Crew, order: string) {
     if (valA > valB) return order === "asc" ? 1 : -1;
     return 0;
   });
-  localStorage.setItem("crews", JSON.stringify(crews));
+  storage.saveCrews(crews);
 }
 
 export function emptyCrewsTable() {

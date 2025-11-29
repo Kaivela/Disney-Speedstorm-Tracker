@@ -17,8 +17,10 @@ import {
 import { createGetTrad } from "./trad";
 import crewsBlank from "./data/crews/crews_blank.json";
 import pilotsBlank from "./data/pilots/pilots_blank.json";
-import * as HTML from "./ElementById";
-import { Pilot, Crew, Language } from "./types";
+import { Crew, Language, TotalStats } from "./types";
+import { StorageService } from "./StorageService";
+
+const storage = StorageService.getInstance();
 
 const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck", "Mike Wazowski", "Meg", "Jessie", "Stitch", "Hercules", "Goofy", "Elsa", "EVE", "Belle", "Ortensia", "Mulan", "Celia Mae", "Steamboat Pete", "Fear", "Shang", "Vanellope"]
 
@@ -256,10 +258,9 @@ function calculateFreeCrewShardsNeeded(crews: Crew[]) {
 }
 
 // Fonction pour calculer le total des shards nécéssaire pour maxer chaque pilote
-function calculateTotal(lang: Language, goal: number, levelGoal: number) {
-  const getTrad = createGetTrad(lang);
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
+function calculateTotal(goal: number, levelGoal: number): TotalStats {
+  const crews = storage.getCrews();
+  const pilots = storage.getPilots();
   let allCoins = 0;
   let allShardsNeeded = 0;
   let seasonShardsNeeded = 0;
@@ -354,56 +355,6 @@ function calculateTotal(lang: Language, goal: number, levelGoal: number) {
     totalFreeCrewShardsNeeded.totalRareShardsNeeded +
     totalFreeCrewShardsNeeded.totalEpicShardsNeeded
 
-  // formater les nombres avec des points pour l'affichage
-  const allCoinsStr = formatNumberWithDots(allCoins);
-  const allShardsNeededStr = formatNumberWithDots(allShardsNeeded);
-  const seasonShardsNeededStr = formatNumberWithDots(seasonShardsNeeded);
-  const midSeasonShardsNeededStr = formatNumberWithDots(midSeasonShardsNeeded);
-  const allFreeShardsStr = formatNumberWithDots(allFreeShards);
-  const universalBoxCountStr = formatNumberWithDots(universalBoxCount);
-  const seasonCoinsStr = formatNumberWithDots(seasonCoins);
-  const upgradeCoinsStr = formatNumberWithDots(upgradeCoins);
-  const tokensToGetStr = formatNumberWithDots(tokensToGet);
-  const cosmeticToGetStr = formatNumberWithDots(cosmeticToGet);
-  const totalCommonShardsNeededStr =
-    formatNumberWithDots(totalFreeCrewShardsNeeded.totalCommonShardsNeeded);
-  const totalRareShardsNeededStr =
-    formatNumberWithDots(totalFreeCrewShardsNeeded.totalRareShardsNeeded);
-  const totalEpicShardsNeededStr =
-    formatNumberWithDots(totalFreeCrewShardsNeeded.totalEpicShardsNeeded);
-  const totalFreeCrewShardsNeededCalculatedStr = formatNumberWithDots(totalFreeCrewShardsNeededCalculated);
-
-  // Afficher les résultats dans le HTML
-  HTML.allCoins.textContent = allCoinsStr;
-  HTML.levelGoal.textContent = levelGoal + " : ";
-  HTML.allShards.textContent = allShardsNeededStr;
-  HTML.seasonShards.textContent = seasonShardsNeededStr;
-  HTML.midSeasonShards.textContent = midSeasonShardsNeededStr;
-  HTML.allSuperShards.textContent = allSuperShardsNeeded.toString();
-  HTML.allRegularShards.textContent = allFreeShardsStr;
-  HTML.universalBoxCount.textContent = universalBoxCountStr;
-  HTML.uniBoxCost.textContent = formatNumberWithDots(uniBoxCost);
-  HTML.seasonCoins.textContent = seasonCoinsStr;
-  HTML.upgradeCoins.textContent = upgradeCoinsStr;
-  HTML.tokens.textContent = tokensToGetStr;
-  HTML.cosmetic.textContent = cosmeticToGetStr;
-  HTML.crewFreeShards.textContent =
-    getTrad("Common") +
-    ": " +
-    totalCommonShardsNeededStr +
-    " " +
-    getTrad("Rare") +
-    ": " +
-    totalRareShardsNeededStr +
-    " " +
-    getTrad("Epic") +
-    ": " +
-    totalEpicShardsNeededStr +
-    " Total : " +
-    totalFreeCrewShardsNeededCalculatedStr;
-  HTML.crewSeasonCoinsNeeded.textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCoins);
-  HTML.crewSeasonNumber.textContent = formatNumberWithDots(calculateTotalSeasonCoinsForCrews().totalCrew);
-
   // Calcul du nombre de pilotes à monter RMJ 40
   let rmj40Count = 0;
   pilots.forEach((pilot) => {
@@ -411,34 +362,39 @@ function calculateTotal(lang: Language, goal: number, levelGoal: number) {
       rmj40Count++;
     }
   });
-  HTML.rmj40Count.textContent = rmj40Count.toString();
+
+  const crewSeasonStats = calculateTotalSeasonCoinsForCrews();
+
+  return {
+    allCoins,
+    allShardsNeeded,
+    seasonShardsNeeded,
+    midSeasonShardsNeeded,
+    allSuperShardsNeeded,
+    allRegularShards,
+    universalBoxCount,
+    uniBoxCost,
+    seasonCoins,
+    upgradeCoins,
+    tokensToGet,
+    cosmeticToGet,
+    totalCommonShardsNeeded: totalFreeCrewShardsNeeded.totalCommonShardsNeeded,
+    totalRareShardsNeeded: totalFreeCrewShardsNeeded.totalRareShardsNeeded,
+    totalEpicShardsNeeded: totalFreeCrewShardsNeeded.totalEpicShardsNeeded,
+    totalFreeCrewShardsNeededCalculated,
+    crewSeasonCoinsNeeded: crewSeasonStats.totalCoins,
+    crewSeasonNumber: crewSeasonStats.totalCrew,
+    rmj40Count
+  };
 }
 
-// Fonction pour mettre un point tous les 3 caractères pour les calculs a afficher
-function formatNumberWithDots(number: number): string {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-}
-
-// Fonction pour reset les données du formulaire caclPilotLevelGoal
-function resetForm() {
-  HTML.calcPilotName.value = "";
-  HTML.calcPilotLevelGoal.value = "";
-  HTML.calcResult.textContent = "";
-  HTML.calcResult.style.display = "none";
-}
-
-function calculateRacerGoal(lang: Language) {
+function calculateRacerGoal(lang: Language, racerName: string, racerLevelGoal: number): string {
   const getTrad = createGetTrad(lang);
-  const racerName = HTML.calcPilotName.value;
-  const racerLevelGoal = parseInt(HTML.calcPilotLevelGoal.value, 10);
-  const pilots = (JSON.parse(localStorage.getItem("pilots") || "[]") as Pilot[]);
-  HTML.calcResult.style.display = "block";
-
+  const pilots = storage.getPilots();
 
   const pilot = pilots.find((pilot) => pilot.name === racerName);
   if (!pilot) {
-    HTML.calcResult.textContent = getTrad("pilot_not_found");
-    return;
+    return getTrad("pilot_not_found");
   }
 
   const racer = getTrad("racer");
@@ -462,37 +418,31 @@ function calculateRacerGoal(lang: Language) {
   const shardsToFarm = shardNeeded - shardsToGet
 
   if (pilot.currentLevel >= racerLevelGoal) {
-    HTML.calcResult.innerHTML =
-      `${racer} ${racerName} ${already1} ${racerLevelGoal} ${more}`;
+    return `${racer} ${racerName} ${already1} ${racerLevelGoal} ${more}`;
   } else if (shardNeeded <= 0) {
-    HTML.calcResult.innerHTML =
-      `${racer} ${racerName} ${already2} ${racerLevelGoal}
-      <br>${need} ${coinsNeeded} ${upCoins}`
+    return `${racer} ${racerName} ${already2} ${racerLevelGoal}
+      <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardNeeded > 0 && shardNeeded < 5 && shardsToGet > 0) {
-    HTML.calcResult.innerHTML =
-      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
+    return `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${farm1} ${shardNeeded} ${shards} ${boost} ${farm2} ${shardsToGet} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToFarm <= 0) {
-    HTML.calcResult.innerHTML =
-      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
+    return `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else if (shardsToGet <= 0) {
-    HTML.calcResult.innerHTML =
-      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
+    return `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   } else {
-    HTML.calcResult.innerHTML =
-      `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
+    return `${reach} ${racerLevelGoal} ${need} ${shardNeeded} ${shards}
       <br>${shardsToGet} ${shards} ${rmj} ${and} ${shardsToFarm} ${farm3} ${boost}
       <br>${need} ${coinsNeeded} ${upCoins}`;
   }
 }
 
 function calculateTotalSeasonCoinsForCrews() {
-  const crews = (JSON.parse(localStorage.getItem("crews") || "[]") as Crew[]);
+  const crews = storage.getCrews();
   // Filter for Walt Disney World and Wall-E, and only Common/Rare
   const targetCollections = ["Walt Disney World", "WALL-E"];
   let totalCoins = 0;
@@ -515,11 +465,9 @@ function calculateTotalSeasonCoinsForCrews() {
 }
 
 //for each 2500 coins in the end of season calc you get 1 token
-function calculateTokens() {
-  const endOfSeasonCoins = parseInt(HTML.endOfSeasonCoins.value, 10);
+function calculateTokens(endOfSeasonCoins: number): string {
   const tokens = Math.floor(endOfSeasonCoins / 2500);
-  HTML.endOfSeasonCoinsResult.textContent = "Tokens : " + tokens;
-  HTML.endOfSeasonCoinsResult.style.display = "block"
+  return "Tokens : " + tokens;
 }
 
 export {
@@ -533,7 +481,6 @@ export {
   calculateCoinsNextStar,
   calculatePilotShardIfMaxMPR,
   calculatePilotSuperShards,
-  resetForm,
   calculateRacerGoal,
   calculateTotalSeasonCoinsForCrews,
   calculateTokens
