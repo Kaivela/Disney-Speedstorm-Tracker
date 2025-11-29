@@ -53,12 +53,6 @@ const sortCrewButtons = document.querySelectorAll("#crewTable th[data-sort]");
 let editingPilotIndex: number | null = null; // Pour suivre quel pilote est en cours de modification
 let editingCrewIndex: number | null = null; // Pour suivre quel equipier est en cours de modification
 
-// Fonction pour afficher le Formulaiure de calcul seulement si on est en Pilot Mode
-function showCalculateIfPilotMode() {
-  if (mode === "pilot") { HTML.calculateForm.style.display = "", HTML.endOfSeasonCalc.style.display = ""; }
-  if (mode === "crew") { HTML.calculateForm.style.display = "none", HTML.endOfSeasonCalc.style.display = "none"; }
-}
-
 function resetFilters() {
   if (mode === "pilot") {
     HTML.pilotSearchInput.value = "";
@@ -226,8 +220,8 @@ document.querySelectorAll(".crewFilter").forEach((filter) => {
   filter.addEventListener("change", () => filterCrewTable(lang));
 });
 
-HTML.pilotMode.addEventListener("click", () => { switchTable("pilot"); showCalculateIfPilotMode() });
-HTML.crewMode.addEventListener("click", () => { switchTable("crew"); showCalculateIfPilotMode() });
+HTML.pilotMode.addEventListener("click", () => { switchTable("pilot") });
+HTML.crewMode.addEventListener("click", () => { switchTable("crew") });
 HTML.goalSelect.addEventListener("change", () => switchGoal());
 HTML.levelGoalSelect.addEventListener("change", () => switchLevelGoal());
 HTML.selectTheme.addEventListener("change", () => {

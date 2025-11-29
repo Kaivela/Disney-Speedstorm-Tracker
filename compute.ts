@@ -517,10 +517,9 @@ function calculateTotalSeasonCoinsForCrews() {
 //for each 2500 coins in the end of season calc you get 1 token
 function calculateTokens() {
   const endOfSeasonCoins = parseInt(HTML.endOfSeasonCoins.value, 10);
-  const endOfSeasonCoinsResult = HTML.endOfSeasonCoinsResult;
   const tokens = Math.floor(endOfSeasonCoins / 2500);
-  endOfSeasonCoinsResult.textContent = "Tokens : " + tokens;
-  endOfSeasonCoinsResult.style.display = "block;"
+  HTML.endOfSeasonCoinsResult.textContent = "Tokens : " + tokens;
+  HTML.endOfSeasonCoinsResult.style.display = "block"
 }
 
 export {

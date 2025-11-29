@@ -380,7 +380,12 @@ button:hover {
   }
 }
 
+#pilotSupercharge {
+  padding-left: 0%;
+}
+
 .search-filter-container {
+  display: flex;
   gap: 10px;
   margin: auto;
   width: fit-content;
@@ -1265,4 +1270,8 @@ input:checked+.slider:before {
 
 .calcul>div:first-child {
   display: inline;
+}
+
+.reset {
+  transform: translateY(-15px);
 }

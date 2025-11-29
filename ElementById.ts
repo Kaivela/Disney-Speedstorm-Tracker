@@ -43,6 +43,7 @@ export const role = document.getElementById("role") as HTMLSelectElement;
 export const pilotName = document.getElementById("pilotName") as HTMLInputElement;
 export const pilotNameError = document.getElementById("pilotNameError") as HTMLDivElement;
 export const pilotDuplicateError = document.getElementById("pilotDuplicateError") as HTMLDivElement;
+export const pilotSupercharge = document.getElementById("pilotSupercharge") as HTMLSpanElement;
 export const pilotCurrentStars = document.getElementById("pilotCurrentStars") as HTMLInputElement;
 export const pilotCurrentStarsError = document.getElementById("pilotCurrentStarsError") as HTMLDivElement;
 export const pilotCurrentShards = document.getElementById("pilotCurrentShards") as HTMLInputElement;
