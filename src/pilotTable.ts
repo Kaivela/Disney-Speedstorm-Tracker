@@ -139,7 +139,7 @@ function addPilotToTable(pilot: Pilot, index: number, lang: Language, pilotTable
   row.innerHTML = `
   <td ${styles.pilotSeason}>${pilot.releaseSeason}</td>
   <td style="padding: 0; border: none; display: block; height: 80px; ${styles.pilotImage}">
-      <img src="img/pilots/${pilot.name}.webp" style="width: 80px; height: auto;">
+      <img src="/img/pilots/${pilot.name}.webp" style="width: 80px; height: auto;">
   </td>
   <td data-trad="${pilot.franchise}" ${styles.pilotFranchise}>${getTrad(pilot.franchise)}</td>
   <td data-trad="${pilot.rarity}" ${styles.pilotRarity} class="${pilot.rarity}">${getTrad(pilot.rarity)}</td>
@@ -167,7 +167,7 @@ function addPilotToTable(pilot: Pilot, index: number, lang: Language, pilotTable
   const img = row.querySelector("img");
   if (img) {
     img.onerror = function () {
-      (this as HTMLImageElement).src = "img/Locked.webp";
+      (this as HTMLImageElement).src = "/img/Locked.webp";
     };
   }
   translate(lang);

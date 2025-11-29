@@ -522,7 +522,7 @@ function loadSettings() {
 
   HTML.selectTheme.value = settings.theme || "";
   theme = settings.theme || "";
-  HTML.background.style.backgroundImage = `url("img/backgrounds/background season${HTML.selectTheme.value}.webp")`;
+  HTML.background.style.backgroundImage = `url("/img/backgrounds/background season${HTML.selectTheme.value}.webp")`;
 
   dark = settings.dark || false;
 

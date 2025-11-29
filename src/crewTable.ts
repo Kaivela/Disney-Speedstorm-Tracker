@@ -106,7 +106,7 @@ function addCrewToTable(crew: Crew, index: number, lang: Language, crewTableBody
 
   row.innerHTML = `
     <td style="padding: 0; border: none; display: block; height: 80px; ${styles.crewImage}">
-      <img onerror="this.src='img/Locked.webp'" src="img/crews/${crew.name}.webp" style="width: 80px; height: auto;">
+      <img onerror="this.src='/img/Locked.webp'" src="/img/crews/${crew.name}.webp" style="width: 80px; height: auto;">
     </td>
     <td data-trad="${crew.franchise}" ${styles.crewFranchise}>${getTrad(crew.franchise)}</td>
     <td data-trad="${crew.rarity}" ${styles.crewRarity} class="${crew.rarity}">${getTrad(crew.rarity)}</td>

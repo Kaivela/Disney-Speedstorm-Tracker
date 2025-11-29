@@ -475,39 +475,39 @@ button:hover {
 }
 
 .rmj-bronze {
-  background-image: url("img/Bronze.webp");
+  background-image: url("/img/Bronze.webp");
 }
 
 .rmj-argent {
-  background-image: url("img/Silver.webp");
+  background-image: url("/img/Silver.webp");
 }
 
 .rmj-gold {
-  background-image: url("img/Gold.webp");
+  background-image: url("/img/Gold.webp");
 }
 
 .rmj-platine {
-  background-image: url("img/Platinum.webp");
+  background-image: url("/img/Platinum.webp");
 }
 
 .rmj-emeraude {
-  background-image: url("img/Emerald.webp");
+  background-image: url("/img/Emerald.webp");
 }
 
 .rmj-diamant {
-  background-image: url("img/Diamond.webp");
+  background-image: url("/img/Diamond.webp");
 }
 
 .rmj-champion {
-  background-image: url("img/Champion.webp");
+  background-image: url("/img/Champion.webp");
 }
 
 .rmj-grand-champion {
-  background-image: url("img/GrandChampion.webp");
+  background-image: url("/img/GrandChampion.webp");
 }
 
 .rmj-ultime {
-  background-image: url("img/UltimateChampion.webp");
+  background-image: url("/img/UltimateChampion.webp");
 }
 
 .rmj-bronze,
@@ -555,11 +555,11 @@ button:hover {
 }
 
 .upgradeCoin {
-  background-image: url("img/Upgrade Coins.webp");
+  background-image: url("/img/Upgrade Coins.webp");
 }
 
 .star {
-  background-image: url("img/Star.webp");
+  background-image: url("/img/Star.webp");
 }
 
 th.star,
