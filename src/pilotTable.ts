@@ -305,7 +305,7 @@ function submitPilotForm(event: Event, lang: Language, editingPilotIndex: number
     pilotMaxBtn.style.display = "none";
     editingPilotIndex = null; // Réinitialiser l'index d'édition
 
-    // document.documentElement.scrollTop = window.saveScroll;
+    document.documentElement.scrollTop = (window as any).saveScroll;
   }
 }
 

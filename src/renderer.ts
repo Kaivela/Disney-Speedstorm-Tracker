@@ -180,6 +180,7 @@ function clickModifyPilot(event: Event) {
   const target = event.target as HTMLElement;
   if (target.classList.contains("edit-btn")) {
     window.saveScroll = document.documentElement.scrollTop;
+    document.documentElement.scrollTop = 0;
     HTML.pilotCurrentStars.focus();
     const index = parseInt(target.dataset.index!, 10);
     const pilots = storage.getPilots();
@@ -195,6 +196,8 @@ function clickModifyPilot(event: Event) {
 function clickModifyCrew(event: Event) {
   const target = event.target as HTMLElement;
   if (target.classList.contains("edit-btn")) {
+    window.saveScroll = document.documentElement.scrollTop;
+    document.documentElement.scrollTop = 0;
     HTML.crewCurrentStars.focus();
     const index = parseInt(target.dataset.index!, 10);
     const crews = storage.getCrews();

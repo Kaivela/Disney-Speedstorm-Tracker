@@ -204,7 +204,7 @@ function submitCrewForm(event: Event, lang: Language, editingCrewIndex: number |
     crewSubmitBtn.style.display = "none";
     editingCrewIndex = null; // Réinitialiser l'index d'édition
 
-    // document.documentElement.scrollTop = window.saveScroll;
+    document.documentElement.scrollTop = (window as any).saveScroll;
   }
 }
 
