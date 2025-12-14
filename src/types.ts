@@ -57,6 +57,9 @@ export interface TotalStats {
   allShardsNeeded: number;
   seasonShardsNeeded: number;
   midSeasonShardsNeeded: number;
+  allCrewShardsNeeded: number;
+  crewSeasonShardsNeeded: number;
+  crewMidSeasonShardsNeeded: number;
   allSuperShardsNeeded: number;
   allRegularShards: number;
   universalBoxCount: number;

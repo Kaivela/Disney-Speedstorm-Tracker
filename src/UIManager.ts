@@ -26,6 +26,9 @@ export class UIManager {
         const allShardsNeededStr = formatNumberWithDots(stats.allShardsNeeded);
         const seasonShardsNeededStr = formatNumberWithDots(stats.seasonShardsNeeded);
         const midSeasonShardsNeededStr = formatNumberWithDots(stats.midSeasonShardsNeeded);
+        const allCrewShardsNeededStr = formatNumberWithDots(stats.allCrewShardsNeeded);
+        const crewSeasonShardsNeededStr = formatNumberWithDots(stats.crewSeasonShardsNeeded);
+        const crewMidSeasonShardsNeededStr = formatNumberWithDots(stats.crewMidSeasonShardsNeeded);
         const allFreeShardsStr = formatNumberWithDots(stats.allRegularShards);
         const universalBoxCountStr = formatNumberWithDots(stats.universalBoxCount);
         const seasonCoinsStr = formatNumberWithDots(stats.seasonCoins);
@@ -43,6 +46,9 @@ export class UIManager {
         HTML.allShards.textContent = allShardsNeededStr;
         HTML.seasonShards.textContent = seasonShardsNeededStr;
         HTML.midSeasonShards.textContent = midSeasonShardsNeededStr;
+        HTML.allCrewShards.textContent = allCrewShardsNeededStr;
+        HTML.crewSeasonShards.textContent = crewSeasonShardsNeededStr;
+        HTML.crewMidSeasonShards.textContent = crewMidSeasonShardsNeededStr;
         HTML.allSuperShards.textContent = stats.allSuperShardsNeeded.toString();
         HTML.allRegularShards.textContent = allFreeShardsStr;
         HTML.universalBoxCount.textContent = universalBoxCountStr;

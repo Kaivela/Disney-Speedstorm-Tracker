@@ -265,6 +265,9 @@ function calculateTotal(goal: number, levelGoal: number): TotalStats {
   let allShardsNeeded = 0;
   let seasonShardsNeeded = 0;
   let midSeasonShardsNeeded = 0;
+  let allCrewShardsNeeded = 0;
+  let crewSeasonShardsNeeded = 0;
+  let crewMidSeasonShardsNeeded = 0;
   let allRegularShards = 0;
   let universalBoxCount = 0;
   let shardsToGet = 0;
@@ -363,6 +366,16 @@ function calculateTotal(goal: number, levelGoal: number): TotalStats {
     }
   });
 
+  crews.forEach((crew) => {
+    crew.shardsNeeded = calculateCrewShardsNeeded(crew);
+    allCrewShardsNeeded += crew.shardsNeeded;
+    if (crew.universalBox === true) {
+      crewSeasonShardsNeeded += crew.shardsNeeded;
+    } else {
+      crewMidSeasonShardsNeeded += crew.shardsNeeded;
+    }
+  });
+
   const crewSeasonStats = calculateTotalSeasonCoinsForCrews();
 
   return {
@@ -370,6 +383,9 @@ function calculateTotal(goal: number, levelGoal: number): TotalStats {
     allShardsNeeded,
     seasonShardsNeeded,
     midSeasonShardsNeeded,
+    allCrewShardsNeeded,
+    crewSeasonShardsNeeded,
+    crewMidSeasonShardsNeeded,
     allSuperShardsNeeded,
     allRegularShards,
     universalBoxCount,
