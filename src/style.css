@@ -220,6 +220,7 @@ table {
 
 thead {
   position: sticky;
+  top: 0;
 }
 
 th,
