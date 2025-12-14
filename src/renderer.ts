@@ -297,6 +297,8 @@ HTML.pilotImportButton.addEventListener("click", () => {
         HTML.pilotTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
         addPilotsToTable(lang, HTML.pilotTableBody);
         updatePilotFormFranchise(lang);
+        const stats = calculateTotal(goal, levelGoal);
+        uiManager.updateTotalStats(stats, levelGoal, lang);
       };
       reader.readAsText(file);
     }
@@ -327,6 +329,8 @@ HTML.crewImportButton.addEventListener("click", () => {
         HTML.crewTableBody.innerHTML = ""; // Vide le tableau avant de le remplir
         addCrewsToTable(lang, HTML.crewTableBody);
         updateCrewFormFranchise(lang);
+        const stats = calculateTotal(goal, levelGoal);
+        uiManager.updateTotalStats(stats, levelGoal, lang);
       };
       reader.readAsText(file);
     }
