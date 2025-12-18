@@ -400,7 +400,8 @@ function calculateTotal(goal: number, levelGoal: number): TotalStats {
     totalFreeCrewShardsNeededCalculated,
     crewSeasonCoinsNeeded: crewSeasonStats.totalCoins,
     crewSeasonNumber: crewSeasonStats.totalCrew,
-    rmj40Count
+    rmj40Count,
+    allFreeShards
   };
 }
 

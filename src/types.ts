@@ -75,4 +75,5 @@ export interface TotalStats {
   crewSeasonCoinsNeeded: number;
   crewSeasonNumber: number;
   rmj40Count: number;
+  allFreeShards: number;
 }

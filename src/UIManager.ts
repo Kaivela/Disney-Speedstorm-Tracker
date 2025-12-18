@@ -29,7 +29,7 @@ export class UIManager {
         const allCrewShardsNeededStr = formatNumberWithDots(stats.allCrewShardsNeeded);
         const crewSeasonShardsNeededStr = formatNumberWithDots(stats.crewSeasonShardsNeeded);
         const crewMidSeasonShardsNeededStr = formatNumberWithDots(stats.crewMidSeasonShardsNeeded);
-        const allFreeShardsStr = formatNumberWithDots(stats.allRegularShards);
+        const allFreeShardsStr = formatNumberWithDots(stats.allFreeShards);
         const universalBoxCountStr = formatNumberWithDots(stats.universalBoxCount);
         const seasonCoinsStr = formatNumberWithDots(stats.seasonCoins);
         const upgradeCoinsStr = formatNumberWithDots(stats.upgradeCoins);
