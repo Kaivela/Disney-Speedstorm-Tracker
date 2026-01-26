@@ -22,7 +22,7 @@ import { StorageService } from "./StorageService";
 
 const storage = StorageService.getInstance();
 
-const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck", "Mike Wazowski", "Meg", "Jessie", "Stitch", "Hercules", "Goofy", "Elsa", "EVE", "Belle", "Ortensia", "Mulan", "Celia Mae", "Steamboat Pete", "Fear", "Shang", "Vanellope", "Bo Peep", "Buzz Lightyear", "Oswald", "Hades","Fix-it Felix"]
+const superChargedPilotsName = ["Mickey Mouse", "Elizabeth Swann", "Hans", "Kristoff", "Lilo", "Donald Duck", "Mike Wazowski", "Meg", "Jessie", "Stitch", "Hercules", "Goofy", "Elsa", "EVE", "Belle", "Ortensia", "Mulan", "Celia Mae", "Steamboat Pete", "Fear", "Shang", "Vanellope", "Bo Peep", "Buzz Lightyear", "Oswald", "Hades","Fix-it Felix","Kermit the Frog"]
 
 // Fonction pour calculer les shards nécessaires en fonction du niveau actuel
 function calculatePilotShardsNeeded(currentLevel: number, currentShards: number, levelGoal: number): number {
