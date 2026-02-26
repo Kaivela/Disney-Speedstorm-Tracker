@@ -1616,6 +1616,23 @@
   },
   {
     "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "role": "Speedster",
+    "name": "Go Go Tomago",
+    "currentStars": 0,
+    "currentShards": 0,
+    "currentSuperShards": 0,
+    "currentLevel": 0,
+    "currentRMJ": 0,
+    "highestRMJ": 0,
+    "universalBox": "Season",
+    "rmjTokenOld": false,
+    "rmjCoin": "S10",
+    "releaseSeason": 18,
+    "superCharge": false
+  },
+  {
+    "franchise": "Big Hero 6",
     "rarity": "Epic",
     "role": "Trickster",
     "name": "Hiro",
