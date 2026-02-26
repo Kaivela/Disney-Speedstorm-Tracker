@@ -3611,5 +3611,139 @@
     "currentShards": 0,
     "universalBox": false,
     "exclusiveTo": "Yzma"
-  }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "franchise": "Cars",
+    "rarity": "Common",
+    "name": "Cal Weathers",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Common",
+    "name": "Sheriff",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Common",
+    "name": "Red",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Rare",
+    "name": "Francesco Bernoulli",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Rare",
+    "name": "Finn McMissile",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Rare",
+    "name": "Flo",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Epic",
+    "name": "Sterling",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Cruz Ramirez"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Epic",
+    "name": "Guido",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Lightning McQueen"
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Epic",
+    "name": "Holley Shiftwell",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Tow Mater"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "franchise": "Hoppers",
+    "rarity": "Common",
+    "name": "Tom",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Rare",
+    "name": "Ellen",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Rare",
+    "name": "Loaf",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Epic",
+    "name": "King Georges",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Mabel"
+  }  
 ]
