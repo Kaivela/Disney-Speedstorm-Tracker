@@ -2935,7 +2935,14 @@
 
 
 
-
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Judy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
+  },
   {
     "franchise": "Big Hero 6",
     "rarity": "Common",
@@ -2967,6 +2974,14 @@
     "currentStars": 0,
     "currentShards": 0,
     "universalBox": true
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Aunt Cass",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false
   },
   {
     "franchise": "Big Hero 6",
@@ -3008,6 +3023,15 @@
     "currentShards": 0,
     "universalBox": true,
     "exclusiveTo": "Baymax"
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Wasabi",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Go Go Tamago"
   },
   {
     "franchise": "Big Hero 6",
