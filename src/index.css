@@ -1,0 +1,64 @@
+h1 {
+  text-align: center;
+}
+
+.Header {
+  border: 1px solid black;
+}
+
+.btn {
+  border: 1px solid black;
+  background-color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-group {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-group button {
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.btn-group button:hover {
+  background-color: #f0f0f0;
+}
+
+.HeaderBtns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.AccountStats {
+  height: 300px;
+  border: 1px solid black;
+}
+
+.OptionBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}

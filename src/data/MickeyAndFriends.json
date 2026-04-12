@@ -1,0 +1,375 @@
+{
+    "racers": [
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Daisy Duck",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 0,
+            "rarity": "Rare",
+            "role": "Brawler",
+            "name": "Donald Duck",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Goofy",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Mickey",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Steamboat Mickey",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Steamboat Pete",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Scroodge McDuck",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Minnie Mouse",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        },
+        {
+            "releaseSeason": 3,
+            "rarity": "Common",
+            "role": "Trickster",
+            "name": "Pete",
+            "currentStars": 0,
+            "currentStarFragment": 0,
+            "currentShards": 0,
+            "superCharge": true,
+            "currentSuperChargeLevel": 0,
+            "currentSuperChargeShards": 0,
+            "currentRMJ": 0,
+            "highestRMJ": 0,
+            "universalBox": false,
+            "rmjTokenOld": true,
+            "rmjCoin": "old"
+        }
+    ],
+    "crews": [
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Magica De Spell",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Tanglefoot",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Clara Cluck",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Tootsie The Penguin",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Chief O'Hara",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Wilbur",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Pedro",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Morty And Ferdie Fildmouse",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Clarabelle Cow",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Common",
+            "name": "Gus Goose",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Webby Vanderquack",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Salty The Seal",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Millie And Melody Mouse",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Humphrey The Bear",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Goat",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Lonesome Ghosts",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Horace Horsecollar",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Rare",
+            "name": "Chip 'N Dale",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "April, May, and June",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false,
+            "exclusiveTo": "Daisy Duck"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "José Carioca And Panchito",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true,
+            "exclusiveTo": "Donald Duck"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "Gilbert Goof",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true,
+            "exclusiveTo": "Goofy"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "Pluto",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": true,
+            "exclusiveTo": "Mickey Mouse"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "Fifi The Peke",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false,
+            "exclusiveTo": "Minnie"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "Huey, Dewey And Louie",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false,
+            "exclusiveTo": "Scrooge Mcduck"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "Caroline Cow",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false,
+            "exclusiveTo": "Steamboat Mickey"
+        },
+        {
+            "franchise": "Mickey & Friends",
+            "rarity": "Epic",
+            "name": "Parrot",
+            "currentStars": 0,
+            "currentShards": 0,
+            "universalBox": false,
+            "exclusiveTo": "Steamboat Pete"
+        }
+    ]
+}
