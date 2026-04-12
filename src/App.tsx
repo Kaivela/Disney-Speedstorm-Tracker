@@ -1,7 +1,7 @@
-import './App.css'
-import { Table } from './components/Table'
-import { Header } from './components/Header'
-import { Filters } from './components/Filters'
+import './App.css';
+import { Table } from './components/Table';
+import { Header } from './components/Header';
+import { Filters } from './components/Filters';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Filters />
       <Table />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

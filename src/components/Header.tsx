@@ -1,25 +1,17 @@
 function ExportBtn() {
-  return (
-    <button className="btn">Export</button>
-  )
+  return <button className="btn">Export</button>;
 }
 
 function ImportBtn() {
-  return (
-    <button className="btn">Import</button>
-  )
+  return <button className="btn">Import</button>;
 }
 
 function RacerTableBtn() {
-  return (
-    <button>Racer</button>
-  )
+  return <button>Racer</button>;
 }
 
 function CrewTableBtn() {
-  return (
-    <button>Crew</button>
-  )
+  return <button>Crew</button>;
 }
 
 function AccountStats() {
@@ -27,15 +19,12 @@ function AccountStats() {
     <div className="AccountStats">
       <span>Account Stats</span>
     </div>
-  )
+  );
 }
 
 function OptionsBtn() {
-  return  ( 
-    <button className="OptionBtn">Options</button>
-  )
+  return <button className="OptionBtn">Options</button>;
 }
-
 
 export function Header() {
   return (
@@ -48,12 +37,11 @@ export function Header() {
           <CrewTableBtn />
         </span>
         <div>
-          <ExportBtn /> 
+          <ExportBtn />
           <ImportBtn />
         </div>
       </div>
       <AccountStats />
     </header>
-  )
+  );
 }
-
