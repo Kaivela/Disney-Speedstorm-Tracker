@@ -19,25 +19,16 @@ export function Table() {
             <th data-sort="currentStars" className="current_stars">
               Current Stars
             </th>
-            <th
-              data-sort="currentStarFragment"
-              data-trad="current_starfragment_table"
-            >
+            <th data-sort="currentStarFragment" data-trad="current_starfragment_table">
               Current StarFragment
             </th>
             <th data-sort="currentShards" data-trad="current_shards_table">
               Current Shards
             </th>
-            <th
-              data-sort="currentSuperChargeLevel"
-              data-trad="current_super_charge_level_table"
-            >
+            <th data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table">
               Current SuperCharge Level
             </th>
-            <th
-              data-sort="currentSuperChargeShards"
-              data-trad="current_super_charge_shards_table"
-            >
+            <th data-sort="currentSuperChargeShards" data-trad="current_super_charge_shards_table">
               Current SuperCharge Shards
             </th>
             <th data-sort="currentRMJ" data-trad="current_MPR_table">
@@ -69,12 +60,10 @@ export function Table() {
             <th data-trad="actions">Actions</th>
           </tr>
         </thead>
-        <tbody id="racerTableBody">
-          {/* Les données des pilotes seront ajoutées ici */}
-        </tbody>
+        <tbody id="racerTableBody">{/* Les données des pilotes seront ajoutées ici */}</tbody>
       </table>
     );
-  } else if (mode === 'crew') {
+  } else {
     return (
       <table id="crewTable">
         <thead>
@@ -93,12 +82,10 @@ export function Table() {
               Shards Needed
             </th>
             <th data-trad="free_table">Free</th>
-            <th data-trad="actions"></th>
+            <th data-trad="actions">Action</th>
           </tr>
         </thead>
-        <tbody id="crewTableBody">
-          {/* Les données des crews seront ajoutées ici */}
-        </tbody>
+        <tbody id="crewTableBody">{/* Les données des crews seront ajoutées ici */}</tbody>
       </table>
     );
   }
