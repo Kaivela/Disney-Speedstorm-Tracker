@@ -156,7 +156,6 @@
   ],
   "crews": [
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Magica De Spell",
       "currentStars": 0,
@@ -164,7 +163,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Tanglefoot",
       "currentStars": 0,
@@ -172,7 +170,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Clara Cluck",
       "currentStars": 0,
@@ -180,7 +177,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Tootsie The Penguin",
       "currentStars": 0,
@@ -188,7 +184,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Chief O'Hara",
       "currentStars": 0,
@@ -196,7 +191,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Wilbur",
       "currentStars": 0,
@@ -204,7 +198,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Pedro",
       "currentStars": 0,
@@ -212,7 +205,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Morty And Ferdie Fildmouse",
       "currentStars": 0,
@@ -220,7 +212,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Clarabelle Cow",
       "currentStars": 0,
@@ -228,7 +219,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Common",
       "name": "Gus Goose",
       "currentStars": 0,
@@ -236,7 +226,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Webby Vanderquack",
       "currentStars": 0,
@@ -244,7 +233,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Salty The Seal",
       "currentStars": 0,
@@ -252,7 +240,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Millie And Melody Mouse",
       "currentStars": 0,
@@ -260,7 +247,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Humphrey The Bear",
       "currentStars": 0,
@@ -268,7 +254,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Goat",
       "currentStars": 0,
@@ -276,7 +261,6 @@
       "universalBox": false
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Lonesome Ghosts",
       "currentStars": 0,
@@ -284,7 +268,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Horace Horsecollar",
       "currentStars": 0,
@@ -292,7 +275,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Rare",
       "name": "Chip 'N Dale",
       "currentStars": 0,
@@ -300,7 +282,6 @@
       "universalBox": true
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "April, May, and June",
       "currentStars": 0,
@@ -309,7 +290,6 @@
       "exclusiveTo": "Daisy Duck"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "José Carioca And Panchito",
       "currentStars": 0,
@@ -318,7 +298,6 @@
       "exclusiveTo": "Donald Duck"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "Gilbert Goof",
       "currentStars": 0,
@@ -327,7 +306,6 @@
       "exclusiveTo": "Goofy"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "Pluto",
       "currentStars": 0,
@@ -336,7 +314,6 @@
       "exclusiveTo": "Mickey Mouse"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "Fifi The Peke",
       "currentStars": 0,
@@ -345,7 +322,6 @@
       "exclusiveTo": "Minnie"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "Huey, Dewey And Louie",
       "currentStars": 0,
@@ -354,7 +330,6 @@
       "exclusiveTo": "Scrooge Mcduck"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "Caroline Cow",
       "currentStars": 0,
@@ -363,7 +338,6 @@
       "exclusiveTo": "Steamboat Mickey"
     },
     {
-      "franchise": "Mickey & Friends",
       "rarity": "Epic",
       "name": "Parrot",
       "currentStars": 0,

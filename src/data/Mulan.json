@@ -1,0 +1,106 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Mulan",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentRMJ": 0,
+      "highestRMJ": 0,
+      "universalBox": false,
+      "rmjTokenOld": true,
+      "rmjCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Defender",
+      "name": "Shang",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentRMJ": 0,
+      "highestRMJ": 0,
+      "universalBox": false,
+      "rmjTokenOld": true,
+      "rmjCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "franchise": "Mulan",
+      "rarity": "Common",
+      "name": "The Emperor Of China",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Common",
+      "name": "Fa Zhou",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Common",
+      "name": "Khan",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Common",
+      "name": "Chi-Fu",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Rare",
+      "name": "Yao, Ling, And Chien Po",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Rare",
+      "name": "Cri-Kee",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Epic",
+      "name": "Mushu",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Mulan"
+    },
+    {
+      "franchise": "Mulan",
+      "rarity": "Epic",
+      "name": "General Li",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Shang"
+    }
+  ]
+}
