@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { ModeContext } from '../context/AppContext';
+
 function ExportBtn() {
   return <button className="btn">Export</button>;
 }
@@ -7,11 +10,29 @@ function ImportBtn() {
 }
 
 function RacerTableBtn() {
-  return <button>Racer</button>;
+  const { setMode } = useContext(ModeContext);
+  return (
+    <button
+      onClick={() => {
+        setMode('racer');
+      }}
+    >
+      Racer
+    </button>
+  );
 }
 
 function CrewTableBtn() {
-  return <button>Crew</button>;
+  const { setMode } = useContext(ModeContext);
+  return (
+    <button
+      onClick={() => {
+        setMode('crew');
+      }}
+    >
+      Crew
+    </button>
+  );
 }
 
 function AccountStats() {

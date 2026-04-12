@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { ModeContext } from '../context/AppContext';
+
 export function Table() {
-  return (
-    <main>
+  const { mode } = useContext(ModeContext);
+  if (mode === 'racer') {
+    return (
       <table id="racerTable">
         <thead>
           <tr>
@@ -69,6 +73,33 @@ export function Table() {
           {/* Les données des pilotes seront ajoutées ici */}
         </tbody>
       </table>
-    </main>
-  );
+    );
+  } else if (mode === 'crew') {
+    return (
+      <table id="crewTable">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Collection</th>
+            <th data-trad="rarity">Rarity</th>
+            <th data-trad="crew_name_table">Crew Name</th>
+            <th data-sort="currentStars" data-trad="current_level_table">
+              Current Level
+            </th>
+            <th data-sort="currentShards" data-trad="current_shards_table">
+              Current Shards
+            </th>
+            <th data-sort="shardsNeeded" data-trad="shards_needed_table">
+              Shards Needed
+            </th>
+            <th data-trad="free_table">Free</th>
+            <th data-trad="actions"></th>
+          </tr>
+        </thead>
+        <tbody id="crewTableBody">
+          {/* Les données des crews seront ajoutées ici */}
+        </tbody>
+      </table>
+    );
+  }
 }
