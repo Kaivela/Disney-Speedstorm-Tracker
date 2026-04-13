@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  margin: 10px 0;
 }
 
 .Header {
@@ -52,18 +53,40 @@ h1 {
   right: 10px;
 }
 
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+}
+
 th,
 td {
   border: 1px solid black;
-  padding: 8px;
-  text-align: left;
+  padding: 3px;
+  text-align: center;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+th {
+  max-width: 85px;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
 }
 
-img {
+td img {
   width: 80px;
+}
+
+/* Appliquer un fond sombre à chaque ligne impaire */
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+/* Appliquer un fond clair à chaque ligne paire */
+tbody tr:nth-child(even) {
+  background-color: gray;
 }
