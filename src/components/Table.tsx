@@ -18,9 +18,7 @@ export function Table() {
             <th data-trad="rarity">Rarity</th>
             <th data-trad="role">Role</th>
             <th data-trad="racer_name_table">Racer Name</th>
-            <th data-sort="currentStars" className="current_stars">
-              Current Stars
-            </th>
+            <th className="racerCurrentStars" data-sort="currentStars"></th>
             <th data-sort="currentStarFragment" data-trad="current_starfragment_table">
               Current StarFragment
             </th>

@@ -63,17 +63,18 @@ thead {
   top: 0;
 }
 
+th {
+  max-width: 85px;
+  box-sizing: border-box;
+  background-color: #ff9e25;
+  color: black;
+}
+
 th,
 td {
   border: 1px solid black;
   padding: 3px;
   text-align: center;
-}
-
-th {
-  max-width: 85px;
-  box-sizing: border-box;
-  background-color: white;
   color: black;
 }
 
@@ -89,4 +90,12 @@ tbody tr:nth-child(odd) {
 /* Appliquer un fond clair à chaque ligne paire */
 tbody tr:nth-child(even) {
   background-color: gray;
+}
+
+th.racerCurrentStars {
+  background-image: url('/img/Star.webp');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 60px;
 }
