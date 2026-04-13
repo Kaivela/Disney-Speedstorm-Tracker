@@ -13,7 +13,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": false,
+      "universalBox": "false",
       "MPLTokenOld": false,
       "MPLCoin": "new"
     },
@@ -30,7 +30,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": false,
+      "universalBox": "false",
       "MPLTokenOld": true,
       "MPLCoin": "old"
     },
@@ -47,7 +47,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": false,
+      "universalBox": "false",
       "MPLTokenOld": false,
       "MPLCoin": "old"
     },
@@ -64,7 +64,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": false,
+      "universalBox": "false",
       "MPLTokenOld": true,
       "MPLCoin": "old"
     },
@@ -81,7 +81,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": false,
+      "universalBox": "false",
       "MPLTokenOld": true,
       "MPLCoin": "old"
     },
@@ -98,7 +98,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": false,
+      "universalBox": "false",
       "MPLTokenOld": true,
       "MPLCoin": "old"
     }
@@ -109,105 +109,105 @@
       "name": "Prison Dog",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Shansa",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Ian Mercer",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Cotton",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Lord Cutler Beckett",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Marty",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Murtogg And Mullroy",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Common",
       "name": "Gillette",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Rare",
       "name": "Bootstrap Bill Turner",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Rare",
       "name": "Theodore Groves",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Rare",
       "name": "Bo'Sun",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Rare",
       "name": "Captain Sao Feng",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Rare",
       "name": "Pintel And Ragetti",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Rare",
       "name": "James Norrington",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true
+      "universalBox": "true"
     },
     {
       "rarity": "Epic",
       "name": "Maccus",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true,
+      "universalBox": "true",
       "exclusiveTo": "Davy Jones"
     },
     {
@@ -215,7 +215,7 @@
       "name": "Weatherby Swann",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true,
+      "universalBox": "true",
       "exclusiveTo": "Elizabeth Swann"
     },
     {
@@ -223,7 +223,7 @@
       "name": "Carina Barbossa",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true,
+      "universalBox": "true",
       "exclusiveTo": "Hector Barbossa"
     },
     {
@@ -231,7 +231,7 @@
       "name": "Joshamee Gibbs",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true,
+      "universalBox": "true",
       "exclusiveTo": "Jack Sparrow"
     },
     {
@@ -239,7 +239,7 @@
       "name": "Rock Crabs",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true,
+      "universalBox": "true",
       "exclusiveTo": "Tia Dalma"
     },
     {
@@ -247,7 +247,7 @@
       "name": "Henry Turner",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": true,
+      "universalBox": "true",
       "exclusiveTo": "Will Turner"
     }
   ]

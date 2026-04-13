@@ -79,7 +79,9 @@ td {
 }
 
 td img {
-  width: 80px;
+  display: block;
+  height: 80px;
+  border: none;
 }
 
 /* Appliquer un fond sombre à chaque ligne impaire */
