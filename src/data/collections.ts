@@ -1,7 +1,8 @@
 import MickeyAndFriends from '../data/MickeyAndFriends.json';
 import Mulan from '../data/Mulan.json';
+import PiratesOfTheCaribbean from '../data/PiratesOfTheCaribbean.json';
 
-const collections = { MickeyAndFriends, Mulan };
+const collections = { MickeyAndFriends, Mulan, PiratesOfTheCaribbean };
 
 export function getAllRacers() {
   return Object.entries(collections).flatMap(([collectionName, collection]) => {

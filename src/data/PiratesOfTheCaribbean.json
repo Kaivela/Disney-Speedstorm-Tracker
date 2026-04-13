@@ -1,0 +1,254 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "role": "Defender",
+      "name": "Davy Jones",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": false,
+      "MPLTokenOld": false,
+      "MPLCoin": "new"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Defender",
+      "name": "Elizabeth Swann",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": false,
+      "MPLTokenOld": true,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "role": "Brawler",
+      "name": "Hector Barbossa",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": false,
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Jack Sparrow",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": false,
+      "MPLTokenOld": true,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Tia Dalma",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": false,
+      "MPLTokenOld": true,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Speedster",
+      "name": "Will Turner",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": false,
+      "MPLTokenOld": true,
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "rarity": "Common",
+      "name": "Prison Dog",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Shansa",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Ian Mercer",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Cotton",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Lord Cutler Beckett",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Marty",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Murtogg And Mullroy",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Common",
+      "name": "Gillette",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Rare",
+      "name": "Bootstrap Bill Turner",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Rare",
+      "name": "Theodore Groves",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Rare",
+      "name": "Bo'Sun",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Rare",
+      "name": "Captain Sao Feng",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Rare",
+      "name": "Pintel And Ragetti",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Rare",
+      "name": "James Norrington",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true
+    },
+    {
+      "rarity": "Epic",
+      "name": "Maccus",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Davy Jones"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Weatherby Swann",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Elizabeth Swann"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Carina Barbossa",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Hector Barbossa"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Joshamee Gibbs",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Jack Sparrow"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Rock Crabs",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Tia Dalma"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Henry Turner",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": true,
+      "exclusiveTo": "Will Turner"
+    }
+  ]
+}
