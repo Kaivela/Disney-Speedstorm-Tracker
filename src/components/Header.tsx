@@ -15,8 +15,7 @@ function RacerTableBtn() {
     <button
       onClick={() => {
         setMode('racer');
-      }}
-    >
+      }}>
       Racer
     </button>
   );
@@ -28,8 +27,7 @@ function CrewTableBtn() {
     <button
       onClick={() => {
         setMode('crew');
-      }}
-    >
+      }}>
       Crew
     </button>
   );

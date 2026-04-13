@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { ModeContext } from '../context/AppContext';
+import { RacerTableBody } from './RacerTableBody';
+import { CrewTableBody } from './CrewTableBody';
 
 export function Table() {
   const { mode } = useContext(ModeContext);
@@ -15,7 +17,7 @@ export function Table() {
             <th>Collection</th>
             <th data-trad="rarity">Rarity</th>
             <th data-trad="role">Role</th>
-            <th data-trad="racer_name_table">racer Name</th>
+            <th data-trad="racer_name_table">Racer Name</th>
             <th data-sort="currentStars" className="current_stars">
               Current Stars
             </th>
@@ -31,18 +33,18 @@ export function Table() {
             <th data-sort="currentSuperChargeShards" data-trad="current_super_charge_shards_table">
               Current SuperCharge Shards
             </th>
-            <th data-sort="currentRMJ" data-trad="current_MPR_table">
-              Current MPR
+            <th data-sort="currentMPL" data-trad="current_MPL_table">
+              Current MPL
             </th>
-            <th data-sort="highestRMJ" data-trad="highest_MPR_table">
-              Highest MPR
+            <th data-sort="highestMPL" data-trad="highest_MPL_table">
+              Highest MPL
             </th>
-            <th data-trad="max_MPR_table">Max MPR</th>
+            <th data-trad="max_MPL_table">Max MPL</th>
             <th data-sort="shardsNeeded" data-trad="shards_needed_table">
               Shards Needed
             </th>
-            <th data-sort="shardsToGet" data-trad="shards_MPR_table">
-              Shards for MPR
+            <th data-sort="shardsToGet" data-trad="shards_MPL_table">
+              Shards for MPL
             </th>
             <th data-sort="tuneCoins" className="tuneCoin">
               Tune Coins
@@ -54,13 +56,13 @@ export function Table() {
             <th data-sort="coinStar" data-trad="coins_to_next_star">
               Coins Next Star
             </th>
-            <th data-sort="shardMaxMPR" data-trad="shards_needed_if_max_MPR">
-              Shards Needed if Max MPR
+            <th data-sort="shardMaxMPL" data-trad="shards_needed_if_max_MPL">
+              Shards Needed if Max MPL
             </th>
             <th data-trad="actions">Actions</th>
           </tr>
         </thead>
-        <tbody id="racerTableBody">{/* Les données des pilotes seront ajoutées ici */}</tbody>
+        <RacerTableBody />
       </table>
     );
   } else {
@@ -69,6 +71,7 @@ export function Table() {
         <thead>
           <tr>
             <th>Image</th>
+            <th>Exclusive To</th>
             <th>Collection</th>
             <th data-trad="rarity">Rarity</th>
             <th data-trad="crew_name_table">Crew Name</th>
@@ -85,7 +88,7 @@ export function Table() {
             <th data-trad="actions">Action</th>
           </tr>
         </thead>
-        <tbody id="crewTableBody">{/* Les données des crews seront ajoutées ici */}</tbody>
+        <CrewTableBody />
       </table>
     );
   }

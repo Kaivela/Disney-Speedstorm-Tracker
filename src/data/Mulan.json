@@ -11,11 +11,11 @@
       "superCharge": true,
       "currentSuperChargeLevel": 0,
       "currentSuperChargeShards": 0,
-      "currentRMJ": 0,
-      "highestRMJ": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
       "universalBox": false,
-      "rmjTokenOld": true,
-      "rmjCoin": "old"
+      "MPLTokenOld": true,
+      "MPLCoin": "old"
     },
     {
       "releaseSeason": 0,
@@ -28,11 +28,11 @@
       "superCharge": true,
       "currentSuperChargeLevel": 0,
       "currentSuperChargeShards": 0,
-      "currentRMJ": 0,
-      "highestRMJ": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
       "universalBox": false,
-      "rmjTokenOld": true,
-      "rmjCoin": "old"
+      "MPLTokenOld": true,
+      "MPLCoin": "old"
     }
   ],
   "crews": [
