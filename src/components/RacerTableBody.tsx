@@ -26,7 +26,7 @@ export function RacerTableBody() {
             <td>ShardsNeeded (to max) Calcul</td>
             <td>ShardsToGet in MPL Calcul</td>
             <td>coinsNeeded (to max) Calcul</td>
-            <td>{racer.universalBox ? 'Yes' : 'No'}</td>
+            <td>{racer.universalBox ? '✔' : '✖'}</td>
             <td>shardsNeeded (next star) calcul</td>
             <td>coinsNeeded (next star) calcul</td>
             <td>shardsNeeded (if max MPL) calcul</td>

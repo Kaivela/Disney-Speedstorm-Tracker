@@ -17,7 +17,7 @@ export function CrewTableBody() {
             <td>{crew.currentStars}</td>
             <td>{crew.currentShards}</td>
             <td>ShardsNeeded (to max) Calcul</td>
-            <td>{crew.universalBox ? 'Yes' : 'No'}</td>
+            <td>{crew.universalBox ? '✔' : '✖'}</td>
             <td>
               <button data-trad="modify" data-index="${index}">
                 Modify
