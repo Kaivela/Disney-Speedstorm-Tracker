@@ -13,7 +13,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "false",
+      "universalBox": "✘",
       "MPLTokenOld": "true",
       "MPLCoin": "old"
     },
@@ -30,7 +30,7 @@
       "currentSuperChargeShards": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "false",
+      "universalBox": "✘",
       "MPLTokenOld": "true",
       "MPLCoin": "old"
     }
@@ -41,49 +41,49 @@
       "name": "The Emperor Of China",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true"
+      "universalBox": "✔"
     },
     {
       "rarity": "Common",
       "name": "Fa Zhou",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true"
+      "universalBox": "✔"
     },
     {
       "rarity": "Common",
       "name": "Khan",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true"
+      "universalBox": "✔"
     },
     {
       "rarity": "Common",
       "name": "Chi-Fu",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true"
+      "universalBox": "✔"
     },
     {
       "rarity": "Rare",
       "name": "Yao, Ling, And Chien Po",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true"
+      "universalBox": "✔"
     },
     {
       "rarity": "Rare",
       "name": "Cri-Kee",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true"
+      "universalBox": "✔"
     },
     {
       "rarity": "Epic",
       "name": "Mushu",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true",
+      "universalBox": "✔",
       "exclusiveTo": "Mulan"
     },
     {
@@ -91,7 +91,7 @@
       "name": "General Li",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "true",
+      "universalBox": "✔",
       "exclusiveTo": "Shang"
     }
   ]

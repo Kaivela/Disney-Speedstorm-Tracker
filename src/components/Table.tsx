@@ -25,9 +25,7 @@ export function Table() {
             <th data-sort="currentShards" data-trad="current_shards_table">
               Current Shards
             </th>
-            <th data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table">
-              Current SuperCharge Level
-            </th>
+            <th className="currentSuperChargeLevel" data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table"></th>
             <th data-sort="currentSuperChargeShards" data-trad="current_super_charge_shards_table">
               Current SuperCharge Shards
             </th>
@@ -44,9 +42,7 @@ export function Table() {
             <th data-sort="shardsToGet" data-trad="shards_MPL_table">
               Shards for MPL
             </th>
-            <th data-sort="tuneCoins" className="tuneCoin">
-              Tune Coins
-            </th>
+            <th className="TuneCoin" data-sort="tuneCoins"></th>
             <th data-trad="free_table">Free</th>
             <th data-sort="shardStar" data-trad="shards_to_next_star">
               Shards Next Star

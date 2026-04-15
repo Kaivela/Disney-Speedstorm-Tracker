@@ -1,44 +1,98 @@
 import { getAllRacers } from '../data/collections';
+import type { IRacer } from '../types/types';
+import { calculateCoinsNeeded, calculateRacerShardsNeeded, calculateRacerShardsToGet } from '../compute/Calculs';
+
+const racers = getAllRacers();
+
+function buildRacerTableBodyData() {
+  return racers.map((racer) => {
+    const tuneCoinsNeededToMax = calculateCoinsNeeded(racer);
+    const racerShardsNeededToMax = calculateRacerShardsNeeded(racer);
+    const racerShardsToGetInMPL = calculateRacerShardsToGet(racer);
+    return {
+      collection: racer.collection,
+      releaseSeason: racer.releaseSeason,
+      rarity: racer.rarity,
+      role: racer.role,
+      name: racer.name,
+      currentStars: racer.currentStars,
+      currentStarFragment: racer.currentStarFragment,
+      currentShards: racer.currentShards,
+      superCharge: racer.superCharge,
+      currentSuperChargeLevel: racer.currentSuperChargeLevel,
+      currentSuperChargeShards: racer.currentSuperChargeShards,
+      currentMPL: racer.currentMPL,
+      highestMPL: racer.highestMPL,
+      universalBox: racer.universalBox,
+      MPLCoin: racer.MPLCoin,
+      MPLTokenOld: racer.MPLTokenOld,
+      tuneCoinsNeededToMax: tuneCoinsNeededToMax,
+      shardsNeededToMax: racerShardsNeededToMax,
+      shardsToGetInMPL: racerShardsToGetInMPL,
+    };
+  });
+}
+const racerData = buildRacerTableBodyData();
+
+const racerList = racerData.map((racer, index) => {
+  return <Racer key={index} {...racer} />;
+});
 
 export function RacerTableBody() {
-  const racers = getAllRacers();
+  return <tbody>{racerList}</tbody>;
+}
+
+function Racer({
+  releaseSeason,
+  collection,
+  rarity,
+  name,
+  currentStars,
+  currentShards,
+  universalBox,
+  shardsNeededToMax,
+  tuneCoinsNeededToMax,
+  currentStarFragment,
+  currentSuperChargeLevel,
+  currentSuperChargeShards,
+  currentMPL,
+  highestMPL,
+  shardsToGetInMPL,
+  role,
+}: IRacer) {
   return (
-    <tbody>
-      {racers.map((racer, index) => (
-        <tr key={index}>
-          <td>{racer.releaseSeason}</td>
-          <td>
-            <img src={`/img/racers/${racer.name}.webp`} />
-          </td>
-          <td data-trad={racer.collection}>{racer.collection}</td>
-          <td data-trad={racer.rarity}>{racer.rarity}</td>
-          <td data-trad={racer.role}>{racer.role}</td>
-          <td data-trad={racer.name}>{racer.name}</td>
-          <td>{racer.currentStars}</td>
-          <td>{racer.currentStarFragment}</td>
-          <td>{racer.currentShards}</td>
-          <td>{racer.currentSuperChargeLevel}</td>
-          <td>{racer.currentSuperChargeShards}</td>
-          <td>{racer.currentMPL}</td>
-          <td>{racer.highestMPL}</td>
-          <td>badge max MPL</td>
-          <td>ShardsNeeded (to max) Calcul</td>
-          <td>ShardsToGet in MPL Calcul</td>
-          <td>coinsNeeded (to max) Calcul</td>
-          <td>{racer.universalBox ? '✔' : '✖'}</td>
-          <td>shardsNeeded (next star) calcul</td>
-          <td>coinsNeeded (next star) calcul</td>
-          <td>shardsNeeded (if max MPL) calcul</td>
-          <td>
-            <button data-trad="modify" data-index="${index}">
-              Modify
-            </button>
-            <button data-trad="calculate" data-index="${index}">
-              Calculate
-            </button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
+    <tr>
+      <td>{releaseSeason}</td>
+      <td>
+        <img src={`/img/racers/${name}.webp`} />
+      </td>
+      <td data-trad={collection}>{collection}</td>
+      <td data-trad={rarity}>{rarity}</td>
+      <td data-trad={role}>{role}</td>
+      <td data-trad={name}>{name}</td>
+      <td>{currentStars}</td>
+      <td>{currentStarFragment}</td>
+      <td>{currentShards}</td>
+      <td>{currentSuperChargeLevel}</td>
+      <td>{currentSuperChargeShards}</td>
+      <td>{currentMPL}</td>
+      <td>{highestMPL}</td>
+      <td>badge max MPL</td>
+      <td>{shardsNeededToMax}</td>
+      <td>{shardsToGetInMPL}</td>
+      <td>{tuneCoinsNeededToMax}</td>
+      <td>{universalBox}</td>
+      <td>shardsNeeded (next star) calcul</td>
+      <td>coinsNeeded (next star) calcul</td>
+      <td>shardsNeeded (if max MPL) calcul</td>
+      <td>
+        <button data-trad="modify" data-index="${index}">
+          Modify
+        </button>
+        <button data-trad="calculate" data-index="${index}">
+          Calculate
+        </button>
+      </td>
+    </tr>
   );
 }

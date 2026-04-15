@@ -2,7 +2,7 @@
 const racerShardsCost = [0, 5, 5, 5, 5, 8, 6, 6, 6, 6, 10, 7, 7, 7, 7, 12, 8, 8, 8, 8, 14, 9, 9, 9, 9, 16, 10, 10, 10, 10, 20];
 
 // Définir le coût des pièces pour chaque niveau
-const tunesCoinsCosts = [
+const tuneCoinsCosts = [
   0, 500, 500, 500, 500, 800, 600, 600, 600, 600, 1000, 700, 700, 700, 700, 1200, 800, 800, 800, 800, 1400, 900, 900, 900, 900, 1600, 1000, 1000,
   1000, 1000, 2000,
 ];
@@ -62,7 +62,7 @@ const superChargeCost = [20, 40];
 
 export {
   racerShardsCost,
-  tunesCoinsCosts,
+  tuneCoinsCosts,
   racerStarFragment,
   multiPlayerLeagueOldCoinsReward,
   multiPlayerLeagueNewCoinsReward,

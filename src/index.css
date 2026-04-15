@@ -63,19 +63,19 @@ thead {
   top: 0;
 }
 
-th {
-  max-width: 85px;
-  box-sizing: border-box;
-  background-color: #ff9e25;
-  color: black;
-}
-
 th,
 td {
   border: 1px solid black;
   padding: 3px;
   text-align: center;
   color: black;
+}
+
+th {
+  max-width: 85px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
 }
 
 td img {
@@ -96,6 +96,22 @@ tbody tr:nth-child(even) {
 
 th.racerCurrentStars {
   background-image: url('/img/Star.webp');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 60px;
+}
+
+th.currentSuperChargeLevel {
+  background-image: url('/img/SuperCharge.webp');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 60px;
+}
+
+th.TuneCoin {
+  background-image: url('/img/TuneCoin.webp');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

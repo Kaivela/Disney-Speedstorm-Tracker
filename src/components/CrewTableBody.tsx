@@ -1,23 +1,21 @@
 import { getAllCrews } from '../data/collections';
+import { calculateCrewShardsNeeded } from '../compute/Calculs';
+import type { ICrew } from '../types/types';
 
 const crews = getAllCrews();
 
 function buildCrewTableBodyData() {
   return crews.map((crew) => {
-    const universalBox = {
-      true: '✔',
-      false: '✖',
-      seasonal: '🟣',
-    }[crew.universalBox];
+    const shardsNeededToMax = calculateCrewShardsNeeded(crew);
     return {
-      universalBox,
-      exclusiveTo: crew.exclusiveTo,
       collection: crew.collection,
-      rarity: crew.rarity,
-      name: crew.name,
-      currentStars: crew.currentStars,
       currentShards: crew.currentShards,
-      shardsNeededToMax: 'ShardsNeeded (to max) Calcul',
+      currentStars: crew.currentStars,
+      exclusiveTo: crew.exclusiveTo,
+      name: crew.name,
+      rarity: crew.rarity,
+      universalBox: crew.universalBox,
+      shardsNeededToMax: shardsNeededToMax > 0 ? shardsNeededToMax : ('Maxed' as const),
     };
   });
 }
@@ -35,15 +33,7 @@ export function CrewTableBody() {
   );
 }
 
-function Crew({
-  exclusiveTo,
-  collection,
-  rarity,
-  name,
-  currentStars,
-  currentShards,
-  universalBox,
-}: ReturnType<typeof buildCrewTableBodyData>[number]) {
+function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShards, universalBox, shardsNeededToMax }: ICrew) {
   return (
     <tr>
       <td>
@@ -55,7 +45,7 @@ function Crew({
       <td data-trad={name}>{name}</td>
       <td>{currentStars}</td>
       <td>{currentShards}</td>
-      <td>ShardsNeeded (to max) Calcul</td>
+      <td>{shardsNeededToMax}</td>
       <td>{universalBox}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
