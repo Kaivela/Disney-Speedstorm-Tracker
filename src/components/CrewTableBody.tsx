@@ -25,14 +25,6 @@ const crewList = crewData.map((crew, index) => {
   return <Crew key={index} {...crew} />;
 });
 
-export function CrewTableBody() {
-  return (
-    <>
-      <tbody>{crewList}</tbody>
-    </>
-  );
-}
-
 function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShards, universalBox, shardsNeededToMax }: ICrew) {
   return (
     <tr>
@@ -53,5 +45,13 @@ function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShar
         </button>
       </td>
     </tr>
+  );
+}
+
+export function CrewTableBody() {
+  return (
+    <>
+      <tbody>{crewList}</tbody>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 ajouter icone de role a gauche du text dans la td "role" pour les racer
+ajuster les icones des colonne super charge pour afficher si oui ou non le racer peut etre super charge et si elle est maxé
 
 ## Migrations
 

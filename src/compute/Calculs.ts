@@ -23,15 +23,9 @@ function calculateCoinsNeeded(racer: IRacer): number {
 
 // calculer le nombre de shards nécéssaire pour maxer le racer
 function calculateRacerShardsNeeded(racer: IRacer): number {
-  let totalShardsNeeded = 0;
-
-  for (let level = racer.currentStarFragment + 1; level <= 31; level++) {
-    if (level <= racerShardsCost.length) {
-      totalShardsNeeded += racerShardsCost[level - 1];
-    }
-  }
-
-  return Math.max(totalShardsNeeded - racer.currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
+  const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
+  const totalShardsNeeded = racerShardsCost.slice(startIndex).reduce((sum, cost) => sum + cost, 0);
+  return totalShardsNeeded - racer.currentShards;
 }
 
 // calculer le nombre de shards nécéssaire pour maxer le crew

@@ -1,14 +1,11 @@
 // Définir le coût des shards pour chaque fragment d'étoile d'un pilot
-const racerShardsCost = [0, 5, 5, 5, 5, 8, 6, 6, 6, 6, 10, 7, 7, 7, 7, 12, 8, 8, 8, 8, 14, 9, 9, 9, 9, 16, 10, 10, 10, 10, 20];
+const racerShardsCost = [5, 5, 5, 5, 8, 6, 6, 6, 6, 10, 7, 7, 7, 7, 12, 8, 8, 8, 8, 14, 9, 9, 9, 9, 16, 10, 10, 10, 10, 20];
 
 // Définir le coût des pièces pour chaque niveau
 const tuneCoinsCosts = [
   0, 500, 500, 500, 500, 800, 600, 600, 600, 600, 1000, 700, 700, 700, 700, 1200, 800, 800, 800, 800, 1400, 900, 900, 900, 900, 1600, 1000, 1000,
   1000, 1000, 2000,
 ];
-
-// Définir le nombre de star fragment nécéssaire pour gagner une étoile
-const racerStarFragment = [28, 34, 40, 46, 52, 60];
 
 // Définir les tunes coins rewards en LMJ pour chaque Rang (OLD PILOTS)
 const multiPlayerLeagueOldCoinsReward = [
@@ -63,7 +60,6 @@ const superChargeCost = [20, 40];
 export {
   racerShardsCost,
   tuneCoinsCosts,
-  racerStarFragment,
   multiPlayerLeagueOldCoinsReward,
   multiPlayerLeagueNewCoinsReward,
   multiPlayerLeagueS10CoinsReward,
