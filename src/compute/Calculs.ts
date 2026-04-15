@@ -1,4 +1,11 @@
-import { epicCrewShardCost, multiPlayerLeagueShardsReward, normalCrewShardCost, racerShardsCost, tuneCoinsCosts } from '../data/costAndRewards';
+import {
+  epicCrewShardCost,
+  multiPlayerLeagueShardsReward,
+  normalCrewShardCost,
+  racerShardsCost,
+  superChargeCost,
+  tuneCoinsCosts,
+} from '../data/costAndRewards';
 import type { ICrew, IRacer } from '../types/types';
 
 // calculer le nombre de tunes coins nécéssaire pour maxer le racer
@@ -51,13 +58,42 @@ function calculateCrewShardsNeeded(crew: ICrew): number {
 function calculateRacerShardsToGet(racer: IRacer): number {
   let totalShardsToGet = 0;
 
-  for (let rmj = racer.highestMPL + 1; rmj <= 40; rmj++) {
-    if (rmj <= multiPlayerLeagueShardsReward.length) {
-      totalShardsToGet += multiPlayerLeagueShardsReward[rmj - 1];
+  for (let MPL = racer.highestMPL + 1; MPL <= 40; MPL++) {
+    if (MPL <= multiPlayerLeagueShardsReward.length) {
+      totalShardsToGet += multiPlayerLeagueShardsReward[MPL - 1];
     }
   }
 
   return Math.max(totalShardsToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-export { calculateRacerShardsNeeded, calculateCoinsNeeded, calculateCrewShardsNeeded, calculateRacerShardsToGet };
+// calculer le nombre de shards a réupérer pour maxer si le racer est déjà maxé en MPL
+function calculateRacerShardsIfMaxMPL(racer: IRacer): number {
+  const shardsNeededToMax = calculateRacerShardsNeeded(racer);
+  const shardsToGet = calculateRacerShardsToGet(racer);
+  const shardIfMaxMPR = shardsNeededToMax - shardsToGet;
+
+  return Math.max(shardIfMaxMPR, 0); // Assure que les shards nécessaires ne sont pas négatifs
+}
+
+//calculer le nombre de super charge tokens à récupérer pour maxer la super charge
+function calculateRacerSuperChargeTokenSNeeded(racer: IRacer): number {
+  let totalSuperShardsNeeded = 0;
+
+  for (let superCharge = racer.currentSuperChargeLevel + 1; superCharge <= 2; superCharge++) {
+    if (superCharge <= superChargeCost.length) {
+      totalSuperShardsNeeded += superChargeCost[superCharge - 1];
+    }
+  }
+
+  return Math.max(totalSuperShardsNeeded - racer.currentSuperChargeShards, 0);
+}
+
+export {
+  calculateRacerShardsNeeded,
+  calculateCoinsNeeded,
+  calculateCrewShardsNeeded,
+  calculateRacerShardsToGet,
+  calculateRacerShardsIfMaxMPL,
+  calculateRacerSuperChargeTokenSNeeded,
+};

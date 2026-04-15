@@ -22,10 +22,10 @@ export function Table() {
             <th data-sort="currentStarFragment" data-trad="current_starfragment_table">
               Current StarFragment
             </th>
+            <th className="currentSuperChargeLevel" data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table"></th>
             <th data-sort="currentShards" data-trad="current_shards_table">
               Current Shards
             </th>
-            <th className="currentSuperChargeLevel" data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table"></th>
             <th data-sort="currentSuperChargeShards" data-trad="current_super_charge_shards_table">
               Current SuperCharge Shards
             </th>
@@ -40,7 +40,10 @@ export function Table() {
               Shards Needed
             </th>
             <th data-sort="shardsToGet" data-trad="shards_MPL_table">
-              Shards for MPL
+              Shards in MPL
+            </th>
+            <th className="superChargeTokensToGet" data-trad="super_charge_tokens_to_get_table">
+              super charge tokens to get
             </th>
             <th className="TuneCoin" data-sort="tuneCoins"></th>
             <th data-trad="free_table">Free</th>

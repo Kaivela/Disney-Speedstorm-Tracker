@@ -31,12 +31,14 @@ export interface IRacer {
   // Calculated properties
   collection?: string;
   shardsNeededToMax?: number | 'Maxed';
+  ShardsNeededIfMaxMPL?: number;
   shardsToGetInMPL?: number;
   tuneCoinsNeededToMax?: number;
   tuneCoinsToGet?: number;
   superShardsNeeded?: number;
   tokensToGet?: number;
   cosmeticToGet?: number;
+  superChargeTokensToGet?: number;
 }
 
 export interface ICrew {

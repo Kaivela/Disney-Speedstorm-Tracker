@@ -1,6 +1,12 @@
 import { getAllRacers } from '../data/collections';
 import type { IRacer } from '../types/types';
-import { calculateCoinsNeeded, calculateRacerShardsNeeded, calculateRacerShardsToGet } from '../compute/Calculs';
+import {
+  calculateCoinsNeeded,
+  calculateRacerShardsIfMaxMPL,
+  calculateRacerShardsNeeded,
+  calculateRacerShardsToGet,
+  calculateRacerSuperChargeTokenSNeeded,
+} from '../compute/Calculs';
 
 const racers = getAllRacers();
 
@@ -9,6 +15,9 @@ function buildRacerTableBodyData() {
     const tuneCoinsNeededToMax = calculateCoinsNeeded(racer);
     const racerShardsNeededToMax = calculateRacerShardsNeeded(racer);
     const racerShardsToGetInMPL = calculateRacerShardsToGet(racer);
+    const racerShardNeededIfMaxMPL = calculateRacerShardsIfMaxMPL(racer);
+    const racersuperChargeTokensToGet = racer.superCharge ? calculateRacerSuperChargeTokenSNeeded(racer) : 0;
+    console.log({ racerShardNeededIfMaxMPL });
     return {
       collection: racer.collection,
       releaseSeason: racer.releaseSeason,
@@ -29,6 +38,8 @@ function buildRacerTableBodyData() {
       tuneCoinsNeededToMax: tuneCoinsNeededToMax,
       shardsNeededToMax: racerShardsNeededToMax,
       shardsToGetInMPL: racerShardsToGetInMPL,
+      ShardsNeededIfMaxMPL: racerShardNeededIfMaxMPL,
+      superChargeTokensToGet: racersuperChargeTokensToGet,
     };
   });
 }
@@ -59,6 +70,8 @@ function Racer({
   highestMPL,
   shardsToGetInMPL,
   role,
+  ShardsNeededIfMaxMPL,
+  superChargeTokensToGet,
 }: IRacer) {
   return (
     <tr>
@@ -72,19 +85,20 @@ function Racer({
       <td data-trad={name}>{name}</td>
       <td>{currentStars}</td>
       <td>{currentStarFragment}</td>
-      <td>{currentShards}</td>
       <td>{currentSuperChargeLevel}</td>
+      <td>{currentShards}</td>
       <td>{currentSuperChargeShards}</td>
       <td>{currentMPL}</td>
       <td>{highestMPL}</td>
       <td>badge max MPL</td>
       <td>{shardsNeededToMax}</td>
       <td>{shardsToGetInMPL}</td>
+      <td>{superChargeTokensToGet}</td>
       <td>{tuneCoinsNeededToMax}</td>
       <td>{universalBox}</td>
       <td>shardsNeeded (next star) calcul</td>
       <td>coinsNeeded (next star) calcul</td>
-      <td>shardsNeeded (if max MPL) calcul</td>
+      <td>{ShardsNeededIfMaxMPL}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
           Modify
