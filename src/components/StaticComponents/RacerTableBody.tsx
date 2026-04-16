@@ -1,12 +1,12 @@
-import { getAllRacers } from '../data/collections';
-import type { IRacer } from '../types/types';
+import { getAllRacers } from '../../data/collections';
+import type { IRacer } from '../../types/types';
 import {
   calculateCoinsNeeded,
   calculateRacerShardsIfMaxMPL,
   calculateRacerShardsNeeded,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
-} from '../compute/Calculs';
+} from '../../compute/Calculs';
 
 const racers = getAllRacers();
 

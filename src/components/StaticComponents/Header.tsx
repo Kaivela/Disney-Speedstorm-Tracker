@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { ModeContext } from '../context/AppContext';
-import { ScrollBtns } from './ScrollBtns';
+import { ModeContext } from '../../context/AppContext';
+import { ScrollBtns } from '../ScrollBtns';
 
 function ExportBtn() {
   return <button className="btn">Export</button>;

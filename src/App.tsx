@@ -1,5 +1,5 @@
 import { Table } from './components/Table';
-import { Header } from './components/Header';
+import { Header } from './components/StaticComponents/Header';
 import { Filters } from './components/Filters';
 
 function App() {

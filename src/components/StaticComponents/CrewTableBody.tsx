@@ -1,6 +1,6 @@
-import { getAllCrews } from '../data/collections';
-import { calculateCrewShardsNeeded } from '../compute/Calculs';
-import type { ICrew } from '../types/types';
+import { getAllCrews } from '../../data/collections';
+import { calculateCrewShardsNeeded } from '../../compute/Calculs';
+import type { ICrew } from '../../types/types';
 
 const crews = getAllCrews();
 
