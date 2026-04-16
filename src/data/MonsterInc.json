@@ -75,6 +75,7 @@
       "name": "Pete Ward",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -82,6 +83,7 @@
       "name": "Ted Pauley",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -89,6 +91,7 @@
       "name": "Nick Schmidt",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -96,6 +99,7 @@
       "name": "Georges Sanderson",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -103,6 +107,7 @@
       "name": "Henry J. Waternoose",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -110,6 +115,7 @@
       "name": "Ms. Flint",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -117,6 +123,7 @@
       "name": "The Yeti",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -124,6 +131,7 @@
       "name": "CDA Agents",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -131,6 +139,7 @@
       "name": "Roz",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Celia Mae"
     },
@@ -139,6 +148,7 @@
       "name": "Smitty And Needleman",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Mike Wazowski"
     },
@@ -147,6 +157,7 @@
       "name": "Fungus",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Randall"
     },
@@ -155,6 +166,7 @@
       "name": "Boo",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Sulley"
     }

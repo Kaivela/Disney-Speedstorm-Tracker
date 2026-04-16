@@ -12,7 +12,7 @@ import type { ICrew, IRacer } from '../types/types';
 function calculateCoinsNeeded(racer: IRacer): number {
   let totalCoinsNeeded = 0;
 
-  for (let level = racer.currentStarFragment + 1; level <= 31; level++) {
+  for (let level = racer.currentStarFragment + 1; level <= 30; level++) {
     if (level <= tuneCoinsCosts.length) {
       totalCoinsNeeded += tuneCoinsCosts[level - 1];
     }

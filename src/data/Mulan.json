@@ -41,6 +41,7 @@
       "name": "The Emperor Of China",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -48,6 +49,7 @@
       "name": "Fa Zhou",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -55,6 +57,7 @@
       "name": "Khan",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -62,6 +65,7 @@
       "name": "Chi-Fu",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -69,6 +73,7 @@
       "name": "Yao, Ling, And Chien Po",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -76,6 +81,7 @@
       "name": "Cri-Kee",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -83,6 +89,7 @@
       "name": "Mushu",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Mulan"
     },
@@ -91,6 +98,7 @@
       "name": "General Li",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Shang"
     }

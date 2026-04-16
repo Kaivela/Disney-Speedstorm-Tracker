@@ -58,6 +58,7 @@
       "name": "Fifi",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -65,6 +66,7 @@
       "name": "The Sultan-B&B",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -72,6 +74,7 @@
       "name": "Chip",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -79,6 +82,7 @@
       "name": "Mrs. Potts",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -86,6 +90,7 @@
       "name": "Claudette, Laurette And Paulette",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -93,6 +98,7 @@
       "name": "Gaston's Cronies",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -100,6 +106,7 @@
       "name": "Cogsworth",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -107,6 +114,7 @@
       "name": "Philippe",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -114,6 +122,7 @@
       "name": "Lumiere",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Beast"
     },
@@ -122,6 +131,7 @@
       "name": "Maurice",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Belle"
     },
@@ -130,6 +140,7 @@
       "name": "Lefou",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Gaston"
     }

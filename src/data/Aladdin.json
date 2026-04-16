@@ -2,9 +2,26 @@
   "racers": [
     {
       "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Aladdin",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
       "rarity": "Epic",
       "role": "Defender",
-      "name": "Baloo",
+      "name": "Genie",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
@@ -20,8 +37,25 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
+      "role": "Brawler",
+      "name": "Jafar",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
       "role": "Speedster",
-      "name": "Mowgli",
+      "name": "Jasmine",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
@@ -38,7 +72,7 @@
   "crews": [
     {
       "rarity": "Common",
-      "name": "Buzzie, Flaps, Ziggy, And Dizzy",
+      "name": "Agrabah Siblings",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -46,7 +80,7 @@
     },
     {
       "rarity": "Common",
-      "name": "Shanti",
+      "name": "Prince Achmed",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -54,7 +88,7 @@
     },
     {
       "rarity": "Common",
-      "name": "Shere Khan",
+      "name": "Camel-Al",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -62,7 +96,7 @@
     },
     {
       "rarity": "Common",
-      "name": "The Jungle Patrol",
+      "name": "Horse",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -70,7 +104,7 @@
     },
     {
       "rarity": "Rare",
-      "name": "Kaa",
+      "name": "Gazeem",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -78,7 +112,23 @@
     },
     {
       "rarity": "Rare",
-      "name": "King Louie",
+      "name": "Melon Merchant",
+      "currentStars": 0,
+      "currentShards": 0,
+      "releaseSeason": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Cave Of Wonders",
+      "currentStars": 0,
+      "currentShards": 0,
+      "releaseSeason": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "The Sultan-Al",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -86,21 +136,39 @@
     },
     {
       "rarity": "Epic",
-      "name": "Bagheera",
+      "name": "Abu",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Baloo"
+      "exclusiveTo": "Aladdin"
     },
     {
       "rarity": "Epic",
-      "name": "Wolf Pack",
+      "name": "Magic Carpet",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Mowgli"
+      "exclusiveTo": "Genie"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Iago",
+      "currentStars": 0,
+      "currentShards": 0,
+      "releaseSeason": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Jafar"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Rajah",
+      "currentStars": 0,
+      "currentShards": 0,
+      "releaseSeason": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Jasmine"
     }
   ]
 }

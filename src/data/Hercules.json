@@ -58,6 +58,7 @@
       "name": "Olympian Gods",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -65,6 +66,7 @@
       "name": "Hera",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -72,6 +74,7 @@
       "name": "Hermes",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -79,6 +82,7 @@
       "name": "Amphitryon And Alcmene",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -86,6 +90,7 @@
       "name": "Hydra",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -93,6 +98,7 @@
       "name": "Cerberus",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -100,6 +106,7 @@
       "name": "Zeus",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -107,6 +114,7 @@
       "name": "Phil",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -114,6 +122,7 @@
       "name": "Pain And Panic",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Hades"
     },
@@ -122,6 +131,7 @@
       "name": "Pegasus",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Hercules"
     },
@@ -130,6 +140,7 @@
       "name": "Muses",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Meg"
     }

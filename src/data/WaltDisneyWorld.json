@@ -3,25 +3,8 @@
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "role": "Defender",
-      "name": "Baloo",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Rare",
-      "role": "Speedster",
-      "name": "Mowgli",
+      "role": "Trickster",
+      "name": "Figment",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
@@ -38,7 +21,7 @@
   "crews": [
     {
       "rarity": "Common",
-      "name": "Buzzie, Flaps, Ziggy, And Dizzy",
+      "name": "José, Michael, Fritz, And Pierre",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -46,7 +29,7 @@
     },
     {
       "rarity": "Common",
-      "name": "Shanti",
+      "name": "Dapper Dans",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -54,7 +37,7 @@
     },
     {
       "rarity": "Common",
-      "name": "Shere Khan",
+      "name": "Sonny Eclipse",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -62,7 +45,7 @@
     },
     {
       "rarity": "Common",
-      "name": "The Jungle Patrol",
+      "name": "Orange Bird",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -70,15 +53,7 @@
     },
     {
       "rarity": "Rare",
-      "name": "Kaa",
-      "currentStars": 0,
-      "currentShards": 0,
-      "releaseSeason": 0,
-      "universalBox": "✘"
-    },
-    {
-      "rarity": "Rare",
-      "name": "King Louie",
+      "name": "SMRT-1",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
@@ -86,21 +61,12 @@
     },
     {
       "rarity": "Epic",
-      "name": "Bagheera",
+      "name": "Dreamfinder",
       "currentStars": 0,
       "currentShards": 0,
       "releaseSeason": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Baloo"
-    },
-    {
-      "rarity": "Epic",
-      "name": "Wolf Pack",
-      "currentStars": 0,
-      "currentShards": 0,
-      "releaseSeason": 0,
-      "universalBox": "✘",
-      "exclusiveTo": "Mowgli"
+      "exclusiveTo": "Figment"
     }
   ]
 }

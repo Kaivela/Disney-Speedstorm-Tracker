@@ -12,6 +12,7 @@ function buildCrewTableBodyData() {
       currentShards: crew.currentShards,
       currentStars: crew.currentStars,
       exclusiveTo: crew.exclusiveTo,
+      releaseSeason: crew.releaseSeason,
       name: crew.name,
       rarity: crew.rarity,
       universalBox: crew.universalBox,
@@ -25,13 +26,14 @@ const crewList = crewData.map((crew, index) => {
   return <Crew key={index} {...crew} />;
 });
 
-function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShards, universalBox, shardsNeededToMax }: ICrew) {
+function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShards, universalBox, shardsNeededToMax, releaseSeason }: ICrew) {
   return (
     <tr>
+      <td>{releaseSeason}</td>
+      <td data-trad={exclusiveTo}>{exclusiveTo}</td>
       <td>
         <img src={`/img/crews/${name}.webp`} />
       </td>
-      <td data-trad={exclusiveTo}>{exclusiveTo}</td>
       <td data-trad={collection}>{collection}</td>
       <td data-trad={rarity}>{rarity}</td>
       <td data-trad={name}>{name}</td>

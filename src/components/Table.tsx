@@ -66,29 +66,34 @@ export function Table() {
     );
   } else {
     return (
-      <table id="crewTable">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Exclusive To</th>
-            <th>Collection</th>
-            <th data-trad="rarity">Rarity</th>
-            <th data-trad="crew_name_table">Crew Name</th>
-            <th data-sort="currentStars" data-trad="current_level_table">
-              Current Level
-            </th>
-            <th data-sort="currentShards" data-trad="current_shards_table">
-              Current Shards
-            </th>
-            <th data-sort="shardsNeeded" data-trad="shards_needed_table">
-              Shards Needed
-            </th>
-            <th data-trad="free_table">Free</th>
-            <th data-trad="actions">Action</th>
-          </tr>
-        </thead>
-        <CrewTableBody />
-      </table>
+      <div className="tableContainer">
+        <table id="crewTable">
+          <thead>
+            <tr>
+              <th data-sort="releaseSeason" data-trad="season">
+                Season
+              </th>
+              <th>Exclusive To</th>
+              <th>Image</th>
+              <th>Collection</th>
+              <th data-trad="rarity">Rarity</th>
+              <th data-trad="crew_name_table">Crew Name</th>
+              <th data-sort="currentStars" data-trad="current_level_table">
+                Current Level
+              </th>
+              <th data-sort="currentShards" data-trad="current_shards_table">
+                Current Shards
+              </th>
+              <th data-sort="shardsNeeded" data-trad="shards_needed_table">
+                Shards Needed
+              </th>
+              <th data-trad="free_table">Free</th>
+              <th data-trad="actions">Action</th>
+            </tr>
+          </thead>
+          <CrewTableBody />
+        </table>
+      </div>
     );
   }
 }

@@ -48,6 +48,7 @@ export interface ICrew {
   name: string;
   rarity: Rarity;
   universalBox: UniversalBox;
+  releaseSeason: number;
 
   // Calculated properties
   exclusiveTo?: string;

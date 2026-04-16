@@ -143,6 +143,7 @@
       "name": "Magica De Spell",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "🟣"
     },
     {
@@ -150,6 +151,7 @@
       "name": "Tanglefoot",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -157,6 +159,7 @@
       "name": "Clara Cluck",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -164,6 +167,7 @@
       "name": "Tootsie The Penguin",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -171,6 +175,7 @@
       "name": "Chief O'Hara",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -178,6 +183,7 @@
       "name": "Wilbur",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -185,6 +191,7 @@
       "name": "Pedro",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -192,6 +199,7 @@
       "name": "Morty And Ferdie Fildmouse",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -199,6 +207,7 @@
       "name": "Clarabelle Cow",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -206,6 +215,7 @@
       "name": "Gus Goose",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -213,6 +223,7 @@
       "name": "Webby Vanderquack",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -220,6 +231,7 @@
       "name": "Salty The Seal",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -227,6 +239,7 @@
       "name": "Millie And Melody Mouse",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -234,6 +247,7 @@
       "name": "Humphrey The Bear",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -241,6 +255,7 @@
       "name": "Goat",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
@@ -248,6 +263,7 @@
       "name": "Lonesome Ghosts",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -255,6 +271,7 @@
       "name": "Horace Horsecollar",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -262,6 +279,7 @@
       "name": "Chip 'N Dale",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔"
     },
     {
@@ -269,6 +287,7 @@
       "name": "April, May, and June",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Daisy Duck"
     },
@@ -277,6 +296,7 @@
       "name": "José Carioca And Panchito",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Donald Duck"
     },
@@ -285,6 +305,7 @@
       "name": "Gilbert Goof",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Goofy"
     },
@@ -293,6 +314,7 @@
       "name": "Pluto",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✔",
       "exclusiveTo": "Mickey Mouse"
     },
@@ -301,6 +323,7 @@
       "name": "Fifi The Peke",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Minnie"
     },
@@ -309,6 +332,7 @@
       "name": "Huey, Dewey And Louie",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Scrooge Mcduck"
     },
@@ -317,6 +341,7 @@
       "name": "Caroline Cow",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Steamboat Mickey"
     },
@@ -325,6 +350,7 @@
       "name": "Parrot",
       "currentStars": 0,
       "currentShards": 0,
+      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Steamboat Pete"
     }
