@@ -1,17 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 // // Gérer l'affichage des boutons selon le scroll
-function handleScroll(scrollTopBtn: HTMLButtonElement | null, scrollBottomBtn: HTMLButtonElement | null) {
-  if (!scrollTopBtn || !scrollBottomBtn) return;
+function handleScroll(setShowTopBtn: (show: boolean) => void, setShowBottomBtn: (show: boolean) => void) {
   if (window.scrollY > 100) {
-    scrollTopBtn.classList.remove('hidden');
+    setShowTopBtn(true);
   } else {
-    scrollTopBtn.classList.add('hidden');
+    setShowTopBtn(false);
   }
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-    scrollBottomBtn.classList.add('hidden');
+    setShowBottomBtn(false);
   } else {
-    scrollBottomBtn.classList.remove('hidden');
+    setShowBottomBtn(true);
   }
 }
 
@@ -27,11 +26,11 @@ function scrollBottom() {
 
 export function ScrollBtns() {
   //LOGIC
-  const scrollTopBtn = useRef<HTMLButtonElement>(null);
-  const scrollBottomBtn = useRef<HTMLButtonElement>(null);
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  const [showBottomBtn, setShowBottomBtn] = useState(true);
 
   function scrollHandler() {
-    handleScroll(scrollTopBtn.current, scrollBottomBtn.current);
+    handleScroll(setShowTopBtn, setShowBottomBtn);
   }
 
   useEffect(() => {
@@ -42,10 +41,10 @@ export function ScrollBtns() {
   //TEMPLATE
   return (
     <div className="scrollButtons">
-      <button ref={scrollTopBtn} className="scrollButton hidden" onClick={scrollTop}>
+      <button className={`scrollButton ${!showTopBtn && 'hidden'}`} onClick={scrollTop}>
         ▲
       </button>
-      <button ref={scrollBottomBtn} className="scrollButton" onClick={scrollBottom}>
+      <button className={`scrollButton ${!showBottomBtn && 'hidden'}`} onClick={scrollBottom}>
         ▼
       </button>
     </div>
