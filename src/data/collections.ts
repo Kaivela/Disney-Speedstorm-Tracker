@@ -1,28 +1,19 @@
-import MickeyAndFriends from '../data/MickeyAndFriends.json';
-import Mulan from '../data/Mulan.json';
-import PiratesOfTheCaribbean from '../data/PiratesOfTheCaribbean.json';
-import Hercules from '../data/Hercules.json';
-import BeautyAndTheBeast from '../data/BeautyAndTheBeast.json';
-import TheJungleBook from '../data/TheJungleBook.json';
-import MonsterInc from '../data/MonsterInc.json';
-import WaltDisneyWorld from '../data/WaltDisneyWorld.json';
-import ToyStory from '../data/ToyStory.json';
-import LiloStitch from '../data/LiloStitch.json';
-import Aladdin from '../data/Aladdin.json';
+import * as dataFiles from '../data';
 import type { Collection, Collections, ICrew, IRacer } from '../types/types';
 
 const collections: Collections = {
-  MickeyAndFriends: MickeyAndFriends as Collection,
-  Mulan: Mulan as Collection,
-  PiratesOfTheCaribbean: PiratesOfTheCaribbean as Collection,
-  Hercules: Hercules as Collection,
-  BeautyAndTheBeast: BeautyAndTheBeast as Collection,
-  TheJungleBook: TheJungleBook as Collection,
-  MonsterInc: MonsterInc as Collection,
-  WaltDisneyWorld: WaltDisneyWorld as Collection,
-  ToyStory: ToyStory as Collection,
-  LiloStitch: LiloStitch as Collection,
-  Aladdin: Aladdin as Collection,
+  MickeyAndFriends: dataFiles.MickeyAndFriends as Collection,
+  Mulan: dataFiles.Mulan as Collection,
+  PiratesOfTheCaribbean: dataFiles.PiratesOfTheCaribbean as Collection,
+  Hercules: dataFiles.Hercules as Collection,
+  BeautyAndTheBeast: dataFiles.BeautyAndTheBeast as Collection,
+  TheJungleBook: dataFiles.TheJungleBook as Collection,
+  MonsterInc: dataFiles.MonsterInc as Collection,
+  WaltDisneyWorld: dataFiles.WaltDisneyWorld as Collection,
+  ToyStory: dataFiles.ToyStory as Collection,
+  LiloStitch: dataFiles.LiloStitch as Collection,
+  Aladdin: dataFiles.Aladdin as Collection,
+  OswaldTheLuckyRabbit: dataFiles.OswaldTheLuckyRabbit as Collection,
 };
 
 export function getAllRacers(): IRacer[] {

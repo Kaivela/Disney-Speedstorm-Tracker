@@ -12,6 +12,7 @@ export interface Collection {
 }
 
 export interface IRacer {
+  collection: string;
   MPLCoin: MPLCoin;
   MPLTokenOld: string;
   currentMPL: number;
@@ -29,7 +30,6 @@ export interface IRacer {
   universalBox: UniversalBox;
 
   // Calculated properties
-  collection?: string;
   shardsNeededToMax?: number | 'Maxed';
   ShardsNeededIfMaxMPL?: number;
   shardsToGetInMPL?: number;
