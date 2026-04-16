@@ -117,3 +117,16 @@ th.TuneCoin {
   background-repeat: no-repeat;
   min-width: 60px;
 }
+
+.tableContainer {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tableContainer::-webkit-scrollbar {
+  display: none;
+}

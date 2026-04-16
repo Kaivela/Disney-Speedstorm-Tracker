@@ -1,0 +1,162 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Defender",
+      "name": "Celia Mae",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Speedster",
+      "name": "Mike Wazowski",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Randall",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "role": "Brawler",
+      "name": "Sulley",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "rarity": "Common",
+      "name": "Pete Ward",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Common",
+      "name": "Ted Pauley",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Common",
+      "name": "Nick Schmidt",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Common",
+      "name": "Georges Sanderson",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Henry J. Waternoose",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Ms. Flint",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "The Yeti",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "CDA Agents",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Roz",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Celia Mae"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Smitty And Needleman",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Mike Wazowski"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Fungus",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Randall"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Boo",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Sulley"
+    }
+  ]
+}

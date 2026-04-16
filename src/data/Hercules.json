@@ -1,0 +1,137 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 4,
+      "rarity": "Epic",
+      "role": "Trickster",
+      "name": "Hades",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "role": "Brawler",
+      "name": "Hercules",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Trickster",
+      "name": "Meg",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "rarity": "Common",
+      "name": "Olympian Gods",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Common",
+      "name": "Hera",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Common",
+      "name": "Hermes",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Common",
+      "name": "Amphitryon And Alcmene",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Hydra",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Cerberus",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Zeus",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Phil",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Pain And Panic",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔",
+      "exclusiveTo": "Hades"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Pegasus",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔",
+      "exclusiveTo": "Hercules"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Muses",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✔",
+      "exclusiveTo": "Meg"
+    }
+  ]
+}

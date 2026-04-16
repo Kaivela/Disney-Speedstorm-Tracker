@@ -1,0 +1,137 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Brawler",
+      "name": "Beast",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "role": "Speedster",
+      "name": "Belle",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "role": "Brawler",
+      "name": "Gaston",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": true,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeShards": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": "true",
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "rarity": "Common",
+      "name": "Fifi",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Common",
+      "name": "The Sultan-B&B",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Common",
+      "name": "Chip",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Common",
+      "name": "Mrs. Potts",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Claudette, Laurette And Paulette",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Gaston's Cronies",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Cogsworth",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Rare",
+      "name": "Philippe",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Lumiere",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Beast"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Maurice",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Belle"
+    },
+    {
+      "rarity": "Epic",
+      "name": "Lefou",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Gaston"
+    }
+  ]
+}

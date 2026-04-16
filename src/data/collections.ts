@@ -1,12 +1,20 @@
 import MickeyAndFriends from '../data/MickeyAndFriends.json';
 import Mulan from '../data/Mulan.json';
 import PiratesOfTheCaribbean from '../data/PiratesOfTheCaribbean.json';
+import Hercules from '../data/Hercules.json';
+import BeautyAndTheBeast from '../data/BeautyAndTheBeast.json';
+import TheJungleBook from '../data/TheJungleBook.json';
+import MonsterInc from '../data/MonsterInc.json';
 import type { Collection, Collections, ICrew, IRacer } from '../types/types';
 
 const collections: Collections = {
   MickeyAndFriends: MickeyAndFriends as Collection,
   Mulan: Mulan as Collection,
   PiratesOfTheCaribbean: PiratesOfTheCaribbean as Collection,
+  Hercules: Hercules as Collection,
+  BeautyAndTheBeast: BeautyAndTheBeast as Collection,
+  TheJungleBook: TheJungleBook as Collection,
+  MonsterInc: MonsterInc as Collection,
 };
 
 export function getAllRacers(): IRacer[] {
