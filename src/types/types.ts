@@ -43,14 +43,15 @@ export interface IRacer {
 
 export interface ICrew {
   collection: string;
-  currentShards: number;
-  currentStars: number;
-  name: string;
-  rarity: Rarity;
-  universalBox: UniversalBox;
   releaseSeason: number;
+  rarity: Rarity;
+  name: string;
+  currentStars: number;
+  currentShards: number;
+  universalBox: UniversalBox;
 
-  // Calculated properties
+  // Optional property
   exclusiveTo?: string;
+  // Calculated properties
   shardsNeededToMax?: number | 'Maxed';
 }

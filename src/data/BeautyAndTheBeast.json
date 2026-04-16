@@ -54,93 +54,93 @@
   ],
   "crews": [
     {
+      "releaseSeason": 0,
       "rarity": "Common",
       "name": "Fifi",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Common",
       "name": "The Sultan-B&B",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Common",
       "name": "Chip",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Common",
       "name": "Mrs. Potts",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Claudette, Laurette And Paulette",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Gaston's Cronies",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Cogsworth",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Philippe",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Lumiere",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Beast"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Maurice",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Belle"
     },
     {
+      "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Lefou",
       "currentStars": 0,
       "currentShards": 0,
-      "releaseSeason": 0,
       "universalBox": "✘",
       "exclusiveTo": "Gaston"
     }
