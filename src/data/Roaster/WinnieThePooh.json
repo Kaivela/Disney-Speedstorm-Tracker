@@ -1,0 +1,132 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 16,
+      "rarity": "Common",
+      "role": "Speedster",
+      "name": "Eeyore",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 16,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Tigger",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 16,
+      "rarity": "Epic",
+      "role": "Defender",
+      "name": "Winnie The Pooh",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Lumpy",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Samuel J. Gopher",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Owl",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Rabbit",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Kanga",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Piglet",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "B'loon",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Eeyore"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Roo",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Tigger"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Christopher Robin",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Winnie The Pooh"
+    }
+  ]
+}

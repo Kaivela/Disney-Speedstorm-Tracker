@@ -1,0 +1,132 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 17,
+      "rarity": "Epic",
+      "role": "Speedster",
+      "name": "Flash",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 17,
+      "rarity": "Epic",
+      "role": "Defender",
+      "name": "Judy Hopps",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 17,
+      "rarity": "Epic",
+      "role": "Brawler",
+      "name": "Nick Wilde",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Gideon Grey",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Mayor Lionheart",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Gazelle",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Yax",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Fru Fru",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Mr. Big",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Priscilla",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Flash"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Bonnie And Stu Hopps",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Judy Hopps"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Finnick",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Nick Wilde"
+    }
+  ]
+}

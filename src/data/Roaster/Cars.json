@@ -1,0 +1,132 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 18,
+      "rarity": "Rare",
+      "role": "Speedster",
+      "name": "Cruz Ramirez",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 18,
+      "rarity": "Epic",
+      "role": "Speedster",
+      "name": "Lightning McQueen",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 18,
+      "rarity": "Rare",
+      "role": "Defender",
+      "name": "Tow Mater",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Cal Weathers",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Sheriff",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Red",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Francesco Bernoulli",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Finn McMissile",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Flo",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Sterling",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Cruz Ramirez"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Guido",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Lightning McQueen"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Holley Shiftwell",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Tow Mater"
+    }
+  ]
+}

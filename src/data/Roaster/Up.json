@@ -1,0 +1,106 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 16,
+      "rarity": "Epic",
+      "role": "Brawler",
+      "name": "Carl Fredricksen",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 16,
+      "rarity": "Rare",
+      "role": "Brawler",
+      "name": "Russell",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Construction Foreman Tom",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Gamma",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Beta",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Alpha",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Charles F. Muntz",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Georges And A.J.",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Dug",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Carl Fredricksen"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Kevin",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Russell"
+    }
+  ]
+}

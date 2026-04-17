@@ -1,54 +1,37 @@
 {
   "racers": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Rare",
-      "role": "Brawler",
-      "name": "Beast",
+      "role": "Defender",
+      "name": "Aurora",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
-      "role": "Speedster",
-      "name": "Belle",
+      "role": "Trickster",
+      "name": "Maleficent",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Rare",
-      "role": "Brawler",
-      "name": "Gaston",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     }
   ],
@@ -56,7 +39,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Fifi",
+      "name": "Queen Leah",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -64,7 +47,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "The Sultan-B&B",
+      "name": "Spear Goon",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -72,15 +55,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Chip",
-      "currentStars": 0,
-      "currentShards": 0,
-      "universalBox": "✘"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Common",
-      "name": "Mrs. Potts",
+      "name": "Axe Goon",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -88,7 +63,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Claudette, Laurette And Paulette",
+      "name": "Prince Phillip",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -96,7 +71,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Gaston's Cronies",
+      "name": "Goon Leader",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -104,7 +79,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Cogsworth",
+      "name": "King Hubert",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -112,7 +87,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Philippe",
+      "name": "King Stefan",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -120,29 +95,20 @@
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Lumiere",
+      "name": "Flora, Fauna, and Merryweather",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Beast"
+      "exclusiveTo": "Aurora"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Maurice",
+      "name": "Diablo",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Belle"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Epic",
-      "name": "Lefou",
-      "currentStars": 0,
-      "currentShards": 0,
-      "universalBox": "✘",
-      "exclusiveTo": "Gaston"
+      "exclusiveTo": "Maleficent"
     }
   ]
 }

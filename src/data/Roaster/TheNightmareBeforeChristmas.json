@@ -1,54 +1,71 @@
 {
   "racers": [
     {
-      "releaseSeason": 4,
-      "rarity": "Epic",
-      "role": "Trickster",
-      "name": "Hades",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Epic",
-      "role": "Brawler",
-      "name": "Hercules",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Common",
       "role": "Trickster",
-      "name": "Meg",
+      "name": "Dr. Finkelstein",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 10,
+      "rarity": "Epic",
+      "role": "Speedster",
+      "name": "Jack Skellington",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 10,
+      "rarity": "Rare",
+      "role": "Brawler",
+      "name": "Oogie Boogie",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 10,
+      "rarity": "Rare",
+      "role": "Defender",
+      "name": "Sally",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     }
   ],
@@ -56,93 +73,102 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Olympian Gods",
+      "name": "Clown With The Tear-Away Face",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Hera",
+      "name": "The Vampire Brothers",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Hermes",
+      "name": "Mummy Boy",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Amphitryon And Alcmene",
+      "name": "Man-Eating Wreath",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Hydra",
+      "name": "Toy Duck",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Cerberus",
+      "name": "Igor",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Zeus",
+      "name": "Wolfman",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Phil",
+      "name": "Santa Claus",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Pain And Panic",
+      "name": "Jewel",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
-      "exclusiveTo": "Hades"
+      "universalBox": "✘",
+      "exclusiveTo": "Dr. Finkelstein"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Pegasus",
+      "name": "Zero",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
-      "exclusiveTo": "Hercules"
+      "universalBox": "✘",
+      "exclusiveTo": "Jack Skellington"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Muses",
+      "name": "Lock, Shock, And Barrel",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
-      "exclusiveTo": "Meg"
+      "universalBox": "✘",
+      "exclusiveTo": "Oogie Boogie"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "The Mayor",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Sally"
     }
   ]
 }

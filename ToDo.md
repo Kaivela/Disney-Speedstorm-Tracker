@@ -1,10 +1,11 @@
 ajouter icone de role a gauche du text dans la td "role" pour les racer
 ajuster les icones des colonne super charge pour afficher si oui ou non le racer peut etre super charge et si elle est maxé
+donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
 --Racers--
-franchise : "STRING" ==> collection : "STRING"
+franchise : "STRING" ==> collection : "STRING" (mais peut etre bien EMPTY car construit)
 universal box : true, false, "season" ==> universal box : '✔' | '✘' | '🟣'
 currentRMJ : "NUMBER" ==> currentMPL : "NUMBER"
 highestRMJ : "NUMBER" ==> highestMPL : "NUMBER"
@@ -18,11 +19,12 @@ EMPTY ==> currentSuperChargeLevel : "NUMBER"
 EMPTY ==> releaseseason : "NUMBER"
 universal box : true, false, "season" ==> universal box : '✔' | '✘' | '🟣'
 
-finir import des racer/crew data
+check all racers rewards
+up to date racer/crew data
 mettre en place le systeme de save
+modify racer/crew
 export/Import save
 migration de la save
-modify racer/crew
 
 calcul des nextStar racer
 ACTIONS - calculate racer

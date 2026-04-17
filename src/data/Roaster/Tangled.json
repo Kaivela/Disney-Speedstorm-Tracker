@@ -1,0 +1,64 @@
+{
+  "racers": [
+    {
+      "releaseSeason": 10,
+      "rarity": "Epic",
+      "role": "Defender",
+      "name": "Rapunzel",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    }
+  ],
+  "crews": [
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Shorty",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Vladimir",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "Hook Hand",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Rare",
+      "name": "King Frederic And Queen Arianna",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "Pascal",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Rapunzel"
+    }
+  ]
+}

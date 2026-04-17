@@ -1,71 +1,37 @@
 {
   "racers": [
     {
-      "releaseSeason": 0,
-      "rarity": "Rare",
-      "role": "Trickster",
-      "name": "Aladdin",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Epic",
       "role": "Defender",
-      "name": "Genie",
+      "name": "Snow White",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Rare",
-      "role": "Brawler",
-      "name": "Jafar",
+      "role": "Trickster",
+      "name": "The Evil Queen",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Common",
-      "role": "Speedster",
-      "name": "Jasmine",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     }
   ],
@@ -73,7 +39,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Agrabah Siblings",
+      "name": "Huntsman",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -81,7 +47,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Prince Achmed",
+      "name": "Bashful",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -89,7 +55,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Camel-Al",
+      "name": "Doc",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -97,7 +63,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Horse",
+      "name": "Sleepy",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -105,7 +71,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Gazeem",
+      "name": "Sneezy",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -113,7 +79,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Melon Merchant",
+      "name": "Dopey",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -121,7 +87,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Cave Of Wonders",
+      "name": "Happy",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -129,7 +95,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "The Sultan-Al",
+      "name": "Grumpy",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -137,38 +103,20 @@
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Abu",
+      "name": "The Prince",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Aladdin"
+      "exclusiveTo": "Snow White"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Magic Carpet",
+      "name": "Magic Mirror",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Genie"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Epic",
-      "name": "Iago",
-      "currentStars": 0,
-      "currentShards": 0,
-      "universalBox": "✘",
-      "exclusiveTo": "Jafar"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Epic",
-      "name": "Rajah",
-      "currentStars": 0,
-      "currentShards": 0,
-      "universalBox": "✘",
-      "exclusiveTo": "Jasmine"
+      "exclusiveTo": "The Evil Queen"
     }
   ]
 }

@@ -1,71 +1,71 @@
 {
   "racers": [
     {
-      "releaseSeason": 0,
-      "rarity": "Common",
-      "role": "Defender",
-      "name": "Celia Mae",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Common",
-      "role": "Speedster",
-      "name": "Mike Wazowski",
-      "currentStars": 0,
-      "currentStarFragment": 0,
-      "currentShards": 0,
-      "superCharge": true,
-      "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
-      "currentMPL": 0,
-      "highestMPL": 0,
-      "universalBox": "✘",
-      "MPLTokenOld": "true",
-      "MPLCoin": "old"
-    },
-    {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Rare",
-      "role": "Trickster",
-      "name": "Randall",
+      "role": "Defender",
+      "name": "Quorra",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     },
     {
-      "releaseSeason": 0,
-      "rarity": "Epic",
+      "releaseSeason": 12,
+      "rarity": "Rare",
       "role": "Brawler",
-      "name": "Sulley",
+      "name": "Rinzler",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 12,
+      "rarity": "Epic",
+      "role": "Speedster",
+      "name": "Sam Flynn",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 12,
+      "rarity": "Common",
+      "role": "Trickster",
+      "name": "Zuse",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     }
   ],
@@ -73,7 +73,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Pete Ward",
+      "name": "Orange Programs",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -81,7 +81,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Ted Pauley",
+      "name": "Grandpa And Grandma Flynn",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -89,7 +89,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Nick Schmidt",
+      "name": "Sirens",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -97,7 +97,15 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Georges Sanderson",
+      "name": "Edward Dillinger Jr.",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "name": "Black Guards",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -105,7 +113,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Henry J. Waternoose",
+      "name": "Sentry",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -113,7 +121,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Ms. Flint",
+      "name": "Anon",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -121,7 +129,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "The Yeti",
+      "name": "Marv",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -129,7 +137,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "CDA Agents",
+      "name": "Alan Bradley",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -137,38 +145,38 @@
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Roz",
+      "name": "ISO",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Celia Mae"
+      "exclusiveTo": "Quorra"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Smitty And Needleman",
+      "name": "Jarvis",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Mike Wazowski"
+      "exclusiveTo": "Rinzler"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Fungus",
+      "name": "Kevin Flynn",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Randall"
+      "exclusiveTo": "Sam Flynn"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Boo",
+      "name": "Gem",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Sulley"
+      "exclusiveTo": "Zuse"
     }
   ]
 }

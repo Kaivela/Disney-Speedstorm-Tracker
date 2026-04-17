@@ -1,37 +1,54 @@
 {
   "racers": [
     {
-      "releaseSeason": 0,
-      "rarity": "Rare",
+      "releaseSeason": 15,
+      "rarity": "Epic",
       "role": "Speedster",
-      "name": "Ortensia",
+      "name": "Alice",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     },
     {
-      "releaseSeason": 0,
-      "rarity": "Epic",
+      "releaseSeason": 15,
+      "rarity": "Rare",
       "role": "Trickster",
-      "name": "Oswald",
+      "name": "Mad Hatter",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
-      "superCharge": true,
+      "superCharge": false,
       "currentSuperChargeLevel": 0,
-      "currentSuperChargeShards": 0,
+      "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
       "universalBox": "✘",
-      "MPLTokenOld": "true",
+      "MPLTokenOld": false,
+      "MPLCoin": "old"
+    },
+    {
+      "releaseSeason": 15,
+      "rarity": "Common",
+      "role": "Brawler",
+      "name": "Queen Of Hearts",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
       "MPLCoin": "old"
     }
   ],
@@ -39,7 +56,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "The Reluctant Horse",
+      "name": "Bill The Lizard",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -47,7 +64,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "The Mechanical Cow",
+      "name": "The Walrus And The Carpenter",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -55,15 +72,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Common",
-      "name": "Donkey",
-      "currentStars": 0,
-      "currentShards": 0,
-      "universalBox": "✘"
-    },
-    {
-      "releaseSeason": 0,
-      "rarity": "Common",
-      "name": "Elephant On A Bicycle",
+      "name": "Tweedledee And Tweedledum",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -71,7 +80,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Camel-Os",
+      "name": "Dormouse",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -79,7 +88,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Lifeguard",
+      "name": "The Doorknob",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -87,7 +96,7 @@
     {
       "releaseSeason": 0,
       "rarity": "Rare",
-      "name": "Hot Dog",
+      "name": "Dodo",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘"
@@ -95,20 +104,29 @@
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "J. P. Whiskers",
+      "name": "Dinah",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Ortensia"
+      "exclusiveTo": "Alice"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
-      "name": "Francine `Fanny` Cottontail",
+      "name": "March Hare",
       "currentStars": 0,
       "currentShards": 0,
       "universalBox": "✘",
-      "exclusiveTo": "Oswald"
+      "exclusiveTo": "Mad Hatter"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "King Of Hearts",
+      "currentStars": 0,
+      "currentShards": 0,
+      "universalBox": "✘",
+      "exclusiveTo": "Queen Of Hearts"
     }
   ]
 }

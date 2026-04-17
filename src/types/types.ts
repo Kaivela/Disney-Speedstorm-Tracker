@@ -14,13 +14,13 @@ export interface Collection {
 export interface IRacer {
   collection: string;
   MPLCoin: MPLCoin;
-  MPLTokenOld: string;
+  MPLTokenOld: boolean;
   currentMPL: number;
   currentShards: number;
   currentStarFragment: number;
   currentStars: number;
   currentSuperChargeLevel: number;
-  currentSuperChargeShards: number;
+  currentSuperChargeTokens: number;
   highestMPL: number;
   name: string;
   rarity: Rarity;
