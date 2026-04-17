@@ -8,23 +8,23 @@ const tuneCoinsCosts = [
 ];
 
 // Définir les tunes coins rewards en LMJ pour chaque Rang (OLD PILOTS)
-const multiPlayerLeagueOldCoinsReward = [
+const MPLS0To4CoinsReward = [
   30, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 30, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 50, 0, 50, 50, 70, 70, 0, 100, 0,
 ];
 
-// Définir les upgrade coins rewards en multiPlayerLeague pour chaque Rang (NEW PILOTS)
-const multiPlayerLeagueNewCoinsReward = [
+// Définir les upgrade coins rewards en MPL pour chaque Rang (NEW PILOTS)
+const MPLS5To9CoinsReward = [
   30, 0, 0, 30, 30, 0, 0, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 50, 0, 50, 50, 0, 50, 0, 70, 70, 70, 70, 0, 100, 0,
 ];
 
-// Définir les upgrade coins rewards en multiPlayerLeague pour chaque Rang (S10)
-const multiPlayerLeagueS10CoinsReward = [
+// Définir les upgrade coins rewards en MPL pour chaque Rang (S10)
+const MPLS10ToLatestCoinsReward = [
   30, 0, 0, 30, 30, 0, 0, 0, 30, 30, 0, 90, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 50, 0, 50, 50, 0, 50, 0, 70, 70, 70, 70, 0, 100, 0,
 ];
 
-// Définir les upgrade coins rewards en multiPlayerLeague pour chaque Rang (S10 Mid)
-const multiPlayerLeagueS10MidCoinsReward = [
-  30, 0, 0, 30, 30, 0, 0, 0, 30, 30, 0, 90, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 50, 0, 50, 50, 0, 150, 0, 70, 70, 70, 70, 0, 100, 0,
+// Définir les upgrade coins rewards en MPL pour chaque Rang (S10 Mid)
+const MPLS10To14MidCoinsReward = [
+  30, 0, 0, 30, 30, 0, 0, 0, 30, 30, 0, 90, 0, 30, 30, 0, 30, 0, 30, 30, 0, 30, 0, 30, 30, 0, 50, 0, 50, 50, 0, 15, 0, 70, 70, 70, 70, 0, 100, 0,
 ];
 
 // Définir les shards rewards en multiPlayerLeague pour chaque Rang (NEW PILOTS)
@@ -60,10 +60,10 @@ const superChargeCost = [20, 40];
 export {
   racerShardsCost,
   tuneCoinsCosts,
-  multiPlayerLeagueOldCoinsReward,
-  multiPlayerLeagueNewCoinsReward,
-  multiPlayerLeagueS10CoinsReward,
-  multiPlayerLeagueS10MidCoinsReward,
+  MPLS0To4CoinsReward,
+  MPLS5To9CoinsReward,
+  MPLS10To14MidCoinsReward,
+  MPLS10ToLatestCoinsReward,
   multiPlayerLeagueShardsReward,
   multiPlayerLeagueOldTokensReward,
   multiPlayerLeagueNewTokensReward,

@@ -15,13 +15,13 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "old"
+      "MPLCoin": "S10ToLatest"
     },
     {
       "releaseSeason": 18,
       "rarity": "Rare",
       "role": "Speedster",
-      "name": "Go Go Tamago",
+      "name": "Go Go Tomago",
       "currentStars": 0,
       "currentStarFragment": 0,
       "currentShards": 0,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "old"
+      "MPLCoin": "S10ToLatest"
     },
     {
       "releaseSeason": 13,
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "old"
+      "MPLCoin": "S10ToLatest"
     },
     {
       "releaseSeason": 13,
@@ -66,7 +66,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "old"
+      "MPLCoin": "S10ToLatest"
     }
   ],
   "crews": [

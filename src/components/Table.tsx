@@ -21,14 +21,14 @@ export function Table() {
               <th data-trad="racer_name_table">Racer Name</th>
               <th className="racerCurrentStars" data-sort="currentStars"></th>
               <th data-sort="currentStarFragment" data-trad="current_starfragment_table">
-                Current StarFragment
+                Current Star Fragment
               </th>
               <th className="currentSuperChargeLevel" data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table"></th>
               <th data-sort="currentShards" data-trad="current_shards_table">
                 Current Shards
               </th>
               <th data-sort="currentSuperChargeShards" data-trad="current_super_charge_shards_table">
-                Current SuperCharge Shards
+                Current Super Charge Tokens
               </th>
               <th data-sort="currentMPL" data-trad="current_MPL_table">
                 Current MPL

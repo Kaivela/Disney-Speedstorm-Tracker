@@ -1,6 +1,8 @@
 ajouter icone de role a gauche du text dans la td "role" pour les racer
 ajuster les icones des colonne super charge pour afficher si oui ou non le racer peut etre super charge et si elle est maxé
 donner l'info de savoir si le perso est dans e boost pilote
+check release season for racers and crew
+check uniBox for racer and crew
 
 ## Migrations
 

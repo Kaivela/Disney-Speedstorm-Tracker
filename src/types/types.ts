@@ -2,7 +2,7 @@ export type Language = 'fr' | 'en';
 export type UniversalBox = '✔' | '✘' | '🟣';
 export type Rarity = 'Common' | 'Rare' | 'Epic';
 export type Role = 'Speedster' | 'Trickster' | 'Brawler' | 'Defender';
-export type MPLCoin = 'old' | 'new' | 'S10' | 'S10Mid';
+export type MPLCoin = 'Mickey' | 'S0To4' | 'S5To9' | 'S10To14Mid' | 'S10ToLatest';
 
 export type Collections = Record<string, Collection>;
 

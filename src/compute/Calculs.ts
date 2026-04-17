@@ -80,7 +80,7 @@ function calculateRacerSuperChargeTokenSNeeded(racer: IRacer): number {
     }
   }
 
-  return Math.max(totalSuperShardsNeeded - racer.currentSuperChargeShards, 0);
+  return Math.max(totalSuperShardsNeeded - racer.currentSuperChargeTokens, 0);
 }
 
 export {

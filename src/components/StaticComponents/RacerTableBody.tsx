@@ -17,7 +17,6 @@ function buildRacerTableBodyData() {
     const racerShardsToGetInMPL = calculateRacerShardsToGet(racer);
     const racerShardNeededIfMaxMPL = calculateRacerShardsIfMaxMPL(racer);
     const racersuperChargeTokensToGet = racer.superCharge ? calculateRacerSuperChargeTokenSNeeded(racer) : 0;
-    console.log({ racerShardNeededIfMaxMPL });
     return {
       collection: racer.collection,
       releaseSeason: racer.releaseSeason,
@@ -29,7 +28,7 @@ function buildRacerTableBodyData() {
       currentShards: racer.currentShards,
       superCharge: racer.superCharge,
       currentSuperChargeLevel: racer.currentSuperChargeLevel,
-      currentSuperChargeShards: racer.currentSuperChargeShards,
+      currentSuperChargeTokens: racer.currentSuperChargeTokens,
       currentMPL: racer.currentMPL,
       highestMPL: racer.highestMPL,
       universalBox: racer.universalBox,
@@ -65,7 +64,7 @@ function Racer({
   tuneCoinsNeededToMax,
   currentStarFragment,
   currentSuperChargeLevel,
-  currentSuperChargeShards,
+  currentSuperChargeTokens,
   currentMPL,
   highestMPL,
   shardsToGetInMPL,
@@ -87,7 +86,7 @@ function Racer({
       <td>{currentStarFragment}</td>
       <td>{currentSuperChargeLevel}</td>
       <td>{currentShards}</td>
-      <td>{currentSuperChargeShards}</td>
+      <td>{currentSuperChargeTokens}</td>
       <td>{currentMPL}</td>
       <td>{highestMPL}</td>
       <td>badge max MPL</td>
