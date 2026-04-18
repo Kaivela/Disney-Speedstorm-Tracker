@@ -12,9 +12,18 @@ export interface Collection {
 }
 
 export interface IRacer {
+  //Static properties
   collection: string;
   MPLTuneCoinReward: MPLTuneCoinReward;
   MPLTokenOld: boolean;
+  name: string;
+  releaseSeason: number;
+  rarity: Rarity;
+  role: Role;
+  superCharge: boolean;
+  universalBox: UniversalBox;
+
+  //Modifiable properties
   currentMPL: number;
   currentShards: number;
   currentStarFragment: number;
@@ -22,12 +31,6 @@ export interface IRacer {
   currentSuperChargeLevel: number;
   currentSuperChargeTokens: number;
   highestMPL: number;
-  name: string;
-  rarity: Rarity;
-  releaseSeason: number;
-  role: Role;
-  superCharge: boolean;
-  universalBox: UniversalBox;
 
   // Calculated properties
   shardsNeededToMax?: number | 'Maxed';
@@ -54,4 +57,13 @@ export interface ICrew {
   exclusiveTo?: string;
   // Calculated properties
   shardsNeededToMax?: number | 'Maxed';
+}
+
+export interface ISettings {
+  // lang?: Language;
+  // theme?: string;
+  // goal?: number;
+  // levelGoal?: number;
+  // dark?: boolean;
+  // transparant?: boolean;
 }

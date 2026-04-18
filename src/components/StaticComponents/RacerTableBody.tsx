@@ -9,8 +9,13 @@ import {
 } from '../../compute/Calculs';
 
 const racers = getAllRacers();
+const racerData = buildRacerTableBodyData();
+const racerList = racerData.map((racer, index) => {
+  return <Racer key={index} {...racer} />;
+});
 
 function buildRacerTableBodyData() {
+  console.log({ racers });
   return racers.map((racer) => {
     const tuneCoinsNeededToMax = calculateCoinsNeeded(racer);
     const racerShardsNeededToMax = calculateRacerShardsNeeded(racer);
@@ -41,15 +46,6 @@ function buildRacerTableBodyData() {
       superChargeTokensToGet: racersuperChargeTokensToGet,
     };
   });
-}
-const racerData = buildRacerTableBodyData();
-
-const racerList = racerData.map((racer, index) => {
-  return <Racer key={index} {...racer} />;
-});
-
-export function RacerTableBody() {
-  return <tbody>{racerList}</tbody>;
 }
 
 function Racer({
@@ -108,4 +104,8 @@ function Racer({
       </td>
     </tr>
   );
+}
+
+export function RacerTableBody() {
+  return <tbody>{racerList}</tbody>;
 }

@@ -4,32 +4,23 @@ donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
---Racers--
-franchise : "STRING" ==> collection : "STRING" (mais peut etre bien EMPTY car construit)
-universal box : true, false, "season" ==> universal box : '✔' | '✘' | '🟣'
-currentRMJ : "NUMBER" ==> currentMPL : "NUMBER"
-highestRMJ : "NUMBER" ==> highestMPL : "NUMBER"
-rmjTokenOld : true, false ==> MPLTokenReward : true, false
-rmjCoin : true, false, "S10", "S10Mid" ==> MPLTuneCoinReward : 'Mickey' | 'S0To4' | 'S5To9' | 'S10To14Mid' | 'S10ToLatest'
-currentSuperShards : "NUMBER" ==> currentSuperChargeTokens : "NUMBER"
-EMPTY ==> currentStarFragment : "NUMBER"
-EMPTY ==> currentSuperChargeLevel : "NUMBER"
-
 --Crews--
-EMPTY ==> releaseseason : "NUMBER"
-universal box : true, false, "season" ==> universal box : '✔' | '✘' | '🟣'
+"franchise": 'string' ................==> "collection": 'string'
+"rarity": "Common" ...................==> EMPTY
+"name": 'string' .....................==> "name": 'string'
+"currentStars": 'number' .............==> "currentStars": 'number'
+"currentShards": 'number' ............==> "currentShards": 'number'
+"universalBox": Boolean ..............==> EMPTY
+"shardsNeeded": 'number' .............==> EMPTY
 
-check all racers rewards
-up to date racer/crew data
-mettre en place le systeme de save
-modify racer/crew
-export/Import save
 migration de la save
+export/Import save
+modify racer/crew
 
+=========> MVP
 calcul des nextStar racer
 ACTIONS - calculate racer
 Account Stats
-=========> MVP
 preload img
 Filters
 data trad EN

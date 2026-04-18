@@ -1,0 +1,17 @@
+[
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Magica De Spell",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "collection": "string",
+    "name": "string",
+    "currentStars": 5,
+    "currentShards": 0
+  }
+]
