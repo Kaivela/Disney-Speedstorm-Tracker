@@ -1,7 +1,7 @@
 {
   "racers": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "role": "Defender",
       "name": "Davy Jones",
@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 0,
@@ -32,10 +32,10 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "role": "Brawler",
       "name": "Hector Barbossa",
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 0,
@@ -66,10 +66,10 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Tia Dalma",
@@ -83,10 +83,10 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "role": "Speedster",
       "name": "Will Turner",
@@ -100,12 +100,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Prison Dog",
       "currentStars": 0,
@@ -113,7 +113,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Shansa",
       "currentStars": 0,
@@ -121,7 +121,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Ian Mercer",
       "currentStars": 0,
@@ -129,7 +129,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Cotton",
       "currentStars": 0,
@@ -169,7 +169,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Bootstrap Bill Turner",
       "currentStars": 0,
@@ -177,7 +177,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Theodore Groves",
       "currentStars": 0,
@@ -185,7 +185,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Bo'Sun",
       "currentStars": 0,
@@ -193,7 +193,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Captain Sao Feng",
       "currentStars": 0,
@@ -217,7 +217,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Maccus",
       "currentStars": 0,
@@ -235,7 +235,7 @@
       "exclusiveTo": "Elizabeth Swann"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Carina Barbossa",
       "currentStars": 0,
@@ -253,7 +253,7 @@
       "exclusiveTo": "Jack Sparrow"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Rock Crabs",
       "currentStars": 0,
@@ -262,7 +262,7 @@
       "exclusiveTo": "Tia Dalma"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Henry Turner",
       "currentStars": 0,

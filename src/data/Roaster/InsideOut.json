@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 8,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 8,
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 8,
@@ -66,7 +66,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 8,
@@ -83,7 +83,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 8,
@@ -100,7 +100,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 8,
@@ -117,12 +117,12 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "Nostalgia",
       "currentStars": 0,
@@ -130,7 +130,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "Deep Dark Secret",
       "currentStars": 0,
@@ -138,7 +138,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "Jordan",
       "currentStars": 0,
@@ -146,7 +146,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "Helicopter Pilot",
       "currentStars": 0,
@@ -154,7 +154,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "Frank And Dave",
       "currentStars": 0,
@@ -162,7 +162,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "Fritz",
       "currentStars": 0,
@@ -170,7 +170,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Common",
       "name": "The Forgetters",
       "currentStars": 0,
@@ -178,7 +178,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Lance Slashblade",
       "currentStars": 0,
@@ -186,7 +186,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Bloofy & Pouchy",
       "currentStars": 0,
@@ -194,7 +194,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Bing Bong",
       "currentStars": 0,
@@ -202,7 +202,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Jangles The Clown",
       "currentStars": 0,
@@ -210,7 +210,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Meg",
       "currentStars": 0,
@@ -218,7 +218,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Riley's Dad",
       "currentStars": 0,
@@ -226,7 +226,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Riley's Mom",
       "currentStars": 0,
@@ -234,7 +234,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Angry Riley",
       "currentStars": 0,
@@ -243,7 +243,7 @@
       "exclusiveTo": "Anger"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Anxious Riley",
       "currentStars": 0,
@@ -252,7 +252,7 @@
       "exclusiveTo": "Anxiety"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Disgusted Riley",
       "currentStars": 0,
@@ -261,7 +261,7 @@
       "exclusiveTo": "Disgust"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Ennuyé Riley",
       "currentStars": 0,
@@ -270,7 +270,7 @@
       "exclusiveTo": "Ennui"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Scared Riley",
       "currentStars": 0,
@@ -279,7 +279,7 @@
       "exclusiveTo": "Fear"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Happy Riley",
       "currentStars": 0,
@@ -288,7 +288,7 @@
       "exclusiveTo": "Joy"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Sad Riley",
       "currentStars": 0,

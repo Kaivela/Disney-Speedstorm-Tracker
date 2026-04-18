@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 12,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 12,
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 12,
@@ -66,12 +66,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Common",
       "name": "Orange Programs",
       "currentStars": 0,
@@ -79,7 +79,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Common",
       "name": "Grandpa And Grandma Flynn",
       "currentStars": 0,
@@ -87,7 +87,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Common",
       "name": "Sirens",
       "currentStars": 0,
@@ -95,7 +95,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Common",
       "name": "Edward Dillinger Jr.",
       "currentStars": 0,
@@ -103,7 +103,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Common",
       "name": "Black Guards",
       "currentStars": 0,
@@ -111,7 +111,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Sentry",
       "currentStars": 0,
@@ -119,7 +119,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Anon",
       "currentStars": 0,
@@ -127,7 +127,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Marv",
       "currentStars": 0,
@@ -135,7 +135,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Alan Bradley",
       "currentStars": 0,
@@ -143,7 +143,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Epic",
       "name": "ISO",
       "currentStars": 0,
@@ -152,7 +152,7 @@
       "exclusiveTo": "Quorra"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Jarvis",
       "currentStars": 0,
@@ -161,7 +161,7 @@
       "exclusiveTo": "Rinzler"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Kevin Flynn",
       "currentStars": 0,
@@ -170,7 +170,7 @@
       "exclusiveTo": "Sam Flynn"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Gem",
       "currentStars": 0,

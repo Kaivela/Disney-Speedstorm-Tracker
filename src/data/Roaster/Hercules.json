@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 0,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 0,
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     }
   ],
   "crews": [
@@ -86,7 +86,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Hydra",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Cerberus",
       "currentStars": 0,
@@ -118,7 +118,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Pain And Panic",
       "currentStars": 0,

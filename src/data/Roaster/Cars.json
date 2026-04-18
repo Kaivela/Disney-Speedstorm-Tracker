@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 18,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 18,
@@ -49,12 +49,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Common",
       "name": "Cal Weathers",
       "currentStars": 0,
@@ -62,7 +62,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Common",
       "name": "Sheriff",
       "currentStars": 0,
@@ -70,7 +70,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Common",
       "name": "Red",
       "currentStars": 0,
@@ -78,7 +78,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Francesco Bernoulli",
       "currentStars": 0,
@@ -86,7 +86,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Finn McMissile",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Flo",
       "currentStars": 0,
@@ -102,7 +102,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Epic",
       "name": "Sterling",
       "currentStars": 0,
@@ -111,7 +111,7 @@
       "exclusiveTo": "Cruz Ramirez"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Epic",
       "name": "Guido",
       "currentStars": 0,
@@ -120,7 +120,7 @@
       "exclusiveTo": "Lightning McQueen"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Epic",
       "name": "Holley Shiftwell",
       "currentStars": 0,

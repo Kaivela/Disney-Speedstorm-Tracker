@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 17,
@@ -32,12 +32,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Common",
       "name": "Mata",
       "currentStars": 0,
@@ -45,7 +45,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Common",
       "name": "Rudy",
       "currentStars": 0,
@@ -53,7 +53,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Common",
       "name": "Bucky The Squirrel",
       "currentStars": 0,
@@ -61,7 +61,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Chicha",
       "currentStars": 0,
@@ -69,7 +69,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Chaca And Tipo",
       "currentStars": 0,
@@ -77,7 +77,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Theme Song Guy",
       "currentStars": 0,
@@ -85,7 +85,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Pacha",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "exclusiveTo": "Kuzco"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Kronk",
       "currentStars": 0,

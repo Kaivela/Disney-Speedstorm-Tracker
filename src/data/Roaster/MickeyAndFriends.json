@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 0,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 1,
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 0,
@@ -66,7 +66,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "Mickey"
+      "MPLTuneCoinReward": "Mickey"
     },
     {
       "releaseSeason": 3,
@@ -83,7 +83,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 15,
@@ -100,7 +100,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 2,
@@ -117,7 +117,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 2,
@@ -134,12 +134,12 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 15,
       "rarity": "Common",
       "name": "Magica De Spell",
       "currentStars": 0,
@@ -147,7 +147,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 2,
       "rarity": "Common",
       "name": "Tanglefoot",
       "currentStars": 0,
@@ -155,7 +155,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Clara Cluck",
       "currentStars": 0,
@@ -163,7 +163,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Tootsie The Penguin",
       "currentStars": 0,
@@ -171,7 +171,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 2,
       "rarity": "Common",
       "name": "Chief O'Hara",
       "currentStars": 0,
@@ -219,7 +219,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 15,
       "rarity": "Rare",
       "name": "Webby Vanderquack",
       "currentStars": 0,
@@ -227,7 +227,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Salty The Seal",
       "currentStars": 0,
@@ -235,7 +235,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Millie And Melody Mouse",
       "currentStars": 0,
@@ -243,7 +243,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 2,
       "rarity": "Rare",
       "name": "Humphrey The Bear",
       "currentStars": 0,
@@ -251,7 +251,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 2,
       "rarity": "Rare",
       "name": "Goat",
       "currentStars": 0,
@@ -283,7 +283,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "April, May, and June",
       "currentStars": 0,
@@ -301,7 +301,7 @@
       "exclusiveTo": "Donald Duck"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 1,
       "rarity": "Epic",
       "name": "Gilbert Goof",
       "currentStars": 0,
@@ -319,7 +319,7 @@
       "exclusiveTo": "Mickey Mouse"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Fifi The Peke",
       "currentStars": 0,
@@ -328,7 +328,7 @@
       "exclusiveTo": "Minnie"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 15,
       "rarity": "Epic",
       "name": "Huey, Dewey And Louie",
       "currentStars": 0,
@@ -337,7 +337,7 @@
       "exclusiveTo": "Scrooge Mcduck"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 2,
       "rarity": "Epic",
       "name": "Caroline Cow",
       "currentStars": 0,
@@ -346,7 +346,7 @@
       "exclusiveTo": "Steamboat Mickey"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 2,
       "rarity": "Epic",
       "name": "Parrot",
       "currentStars": 0,

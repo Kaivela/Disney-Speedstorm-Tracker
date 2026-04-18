@@ -1,7 +1,7 @@
 {
   "racers": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "role": "Trickster",
       "name": "Angel",
@@ -15,10 +15,10 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "role": "Brawler",
       "name": "Captain Gantu",
@@ -32,10 +32,10 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "role": "Defender",
       "name": "Jumba",
@@ -49,10 +49,10 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "role": "Speedster",
       "name": "Lilo",
@@ -66,10 +66,10 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "role": "Speedster",
       "name": "Stitch",
@@ -83,12 +83,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Kumu",
       "currentStars": 0,
@@ -96,7 +96,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Susan Hegarty",
       "currentStars": 0,
@@ -104,7 +104,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Intergalactic Police",
       "currentStars": 0,
@@ -112,7 +112,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Pudge",
       "currentStars": 0,
@@ -120,7 +120,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Common",
       "name": "Luki",
       "currentStars": 0,
@@ -128,7 +128,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Mertle Edmonds",
       "currentStars": 0,
@@ -136,7 +136,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Mrs. Hasagawa",
       "currentStars": 0,
@@ -144,7 +144,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "David Kawena",
       "currentStars": 0,
@@ -152,7 +152,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Ice Cream Man",
       "currentStars": 0,
@@ -160,7 +160,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Cobra Bubbles",
       "currentStars": 0,
@@ -168,7 +168,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Reuben",
       "currentStars": 0,
@@ -177,7 +177,7 @@
       "exclusiveTo": "Angel"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Grand Council Woman",
       "currentStars": 0,
@@ -186,7 +186,7 @@
       "exclusiveTo": "Captain Gantu"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Pleakley",
       "currentStars": 0,
@@ -195,7 +195,7 @@
       "exclusiveTo": "Jumba"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Nani",
       "currentStars": 0,
@@ -204,7 +204,7 @@
       "exclusiveTo": "Lilo"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Duck Family",
       "currentStars": 0,

@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 7,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 10,
@@ -49,12 +49,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10To14Mid"
+      "MPLTuneCoinReward": "S10To14Mid"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 15,
       "rarity": "Common",
       "name": "Lew Zealand",
       "currentStars": 0,
@@ -62,7 +62,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "Sweetums",
       "currentStars": 0,
@@ -70,7 +70,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "Scooter",
       "currentStars": 0,
@@ -78,7 +78,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Common",
       "name": "Pepe The King Prawn",
       "currentStars": 0,
@@ -86,7 +86,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Rizzo The Rat",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Sam The Eagle",
       "currentStars": 0,
@@ -102,7 +102,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Rowlf The Dog",
       "currentStars": 0,
@@ -110,7 +110,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 15,
       "rarity": "Rare",
       "name": "Statler And Waldorf",
       "currentStars": 0,
@@ -118,7 +118,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 15,
       "rarity": "Epic",
       "name": "Kermit The Frog-Crew",
       "currentStars": 0,
@@ -127,7 +127,7 @@
       "exclusiveTo": "Fozzie Bear"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Robin The Frog",
       "currentStars": 0,
@@ -136,7 +136,7 @@
       "exclusiveTo": "Kermit The Frog"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Epic",
       "name": "Foo-Foo",
       "currentStars": 0,

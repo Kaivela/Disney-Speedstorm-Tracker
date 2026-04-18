@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
       "releaseSeason": 0,
@@ -32,10 +32,10 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Rare",
       "role": "Brawler",
       "name": "Gaston",
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": true,
-      "MPLCoin": "S0To4"
+      "MPLTuneCoinReward": "S0To4"
     }
   ],
   "crews": [
@@ -86,7 +86,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Claudette, Laurette And Paulette",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Gaston's Cronies",
       "currentStars": 0,
@@ -136,7 +136,7 @@
       "exclusiveTo": "Belle"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Lefou",
       "currentStars": 0,

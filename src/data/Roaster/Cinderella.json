@@ -15,12 +15,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10To14Mid"
+      "MPLTuneCoinReward": "S10To14Mid"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Common",
       "name": "The Grand Duke",
       "currentStars": 0,
@@ -28,7 +28,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Common",
       "name": "The King",
       "currentStars": 0,
@@ -36,7 +36,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Common",
       "name": "Major And Bruno",
       "currentStars": 0,
@@ -44,7 +44,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Rare",
       "name": "Fairy Godmother",
       "currentStars": 0,
@@ -52,7 +52,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Rare",
       "name": "Prince Charming",
       "currentStars": 0,
@@ -60,7 +60,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Epic",
       "name": "Jaq And Gus",
       "currentStars": 0,

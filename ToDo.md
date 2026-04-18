@@ -1,8 +1,6 @@
 ajouter icone de role a gauche du text dans la td "role" pour les racer
 ajuster les icones des colonne super charge pour afficher si oui ou non le racer peut etre super charge et si elle est maxé
 donner l'info de savoir si le perso est dans e boost pilote
-check release season for racers and crew
-check uniBox for racer and crew
 
 ## Migrations
 
@@ -11,8 +9,8 @@ franchise : "STRING" ==> collection : "STRING" (mais peut etre bien EMPTY car co
 universal box : true, false, "season" ==> universal box : '✔' | '✘' | '🟣'
 currentRMJ : "NUMBER" ==> currentMPL : "NUMBER"
 highestRMJ : "NUMBER" ==> highestMPL : "NUMBER"
-rmjTokenOld : true, false, "S10", "S10Mid" ==> MPLTokenReward : "old" | "new" | "S10" | "S10Mid"
-rmjCoin : true, false, "S10", "S10Mid" ==> MPLTuneCoinReward : "old" | "new" | "S10" | "S10Mid"
+rmjTokenOld : true, false ==> MPLTokenReward : true, false
+rmjCoin : true, false, "S10", "S10Mid" ==> MPLTuneCoinReward : 'Mickey' | 'S0To4' | 'S5To9' | 'S10To14Mid' | 'S10ToLatest'
 currentSuperShards : "NUMBER" ==> currentSuperChargeTokens : "NUMBER"
 EMPTY ==> currentStarFragment : "NUMBER"
 EMPTY ==> currentSuperChargeLevel : "NUMBER"

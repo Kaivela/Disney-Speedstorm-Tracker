@@ -15,12 +15,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Common",
       "name": "Tom",
       "currentStars": 0,
@@ -28,7 +28,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Ellen",
       "currentStars": 0,
@@ -36,7 +36,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Loaf",
       "currentStars": 0,
@@ -44,7 +44,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 18,
       "rarity": "Epic",
       "name": "King Georges",
       "currentStars": 0,

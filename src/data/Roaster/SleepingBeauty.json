@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10To14Mid"
+      "MPLTuneCoinReward": "S10To14Mid"
     },
     {
       "releaseSeason": 9,
@@ -32,12 +32,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Common",
       "name": "Queen Leah",
       "currentStars": 0,
@@ -45,7 +45,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Spear Goon",
       "currentStars": 0,
@@ -53,7 +53,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Axe Goon",
       "currentStars": 0,
@@ -61,7 +61,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Rare",
       "name": "Prince Phillip",
       "currentStars": 0,
@@ -69,7 +69,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Goon Leader",
       "currentStars": 0,
@@ -77,7 +77,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "King Hubert",
       "currentStars": 0,
@@ -85,7 +85,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "King Stefan",
       "currentStars": 0,
@@ -93,7 +93,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 13,
       "rarity": "Epic",
       "name": "Flora, Fauna, and Merryweather",
       "currentStars": 0,
@@ -102,7 +102,7 @@
       "exclusiveTo": "Aurora"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Diablo",
       "currentStars": 0,

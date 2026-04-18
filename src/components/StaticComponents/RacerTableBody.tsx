@@ -32,7 +32,7 @@ function buildRacerTableBodyData() {
       currentMPL: racer.currentMPL,
       highestMPL: racer.highestMPL,
       universalBox: racer.universalBox,
-      MPLCoin: racer.MPLCoin,
+      MPLTuneCoinReward: racer.MPLTuneCoinReward,
       MPLTokenOld: racer.MPLTokenOld,
       tuneCoinsNeededToMax: tuneCoinsNeededToMax,
       shardsNeededToMax: racerShardsNeededToMax,

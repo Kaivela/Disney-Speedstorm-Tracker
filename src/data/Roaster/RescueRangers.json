@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10To14Mid"
+      "MPLTuneCoinReward": "S10To14Mid"
     },
     {
       "releaseSeason": 14,
@@ -32,12 +32,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10To14Mid"
+      "MPLTuneCoinReward": "S10To14Mid"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Common",
       "name": "Rat Capone",
       "currentStars": 0,
@@ -45,7 +45,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Common",
       "name": "Robot Dog",
       "currentStars": 0,
@@ -53,7 +53,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Common",
       "name": "Fat Cat's Gang",
       "currentStars": 0,
@@ -61,7 +61,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Rare",
       "name": "Professor Norton Nimnul",
       "currentStars": 0,
@@ -69,7 +69,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Rare",
       "name": "Fat Cat",
       "currentStars": 0,
@@ -77,7 +77,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Rare",
       "name": "Zipper",
       "currentStars": 0,
@@ -85,7 +85,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Epic",
       "name": "Monterey Jack",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "exclusiveTo": "Chip"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 14,
       "rarity": "Epic",
       "name": "Gadget Hackwrench",
       "currentStars": 0,

@@ -15,12 +15,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10To14Mid"
+      "MPLTuneCoinReward": "S10To14Mid"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Common",
       "name": "Shorty",
       "currentStars": 0,
@@ -28,7 +28,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Common",
       "name": "Vladimir",
       "currentStars": 0,
@@ -36,7 +36,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Hook Hand",
       "currentStars": 0,
@@ -44,7 +44,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Rare",
       "name": "King Frederic And Queen Arianna",
       "currentStars": 0,
@@ -52,7 +52,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 10,
       "rarity": "Epic",
       "name": "Pascal",
       "currentStars": 0,

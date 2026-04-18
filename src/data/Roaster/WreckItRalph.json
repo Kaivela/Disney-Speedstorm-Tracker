@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 7,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 7,
@@ -49,7 +49,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 7,
@@ -66,7 +66,7 @@
       "highestMPL": 0,
       "universalBox": "✔",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     },
     {
       "releaseSeason": 7,
@@ -83,12 +83,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "FPS Robot",
       "currentStars": 0,
@@ -96,7 +96,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "CY Bugs",
       "currentStars": 0,
@@ -104,7 +104,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "Claw Officers",
       "currentStars": 0,
@@ -112,7 +112,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "Sorceress",
       "currentStars": 0,
@@ -120,7 +120,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Common",
       "name": "Hero's Duty Troops",
       "currentStars": 0,
@@ -128,7 +128,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Surge Protector",
       "currentStars": 0,
@@ -136,7 +136,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Saitine",
       "currentStars": 0,
@@ -144,7 +144,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Wynnchel And Duncan",
       "currentStars": 0,
@@ -152,7 +152,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Nicelanders",
       "currentStars": 0,
@@ -160,7 +160,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Rare",
       "name": "General Hologram",
       "currentStars": 0,
@@ -168,7 +168,7 @@
       "universalBox": "✔"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Gene",
       "currentStars": 0,
@@ -177,7 +177,7 @@
       "exclusiveTo": "Fix-It Felix"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Sour Bill",
       "currentStars": 0,
@@ -186,7 +186,7 @@
       "exclusiveTo": "King Candy"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Stan Litwak",
       "currentStars": 0,
@@ -195,7 +195,7 @@
       "exclusiveTo": "Ralph"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Markowski",
       "currentStars": 0,
@@ -204,7 +204,7 @@
       "exclusiveTo": "Sergeant Calhoun"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Moppet Girl",
       "currentStars": 0,

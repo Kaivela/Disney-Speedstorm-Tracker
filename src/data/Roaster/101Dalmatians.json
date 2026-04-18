@@ -15,12 +15,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S5To9"
+      "MPLTuneCoinReward": "S5To9"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Sergeant Tibbs",
       "currentStars": 0,
@@ -28,7 +28,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Common",
       "name": "Captain",
       "currentStars": 0,
@@ -36,7 +36,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Colonel",
       "currentStars": 0,
@@ -44,7 +44,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Nanny",
       "currentStars": 0,
@@ -52,7 +52,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Horace",
       "currentStars": 0,
@@ -60,7 +60,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Jasper",
       "currentStars": 0,

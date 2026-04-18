@@ -15,7 +15,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 17,
@@ -32,7 +32,7 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     },
     {
       "releaseSeason": 17,
@@ -49,12 +49,12 @@
       "highestMPL": 0,
       "universalBox": "✘",
       "MPLTokenOld": false,
-      "MPLCoin": "S10ToLatest"
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Common",
       "name": "Gideon Grey",
       "currentStars": 0,
@@ -62,7 +62,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Common",
       "name": "Mayor Lionheart",
       "currentStars": 0,
@@ -70,7 +70,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Common",
       "name": "Gazelle",
       "currentStars": 0,
@@ -78,7 +78,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Yax",
       "currentStars": 0,
@@ -86,7 +86,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Fru Fru",
       "currentStars": 0,
@@ -94,7 +94,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Mr. Big",
       "currentStars": 0,
@@ -102,7 +102,7 @@
       "universalBox": "✘"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Priscilla",
       "currentStars": 0,
@@ -111,7 +111,7 @@
       "exclusiveTo": "Flash"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Bonnie And Stu Hopps",
       "currentStars": 0,
@@ -120,7 +120,7 @@
       "exclusiveTo": "Judy Hopps"
     },
     {
-      "releaseSeason": 0,
+      "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Finnick",
       "currentStars": 0,
