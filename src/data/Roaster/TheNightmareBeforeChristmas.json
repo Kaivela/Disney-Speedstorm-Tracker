@@ -30,7 +30,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S10ToLatest"
     },
@@ -47,7 +47,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S10ToLatest"
     },
@@ -64,7 +64,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S10ToLatest"
     }
@@ -76,7 +76,7 @@
       "name": "Clown With The Tear-Away Face",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -84,7 +84,7 @@
       "name": "The Vampire Brothers",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -92,7 +92,7 @@
       "name": "Mummy Boy",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -100,7 +100,7 @@
       "name": "Man-Eating Wreath",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -108,7 +108,7 @@
       "name": "Toy Duck",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -116,7 +116,7 @@
       "name": "Igor",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -124,7 +124,7 @@
       "name": "Wolfman",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -132,7 +132,7 @@
       "name": "Santa Claus",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -149,7 +149,7 @@
       "name": "Zero",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Jack Skellington"
     },
     {
@@ -158,7 +158,7 @@
       "name": "Lock, Shock, And Barrel",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Oogie Boogie"
     },
     {
@@ -167,7 +167,7 @@
       "name": "The Mayor",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Sally"
     }
   ]

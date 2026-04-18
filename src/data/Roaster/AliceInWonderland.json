@@ -13,7 +13,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S10ToLatest"
     },
@@ -30,7 +30,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S10ToLatest"
     },
@@ -59,7 +59,7 @@
       "name": "Bill The Lizard",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -67,7 +67,7 @@
       "name": "The Walrus And The Carpenter",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -75,7 +75,7 @@
       "name": "Tweedledee And Tweedledum",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -83,7 +83,7 @@
       "name": "Dormouse",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -91,7 +91,7 @@
       "name": "The Doorknob",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -99,7 +99,7 @@
       "name": "Dodo",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -107,7 +107,7 @@
       "name": "Dinah",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Alice"
     },
     {
@@ -116,7 +116,7 @@
       "name": "March Hare",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Mad Hatter"
     },
     {

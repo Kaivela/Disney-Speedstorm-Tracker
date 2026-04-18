@@ -59,7 +59,7 @@
       "name": "Olympian Gods",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -67,7 +67,7 @@
       "name": "Hera",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -75,7 +75,7 @@
       "name": "Hermes",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -83,7 +83,7 @@
       "name": "Amphitryon And Alcmene",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -91,7 +91,7 @@
       "name": "Hydra",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -99,7 +99,7 @@
       "name": "Cerberus",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -107,7 +107,7 @@
       "name": "Zeus",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -115,7 +115,7 @@
       "name": "Phil",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔"
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
@@ -123,7 +123,7 @@
       "name": "Pain And Panic",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Hades"
     },
     {
@@ -132,7 +132,7 @@
       "name": "Pegasus",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Hercules"
     },
     {
@@ -141,7 +141,7 @@
       "name": "Muses",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Meg"
     }
   ]

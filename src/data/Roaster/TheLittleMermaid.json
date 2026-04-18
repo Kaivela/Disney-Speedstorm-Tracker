@@ -64,7 +64,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S5To9"
     }
@@ -76,7 +76,7 @@
       "name": "Under The Sea Band",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -84,7 +84,7 @@
       "name": "Glut",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -92,7 +92,7 @@
       "name": "Seahorse Herald",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -100,7 +100,7 @@
       "name": "Chef Louis",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -108,7 +108,7 @@
       "name": "Ursula's Garden",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -116,7 +116,7 @@
       "name": "Ariel's Sisters",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -124,7 +124,7 @@
       "name": "Grimsby",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -132,7 +132,7 @@
       "name": "Scuttle",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -167,7 +167,7 @@
       "name": "Flotsam And Jetsam",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Ursula"
     }
   ]

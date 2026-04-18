@@ -30,7 +30,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLCoin": "S5To9"
     },
@@ -93,7 +93,7 @@
       "name": "Erik And Francis",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -101,7 +101,7 @@
       "name": "Trolls",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -109,7 +109,7 @@
       "name": "Lieutenant Mattias",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -117,7 +117,7 @@
       "name": "Oaken",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -125,7 +125,7 @@
       "name": "Royal Guards Of Arendelle",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -133,7 +133,7 @@
       "name": "Duke Of Weselton",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -141,7 +141,7 @@
       "name": "Marshmallow",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -149,7 +149,7 @@
       "name": "Queen Iduna",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -157,7 +157,7 @@
       "name": "King Agnarr",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -165,7 +165,7 @@
       "name": "Bulda",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -182,7 +182,7 @@
       "name": "Bruni",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Elsa"
     },
     {

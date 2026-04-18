@@ -13,7 +13,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S10ToLatest"
     },
@@ -84,7 +84,7 @@
       "name": "Sergeant Gerson",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -92,7 +92,7 @@
       "name": "General",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -100,7 +100,7 @@
       "name": "Punk Bot Fighter",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -108,7 +108,7 @@
       "name": "Little Yama",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -124,7 +124,7 @@
       "name": "Tadashi",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -132,7 +132,7 @@
       "name": "Bot Fight Ringleader",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -140,7 +140,7 @@
       "name": "Yama",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -148,7 +148,7 @@
       "name": "Alistair Krei",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -156,7 +156,7 @@
       "name": "Mochi",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Baymax"
     },
     {

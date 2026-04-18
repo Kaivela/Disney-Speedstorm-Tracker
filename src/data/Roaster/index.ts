@@ -11,6 +11,7 @@ export { default as ToyStory } from './ToyStory.json';
 export { default as LiloStitch } from './LiloStitch.json';
 export { default as Aladdin } from './Aladdin.json';
 export { default as OswaldTheLuckyRabbit } from './OswaldTheLuckyRabbit.json';
+export { default as Frozen } from './Frozen.json';
 export { default as WallE } from './WallE.json';
 export { default as TheLittleMermaid } from './TheLittleMermaid.json';
 export { default as WreckItRalph } from './WreckItRalph.json';

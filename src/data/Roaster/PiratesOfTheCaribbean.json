@@ -13,7 +13,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S5To9"
     },
@@ -30,7 +30,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLCoin": "S0To4"
     },
@@ -81,7 +81,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLCoin": "S5To9"
     },
@@ -240,7 +240,7 @@
       "name": "Carina Barbossa",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Hector Barbossa"
     },
     {
@@ -249,7 +249,7 @@
       "name": "Joshamee Gibbs",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Jack Sparrow"
     },
     {
@@ -267,7 +267,7 @@
       "name": "Henry Turner",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Will Turner"
     }
   ]

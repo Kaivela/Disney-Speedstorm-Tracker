@@ -14,6 +14,7 @@ const collections: Collections = {
   LiloStitch: dataFiles.LiloStitch as Collection,
   Aladdin: dataFiles.Aladdin as Collection,
   OswaldTheLuckyRabbit: dataFiles.OswaldTheLuckyRabbit as Collection,
+  Frozen: dataFiles.Frozen as Collection,
   WallE: dataFiles.WallE as Collection,
   TheLittleMermaid: dataFiles.TheLittleMermaid as Collection,
   WreckItRalph: dataFiles.WreckItRalph as Collection,

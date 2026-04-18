@@ -64,7 +64,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLCoin": "Mickey"
     },
@@ -115,7 +115,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLCoin": "S0To4"
     },
@@ -132,7 +132,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLCoin": "S0To4"
     }
@@ -144,7 +144,7 @@
       "name": "Magica De Spell",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "🟣"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -152,7 +152,7 @@
       "name": "Tanglefoot",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -160,7 +160,7 @@
       "name": "Clara Cluck",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -168,7 +168,7 @@
       "name": "Tootsie The Penguin",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -176,7 +176,7 @@
       "name": "Chief O'Hara",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -224,7 +224,7 @@
       "name": "Webby Vanderquack",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -232,7 +232,7 @@
       "name": "Salty The Seal",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -240,7 +240,7 @@
       "name": "Millie And Melody Mouse",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -248,7 +248,7 @@
       "name": "Humphrey The Bear",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -256,7 +256,7 @@
       "name": "Goat",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘"
+      "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
@@ -297,7 +297,7 @@
       "name": "José Carioca And Panchito",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Donald Duck"
     },
     {
@@ -306,7 +306,7 @@
       "name": "Gilbert Goof",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Goofy"
     },
     {
@@ -342,7 +342,7 @@
       "name": "Caroline Cow",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Steamboat Mickey"
     },
     {
@@ -351,7 +351,7 @@
       "name": "Parrot",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "exclusiveTo": "Steamboat Pete"
     }
   ]

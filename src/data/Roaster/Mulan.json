@@ -30,7 +30,7 @@
       "currentSuperChargeTokens": 0,
       "currentMPL": 0,
       "highestMPL": 0,
-      "universalBox": "✘",
+      "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLCoin": "S0To4"
     }
@@ -90,7 +90,7 @@
       "name": "Mushu",
       "currentStars": 0,
       "currentShards": 0,
-      "universalBox": "✔",
+      "universalBox": "✘",
       "exclusiveTo": "Mulan"
     },
     {
