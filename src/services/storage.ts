@@ -1,4 +1,5 @@
 import type { IRacer, ICrew, ISettings } from '../types/types';
+import { migrateLocalStorage } from './migration';
 
 const racersKey = 'racers';
 const crewsKey = 'crews';
@@ -10,6 +11,7 @@ export class StorageService {
   private constructor() {}
 
   public static getInstance(): StorageService {
+    migrateLocalStorage();
     if (!StorageService.instance) {
       StorageService.instance = new StorageService();
     }

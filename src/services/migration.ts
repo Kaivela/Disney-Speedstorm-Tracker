@@ -1,10 +1,10 @@
-import type { IRacer } from '../types/types';
+import type { ICrew, IRacer } from '../types/types';
 
 export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
   // pour chaque racer
-  const racersMigrated = racers.map((racer) => {
-    // Migration html/js => react
-    // si un racer ne pas contient la props currentStarFragment alors le tableau subit la transo
+  return racers.map((racerOriginal) => {
+    const racer = structuredClone(racerOriginal);
+    // si un racer ne contient pas la props currentStarFragment alors le tableau subit la transformation
 
     // "franchise": 'String' .........==> "collection": 'string'
     // "rarity": 'string' ............==> EMPTY
@@ -19,7 +19,9 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
     // "highestRMJ": 'number' ........==> "highestMPL": 'number'
     // "universalBox": boolean .......==> EMPTY
     // "releaseSeason": 'number' .....==> EMPTY
+    // "superCharge": Boolean ........==> EMPTY
 
+    // Migration html/js => react
     if (!racer.currentStarFragment) {
       racer.collection = racer.franchise;
       delete racer.franchise;
@@ -35,10 +37,63 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
       delete racer.highestRMJ;
       delete racer.universalBox;
       delete racer.releaseSeason;
+      delete racer.superCharge;
     }
 
-    return racer;
-  });
+    // change GoGoTomage's Name
+    if (racer.name === 'Go Go Tamago') {
+      racer.name = 'Go Go Tomago';
+    }
 
-  return racersMigrated as unknown as IRacer[];
+    // New Migration
+    // if (condition qui n'existe que dans l'ancienne save) {
+    //   je récupère l'ancienne valeur
+    //   j'écris la nouvelle
+    //   j'efface l'ancienne
+    // }
+
+    return racer;
+  }) as unknown as IRacer[];
+}
+
+export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {
+  // pour chaque crew
+  return crews.map((crewOriginal) => {
+    const crew = structuredClone(crewOriginal);
+    // Migration html/js => react
+    // si un crew contient la props rarity alors le tableau subit la transformation
+
+    // "franchise": 'string' ................==> "collection": 'string'
+    // "rarity": "Common" ...................==> EMPTY
+    // "name": 'string' .....................==> "name": 'string'
+    // "currentStars": 'number' .............==> "currentStars": 'number'
+    // "currentShards": 'number' ............==> "currentShards": 'number'
+    // "universalBox": Boolean ..............==> EMPTY
+    // "shardsNeeded": 'number' .............==> EMPTY
+
+    if (crew.rarity) {
+      crew.collection = crew.franchise;
+      delete crew.franchise;
+      delete crew.rarity;
+      delete crew.universalBox;
+      delete crew.shardsNeeded;
+    }
+
+    return crew;
+  }) as unknown as ICrew[];
+}
+
+export function migrateLocalStorage() {
+  // rename key pilots into key racers
+  const pilots = localStorage.getItem('pilots');
+  if (pilots) {
+    localStorage.setItem('racers', pilots);
+    localStorage.removeItem('pilots');
+  }
+  // New migration
+  // const oldKey = localStorage.getItem('oldKey');
+  // if (oldKey) {
+  //   localStorage.setItem('newKey', oldKey);
+  //   localStorage.removeItem('oldKey');
+  // }
 }

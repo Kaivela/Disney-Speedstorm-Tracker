@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ModeContext } from '../../context/AppContext';
+import { AppContext } from '../../context/AppContext';
 import { ScrollBtns } from '../ScrollBtns';
 
 function ExportBtn() {
@@ -11,7 +11,7 @@ function ImportBtn() {
 }
 
 function RacerTableBtn() {
-  const { setMode } = useContext(ModeContext);
+  const { setMode } = useContext(AppContext);
   return (
     <button
       onClick={() => {
@@ -23,7 +23,7 @@ function RacerTableBtn() {
 }
 
 function CrewTableBtn() {
-  const { setMode } = useContext(ModeContext);
+  const { setMode } = useContext(AppContext);
   return (
     <button
       onClick={() => {

@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { ModeContext } from '../context/AppContext';
+import { AppContext } from '../context/AppContext';
 
 export function Filters() {
-  const { mode } = useContext(ModeContext);
+  const { mode } = useContext(AppContext);
   if (mode === 'racer') {
     return (
       <>

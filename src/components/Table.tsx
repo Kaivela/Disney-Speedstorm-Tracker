@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { ModeContext } from '../context/AppContext';
+import { AppContext } from '../context/AppContext';
 import { RacerTableBody } from './StaticComponents/RacerTableBody';
 import { CrewTableBody } from './StaticComponents/CrewTableBody';
 
 export function Table() {
-  const { mode } = useContext(ModeContext);
+  const { mode } = useContext(AppContext);
   if (mode === 'racer') {
     return (
       <div className="tableContainer">

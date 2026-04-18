@@ -15,7 +15,6 @@ const racerList = racerData.map((racer, index) => {
 });
 
 function buildRacerTableBodyData() {
-  console.log({ racers });
   return racers.map((racer) => {
     const tuneCoinsNeededToMax = calculateCoinsNeeded(racer);
     const racerShardsNeededToMax = calculateRacerShardsNeeded(racer);

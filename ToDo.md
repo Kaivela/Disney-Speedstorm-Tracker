@@ -4,28 +4,12 @@ donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
---Crews--
-"franchise": 'string' ................==> "collection": 'string'
-"rarity": "Common" ...................==> EMPTY
-"name": 'string' .....................==> "name": 'string'
-"currentStars": 'number' .............==> "currentStars": 'number'
-"currentShards": 'number' ............==> "currentShards": 'number'
-"universalBox": Boolean ..............==> EMPTY
-"shardsNeeded": 'number' .............==> EMPTY
-
-migration de la save
+utiliser les racers/crew qui sont dans le useState du appContext dans le tableau
 export/Import save
 modify racer/crew
 
 =========> MVP
-calcul des nextStar racer
-ACTIONS - calculate racer
-Account Stats
-preload img
-Filters
-data trad EN
-order column
-
+mettre en place les settings
 \*Options
 -hide column
 -dark mode
@@ -33,3 +17,13 @@ order column
 -background
 -MPL Goal
 -Racer Star Goal
+
+migration des settings
+
+calcul des nextStar racer
+ACTIONS - calculate racer
+Account Stats
+preload img
+Filters
+data trad EN
+order column

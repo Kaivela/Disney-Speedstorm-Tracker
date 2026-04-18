@@ -4,6 +4,7 @@ export type Rarity = 'Common' | 'Rare' | 'Epic';
 export type Role = 'Speedster' | 'Trickster' | 'Brawler' | 'Defender';
 export type MPLTuneCoinReward = 'Mickey' | 'S0To4' | 'S5To9' | 'S10To14Mid' | 'S10ToLatest';
 
+export type Mode = 'racer' | 'crew';
 export type Collections = Record<string, Collection>;
 
 export interface Collection {
