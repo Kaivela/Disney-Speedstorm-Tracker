@@ -1,0 +1,3659 @@
+[
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Magica De Spell",
+    "currentStars": 1,
+    "currentShards": 5,
+    "universalBox": false,
+    "shardsNeeded": 155
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Tanglefoot",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Clara Cluck",
+    "currentStars": 4,
+    "currentShards": 27,
+    "universalBox": false,
+    "shardsNeeded": 48
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Tootsie The Penguin",
+    "currentStars": 3,
+    "currentShards": 15,
+    "universalBox": false,
+    "shardsNeeded": 105
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Chief O'Hara",
+    "currentStars": 2,
+    "currentShards": 8,
+    "universalBox": false,
+    "shardsNeeded": 137
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Wilbur",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Pedro",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Morty And Ferdie Fildmouse",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Clarabelle Cow",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "name": "Gus Goose",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Webby Vanderquack",
+    "currentStars": 3,
+    "currentShards": 40,
+    "universalBox": false,
+    "shardsNeeded": 80
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Salty The Seal",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Millie And Melody Mouse",
+    "currentStars": 4,
+    "currentShards": 46,
+    "universalBox": false,
+    "shardsNeeded": 29
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Humphrey The Bear",
+    "currentStars": 4,
+    "currentShards": 51,
+    "universalBox": false,
+    "shardsNeeded": 24
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Goat",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Lonesome Ghosts",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Horace Horsecollar",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Rare",
+    "name": "Chip 'N Dale",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "April, May, and June",
+    "currentStars": 4,
+    "currentShards": 9,
+    "universalBox": false,
+    "shardsNeeded": 91
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "José Carioca And Panchito",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Gilbert Goof",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Pluto",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Fifi The Peke",
+    "currentStars": 4,
+    "currentShards": 11,
+    "universalBox": false,
+    "shardsNeeded": 89
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Huey, Dewey And Louie",
+    "currentStars": 1,
+    "currentShards": 3,
+    "universalBox": false,
+    "shardsNeeded": 202
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Caroline Cow",
+    "currentStars": 4,
+    "currentShards": 41,
+    "universalBox": false,
+    "shardsNeeded": 59
+  },
+  {
+    "franchise": "Mickey & Friends",
+    "rarity": "Epic",
+    "name": "Parrot",
+    "currentStars": 4,
+    "currentShards": 26,
+    "universalBox": false,
+    "shardsNeeded": 74
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Common",
+    "name": "The Emperor Of China",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Common",
+    "name": "Fa Zhou",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Common",
+    "name": "Khan",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Common",
+    "name": "Chi-Fu",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Rare",
+    "name": "Yao, Ling, And Chien Po",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Rare",
+    "name": "Cri-Kee",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Epic",
+    "name": "Mushu",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Mulan",
+    "rarity": "Epic",
+    "name": "General Li",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Prison Dog",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Shansa",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Ian Mercer",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Cotton",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Lord Cutler Beckett",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Marty",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Murtogg And Mullroy",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Common",
+    "name": "Gillette",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Rare",
+    "name": "Bootstrap Bill Turner",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Rare",
+    "name": "Theodore Groves",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Rare",
+    "name": "Bo'Sun",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Rare",
+    "name": "Captain Sao Feng",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Rare",
+    "name": "Pintel And Ragetti",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Rare",
+    "name": "James Norrington",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Epic",
+    "name": "Maccus",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Epic",
+    "name": "Weatherby Swann",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Epic",
+    "name": "Carina Barbossa",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Epic",
+    "name": "Joshamee Gibbs",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Epic",
+    "name": "Rock Crabs",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Pirates of the Caribbean",
+    "rarity": "Epic",
+    "name": "Henry Turner",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Common",
+    "name": "Olympian Gods",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Common",
+    "name": "Hera",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Common",
+    "name": "Hermes",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Common",
+    "name": "Amphitryon And Alcmene",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Rare",
+    "name": "Hydra",
+    "currentStars": 2,
+    "currentShards": 23,
+    "universalBox": false,
+    "shardsNeeded": 122
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Rare",
+    "name": "Cerberus",
+    "currentStars": 3,
+    "currentShards": 24,
+    "universalBox": false,
+    "shardsNeeded": 96
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Rare",
+    "name": "Zeus",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Rare",
+    "name": "Phil",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Epic",
+    "name": "Pain And Panic",
+    "currentStars": 3,
+    "currentShards": 25,
+    "universalBox": false,
+    "shardsNeeded": 125
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Epic",
+    "name": "Pegasus",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Hercules",
+    "rarity": "Epic",
+    "name": "Muses",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Common",
+    "name": "Fifi",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Common",
+    "name": "The Sultan-B&B",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Common",
+    "name": "Chip",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Common",
+    "name": "Mrs. Potts",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Rare",
+    "name": "Claudette, Laurette And Paulette",
+    "currentStars": 4,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 75
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Rare",
+    "name": "Gaston's Cronies",
+    "currentStars": 3,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 107
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Rare",
+    "name": "Cogsworth",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Rare",
+    "name": "Philippe",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Epic",
+    "name": "Lumiere",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Epic",
+    "name": "Maurice",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Beauty and the Beast",
+    "rarity": "Epic",
+    "name": "Lefou",
+    "currentStars": 3,
+    "currentShards": 10,
+    "universalBox": false,
+    "shardsNeeded": 140
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Common",
+    "name": "Buzzie, Flaps, Ziggy, And Dizzy",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Common",
+    "name": "Shanti",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Common",
+    "name": "Shere Khan",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Common",
+    "name": "The Jungle Patrol",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Rare",
+    "name": "Kaa",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Rare",
+    "name": "King Louie",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Epic",
+    "name": "Bagheera",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Jungle Book",
+    "rarity": "Epic",
+    "name": "Wolf Pack",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Common",
+    "name": "Pete Ward",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Common",
+    "name": "Ted Pauley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Common",
+    "name": "Nick Schmidt",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Common",
+    "name": "Georges Sanderson",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Rare",
+    "name": "Henry J. Waternoose",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Rare",
+    "name": "Ms. Flint",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Rare",
+    "name": "The Yeti",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Rare",
+    "name": "CDA Agents",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Epic",
+    "name": "Roz",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Epic",
+    "name": "Smitty And Needleman",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Epic",
+    "name": "Fungus",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Monsters inc.",
+    "rarity": "Epic",
+    "name": "Boo",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Walt Disney World",
+    "rarity": "Common",
+    "name": "José, Michael, Fritz, And Pierre",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Walt Disney World",
+    "rarity": "Common",
+    "name": "Dapper Dans",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Walt Disney World",
+    "rarity": "Common",
+    "name": "Sonny Eclipse",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Walt Disney World",
+    "rarity": "Common",
+    "name": "Orange Bird",
+    "currentStars": 4,
+    "currentShards": 43,
+    "universalBox": false,
+    "shardsNeeded": 32
+  },
+  {
+    "franchise": "Walt Disney World",
+    "rarity": "Rare",
+    "name": "SMRT-1",
+    "currentStars": 4,
+    "currentShards": 69,
+    "universalBox": false,
+    "shardsNeeded": 6
+  },
+  {
+    "franchise": "Walt Disney World",
+    "rarity": "Epic",
+    "name": "Dreamfinder",
+    "currentStars": 3,
+    "currentShards": 36,
+    "universalBox": false,
+    "shardsNeeded": 114
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Chunk",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Giggle McDimples",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Sparks",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Wheezy",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Mutant Toys",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Lenny",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Common",
+    "name": "Slinky Dog",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "Twitch",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "Bonnie Anderson",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "Chuckles",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "RC",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "Sarge",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "Hamm",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Rare",
+    "name": "Rex",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Billy, Goat, And Gruff",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Aliens",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Stretch",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Karen Beverly",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Critters",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Big Baby",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Toy Story",
+    "rarity": "Epic",
+    "name": "Bullseye",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Common",
+    "name": "Kumu",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Common",
+    "name": "Susan Hegarty",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Common",
+    "name": "Intergalactic Police",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Common",
+    "name": "Pudge",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Common",
+    "name": "Luki",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Rare",
+    "name": "Mertle Edmonds",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Rare",
+    "name": "Mrs. Hasagawa",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Rare",
+    "name": "David Kawena",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Rare",
+    "name": "Ice Cream Man",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Rare",
+    "name": "Cobra Bubbles",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Epic",
+    "name": "Reuben",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Epic",
+    "name": "Grand Council Woman",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Epic",
+    "name": "Pleakley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Epic",
+    "name": "Nani",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Lilo & Stitch",
+    "rarity": "Epic",
+    "name": "Duck Family",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Common",
+    "name": "Agrabah Siblings",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Common",
+    "name": "Prince Achmed",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Common",
+    "name": "Camel-Al",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Common",
+    "name": "Horse",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Rare",
+    "name": "Gazeem",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Rare",
+    "name": "Melon Merchant",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Rare",
+    "name": "Cave Of Wonders",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Rare",
+    "name": "The Sultan-Al",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Epic",
+    "name": "Abu",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Epic",
+    "name": "Magic Carpet",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Epic",
+    "name": "Iago",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Aladdin",
+    "rarity": "Epic",
+    "name": "Rajah",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Common",
+    "name": "The Reluctant Horse",
+    "currentStars": 1,
+    "currentShards": 4,
+    "universalBox": false,
+    "shardsNeeded": 156
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Common",
+    "name": "The Mechanical Cow",
+    "currentStars": 2,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 132
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Common",
+    "name": "Donkey",
+    "currentStars": 4,
+    "currentShards": 4,
+    "universalBox": false,
+    "shardsNeeded": 71
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Common",
+    "name": "Elephant On A Bicycle",
+    "currentStars": 4,
+    "currentShards": 29,
+    "universalBox": false,
+    "shardsNeeded": 46
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Rare",
+    "name": "Camel-Os",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Rare",
+    "name": "Lifeguard",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Rare",
+    "name": "Hot Dog",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Epic",
+    "name": "J. P. Whiskers",
+    "currentStars": 3,
+    "currentShards": 28,
+    "universalBox": false,
+    "shardsNeeded": 122
+  },
+  {
+    "franchise": "Oswald the Lucky Rabbit",
+    "rarity": "Epic",
+    "name": "Francine `Fanny` Cottontail",
+    "currentStars": 3,
+    "currentShards": 30,
+    "universalBox": false,
+    "shardsNeeded": 120
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Common",
+    "name": "Erik And Francis",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Common",
+    "name": "Trolls",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Common",
+    "name": "Lieutenant Mattias",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Common",
+    "name": "Oaken",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Common",
+    "name": "Royal Guards Of Arendelle",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Rare",
+    "name": "Duke Of Weselton",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Rare",
+    "name": "Marshmallow",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Rare",
+    "name": "Queen Iduna",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Rare",
+    "name": "King Agnarr",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Rare",
+    "name": "Bulda",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Epic",
+    "name": "Grand Pabbie",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Epic",
+    "name": "Bruni",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Epic",
+    "name": "Sitron",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Epic",
+    "name": "Sven",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Frozen",
+    "rarity": "Epic",
+    "name": "Snowgie",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Common",
+    "name": "SECUR-T",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Common",
+    "name": "PR-T",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Common",
+    "name": "John And Mary",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Common",
+    "name": "GO-4",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Rare",
+    "name": "AUTO",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Rare",
+    "name": "M-O",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Rare",
+    "name": "BURN-E",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Epic",
+    "name": "Captain B. Mccrea",
+    "currentStars": 4,
+    "currentShards": 39,
+    "universalBox": false,
+    "shardsNeeded": 61
+  },
+  {
+    "franchise": "WALL-E",
+    "rarity": "Epic",
+    "name": "Hal",
+    "currentStars": 3,
+    "currentShards": 10,
+    "universalBox": false,
+    "shardsNeeded": 140
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Common",
+    "name": "Under The Sea Band",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Common",
+    "name": "Glut",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Common",
+    "name": "Seahorse Herald",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Common",
+    "name": "Chef Louis",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Rare",
+    "name": "Ursula's Garden",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Rare",
+    "name": "Ariel's Sisters",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Rare",
+    "name": "Grimsby",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Rare",
+    "name": "Scuttle",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Epic",
+    "name": "Flounder",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Epic",
+    "name": "Sebastian",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Epic",
+    "name": "Max",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Little Mermaid",
+    "rarity": "Epic",
+    "name": "Flotsam And Jetsam",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Common",
+    "name": "FPS Robot",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Common",
+    "name": "CY Bugs",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Common",
+    "name": "Claw Officers",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Common",
+    "name": "Sorceress",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Common",
+    "name": "Hero's Duty Troops",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Rare",
+    "name": "Surge Protector",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Rare",
+    "name": "Saitine",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Rare",
+    "name": "Wynnchel And Duncan",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Rare",
+    "name": "Nicelanders",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Rare",
+    "name": "General Hologram",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Epic",
+    "name": "Gene",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Epic",
+    "name": "Sour Bill",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Epic",
+    "name": "Stan Litwak",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Epic",
+    "name": "Markowski",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Wreck-it-Ralph",
+    "rarity": "Epic",
+    "name": "Moppet Girl",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Common",
+    "name": "Clown With The Tear-Away Face",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Common",
+    "name": "The Vampire Brothers",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Common",
+    "name": "Mummy Boy",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Common",
+    "name": "Man-Eating Wreath",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Rare",
+    "name": "Toy Duck",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Rare",
+    "name": "Igor",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Rare",
+    "name": "Wolfman",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Rare",
+    "name": "Santa Claus",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Epic",
+    "name": "Jewel",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Epic",
+    "name": "Zero",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Epic",
+    "name": "Lock, Shock, And Barrel",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Nightmare Before Christmas",
+    "rarity": "Epic",
+    "name": "The Mayor",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Common",
+    "name": "Lew Zealand",
+    "currentStars": 2,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 145
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Common",
+    "name": "Sweetums",
+    "currentStars": 3,
+    "currentShards": 8,
+    "universalBox": false,
+    "shardsNeeded": 112
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Common",
+    "name": "Scooter",
+    "currentStars": 2,
+    "currentShards": 16,
+    "universalBox": false,
+    "shardsNeeded": 129
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Common",
+    "name": "Pepe The King Prawn",
+    "currentStars": 3,
+    "currentShards": 16,
+    "universalBox": false,
+    "shardsNeeded": 104
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Rare",
+    "name": "Rizzo The Rat",
+    "currentStars": 4,
+    "currentShards": 15,
+    "universalBox": false,
+    "shardsNeeded": 60
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Rare",
+    "name": "Sam The Eagle",
+    "currentStars": 4,
+    "currentShards": 4,
+    "universalBox": false,
+    "shardsNeeded": 71
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Rare",
+    "name": "Rowlf The Dog",
+    "currentStars": 3,
+    "currentShards": 43,
+    "universalBox": false,
+    "shardsNeeded": 77
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Rare",
+    "name": "Statler And Waldorf",
+    "currentStars": 3,
+    "currentShards": 18,
+    "universalBox": false,
+    "shardsNeeded": 102
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Epic",
+    "name": "Kermit The Frog-Crew",
+    "currentStars": 3,
+    "currentShards": 4,
+    "universalBox": false,
+    "shardsNeeded": 146
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Epic",
+    "name": "Robin The Frog",
+    "currentStars": 4,
+    "currentShards": 10,
+    "universalBox": false,
+    "shardsNeeded": 90
+  },
+  {
+    "franchise": "The Muppets",
+    "rarity": "Epic",
+    "name": "Foo-Foo",
+    "currentStars": 3,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 137
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "Nostalgia",
+    "currentStars": 3,
+    "currentShards": 22,
+    "universalBox": false,
+    "shardsNeeded": 98
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "Deep Dark Secret",
+    "currentStars": 2,
+    "currentShards": 24,
+    "universalBox": false,
+    "shardsNeeded": 121
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "Jordan",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "Helicopter Pilot",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "Frank And Dave",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "Fritz",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Common",
+    "name": "The Forgetters",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Lance Slashblade",
+    "currentStars": 3,
+    "currentShards": 11,
+    "universalBox": false,
+    "shardsNeeded": 109
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Bloofy & Pouchy",
+    "currentStars": 4,
+    "currentShards": 46,
+    "universalBox": false,
+    "shardsNeeded": 29
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Bing Bong",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Jangles The Clown",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Meg",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Riley's Dad",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Rare",
+    "name": "Riley's Mom",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Angry Riley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Anxious Riley",
+    "currentStars": 3,
+    "currentShards": 38,
+    "universalBox": false,
+    "shardsNeeded": 112
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Disgusted Riley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Ennuyé Riley",
+    "currentStars": 3,
+    "currentShards": 15,
+    "universalBox": false,
+    "shardsNeeded": 135
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Scared Riley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Happy Riley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Inside Out",
+    "rarity": "Epic",
+    "name": "Sad Riley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Common",
+    "name": "Queen Leah",
+    "currentStars": 4,
+    "currentShards": 17,
+    "universalBox": false,
+    "shardsNeeded": 58
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Common",
+    "name": "Spear Goon",
+    "currentStars": 2,
+    "currentShards": 7,
+    "universalBox": false,
+    "shardsNeeded": 138
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Common",
+    "name": "Axe Goon",
+    "currentStars": 2,
+    "currentShards": 3,
+    "universalBox": false,
+    "shardsNeeded": 142
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Rare",
+    "name": "Prince Phillip",
+    "currentStars": 4,
+    "currentShards": 7,
+    "universalBox": false,
+    "shardsNeeded": 68
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Rare",
+    "name": "Goon Leader",
+    "currentStars": 3,
+    "currentShards": 24,
+    "universalBox": false,
+    "shardsNeeded": 96
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Rare",
+    "name": "King Hubert",
+    "currentStars": 4,
+    "currentShards": 2,
+    "universalBox": false,
+    "shardsNeeded": 73
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Rare",
+    "name": "King Stefan",
+    "currentStars": 4,
+    "currentShards": 21,
+    "universalBox": false,
+    "shardsNeeded": 54
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Epic",
+    "name": "Flora, Fauna, and Merryweather",
+    "currentStars": 4,
+    "currentShards": 12,
+    "universalBox": false,
+    "shardsNeeded": 88
+  },
+  {
+    "franchise": "Sleeping Beauty",
+    "rarity": "Epic",
+    "name": "Diablo",
+    "currentStars": 4,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 87
+  },
+  {
+    "franchise": "101 Dalmatians",
+    "rarity": "Common",
+    "name": "Sergeant Tibbs",
+    "currentStars": 3,
+    "currentShards": 22,
+    "universalBox": false,
+    "shardsNeeded": 98
+  },
+  {
+    "franchise": "101 Dalmatians",
+    "rarity": "Common",
+    "name": "Captain",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "101 Dalmatians",
+    "rarity": "Rare",
+    "name": "Colonel",
+    "currentStars": 4,
+    "currentShards": 7,
+    "universalBox": false,
+    "shardsNeeded": 68
+  },
+  {
+    "franchise": "101 Dalmatians",
+    "rarity": "Rare",
+    "name": "Nanny",
+    "currentStars": 4,
+    "currentShards": 1,
+    "universalBox": false,
+    "shardsNeeded": 74
+  },
+  {
+    "franchise": "101 Dalmatians",
+    "rarity": "Rare",
+    "name": "Horace",
+    "currentStars": 3,
+    "currentShards": 25,
+    "universalBox": false,
+    "shardsNeeded": 95
+  },
+  {
+    "franchise": "101 Dalmatians",
+    "rarity": "Epic",
+    "name": "Jasper",
+    "currentStars": 4,
+    "currentShards": 18,
+    "universalBox": false,
+    "shardsNeeded": 82
+  },
+  {
+    "franchise": "Rapunzel",
+    "rarity": "Common",
+    "name": "Shorty",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Rapunzel",
+    "rarity": "Common",
+    "name": "Vladimir",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Rapunzel",
+    "rarity": "Rare",
+    "name": "Hook Hand",
+    "currentStars": 4,
+    "currentShards": 9,
+    "universalBox": false,
+    "shardsNeeded": 66
+  },
+  {
+    "franchise": "Rapunzel",
+    "rarity": "Rare",
+    "name": "King Frederic And Queen Arianna",
+    "currentStars": 4,
+    "currentShards": 27,
+    "universalBox": false,
+    "shardsNeeded": 48
+  },
+  {
+    "franchise": "Rapunzel",
+    "rarity": "Epic",
+    "name": "Pascal",
+    "currentStars": 4,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 87
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Screenslaver",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Lady Lightbug",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Underminer",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Gazerbeam",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Common",
+    "name": "Winston Deavor",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Evelyn Deavor",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Rusty McAllister",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Gilbert Huph",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Raccoon",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Rare",
+    "name": "Bomb Voyage",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Bernie Kropp",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Mr. Skipperdoo",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Rick Dicker",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Edna Mode",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "The Incredibles",
+    "rarity": "Epic",
+    "name": "Tony Rydinger",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Pua",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Chief Tui",
+    "currentStars": 2,
+    "currentShards": 21,
+    "universalBox": false,
+    "shardsNeeded": 124
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Kakamora",
+    "currentStars": 3,
+    "currentShards": 4,
+    "universalBox": false,
+    "shardsNeeded": 116
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Common",
+    "name": "Gramma Tala",
+    "currentStars": 2,
+    "currentShards": 17,
+    "universalBox": false,
+    "shardsNeeded": 128
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Rare",
+    "name": "Sina",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Rare",
+    "name": "Tamatoa",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Rare",
+    "name": "Heihei",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Epic",
+    "name": "Mini Maui",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Moana",
+    "rarity": "Epic",
+    "name": "Simea",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Orange Programs",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Grandpa And Grandma Flynn",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Sirens",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Edward Dillinger Jr.",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Common",
+    "name": "Black Guards",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Sentry",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Anon",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Marv",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Rare",
+    "name": "Alan Bradley",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "ISO",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "Jarvis",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "Kevin Flynn",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Tron",
+    "rarity": "Epic",
+    "name": "Gem",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Huntsman",
+    "currentStars": 3,
+    "currentShards": 30,
+    "universalBox": false,
+    "shardsNeeded": 90
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Bashful",
+    "currentStars": 3,
+    "currentShards": 9,
+    "universalBox": false,
+    "shardsNeeded": 111
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Doc",
+    "currentStars": 3,
+    "currentShards": 6,
+    "universalBox": false,
+    "shardsNeeded": 114
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Common",
+    "name": "Sleepy",
+    "currentStars": 1,
+    "currentShards": 7,
+    "universalBox": false,
+    "shardsNeeded": 153
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Sneezy",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Dopey",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Happy",
+    "currentStars": 4,
+    "currentShards": 11,
+    "universalBox": false,
+    "shardsNeeded": 64
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Rare",
+    "name": "Grumpy",
+    "currentStars": 4,
+    "currentShards": 35,
+    "universalBox": false,
+    "shardsNeeded": 40
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Epic",
+    "name": "The Prince",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Snow White and the Seven Dwarfs",
+    "rarity": "Epic",
+    "name": "Magic Mirror",
+    "currentStars": 2,
+    "currentShards": 17,
+    "universalBox": false,
+    "shardsNeeded": 168
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Judy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Sergeant Gerson",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "General",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Punk Bot Fighter",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Common",
+    "name": "Little Yama",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Aunt Cass",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Tadashi",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Bot Fight Ringleader",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Yama",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Rare",
+    "name": "Alistair Krei",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Mochi",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Wasabi",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Go Go Tamago",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Megabot",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Big Hero 6",
+    "rarity": "Epic",
+    "name": "Sofia",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Common",
+    "name": "The Grand Duke",
+    "currentStars": 2,
+    "currentShards": 14,
+    "universalBox": false,
+    "shardsNeeded": 131
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Common",
+    "name": "The King",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Common",
+    "name": "Major And Bruno",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Rare",
+    "name": "Fairy Godmother",
+    "currentStars": 4,
+    "currentShards": 50,
+    "universalBox": false,
+    "shardsNeeded": 25
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Rare",
+    "name": "Prince Charming",
+    "currentStars": 4,
+    "currentShards": 34,
+    "universalBox": false,
+    "shardsNeeded": 41
+  },
+  {
+    "franchise": "Cinderella",
+    "rarity": "Epic",
+    "name": "Jaq And Gus",
+    "currentStars": 4,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 87
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Common",
+    "name": "Rat Capone",
+    "currentStars": 3,
+    "currentShards": 21,
+    "universalBox": false,
+    "shardsNeeded": 99
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Common",
+    "name": "Robot Dog",
+    "currentStars": 3,
+    "currentShards": 30,
+    "universalBox": false,
+    "shardsNeeded": 90
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Common",
+    "name": "Fat Cat's Gang",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Rare",
+    "name": "Professor Norton Nimnul",
+    "currentStars": 4,
+    "currentShards": 34,
+    "universalBox": false,
+    "shardsNeeded": 41
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Rare",
+    "name": "Fat Cat",
+    "currentStars": 4,
+    "currentShards": 41,
+    "universalBox": false,
+    "shardsNeeded": 34
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Rare",
+    "name": "Zipper",
+    "currentStars": 4,
+    "currentShards": 13,
+    "universalBox": false,
+    "shardsNeeded": 62
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Epic",
+    "name": "Monterey Jack",
+    "currentStars": 3,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 150
+  },
+  {
+    "franchise": "Rescue Rangers",
+    "rarity": "Epic",
+    "name": "Gadget Hackwrench",
+    "currentStars": 3,
+    "currentShards": 4,
+    "universalBox": false,
+    "shardsNeeded": 146
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Common",
+    "name": "Bill The Lizard",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Common",
+    "name": "The Walrus And The Carpenter",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Common",
+    "name": "Tweedledee And Tweedledum",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Rare",
+    "name": "Dormouse",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Rare",
+    "name": "The Doorknob",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Rare",
+    "name": "Dodo",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Epic",
+    "name": "Dinah",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Epic",
+    "name": "March Hare",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Alice In Wonderland",
+    "rarity": "Epic",
+    "name": "King Of Hearts",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Common",
+    "name": "Lumpy",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Common",
+    "name": "Samuel J. Gopher",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Common",
+    "name": "Owl",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Rare",
+    "name": "Rabbit",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Rare",
+    "name": "Kanga",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Rare",
+    "name": "Piglet",
+    "currentStars": 5,
+    "currentShards": 0,
+    "universalBox": true,
+    "shardsNeeded": 0
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Epic",
+    "name": "B'loon",
+    "currentStars": 2,
+    "currentShards": 22,
+    "universalBox": true,
+    "shardsNeeded": 163
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Epic",
+    "name": "Roo",
+    "currentStars": 2,
+    "currentShards": 30,
+    "universalBox": true,
+    "shardsNeeded": 155
+  },
+  {
+    "franchise": "Winnie The Pooh",
+    "rarity": "Epic",
+    "name": "Christopher Robin",
+    "currentStars": 2,
+    "currentShards": 8,
+    "universalBox": true,
+    "shardsNeeded": 177
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Common",
+    "name": "Construction Foreman Tom",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Common",
+    "name": "Gamma",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Common",
+    "name": "Beta",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Rare",
+    "name": "Alpha",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Rare",
+    "name": "Charles F. Muntz",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Rare",
+    "name": "Georges And A.J.",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Epic",
+    "name": "Dug",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Carl Fredricksen",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Up",
+    "rarity": "Epic",
+    "name": "Kevin",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Russell",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Common",
+    "name": "Gideon Grey",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Common",
+    "name": "Mayor Lionheart",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Common",
+    "name": "Gazelle",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Rare",
+    "name": "Yax",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Rare",
+    "name": "Fru Fru",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Rare",
+    "name": "Mr. Big",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Epic",
+    "name": "Priscilla",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Flash",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Epic",
+    "name": "Bonnie And Stu Hopps",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Judy Hopps",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Zootopia",
+    "rarity": "Epic",
+    "name": "Finnick",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Nick Wilde",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Common",
+    "name": "Mata",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Common",
+    "name": "Rudy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Common",
+    "name": "Bucky The Squirrel",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Rare",
+    "name": "Chicha",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Rare",
+    "name": "Chaca And Tipo",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Rare",
+    "name": "Theme Song Guy",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Epic",
+    "name": "Pacha",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Kuzco",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "The Emperor's New Groove",
+    "rarity": "Epic",
+    "name": "Kronk",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Yzma",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Common",
+    "name": "Cal Weathers",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Common",
+    "name": "Sheriff",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Common",
+    "name": "Red",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Rare",
+    "name": "Francesco Bernoulli",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Rare",
+    "name": "Finn McMissile",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Rare",
+    "name": "Flo",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Epic",
+    "name": "Sterling",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Cruz Ramirez",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Epic",
+    "name": "Guido",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Lightning McQueen",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Cars",
+    "rarity": "Epic",
+    "name": "Holley Shiftwell",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": "season",
+    "exclusiveTo": "Tow Mater",
+    "shardsNeeded": 215
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Common",
+    "name": "Tom",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Rare",
+    "name": "Ellen",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Rare",
+    "name": "Loaf",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "shardsNeeded": 165
+  },
+  {
+    "franchise": "Hoppers",
+    "rarity": "Epic",
+    "name": "King Georges",
+    "currentStars": 0,
+    "currentShards": 0,
+    "universalBox": false,
+    "exclusiveTo": "Mabel",
+    "shardsNeeded": 215
+  }
+]

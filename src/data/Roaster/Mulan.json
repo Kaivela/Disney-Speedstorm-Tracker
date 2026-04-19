@@ -33,6 +33,23 @@
       "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLTuneCoinReward": "S0To4"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Brawler",
+      "name": "Shan Yu",
+      "currentStars": 0,
+      "currentStarFragment": 0,
+      "currentShards": 0,
+      "superCharge": false,
+      "currentSuperChargeLevel": 0,
+      "currentSuperChargeTokens": 0,
+      "currentMPL": 0,
+      "highestMPL": 0,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [

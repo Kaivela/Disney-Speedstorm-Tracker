@@ -66,10 +66,42 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
       racer.name = 'Scrooge McDuck';
     }
 
-    // Update CollectionNames
-    if (racer.collection === 'Mickey & Friends') {
-      racer.collection = 'MickeyAndFriends';
+    // Normalize racer.collection and crew.collection names
+    const nameMap = {
+      'Mickey & Friends': 'MickeyAndFriends',
+      'Pirates of the Caribbean': 'PiratesOfTheCaribbean',
+      'Beauty and the Beast': 'BeautyAndTheBeast',
+      'The Jungle Book': 'TheJungleBook',
+      'Monsters inc.': 'MonsterInc',
+      'Walt Disney World': 'WaltDisneyWorld',
+      'Toy Story': 'ToyStory',
+      'Lilo & Stitch': 'LiloStitch',
+      'Oswald the Lucky Rabbit': 'OswaldTheLuckyRabbit',
+      'WALL-E': 'WallE',
+      'The Little Mermaid': 'TheLittleMermaid',
+      'Wreck-it-Ralph': 'WreckItRalph',
+      'The Nightmare Before Christmas': 'TheNightmareBeforeChristmas',
+      'The Muppets': 'TheMuppets',
+      'Inside Out': 'InsideOut',
+      'Sleeping Beauty': 'SleepingBeauty',
+      '101 Dalmatians': 'Dalmatians',
+      Rapunzel: 'Tangled',
+      'The Incredibles': 'TheIncredibles',
+      'Snow White and the Seven Dwarfs': 'SnowWhiteAndTheSevenDwarfs',
+      'Big Hero 6': 'BigHero6',
+      'Rescue Rangers': 'RescueRangers',
+      'Alice In Wonderland': 'AliceInWonderland',
+      'Winnie The Pooh': 'WinnieThePooh',
+      "The Emperor's New Groove": 'TheEmperorNewGroove',
+    };
+
+    for (const oldName in nameMap) {
+      const newName = nameMap[oldName as keyof typeof nameMap];
+      if (normalizeName(racer.collection as string) === normalizeName(oldName)) {
+        racer.collection = newName;
+      }
     }
+
     // New Migration
     // if (condition qui n'existe que dans l'ancienne save) {
     //   je récupère l'ancienne valeur
@@ -79,6 +111,14 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
 
     return racer;
   }) as unknown as IRacer[];
+}
+
+function normalizeName(name: string) {
+  return name
+    .toLowerCase()
+    .replace(/ /g, '')
+    .replaceAll(/[^a-z0-9]/g, '')
+    .trim();
 }
 
 export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {
