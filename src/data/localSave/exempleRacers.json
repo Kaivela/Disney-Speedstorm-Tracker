@@ -1,6 +1,21 @@
 [
   {
-    "collection": "Mickey & Friends",
+    "franchise": "Mickey & Friends",
+    "rarity": "Common",
+    "role": "Trickster",
+    "name": "Daisy Duck",
+    "currentStars": 5,
+    "currentShards": 0,
+    "currentSuperShards": 0,
+    "currentLevel": 50,
+    "currentRMJ": 40,
+    "highestRMJ": 40,
+    "universalBox": false,
+    "releaseSeason": 3,
+    "superCharge": true
+  },
+  {
+    "collection": "MickeyAndFriends",
     "name": "Daisy Duck",
     "currentStars": 0,
     "currentStarFragment": 0,

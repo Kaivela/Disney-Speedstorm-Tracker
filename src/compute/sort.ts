@@ -1,11 +1,11 @@
 import { getAllRacers } from '../data/collections';
-import type { IRacer } from '../types/types';
+import type { RacerSaved } from '../types/types';
 
-export function sortRacers(racers: IRacer[]): IRacer[] {
+export function sortRacers(racers: RacerSaved[]): RacerSaved[] {
   return getAllRacers().map((racerBlank) => {
     const racer = racers.find((racer) => racer.name === racerBlank.name);
     if (!racer) {
-      return {} as IRacer;
+      return {} as RacerSaved;
     }
     return racer;
   });

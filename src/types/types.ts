@@ -12,7 +12,7 @@ export interface Collection {
   crews: ICrew[];
 }
 
-export interface IRacer {
+export interface RacerBlank {
   //Static properties
   collection: string;
   MPLTuneCoinReward: MPLTuneCoinReward;
@@ -23,6 +23,12 @@ export interface IRacer {
   role: Role;
   superCharge: boolean;
   universalBox: UniversalBox;
+}
+
+export interface RacerSaved {
+  //Static properties
+  collection: string;
+  name: string;
 
   //Modifiable properties
   currentMPL: number;
@@ -32,18 +38,25 @@ export interface IRacer {
   currentSuperChargeLevel: number;
   currentSuperChargeTokens: number;
   highestMPL: number;
-
-  // Calculated properties
-  shardsNeededToMax?: number | 'Maxed';
-  shardsNeededIfMaxMPL?: number;
-  shardsToGetInMPL?: number;
-  tuneCoinsNeededToMax?: number;
-  tuneCoinsToGet?: number;
-  superShardsNeeded?: number;
-  tokensToGet?: number;
-  cosmeticToGet?: number;
-  superChargeTokensToGet?: number;
 }
+
+export type IRacer = RacerBlank &
+  RacerSaved & {
+    //Static properties
+    collection: string;
+    name: string;
+
+    // Calculated properties
+    shardsNeededToMax?: number | 'Maxed';
+    shardsNeededIfMaxMPL?: number;
+    shardsToGetInMPL?: number;
+    tuneCoinsNeededToMax?: number;
+    tuneCoinsToGet?: number;
+    superShardsNeeded?: number;
+    tokensToGet?: number;
+    cosmeticToGet?: number;
+    superChargeTokensToGet?: number;
+  };
 
 export interface ICrew {
   collection: string;

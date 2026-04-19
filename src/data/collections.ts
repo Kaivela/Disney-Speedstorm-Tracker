@@ -1,5 +1,5 @@
 import * as dataFiles from './Roaster';
-import type { Collection, Collections, ICrew, IRacer } from '../types/types';
+import type { Collection, Collections, ICrew, RacerBlank } from '../types/types';
 
 const collections: Collections = {
   MickeyAndFriends: dataFiles.MickeyAndFriends as Collection,
@@ -40,7 +40,7 @@ const collections: Collections = {
   Hoppers: dataFiles.Hoppers as Collection,
 };
 
-export function getAllRacers(): IRacer[] {
+export function getAllRacers(): RacerBlank[] {
   return Object.entries(collections).flatMap(([collectionName, collection]) => {
     return collection.racers.map((racer) => ({ ...racer, collection: collectionName }));
   });

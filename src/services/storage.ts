@@ -1,4 +1,4 @@
-import type { IRacer, ICrew, ISettings } from '../types/types';
+import type { ICrew, ISettings, RacerSaved } from '../types/types';
 import { migrateLocalStorage } from './migration';
 
 const racersKey = 'racers';
@@ -18,12 +18,12 @@ export class StorageService {
     return StorageService.instance;
   }
 
-  public getRacers(): IRacer[] {
+  public getRacers(): RacerSaved[] {
     const racers = localStorage.getItem(racersKey);
     return racers ? JSON.parse(racers) : [];
   }
 
-  public saveRacers(racers: IRacer[]): void {
+  public saveRacers(racers: RacerSaved[]): void {
     localStorage.setItem(racersKey, JSON.stringify(racers));
   }
 

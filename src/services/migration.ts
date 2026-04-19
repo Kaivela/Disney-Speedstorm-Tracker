@@ -1,12 +1,49 @@
 import { sortRacers } from '../compute/sort';
 import { getAllCrews, getAllRacers } from '../data/collections';
-import type { ICrew, IRacer } from '../types/types';
+import type { ICrew, IRacer, RacerSaved } from '../types/types';
 import { StorageService } from './storage';
+
+const nameMap = {
+  'Mickey & Friends': 'MickeyAndFriends',
+  'Pirates of the Caribbean': 'PiratesOfTheCaribbean',
+  'Beauty and the Beast': 'BeautyAndTheBeast',
+  'The Jungle Book': 'TheJungleBook',
+  'Monsters inc.': 'MonsterInc',
+  'Walt Disney World': 'WaltDisneyWorld',
+  'Toy Story': 'ToyStory',
+  'Lilo & Stitch': 'LiloStitch',
+  'Oswald the Lucky Rabbit': 'OswaldTheLuckyRabbit',
+  'WALL-E': 'WallE',
+  'The Little Mermaid': 'TheLittleMermaid',
+  'Wreck-it-Ralph': 'WreckItRalph',
+  'The Nightmare Before Christmas': 'TheNightmareBeforeChristmas',
+  'The Muppets': 'TheMuppets',
+  'Inside Out': 'InsideOut',
+  'Sleeping Beauty': 'SleepingBeauty',
+  '101 Dalmatians': 'Dalmatians',
+  Rapunzel: 'Tangled',
+  'The Incredibles': 'TheIncredibles',
+  'Snow White and the Seven Dwarfs': 'SnowWhiteAndTheSevenDwarfs',
+  'Big Hero 6': 'BigHero6',
+  'Rescue Rangers': 'RescueRangers',
+  'Alice In Wonderland': 'AliceInWonderland',
+  'Winnie The Pooh': 'WinnieThePooh',
+  "The Emperor's New Groove": 'TheEmperorNewGroove',
+};
+
+function normalizeName(name: string) {
+  return name
+    .toLowerCase()
+    .replace(/ /g, '')
+    .replaceAll(/[^a-z0-9]/g, '')
+    .trim();
+}
 
 export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
   // pour chaque racer
   return racers.map((racerOriginal) => {
     const racer = structuredClone(racerOriginal);
+
     // si un racer ne contient pas la props currentStarFragment alors le tableau subit la transformation
 
     // "franchise": 'String' .........==> "collection": 'string'
@@ -49,56 +86,31 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
         racer.currentSuperChargeLevel = (racer.currentStars as number) - 5;
         racer.currentStars = 5;
       }
-    }
 
-    // change GoGoTomage's Name
-    if (racer.name === 'Go Go Tamago') {
-      racer.name = 'Go Go Tomago';
-    }
+      // Fix Go Go Tomago Name
+      if (racer.name === 'Go Go Tamago') {
+        console.log('migrated Tamago');
+        racer.name = 'Go Go Tomago';
+      }
 
-    // Change MinieMouse Name
-    if (racer.name === 'Minnie') {
-      racer.name = 'Minnie Mouse';
-    }
+      // Fix Minnie Mouse Name
+      if (racer.name === 'Minnie') {
+        console.log('minnie');
 
-    // Change ScroogeMcDuck Name
-    if (racer.name === 'Scrooge Mcduck') {
-      racer.name = 'Scrooge McDuck';
-    }
+        racer.name = 'Minnie Mouse';
+      }
 
-    // Normalize racer.collection and crew.collection names
-    const nameMap = {
-      'Mickey & Friends': 'MickeyAndFriends',
-      'Pirates of the Caribbean': 'PiratesOfTheCaribbean',
-      'Beauty and the Beast': 'BeautyAndTheBeast',
-      'The Jungle Book': 'TheJungleBook',
-      'Monsters inc.': 'MonsterInc',
-      'Walt Disney World': 'WaltDisneyWorld',
-      'Toy Story': 'ToyStory',
-      'Lilo & Stitch': 'LiloStitch',
-      'Oswald the Lucky Rabbit': 'OswaldTheLuckyRabbit',
-      'WALL-E': 'WallE',
-      'The Little Mermaid': 'TheLittleMermaid',
-      'Wreck-it-Ralph': 'WreckItRalph',
-      'The Nightmare Before Christmas': 'TheNightmareBeforeChristmas',
-      'The Muppets': 'TheMuppets',
-      'Inside Out': 'InsideOut',
-      'Sleeping Beauty': 'SleepingBeauty',
-      '101 Dalmatians': 'Dalmatians',
-      Rapunzel: 'Tangled',
-      'The Incredibles': 'TheIncredibles',
-      'Snow White and the Seven Dwarfs': 'SnowWhiteAndTheSevenDwarfs',
-      'Big Hero 6': 'BigHero6',
-      'Rescue Rangers': 'RescueRangers',
-      'Alice In Wonderland': 'AliceInWonderland',
-      'Winnie The Pooh': 'WinnieThePooh',
-      "The Emperor's New Groove": 'TheEmperorNewGroove',
-    };
+      // Fix Scrooge McDuck Name
+      if (racer.name === 'Scrooge Mcduck') {
+        racer.name = 'Scrooge McDuck';
+      }
 
-    for (const oldName in nameMap) {
-      const newName = nameMap[oldName as keyof typeof nameMap];
-      if (normalizeName(racer.collection as string) === normalizeName(oldName)) {
-        racer.collection = newName;
+      // Normalize racer.collection Names
+      for (const oldName in nameMap) {
+        const newName = nameMap[oldName as keyof typeof nameMap];
+        if (normalizeName(racer.collection as string) === normalizeName(oldName)) {
+          racer.collection = newName;
+        }
       }
     }
 
@@ -111,14 +123,6 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
 
     return racer;
   }) as unknown as IRacer[];
-}
-
-function normalizeName(name: string) {
-  return name
-    .toLowerCase()
-    .replace(/ /g, '')
-    .replaceAll(/[^a-z0-9]/g, '')
-    .trim();
 }
 
 export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {
@@ -142,6 +146,14 @@ export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {
       delete crew.rarity;
       delete crew.universalBox;
       delete crew.shardsNeeded;
+    }
+
+    // Normalize crew.collection names
+    for (const oldName in nameMap) {
+      const newName = nameMap[oldName as keyof typeof nameMap];
+      if (normalizeName(crew.collection as string) === normalizeName(oldName)) {
+        crew.collection = newName;
+      }
     }
 
     return crew;
@@ -173,9 +185,22 @@ export function updateCollections() {
   racersBlank.forEach((racerBlank) => {
     // on cherche dans le storage si un racer du même nom existe
     const found = racerSaved.find((racer) => racerBlank.name === racer.name);
+
     // si non on ajoute le racer au storage
     if (!found) {
-      racerSaved.push(racerBlank);
+      // ce racerBlank subit une transfo avant de le push dans le tableau
+      const newRacer: RacerSaved = {
+        name: racerBlank.name,
+        collection: racerBlank.collection,
+        currentMPL: 0,
+        currentShards: 0,
+        currentStarFragment: 0,
+        currentStars: 0,
+        currentSuperChargeLevel: 0,
+        currentSuperChargeTokens: 0,
+        highestMPL: 0,
+      };
+      racerSaved.push(newRacer);
     }
   });
   storage.saveRacers(sortRacers(racerSaved));

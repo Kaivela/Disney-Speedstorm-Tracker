@@ -1,14 +1,14 @@
-import { getAllRacers } from '../../data/collections';
-import type { IRacer } from '../../types/types';
+import { getAllRacers } from '../data/collections';
+import type { IRacer } from '../types/types';
 import {
   calculateCoinsNeeded,
   calculateRacerShardsIfMaxMPL,
   calculateRacerShardsNeeded,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
-} from '../../compute/calculs';
+} from '../compute/calculs';
 import { useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
+import { AppContext } from '../context/AppContext';
 
 const racersBlank = getAllRacers();
 
@@ -70,18 +70,18 @@ function Racer({
   );
 }
 
-export function RacerTableBody() {
-  // on construit un nouveau tableau qui contient les données de racers auquel on ajoute les props du blank
+function RacerList() {
+  // LOGIC
   const { racers } = useContext(AppContext);
-  const NEWTABLEAU = racers.map((racer) => {
+  const racersData = racers.map((racer) => {
     const found = racersBlank.find((racerBlank) => racerBlank.name === racer.name);
-
     return {
       ...found,
       ...racer,
     };
   });
-  const racerList = NEWTABLEAU.map((racer, index) => {
+  // TEMPLATE
+  return racersData.map((racer, index) => {
     const computed = {
       tuneCoinsNeededToMax: calculateCoinsNeeded(racer),
       shardsNeededToMax: calculateRacerShardsNeeded(racer),
@@ -91,5 +91,13 @@ export function RacerTableBody() {
     };
     return <Racer key={index} {...{ ...racer, ...computed }} />;
   });
-  return <tbody>{racerList}</tbody>;
+}
+
+export function RacerTableBody() {
+  // TEMPLATE
+  return (
+    <tbody>
+      <RacerList />
+    </tbody>
+  );
 }

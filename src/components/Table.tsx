@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-import { RacerTableBody } from './StaticComponents/RacerTableBody';
-import { CrewTableBody } from './StaticComponents/CrewTableBody';
+import { RacerTableBody } from './RacerTableBody';
+import { CrewTableBody } from './CrewTableBody';
 
 export function Table() {
   const { mode } = useContext(AppContext);

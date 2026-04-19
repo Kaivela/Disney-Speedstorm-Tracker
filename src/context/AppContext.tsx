@@ -1,6 +1,6 @@
 // src/context/DisplayModeContext.tsx
 import { createContext, useEffect, useState, type ReactNode } from 'react';
-import type { ICrew, IRacer, ISettings, Mode } from '../types/types';
+import type { ICrew, IRacer, ISettings, Mode, RacerSaved } from '../types/types';
 import { StorageService } from '../services/storage';
 import { migrateCrewsSave, migrateRacersSave, updateCollections } from '../services/migration';
 
@@ -9,8 +9,8 @@ const storage = StorageService.getInstance();
 export const AppContext = createContext<{
   mode: Mode;
   setMode: (mode: Mode) => void;
-  racers: IRacer[];
-  setRacers: (racers: IRacer[]) => void;
+  racers: RacerSaved[];
+  setRacers: (racers: RacerSaved[]) => void;
   crews: ICrew[];
   setCrews: (crews: ICrew[]) => void;
   settings: ISettings;
@@ -29,12 +29,11 @@ export const AppContext = createContext<{
 export function ModeProvider({ children }: { children: ReactNode }) {
   // LOGIC
   const [mode, setMode] = useState<Mode>('racer');
-  const [racers, setRacers] = useState<IRacer[]>([]);
+  const [racers, setRacers] = useState<RacerSaved[]>([]);
   const [crews, setCrews] = useState<ICrew[]>([]);
   const [settings, setSettings] = useState<ISettings>({});
 
   useEffect(() => {
-    updateCollections();
     const savedRacers = storage.getRacers();
 
     if (savedRacers) {
@@ -49,6 +48,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
       setCrews(migratedCrews);
       storage.saveCrews(migratedCrews);
     }
+    updateCollections();
     const savedSettings = storage.getSettings();
     if (savedSettings) {
       setSettings(savedSettings);

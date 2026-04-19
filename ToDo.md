@@ -4,7 +4,8 @@ donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
-crewTableBody a refacto comme RacerTableBody
+nettoyer le roaster.json
+nettoyer les type dans CHAQUE FICHIER
 sort crew when new entry et update pour new crew
 gérer les calculs dans le tableau
 export/Import save
