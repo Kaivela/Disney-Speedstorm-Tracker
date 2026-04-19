@@ -6,46 +6,11 @@ import {
   calculateRacerShardsNeeded,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
-} from '../../compute/Calculs';
+} from '../../compute/calculs';
+import { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 
-const racers = getAllRacers();
-const racerData = buildRacerTableBodyData();
-const racerList = racerData.map((racer, index) => {
-  return <Racer key={index} {...racer} />;
-});
-
-function buildRacerTableBodyData() {
-  return racers.map((racer) => {
-    const tuneCoinsNeededToMax = calculateCoinsNeeded(racer);
-    const racerShardsNeededToMax = calculateRacerShardsNeeded(racer);
-    const racerShardsToGetInMPL = calculateRacerShardsToGet(racer);
-    const racerShardNeededIfMaxMPL = calculateRacerShardsIfMaxMPL(racer);
-    const racersuperChargeTokensToGet = racer.superCharge ? calculateRacerSuperChargeTokenSNeeded(racer) : 0;
-    return {
-      collection: racer.collection,
-      releaseSeason: racer.releaseSeason,
-      rarity: racer.rarity,
-      role: racer.role,
-      name: racer.name,
-      currentStars: racer.currentStars,
-      currentStarFragment: racer.currentStarFragment,
-      currentShards: racer.currentShards,
-      superCharge: racer.superCharge,
-      currentSuperChargeLevel: racer.currentSuperChargeLevel,
-      currentSuperChargeTokens: racer.currentSuperChargeTokens,
-      currentMPL: racer.currentMPL,
-      highestMPL: racer.highestMPL,
-      universalBox: racer.universalBox,
-      MPLTuneCoinReward: racer.MPLTuneCoinReward,
-      MPLTokenOld: racer.MPLTokenOld,
-      tuneCoinsNeededToMax: tuneCoinsNeededToMax,
-      shardsNeededToMax: racerShardsNeededToMax,
-      shardsToGetInMPL: racerShardsToGetInMPL,
-      ShardsNeededIfMaxMPL: racerShardNeededIfMaxMPL,
-      superChargeTokensToGet: racersuperChargeTokensToGet,
-    };
-  });
-}
+const racersBlank = getAllRacers();
 
 function Racer({
   releaseSeason,
@@ -64,7 +29,7 @@ function Racer({
   highestMPL,
   shardsToGetInMPL,
   role,
-  ShardsNeededIfMaxMPL,
+  shardsNeededIfMaxMPL,
   superChargeTokensToGet,
 }: IRacer) {
   return (
@@ -92,7 +57,7 @@ function Racer({
       <td>{universalBox}</td>
       <td>shardsNeeded (next star) calcul</td>
       <td>coinsNeeded (next star) calcul</td>
-      <td>{ShardsNeededIfMaxMPL}</td>
+      <td>{shardsNeededIfMaxMPL}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
           Modify
@@ -106,5 +71,25 @@ function Racer({
 }
 
 export function RacerTableBody() {
+  // on construit un nouveau tableau qui contient les données de racers auquel on ajoute les props du blank
+  const { racers } = useContext(AppContext);
+  const NEWTABLEAU = racers.map((racer) => {
+    const found = racersBlank.find((racerBlank) => racerBlank.name === racer.name);
+
+    return {
+      ...found,
+      ...racer,
+    };
+  });
+  const racerList = NEWTABLEAU.map((racer, index) => {
+    const computed = {
+      tuneCoinsNeededToMax: calculateCoinsNeeded(racer),
+      shardsNeededToMax: calculateRacerShardsNeeded(racer),
+      shardsToGetInMPL: calculateRacerShardsToGet(racer),
+      shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racer),
+      superChargeTokensToGet: racer.superCharge ? calculateRacerSuperChargeTokenSNeeded(racer) : 0,
+    };
+    return <Racer key={index} {...{ ...racer, ...computed }} />;
+  });
   return <tbody>{racerList}</tbody>;
 }

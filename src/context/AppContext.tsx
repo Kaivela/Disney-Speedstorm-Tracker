@@ -2,7 +2,7 @@
 import { createContext, useEffect, useState, type ReactNode } from 'react';
 import type { ICrew, IRacer, ISettings, Mode } from '../types/types';
 import { StorageService } from '../services/storage';
-import { migrateCrewsSave, migrateRacersSave } from '../services/migration';
+import { migrateCrewsSave, migrateRacersSave, updateCollections } from '../services/migration';
 
 const storage = StorageService.getInstance();
 
@@ -34,7 +34,9 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<ISettings>({});
 
   useEffect(() => {
+    updateCollections();
     const savedRacers = storage.getRacers();
+
     if (savedRacers) {
       const migratedRacers = migrateRacersSave(savedRacers as unknown as Record<string, unknown>[]);
       setRacers(migratedRacers);

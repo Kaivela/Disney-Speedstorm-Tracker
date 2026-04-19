@@ -35,7 +35,7 @@ export interface IRacer {
 
   // Calculated properties
   shardsNeededToMax?: number | 'Maxed';
-  ShardsNeededIfMaxMPL?: number;
+  shardsNeededIfMaxMPL?: number;
   shardsToGetInMPL?: number;
   tuneCoinsNeededToMax?: number;
   tuneCoinsToGet?: number;

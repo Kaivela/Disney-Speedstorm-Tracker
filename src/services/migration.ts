@@ -1,4 +1,7 @@
+import { sortRacers } from '../compute/sort';
+import { getAllCrews, getAllRacers } from '../data/collections';
 import type { ICrew, IRacer } from '../types/types';
+import { StorageService } from './storage';
 
 export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
   // pour chaque racer
@@ -13,6 +16,7 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
     // "currentStars": 'number' ......==> "currentStars": 'number'
     // EMPTY .........................==> "currentStarFragment": 'number'
     // "currentShards": 'number' .....==> "currentShards": 'number'
+    // EMPTY .........................==> "currentSuperChargeLevel": 'number'
     // "currentSuperShards": 'number' ==> "currentSuperChargeTokens": 'number'
     // "currentLevel": 'number' ......==> EMPTY
     // "currentRMJ": 'number' ........==> "currentMPL": 'number'
@@ -22,12 +26,13 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
     // "superCharge": Boolean ........==> EMPTY
 
     // Migration html/js => react
-    if (!racer.currentStarFragment) {
+    if (racer.franchise) {
       racer.collection = racer.franchise;
       delete racer.franchise;
       delete racer.rarity;
       delete racer.role;
       racer.currentStarFragment = 0;
+      racer.currentSuperChargeLevel = 0;
       racer.currentSuperChargeTokens = racer.currentSuperShards;
       delete racer.currentSuperShards;
       delete racer.currentLevel;
@@ -38,6 +43,12 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
       delete racer.universalBox;
       delete racer.releaseSeason;
       delete racer.superCharge;
+
+      // Régler les currentStars si plus grand que 5
+      if ((racer.currentStars as number) > 5) {
+        racer.currentSuperChargeLevel = (racer.currentStars as number) - 5;
+        racer.currentStars = 5;
+      }
     }
 
     // change GoGoTomage's Name
@@ -45,6 +56,20 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
       racer.name = 'Go Go Tomago';
     }
 
+    // Change MinieMouse Name
+    if (racer.name === 'Minnie') {
+      racer.name = 'Minnie Mouse';
+    }
+
+    // Change ScroogeMcDuck Name
+    if (racer.name === 'Scrooge Mcduck') {
+      racer.name = 'Scrooge McDuck';
+    }
+
+    // Update CollectionNames
+    if (racer.collection === 'Mickey & Friends') {
+      racer.collection = 'MickeyAndFriends';
+    }
     // New Migration
     // if (condition qui n'existe que dans l'ancienne save) {
     //   je récupère l'ancienne valeur
@@ -96,4 +121,32 @@ export function migrateLocalStorage() {
   //   localStorage.setItem('newKey', oldKey);
   //   localStorage.removeItem('oldKey');
   // }
+}
+
+export function updateCollections() {
+  const storage = StorageService.getInstance();
+  const racerSaved = storage.getRacers();
+  const racersBlank = getAllRacers();
+  const crewSaved = storage.getCrews();
+  const crewsBlank = getAllCrews();
+  // pour chaque element de racerBlank
+  racersBlank.forEach((racerBlank) => {
+    // on cherche dans le storage si un racer du même nom existe
+    const found = racerSaved.find((racer) => racerBlank.name === racer.name);
+    // si non on ajoute le racer au storage
+    if (!found) {
+      racerSaved.push(racerBlank);
+    }
+  });
+  storage.saveRacers(sortRacers(racerSaved));
+  crewsBlank.forEach((crewBlank) => {
+    // on cherche dans le storage si un crew du même nom existe
+    const found = crewSaved.find((crew) => crewBlank.name === crew.name);
+    // si non on ajoute le crew au storage
+    if (!found) {
+      crewSaved.push(crewBlank);
+      console.log(crewSaved);
+      storage.saveCrews(crewSaved);
+    }
+  });
 }

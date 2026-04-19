@@ -1,11 +1,11 @@
 import { getAllCrews } from '../../data/collections';
-import { calculateCrewShardsNeeded } from '../../compute/Calculs';
+import { calculateCrewShardsNeeded } from '../../compute/calculs';
 import type { ICrew } from '../../types/types';
 
-const crews = getAllCrews();
+const crewsBlank = getAllCrews();
 
 function buildCrewTableBodyData() {
-  return crews.map((crew) => {
+  return crewsBlank.map((crew) => {
     const shardsNeededToMax = calculateCrewShardsNeeded(crew);
     return {
       collection: crew.collection,

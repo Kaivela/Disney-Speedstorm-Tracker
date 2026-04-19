@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
 // import { calculateRacerShardsNeeded } from '../compute/Calculs';
 import type { IRacer } from '../types/types';
-import { calculateRacerShardsNeeded } from '../compute/Calculs';
+import { calculateRacerShardsNeeded } from '../compute/calculs';
 
 describe('calculateRacerShardsNeeded', () => {
   test('should calculate the correct number of shards needed for a racer', () => {

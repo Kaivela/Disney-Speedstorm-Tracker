@@ -4,7 +4,9 @@ donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
-utiliser les racers/crew qui sont dans le useState du appContext dans le tableau
+crewTableBody a refacto comme RacerTableBody
+sort crew when new entry et update pour new crew
+gérer les calculs dans le tableau
 export/Import save
 modify racer/crew
 
