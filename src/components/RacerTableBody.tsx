@@ -13,6 +13,7 @@ import { AppContext } from '../context/AppContext';
 const racersBlank = getAllRacers();
 
 function Racer(racer: IRacer) {
+  const currentStarMaxed = racer.currentStars === 6;
   return (
     <tr>
       <td>{racer.releaseSeason}</td>
@@ -24,21 +25,21 @@ function Racer(racer: IRacer) {
       <td data-trad={racer.role}>{racer.role}</td>
       <td data-trad={racer.name}>{racer.name}</td>
       <td>{racer.currentStars}</td>
-      <td>{racer.currentStars === 6 ? 'maxed' : racer.currentStarFragment}</td>
+      <td>{currentStarMaxed ? 'maxed' : racer.currentStarFragment}</td>
       <td>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>
-      <td>{racer.currentStars === 6 ? 'maxed' : racer.currentShards}</td>
+      <td>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>
       <td>{racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens}</td>
       <td>{racer.currentMPL}</td>
       <td>{racer.highestMPL}</td>
       <td>badge max MPL</td>
-      <td>{racer.currentStars === 6 ? 'Maxed' : racer.shardsNeededToMax}</td>
+      <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededToMax}</td>
       <td>{racer.shardsToGetInMPL === 0 ? 'None' : racer.shardsToGetInMPL}</td>
       <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>
-      <td>{racer.currentStars === 6 ? 'Maxed' : racer.tuneCoinsNeededToMax}</td>
+      <td>{currentStarMaxed ? 'Maxed' : racer.tuneCoinsNeededToMax}</td>
       <td>{racer.universalBox}</td>
       <td>shardsNeeded (next star) calcul</td>
       <td>coinsNeeded (next star) calcul</td>
-      <td>{racer.currentStars === 6 ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
+      <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
           Modify

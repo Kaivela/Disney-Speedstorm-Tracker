@@ -4,8 +4,6 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-surement refacto le composant Racer dans racerTableBody.tsx
-
 calcul des nextStar racer
 
 Import save
