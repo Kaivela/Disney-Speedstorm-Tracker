@@ -8,6 +8,7 @@
       "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
       "MPLTuneCoinReward": "S10To14Mid"
     },
     {
@@ -18,6 +19,7 @@
       "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
       "MPLTuneCoinReward": "S5To9"
     }
   ],

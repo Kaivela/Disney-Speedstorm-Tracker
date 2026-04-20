@@ -8,6 +8,7 @@
       "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -18,6 +19,7 @@
       "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -28,6 +30,7 @@
       "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -38,6 +41,7 @@
       "superCharge": true,
       "universalBox": "✔",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "Mickey"
     },
     {
@@ -48,6 +52,7 @@
       "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -58,6 +63,7 @@
       "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
       "MPLTuneCoinReward": "S10ToLatest"
     },
     {
@@ -68,6 +74,7 @@
       "superCharge": false,
       "universalBox": "✔",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -78,6 +85,7 @@
       "superCharge": true,
       "universalBox": "✔",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     }
   ],

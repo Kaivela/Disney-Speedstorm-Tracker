@@ -14,11 +14,11 @@ export interface Collection {
 
 export interface RacerComputed {
   // Calculated properties
-  tuneCoinsNeededToMax: number;
-  shardsNeededToMax: number | 'Maxed';
-  shardsToGetInMPL: number;
-  shardsNeededIfMaxMPL: number;
-  superChargeTokensNeeded: number;
+  tuneCoinsNeededToMax?: number;
+  shardsNeededToMax?: number | 'Maxed';
+  shardsToGetInMPL?: number;
+  shardsNeededIfMaxMPL?: number;
+  superChargeTokensNeeded?: number;
   // tuneCoinsToGet?: number;
   // superShardsNeeded?: number;
   // tokensToGet?: number;
@@ -30,6 +30,7 @@ export interface RacerBlank {
   collection: string;
   MPLTuneCoinReward: MPLTuneCoinReward;
   MPLTokenOld: boolean;
+  MPLOldShardsReward: boolean;
   name: string;
   releaseSeason: number;
   rarity: Rarity;

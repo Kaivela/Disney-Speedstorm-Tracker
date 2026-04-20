@@ -8,6 +8,7 @@
       "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -18,6 +19,7 @@
       "superCharge": true,
       "universalBox": "✔",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     },
     {
@@ -28,6 +30,7 @@
       "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
       "MPLTuneCoinReward": "S0To4"
     }
   ],
