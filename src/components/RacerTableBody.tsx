@@ -24,21 +24,21 @@ function Racer(racer: IRacer) {
       <td data-trad={racer.role}>{racer.role}</td>
       <td data-trad={racer.name}>{racer.name}</td>
       <td>{racer.currentStars}</td>
-      <td>{racer.currentStarFragment}</td>
-      <td>{racer.currentSuperChargeLevel}</td>
-      <td>{racer.currentShards}</td>
-      <td>{racer.currentSuperChargeTokens}</td>
+      <td>{racer.currentStars === 6 ? 'maxed' : racer.currentStarFragment}</td>
+      <td>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>
+      <td>{racer.currentStars === 6 ? 'maxed' : racer.currentShards}</td>
+      <td>{racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens}</td>
       <td>{racer.currentMPL}</td>
       <td>{racer.highestMPL}</td>
       <td>badge max MPL</td>
-      <td>{racer.shardsNeededToMax}</td>
-      <td>{racer.shardsToGetInMPL}</td>
-      <td>{racer.superChargeTokensNeeded}</td>
-      <td>{racer.tuneCoinsNeededToMax}</td>
+      <td>{racer.currentStars === 6 ? 'Maxed' : racer.shardsNeededToMax}</td>
+      <td>{racer.shardsToGetInMPL === 0 ? 'None' : racer.shardsToGetInMPL}</td>
+      <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>
+      <td>{racer.currentStars === 6 ? 'Maxed' : racer.tuneCoinsNeededToMax}</td>
       <td>{racer.universalBox}</td>
       <td>shardsNeeded (next star) calcul</td>
       <td>coinsNeeded (next star) calcul</td>
-      <td>{racer.shardsNeededIfMaxMPL}</td>
+      <td>{racer.currentStars === 6 ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
           Modify
@@ -70,7 +70,7 @@ function RacerList() {
       shardsNeededToMax: calculateRacerShardsNeeded(racerBlankWithSavedData),
       shardsToGetInMPL: calculateRacerShardsToGet(racerBlankWithSavedData),
       shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racerBlankWithSavedData),
-      superChargeTokensNeeded: calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData),
+      superChargeTokensNeeded: racerBlankWithSavedData.superCharge ? calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData) : 0,
     };
     return <Racer key={index} {...{ ...racerBlankWithSavedData, ...racerComputed }} />;
   });

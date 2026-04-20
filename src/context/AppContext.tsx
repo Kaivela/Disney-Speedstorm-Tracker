@@ -1,6 +1,6 @@
 // src/context/DisplayModeContext.tsx
 import { createContext, useEffect, useState, type ReactNode } from 'react';
-import type { ICrew, ISettings, Mode, RacerSaved } from '../types/types';
+import type { ISettings, Mode, RacerSaved, CrewSaved } from '../types/types';
 import { StorageService } from '../services/storage';
 import { migrateCrewsSave, migrateRacersSave, updateCollections } from '../services/migration';
 
@@ -11,8 +11,8 @@ export const AppContext = createContext<{
   setMode: (mode: Mode) => void;
   racers: RacerSaved[];
   setRacers: (racers: RacerSaved[]) => void;
-  crews: ICrew[];
-  setCrews: (crews: ICrew[]) => void;
+  crews: CrewSaved[];
+  setCrews: (crews: CrewSaved[]) => void;
   settings: ISettings;
   setSettings: (settings: ISettings) => void;
 }>({
@@ -30,7 +30,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   // LOGIC
   const [mode, setMode] = useState<Mode>('racer');
   const [racers, setRacers] = useState<RacerSaved[]>([]);
-  const [crews, setCrews] = useState<ICrew[]>([]);
+  const [crews, setCrews] = useState<CrewSaved[]>([]);
   const [settings, setSettings] = useState<ISettings>({});
 
   useEffect(() => {

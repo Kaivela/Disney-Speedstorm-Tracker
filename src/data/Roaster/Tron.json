@@ -50,80 +50,60 @@
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Orange Programs",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Grandpa And Grandma Flynn",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Sirens",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Edward Dillinger Jr.",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Black Guards",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Sentry",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Anon",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Marv",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Alan Bradley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Epic",
       "name": "ISO",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Quorra"
     },
@@ -131,8 +111,6 @@
       "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Jarvis",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Rinzler"
     },
@@ -140,8 +118,6 @@
       "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Kevin Flynn",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Sam Flynn"
     },
@@ -149,8 +125,6 @@
       "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Gem",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Zuse"
     }

@@ -5,7 +5,7 @@
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Anna",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": true,
       "MPLOldShardsReward": false,
@@ -61,88 +61,66 @@
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Erik And Francis",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Trolls",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Lieutenant Mattias",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Oaken",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Royal Guards Of Arendelle",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Duke Of Weselton",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Marshmallow",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Queen Iduna",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "King Agnarr",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Bulda",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "Grand Pabbie",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Anna"
     },
@@ -150,8 +128,6 @@
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "Bruni",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Elsa"
     },
@@ -159,8 +135,6 @@
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "Sitron",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Hans"
     },
@@ -168,8 +142,6 @@
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "Sven",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Kristoff"
     },
@@ -177,8 +149,6 @@
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "Snowgie",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Olaf"
     }

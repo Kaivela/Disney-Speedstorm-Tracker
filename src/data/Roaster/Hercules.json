@@ -39,72 +39,54 @@
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Olympian Gods",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Hera",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Hermes",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Amphitryon And Alcmene",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Hydra",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Cerberus",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Zeus",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Phil",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Pain And Panic",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Hades"
     },
@@ -112,8 +94,6 @@
       "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Pegasus",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Hercules"
     },
@@ -121,8 +101,6 @@
       "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Muses",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Meg"
     }

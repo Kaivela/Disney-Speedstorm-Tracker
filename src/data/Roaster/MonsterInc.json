@@ -38,7 +38,7 @@
       "rarity": "Epic",
       "role": "Brawler",
       "name": "Sulley",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -50,72 +50,54 @@
       "releaseSeason": 1,
       "rarity": "Common",
       "name": "Pete Ward",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Common",
       "name": "Ted Pauley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Common",
       "name": "Nick Schmidt",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Common",
       "name": "Georges Sanderson",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Rare",
       "name": "Henry J. Waternoose",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Rare",
       "name": "Ms. Flint",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Rare",
       "name": "The Yeti",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Rare",
       "name": "CDA Agents",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 1,
       "rarity": "Epic",
       "name": "Roz",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Celia Mae"
     },
@@ -123,8 +105,6 @@
       "releaseSeason": 1,
       "rarity": "Epic",
       "name": "Smitty And Needleman",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Mike Wazowski"
     },
@@ -132,8 +112,6 @@
       "releaseSeason": 1,
       "rarity": "Epic",
       "name": "Fungus",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Randall"
     },
@@ -141,8 +119,6 @@
       "releaseSeason": 1,
       "rarity": "Epic",
       "name": "Boo",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Sulley"
     }

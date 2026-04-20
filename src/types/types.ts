@@ -15,7 +15,7 @@ export interface Collection {
 export interface RacerComputed {
   // Calculated properties
   tuneCoinsNeededToMax?: number;
-  shardsNeededToMax?: number | 'Maxed';
+  shardsNeededToMax?: number;
   shardsToGetInMPL?: number;
   shardsNeededIfMaxMPL?: number;
   superChargeTokensNeeded?: number;
@@ -56,20 +56,32 @@ export interface RacerSaved {
 
 export type IRacer = RacerBlank & RacerSaved & RacerComputed;
 
-export interface ICrew {
+export interface CrewComputed {
+  // Calculated properties
+  shardsNeededToMax?: number;
+}
+export interface CrewBlank {
+  //Static properties
   collection: string;
+  name: string;
   releaseSeason: number;
   rarity: Rarity;
-  name: string;
-  currentStars: number;
-  currentShards: number;
   universalBox: UniversalBox;
 
   // Optional property
   exclusiveTo?: string;
-  // Calculated properties
-  shardsNeededToMax?: number | 'Maxed';
 }
+export interface CrewSaved {
+  //Static properties
+  collection: string;
+  name: string;
+
+  //Modifiable properties
+  currentStars: number;
+  currentShards: number;
+}
+
+export type ICrew = CrewBlank & CrewSaved & CrewComputed;
 
 export interface ISettings {
   // lang?: Language;

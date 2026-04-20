@@ -1,26 +1,27 @@
 import { getAllCrews } from '../data/collections';
 import { calculateCrewShardsNeeded } from '../compute/calculs';
-import type { ICrew } from '../types/types';
+import type { CrewComputed, ICrew } from '../types/types';
 import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const crewsBlank = getAllCrews();
 
-function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShards, universalBox, shardsNeededToMax, releaseSeason }: ICrew) {
+function Crew(crew: ICrew) {
   return (
     <tr>
-      <td>{releaseSeason}</td>
-      <td data-trad={exclusiveTo}>{exclusiveTo}</td>
+      <td>{crew.releaseSeason}</td>
+      <td data-trad={crew.exclusiveTo}>{crew.exclusiveTo}</td>
       <td>
-        <img src={`/img/crews/${name}.webp`} />
+        <img src={`/img/crews/${crew.name}.webp`} />
       </td>
-      <td data-trad={collection}>{collection}</td>
-      <td data-trad={rarity}>{rarity}</td>
-      <td data-trad={name}>{name}</td>
-      <td>{currentStars}</td>
-      <td>{currentShards}</td>
-      <td>{shardsNeededToMax}</td>
-      <td>{universalBox}</td>
+      <td data-trad={crew.collection}>{crew.collection}</td>
+      <td data-trad={crew.rarity}>{crew.rarity}</td>
+      <td data-trad={crew.name}>{crew.name}</td>
+      <td>{crew.currentStars}</td>
+      <td>{crew.currentStars === 5 ? 'maxed' : crew.currentShards}</td>
+      {/* */}
+      <td>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>
+      <td>{crew.universalBox}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
           Modify
@@ -33,19 +34,21 @@ function Crew({ exclusiveTo, collection, rarity, name, currentStars, currentShar
 function CrewList() {
   //LOGIC
   const { crews } = useContext(AppContext);
-  const crewsData = crews.map((crew) => {
-    const found = crewsBlank.find((crewBlank) => crewBlank.name === crew.name);
+  const crewsSaved = crews.map((crewSaved) => {
+    const crewBlank = crewsBlank.find((crewBlank) => crewBlank.name === crewSaved.name);
+    // to prevent crewBlank from being undefined
+    if (!crewBlank) throw new Error(`No crew blank found for name: ${crewSaved.name}`);
     return {
-      ...found,
-      ...crew,
+      ...crewBlank,
+      ...crewSaved,
     };
   });
   //TEMPLATE
-  return crewsData.map((crew, index) => {
-    const computed = {
-      shardsNeededToMax: calculateCrewShardsNeeded(crew),
+  return crewsSaved.map((crewBlankWithSavedData, index) => {
+    const computed: CrewComputed = {
+      shardsNeededToMax: calculateCrewShardsNeeded(crewBlankWithSavedData),
     };
-    return <Crew key={index} {...{ ...crew, ...computed }} />;
+    return <Crew key={index} {...{ ...crewBlankWithSavedData, ...computed }} />;
   });
 }
 

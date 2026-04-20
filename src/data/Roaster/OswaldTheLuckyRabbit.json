@@ -28,64 +28,48 @@
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "The Reluctant Horse",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "The Mechanical Cow",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Donkey",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Common",
       "name": "Elephant On A Bicycle",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Camel-Os",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Lifeguard",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Rare",
       "name": "Hot Dog",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "J. P. Whiskers",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Ortensia"
     },
@@ -93,8 +77,6 @@
       "releaseSeason": 5,
       "rarity": "Epic",
       "name": "Francine `Fanny` Cottontail",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Oswald"
     }

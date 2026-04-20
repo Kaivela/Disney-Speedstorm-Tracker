@@ -39,56 +39,42 @@
       "releaseSeason": 18,
       "rarity": "Common",
       "name": "Cal Weathers",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Common",
       "name": "Sheriff",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Common",
       "name": "Red",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Francesco Bernoulli",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Finn McMissile",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Flo",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Epic",
       "name": "Sterling",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Cruz Ramirez"
     },
@@ -96,8 +82,6 @@
       "releaseSeason": 18,
       "rarity": "Epic",
       "name": "Guido",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Lightning McQueen"
     },
@@ -105,8 +89,6 @@
       "releaseSeason": 18,
       "rarity": "Epic",
       "name": "Holley Shiftwell",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Tow Mater"
     }

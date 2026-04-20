@@ -28,64 +28,48 @@
       "releaseSeason": 13,
       "rarity": "Common",
       "name": "Queen Leah",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 9,
       "rarity": "Common",
       "name": "Spear Goon",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 9,
       "rarity": "Common",
       "name": "Axe Goon",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 13,
       "rarity": "Rare",
       "name": "Prince Phillip",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Goon Leader",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "King Hubert",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "King Stefan",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 13,
       "rarity": "Epic",
       "name": "Flora, Fauna, and Merryweather",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Aurora"
     },
@@ -93,8 +77,6 @@
       "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Diablo",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Maleficent"
     }

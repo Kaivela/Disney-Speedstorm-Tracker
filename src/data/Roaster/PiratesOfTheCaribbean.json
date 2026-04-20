@@ -38,7 +38,7 @@
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Jack Sparrow",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -49,7 +49,7 @@
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Tia Dalma",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -60,7 +60,7 @@
       "rarity": "Common",
       "role": "Speedster",
       "name": "Will Turner",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -72,120 +72,90 @@
       "releaseSeason": 9,
       "rarity": "Common",
       "name": "Prison Dog",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Common",
       "name": "Shansa",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Common",
       "name": "Ian Mercer",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Common",
       "name": "Cotton",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Lord Cutler Beckett",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Marty",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Murtogg And Mullroy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Gillette",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Bootstrap Bill Turner",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Theodore Groves",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Bo'Sun",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Rare",
       "name": "Captain Sao Feng",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Pintel And Ragetti",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
       "name": "James Norrington",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Maccus",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Davy Jones"
     },
@@ -193,8 +163,6 @@
       "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Weatherby Swann",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Elizabeth Swann"
     },
@@ -202,8 +170,6 @@
       "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Carina Barbossa",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Hector Barbossa"
     },
@@ -211,8 +177,6 @@
       "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Joshamee Gibbs",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Jack Sparrow"
     },
@@ -220,8 +184,6 @@
       "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Rock Crabs",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Tia Dalma"
     },
@@ -229,8 +191,6 @@
       "releaseSeason": 9,
       "rarity": "Epic",
       "name": "Henry Turner",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Will Turner"
     }

@@ -1,6 +1,6 @@
-import { sortRacers } from '../compute/sort';
+import { sortCrews, sortRacers } from '../compute/sort';
 import { getAllCrews, getAllRacers } from '../data/collections';
-import type { ICrew, RacerSaved } from '../types/types';
+import type { CrewSaved, ICrew, RacerSaved } from '../types/types';
 import { StorageService } from './storage';
 
 const nameMap = {
@@ -89,14 +89,11 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
 
       // Fix Go Go Tomago Name
       if (racer.name === 'Go Go Tamago') {
-        console.log('migrated Tamago');
         racer.name = 'Go Go Tomago';
       }
 
       // Fix Minnie Mouse Name
       if (racer.name === 'Minnie') {
-        console.log('minnie');
-
         racer.name = 'Minnie Mouse';
       }
 
@@ -112,6 +109,7 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
           racer.collection = newName;
         }
       }
+      console.log('Racers Saved Migration : OK');
     }
 
     // New Migration
@@ -125,7 +123,7 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
   }) as unknown as RacerSaved[];
 }
 
-export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {
+export function migrateCrewsSave(crews: Record<string, unknown>[]): CrewSaved[] {
   // pour chaque crew
   return crews.map((crewOriginal) => {
     const crew = structuredClone(crewOriginal);
@@ -140,20 +138,21 @@ export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {
     // "universalBox": Boolean ..............==> EMPTY
     // "shardsNeeded": 'number' .............==> EMPTY
 
-    if (crew.rarity) {
+    if (crew.franchise) {
       crew.collection = crew.franchise;
       delete crew.franchise;
       delete crew.rarity;
       delete crew.universalBox;
       delete crew.shardsNeeded;
-    }
 
-    // Normalize crew.collection names
-    for (const oldName in nameMap) {
-      const newName = nameMap[oldName as keyof typeof nameMap];
-      if (normalizeName(crew.collection as string) === normalizeName(oldName)) {
-        crew.collection = newName;
+      // Normalize crew.collection names
+      for (const oldName in nameMap) {
+        const newName = nameMap[oldName as keyof typeof nameMap];
+        if (normalizeName(crew.collection as string) === normalizeName(oldName)) {
+          crew.collection = newName;
+        }
       }
+      console.log('Crews Saved Migration : OK');
     }
 
     return crew;
@@ -185,7 +184,6 @@ export function updateCollections() {
   racersBlank.forEach((racerBlank) => {
     // on cherche dans le storage si un racer du même nom existe
     const found = racerSaved.find((racer) => racerBlank.name === racer.name);
-
     // si non on ajoute le racer au storage
     if (!found) {
       // ce racerBlank subit une transfo avant de le push dans le tableau
@@ -204,14 +202,21 @@ export function updateCollections() {
     }
   });
   storage.saveRacers(sortRacers(racerSaved));
+
   crewsBlank.forEach((crewBlank) => {
     // on cherche dans le storage si un crew du même nom existe
     const found = crewSaved.find((crew) => crewBlank.name === crew.name);
     // si non on ajoute le crew au storage
     if (!found) {
-      crewSaved.push(crewBlank);
-      console.log(crewSaved);
-      storage.saveCrews(crewSaved);
+      // ce crewBlank subit une transfo avant de le push dans le tableau
+      const newCrew: CrewSaved = {
+        name: crewBlank.name,
+        collection: crewBlank.collection,
+        currentStars: 0,
+        currentShards: 0,
+      };
+      crewSaved.push(newCrew);
     }
   });
+  storage.saveCrews(sortCrews(crewSaved));
 }

@@ -28,64 +28,48 @@
       "releaseSeason": 11,
       "rarity": "Common",
       "name": "Pua",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Common",
       "name": "Chief Tui",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Common",
       "name": "Kakamora",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Common",
       "name": "Gramma Tala",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Rare",
       "name": "Sina",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Rare",
       "name": "Tamatoa",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Rare",
       "name": "Heihei",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
       "rarity": "Epic",
       "name": "Mini Maui",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Maui"
     },
@@ -93,8 +77,6 @@
       "releaseSeason": 11,
       "rarity": "Epic",
       "name": "Simea",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Moana"
     }

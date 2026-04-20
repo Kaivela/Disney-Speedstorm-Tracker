@@ -28,56 +28,42 @@
       "releaseSeason": 16,
       "rarity": "Common",
       "name": "Construction Foreman Tom",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 16,
       "rarity": "Common",
       "name": "Gamma",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 16,
       "rarity": "Common",
       "name": "Beta",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 16,
       "rarity": "Rare",
       "name": "Alpha",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 16,
       "rarity": "Rare",
       "name": "Charles F. Muntz",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 16,
       "rarity": "Rare",
       "name": "Georges And A.J.",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 16,
       "rarity": "Epic",
       "name": "Dug",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Carl Fredricksen"
     },
@@ -85,8 +71,6 @@
       "releaseSeason": 16,
       "rarity": "Epic",
       "name": "Kevin",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Russell"
     }

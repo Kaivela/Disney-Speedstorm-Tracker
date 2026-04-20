@@ -50,72 +50,54 @@
       "releaseSeason": 6,
       "rarity": "Common",
       "name": "Under The Sea Band",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Common",
       "name": "Glut",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Common",
       "name": "Seahorse Herald",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Common",
       "name": "Chef Louis",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Rare",
       "name": "Ursula's Garden",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Rare",
       "name": "Ariel's Sisters",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Rare",
       "name": "Grimsby",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Rare",
       "name": "Scuttle",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 6,
       "rarity": "Epic",
       "name": "Flounder",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Ariel"
     },
@@ -123,8 +105,6 @@
       "releaseSeason": 6,
       "rarity": "Epic",
       "name": "Sebastian",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "King Triton"
     },
@@ -132,8 +112,6 @@
       "releaseSeason": 6,
       "rarity": "Epic",
       "name": "Max",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Prince Eric"
     },
@@ -141,8 +119,6 @@
       "releaseSeason": 6,
       "rarity": "Epic",
       "name": "Flotsam And Jetsam",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Ursula"
     }

@@ -39,56 +39,42 @@
       "releaseSeason": 17,
       "rarity": "Common",
       "name": "Gideon Grey",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Common",
       "name": "Mayor Lionheart",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Common",
       "name": "Gazelle",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Yax",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Fru Fru",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Mr. Big",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Priscilla",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Flash"
     },
@@ -96,8 +82,6 @@
       "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Bonnie And Stu Hopps",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Judy Hopps"
     },
@@ -105,8 +89,6 @@
       "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Finnick",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Nick Wilde"
     }

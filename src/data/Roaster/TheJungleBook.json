@@ -16,7 +16,7 @@
       "rarity": "Rare",
       "role": "Speedster",
       "name": "Mowgli",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -28,56 +28,42 @@
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Buzzie, Flaps, Ziggy, And Dizzy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Shanti",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "Shere Khan",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "The Jungle Patrol",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
       "name": "Kaa",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Rare",
       "name": "King Louie",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Bagheera",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Baloo"
     },
@@ -85,8 +71,6 @@
       "releaseSeason": 0,
       "rarity": "Epic",
       "name": "Wolf Pack",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Mowgli"
     }

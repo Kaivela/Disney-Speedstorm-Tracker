@@ -28,56 +28,42 @@
       "releaseSeason": 14,
       "rarity": "Common",
       "name": "Rat Capone",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 14,
       "rarity": "Common",
       "name": "Robot Dog",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 14,
       "rarity": "Common",
       "name": "Fat Cat's Gang",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 14,
       "rarity": "Rare",
       "name": "Professor Norton Nimnul",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 14,
       "rarity": "Rare",
       "name": "Fat Cat",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 14,
       "rarity": "Rare",
       "name": "Zipper",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 14,
       "rarity": "Epic",
       "name": "Monterey Jack",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Chip"
     },
@@ -85,8 +71,6 @@
       "releaseSeason": 14,
       "rarity": "Epic",
       "name": "Gadget Hackwrench",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Dale"
     }

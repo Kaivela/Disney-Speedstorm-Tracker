@@ -28,56 +28,42 @@
       "releaseSeason": 17,
       "rarity": "Common",
       "name": "Mata",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Common",
       "name": "Rudy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Common",
       "name": "Bucky The Squirrel",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Chicha",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Chaca And Tipo",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Rare",
       "name": "Theme Song Guy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Pacha",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Kuzco"
     },
@@ -85,8 +71,6 @@
       "releaseSeason": 17,
       "rarity": "Epic",
       "name": "Kronk",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Yzma"
     }

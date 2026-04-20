@@ -39,56 +39,42 @@
       "releaseSeason": 15,
       "rarity": "Common",
       "name": "Bill The Lizard",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Common",
       "name": "The Walrus And The Carpenter",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Common",
       "name": "Tweedledee And Tweedledum",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Rare",
       "name": "Dormouse",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Rare",
       "name": "The Doorknob",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Rare",
       "name": "Dodo",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Epic",
       "name": "Dinah",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Alice"
     },
@@ -96,8 +82,6 @@
       "releaseSeason": 15,
       "rarity": "Epic",
       "name": "March Hare",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Mad Hatter"
     },
@@ -105,8 +89,6 @@
       "releaseSeason": 15,
       "rarity": "Epic",
       "name": "King Of Hearts",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Queen Of Hearts"
     }

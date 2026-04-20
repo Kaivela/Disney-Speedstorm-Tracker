@@ -28,10 +28,10 @@ const MPLS10To14MidCoinsReward = [
 ];
 
 // Définir les shards rewards en multiPlayerLeague pour chaque Rang (Season 0 to 4)
-const MPLOldShardsReward = [0, 4, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 8, 0, 0];
+const MPLOldShardsReward = [0, 0, 4, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 8, 0, 0];
 
 // Définir les shards rewards en multiPlayerLeague pour chaque Rang (Season 5 to Latest)
-const MPLNewShardsReward = [0, 4, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 8, 0, 0];
+const MPLNewShardsReward = [0, 4, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 8, 0, 0];
 
 // Définir les tokens rewards en multiPlayerLeague pour chaque Rang (NEW PILOTS)
 const MPLOldTokensReward = [

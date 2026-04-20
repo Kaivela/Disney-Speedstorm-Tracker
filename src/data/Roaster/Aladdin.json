@@ -5,7 +5,7 @@
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Aladdin",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -16,7 +16,7 @@
       "rarity": "Epic",
       "role": "Defender",
       "name": "Genie",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -27,7 +27,7 @@
       "rarity": "Rare",
       "role": "Brawler",
       "name": "Jafar",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -50,72 +50,54 @@
       "releaseSeason": 4,
       "rarity": "Common",
       "name": "Agrabah Siblings",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Common",
       "name": "Prince Achmed",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Common",
       "name": "Camel-Al",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Common",
       "name": "Horse",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Gazeem",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Melon Merchant",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Rare",
       "name": "Cave Of Wonders",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Rare",
       "name": "The Sultan-Al",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Abu",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Aladdin"
     },
@@ -123,8 +105,6 @@
       "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Magic Carpet",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Genie"
     },
@@ -132,8 +112,6 @@
       "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Iago",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Jafar"
     },
@@ -141,8 +119,6 @@
       "releaseSeason": 4,
       "rarity": "Epic",
       "name": "Rajah",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Jasmine"
     }

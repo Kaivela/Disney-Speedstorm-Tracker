@@ -28,72 +28,54 @@
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Huntsman",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Bashful",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Doc",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Common",
       "name": "Sleepy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Sneezy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Dopey",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Happy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Rare",
       "name": "Grumpy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 12,
       "rarity": "Epic",
       "name": "The Prince",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Snow White"
     },
@@ -101,8 +83,6 @@
       "releaseSeason": 12,
       "rarity": "Epic",
       "name": "Magic Mirror",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "The Evil Queen"
     }

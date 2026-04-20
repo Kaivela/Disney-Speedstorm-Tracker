@@ -5,7 +5,7 @@
       "rarity": "Common",
       "role": "Trickster",
       "name": "Dr. Finkelstein",
-      "superCharge": false,
+      "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -50,72 +50,54 @@
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "Clown With The Tear-Away Face",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "The Vampire Brothers",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "Mummy Boy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "Man-Eating Wreath",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Toy Duck",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Igor",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Wolfman",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Santa Claus",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Epic",
       "name": "Jewel",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Dr. Finkelstein"
     },
@@ -123,8 +105,6 @@
       "releaseSeason": 10,
       "rarity": "Epic",
       "name": "Zero",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Jack Skellington"
     },
@@ -132,8 +112,6 @@
       "releaseSeason": 10,
       "rarity": "Epic",
       "name": "Lock, Shock, And Barrel",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Oogie Boogie"
     },
@@ -141,8 +119,6 @@
       "releaseSeason": 10,
       "rarity": "Epic",
       "name": "The Mayor",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Sally"
     }

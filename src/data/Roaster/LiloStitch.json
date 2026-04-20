@@ -5,7 +5,7 @@
       "rarity": "Common",
       "role": "Trickster",
       "name": "Angel",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✔",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -27,7 +27,7 @@
       "rarity": "Common",
       "role": "Defender",
       "name": "Jumba",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": true,
       "MPLOldShardsReward": true,
@@ -61,88 +61,66 @@
       "releaseSeason": 3,
       "rarity": "Common",
       "name": "Kumu",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Common",
       "name": "Susan Hegarty",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Common",
       "name": "Intergalactic Police",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Common",
       "name": "Pudge",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Common",
       "name": "Luki",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Mertle Edmonds",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Mrs. Hasagawa",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Rare",
       "name": "David Kawena",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Ice Cream Man",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Rare",
       "name": "Cobra Bubbles",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Reuben",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Angel"
     },
@@ -150,8 +128,6 @@
       "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Grand Council Woman",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Captain Gantu"
     },
@@ -159,8 +135,6 @@
       "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Pleakley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Jumba"
     },
@@ -168,8 +142,6 @@
       "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Nani",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Lilo"
     },
@@ -177,8 +149,6 @@
       "releaseSeason": 3,
       "rarity": "Epic",
       "name": "Duck Family",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Stitch"
     }

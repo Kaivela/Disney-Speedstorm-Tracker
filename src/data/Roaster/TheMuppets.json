@@ -16,7 +16,7 @@
       "rarity": "Rare",
       "role": "Speedster",
       "name": "Kermit the Frog",
-      "superCharge": false,
+      "superCharge": true,
       "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -39,72 +39,54 @@
       "releaseSeason": 15,
       "rarity": "Common",
       "name": "Lew Zealand",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 7,
       "rarity": "Common",
       "name": "Sweetums",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 7,
       "rarity": "Common",
       "name": "Scooter",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "Pepe The King Prawn",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 10,
       "rarity": "Rare",
       "name": "Rizzo The Rat",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Sam The Eagle",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 7,
       "rarity": "Rare",
       "name": "Rowlf The Dog",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Rare",
       "name": "Statler And Waldorf",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 15,
       "rarity": "Epic",
       "name": "Kermit The Frog-Crew",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Fozzie Bear"
     },
@@ -112,8 +94,6 @@
       "releaseSeason": 7,
       "rarity": "Epic",
       "name": "Robin The Frog",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Kermit The Frog"
     },
@@ -121,8 +101,6 @@
       "releaseSeason": 10,
       "rarity": "Epic",
       "name": "Foo-Foo",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Miss Peggy"
     }

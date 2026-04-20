@@ -27,7 +27,7 @@
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Disgust",
-      "superCharge": false,
+      "superCharge": true,
       "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -38,7 +38,7 @@
       "rarity": "Common",
       "role": "Trickster",
       "name": "Ennui",
-      "superCharge": false,
+      "superCharge": true,
       "universalBox": "✔",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -49,7 +49,7 @@
       "rarity": "Common",
       "role": "Defender",
       "name": "Fear",
-      "superCharge": false,
+      "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -60,7 +60,7 @@
       "rarity": "Epic",
       "role": "Speedster",
       "name": "Joy",
-      "superCharge": false,
+      "superCharge": true,
       "universalBox": "✘",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
@@ -83,120 +83,90 @@
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "Nostalgia",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "Deep Dark Secret",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "Jordan",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "Helicopter Pilot",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "Frank And Dave",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "Fritz",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Common",
       "name": "The Forgetters",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Lance Slashblade",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Bloofy & Pouchy",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Bing Bong",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Jangles The Clown",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Meg",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Riley's Dad",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Rare",
       "name": "Riley's Mom",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔"
     },
     {
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Angry Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Anger"
     },
@@ -204,8 +174,6 @@
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Anxious Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Anxiety"
     },
@@ -213,8 +181,6 @@
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Disgusted Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Disgust"
     },
@@ -222,8 +188,6 @@
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Ennuyé Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Ennui"
     },
@@ -231,8 +195,6 @@
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Scared Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Fear"
     },
@@ -240,8 +202,6 @@
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Happy Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Joy"
     },
@@ -249,8 +209,6 @@
       "releaseSeason": 8,
       "rarity": "Epic",
       "name": "Sad Riley",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✔",
       "exclusiveTo": "Sadness"
     }

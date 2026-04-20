@@ -17,32 +17,24 @@
       "releaseSeason": 18,
       "rarity": "Common",
       "name": "Tom",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Ellen",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Rare",
       "name": "Loaf",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
       "rarity": "Epic",
       "name": "King Georges",
-      "currentStars": 0,
-      "currentShards": 0,
       "universalBox": "✘",
       "exclusiveTo": "Mabel"
     }
