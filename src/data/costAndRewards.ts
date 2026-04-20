@@ -66,6 +66,7 @@ export {
   MPLS10To14MidCoinsReward,
   MPLS10ToLatestCoinsReward,
   MPLOldShardsReward,
+  MPLNewShardsReward,
   MPLOldTokensReward,
   MPLNewTokensReward,
   MPLCosmeticReward,
