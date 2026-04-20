@@ -1,14 +1,9 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { ScrollBtns } from '../ScrollBtns';
-
-function ExportBtn() {
-  return <button className="btn">Export</button>;
-}
-
-function ImportBtn() {
-  return <button className="btn">Import</button>;
-}
+import { ImportRacerBtn } from './ImportRacerBtn';
+import { ImportCrewBtn } from './ImportCrewBtn';
+import { ExportFileBtn } from './ExportFilesBtns';
 
 function RacerTableBtn() {
   const { setMode } = useContext(AppContext);
@@ -34,6 +29,16 @@ function CrewTableBtn() {
   );
 }
 
+function ImportBtn() {
+  const { mode } = useContext(AppContext);
+
+  if (mode === 'racer') {
+    return <ImportRacerBtn />;
+  } else {
+    return <ImportCrewBtn />;
+  }
+}
+
 function AccountStats() {
   return (
     <div className="AccountStats">
@@ -57,7 +62,7 @@ export function Header() {
           <CrewTableBtn />
         </span>
         <div>
-          <ExportBtn />
+          <ExportFileBtn />
           <ImportBtn />
         </div>
       </div>

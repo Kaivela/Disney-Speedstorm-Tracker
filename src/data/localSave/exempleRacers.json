@@ -12,7 +12,8 @@
     "highestRMJ": 40,
     "universalBox": false,
     "releaseSeason": 3,
-    "superCharge": true
+    "superCharge": true,
+    "MPLOldShardsReward": true
   },
   {
     "collection": "MickeyAndFriends",
