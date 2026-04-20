@@ -4,10 +4,12 @@ donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
-fix le calcul des tunes coins needed
-sort crew when new entry et update pour new crew
+pour refacto le dernier calcul : besoin d'un nouveau type racerBlankWithSavedData qui sera un agrégat des type RacerBlank et RacerSaved
+car on doit donner des éléments comme la rarity ou le MPLRewardOld a certaines fonction : props non accessibles dans un RacerSaved
 fix crew typing and mimic racer typing
-gérer les calculs dans le tableau
+sort crew when new entry et update pour new crew
+calcul des nextStar racer
+
 export/Import save
 modify racer/crew
 
@@ -23,10 +25,9 @@ mettre en place les settings
 
 migration des settings
 
-calcul des nextStar racer
-ACTIONS - calculate racer
-Account Stats
 preload img
-Filters
+Account Stats
 data trad EN
 order column
+Filters
+ACTIONS - calculate racer
