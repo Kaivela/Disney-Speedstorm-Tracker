@@ -1,5 +1,5 @@
 import { getAllRacers } from '../data/collections';
-import type { IRacer } from '../types/types';
+import type { IRacer, RacerComputed } from '../types/types';
 import {
   calculateCoinsNeeded,
   calculateRacerShardsIfMaxMPL,
@@ -12,52 +12,33 @@ import { AppContext } from '../context/AppContext';
 
 const racersBlank = getAllRacers();
 
-function Racer({
-  releaseSeason,
-  collection,
-  rarity,
-  name,
-  currentStars,
-  currentShards,
-  universalBox,
-  shardsNeededToMax,
-  tuneCoinsNeededToMax,
-  currentStarFragment,
-  currentSuperChargeLevel,
-  currentSuperChargeTokens,
-  currentMPL,
-  highestMPL,
-  shardsToGetInMPL,
-  role,
-  shardsNeededIfMaxMPL,
-  superChargeTokensToGet,
-}: IRacer) {
+function Racer(racer: IRacer) {
   return (
     <tr>
-      <td>{releaseSeason}</td>
+      <td>{racer.releaseSeason}</td>
       <td>
-        <img src={`/img/racers/${name}.webp`} />
+        <img src={`/img/racers/${racer.name}.webp`} />
       </td>
-      <td data-trad={collection}>{collection}</td>
-      <td data-trad={rarity}>{rarity}</td>
-      <td data-trad={role}>{role}</td>
-      <td data-trad={name}>{name}</td>
-      <td>{currentStars}</td>
-      <td>{currentStarFragment}</td>
-      <td>{currentSuperChargeLevel}</td>
-      <td>{currentShards}</td>
-      <td>{currentSuperChargeTokens}</td>
-      <td>{currentMPL}</td>
-      <td>{highestMPL}</td>
+      <td data-trad={racer.collection}>{racer.collection}</td>
+      <td data-trad={racer.rarity}>{racer.rarity}</td>
+      <td data-trad={racer.role}>{racer.role}</td>
+      <td data-trad={racer.name}>{racer.name}</td>
+      <td>{racer.currentStars}</td>
+      <td>{racer.currentStarFragment}</td>
+      <td>{racer.currentSuperChargeLevel}</td>
+      <td>{racer.currentShards}</td>
+      <td>{racer.currentSuperChargeTokens}</td>
+      <td>{racer.currentMPL}</td>
+      <td>{racer.highestMPL}</td>
       <td>badge max MPL</td>
-      <td>{shardsNeededToMax}</td>
-      <td>{shardsToGetInMPL}</td>
-      <td>{superChargeTokensToGet}</td>
-      <td>{tuneCoinsNeededToMax}</td>
-      <td>{universalBox}</td>
+      <td>{racer.shardsNeededToMax}</td>
+      <td>{racer.shardsToGetInMPL}</td>
+      <td>{racer.superChargeTokensNeeded}</td>
+      <td>{racer.tuneCoinsNeededToMax}</td>
+      <td>{racer.universalBox}</td>
       <td>shardsNeeded (next star) calcul</td>
       <td>coinsNeeded (next star) calcul</td>
-      <td>{shardsNeededIfMaxMPL}</td>
+      <td>{racer.shardsNeededIfMaxMPL}</td>
       <td>
         <button data-trad="modify" data-index="${index}">
           Modify
@@ -73,23 +54,25 @@ function Racer({
 function RacerList() {
   // LOGIC
   const { racers } = useContext(AppContext);
-  const racersData = racers.map((racer) => {
-    const found = racersBlank.find((racerBlank) => racerBlank.name === racer.name);
+  const racersSaved = racers.map((racerSaved) => {
+    const racerBlank = racersBlank.find((racerBlank) => racerBlank.name === racerSaved.name);
+    // to prevent racerBlank from being undefined
+    if (!racerBlank) throw new Error(`No racer blank found for name: ${racerSaved.name}`);
     return {
-      ...found,
-      ...racer,
+      ...racerBlank,
+      ...racerSaved,
     };
   });
   // TEMPLATE
-  return racersData.map((racer, index) => {
-    const computed = {
-      tuneCoinsNeededToMax: calculateCoinsNeeded(racer),
-      shardsNeededToMax: calculateRacerShardsNeeded(racer),
-      shardsToGetInMPL: calculateRacerShardsToGet(racer),
-      shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racer),
-      superChargeTokensToGet: racer.superCharge ? calculateRacerSuperChargeTokenSNeeded(racer) : 0,
+  return racersSaved.map((racerBlankWithSavedData, index) => {
+    const racerComputed: RacerComputed = {
+      tuneCoinsNeededToMax: calculateCoinsNeeded(racerBlankWithSavedData),
+      shardsNeededToMax: calculateRacerShardsNeeded(racerBlankWithSavedData),
+      shardsToGetInMPL: calculateRacerShardsToGet(racerBlankWithSavedData),
+      shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racerBlankWithSavedData),
+      superChargeTokensNeeded: calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData),
     };
-    return <Racer key={index} {...{ ...racer, ...computed }} />;
+    return <Racer key={index} {...{ ...racerBlankWithSavedData, ...racerComputed }} />;
   });
 }
 

@@ -43,7 +43,7 @@ export function Table() {
               <th data-sort="shardsToGet" data-trad="shards_MPL_table">
                 Shards in MPL
               </th>
-              <th className="superChargeTokensToGet" data-trad="super_charge_tokens_to_get_table">
+              <th className="superChargeTokensNeeded" data-trad="super_charge_tokens_to_get_table">
                 super charge tokens to get
               </th>
               <th className="TuneCoin" data-sort="tuneCoins"></th>

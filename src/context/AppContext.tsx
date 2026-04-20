@@ -1,6 +1,6 @@
 // src/context/DisplayModeContext.tsx
 import { createContext, useEffect, useState, type ReactNode } from 'react';
-import type { ICrew, IRacer, ISettings, Mode, RacerSaved } from '../types/types';
+import type { ICrew, ISettings, Mode, RacerSaved } from '../types/types';
 import { StorageService } from '../services/storage';
 import { migrateCrewsSave, migrateRacersSave, updateCollections } from '../services/migration';
 

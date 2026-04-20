@@ -4,9 +4,9 @@ donner l'info de savoir si le perso est dans e boost pilote
 
 ## Migrations
 
-nettoyer le roaster.json
-nettoyer les type dans CHAQUE FICHIER
+fix le calcul des tunes coins needed
 sort crew when new entry et update pour new crew
+fix crew typing and mimic racer typing
 gérer les calculs dans le tableau
 export/Import save
 modify racer/crew

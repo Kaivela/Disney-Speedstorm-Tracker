@@ -1,6 +1,6 @@
 import { sortRacers } from '../compute/sort';
 import { getAllCrews, getAllRacers } from '../data/collections';
-import type { ICrew, IRacer, RacerSaved } from '../types/types';
+import type { ICrew, RacerSaved } from '../types/types';
 import { StorageService } from './storage';
 
 const nameMap = {
@@ -39,7 +39,7 @@ function normalizeName(name: string) {
     .trim();
 }
 
-export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
+export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved[] {
   // pour chaque racer
   return racers.map((racerOriginal) => {
     const racer = structuredClone(racerOriginal);
@@ -122,7 +122,7 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): IRacer[] {
     // }
 
     return racer;
-  }) as unknown as IRacer[];
+  }) as unknown as RacerSaved[];
 }
 
 export function migrateCrewsSave(crews: Record<string, unknown>[]): ICrew[] {

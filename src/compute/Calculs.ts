@@ -6,10 +6,10 @@ import {
   superChargeCost,
   tuneCoinsCosts,
 } from '../data/costAndRewards';
-import type { ICrew, IRacer } from '../types/types';
+import type { ICrew, RacerSaved } from '../types/types';
 
 // calculer le nombre de tunes coins nécéssaire pour maxer le racer
-function calculateCoinsNeeded(racer: IRacer): number {
+function calculateCoinsNeeded(racer: RacerSaved): number {
   let totalCoinsNeeded = 0;
 
   for (let level = racer.currentStarFragment + 1; level <= 30; level++) {
@@ -22,7 +22,7 @@ function calculateCoinsNeeded(racer: IRacer): number {
 }
 
 // calculer le nombre de shards nécéssaire pour maxer le racer
-function calculateRacerShardsNeeded(racer: IRacer): number {
+function calculateRacerShardsNeeded(racer: RacerSaved): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
   const totalShardsNeeded = racerShardsCost.slice(startIndex).reduce((sum, cost) => sum + cost, 0);
   return totalShardsNeeded - racer.currentShards;
@@ -49,7 +49,7 @@ function calculateCrewShardsNeeded(crew: ICrew): number {
 }
 
 // calculer le nombre de shards à récupérer en MPL
-function calculateRacerShardsToGet(racer: IRacer): number {
+function calculateRacerShardsToGet(racer: RacerSaved): number {
   let totalShardsToGet = 0;
 
   for (let MPL = racer.highestMPL + 1; MPL <= 40; MPL++) {
@@ -62,7 +62,7 @@ function calculateRacerShardsToGet(racer: IRacer): number {
 }
 
 // calculer le nombre de shards a réupérer pour maxer si le racer est déjà maxé en MPL
-function calculateRacerShardsIfMaxMPL(racer: IRacer): number {
+function calculateRacerShardsIfMaxMPL(racer: RacerSaved): number {
   const shardsNeededToMax = calculateRacerShardsNeeded(racer);
   const shardsToGet = calculateRacerShardsToGet(racer);
   const shardIfMaxMPR = shardsNeededToMax - shardsToGet;
@@ -71,7 +71,7 @@ function calculateRacerShardsIfMaxMPL(racer: IRacer): number {
 }
 
 //calculer le nombre de super charge tokens à récupérer pour maxer la super charge
-function calculateRacerSuperChargeTokenSNeeded(racer: IRacer): number {
+function calculateRacerSuperChargeTokenSNeeded(racer: RacerSaved): number {
   let totalSuperShardsNeeded = 0;
 
   for (let superCharge = racer.currentSuperChargeLevel + 1; superCharge <= 2; superCharge++) {
