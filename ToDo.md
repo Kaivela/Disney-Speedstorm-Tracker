@@ -6,7 +6,7 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 calcul des nextStar racer
 
-Import save
+Import Crew save ==> refacto pour handle both
 modify racer/crew
 
 =========> MVP
