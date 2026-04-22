@@ -88,7 +88,7 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
 
       // faire migration de la S19
       const currentLevel = racer.currentLevel as number;
-      const currentLevelFloored = Math.floor(currentLevel - 1 / 10) as number;
+      const currentLevelFloored = Math.floor((currentLevel - 1) / 10) as number;
       racer.currentStars = currentLevelFloored + 1;
       delete racer.currentLevel;
 

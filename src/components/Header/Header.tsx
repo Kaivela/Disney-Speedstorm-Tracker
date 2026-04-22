@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { ScrollBtns } from './ScrollBtns';
 import { ExportFileBtn } from './ExportFilesBtns';
-import { ImportCrewBtn, ImportRacerBtn } from './ImportFileBtn';
+import { ImportFileBtn } from './ImportFileBtn';
 
 function RacerTableBtn() {
   const { setMode } = useContext(AppContext);
@@ -28,16 +28,6 @@ function CrewTableBtn() {
   );
 }
 
-function ImportFileBtn() {
-  const { mode } = useContext(AppContext);
-
-  if (mode === 'racer') {
-    return <ImportRacerBtn />;
-  } else {
-    return <ImportCrewBtn />;
-  }
-}
-
 function AccountStats() {
   return (
     <div className="AccountStats">
@@ -49,7 +39,7 @@ function AccountStats() {
 function SettingsBtn() {
   return (
     <button className="SettingsBtn">
-      <img src="public\img\settings.svg" width="30px" />
+      <img src="img\settings.svg" width="30px" />
     </button>
   );
 }

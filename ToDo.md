@@ -4,18 +4,15 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-calcul des nextStar racer
-refacto import pour handle both
-on va avoir besoin du context de mode pour savoir si on fait un racer ou un crew
-avoir un garde fou qui check le format des données pour rejeter l'import en cas de mauvais format (ex: l'utilisateur import des crew au lieu des racers)
+\*\*avoir un garde fou qui check le format des données pour rejeter l'import en cas de mauvais format (ex: l'utilisateur import des crew au lieu des racers)
 
-refacto migration
+\*\*modify racer/crew
 
-modify racer/crew
+\*\*calcul des nextStar racer
 
 =========> MVP
-mettre en place les settings
-\*Options
+\*\*mettre en place les settings
+Options
 -hide column
 -dark mode
 -transparent
@@ -23,11 +20,11 @@ mettre en place les settings
 -MPL Goal
 -Racer Star Goal
 
-migration des settings
+\*\*migration des settings
 
 preload img
 Account Stats
-data trad EN
+data trad EN FR
 order column
 Filters
 ACTIONS - calculate racer
