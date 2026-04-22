@@ -46,15 +46,19 @@ function AccountStats() {
   );
 }
 
-function OptionsBtn() {
-  return <button className="OptionBtn">Options</button>;
+function SettingsBtn() {
+  return (
+    <button className="SettingsBtn">
+      <img src="public\img\settings.svg" width="30px" />
+    </button>
+  );
 }
 
 export function Header() {
   return (
     <header className="Header">
       <h1>Disney Speedstorm Tracker</h1>
-      <OptionsBtn />
+      <SettingsBtn />
       <div className="HeaderBtns">
         <span className="btn-group">
           <RacerTableBtn />

@@ -9,12 +9,12 @@ export function Filters() {
         <button className="reset" id="reset" data-trad="reset_all">
           reset
         </button>
-        <input type="text" id="racerSearchInput" />
+        <input type="text" id="racerSearchInput" placeholder="Search/..." />
         <select id="racerSeasonFilter" className="racerFilter">
-          <option value="">season</option>
+          <option value="">Season</option>
         </select>
         <select id="racerFranchiseFilter" className="racerFilter">
-          <option value="">Franchise</option>
+          <option value="">Collection</option>
         </select>
         <select id="racerRarityFilter" className="racerFilter">
           <option value="">Rarity</option>
@@ -26,7 +26,7 @@ export function Filters() {
           <option value="">Shards</option>
         </select>
         <select id="rmjFilter" className="racerFilter">
-          <option value="">MPR</option>
+          <option value="">MPL</option>
         </select>
         <select id="starFilter" className="racerFilter">
           <option value="">Star</option>

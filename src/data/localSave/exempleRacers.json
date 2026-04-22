@@ -4,7 +4,7 @@
     "rarity": "Common",
     "role": "Trickster",
     "name": "Daisy Duck",
-    "currentStars": 5,
+    "currentStars": 7,
     "currentShards": 0,
     "currentSuperShards": 0,
     "currentLevel": 50,
@@ -18,12 +18,12 @@
   {
     "collection": "MickeyAndFriends",
     "name": "Daisy Duck",
-    "currentStars": 0,
+    "currentStars": 5,
     "currentStarFragment": 0,
     "currentShards": 0,
-    "currentSuperChargeLevel": 0,
+    "currentSuperChargeLevel": 2,
     "currentSuperChargeTokens": 0,
-    "currentMPL": 0,
-    "highestMPL": 0
+    "currentMPL": 40,
+    "highestMPL": 40
   }
 ]

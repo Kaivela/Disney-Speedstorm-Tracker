@@ -26,7 +26,7 @@ function exportFile(fileName: string, fileData: RacerSaved[] | CrewSaved[]) {
 
 // export function ExportFileBtn({ mode }: { mode: Mode }) {
 export function ExportFileBtn() {
-  const mode = useContext(AppContext).mode;
+  const { mode } = useContext(AppContext);
   const fileName = mode === 'crew' ? 'crews.json' : 'racers.json';
 
   return (
