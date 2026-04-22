@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
-import { ScrollBtns } from '../ScrollBtns';
+import { ScrollBtns } from './ScrollBtns';
 import { ExportFileBtn } from './ExportFilesBtns';
 import { ImportFileBtn } from './ImportFileBtn';
 

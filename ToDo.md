@@ -7,6 +7,11 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 calcul des nextStar racer
 
 Import Crew save ==> refacto pour handle both
+on va avoir besoin du context de mode pour savoir si on fait un racer ou un crew
+avoir un garde fou qui check le format des données pour rejeter l'import en cas de mauvais format (ex: l'utilisateur import des crew au lieu des racers)
+
+refacto migration
+
 modify racer/crew
 
 =========> MVP

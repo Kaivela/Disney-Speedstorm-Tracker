@@ -1,8 +1,8 @@
-import { getAllCrews } from '../data/collections';
-import { calculateCrewShardsNeeded } from '../compute/calculs';
-import type { CrewComputed, ICrew } from '../types/types';
+import { getAllCrews } from '../../data/collections';
+import { calculateCrewShardsNeeded } from '../../compute/calculs';
+import type { CrewComputed, ICrew } from '../../types/types';
 import { useContext } from 'react';
-import { AppContext } from '../context/AppContext';
+import { AppContext } from '../../context/AppContext';
 
 const crewsBlank = getAllCrews();
 

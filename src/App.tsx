@@ -1,6 +1,6 @@
-import { Table } from './components/Table';
-import { Header } from './components/StaticComponents/Header';
-import { Filters } from './components/Filters';
+import { Table } from './components/Tables/Table';
+import { Filters } from './components/Header/Filters';
+import { Header } from './components/Header/Header';
 // import '@fontsource/maple-mono';
 
 function App() {

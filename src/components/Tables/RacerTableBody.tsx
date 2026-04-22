@@ -1,14 +1,14 @@
-import { getAllRacers } from '../data/collections';
-import type { IRacer, RacerComputed } from '../types/types';
+import { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
+import { getAllRacers } from '../../data/collections';
+import type { IRacer, RacerComputed } from '../../types/types';
 import {
   calculateCoinsNeeded,
   calculateRacerShardsIfMaxMPL,
   calculateRacerShardsNeeded,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
-} from '../compute/calculs';
-import { useContext } from 'react';
-import { AppContext } from '../context/AppContext';
+} from '../../compute/calculs';
 
 const racersBlank = getAllRacers();
 
