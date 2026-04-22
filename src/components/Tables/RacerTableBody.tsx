@@ -9,10 +9,11 @@ import {
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
 } from '../../compute/calculs';
+import { ModifyRacerBtn } from './ModifyRacerBtn';
 
 const racersBlank = getAllRacers();
 
-function Racer(racer: IRacer) {
+function Racer({ racer }: { racer: IRacer }) {
   const currentStarMaxed = racer.currentStars === 6;
   return (
     <tr>
@@ -41,9 +42,7 @@ function Racer(racer: IRacer) {
       <td>WIP</td>
       <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
       <td>
-        <button data-trad="modify" data-index="${index}">
-          Modify
-        </button>
+        <ModifyRacerBtn racer={racer} />
         <button data-trad="calculate" data-index="${index}">
           Calculate
         </button>
@@ -73,7 +72,7 @@ function RacerList() {
       shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racerBlankWithSavedData),
       superChargeTokensNeeded: racerBlankWithSavedData.superCharge ? calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData) : 0,
     };
-    return <Racer key={index} {...{ ...racerBlankWithSavedData, ...racerComputed }} />;
+    return <Racer key={index} racer={{ ...racerBlankWithSavedData, ...racerComputed }} />;
   });
 }
 

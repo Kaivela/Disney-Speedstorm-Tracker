@@ -6,9 +6,8 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 \*\*modify racer/crew
 
-\*\*calcul des nextStar racer
-
 =========> MVP
+\*\*calcul des nextStar racer
 \*\*mettre en place les settings
 Options
 -hide column
@@ -26,3 +25,5 @@ data trad EN FR
 order column
 Filters
 ACTIONS - calculate racer
+
+\*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique

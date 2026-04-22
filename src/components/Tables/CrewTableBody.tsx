@@ -3,10 +3,11 @@ import { calculateCrewShardsNeeded } from '../../compute/calculs';
 import type { CrewComputed, ICrew } from '../../types/types';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
+import { ModifyCrewBtn } from './ModifyCrewBtn';
 
 const crewsBlank = getAllCrews();
 
-function Crew(crew: ICrew) {
+function Crew({ crew }: { crew: ICrew }) {
   return (
     <tr>
       <td>{crew.releaseSeason}</td>
@@ -23,9 +24,7 @@ function Crew(crew: ICrew) {
       <td>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>
       <td>{crew.universalBox}</td>
       <td>
-        <button data-trad="modify" data-index="${index}">
-          Modify
-        </button>
+        <ModifyCrewBtn crew={crew} />
       </td>
     </tr>
   );
@@ -45,10 +44,10 @@ function CrewList() {
   });
   //TEMPLATE
   return crewsSaved.map((crewBlankWithSavedData, index) => {
-    const computed: CrewComputed = {
+    const crewComputed: CrewComputed = {
       shardsNeededToMax: calculateCrewShardsNeeded(crewBlankWithSavedData),
     };
-    return <Crew key={index} {...{ ...crewBlankWithSavedData, ...computed }} />;
+    return <Crew key={index} crew={{ ...crewBlankWithSavedData, ...crewComputed }} />;
   });
 }
 
