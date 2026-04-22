@@ -79,42 +79,27 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
       delete racer.universalBox;
       delete racer.releaseSeason;
       delete racer.superCharge;
+
       // Régler les currentStars si plus grand que 5
       if ((racer.currentStars as number) > 5) {
         racer.currentSuperChargeLevel = (racer.currentStars as number) - 5;
         racer.currentStars = 5;
       }
+
       // faire migration de la S19
       const currentLevel = racer.currentLevel as number;
-      if (currentLevel >= 11 && currentLevel <= 20) {
-        racer.currentStars = 2;
-      }
-      if (currentLevel >= 21 && currentLevel <= 30) {
-        racer.currentStars = 3;
-      }
-      if (currentLevel >= 31 && currentLevel <= 40) {
-        racer.currentStars = 4;
-      }
-      if (currentLevel >= 41 && currentLevel <= 50) {
-        racer.currentStars = 5;
-      }
+      const currentLevelFloored = Math.floor(currentLevel - 1 / 10) as number;
+      racer.currentStars = currentLevelFloored + 1;
       delete racer.currentLevel;
-
-      // floor(currentLevel - 1 / 10) + 1
-      // currentLevel 35 => floor(34/10) + 1 => floor(3.4) + 1 => 3 + 1 => 4 stars
-      // currentLevel 31 => floor(30/10) + 1 => floor(3) + 1 => 3 + 1 => 4 stars
-      // currentLevel 30 => floor(29/10) + 1 => floor(2.9) + 1 => 2 + 1 => 3 stars
 
       // Fix Go Go Tomago Name
       if (racer.name === 'Go Go Tamago') {
         racer.name = 'Go Go Tomago';
       }
-
       // Fix Minnie Mouse Name
       if (racer.name === 'Minnie') {
         racer.name = 'Minnie Mouse';
       }
-
       // Fix Scrooge McDuck Name
       if (racer.name === 'Scrooge Mcduck') {
         racer.name = 'Scrooge McDuck';
