@@ -2,8 +2,37 @@ import { useContext, useRef, type ChangeEvent } from 'react';
 import { StorageService } from '../../services/storage';
 import { AppContext } from '../../context/AppContext';
 import { migrateCrewsSave, migrateRacersSave } from '../../services/migration';
+import type { Mode } from '../../types/types';
 
 const storage = StorageService.getInstance();
+
+function validateFile(file: Record<string, unknown>[], mode: Mode) {
+  const hasStar = 'currentStars' in file[0];
+  const hasRMJ = 'currentRMJ' in file[0];
+  const hasMPL = 'currentMPL' in file[0];
+
+  if (!file || typeof file !== 'object') {
+    throw new Error('Format invalide : objet attendu');
+  }
+
+  if (mode === 'racer') {
+    // un racer doit contenir au moins la clé currentRMJ ou currentMPL selon la version du site
+    if (!hasRMJ && !hasMPL) {
+      throw new Error('RacerSaved format expected : missing key "currentRMJ" or "currentMPL"');
+    }
+  } else {
+    // un crew doit ne pas contenir la clé currentRMJ ou currentMPL
+    if (hasRMJ || hasMPL) {
+      throw new Error('CrewSaved format expected : existing key "currentRMJ" or "currentMPL"');
+    }
+    // un crew doit contenir au moins la clé currentStars
+    if (!hasStar) {
+      throw new Error('CrewSaved format expected : missing key "currentStars"');
+    }
+  }
+
+  return true;
+}
 
 export function ImportFileBtn() {
   // LOGIC
@@ -19,6 +48,7 @@ export function ImportFileBtn() {
         try {
           const content = event.target?.result as string;
           const element = JSON.parse(content) as Record<string, unknown>[];
+          validateFile(element, mode);
 
           if (mode === 'crew') {
             const migratedCrews = migrateCrewsSave(element);

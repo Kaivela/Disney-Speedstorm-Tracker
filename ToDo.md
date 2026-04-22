@@ -4,8 +4,6 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-\*\*avoir un garde fou qui check le format des données pour rejeter l'import en cas de mauvais format (ex: l'utilisateur import des crew au lieu des racers)
-
 \*\*modify racer/crew
 
 \*\*calcul des nextStar racer
