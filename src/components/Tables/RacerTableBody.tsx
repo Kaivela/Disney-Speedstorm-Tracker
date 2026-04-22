@@ -28,7 +28,7 @@ function Racer(racer: IRacer) {
       <td>{currentStarMaxed ? 'maxed' : racer.currentStarFragment}</td>
       <td>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>
       <td>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>
-      <td>{racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens}</td>
+      <td>{racer.superCharge ? (racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens) : '✘'}</td>
       <td>{racer.currentMPL}</td>
       <td>{racer.highestMPL}</td>
       <td>badge max MPL</td>
@@ -37,8 +37,8 @@ function Racer(racer: IRacer) {
       <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>
       <td>{currentStarMaxed ? 'Maxed' : racer.tuneCoinsNeededToMax}</td>
       <td>{racer.universalBox}</td>
-      <td>shardsNeeded (next star) calcul</td>
-      <td>coinsNeeded (next star) calcul</td>
+      <td>WIP</td>
+      <td>WIP</td>
       <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
       <td>
         <button data-trad="modify" data-index="${index}">

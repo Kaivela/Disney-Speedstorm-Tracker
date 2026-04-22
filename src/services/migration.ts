@@ -86,9 +86,8 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
       }
       // faire migration de la S19
       const currentLevel = racer.currentLevel as number;
-      if (currentLevel >= 1 && currentLevel <= 20) {
+      if (currentLevel >= 11 && currentLevel <= 20) {
         racer.currentStars = 2;
-        racer.currentLevel = 20;
       }
       if (currentLevel >= 21 && currentLevel <= 30) {
         racer.currentStars = 3;
@@ -98,7 +97,6 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
       }
       if (currentLevel >= 41 && currentLevel <= 50) {
         racer.currentStars = 5;
-        console.log('daisy okk');
       }
       delete racer.currentLevel;
 

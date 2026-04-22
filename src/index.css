@@ -106,6 +106,14 @@ th.racerCurrentStars {
   min-width: 60px;
 }
 
+th.racerCurrentStarFragment {
+  background-image: url('/img/StarFragment.webp');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 30px;
+}
+
 th.currentSuperChargeLevel {
   background-image: url('/img/SuperCharge.webp');
   background-position: center;

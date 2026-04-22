@@ -20,9 +20,7 @@ export function Table() {
               <th data-trad="role">Role</th>
               <th data-trad="racer_name_table">Racer Name</th>
               <th className="racerCurrentStars" data-sort="currentStars"></th>
-              <th data-sort="currentStarFragment" data-trad="current_starfragment_table">
-                Current Star Fragment
-              </th>
+              <th className="racerCurrentStarFragment" data-sort="currentStarFragment" data-trad="current_starfragment_table"></th>
               <th className="currentSuperChargeLevel" data-sort="currentSuperChargeLevel" data-trad="current_super_charge_level_table"></th>
               <th data-sort="currentShards" data-trad="current_shards_table">
                 Current Shards
