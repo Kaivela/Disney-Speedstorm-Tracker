@@ -1,12 +1,12 @@
 ajouter icone de role a gauche du text dans la td "role" pour les racer
-ajuster les icones des colonne super charge pour afficher si oui ou non le racer peut etre super charge et si elle est maxé
 donner l'info de savoir si le perso est dans le boost pilote (on connait l'info grace a uniBox true)
 
 ## Migrations
 
-\*\*modify racer/crew
+order column
+Filters
+Account Stats
 
-=========> MVP
 \*\*mettre en place les settings
 Options
 -hide column
@@ -18,11 +18,10 @@ Options
 
 \*\*migration des settings
 
-preload img
-Account Stats
-data trad EN FR
-order column
-Filters
-ACTIONS - calculate racer
-
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
+
+=========> MVP
+
+preload img
+data trad EN FR
+ACTIONS - calculate racer
