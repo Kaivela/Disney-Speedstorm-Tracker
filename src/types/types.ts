@@ -15,7 +15,9 @@ export interface Collection {
 export interface RacerComputed {
   // Calculated properties
   tuneCoinsNeededToMax?: number;
+  tuneCoinsNeededToNextStar?: number;
   shardsNeededToMax?: number;
+  shardsNeededToNextStar?: number;
   shardsToGetInMPL?: number;
   shardsNeededIfMaxMPL?: number;
   superChargeTokensNeeded?: number;

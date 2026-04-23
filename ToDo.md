@@ -7,7 +7,6 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 \*\*modify racer/crew
 
 =========> MVP
-\*\*calcul des nextStar racer
 \*\*mettre en place les settings
 Options
 -hide column

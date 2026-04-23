@@ -16,10 +16,28 @@ function calculateCoinsNeeded(racer: IRacer): number {
   return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
+// calculer le nombre de tunes coins nécéssaire pour maxer le racer
+function calculateCoinsNeededToNextStar(racer: IRacer): number {
+  const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
+  const endIndex = 5 - (startIndex % 5) + startIndex;
+
+  const totalCoinsNeeded = tuneCoinsCosts.slice(startIndex, endIndex).reduce((sum, cost) => sum + cost, 0);
+  return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
+}
+
 // calculer le nombre de shards nécéssaire pour maxer le racer
 function calculateRacerShardsNeeded(racer: IRacer): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
   const totalShardsNeeded = racerShardsCost.slice(startIndex).reduce((sum, cost) => sum + cost, 0);
+  return Math.max(totalShardsNeeded - racer.currentShards, 0); // Assure que les coins nécessaires ne sont pas négatifs
+}
+
+// calculer le nombre de tunes coins nécéssaire pour maxer le racer
+function calculateRacerShardsNeededToMax(racer: IRacer): number {
+  const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
+  const endIndex = 5 - (startIndex % 5) + startIndex;
+
+  const totalShardsNeeded = racerShardsCost.slice(startIndex, endIndex).reduce((sum, cost) => sum + cost, 0);
   return Math.max(totalShardsNeeded - racer.currentShards, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
@@ -68,4 +86,6 @@ export {
   calculateRacerShardsToGet,
   calculateRacerShardsIfMaxMPL,
   calculateRacerSuperChargeTokenSNeeded,
+  calculateCoinsNeededToNextStar,
+  calculateRacerShardsNeededToMax,
 };

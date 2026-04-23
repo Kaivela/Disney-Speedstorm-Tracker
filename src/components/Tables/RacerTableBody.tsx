@@ -4,8 +4,10 @@ import { getAllRacers } from '../../data/collections';
 import type { IRacer, RacerComputed } from '../../types/types';
 import {
   calculateCoinsNeeded,
+  calculateCoinsNeededToNextStar,
   calculateRacerShardsIfMaxMPL,
   calculateRacerShardsNeeded,
+  calculateRacerShardsNeededToMax,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
 } from '../../compute/calculs';
@@ -38,8 +40,8 @@ function Racer({ racer }: { racer: IRacer }) {
       <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>
       <td>{currentStarMaxed ? 'Maxed' : racer.tuneCoinsNeededToMax}</td>
       <td>{racer.universalBox}</td>
-      <td>WIP</td>
-      <td>WIP</td>
+      <td>{racer.shardsNeededToNextStar}</td>
+      <td>{racer.tuneCoinsNeededToNextStar}</td>
       <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
       <td>
         <ModifyRacerBtn racer={racer} />
@@ -71,6 +73,8 @@ function RacerList() {
       shardsToGetInMPL: calculateRacerShardsToGet(racerBlankWithSavedData),
       shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racerBlankWithSavedData),
       superChargeTokensNeeded: racerBlankWithSavedData.superCharge ? calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData) : 0,
+      tuneCoinsNeededToNextStar: calculateCoinsNeededToNextStar(racerBlankWithSavedData),
+      shardsNeededToNextStar: calculateRacerShardsNeededToMax(racerBlankWithSavedData),
     };
     return <Racer key={index} racer={{ ...racerBlankWithSavedData, ...racerComputed }} />;
   });
