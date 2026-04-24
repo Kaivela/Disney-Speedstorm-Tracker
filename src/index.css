@@ -191,3 +191,12 @@ form {
   border-radius: 8px;
   min-width: 300px;
 }
+
+.statsRow {
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* list-style-position: inside; */
+}

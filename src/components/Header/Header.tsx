@@ -3,6 +3,7 @@ import { AppContext } from '../../context/AppContext';
 import { ScrollBtns } from './ScrollBtns';
 import { ExportFileBtn } from './ExportFilesBtns';
 import { ImportFileBtn } from './ImportFileBtn';
+import { AccountStats } from './AccountStats';
 
 function RacerTableBtn() {
   const { setMode } = useContext(AppContext);
@@ -25,14 +26,6 @@ function CrewTableBtn() {
       }}>
       Crew
     </button>
-  );
-}
-
-function AccountStats() {
-  return (
-    <div className="AccountStats">
-      <span>Account Stats</span>
-    </div>
   );
 }
 

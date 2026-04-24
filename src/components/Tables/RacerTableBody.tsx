@@ -65,7 +65,6 @@ function RacerList() {
       ...racerSaved,
     };
   });
-  // TEMPLATE
   return racersSaved.map((racerBlankWithSavedData, index) => {
     const racerComputed: RacerComputed = {
       tuneCoinsNeededToMax: calculateCoinsNeeded(racerBlankWithSavedData),
@@ -76,6 +75,7 @@ function RacerList() {
       tuneCoinsNeededToNextStar: calculateCoinsNeededToNextStar(racerBlankWithSavedData),
       shardsNeededToNextStar: calculateRacerShardsNeededToMax(racerBlankWithSavedData),
     };
+    // TEMPLATE
     return <Racer key={index} racer={{ ...racerBlankWithSavedData, ...racerComputed }} />;
   });
 }

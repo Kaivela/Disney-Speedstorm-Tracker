@@ -5,7 +5,6 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 order column
 Filters
-Account Stats
 
 \*\*mettre en place les settings
 Options
@@ -25,3 +24,14 @@ Options
 preload img
 data trad EN FR
 ACTIONS - calculate racer
+
+const allSuperChargeTokensNeededTable = racersFused.map((racer) => {
+if (racer.superCharge) return calculateRacerSuperChargeTokenSNeeded(racer)
+else return 0
+{
+const valeur = ;
+return valeur;
+} else {
+return 0;
+}
+});
