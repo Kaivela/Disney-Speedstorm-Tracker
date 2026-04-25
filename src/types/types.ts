@@ -32,8 +32,8 @@ export interface RacerBlank {
   //Static properties
   collection: string;
   MPLTuneCoinReward: MPLTuneCoinReward;
-  MPLTokenOldReward: boolean;
-  MPLShardsOldReward: boolean;
+  MPLTokenOld: boolean;
+  MPLOldShardsReward: boolean;
   name: string;
   releaseSeason: number;
   rarity: Rarity;
