@@ -16,11 +16,11 @@ function Modal({ onClose, crew }: ModalProps) {
   const [currentShards, setCurrentShards] = useState(crew.currentShards);
   // on doit avoir un tableau de save crews mis à jour avec notre crew modifié
   // on récupère le tableau des save crews non modifié
-  const { crews, setCrews } = useContext(AppContext);
+  const { crewsSaved, setCrewsSaved } = useContext(AppContext);
 
   // avec findIndex, on récupère l'index du crew qu'on souhaite modifier
   function saveCrewStateAndStorage() {
-    const editedCrews = structuredClone(crews);
+    const editedCrews = structuredClone(crewsSaved);
     const oldCrewIndex = editedCrews.findIndex((oldCrew) => oldCrew.name === crew.name);
     // on modifie l'item du tableau qui correspond à notre crew modifié
     // crews[index].maprop = ma nouvelle valeur
@@ -30,7 +30,7 @@ function Modal({ onClose, crew }: ModalProps) {
     editedCrews[oldCrewIndex].currentStars = currentStars;
     editedCrews[oldCrewIndex].currentShards = currentShards;
     // on sauvegarde le tableau modifié dans le local storage et le contexte
-    setCrews(editedCrews);
+    setCrewsSaved(editedCrews);
     storage.saveCrews(editedCrews);
   }
 

@@ -16,19 +16,24 @@ import {
 } from '../data/costAndRewards';
 import type { ICrew, IRacer } from '../types/types';
 
-function sum(element: number[]) {
+export function sum(element: number[]) {
   return element.reduce((sum, cost) => sum + cost, 0);
 }
 
+export function formatBigNumber(number: number): string {
+  return new Intl.NumberFormat('de-DE').format(number);
+  // return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+
 // calculer le nombre de tunes coins nécéssaire pour maxer le racer
-function calculateCoinsNeeded(racer: IRacer): number {
+export function calculateCoinsNeeded(racer: IRacer): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
   const totalCoinsNeeded = sum(tuneCoinsCosts.slice(startIndex));
   return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
 // calculer le nombre de tunes coins nécéssaire pour maxer le racer
-function calculateCoinsNeededToNextStar(racer: IRacer): number {
+export function calculateCoinsNeededToNextStar(racer: IRacer): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
   const endIndex = 5 - (startIndex % 5) + startIndex;
   const totalCoinsNeeded = sum(tuneCoinsCosts.slice(startIndex, endIndex));
@@ -36,14 +41,14 @@ function calculateCoinsNeededToNextStar(racer: IRacer): number {
 }
 
 // calculer le nombre de shards nécéssaire pour maxer le racer
-function calculateRacerShardsNeeded(racer: IRacer): number {
+export function calculateRacerShardsNeeded(racer: IRacer): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
   const totalShardsNeeded = sum(racerShardsCost.slice(startIndex));
   return Math.max(totalShardsNeeded - racer.currentShards, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
 // calculer le nombre de tunes coins nécéssaire pour maxer le racer
-function calculateRacerShardsNeededToMax(racer: IRacer): number {
+export function calculateRacerShardsNeededToMax(racer: IRacer): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
   const endIndex = 5 - (startIndex % 5) + startIndex;
   const totalShardsNeeded = sum(racerShardsCost.slice(startIndex, endIndex));
@@ -51,31 +56,24 @@ function calculateRacerShardsNeededToMax(racer: IRacer): number {
 }
 
 // calculer le nombre de shards à récupérer en MPL
-function calculateTokensToGet(racer: IRacer): number {
+export function calculateTokensToGet(racer: IRacer): number {
   const startIndex = racer.highestMPL;
   let table: number[] = [];
-  if (racer.MPLTokenOld) table = MPLOldTokensReward;
+  if (racer.MPLTokenOldReward) table = MPLOldTokensReward;
   else table = MPLNewTokensReward;
   const totalTokensToGet = sum(table.slice(startIndex));
   return Math.max(totalTokensToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-// calculer le nombre de shards a réupérer pour maxer si le racer est déjà maxé en MPL
-function calculateRacerShardsIfMaxMPL(racer: IRacer): number {
-  const shardsNeededToMax = calculateRacerShardsNeeded(racer);
-  const shardsToGet = calculateRacerShardsToGet(racer);
-  return Math.max(shardsNeededToMax - shardsToGet, 0); // Assure que les shards nécessaires ne sont pas négatifs
-}
-
 //calculer le nombre de super charge tokens à récupérer pour maxer la super charge
-function calculateRacerSuperChargeTokenSNeeded(racer: IRacer): number {
+export function calculateRacerSuperChargeTokenSNeeded(racer: IRacer): number {
   const startIndex = racer.currentSuperChargeLevel;
   const totalSuperShardsNeeded = sum(superChargeCost.slice(startIndex));
   return Math.max(totalSuperShardsNeeded - racer.currentSuperChargeTokens, 0);
 }
 
 // calculer le nombre de shards nécéssaire pour maxer le crew
-function calculateCrewShardsNeeded(crew: ICrew): number {
+export function calculateCrewShardsNeeded(crew: ICrew): number {
   const startIndex = crew.currentStars;
   let table: number[] = [];
   if (crew.rarity === 'Epic') table = epicCrewShardCost;
@@ -84,8 +82,8 @@ function calculateCrewShardsNeeded(crew: ICrew): number {
   return Math.max(totalShardsNeeded - crew.currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
 }
 
-// function pour calculer les CoinsToGet en fonction du HighestRMJ
-function calculateCoinsToGet(racer: IRacer): number {
+// export function pour calculer les CoinsToGet en fonction du HighestRMJ
+export function calculateCoinsToGet(racer: IRacer): number {
   const startIndex = racer.highestMPL;
   let table: number[] = [];
   if (racer.MPLTuneCoinReward === 'S0To4') table = MPLS0To4CoinsReward;
@@ -97,43 +95,29 @@ function calculateCoinsToGet(racer: IRacer): number {
 }
 
 // Fonction pour calculer les coins nécessaires en fonction du HighestRMJ
-function calculateRacerShardsToGet(racer: IRacer): number {
+export function calculateRacerShardsToGet(racer: IRacer): number {
   const startIndex = racer.highestMPL;
   let table: number[] = [];
-  if (racer.MPLOldShardsReward) table = MPLOldShardsReward;
+  if (racer.MPLShardsOldReward) table = MPLOldShardsReward;
   else table = MPLNewShardsReward;
   const totalShardsToGet = sum(table.slice(startIndex));
   return Math.max(totalShardsToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
 // Fonction pour calculer les cosmeticToGet en fonction du HighestRMJ
-function calculateCosmeticToGet(racer: IRacer): number {
+export function calculateCosmeticToGet(racer: IRacer): number {
   const startIndex = racer.highestMPL;
   const cosmecticToGet = sum(MPLCosmeticReward.slice(startIndex));
   return Math.max(cosmecticToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-function calculateSeasonCoinsToGet(racer: IRacer): number {
-  const shardsToGetInMPL = calculateRacerShardsToGet(racer);
+export function calculateSeasonCoinsToGet(racer: IRacer): number {
+  const shardsToGetInMPL = racer.shardsToGetInMPL;
   let conversion = 0;
   if (racer.rarity === 'Common') conversion = 400;
   if (racer.rarity === 'Rare') conversion = 500;
   if (racer.rarity === 'Epic') conversion = 1000;
+  // const conversion = { Common: 400, Rare: 500, Epic: 1000 }[racer.rarity];
   const seasonCoinsToGet = shardsToGetInMPL * conversion;
   return Math.max(seasonCoinsToGet, 0);
 }
-
-export {
-  calculateRacerShardsNeeded,
-  calculateCoinsNeeded,
-  calculateCrewShardsNeeded,
-  calculateRacerShardsToGet,
-  calculateRacerShardsIfMaxMPL,
-  calculateRacerSuperChargeTokenSNeeded,
-  calculateCoinsNeededToNextStar,
-  calculateRacerShardsNeededToMax,
-  calculateSeasonCoinsToGet,
-  calculateCoinsToGet,
-  calculateTokensToGet,
-  calculateCosmeticToGet,
-};

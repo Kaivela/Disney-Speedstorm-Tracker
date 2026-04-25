@@ -3,6 +3,7 @@ import { AppContext } from '../../context/AppContext';
 import type { IRacer } from '../../types/types';
 import { ModifyRacerBtn } from './ModifyRacerBtn';
 import { buildIElements } from '../../compute/buildElementTable';
+import { formatBigNumber } from '../../compute/calculs';
 
 function Racer({ racer }: { racer: IRacer }) {
   const currentStarMaxed = racer.currentStars === 6;
@@ -28,10 +29,10 @@ function Racer({ racer }: { racer: IRacer }) {
       <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededToMax}</td>
       <td>{racer.shardsToGetInMPL === 0 ? 'None' : racer.shardsToGetInMPL}</td>
       <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>
-      <td>{currentStarMaxed ? 'Maxed' : racer.tuneCoinsNeededToMax}</td>
+      <td>{currentStarMaxed ? 'Maxed' : formatBigNumber(racer.tuneCoinsNeededToMax)}</td>
       <td>{racer.universalBox}</td>
       <td>{racer.shardsNeededToNextStar}</td>
-      <td>{racer.tuneCoinsNeededToNextStar}</td>
+      <td>{formatBigNumber(racer.tuneCoinsNeededToNextStar)}</td>
       <td>{currentStarMaxed ? 'Maxed' : shardsNeededIfMaxMPL}</td>
       <td>
         <ModifyRacerBtn racer={racer} />
@@ -45,8 +46,8 @@ function Racer({ racer }: { racer: IRacer }) {
 
 function RacerList() {
   // LOGIC
-  const { racers } = useContext(AppContext);
-  const iRacers = buildIElements(racers);
+  const { racersSaved } = useContext(AppContext);
+  const iRacers = buildIElements(racersSaved);
   return iRacers.map((racer) => {
     // TEMPLATE
     return <Racer racer={racer} />;

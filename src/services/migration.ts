@@ -1,5 +1,5 @@
 import { sortCrews, sortRacers } from '../compute/sort';
-import { getAllCrews, getAllRacers } from '../data/collections';
+import { getCrewsBlank, getRacersBlank } from '../data/collections';
 import type { CrewSaved, ICrew, RacerSaved } from '../types/types';
 import { StorageService } from './storage';
 
@@ -180,9 +180,9 @@ export function migrateLocalStorage() {
 export function updateCollections() {
   const storage = StorageService.getInstance();
   const racerSaved = storage.getRacers();
-  const racersBlank = getAllRacers();
+  const racersBlank = getRacersBlank();
   const crewSaved = storage.getCrews();
-  const crewsBlank = getAllCrews();
+  const crewsBlank = getCrewsBlank();
   // pour chaque element de racerBlank
   racersBlank.forEach((racerBlank) => {
     // on cherche dans le storage si un racer du même nom existe

@@ -9,8 +9,8 @@ const storage = StorageService.getInstance();
 export function ModeProvider({ children }: { children: ReactNode }) {
   // LOGIC
   const [mode, setMode] = useState<Mode>('racer');
-  const [racers, setRacers] = useState<RacerSaved[]>([]);
-  const [crews, setCrews] = useState<CrewSaved[]>([]);
+  const [racersSaved, setRacersSaved] = useState<RacerSaved[]>([]);
+  const [crewsSaved, setCrewsSaved] = useState<CrewSaved[]>([]);
   const [settings, setSettings] = useState<ISettings>({});
 
   useEffect(() => {
@@ -18,14 +18,14 @@ export function ModeProvider({ children }: { children: ReactNode }) {
 
     if (savedRacers) {
       const migratedRacers = migrateRacersSave(savedRacers as unknown as Record<string, unknown>[]);
-      setRacers(migratedRacers);
+      setRacersSaved(migratedRacers);
       storage.saveRacers(migratedRacers);
     }
 
     const savedCrews = storage.getCrews();
     if (savedCrews) {
       const migratedCrews = migrateCrewsSave(savedCrews as unknown as Record<string, unknown>[]);
-      setCrews(migratedCrews);
+      setCrewsSaved(migratedCrews);
       storage.saveCrews(migratedCrews);
     }
     updateCollections();
@@ -38,5 +38,9 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   // TEMPLATE
-  return <AppContext.Provider value={{ mode, setMode, racers, setRacers, crews, setCrews, settings, setSettings }}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ mode, setMode, racersSaved, setRacersSaved, crewsSaved, setCrewsSaved, settings, setSettings }}>
+      {children}
+    </AppContext.Provider>
+  );
 }

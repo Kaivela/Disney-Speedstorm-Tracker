@@ -23,11 +23,11 @@ function Modal({ onClose, racer }: ModalProps) {
 
   // on doit avoir un tableau de save racers mis à jour avec notre racer modifié
   // on récupère le tableau des save racers non modifié
-  const { racers, setRacers } = useContext(AppContext);
+  const { racersSaved, setRacersSaved } = useContext(AppContext);
 
   // avec findIndex, on récupère l'index du racer qu'on souhaite modifier
   function saveRacerStateAndStorage() {
-    const editedRacers = structuredClone(racers);
+    const editedRacers = structuredClone(racersSaved);
     const oldRacerIndex = editedRacers.findIndex((oldRacer) => oldRacer.name === racer.name);
     // on modifie l'item du tableau qui correspond à notre racer modifié
     // racers[index].maprop = ma nouvelle valeur
@@ -40,7 +40,7 @@ function Modal({ onClose, racer }: ModalProps) {
     editedRacers[oldRacerIndex] = { ...editedRacers[oldRacerIndex], highestMPL: highestMPL };
 
     // on sauvegarde le tableau modifié dans le local storage et le contexte
-    setRacers(editedRacers);
+    setRacersSaved(editedRacers);
     storage.saveRacers(editedRacers);
   }
 

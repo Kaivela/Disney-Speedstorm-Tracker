@@ -4,27 +4,16 @@ import { ScrollBtns } from './ScrollBtns';
 import { ExportFileBtn } from './ExportFilesBtns';
 import { ImportFileBtn } from './ImportFileBtn';
 import { AccountStats } from './AccountStats';
+import type { Mode } from '../../types/types';
 
-function RacerTableBtn() {
+function ElementTableBtn({ mode }: { mode: Mode }) {
   const { setMode } = useContext(AppContext);
   return (
     <button
       onClick={() => {
-        setMode('racer');
+        setMode(mode);
       }}>
-      Racer
-    </button>
-  );
-}
-
-function CrewTableBtn() {
-  const { setMode } = useContext(AppContext);
-  return (
-    <button
-      onClick={() => {
-        setMode('crew');
-      }}>
-      Crew
+      {mode}
     </button>
   );
 }
@@ -44,8 +33,8 @@ export function Header() {
       <SettingsBtn />
       <div className="HeaderBtns">
         <span className="btn-group">
-          <RacerTableBtn />
-          <CrewTableBtn />
+          <ElementTableBtn mode={'racer'} />
+          <ElementTableBtn mode={'crew'} />
         </span>
         <div>
           <ExportFileBtn />

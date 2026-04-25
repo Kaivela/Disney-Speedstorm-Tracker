@@ -5,19 +5,19 @@ import type { ISettings, Mode, RacerSaved, CrewSaved } from '../types/types';
 export const AppContext = createContext<{
   mode: Mode;
   setMode: (mode: Mode) => void;
-  racers: RacerSaved[];
-  setRacers: (racers: RacerSaved[]) => void;
-  crews: CrewSaved[];
-  setCrews: (crews: CrewSaved[]) => void;
+  racersSaved: RacerSaved[];
+  setRacersSaved: (racers: RacerSaved[]) => void;
+  crewsSaved: CrewSaved[];
+  setCrewsSaved: (crews: CrewSaved[]) => void;
   settings: ISettings;
   setSettings: (settings: ISettings) => void;
 }>({
   mode: 'racer',
   setMode: () => {},
-  racers: [],
-  setRacers: () => {},
-  crews: [],
-  setCrews: () => {},
+  racersSaved: [],
+  setRacersSaved: () => {},
+  crewsSaved: [],
+  setCrewsSaved: () => {},
   settings: {},
   setSettings: () => {},
 });

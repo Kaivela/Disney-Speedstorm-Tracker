@@ -3,6 +3,9 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
+refacto modify element btn
+rename au propre cgaque const
+
 order column
 Filters
 

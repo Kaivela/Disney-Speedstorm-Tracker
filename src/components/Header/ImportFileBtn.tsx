@@ -37,7 +37,7 @@ function validateFile(file: Record<string, unknown>[], mode: Mode) {
 export function ImportFileBtn() {
   // LOGIC
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { mode, setRacers, setCrews } = useContext(AppContext);
+  const { mode, setRacersSaved, setCrewsSaved } = useContext(AppContext);
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     if (event.target.files && event.target.files.length > 0) {
@@ -53,12 +53,12 @@ export function ImportFileBtn() {
           if (mode === 'crew') {
             const migratedCrews = migrateCrewsSave(element);
             storage.saveCrews(migratedCrews);
-            setCrews(migratedCrews);
+            setCrewsSaved(migratedCrews);
             console.log('Crews imported successfully');
           } else {
             const migratedRacers = migrateRacersSave(element);
             storage.saveRacers(migratedRacers);
-            setRacers(migratedRacers);
+            setRacersSaved(migratedRacers);
             console.log('Racers imported successfully');
           }
         } catch (error) {

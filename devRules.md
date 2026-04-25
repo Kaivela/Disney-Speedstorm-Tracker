@@ -1,6 +1,6 @@
 règles
 les hooks (fonction qui commencent par use...) sont TOUJOURS dans un composant, et on les déclare tout au début
-les fonctions composant ne prennent qu'un objet en paramètre, les props
+les fonctions composant ne prennent qu'un OBJET --> {} en paramètre, les props : example => function ({mode}) ou function ({mode, racer, crew})
 ex: function MyComponent({maProp1, maProp2, maProp3}: {maProp1: string; maProp2: number; maProp3: boolean;})
 
 un .map ne s'utilise que sur un tableau

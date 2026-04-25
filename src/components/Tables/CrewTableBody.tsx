@@ -29,8 +29,8 @@ function Crew({ crew }: { crew: ICrew }) {
 
 function CrewList() {
   //LOGIC
-  const { crews } = useContext(AppContext);
-  const iCrews = buildIElements(crews);
+  const { crewsSaved } = useContext(AppContext);
+  const iCrews = buildIElements(crewsSaved);
 
   //TEMPLATE
   return iCrews.map((crew) => {

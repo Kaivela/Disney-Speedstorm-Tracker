@@ -40,14 +40,16 @@ const collections: Collections = {
   Hoppers: dataFiles.Hoppers as Collection,
 };
 
-export function getAllRacers(): RacerBlank[] {
-  return Object.entries(collections).flatMap(([collectionName, collection]) => {
-    return collection.racers.map((racer) => ({ ...racer, collection: collectionName }));
-  });
+export function getRacersBlank(): RacerBlank[] {
+  return Object.entries(collections).flatMap((c) => addCollectionToElementBlank(c, 'racers'));
 }
 
-export function getAllCrews(): CrewBlank[] {
-  return Object.entries(collections).flatMap(([collectionName, collection]) => {
-    return collection.crews.map((crew) => ({ ...crew, collection: collectionName }));
-  });
+export function getCrewsBlank(): CrewBlank[] {
+  return Object.entries(collections).flatMap((c) => addCollectionToElementBlank(c, 'crews'));
+}
+
+function addCollectionToElementBlank([collectionName, collection]: [string, Collection], label: 'racers'): RacerBlank[];
+function addCollectionToElementBlank([collectionName, collection]: [string, Collection], label: 'crews'): CrewBlank[];
+function addCollectionToElementBlank([collectionName, collection]: [string, Collection], label: 'racers' | 'crews'): RacerBlank[] | CrewBlank[] {
+  return collection[label].map((element: RacerBlank | CrewBlank) => ({ ...element, collection: collectionName }));
 }

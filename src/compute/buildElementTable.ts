@@ -1,4 +1,4 @@
-import { getAllCrews, getAllRacers } from '../data/collections';
+import { getCrewsBlank, getRacersBlank } from '../data/collections';
 import type { CrewBlank, CrewComputed, CrewSaved, ICrew, IRacer, RacerBlank, RacerComputed, RacerSaved } from '../types/types';
 import {
   calculateCoinsNeeded,
@@ -10,12 +10,11 @@ import {
   calculateRacerShardsNeededToMax,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
-  calculateSeasonCoinsToGet,
   calculateTokensToGet,
 } from './calculs';
 
-const crewsBlank = getAllCrews();
-const racersBlank = getAllRacers();
+const crewsBlank = getCrewsBlank();
+const racersBlank = getRacersBlank();
 
 function isRacerElement(e: RacerSaved | CrewSaved): e is RacerSaved & RacerComputed & RacerBlank {
   return 'currentMPL' in e;
@@ -51,8 +50,7 @@ export function buildIElements(elements: RacerSaved[] | CrewSaved[]): IRacer[] |
         shardsNeededToNextStar: calculateRacerShardsNeededToMax(elementFused),
         tuneCoinsToGet: calculateCoinsToGet(elementFused),
         tokensToGet: calculateTokensToGet(elementFused),
-        vanityToGet: calculateCosmeticToGet(elementFused),
-        seasonCoinsToGet: calculateSeasonCoinsToGet(elementFused),
+        vanityCoinsToGet: calculateCosmeticToGet(elementFused),
       };
     } else if (isCrewElement(elementFused))
       elementComputed = {

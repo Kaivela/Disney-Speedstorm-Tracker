@@ -24,16 +24,16 @@ export interface RacerComputed {
   // shardsNeededIfMaxMPL?: number; calculated on the spot
   tuneCoinsToGet: number;
   tokensToGet: number;
-  vanityToGet: number;
-  seasonCoinsToGet: number;
+  vanityCoinsToGet: number;
+  // seasonCoinsToGet: number; calculated on the spot
 }
 
 export interface RacerBlank {
   //Static properties
   collection: string;
   MPLTuneCoinReward: MPLTuneCoinReward;
-  MPLTokenOld: boolean;
-  MPLOldShardsReward: boolean;
+  MPLTokenOldReward: boolean;
+  MPLShardsOldReward: boolean;
   name: string;
   releaseSeason: number;
   rarity: Rarity;
