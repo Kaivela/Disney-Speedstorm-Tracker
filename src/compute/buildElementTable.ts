@@ -30,15 +30,13 @@ export function buildIElements(elements: RacerSaved[] | CrewSaved[]): IRacer[] |
   if (!elements || elements.length === 0) return [];
   const isRacer = 'currentMPL' in elements[0];
   const elementsBlank = isRacer ? racersBlank : crewsBlank;
-  const elementsFused = elements.map((elementSaved) => {
+  return elements.map((elementSaved) => {
     const elementBlank = elementsBlank.find((elementBlank) => elementBlank.name === elementSaved.name);
     if (!elementBlank) throw new Error(`No element Blank found for name: ${elementSaved.name}`);
-    return {
+    const elementFused = {
       ...elementBlank,
       ...elementSaved,
     };
-  });
-  return elementsFused.map((elementFused) => {
     let elementComputed = {} as RacerComputed | CrewComputed;
     if (isRacerElement(elementFused)) {
       const shardsToGetInMPL = calculateRacerShardsToGet(elementFused);
