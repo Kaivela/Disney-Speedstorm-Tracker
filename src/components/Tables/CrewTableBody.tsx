@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { ModifyCrewBtn } from './ModifyCrewBtn';
-import { buildIElements } from '../../compute/buildElementTable';
+import { buildIElementsArray } from '../../compute/buildIElementArray';
 import type { ICrew } from '../../types/types';
 
 function Crew({ crew }: { crew: ICrew }) {
@@ -30,7 +30,7 @@ function Crew({ crew }: { crew: ICrew }) {
 function CrewList() {
   //LOGIC
   const { crewsSaved } = useContext(AppContext);
-  const iCrews = buildIElements(crewsSaved);
+  const iCrews = buildIElementsArray(crewsSaved);
 
   //TEMPLATE
   return iCrews.map((crew) => {

@@ -26,31 +26,17 @@ export function formatBigNumber(number: number): string {
 }
 
 // calculer le nombre de tunes coins nécéssaire pour maxer le racer
-export function calculateCoinsNeeded(racer: IRacer): number {
+export function calculateCoinsNeeded(racer: IRacer, starGoal: number): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
-  const totalCoinsNeeded = sum(tuneCoinsCosts.slice(startIndex));
-  return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
-}
-
-// calculer le nombre de tunes coins nécéssaire pour maxer le racer
-export function calculateCoinsNeededToNextStar(racer: IRacer): number {
-  const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
-  const endIndex = 5 - (startIndex % 5) + startIndex;
+  const endIndex = starGoal * 5;
   const totalCoinsNeeded = sum(tuneCoinsCosts.slice(startIndex, endIndex));
   return Math.max(totalCoinsNeeded, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
 // calculer le nombre de shards nécéssaire pour maxer le racer
-export function calculateRacerShardsNeeded(racer: IRacer): number {
+export function calculateRacerShardsNeeded(racer: IRacer, starGoal: number): number {
   const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
-  const totalShardsNeeded = sum(racerShardsCost.slice(startIndex));
-  return Math.max(totalShardsNeeded - racer.currentShards, 0); // Assure que les coins nécessaires ne sont pas négatifs
-}
-
-// calculer le nombre de tunes coins nécéssaire pour maxer le racer
-export function calculateRacerShardsNeededToMax(racer: IRacer): number {
-  const startIndex = racer.currentStars * 5 + racer.currentStarFragment;
-  const endIndex = 5 - (startIndex % 5) + startIndex;
+  const endIndex = starGoal * 5;
   const totalShardsNeeded = sum(racerShardsCost.slice(startIndex, endIndex));
   return Math.max(totalShardsNeeded - racer.currentShards, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
@@ -59,7 +45,7 @@ export function calculateRacerShardsNeededToMax(racer: IRacer): number {
 export function calculateTokensToGet(racer: IRacer): number {
   const startIndex = racer.highestMPL;
   let table: number[] = [];
-  if (racer.MPLTokenOldReward) table = MPLOldTokensReward;
+  if (racer.MPLTokenOld) table = MPLOldTokensReward;
   else table = MPLNewTokensReward;
   const totalTokensToGet = sum(table.slice(startIndex));
   return Math.max(totalTokensToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
@@ -98,7 +84,7 @@ export function calculateCoinsToGet(racer: IRacer): number {
 export function calculateRacerShardsToGet(racer: IRacer): number {
   const startIndex = racer.highestMPL;
   let table: number[] = [];
-  if (racer.MPLShardsOldReward) table = MPLOldShardsReward;
+  if (racer.MPLOldShardsReward) table = MPLOldShardsReward;
   else table = MPLNewShardsReward;
   const totalShardsToGet = sum(table.slice(startIndex));
   return Math.max(totalShardsToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs

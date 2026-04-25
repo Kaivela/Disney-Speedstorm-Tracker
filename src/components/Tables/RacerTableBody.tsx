@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import type { IRacer } from '../../types/types';
 import { ModifyRacerBtn } from './ModifyRacerBtn';
-import { buildIElements } from '../../compute/buildElementTable';
+import { buildIElementsArray } from '../../compute/buildIElementArray';
 import { formatBigNumber } from '../../compute/calculs';
 
 function Racer({ racer }: { racer: IRacer }) {
@@ -47,7 +47,7 @@ function Racer({ racer }: { racer: IRacer }) {
 function RacerList() {
   // LOGIC
   const { racersSaved } = useContext(AppContext);
-  const iRacers = buildIElements(racersSaved);
+  const iRacers = buildIElementsArray(racersSaved);
   return iRacers.map((racer) => {
     // TEMPLATE
     return <Racer racer={racer} />;

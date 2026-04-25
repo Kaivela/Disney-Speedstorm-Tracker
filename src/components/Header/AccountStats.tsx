@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
-import { buildIElements } from '../../compute/buildElementTable';
+import { buildIElementsArray } from '../../compute/buildIElementArray';
 import { calculateSeasonCoinsToGet, formatBigNumber, sum } from '../../compute/calculs';
 
 export function AccountStats() {
   const { racersSaved } = useContext(AppContext);
   const { crewsSaved } = useContext(AppContext);
-  const iRacers = buildIElements(racersSaved);
-  const iCrews = buildIElements(crewsSaved);
+  const iRacers = buildIElementsArray(racersSaved);
+  const iCrews = buildIElementsArray(crewsSaved);
 
   // LOGIC
   const totalRacerShardsNeeded = sum(iRacers.map((IRacer) => IRacer.shardsNeededToMax));

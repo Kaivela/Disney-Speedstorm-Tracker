@@ -3,8 +3,8 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-refacto modify element btn
-rename au propre cgaque const
+rename au propre chaque const (surtout les tables en array si c'est pas du html !!)
+sortir la logique de modal dans sa propre fonction pour etre appelée dans modifier / calculer / settings
 
 order column
 Filters
