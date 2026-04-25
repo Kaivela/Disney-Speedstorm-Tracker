@@ -1,130 +1,40 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
-import { getAllCrews, getAllRacers } from '../../data/collections';
-import {
-  calculateCoinsNeeded,
-  calculateCoinsNeededToNextStar,
-  calculateCoinsToGet,
-  calculateCosmeticToGet,
-  calculateCrewShardsNeeded,
-  calculateRacerShardsIfMaxMPL,
-  calculateRacerShardsNeeded,
-  calculateRacerShardsNeededToMax,
-  calculateRacerShardsToGet,
-  calculateRacerSuperChargeTokenSNeeded,
-  calculateSeasonCoinsToGet,
-  calculateTokensToGet,
-} from '../../compute/calculs';
-import type { CrewSaved, RacerComputed, RacerSaved } from '../../types/types';
-
-const racersBlank = getAllRacers();
-const crewsBlank = getAllCrews();
-
-// function createFusedRacersTable(racers: RacerSaved[]) {
-//   return racers.map((racerSaved) => {
-//     const racerBlank = racersBlank.find((racerBlank) => racerBlank.name === racerSaved.name);
-//     // to prevent racerBlank from being undefined
-//     if (!racerBlank) throw new Error(`No racer blank found for name: ${racerSaved.name}`);
-//     return {
-//       ...racerBlank,
-//       ...racerSaved,
-//     };
-//   });
-// }
-
-function createIRacerTable(racers: RacerSaved[]) {
-  // LOGIC
-  const racersSaved = racers.map((racerSaved) => {
-    const racerBlank = racersBlank.find((racerBlank) => racerBlank.name === racerSaved.name);
-    // to prevent racerBlank from being undefined
-    if (!racerBlank) throw new Error(`No racer blank found for name: ${racerSaved.name}`);
-    return {
-      ...racerBlank,
-      ...racerSaved,
-    };
-  });
-  return racersSaved.map((racerBlankWithSavedData) => {
-    const racerComputed: RacerComputed = {
-      tuneCoinsNeededToMax: calculateCoinsNeeded(racerBlankWithSavedData),
-      shardsNeededToMax: calculateRacerShardsNeeded(racerBlankWithSavedData),
-      shardsToGetInMPL: calculateRacerShardsToGet(racerBlankWithSavedData),
-      shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racerBlankWithSavedData),
-      superChargeTokensNeeded: racerBlankWithSavedData.superCharge ? calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData) : 0,
-      tuneCoinsNeededToNextStar: calculateCoinsNeededToNextStar(racerBlankWithSavedData),
-      shardsNeededToNextStar: calculateRacerShardsNeededToMax(racerBlankWithSavedData),
-    };
-    const IRacerTable = { ...{ ...racerBlankWithSavedData, ...racerComputed } };
-    return IRacerTable;
-  });
-}
-
-function createFusedCrewsTable(crews: CrewSaved[]) {
-  return crews.map((crewSaved) => {
-    const CrewBlank = crewsBlank.find((crewBlank) => crewBlank.name === crewSaved.name);
-    // to prevent crewBlank from being undefined
-    if (!CrewBlank) throw new Error(`No crew blank found for name: ${crewSaved.name}`);
-    return {
-      ...CrewBlank,
-      ...crewSaved,
-    };
-  });
-}
+import { buildIElements } from '../../compute/buildElementTable';
 
 function sum(element: number[]) {
   return element.reduce((sum, cost) => sum + cost, 0);
 }
 
 export function AccountStats() {
-  // LOGIC
   const { racers } = useContext(AppContext);
   const { crews } = useContext(AppContext);
+  const iRacers = buildIElements(racers);
+  const iCrews = buildIElements(crews);
 
-  const IRacerTable = createIRacerTable(racers);
-  const crewsFused = createFusedCrewsTable(crews);
+  // LOGIC
 
-  const allRacerShardsNeededTable = IRacerTable.map(calculateRacerShardsNeeded);
-  const allTuneCoinsNeededTable = IRacerTable.map(calculateCoinsNeeded);
-  const allCrewShardsNeededTable = crewsFused.map(calculateCrewShardsNeeded);
-  const allSuperChargeTokensNeededTable = IRacerTable.filter((racer) => racer.superCharge).map(calculateRacerSuperChargeTokenSNeeded);
-  const allUniBoxRacerShardsNeededTable = IRacerTable.filter((racer) => racer.universalBox === '✔').map(calculateRacerShardsNeeded);
-  const allUniBoxCrewShardsNeededTable = crewsFused.filter((crew) => crew.universalBox === '✔').map(calculateCrewShardsNeeded);
-  const allTuneCoinsToGetInMPRTable = IRacerTable.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map(calculateCoinsToGet);
-  const allTokensToGetInMPRTable = IRacerTable.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map(calculateTokensToGet);
-  const allCosmeticToGetInMPRTable = IRacerTable.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map(
-    calculateCosmeticToGet
+  const totalRacerShardsNeeded = sum(iRacers.map((IRacer) => IRacer.shardsNeededToMax));
+  const totalTuneCoinsNeeded = sum(iRacers.map((IRacer) => IRacer.tuneCoinsNeededToMax));
+  const totalSuperChargeTokensNeeded = sum(iRacers.filter((racer) => racer.superCharge).map((IRacer) => IRacer.superChargeTokensNeeded));
+  const totalUniBoxRacerShardsNeeded = sum(iRacers.filter((racer) => racer.universalBox === '✔').map((IRacer) => IRacer.shardsNeededToMax));
+  const totalTuneCoinsToGetInMPR = sum(
+    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => IRacer.tuneCoinsToGet)
   );
-  const allSeasonCoinsToGetInMPR = IRacerTable.filter((racer) => racer.shardsToGetInMPL).map(calculateSeasonCoinsToGet);
+  const totalTokensToGetInMPR = sum(
+    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => IRacer.tokensToGet)
+  );
+  const totalCosmeticToGetInMPR = sum(
+    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => IRacer.vanityToGet)
+  );
+  const totalSeasonCoinsToGetInMPR = sum(iRacers.filter((racer) => racer.shardsToGetInMPL).map((IRacer) => IRacer.seasonCoinsToGet));
+
+  const totalCrewShardsNeeded = sum(iCrews.map((ICrew) => ICrew.shardsNeededToMax));
+  const totalUniBoxCrewShardsNeeded = sum(iCrews.filter((crew) => crew.universalBox === '✔').map((ICrew) => ICrew.shardsNeededToMax));
+  const totalUniBoxShardsNeeded = totalUniBoxCrewShardsNeeded + totalUniBoxRacerShardsNeeded;
 
   // Calcul du nombre de pilotes à monter RMJ 40
-  let rmj40Count = 0;
-  racers.forEach((racer) => {
-    if (racer.highestMPL < 40) {
-      rmj40Count++;
-    }
-  });
-
-  // crewsFused.map((crew) => {
-  //   if (crew.universalBox === '✔') {
-  //     const valeur = calculateCrewShardsNeeded(crew);
-  //     return valeur;
-  //   } else {
-  //     return 0;
-  //   }
-  // });
-
-  // if (racer.shardsToGetInMPL)
-
-  const totalTuneCoinsNeeded = sum(allTuneCoinsNeededTable);
-  const totalRacerShardsNeeded = sum(allRacerShardsNeededTable);
-  const totalCrewShardsNeeded = sum(allCrewShardsNeededTable);
-  const totalSuperChargeTokensNeeded = sum(allSuperChargeTokensNeededTable);
-  const totalUniBoxRacerShardsNeeded = sum(allUniBoxRacerShardsNeededTable);
-  const totalUniBoxCrewShardsNeeded = sum(allUniBoxCrewShardsNeededTable);
-  const totalUniBoxShardsNeeded = totalUniBoxCrewShardsNeeded + totalUniBoxRacerShardsNeeded;
-  const totalTuneCoinsToGetInMPR = sum(allTuneCoinsToGetInMPRTable);
-  const totalTokensToGetInMPR = sum(allTokensToGetInMPRTable);
-  const totalCosmeticToGetInMPR = sum(allCosmeticToGetInMPRTable);
-  const totalSeasonCoinsToGetInMPR = sum(allSeasonCoinsToGetInMPR);
+  const rmj40Count = racers.filter((racer) => racer.highestMPL < 40).reduce((count) => count + 1, 0);
 
   // TEMPLATE
   return (

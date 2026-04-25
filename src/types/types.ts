@@ -12,19 +12,20 @@ export interface Collection {
   crews: ICrew[];
 }
 
+// todo : check si on peut retirer les optional
 export interface RacerComputed {
   // Calculated properties
-  tuneCoinsNeededToMax?: number;
-  tuneCoinsNeededToNextStar?: number;
-  shardsNeededToMax?: number;
-  shardsNeededToNextStar?: number;
-  shardsToGetInMPL?: number;
-  shardsNeededIfMaxMPL?: number;
-  superChargeTokensNeeded?: number;
-  // tuneCoinsToGet?: number;
-  // superShardsNeeded?: number;
-  // tokensToGet?: number;
-  // cosmeticToGet?: number;
+  shardsNeededToMax: number;
+  shardsToGetInMPL: number;
+  superChargeTokensNeeded: number;
+  tuneCoinsNeededToMax: number;
+  shardsNeededToNextStar: number;
+  tuneCoinsNeededToNextStar: number;
+  // shardsNeededIfMaxMPL?: number; calculated on the spot
+  tuneCoinsToGet: number;
+  tokensToGet: number;
+  vanityToGet: number;
+  seasonCoinsToGet: number;
 }
 
 export interface RacerBlank {
@@ -60,7 +61,7 @@ export type IRacer = RacerBlank & RacerSaved & RacerComputed;
 
 export interface CrewComputed {
   // Calculated properties
-  shardsNeededToMax?: number;
+  shardsNeededToMax: number;
 }
 export interface CrewBlank {
   //Static properties

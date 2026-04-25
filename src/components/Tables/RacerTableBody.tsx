@@ -1,22 +1,12 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
-import { getAllRacers } from '../../data/collections';
-import type { IRacer, RacerComputed } from '../../types/types';
-import {
-  calculateCoinsNeeded,
-  calculateCoinsNeededToNextStar,
-  calculateRacerShardsIfMaxMPL,
-  calculateRacerShardsNeeded,
-  calculateRacerShardsNeededToMax,
-  calculateRacerShardsToGet,
-  calculateRacerSuperChargeTokenSNeeded,
-} from '../../compute/calculs';
+import type { IRacer } from '../../types/types';
 import { ModifyRacerBtn } from './ModifyRacerBtn';
-
-const racersBlank = getAllRacers();
+import { buildIElements } from '../../compute/buildElementTable';
 
 function Racer({ racer }: { racer: IRacer }) {
   const currentStarMaxed = racer.currentStars === 6;
+  const shardsNeededIfMaxMPL = Math.max(racer.shardsToGetInMPL - racer.shardsNeededToMax, 0);
   return (
     <tr>
       <td>{racer.releaseSeason}</td>
@@ -42,7 +32,7 @@ function Racer({ racer }: { racer: IRacer }) {
       <td>{racer.universalBox}</td>
       <td>{racer.shardsNeededToNextStar}</td>
       <td>{racer.tuneCoinsNeededToNextStar}</td>
-      <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededIfMaxMPL}</td>
+      <td>{currentStarMaxed ? 'Maxed' : shardsNeededIfMaxMPL}</td>
       <td>
         <ModifyRacerBtn racer={racer} />
         <button data-trad="calculate" data-index="${index}">
@@ -56,27 +46,10 @@ function Racer({ racer }: { racer: IRacer }) {
 function RacerList() {
   // LOGIC
   const { racers } = useContext(AppContext);
-  const racersSaved = racers.map((racerSaved) => {
-    const racerBlank = racersBlank.find((racerBlank) => racerBlank.name === racerSaved.name);
-    // to prevent racerBlank from being undefined
-    if (!racerBlank) throw new Error(`No racer blank found for name: ${racerSaved.name}`);
-    return {
-      ...racerBlank,
-      ...racerSaved,
-    };
-  });
-  return racersSaved.map((racerBlankWithSavedData, index) => {
-    const racerComputed: RacerComputed = {
-      tuneCoinsNeededToMax: calculateCoinsNeeded(racerBlankWithSavedData),
-      shardsNeededToMax: calculateRacerShardsNeeded(racerBlankWithSavedData),
-      shardsToGetInMPL: calculateRacerShardsToGet(racerBlankWithSavedData),
-      shardsNeededIfMaxMPL: calculateRacerShardsIfMaxMPL(racerBlankWithSavedData),
-      superChargeTokensNeeded: racerBlankWithSavedData.superCharge ? calculateRacerSuperChargeTokenSNeeded(racerBlankWithSavedData) : 0,
-      tuneCoinsNeededToNextStar: calculateCoinsNeededToNextStar(racerBlankWithSavedData),
-      shardsNeededToNextStar: calculateRacerShardsNeededToMax(racerBlankWithSavedData),
-    };
+  const iRacers = buildIElements(racers);
+  return iRacers.map((racer) => {
     // TEMPLATE
-    return <Racer key={index} racer={{ ...racerBlankWithSavedData, ...racerComputed }} />;
+    return <Racer racer={racer} />;
   });
 }
 

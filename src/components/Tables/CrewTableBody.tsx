@@ -1,11 +1,8 @@
-import { getAllCrews } from '../../data/collections';
-import { calculateCrewShardsNeeded } from '../../compute/calculs';
-import type { CrewComputed, ICrew } from '../../types/types';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { ModifyCrewBtn } from './ModifyCrewBtn';
-
-const crewsBlank = getAllCrews();
+import { buildIElements } from '../../compute/buildElementTable';
+import type { ICrew } from '../../types/types';
 
 function Crew({ crew }: { crew: ICrew }) {
   return (
@@ -33,21 +30,11 @@ function Crew({ crew }: { crew: ICrew }) {
 function CrewList() {
   //LOGIC
   const { crews } = useContext(AppContext);
-  const crewsSaved = crews.map((crewSaved) => {
-    const crewBlank = crewsBlank.find((crewBlank) => crewBlank.name === crewSaved.name);
-    // to prevent crewBlank from being undefined
-    if (!crewBlank) throw new Error(`No crew blank found for name: ${crewSaved.name}`);
-    return {
-      ...crewBlank,
-      ...crewSaved,
-    };
-  });
+  const iCrews = buildIElements(crews);
+
   //TEMPLATE
-  return crewsSaved.map((crewBlankWithSavedData, index) => {
-    const crewComputed: CrewComputed = {
-      shardsNeededToMax: calculateCrewShardsNeeded(crewBlankWithSavedData),
-    };
-    return <Crew key={index} crew={{ ...crewBlankWithSavedData, ...crewComputed }} />;
+  return iCrews.map((crew) => {
+    return <Crew crew={crew} />;
   });
 }
 
