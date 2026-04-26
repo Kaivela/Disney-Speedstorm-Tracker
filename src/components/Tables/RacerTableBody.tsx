@@ -6,11 +6,12 @@ import { buildIElementsArray } from '../../compute/buildIElementArray';
 import { formatBigNumber } from '../../compute/calculs';
 
 function Racer({ racer }: { racer: IRacer }) {
+  const { settings } = useContext(AppContext);
   const currentStarMaxed = racer.currentStars === 6;
   const shardsNeededIfMaxMPL = Math.max(racer.shardsToGetInMPL - racer.shardsNeededToMax, 0);
   return (
     <tr>
-      <td>{racer.releaseSeason}</td>
+      {settings.showRacerColumn.releaseSeason && <td>{racer.releaseSeason}</td>}
       <td className="td-img">
         <img className="img-cover" src={`/img/racers/${racer.name}.webp`} />
       </td>

@@ -89,5 +89,6 @@ export interface SettingsSaved {
   superChargeLevelGoal: number;
   dark: boolean;
   transparent: boolean;
-  hideColumn: string[];
+  showRacerColumn: { releaseSeason: boolean };
+  showCrewColumn: { releaseSeason: boolean };
 }

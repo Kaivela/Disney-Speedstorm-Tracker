@@ -4,16 +4,18 @@ import { RacerTableBody } from './RacerTableBody';
 import { CrewTableBody } from './CrewTableBody';
 
 export function Table() {
-  const { mode } = useContext(AppContext);
+  const { mode, settings } = useContext(AppContext);
   if (mode === 'racer') {
     return (
       <div className="tableContainer">
         <table id="racerTable">
           <thead>
             <tr>
-              <th data-sort="releaseSeason" data-trad="season">
-                Season
-              </th>
+              {settings.showRacerColumn.releaseSeason && (
+                <th data-sort="releaseSeason" data-trad="season">
+                  Season
+                </th>
+              )}
               <th>Image</th>
               <th>Collection</th>
               <th data-trad="rarity">Rarity</th>

@@ -1,4 +1,5 @@
 import { sortCrews, sortRacers } from '../compute/sort';
+import { settingsDefaults } from '../context/AppContext';
 import { getCrewsBlank, getRacersBlank } from '../data/collections';
 import type { CrewSaved, ICrew, SettingsSaved, RacerSaved } from '../types/types';
 import { StorageService } from './storage';
@@ -241,11 +242,11 @@ export function migrateSettingsSave(settings: Record<string, unknown>): Settings
     delete newSetting.levelGoal;
     newSetting.starGoal = 6;
     newSetting.superChargeLevelGoal = 2;
-    newSetting.hideColumn = [''];
+    newSetting.showRacerColumn = settingsDefaults.showRacerColumn;
+    newSetting.showCrewColumn = settingsDefaults.showCrewColumn;
     newSetting.transparent = newSetting.transparant;
     delete newSetting.transparant;
     newSetting.dark = localStorage.getItem('theme') === 'dark';
-    newSetting.hideColumn = [''];
     localStorage.removeItem('theme');
 
     console.log('Settings Migration : OK');

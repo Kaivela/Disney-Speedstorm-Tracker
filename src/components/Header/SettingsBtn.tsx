@@ -109,12 +109,22 @@ export function SettingsBtn() {
               <option value="18">Saison 18 : Cars</option>
               <option value="19">Saison 19 : Villains</option>
             </select>
-
-            <details className="center-html">
-              <summary>Hide Column</summary>
-              Work In Progress (all racers and crews wille be selectable)
-            </details>
           </div>
+          <details>
+            <summary>Show Column</summary>
+            <label className={settings.showRacerColumn.releaseSeason ? 'columnShown' : ''}>
+              RacerSeason
+              <input
+                defaultChecked={settings.showRacerColumn.releaseSeason}
+                className="hidden"
+                onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, releaseSeason: event.currentTarget.checked } })}
+                type="checkbox"
+              />
+            </label>
+            <input type="checkbox" />
+            <input type="checkbox" />
+            <input type="checkbox" />
+          </details>
           <div style={{ marginTop: '30px' }}>
             The character images used in this are purely for entertainment and informational purposes.
             <br />

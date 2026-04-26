@@ -12,6 +12,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@fontsource/ubuntu": "^5.2.8",
+    "@fontsource/ubuntu-mono": "^5.2.8",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "vitest": "^4.1.4"

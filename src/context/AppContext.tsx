@@ -10,7 +10,8 @@ export const settingsDefaults: SettingsSaved = {
   starGoal: 6,
   superChargeLevelGoal: 2,
   theme: '',
-  hideColumn: [],
+  showRacerColumn: { releaseSeason: false },
+  showCrewColumn: { releaseSeason: true },
 };
 
 export const AppContext = createContext<{

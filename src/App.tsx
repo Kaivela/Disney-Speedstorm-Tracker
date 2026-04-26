@@ -5,6 +5,8 @@ import { SettingsBtn } from './components/Header/SettingsBtn';
 import { useContext } from 'react';
 import { AppContext } from './context/AppContext';
 // import '@fontsource/maple-mono';
+// import '@fontsource/ubuntu-mono';
+import '@fontsource/ubuntu';
 
 function App() {
   const { settings } = useContext(AppContext);
