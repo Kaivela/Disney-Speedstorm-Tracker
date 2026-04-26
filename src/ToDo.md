@@ -10,7 +10,6 @@ Options
 -hide column
 -dark mode
 -transparent
--background
 
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
 

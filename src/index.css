@@ -1,6 +1,7 @@
-/* body {
-  font-family: 'Maple Mono', monospace;
-} */
+body {
+  /* font-family: 'Maple Mono', monospace; */
+  margin: 0;
+}
 
 h1 {
   text-align: center;
@@ -242,4 +243,12 @@ select,
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: white;
 }

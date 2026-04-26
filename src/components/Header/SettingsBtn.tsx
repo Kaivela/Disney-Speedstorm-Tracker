@@ -83,7 +83,28 @@ export function SettingsBtn() {
             <label htmlFor="selectTheme" data-trad="set_up_background">
               Select theme
             </label>
-            <select id="selectTheme"></select>
+            <select defaultValue={settings.theme} onChange={(event) => saveSettings({ theme: event.currentTarget.value })}>
+              <option value="1">Saison 1 : Monstres Et Compagnies</option>
+              <option value="2">Saison 2 : Toy's Story</option>
+              <option value="3">Saison 3 : Lilo Et Stitch</option>
+              <option value="4">Saison 4 : Aladdin</option>
+              <option value="5">Saison 5 : La Reine Des Neiges</option>
+              <option value="6">Saison 6 : La Petite Sirène</option>
+              <option value="7">Saison 7 : Les Mondes De Ralph</option>
+              <option value="8">Saison 8 : Vice-Versa</option>
+              <option value="9">Saison 9 : Pirates Des Caraïbes</option>
+              <option value="10">Saison 10 : L'Étrange Noël De Monsieur Jack</option>
+              <option value="11">Saison 11 : Les Indestructibles</option>
+              <option value="11alt">Saison 11 Alt : Les Indestructibles</option>
+              <option value="12">Saison 12 : Tron</option>
+              <option value="13">Saison 13 : Les Nouveaux Héros</option>
+              <option value="14">Saison 14 : Toy Story</option>
+              <option value="15">Saison 15 : Alice Au Pays Des Merveilles</option>
+              <option value="16">Saison 16 : Winnie L'Ourson</option>
+              <option value="17">Saison 17 : Zootopie</option>
+              <option value="18">Saison 18 : Cars</option>
+              <option value="19">Saison 19 : Villains</option>
+            </select>
 
             <label htmlFor="hideColumn">Hide Colmun</label>
             <details className="center-html">
