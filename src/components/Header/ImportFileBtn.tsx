@@ -1,10 +1,7 @@
 import { useContext, useRef, type ChangeEvent } from 'react';
-import { StorageService } from '../../services/storage';
 import { AppContext } from '../../context/AppContext';
 import { migrateCrewsSave, migrateRacersSave } from '../../services/migration';
 import type { Mode } from '../../types/types';
-
-const storage = StorageService.getInstance();
 
 function validateFile(file: Record<string, unknown>[], mode: Mode) {
   const hasStar = 'currentStars' in file[0];
@@ -37,7 +34,7 @@ function validateFile(file: Record<string, unknown>[], mode: Mode) {
 export function ImportFileBtn() {
   // LOGIC
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { mode, setRacersSaved, setCrewsSaved } = useContext(AppContext);
+  const { mode, updateRacers, updateCrews } = useContext(AppContext);
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     if (event.target.files && event.target.files.length > 0) {
@@ -52,13 +49,11 @@ export function ImportFileBtn() {
 
           if (mode === 'crew') {
             const migratedCrews = migrateCrewsSave(element);
-            storage.saveCrews(migratedCrews);
-            setCrewsSaved(migratedCrews);
+            updateCrews(migratedCrews);
             console.log('Crews imported successfully');
           } else {
             const migratedRacers = migrateRacersSave(element);
-            storage.saveRacers(migratedRacers);
-            setRacersSaved(migratedRacers);
+            updateRacers(migratedRacers);
             console.log('Racers imported successfully');
           }
         } catch (error) {

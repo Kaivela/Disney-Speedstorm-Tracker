@@ -1,33 +1,52 @@
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { buildIElementsArray } from '../../compute/buildIElementArray';
-import { calculateSeasonCoinsToGet, formatBigNumber, sum } from '../../compute/calculs';
+import {
+  calculateCoinsNeeded,
+  calculateCoinsToGet,
+  calculateCosmeticToGet,
+  calculateRacerShardsToGet,
+  calculateRacerSuperChargeTokenSNeeded,
+  calculateSeasonCoinsToGet,
+  calculateTokensToGet,
+  formatBigNumber,
+  sum,
+} from '../../compute/calculs';
 
 export function AccountStats() {
-  const { racersSaved } = useContext(AppContext);
-  const { crewsSaved } = useContext(AppContext);
+  const { racersSaved, crewsSaved, settings } = useContext(AppContext);
   const iRacers = buildIElementsArray(racersSaved);
   const iCrews = buildIElementsArray(crewsSaved);
 
   // LOGIC
   const totalRacerShardsNeeded = sum(iRacers.map((IRacer) => IRacer.shardsNeededToMax));
-  const totalTuneCoinsNeeded = sum(iRacers.map((IRacer) => IRacer.tuneCoinsNeededToMax));
-  const totalSuperChargeTokensNeeded = sum(iRacers.filter((racer) => racer.superCharge).map((IRacer) => IRacer.superChargeTokensNeeded));
+  const totalTuneCoinsNeeded = sum(iRacers.map((IRacer) => calculateCoinsNeeded(IRacer, settings.starGoal)));
+  const totalSuperChargeTokensNeeded = sum(
+    iRacers.filter((racer) => racer.superCharge).map((IRacer) => calculateRacerSuperChargeTokenSNeeded(IRacer, settings.superChargeLevelGoal))
+  );
   const totalUniBoxRacerShardsNeeded = sum(iRacers.filter((racer) => racer.universalBox === '✔').map((IRacer) => IRacer.shardsNeededToMax));
-  const totalTuneCoinsToGetInMPR = sum(
-    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => IRacer.tuneCoinsToGet)
+  const totalTuneCoinsToGetInMPL = sum(
+    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => calculateCoinsToGet(IRacer, settings.MPLGoal))
   );
-  const totalTokensToGetInMPR = sum(
-    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => IRacer.tokensToGet)
+  const totalTokensToGetInMPL = sum(
+    iRacers.filter((racer) => racer.currentMPL > 0 || racer.currentStarFragment > 0).map((IRacer) => calculateTokensToGet(IRacer, settings.MPLGoal))
   );
-  const totalCosmeticToGetInMPR = sum(
-    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => IRacer.vanityCoinsToGet)
+  const totalCosmeticToGetInMPL = sum(
+    iRacers
+      .filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0)
+      .map((IRacer) => calculateCosmeticToGet(IRacer, settings.MPLGoal))
   );
-  const totalSeasonCoinsToGetInMPR = sum(iRacers.filter((racer) => racer.shardsToGetInMPL).map(calculateSeasonCoinsToGet));
+  const totalSeasonCoinsToGetInMPL = sum(
+    iRacers
+      .filter((racer) => racer.shardsToGetInMPL)
+      .map((racer) => {
+        return calculateSeasonCoinsToGet(racer, calculateRacerShardsToGet(racer, settings.MPLGoal));
+      })
+  );
   const totalCrewShardsNeeded = sum(iCrews.map((ICrew) => ICrew.shardsNeededToMax));
   const totalUniBoxCrewShardsNeeded = sum(iCrews.filter((crew) => crew.universalBox === '✔').map((ICrew) => ICrew.shardsNeededToMax));
   const totalUniBoxShardsNeeded = totalUniBoxCrewShardsNeeded + totalUniBoxRacerShardsNeeded;
-  const rmj40Count = racersSaved.filter((racer) => racer.highestMPL < 40).reduce((count) => count + 1, 0);
+  const MPL40Count = racersSaved.filter((racer) => racer.highestMPL < 40).reduce((count) => count + 1, 0);
 
   // TEMPLATE
   return (
@@ -45,17 +64,19 @@ export function AccountStats() {
         Crews : {formatBigNumber(totalUniBoxCrewShardsNeeded)}
       </p>
       <p className="statsRow">
-        Rewards you can collect in MPR :
+        Rewards you can collect in MPL :
         <br />
-        Tune Coins : {formatBigNumber(totalTuneCoinsToGetInMPR)}
+        Tune Coins : {formatBigNumber(totalTuneCoinsToGetInMPL)}
         <br />
-        Tokens : {formatBigNumber(totalTokensToGetInMPR)}
+        Tokens : {formatBigNumber(totalTokensToGetInMPL)}
         <br />
-        Vanity Coins : {formatBigNumber(totalCosmeticToGetInMPR)}
+        Vanity Coins : {formatBigNumber(totalCosmeticToGetInMPL)}
         <br />
-        Season Coins : {formatBigNumber(totalSeasonCoinsToGetInMPR)}
+        Season Coins : {formatBigNumber(totalSeasonCoinsToGetInMPL)}
       </p>
-      <p className="statsRow">Number of racers that need to reach MPR 40 : {formatBigNumber(rmj40Count)}</p>
+      <p className="statsRow">
+        Number of racers that need to reach MPL {settings.MPLGoal} : {formatBigNumber(MPL40Count)}
+      </p>
     </div>
   );
 }

@@ -11,8 +11,6 @@ Options
 -dark mode
 -transparent
 -background
--MPL Goal ==> on change fait mais pas de save de la currenttarget.value
--Racer Star Goal
 
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
 

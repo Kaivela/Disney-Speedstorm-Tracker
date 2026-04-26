@@ -1,10 +1,7 @@
 import { useContext, useState } from 'react';
 import type { ICrew } from '../../types/types';
 import { AppContext } from '../../context/AppContext';
-import { StorageService } from '../../services/storage';
 import Modal from '../Modal';
-
-const storage = StorageService.getInstance();
 
 export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
   // LOGIC
@@ -12,7 +9,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
   const [currentStars, setCurrentStars] = useState(crew.currentStars);
   const [currentShards, setCurrentShards] = useState(crew.currentShards);
 
-  const { crewsSaved, setCrewsSaved } = useContext(AppContext);
+  const { crewsSaved, updateCrews } = useContext(AppContext);
 
   function saveCrewStateAndStorage() {
     const editedCrews = structuredClone(crewsSaved);
@@ -24,8 +21,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
     editedCrews[oldCrewIndex].currentStars = currentStars;
     editedCrews[oldCrewIndex].currentShards = currentShards;
     // on sauvegarde le tableau modifié dans le local storage et le contexte
-    setCrewsSaved(editedCrews);
-    storage.saveCrews(editedCrews);
+    updateCrews(editedCrews);
   }
 
   // TEMPLATE

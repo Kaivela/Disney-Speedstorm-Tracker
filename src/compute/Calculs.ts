@@ -42,19 +42,21 @@ export function calculateRacerShardsNeeded(racer: IRacer, starGoal: number): num
 }
 
 // calculer le nombre de shards à récupérer en MPL
-export function calculateTokensToGet(racer: IRacer): number {
+export function calculateTokensToGet(racer: IRacer, MPLGoal: number): number {
   const startIndex = racer.highestMPL;
+  const endIndex = MPLGoal;
   let table: number[] = [];
   if (racer.MPLTokenOld) table = MPLOldTokensReward;
   else table = MPLNewTokensReward;
-  const totalTokensToGet = sum(table.slice(startIndex));
+  const totalTokensToGet = sum(table.slice(startIndex, endIndex));
   return Math.max(totalTokensToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
 //calculer le nombre de super charge tokens à récupérer pour maxer la super charge
-export function calculateRacerSuperChargeTokenSNeeded(racer: IRacer): number {
+export function calculateRacerSuperChargeTokenSNeeded(racer: IRacer, superChargeLevelGoal: number): number {
   const startIndex = racer.currentSuperChargeLevel;
-  const totalSuperShardsNeeded = sum(superChargeCost.slice(startIndex));
+  const endIndex = superChargeLevelGoal;
+  const totalSuperShardsNeeded = sum(superChargeCost.slice(startIndex, endIndex));
   return Math.max(totalSuperShardsNeeded - racer.currentSuperChargeTokens, 0);
 }
 
@@ -68,37 +70,40 @@ export function calculateCrewShardsNeeded(crew: ICrew): number {
   return Math.max(totalShardsNeeded - crew.currentShards, 0); // Assure que les shards nécessaires ne sont pas négatifs
 }
 
-// export function pour calculer les CoinsToGet en fonction du HighestRMJ
-export function calculateCoinsToGet(racer: IRacer): number {
+// export function pour calculer les CoinsToGet en fonction du HighestMPL
+export function calculateCoinsToGet(racer: IRacer, MPLGoal: number): number {
   const startIndex = racer.highestMPL;
+  const endIndex = MPLGoal;
   let table: number[] = [];
   if (racer.MPLTuneCoinReward === 'S0To4') table = MPLS0To4CoinsReward;
   else if (racer.MPLTuneCoinReward === 'S5To9') table = MPLS5To9CoinsReward;
   else if (racer.MPLTuneCoinReward === 'S10To14Mid') table = MPLS10To14MidCoinsReward;
   else if (racer.MPLTuneCoinReward === 'S10ToLatest') table = MPLS10ToLatestCoinsReward;
-  const totalCoinsToGet = sum(table.slice(startIndex));
+  const totalCoinsToGet = sum(table.slice(startIndex, endIndex));
   return Math.max(totalCoinsToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-// Fonction pour calculer les coins nécessaires en fonction du HighestRMJ
-export function calculateRacerShardsToGet(racer: IRacer): number {
+// Fonction pour calculer les coins nécessaires en fonction du HighestMPL
+export function calculateRacerShardsToGet(racer: IRacer, MPLGoal: number): number {
   const startIndex = racer.highestMPL;
+  const endIndex = MPLGoal;
   let table: number[] = [];
   if (racer.MPLOldShardsReward) table = MPLOldShardsReward;
   else table = MPLNewShardsReward;
-  const totalShardsToGet = sum(table.slice(startIndex));
+  const totalShardsToGet = sum(table.slice(startIndex, endIndex));
   return Math.max(totalShardsToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-// Fonction pour calculer les cosmeticToGet en fonction du HighestRMJ
-export function calculateCosmeticToGet(racer: IRacer): number {
+// Fonction pour calculer les cosmeticToGet en fonction du HighestMPL
+export function calculateCosmeticToGet(racer: IRacer, MPLGoal: number): number {
   const startIndex = racer.highestMPL;
-  const cosmecticToGet = sum(MPLCosmeticReward.slice(startIndex));
+  const endIndex = MPLGoal;
+  const cosmecticToGet = sum(MPLCosmeticReward.slice(startIndex, endIndex));
   return Math.max(cosmecticToGet, 0); // Assure que les coins nécessaires ne sont pas négatifs
 }
 
-export function calculateSeasonCoinsToGet(racer: IRacer): number {
-  const shardsToGetInMPL = racer.shardsToGetInMPL;
+export function calculateSeasonCoinsToGet(racer: IRacer, shardsToGetInMPL: number): number {
+  if (racer.shardsNeededToMax !== 0) return 0;
   let conversion = 0;
   if (racer.rarity === 'Common') conversion = 400;
   if (racer.rarity === 'Rare') conversion = 500;

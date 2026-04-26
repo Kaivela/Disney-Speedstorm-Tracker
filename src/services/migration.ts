@@ -231,6 +231,7 @@ export function migrateSettingsSave(settings: Record<string, unknown>): Settings
   // "goal": 'number' .......==> "MPLGoal": 'number'
   // "levelGoal": 'number' ..==> EMPTY
   // EMPTY ..................==> "starGoal": 'number'
+  // EMPTY ..................==> "superChargeLevelGoal" : 'number'
   // "transparant": Boolean .==> "transparant": Boolean
   // EMPTY      .............==> "dark": Boolean
   // EMPTY ..................==> "hideColumn": "string[]""
@@ -239,6 +240,7 @@ export function migrateSettingsSave(settings: Record<string, unknown>): Settings
     delete newSetting.goal;
     delete newSetting.levelGoal;
     newSetting.starGoal = 6;
+    newSetting.superChargeLevelGoal = 2;
     newSetting.hideColumn = [''];
     newSetting.dark = localStorage.getItem('theme') === 'dark';
     newSetting.hideColumn = [''];

@@ -20,34 +20,34 @@ describe('calculateRacerShardsNeeded', () => {
     // on soustrait le currentShards de la somme pour obtenir le nombre de shards nécessaires
     // 126 - 10 = 116
 
-    expect(calculateRacerShardsNeeded(racer as IRacer)).toBe(116);
+    expect(calculateRacerShardsNeeded(racer as IRacer, 6)).toBe(116);
 
     const racer1: Partial<IRacer> = {
       currentStars: 6,
       currentShards: 0,
       currentStarFragment: 0,
     };
-    expect(calculateRacerShardsNeeded(racer1 as IRacer)).toBe(0);
+    expect(calculateRacerShardsNeeded(racer1 as IRacer, 6)).toBe(0);
 
     const racer2: Partial<IRacer> = {
       currentStars: 0,
       currentShards: 0,
       currentStarFragment: 0,
     };
-    expect(calculateRacerShardsNeeded(racer2 as IRacer)).toBe(260);
+    expect(calculateRacerShardsNeeded(racer2 as IRacer, 6)).toBe(260);
 
     const racer3: Partial<IRacer> = {
       currentStars: 5,
       currentShards: 60,
       currentStarFragment: 0,
     };
-    expect(calculateRacerShardsNeeded(racer3 as IRacer)).toBe(0);
+    expect(calculateRacerShardsNeeded(racer3 as IRacer, 6)).toBe(0);
 
     const racer4: Partial<IRacer> = {
       currentStars: 5,
       currentShards: 2,
       currentStarFragment: 3,
     };
-    expect(calculateRacerShardsNeeded(racer4 as IRacer)).toBe(28);
+    expect(calculateRacerShardsNeeded(racer4 as IRacer, 6)).toBe(28);
   });
 });

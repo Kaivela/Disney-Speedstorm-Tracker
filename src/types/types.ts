@@ -21,11 +21,6 @@ export interface RacerComputed {
   tuneCoinsNeededToMax: number;
   shardsNeededToNextStar: number;
   tuneCoinsNeededToNextStar: number;
-  // shardsNeededIfMaxMPL?: number; calculated on the spot
-  tuneCoinsToGet: number;
-  tokensToGet: number;
-  vanityCoinsToGet: number;
-  // seasonCoinsToGet: number; calculated on the spot
 }
 
 export interface RacerBlank {
@@ -87,11 +82,12 @@ export interface CrewSaved {
 export type ICrew = CrewBlank & CrewSaved & CrewComputed;
 
 export interface SettingsSaved {
-  lang?: Lang;
-  theme?: string;
-  MPLGoal?: number;
-  starGoal?: number;
-  dark?: boolean;
-  transparant?: boolean;
-  hideColumn?: string[];
+  lang: Lang;
+  theme: string;
+  MPLGoal: number;
+  starGoal: number;
+  superChargeLevelGoal: number;
+  dark: boolean;
+  transparant: boolean;
+  hideColumn: string[];
 }

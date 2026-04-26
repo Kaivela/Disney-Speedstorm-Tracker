@@ -1,3 +1,4 @@
+import { settingsDefaults } from '../context/AppContext';
 import type { SettingsSaved, RacerSaved, CrewSaved } from '../types/types';
 import { migrateLocalStorage } from './migration';
 
@@ -38,7 +39,7 @@ export class StorageService {
 
   public getSettings(): SettingsSaved {
     const settings = localStorage.getItem(settingsKey);
-    return settings ? JSON.parse(settings) : {};
+    return settings ? JSON.parse(settings) : settingsDefaults;
   }
 
   public saveSettings(settings: SettingsSaved): void {

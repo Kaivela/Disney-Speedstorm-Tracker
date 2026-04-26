@@ -25,7 +25,7 @@ export function Filters() {
         <select id="racerShardsFilter" className="racerFilter">
           <option value="">Shards</option>
         </select>
-        <select id="rmjFilter" className="racerFilter">
+        <select id="mprFilter" className="racerFilter">
           <option value="">MPL</option>
         </select>
         <select id="starFilter" className="racerFilter">

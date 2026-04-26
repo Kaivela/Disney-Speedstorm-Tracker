@@ -1,10 +1,7 @@
 import { useContext, useState } from 'react';
 import type { IRacer } from '../../types/types';
-import { StorageService } from '../../services/storage';
 import { AppContext } from '../../context/AppContext';
 import Modal from '../Modal';
-
-const storage = StorageService.getInstance();
 
 export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   // LOGIC
@@ -19,7 +16,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
   // on doit avoir un tableau de save racers mis à jour avec notre racer modifié
   // on récupère le tableau des save racers non modifié
-  const { racersSaved, setRacersSaved } = useContext(AppContext);
+  const { racersSaved, updateRacers } = useContext(AppContext);
 
   // avec findIndex, on récupère l'index du racer qu'on souhaite modifier
   function saveRacerStateAndStorage() {
@@ -36,8 +33,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
     editedRacers[oldRacerIndex] = { ...editedRacers[oldRacerIndex], highestMPL: highestMPL };
 
     // on sauvegarde le tableau modifié dans le local storage et le contexte
-    setRacersSaved(editedRacers);
-    storage.saveRacers(editedRacers);
+    updateRacers(editedRacers);
   }
   // TEMPLATE
   return (
@@ -130,7 +126,6 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
             <label htmlFor="racerHighestMPL">highestMPL</label>
             <input
               type="number"
-              id="highestRMJ"
               min="0"
               max="40"
               defaultValue={racer.highestMPL}

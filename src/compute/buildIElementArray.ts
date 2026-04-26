@@ -2,13 +2,10 @@ import { getCrewsBlank, getRacersBlank } from '../data/collections';
 import type { CrewBlank, CrewComputed, CrewSaved, ICrew, IRacer, RacerBlank, RacerComputed, RacerSaved } from '../types/types';
 import {
   calculateCoinsNeeded,
-  calculateCoinsToGet,
-  calculateCosmeticToGet,
   calculateCrewShardsNeeded,
   calculateRacerShardsNeeded,
   calculateRacerShardsToGet,
   calculateRacerSuperChargeTokenSNeeded,
-  calculateTokensToGet,
 } from './calculs';
 
 const crewsBlank = getCrewsBlank();
@@ -36,19 +33,16 @@ export function buildIElementsArray(elements: RacerSaved[] | CrewSaved[]): IRace
     };
     let elementComputed = {} as RacerComputed | CrewComputed;
     if (isRacerElement(elementFused)) {
-      const shardsToGetInMPL = calculateRacerShardsToGet(elementFused);
+      const shardsToGetInMPL = calculateRacerShardsToGet(elementFused, 40);
       const shardsNeededToMax = calculateRacerShardsNeeded(elementFused, 6);
 
       elementComputed = {
         tuneCoinsNeededToMax: calculateCoinsNeeded(elementFused, 6),
         shardsNeededToMax,
         shardsToGetInMPL,
-        superChargeTokensNeeded: elementFused.superCharge ? calculateRacerSuperChargeTokenSNeeded(elementFused) : 0,
+        superChargeTokensNeeded: elementFused.superCharge ? calculateRacerSuperChargeTokenSNeeded(elementFused, 2) : 0,
         tuneCoinsNeededToNextStar: calculateCoinsNeeded(elementFused, elementFused.currentStars + 1),
         shardsNeededToNextStar: calculateRacerShardsNeeded(elementFused, elementFused.currentStars + 1),
-        tuneCoinsToGet: calculateCoinsToGet(elementFused),
-        tokensToGet: calculateTokensToGet(elementFused),
-        vanityCoinsToGet: calculateCosmeticToGet(elementFused),
       };
     } else if (isCrewElement(elementFused))
       elementComputed = {

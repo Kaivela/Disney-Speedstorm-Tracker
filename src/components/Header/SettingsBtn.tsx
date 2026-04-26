@@ -5,10 +5,10 @@ import type { SettingsSaved } from '../../types/types';
 
 export function SettingsBtn() {
   const [isOpen, setIsOpen] = useState(false);
-  const { settings, setSettings } = useContext(AppContext);
+  const { settings, updateSettings } = useContext(AppContext);
 
   function saveSettings(newSettings: Partial<SettingsSaved>) {
-    setSettings({ ...settings, ...newSettings });
+    updateSettings({ ...settings, ...newSettings });
   }
 
   return (
@@ -47,21 +47,38 @@ export function SettingsBtn() {
             <label htmlFor="buttonGoal" data-trad="change_goal">
               MPL Goal
             </label>
-            <select onChange={(event) => saveSettings({ MPLGoal: Number(event.currentTarget.value) })}>
-              <option value="6">6</option>
-              <option value="11">11</option>
-              <option value="16">16</option>
-              <option value="21">21</option>
-              <option value="26">26</option>
-              <option value="31">31</option>
-              <option value="36">36</option>
-              <option value="40">40</option>
-            </select>
+            <input
+              type="number"
+              defaultValue={settings.MPLGoal}
+              onChange={(event) => saveSettings({ MPLGoal: Number(event.currentTarget.value) })}
+              min="0"
+              max="40"
+              required
+            />
 
-            <label htmlFor="levelGoal" data-trad="change_level_goal">
+            <label htmlFor="starGoal" data-trad="change_level_goal">
               Star Goal
             </label>
-            <select></select>
+            <input
+              type="number"
+              defaultValue={settings.starGoal}
+              onChange={(event) => saveSettings({ starGoal: Number(event.currentTarget.value) })}
+              min="0"
+              max="6"
+              required
+            />
+
+            <label htmlFor="superChargeLevelGoal" data-trad="change_level_goal">
+              SuperCharge Level Goal
+            </label>
+            <input
+              type="number"
+              defaultValue={settings.superChargeLevelGoal}
+              onChange={(event) => saveSettings({ superChargeLevelGoal: Number(event.currentTarget.value) })}
+              min="0"
+              max="2"
+              required
+            />
 
             <label htmlFor="selectTheme" data-trad="set_up_background">
               Select theme
