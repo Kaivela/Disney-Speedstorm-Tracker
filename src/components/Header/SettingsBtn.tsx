@@ -35,17 +35,21 @@ export function SettingsBtn() {
             </span>
 
             <label htmlFor="darkMode" data-trad="dark_mode">
-              SasukeDarkShadowKiller
+              Dark Mode (Work In Progress):
             </label>
             <input id="darkMode" type="checkbox" />
 
             <label htmlFor="transparantTable" data-trad="transparant_table">
-              Transparant ?
+              Transparancy :
             </label>
-            <input id="transparant_table" type="checkbox" />
+            <input
+              defaultChecked={settings.transparent}
+              onChange={(event) => saveSettings({ transparent: event.currentTarget.checked })}
+              type="checkbox"
+            />
 
             <label htmlFor="buttonGoal" data-trad="change_goal">
-              MPL Goal
+              MPL Goal :
             </label>
             <input
               type="number"
@@ -57,7 +61,7 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="starGoal" data-trad="change_level_goal">
-              Star Goal
+              Star Goal :
             </label>
             <input
               type="number"
@@ -69,7 +73,7 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="superChargeLevelGoal" data-trad="change_level_goal">
-              SuperCharge Level Goal
+              SuperCharge Level Goal :
             </label>
             <input
               type="number"
@@ -81,7 +85,7 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="selectTheme" data-trad="set_up_background">
-              Select theme
+              Select theme :
             </label>
             <select defaultValue={settings.theme} onChange={(event) => saveSettings({ theme: event.currentTarget.value })}>
               <option value="1">Saison 1 : Monstres Et Compagnies</option>
@@ -106,19 +110,18 @@ export function SettingsBtn() {
               <option value="19">Saison 19 : Villains</option>
             </select>
 
-            <label htmlFor="hideColumn">Hide Colmun</label>
             <details className="center-html">
-              <summary>Détails</summary>
-              Quelque chose d'assez discret pour passer inaperçu.
+              <summary>Hide Column</summary>
+              Work In Progress (all racers and crews wille be selectable)
             </details>
           </div>
-          <span>
+          <div style={{ marginTop: '30px' }}>
             The character images used in this are purely for entertainment and informational purposes.
             <br />
             No ownership is claimed upon the images used, and no copyright infringement is intended.
             <br />
             All rights go to their respective owners.
-          </span>
+          </div>
         </div>
       </Modal>
     </>

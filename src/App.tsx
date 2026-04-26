@@ -8,8 +8,14 @@ import { AppContext } from './context/AppContext';
 
 function App() {
   const { settings } = useContext(AppContext);
+  const style = {
+    backgroundImage: `url("img/backgrounds/background season${settings.theme}.webp")`,
+    '--bg-color-even': settings.transparent ? '#ccccccb3' : '#cccccc',
+    '--bg-color-odd': settings.transparent ? '#ffffffb3' : '#ffffff',
+  };
+
   return (
-    <div className="background" style={{ backgroundImage: `url("img/backgrounds/background season${settings.theme}.webp")` }}>
+    <div className="background" style={style}>
       <Header />
       <Filters />
       <Table />

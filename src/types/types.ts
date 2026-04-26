@@ -88,6 +88,6 @@ export interface SettingsSaved {
   starGoal: number;
   superChargeLevelGoal: number;
   dark: boolean;
-  transparant: boolean;
+  transparent: boolean;
   hideColumn: string[];
 }

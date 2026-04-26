@@ -5,7 +5,7 @@ import type { SettingsSaved, Mode, RacerSaved, CrewSaved } from '../types/types'
 export const settingsDefaults: SettingsSaved = {
   lang: 'en',
   dark: false,
-  transparant: false,
+  transparent: false,
   MPLGoal: 40,
   starGoal: 6,
   superChargeLevelGoal: 2,

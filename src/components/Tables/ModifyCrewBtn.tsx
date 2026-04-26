@@ -28,13 +28,13 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
   return (
     <>
       <button data-trad="modify" onClick={() => setIsOpen(true)}>
-        Modify
+        Edit
       </button>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
           <div>
             <img className="edit-element-img" src={`/img/crews/${crew.name}.webp`} />
-            <h2>Modify {crew.name}</h2>
+            <h2>Edit {crew.name}</h2>
           </div>
           <form
             onSubmit={(e) => {
@@ -42,7 +42,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
               saveCrewStateAndStorage();
               setIsOpen(false);
             }}>
-            <label htmlFor="crewCurrentStars">current stars</label>
+            <label htmlFor="crewCurrentStars">Current Stars :</label>
             <input
               type="number"
               min="0"
@@ -53,7 +53,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
               autoFocus
             />
 
-            <label htmlFor="crewCurrentShards">current shards</label>
+            <label htmlFor="crewCurrentShards">Current Shards :</label>
             <input
               type="number"
               min="0"
@@ -65,7 +65,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
 
             <div style={{ marginTop: '10px' }}>
               <button type="button" onClick={() => setIsOpen(false)}>
-                Fermer
+                Cancel
               </button>
             </div>
             <button className="btn" type="submit" data-trad="saveCrew">

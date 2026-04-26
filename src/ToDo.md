@@ -3,14 +3,13 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-order column
+sort column
 Filters
 
 Options
 -hide column
--dark mode
--transparent
 
+-dark mode a coupler avec la mise en forme
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
 
 =========> MVP

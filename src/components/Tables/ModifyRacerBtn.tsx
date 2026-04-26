@@ -39,13 +39,13 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   return (
     <>
       <button data-trad="modify" onClick={() => setIsOpen(true)}>
-        Modify
+        Edit
       </button>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
           <div>
             <img className="edit-element-img" src={`/img/racers/${racer.name}.webp`} />
-            <h2>Modify {racer.name}</h2>
+            <h2>Edit {racer.name}</h2>
           </div>
           <form
             onSubmit={(e) => {
@@ -54,7 +54,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               // onClose();
               setIsOpen(false);
             }}>
-            <label htmlFor="racerCurrentStars">current stars</label>
+            <label htmlFor="racerCurrentStars">Current Stars :</label>
             <input
               type="number"
               min="0"
@@ -65,7 +65,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               autoFocus
             />
 
-            <label htmlFor="racerCurrentStarFragment">current starFragments</label>
+            <label htmlFor="racerCurrentStarFragment">Current Star Fragments :</label>
             <input
               type="number"
               min="0"
@@ -77,7 +77,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             {racer.superCharge && (
               <>
-                <label htmlFor="racerCurrentSuperChargeLevel">current superCharge Level</label>
+                <label htmlFor="racerCurrentSuperChargeLevel">Current Super Charge Level :</label>
                 <input
                   type="number"
                   min="0"
@@ -89,7 +89,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               </>
             )}
 
-            <label htmlFor="racerCurrentShards">current shards</label>
+            <label htmlFor="racerCurrentShards">Current Shards :</label>
             <input
               type="number"
               min="0"
@@ -101,7 +101,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             {racer.superCharge && (
               <>
-                <label htmlFor="racerCurrentSuperChargeTokens">current superCharge Tokens</label>
+                <label htmlFor="racerCurrentSuperChargeTokens">Current Super Charge Tokens :</label>
                 <input
                   type="number"
                   min="0"
@@ -113,7 +113,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               </>
             )}
 
-            <label htmlFor="racerCurrentMPL">currentMPL</label>
+            <label htmlFor="racerCurrentMPL">Current MPL :</label>
             <input
               type="number"
               min="0"
@@ -123,7 +123,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               required
             />
 
-            <label htmlFor="racerHighestMPL">highestMPL</label>
+            <label htmlFor="racerHighestMPL">Highest MPL :</label>
             <input
               type="number"
               min="0"
@@ -135,7 +135,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             <div style={{ marginTop: '10px' }}>
               <button type="button" onClick={() => setIsOpen(false)}>
-                Fermer
+                Cancel
               </button>
             </div>
             <button className="btn" type="submit" data-trad="saveRacer">
