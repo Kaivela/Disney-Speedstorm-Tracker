@@ -1,4 +1,4 @@
-export type Language = 'fr' | 'en';
+export type Lang = 'fr' | 'en';
 export type UniversalBox = '✔' | '✘' | '🟣';
 export type Rarity = 'Common' | 'Rare' | 'Epic';
 export type Role = 'Speedster' | 'Trickster' | 'Brawler' | 'Defender';
@@ -86,11 +86,12 @@ export interface CrewSaved {
 
 export type ICrew = CrewBlank & CrewSaved & CrewComputed;
 
-export interface ISettings {
-  // lang?: Language;
-  // theme?: string;
-  // goal?: number;
-  // levelGoal?: number;
-  // dark?: boolean;
-  // transparant?: boolean;
+export interface SettingsSaved {
+  lang?: Lang;
+  theme?: string;
+  MPLGoal?: number;
+  starGoal?: number;
+  dark?: boolean;
+  transparant?: boolean;
+  hideColumn?: string[];
 }

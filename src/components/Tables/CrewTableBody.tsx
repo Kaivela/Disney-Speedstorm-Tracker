@@ -10,7 +10,7 @@ function Crew({ crew }: { crew: ICrew }) {
       <td>{crew.releaseSeason}</td>
       <td data-trad={crew.exclusiveTo}>{crew.exclusiveTo}</td>
       <td>
-        <img src={`/img/crews/${crew.name}.webp`} />
+        <img className="td-img" src={`/img/crews/${crew.name}.webp`} />
       </td>
       <td data-trad={crew.collection}>{crew.collection}</td>
       <td data-trad={crew.rarity}>{crew.rarity}</td>
@@ -34,7 +34,7 @@ function CrewList() {
 
   //TEMPLATE
   return iCrews.map((crew) => {
-    return <Crew crew={crew} />;
+    return <Crew key={crew.name} crew={crew} />;
   });
 }
 

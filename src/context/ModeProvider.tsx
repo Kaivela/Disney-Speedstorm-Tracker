@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import type { ISettings, Mode, RacerSaved, CrewSaved } from '../types/types';
+import type { SettingsSaved, Mode, RacerSaved, CrewSaved } from '../types/types';
 import { StorageService } from '../services/storage';
-import { migrateCrewsSave, migrateRacersSave, updateCollections } from '../services/migration';
+import { migrateCrewsSave, migrateRacersSave, migrateSettingsSave, updateCollections } from '../services/migration';
 import { AppContext } from './AppContext';
 
 const storage = StorageService.getInstance();
@@ -11,11 +11,10 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   const [mode, setMode] = useState<Mode>('racer');
   const [racersSaved, setRacersSaved] = useState<RacerSaved[]>([]);
   const [crewsSaved, setCrewsSaved] = useState<CrewSaved[]>([]);
-  const [settings, setSettings] = useState<ISettings>({});
+  const [settings, setSettings] = useState<SettingsSaved>({});
 
   useEffect(() => {
     const savedRacers = storage.getRacers();
-
     if (savedRacers) {
       const migratedRacers = migrateRacersSave(savedRacers as unknown as Record<string, unknown>[]);
       setRacersSaved(migratedRacers);
@@ -28,10 +27,14 @@ export function ModeProvider({ children }: { children: ReactNode }) {
       setCrewsSaved(migratedCrews);
       storage.saveCrews(migratedCrews);
     }
+
     updateCollections();
+
     const savedSettings = storage.getSettings();
     if (savedSettings) {
-      setSettings(savedSettings);
+      const migratedSettings = migrateSettingsSave(savedSettings as unknown as Record<string, unknown>);
+      setSettings(migratedSettings);
+      storage.saveSettings(migratedSettings);
     }
 
     // migrateSettingsSave(savedSettings as unknown as Record<string, unknown>);

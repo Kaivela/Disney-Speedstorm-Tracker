@@ -1,4 +1,4 @@
-// Définir le coût des shards pour chaque fragment d'étoile d'un pilot
+// Définir le coût des shards pour chaque fragment d'étoile d'un racer
 export const racerShardsCost = [5, 5, 5, 5, 8, 6, 6, 6, 6, 10, 7, 7, 7, 7, 12, 8, 8, 8, 8, 14, 9, 9, 9, 9, 16, 10, 10, 10, 10, 20];
 
 // Définir le coût des pièces pour chaque niveau
@@ -37,17 +37,17 @@ export const MPLNewShardsReward = [
   0, 4, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 8, 0, 0,
 ];
 
-// Définir les tokens rewards en multiPlayerLeague pour chaque Rang (NEW PILOTS)
+// Définir les tokens rewards en multiPlayerLeague pour chaque Rang (NEW RACERS)
 export const MPLOldTokensReward = [
   5, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 5, 20, 7, 7, 7, 7, 20, 7, 7, 7, 7, 30, 7, 7, 7, 7, 30, 10, 10, 10, 10, 40, 10, 10, 10, 120,
 ];
 
-// Définir les tokens rewards en multiPlayerLeague pour chaque Rang (NEW PILOTS)
+// Définir les tokens rewards en multiPlayerLeague pour chaque Rang (NEW RACERS)
 export const MPLNewTokensReward = [
   5, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 5, 10, 5, 5, 5, 120,
 ];
 
-// Définir les cosmetic coins rewards en multiPlayerLeague pour chaque Rang (ALL PILOTS)
+// Définir les cosmetic coins rewards en multiPlayerLeague pour chaque Rang (ALL RACERS)
 export const MPLCosmeticReward = [
   50, 50, 50, 50, 50, 50, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 80, 80, 80, 80, 80, 80, 100, 100, 100, 100, 100, 100, 120, 120,
   120, 120, 120, 120, 140,

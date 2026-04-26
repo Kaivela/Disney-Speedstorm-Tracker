@@ -26,6 +26,15 @@ h1 {
   overflow: hidden;
 }
 
+.lang-btn-group {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  width: fit-content;
+}
+
 .btn-group button {
   border: none;
   background-color: white;
@@ -56,6 +65,18 @@ h1 {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.settings {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.settingsPanel {
+  display: block;
+  backdrop-filter: blur(5px);
 }
 
 table {
@@ -199,4 +220,25 @@ form {
   margin-top: 0;
   margin-bottom: 0;
   /* list-style-position: inside; */
+}
+
+select,
+.settings button {
+  margin: auto;
+  width: fit-content;
+}
+
+.edit-element-img,
+.center-html {
+  margin: auto;
+}
+
+.td-img {
+  padding: 0;
+}
+
+.close-settings-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

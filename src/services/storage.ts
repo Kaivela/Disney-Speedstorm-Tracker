@@ -1,4 +1,4 @@
-import type { ISettings, RacerSaved, CrewSaved } from '../types/types';
+import type { SettingsSaved, RacerSaved, CrewSaved } from '../types/types';
 import { migrateLocalStorage } from './migration';
 
 const racersKey = 'racers';
@@ -36,12 +36,12 @@ export class StorageService {
     localStorage.setItem(crewsKey, JSON.stringify(crews));
   }
 
-  public getSettings(): ISettings {
+  public getSettings(): SettingsSaved {
     const settings = localStorage.getItem(settingsKey);
     return settings ? JSON.parse(settings) : {};
   }
 
-  public saveSettings(settings: ISettings): void {
+  public saveSettings(settings: SettingsSaved): void {
     localStorage.setItem(settingsKey, JSON.stringify(settings));
   }
 }

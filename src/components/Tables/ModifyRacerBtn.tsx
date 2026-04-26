@@ -2,17 +2,13 @@ import { useContext, useState } from 'react';
 import type { IRacer } from '../../types/types';
 import { StorageService } from '../../services/storage';
 import { AppContext } from '../../context/AppContext';
-
-type ModalProps = {
-  onClose: () => void;
-  racer: IRacer;
-};
+import Modal from '../Modal';
 
 const storage = StorageService.getInstance();
 
-function Modal({ onClose, racer }: ModalProps) {
-  // on créé un state local pour chaque champ du formulaire
-  // on les initialise avec le racer en props
+export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
+  // LOGIC
+  const [isOpen, setIsOpen] = useState(false);
   const [currentStars, setCurrentStars] = useState(racer.currentStars);
   const [currentStarFragment, setCurrentStarFragment] = useState(racer.currentStarFragment);
   const [currentSuperChargeLevel, setCurrentSuperChargeLevel] = useState(racer.currentSuperChargeLevel);
@@ -43,126 +39,116 @@ function Modal({ onClose, racer }: ModalProps) {
     setRacersSaved(editedRacers);
     storage.saveRacers(editedRacers);
   }
-
-  // on l'édite dans les onchange des inputs
-
-  return (
-    <div className="overlay">
-      <div className="modal">
-        <div>
-          <img src={`/img/racers/${racer.name}.webp`} />
-          <h2>Modify {racer.name}</h2>
-        </div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            saveRacerStateAndStorage();
-            onClose();
-          }}>
-          <label htmlFor="racerCurrentStars">current stars</label>
-          <input
-            type="number"
-            min="0"
-            max="6"
-            defaultValue={racer.currentStars}
-            onChange={(event) => setCurrentStars(Number(event.currentTarget.value))}
-            required
-            autoFocus
-          />
-
-          <label htmlFor="racerCurrentStarFragment">current starFragments</label>
-          <input
-            type="number"
-            min="0"
-            max="5"
-            defaultValue={racer.currentStarFragment}
-            onChange={(event) => setCurrentStarFragment(Number(event.currentTarget.value))}
-            required
-          />
-
-          {racer.superCharge && (
-            <>
-              <label htmlFor="racerCurrentSuperChargeLevel">current superCharge Level</label>
-              <input
-                type="number"
-                min="0"
-                max="2"
-                defaultValue={racer.currentSuperChargeLevel}
-                onChange={(event) => setCurrentSuperChargeLevel(Number(event.currentTarget.value))}
-                required
-              />
-            </>
-          )}
-
-          <label htmlFor="racerCurrentShards">current shards</label>
-          <input
-            type="number"
-            min="0"
-            max="260"
-            defaultValue={racer.currentShards}
-            onChange={(event) => setCurrentShards(Number(event.currentTarget.value))}
-            required
-          />
-
-          {racer.superCharge && (
-            <>
-              <label htmlFor="racerCurrentSuperChargeTokens">current superCharge Tokens</label>
-              <input
-                type="number"
-                min="0"
-                max="60"
-                defaultValue={racer.currentSuperChargeTokens}
-                onChange={(event) => setCurrentSuperChargeTokens(Number(event.currentTarget.value))}
-                required
-              />
-            </>
-          )}
-
-          <label htmlFor="racerCurrentMPL">currentMPL</label>
-          <input
-            type="number"
-            min="0"
-            max="40"
-            defaultValue={racer.currentMPL}
-            onChange={(event) => setCurrentMPL(Number(event.currentTarget.value))}
-            required
-          />
-
-          <label htmlFor="racerHighestMPL">highestMPL</label>
-          <input
-            type="number"
-            id="highestRMJ"
-            min="0"
-            max="40"
-            defaultValue={racer.highestMPL}
-            onChange={(event) => setHighestMPL(Number(event.currentTarget.value))}
-            required
-          />
-
-          <div style={{ marginTop: '10px' }}>
-            <button type="button" onClick={onClose}>
-              Fermer
-            </button>
-          </div>
-          <button className="btn" type="submit" data-trad="saveRacer">
-            Save Racer
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
-  // LOGIC
-  const [isOpen, setIsOpen] = useState(false);
   // TEMPLATE
   return (
     <>
       <button data-trad="modify" onClick={() => setIsOpen(true)}>
         Modify
       </button>
-      {isOpen && <Modal onClose={() => setIsOpen(false)} racer={racer} />}
+      {isOpen && (
+        <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
+          <div>
+            <img className="edit-element-img" src={`/img/racers/${racer.name}.webp`} />
+            <h2>Modify {racer.name}</h2>
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              saveRacerStateAndStorage();
+              // onClose();
+              setIsOpen(false);
+            }}>
+            <label htmlFor="racerCurrentStars">current stars</label>
+            <input
+              type="number"
+              min="0"
+              max="6"
+              defaultValue={racer.currentStars}
+              onChange={(event) => setCurrentStars(Number(event.currentTarget.value))}
+              required
+              autoFocus
+            />
+
+            <label htmlFor="racerCurrentStarFragment">current starFragments</label>
+            <input
+              type="number"
+              min="0"
+              max="5"
+              defaultValue={racer.currentStarFragment}
+              onChange={(event) => setCurrentStarFragment(Number(event.currentTarget.value))}
+              required
+            />
+
+            {racer.superCharge && (
+              <>
+                <label htmlFor="racerCurrentSuperChargeLevel">current superCharge Level</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="2"
+                  defaultValue={racer.currentSuperChargeLevel}
+                  onChange={(event) => setCurrentSuperChargeLevel(Number(event.currentTarget.value))}
+                  required
+                />
+              </>
+            )}
+
+            <label htmlFor="racerCurrentShards">current shards</label>
+            <input
+              type="number"
+              min="0"
+              max="260"
+              defaultValue={racer.currentShards}
+              onChange={(event) => setCurrentShards(Number(event.currentTarget.value))}
+              required
+            />
+
+            {racer.superCharge && (
+              <>
+                <label htmlFor="racerCurrentSuperChargeTokens">current superCharge Tokens</label>
+                <input
+                  type="number"
+                  min="0"
+                  max="60"
+                  defaultValue={racer.currentSuperChargeTokens}
+                  onChange={(event) => setCurrentSuperChargeTokens(Number(event.currentTarget.value))}
+                  required
+                />
+              </>
+            )}
+
+            <label htmlFor="racerCurrentMPL">currentMPL</label>
+            <input
+              type="number"
+              min="0"
+              max="40"
+              defaultValue={racer.currentMPL}
+              onChange={(event) => setCurrentMPL(Number(event.currentTarget.value))}
+              required
+            />
+
+            <label htmlFor="racerHighestMPL">highestMPL</label>
+            <input
+              type="number"
+              id="highestRMJ"
+              min="0"
+              max="40"
+              defaultValue={racer.highestMPL}
+              onChange={(event) => setHighestMPL(Number(event.currentTarget.value))}
+              required
+            />
+
+            <div style={{ marginTop: '10px' }}>
+              <button type="button" onClick={() => setIsOpen(false)}>
+                Fermer
+              </button>
+            </div>
+            <button className="btn" type="submit" data-trad="saveRacer">
+              Save Racer
+            </button>
+          </form>
+        </Modal>
+      )}
     </>
   );
 }

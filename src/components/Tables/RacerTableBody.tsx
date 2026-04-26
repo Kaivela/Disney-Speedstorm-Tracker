@@ -11,8 +11,8 @@ function Racer({ racer }: { racer: IRacer }) {
   return (
     <tr>
       <td>{racer.releaseSeason}</td>
-      <td>
-        <img src={`/img/racers/${racer.name}.webp`} />
+      <td className="td-img">
+        <img className="img-cover" src={`/img/racers/${racer.name}.webp`} />
       </td>
       <td data-trad={racer.collection}>{racer.collection}</td>
       <td data-trad={racer.rarity}>{racer.rarity}</td>
@@ -50,7 +50,7 @@ function RacerList() {
   const iRacers = buildIElementsArray(racersSaved);
   return iRacers.map((racer) => {
     // TEMPLATE
-    return <Racer racer={racer} />;
+    return <Racer key={racer.name} racer={racer} />;
   });
 }
 

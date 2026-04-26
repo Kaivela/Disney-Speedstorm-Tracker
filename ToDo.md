@@ -3,22 +3,16 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-rename au propre chaque const (surtout les tables en array si c'est pas du html !!)
-sortir la logique de modal dans sa propre fonction pour etre appelée dans modifier / calculer / settings
-
 order column
 Filters
 
-\*\*mettre en place les settings
 Options
 -hide column
 -dark mode
 -transparent
 -background
--MPL Goal
+-MPL Goal ==> on change fait mais pas de save de la currenttarget.value
 -Racer Star Goal
-
-\*\*migration des settings
 
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
 
@@ -27,14 +21,3 @@ Options
 preload img
 data trad EN FR
 ACTIONS - calculate racer
-
-const allSuperChargeTokensNeededTable = racersFused.map((racer) => {
-if (racer.superCharge) return calculateRacerSuperChargeTokenSNeeded(racer)
-else return 0
-{
-const valeur = ;
-return valeur;
-} else {
-return 0;
-}
-});

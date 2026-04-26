@@ -18,19 +18,10 @@ function ElementTableBtn({ mode }: { mode: Mode }) {
   );
 }
 
-function SettingsBtn() {
-  return (
-    <button className="SettingsBtn">
-      <img src="img\settings.svg" width="30px" />
-    </button>
-  );
-}
-
 export function Header() {
   return (
     <header className="Header">
       <h1>Disney Speedstorm Tracker</h1>
-      <SettingsBtn />
       <div className="HeaderBtns">
         <span className="btn-group">
           <ElementTableBtn mode={'racer'} />

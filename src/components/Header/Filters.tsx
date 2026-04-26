@@ -5,7 +5,7 @@ export function Filters() {
   const { mode } = useContext(AppContext);
   if (mode === 'racer') {
     return (
-      <>
+      <div>
         <button className="reset" id="reset" data-trad="reset_all">
           reset
         </button>
@@ -34,11 +34,11 @@ export function Filters() {
         <select id="racerBoxesFilter" className="racerFilter">
           <option value="">Boxes</option>
         </select>
-      </>
+      </div>
     );
   } else {
     return (
-      <>
+      <div>
         <button className="reset" id="reset" data-trad="reset_all">
           reset
         </button>
@@ -58,7 +58,7 @@ export function Filters() {
         <select id="racerBoxesFilter" className="racerFilter">
           <option value="">Boxes</option>
         </select>
-      </>
+      </div>
     );
   }
 }

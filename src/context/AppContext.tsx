@@ -1,6 +1,6 @@
 // src/context/DisplayModeContext.tsx
 import { createContext } from 'react';
-import type { ISettings, Mode, RacerSaved, CrewSaved } from '../types/types';
+import type { SettingsSaved, Mode, RacerSaved, CrewSaved } from '../types/types';
 
 export const AppContext = createContext<{
   mode: Mode;
@@ -9,8 +9,8 @@ export const AppContext = createContext<{
   setRacersSaved: (racers: RacerSaved[]) => void;
   crewsSaved: CrewSaved[];
   setCrewsSaved: (crews: CrewSaved[]) => void;
-  settings: ISettings;
-  setSettings: (settings: ISettings) => void;
+  settings: SettingsSaved;
+  setSettings: (settings: SettingsSaved) => void;
 }>({
   mode: 'racer',
   setMode: () => {},

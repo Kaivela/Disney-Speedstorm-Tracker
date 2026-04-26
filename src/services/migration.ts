@@ -1,6 +1,6 @@
 import { sortCrews, sortRacers } from '../compute/sort';
 import { getCrewsBlank, getRacersBlank } from '../data/collections';
-import type { CrewSaved, ICrew, RacerSaved } from '../types/types';
+import type { CrewSaved, ICrew, SettingsSaved, RacerSaved } from '../types/types';
 import { StorageService } from './storage';
 
 const nameMap = {
@@ -222,4 +222,29 @@ export function updateCollections() {
     }
   });
   storage.saveCrews(sortCrews(crewSaved));
+}
+
+export function migrateSettingsSave(settings: Record<string, unknown>): SettingsSaved {
+  const newSetting = structuredClone(settings);
+  // "lang": 'fr' | 'en' ...==> "lang": "Lang"
+  // "theme": 'string' ......==> "theme: 'string'
+  // "goal": 'number' .......==> "MPLGoal": 'number'
+  // "levelGoal": 'number' ..==> EMPTY
+  // EMPTY ..................==> "starGoal": 'number'
+  // "transparant": Boolean .==> "transparant": Boolean
+  // EMPTY      .............==> "dark": Boolean
+  // EMPTY ..................==> "hideColumn": "string[]""
+  if (newSetting.goal) {
+    newSetting.MPLGoal = newSetting.goal;
+    delete newSetting.goal;
+    delete newSetting.levelGoal;
+    newSetting.starGoal = 6;
+    newSetting.hideColumn = [''];
+    newSetting.dark = localStorage.getItem('theme') === 'dark';
+    newSetting.hideColumn = [''];
+    localStorage.removeItem('theme');
+
+    console.log('Settings Migration : OK');
+  }
+  return newSetting as unknown as SettingsSaved;
 }
