@@ -111,19 +111,314 @@ export function SettingsBtn() {
             </select>
           </div>
           <details>
-            <summary>Show Column</summary>
-            <label className={settings.showRacerColumn.releaseSeason ? 'columnShown' : ''}>
-              RacerSeason
-              <input
-                defaultChecked={settings.showRacerColumn.releaseSeason}
-                className="hidden"
-                onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, releaseSeason: event.currentTarget.checked } })}
-                type="checkbox"
-              />
-            </label>
-            <input type="checkbox" />
-            <input type="checkbox" />
-            <input type="checkbox" />
+            <summary>Show Racer Column</summary>
+            <div className="details-options">
+              <label className={settings.showRacerColumn.releaseSeason ? 'columnShown' : ''}>
+                Season
+                <input
+                  defaultChecked={settings.showRacerColumn.releaseSeason}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, releaseSeason: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.image ? 'columnShown' : ''}>
+                Image
+                <input
+                  defaultChecked={settings.showRacerColumn.image}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, image: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.collection ? 'columnShown' : ''}>
+                Collection
+                <input
+                  defaultChecked={settings.showRacerColumn.collection}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, collection: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.rarity ? 'columnShown' : ''}>
+                Rarity
+                <input
+                  defaultChecked={settings.showRacerColumn.rarity}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, rarity: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.role ? 'columnShown' : ''}>
+                Role
+                <input
+                  defaultChecked={settings.showRacerColumn.role}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, role: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.name ? 'columnShown' : ''}>
+                Name
+                <input
+                  defaultChecked={settings.showRacerColumn.name}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, name: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.currentStars ? 'columnShown' : ''}>
+                currentStars
+                <input
+                  defaultChecked={settings.showRacerColumn.currentStars}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, currentStars: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.starFragment ? 'columnShown' : ''}>
+                starFragment
+                <input
+                  defaultChecked={settings.showRacerColumn.starFragment}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, starFragment: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.superChargeLevel ? 'columnShown' : ''}>
+                superChargeLevel
+                <input
+                  defaultChecked={settings.showRacerColumn.superChargeLevel}
+                  className="hidden"
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, superChargeLevel: event.currentTarget.checked } })
+                  }
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.currentShards ? 'columnShown' : ''}>
+                currentShards
+                <input
+                  defaultChecked={settings.showRacerColumn.currentShards}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, currentShards: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.currentSuperChargeTokens ? 'columnShown' : ''}>
+                currentSuperChargeTokens
+                <input
+                  defaultChecked={settings.showRacerColumn.currentSuperChargeTokens}
+                  className="hidden"
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, currentSuperChargeTokens: event.currentTarget.checked } })
+                  }
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.currentMPL ? 'columnShown' : ''}>
+                currentMPL
+                <input
+                  defaultChecked={settings.showRacerColumn.currentMPL}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, currentMPL: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.highestMPL ? 'columnShown' : ''}>
+                highestMPL
+                <input
+                  defaultChecked={settings.showRacerColumn.highestMPL}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, highestMPL: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.maxMPL ? 'columnShown' : ''}>
+                maxMPL
+                <input
+                  defaultChecked={settings.showRacerColumn.maxMPL}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, maxMPL: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.shardsNeeded ? 'columnShown' : ''}>
+                shardsNeeded
+                <input
+                  defaultChecked={settings.showRacerColumn.shardsNeeded}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNeeded: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.shardsInMPL ? 'columnShown' : ''}>
+                shardsInMPL
+                <input
+                  defaultChecked={settings.showRacerColumn.shardsInMPL}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsInMPL: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.superChargeTokensNeeded ? 'columnShown' : ''}>
+                superChargeTokensNeeded
+                <input
+                  defaultChecked={settings.showRacerColumn.superChargeTokensNeeded}
+                  className="hidden"
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, superChargeTokensNeeded: event.currentTarget.checked } })
+                  }
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.tuneCoinsNeeded ? 'columnShown' : ''}>
+                tuneCoinsNeeded
+                <input
+                  defaultChecked={settings.showRacerColumn.tuneCoinsNeeded}
+                  className="hidden"
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, tuneCoinsNeeded: event.currentTarget.checked } })
+                  }
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.free ? 'columnShown' : ''}>
+                free
+                <input
+                  defaultChecked={settings.showRacerColumn.free}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, free: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.shardsNextStar ? 'columnShown' : ''}>
+                shardsNextStar
+                <input
+                  defaultChecked={settings.showRacerColumn.shardsNextStar}
+                  className="hidden"
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNextStar: event.currentTarget.checked } })
+                  }
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.coinsNextStar ? 'columnShown' : ''}>
+                coinsNextStar
+                <input
+                  defaultChecked={settings.showRacerColumn.coinsNextStar}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, coinsNextStar: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showRacerColumn.shardsNeededIfMaxMPL ? 'columnShown' : ''}>
+                shardsNeededIfMaxMPL
+                <input
+                  defaultChecked={settings.showRacerColumn.shardsNeededIfMaxMPL}
+                  className="hidden"
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNeededIfMaxMPL: event.currentTarget.checked } })
+                  }
+                  type="checkbox"
+                />
+              </label>
+            </div>
+          </details>
+          <details>
+            <summary>Show Crew Column</summary>
+            <div className="details-options">
+              <label className={settings.showCrewColumn.releaseSeason ? 'columnShown' : ''}>
+                Season
+                <input
+                  defaultChecked={settings.showCrewColumn.releaseSeason}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, releaseSeason: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.exclusive ? 'columnShown' : ''}>
+                Exclusive
+                <input
+                  defaultChecked={settings.showCrewColumn.exclusive}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, exclusive: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.image ? 'columnShown' : ''}>
+                Image
+                <input
+                  defaultChecked={settings.showCrewColumn.image}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, image: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.collection ? 'columnShown' : ''}>
+                Collection
+                <input
+                  defaultChecked={settings.showCrewColumn.collection}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, collection: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.rarity ? 'columnShown' : ''}>
+                Rarity
+                <input
+                  defaultChecked={settings.showCrewColumn.rarity}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, rarity: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.name ? 'columnShown' : ''}>
+                Name
+                <input
+                  defaultChecked={settings.showCrewColumn.name}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, name: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.level ? 'columnShown' : ''}>
+                Level
+                <input
+                  defaultChecked={settings.showCrewColumn.level}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, level: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.currentShards ? 'columnShown' : ''}>
+                currentShards
+                <input
+                  defaultChecked={settings.showCrewColumn.currentShards}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, currentShards: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.shardsNeeded ? 'columnShown' : ''}>
+                shardsNeeded
+                <input
+                  defaultChecked={settings.showCrewColumn.shardsNeeded}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, shardsNeeded: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+              <label className={settings.showCrewColumn.free ? 'columnShown' : ''}>
+                free
+                <input
+                  defaultChecked={settings.showCrewColumn.free}
+                  className="hidden"
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, free: event.currentTarget.checked } })}
+                  type="checkbox"
+                />
+              </label>
+            </div>
           </details>
           <div style={{ marginTop: '30px' }}>
             The character images used in this are purely for entertainment and informational purposes.

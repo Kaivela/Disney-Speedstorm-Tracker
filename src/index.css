@@ -10,10 +10,10 @@ h1 {
   margin: 10px 0;
   color: white;
 }
-
+/* 
 .Header {
   border: 1px solid black;
-}
+} */
 
 .btn {
   border: 1px solid black;
@@ -60,10 +60,15 @@ h1 {
 }
 
 .AccountStats {
-  height: 300px;
   border: 1px solid black;
+  border-radius: 1rem;
   color: white;
   background-color: #00000080;
+  width: fit-content;
+  margin: auto;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .SettingsBtn {
@@ -265,4 +270,18 @@ select,
 details label {
   opacity: 0.4;
   cursor: pointer;
+  padding-right: 5px;
+}
+
+.details-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.filters {
+  margin-bottom: 1rem;
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
 }

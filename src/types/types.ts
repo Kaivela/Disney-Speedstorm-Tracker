@@ -89,6 +89,40 @@ export interface SettingsSaved {
   superChargeLevelGoal: number;
   dark: boolean;
   transparent: boolean;
-  showRacerColumn: { releaseSeason: boolean };
-  showCrewColumn: { releaseSeason: boolean };
+  showRacerColumn: {
+    releaseSeason: boolean;
+    image: boolean;
+    collection: boolean;
+    rarity: boolean;
+    role: boolean;
+    name: boolean;
+    currentStars: boolean;
+    starFragment: boolean;
+    superChargeLevel: boolean;
+    currentShards: boolean;
+    currentSuperChargeTokens: boolean;
+    currentMPL: boolean;
+    highestMPL: boolean;
+    maxMPL: boolean;
+    shardsNeeded: boolean;
+    shardsInMPL: boolean;
+    superChargeTokensNeeded: boolean;
+    tuneCoinsNeeded: boolean;
+    free: boolean;
+    shardsNextStar: boolean;
+    coinsNextStar: boolean;
+    shardsNeededIfMaxMPL: boolean;
+  };
+  showCrewColumn: {
+    releaseSeason: boolean;
+    exclusive: boolean;
+    image: boolean;
+    collection: boolean;
+    rarity: boolean;
+    name: boolean;
+    level: boolean;
+    currentShards: boolean;
+    shardsNeeded: boolean;
+    free: boolean;
+  };
 }

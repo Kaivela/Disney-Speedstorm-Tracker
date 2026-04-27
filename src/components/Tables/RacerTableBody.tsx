@@ -12,29 +12,33 @@ function Racer({ racer }: { racer: IRacer }) {
   return (
     <tr>
       {settings.showRacerColumn.releaseSeason && <td>{racer.releaseSeason}</td>}
-      <td className="td-img">
-        <img className="img-cover" src={`/img/racers/${racer.name}.webp`} />
-      </td>
-      <td data-trad={racer.collection}>{racer.collection}</td>
-      <td data-trad={racer.rarity}>{racer.rarity}</td>
-      <td data-trad={racer.role}>{racer.role}</td>
-      <td data-trad={racer.name}>{racer.name}</td>
-      <td>{racer.currentStars}</td>
-      <td>{currentStarMaxed ? 'maxed' : racer.currentStarFragment}</td>
-      <td>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>
-      <td>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>
-      <td>{racer.superCharge ? (racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens) : '✘'}</td>
-      <td>{racer.currentMPL}</td>
-      <td>{racer.highestMPL}</td>
-      <td>badge max MPL</td>
-      <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededToMax}</td>
-      <td>{racer.shardsToGetInMPL === 0 ? 'None' : racer.shardsToGetInMPL}</td>
-      <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>
-      <td>{currentStarMaxed ? 'Maxed' : formatBigNumber(racer.tuneCoinsNeededToMax)}</td>
-      <td>{racer.universalBox}</td>
-      <td>{racer.shardsNeededToNextStar}</td>
-      <td>{formatBigNumber(racer.tuneCoinsNeededToNextStar)}</td>
-      <td>{currentStarMaxed ? 'Maxed' : shardsNeededIfMaxMPL}</td>
+      {settings.showRacerColumn.image && (
+        <td className="td-img">
+          <img className="img-cover" src={`/img/racers/${racer.name}.webp`} />
+        </td>
+      )}
+      {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{racer.collection}</td>}
+      {settings.showRacerColumn.rarity && <td data-trad={racer.rarity}>{racer.rarity}</td>}
+      {settings.showRacerColumn.role && <td data-trad={racer.role}>{racer.role}</td>}
+      {settings.showRacerColumn.name && <td data-trad={racer.name}>{racer.name}</td>}
+      {settings.showRacerColumn.currentStars && <td>{racer.currentStars}</td>}
+      {settings.showRacerColumn.starFragment && <td>{currentStarMaxed ? 'maxed' : racer.currentStarFragment}</td>}
+      {settings.showRacerColumn.superChargeLevel && <td>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>}
+      {settings.showRacerColumn.currentShards && <td>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>}
+      {settings.showRacerColumn.currentSuperChargeTokens && (
+        <td>{racer.superCharge ? (racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens) : '✘'}</td>
+      )}
+      {settings.showRacerColumn.currentMPL && <td>{racer.currentMPL}</td>}
+      {settings.showRacerColumn.highestMPL && <td>{racer.highestMPL}</td>}
+      {settings.showRacerColumn.maxMPL && <td>badge max MPL</td>}
+      {settings.showRacerColumn.shardsNeeded && <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededToMax}</td>}
+      {settings.showRacerColumn.shardsInMPL && <td>{racer.shardsToGetInMPL === 0 ? 'None' : racer.shardsToGetInMPL}</td>}
+      {settings.showRacerColumn.superChargeTokensNeeded && <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>}
+      {settings.showRacerColumn.tuneCoinsNeeded && <td>{currentStarMaxed ? 'Maxed' : formatBigNumber(racer.tuneCoinsNeededToMax)}</td>}
+      {settings.showRacerColumn.free && <td>{racer.universalBox}</td>}
+      {settings.showRacerColumn.shardsNextStar && <td>{racer.shardsNeededToNextStar}</td>}
+      {settings.showRacerColumn.coinsNextStar && <td>{formatBigNumber(racer.tuneCoinsNeededToNextStar)}</td>}
+      {settings.showRacerColumn.shardsNeededIfMaxMPL && <td>{currentStarMaxed ? 'Maxed' : shardsNeededIfMaxMPL}</td>}
       <td>
         <ModifyRacerBtn racer={racer} />
         <button data-trad="calculate" data-index="${index}">

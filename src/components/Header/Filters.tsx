@@ -5,7 +5,7 @@ export function Filters() {
   const { mode } = useContext(AppContext);
   if (mode === 'racer') {
     return (
-      <div>
+      <div className="filters">
         <button className="reset" id="reset" data-trad="reset_all">
           reset
         </button>

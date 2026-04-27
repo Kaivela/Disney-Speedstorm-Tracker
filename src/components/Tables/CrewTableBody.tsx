@@ -5,21 +5,24 @@ import { buildIElementsArray } from '../../compute/buildIElementArray';
 import type { ICrew } from '../../types/types';
 
 function Crew({ crew }: { crew: ICrew }) {
+  const { settings } = useContext(AppContext);
+
   return (
     <tr>
-      <td>{crew.releaseSeason}</td>
-      <td data-trad={crew.exclusiveTo}>{crew.exclusiveTo}</td>
-      <td>
-        <img className="td-img" src={`/img/crews/${crew.name}.webp`} />
-      </td>
-      <td data-trad={crew.collection}>{crew.collection}</td>
-      <td data-trad={crew.rarity}>{crew.rarity}</td>
-      <td data-trad={crew.name}>{crew.name}</td>
-      <td>{crew.currentStars}</td>
-      <td>{crew.currentStars === 5 ? 'maxed' : crew.currentShards}</td>
-      {/* */}
-      <td>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>
-      <td>{crew.universalBox}</td>
+      {settings.showCrewColumn.releaseSeason && <td>{crew.releaseSeason}</td>}
+      {settings.showCrewColumn.exclusive && <td data-trad={crew.exclusiveTo}>{crew.exclusiveTo}</td>}
+      {settings.showCrewColumn.image && (
+        <td>
+          <img className="td-img" src={`/img/crews/${crew.name}.webp`} />
+        </td>
+      )}
+      {settings.showCrewColumn.collection && <td data-trad={crew.collection}>{crew.collection}</td>}
+      {settings.showCrewColumn.rarity && <td data-trad={crew.rarity}>{crew.rarity}</td>}
+      {settings.showCrewColumn.name && <td data-trad={crew.name}>{crew.name}</td>}
+      {settings.showCrewColumn.level && <td>{crew.currentStars}</td>}
+      {settings.showCrewColumn.currentShards && <td>{crew.currentStars === 5 ? 'maxed' : crew.currentShards}</td>}
+      {settings.showCrewColumn.shardsNeeded && <td>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>}
+      {settings.showCrewColumn.free && <td>{crew.universalBox}</td>}
       <td>
         <ModifyCrewBtn crew={crew} />
       </td>
