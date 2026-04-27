@@ -7,6 +7,7 @@ import { AppContext } from './context/AppContext';
 // import '@fontsource/maple-mono';
 // import '@fontsource/ubuntu-mono';
 import '@fontsource/ubuntu';
+import { PreloadImgs } from './components/PreloadImgs';
 
 function App() {
   const { settings } = useContext(AppContext);
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="background" style={style}>
+      <PreloadImgs />
       <Header />
       <Filters />
       <Table />

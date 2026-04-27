@@ -12,6 +12,6 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 =========> MVP
 
-preload img
 data trad EN FR
 ACTIONS - calculate racer
+preload img done ==> add loading screen

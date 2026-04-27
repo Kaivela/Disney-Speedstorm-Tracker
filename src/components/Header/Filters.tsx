@@ -38,13 +38,13 @@ export function Filters() {
     );
   } else {
     return (
-      <div>
+      <div className="filters">
         <button className="reset" id="reset" data-trad="reset_all">
           reset
         </button>
         <input type="text" id="racerSearchInput" />
         <select id="racerFranchiseFilter" className="racerFilter">
-          <option value="">Franchise</option>
+          <option value="">Collection</option>
         </select>
         <select id="racerRarityFilter" className="racerFilter">
           <option value="">Rarity</option>
