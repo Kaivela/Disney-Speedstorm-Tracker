@@ -1,6 +1,6 @@
 // src/context/DisplayModeContext.tsx
 import { createContext } from 'react';
-import type { SettingsSaved, Mode, RacerSaved, CrewSaved } from '../types/types';
+import type { SettingsSaved, Mode, RacerSaved, CrewSaved, Filters, SortColumn } from '../types/types';
 
 export const settingsDefaults: SettingsSaved = {
   lang: 'en',
@@ -18,20 +18,20 @@ export const settingsDefaults: SettingsSaved = {
     role: true,
     name: true,
     currentStars: true,
-    starFragment: true,
-    superChargeLevel: true,
+    currentStarFragment: true,
+    currentSuperChargeLevel: true,
     currentShards: true,
     currentSuperChargeTokens: true,
     currentMPL: true,
     highestMPL: true,
     maxMPL: true,
-    shardsNeeded: true,
-    shardsInMPL: true,
+    shardsNeededToMax: true,
+    shardsToGetInMPL: true,
     superChargeTokensNeeded: true,
-    tuneCoinsNeeded: true,
+    tuneCoinsNeededToMax: true,
     free: true,
-    shardsNextStar: false,
-    coinsNextStar: false,
+    shardsNeededToNextStar: false,
+    tuneCoinsNeededToNextStar: false,
     shardsNeededIfMaxMPL: false,
   },
   showCrewColumn: {
@@ -60,6 +60,10 @@ export const AppContext = createContext<{
   settings: SettingsSaved;
   setSettings: (settings: SettingsSaved) => void;
   updateSettings: (racers: SettingsSaved) => void;
+  filters: Filters;
+  setFilters: (filters: Filters) => void;
+  sortColumn: SortColumn;
+  setSortColumn: (sortOptions: SortColumn) => void;
 }>({
   mode: 'racer',
   setMode: () => {},
@@ -72,4 +76,8 @@ export const AppContext = createContext<{
   settings: settingsDefaults,
   setSettings: () => {},
   updateSettings: () => {},
+  filters: { name: '', season: -1, collection: '', shards: '' },
+  setFilters: () => {},
+  sortColumn: { columnName: 'releaseSeason', order: 'default' },
+  setSortColumn: () => {},
 });

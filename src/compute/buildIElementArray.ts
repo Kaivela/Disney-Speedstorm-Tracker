@@ -43,6 +43,7 @@ export function buildIElementsArray(elements: RacerSaved[] | CrewSaved[]): IRace
         superChargeTokensNeeded: elementFused.superCharge ? calculateRacerSuperChargeTokenSNeeded(elementFused, 2) : 0,
         tuneCoinsNeededToNextStar: calculateCoinsNeeded(elementFused, elementFused.currentStars + 1),
         shardsNeededToNextStar: calculateRacerShardsNeeded(elementFused, elementFused.currentStars + 1),
+        shardsNeededIfMaxMPL: Math.max(shardsNeededToMax - shardsToGetInMPL, 0),
       };
     } else if (isCrewElement(elementFused))
       elementComputed = {

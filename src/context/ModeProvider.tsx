@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import type { SettingsSaved, Mode, RacerSaved, CrewSaved } from '../types/types';
+import type { SettingsSaved, Mode, RacerSaved, CrewSaved, Filters, SortColumn } from '../types/types';
 import { StorageService } from '../services/storage';
 import { migrateCrewsSave, migrateRacersSave, migrateSettingsSave, updateCollections } from '../services/migration';
 import { AppContext, settingsDefaults } from './AppContext';
@@ -12,6 +12,8 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   const [racersSaved, setRacersSaved] = useState<RacerSaved[]>([]);
   const [crewsSaved, setCrewsSaved] = useState<CrewSaved[]>([]);
   const [settings, setSettings] = useState<SettingsSaved>(settingsDefaults);
+  const [filters, setFilters] = useState<Filters>({ name: '', season: -1, collection: '', shards: '' });
+  const [sortColumn, setSortColumn] = useState<SortColumn>({ columnName: 'releaseSeason', order: 'default' });
 
   function updateRacers(racers: RacerSaved[]) {
     setRacersSaved(racers);
@@ -63,6 +65,10 @@ export function ModeProvider({ children }: { children: ReactNode }) {
         settings,
         setSettings,
         updateSettings,
+        filters,
+        setFilters,
+        sortColumn,
+        setSortColumn,
       }}>
       {children}
     </AppContext.Provider>

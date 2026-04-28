@@ -261,6 +261,7 @@ select,
   background-position: center;
   background-attachment: fixed;
   background-color: white;
+  min-height: 100vh;
 }
 
 .columnShown {
@@ -284,4 +285,8 @@ details label {
   width: fit-content;
   display: flex;
   gap: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
 }

@@ -3,9 +3,36 @@ donner l'info de savoir si le perso est dans le boost pilote (on connait l'info 
 
 ## Migrations
 
-\*\*sort column
+\*\*sort column AND show column a faire pour CREW
+vérifier que les nom de colonne sont bien les propriété d'un Icrew
 
-\*\*Filters
+\*\*Filters [filter + racer table body]
+RACER
+
+<!-- Name -->
+
+-season
+-Collection
+
+Rarity
+Role
+currentStars
+ShardsNeeded
+SuperChargeTokensNeeded
+HighestMPL
+Free
+reset
+
+CREW
+
+Name
+season
+Collection
+Rarity
+CurrentLevel
+ShardsNeeded
+Free
+reset
 
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
 -dark mode a coupler avec la mise en forme

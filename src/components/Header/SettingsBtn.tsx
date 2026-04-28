@@ -176,22 +176,24 @@ export function SettingsBtn() {
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.starFragment ? 'columnShown' : ''}>
-                starFragment
+              <label className={settings.showRacerColumn.currentStarFragment ? 'columnShown' : ''}>
+                currentStarFragment
                 <input
-                  defaultChecked={settings.showRacerColumn.starFragment}
+                  defaultChecked={settings.showRacerColumn.currentStarFragment}
                   className="hidden"
-                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, starFragment: event.currentTarget.checked } })}
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, currentStarFragment: event.currentTarget.checked } })
+                  }
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.superChargeLevel ? 'columnShown' : ''}>
+              <label className={settings.showRacerColumn.currentSuperChargeLevel ? 'columnShown' : ''}>
                 superChargeLevel
                 <input
-                  defaultChecked={settings.showRacerColumn.superChargeLevel}
+                  defaultChecked={settings.showRacerColumn.currentSuperChargeLevel}
                   className="hidden"
                   onChange={(event) =>
-                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, superChargeLevel: event.currentTarget.checked } })
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, currentSuperChargeLevel: event.currentTarget.checked } })
                   }
                   type="checkbox"
                 />
@@ -243,21 +245,25 @@ export function SettingsBtn() {
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.shardsNeeded ? 'columnShown' : ''}>
+              <label className={settings.showRacerColumn.shardsNeededToMax ? 'columnShown' : ''}>
                 shardsNeeded
                 <input
-                  defaultChecked={settings.showRacerColumn.shardsNeeded}
+                  defaultChecked={settings.showRacerColumn.shardsNeededToMax}
                   className="hidden"
-                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNeeded: event.currentTarget.checked } })}
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNeededToMax: event.currentTarget.checked } })
+                  }
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.shardsInMPL ? 'columnShown' : ''}>
+              <label className={settings.showRacerColumn.shardsToGetInMPL ? 'columnShown' : ''}>
                 shardsInMPL
                 <input
-                  defaultChecked={settings.showRacerColumn.shardsInMPL}
+                  defaultChecked={settings.showRacerColumn.shardsToGetInMPL}
                   className="hidden"
-                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsInMPL: event.currentTarget.checked } })}
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsToGetInMPL: event.currentTarget.checked } })
+                  }
                   type="checkbox"
                 />
               </label>
@@ -272,13 +278,13 @@ export function SettingsBtn() {
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.tuneCoinsNeeded ? 'columnShown' : ''}>
+              <label className={settings.showRacerColumn.tuneCoinsNeededToMax ? 'columnShown' : ''}>
                 tuneCoinsNeeded
                 <input
-                  defaultChecked={settings.showRacerColumn.tuneCoinsNeeded}
+                  defaultChecked={settings.showRacerColumn.tuneCoinsNeededToMax}
                   className="hidden"
                   onChange={(event) =>
-                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, tuneCoinsNeeded: event.currentTarget.checked } })
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, tuneCoinsNeededToMax: event.currentTarget.checked } })
                   }
                   type="checkbox"
                 />
@@ -292,28 +298,30 @@ export function SettingsBtn() {
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.shardsNextStar ? 'columnShown' : ''}>
+              <label className={settings.showRacerColumn.shardsNeededToNextStar ? 'columnShown' : ''}>
                 shardsNextStar
                 <input
-                  defaultChecked={settings.showRacerColumn.shardsNextStar}
+                  defaultChecked={settings.showRacerColumn.shardsNeededToNextStar}
                   className="hidden"
                   onChange={(event) =>
-                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNextStar: event.currentTarget.checked } })
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, shardsNeededToNextStar: event.currentTarget.checked } })
                   }
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showRacerColumn.coinsNextStar ? 'columnShown' : ''}>
-                coinsNextStar
+              <label className={settings.showRacerColumn.tuneCoinsNeededToNextStar ? 'columnShown' : ''}>
+                tuneCoinsToNextStar
                 <input
-                  defaultChecked={settings.showRacerColumn.coinsNextStar}
+                  defaultChecked={settings.showRacerColumn.tuneCoinsNeededToNextStar}
                   className="hidden"
-                  onChange={(event) => saveSettings({ showRacerColumn: { ...settings.showRacerColumn, coinsNextStar: event.currentTarget.checked } })}
+                  onChange={(event) =>
+                    saveSettings({ showRacerColumn: { ...settings.showRacerColumn, tuneCoinsNeededToNextStar: event.currentTarget.checked } })
+                  }
                   type="checkbox"
                 />
               </label>
               <label className={settings.showRacerColumn.shardsNeededIfMaxMPL ? 'columnShown' : ''}>
-                shardsNeededIfMaxMPL
+                shardsIfMaxMPL
                 <input
                   defaultChecked={settings.showRacerColumn.shardsNeededIfMaxMPL}
                   className="hidden"
@@ -382,12 +390,12 @@ export function SettingsBtn() {
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showCrewColumn.level ? 'columnShown' : ''}>
+              <label className={settings.showCrewColumn.currentStars ? 'columnShown' : ''}>
                 Level
                 <input
-                  defaultChecked={settings.showCrewColumn.level}
+                  defaultChecked={settings.showCrewColumn.currentStars}
                   className="hidden"
-                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, level: event.currentTarget.checked } })}
+                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, currentStars: event.currentTarget.checked } })}
                   type="checkbox"
                 />
               </label>
@@ -400,12 +408,14 @@ export function SettingsBtn() {
                   type="checkbox"
                 />
               </label>
-              <label className={settings.showCrewColumn.shardsNeeded ? 'columnShown' : ''}>
+              <label className={settings.showCrewColumn.shardsNeededToMax ? 'columnShown' : ''}>
                 shardsNeeded
                 <input
-                  defaultChecked={settings.showCrewColumn.shardsNeeded}
+                  defaultChecked={settings.showCrewColumn.shardsNeededToMax}
                   className="hidden"
-                  onChange={(event) => saveSettings({ showCrewColumn: { ...settings.showCrewColumn, shardsNeeded: event.currentTarget.checked } })}
+                  onChange={(event) =>
+                    saveSettings({ showCrewColumn: { ...settings.showCrewColumn, shardsNeededToMax: event.currentTarget.checked } })
+                  }
                   type="checkbox"
                 />
               </label>

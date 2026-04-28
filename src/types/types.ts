@@ -7,6 +7,16 @@ export type MPLTuneCoinReward = 'Mickey' | 'S0To4' | 'S5To9' | 'S10To14Mid' | 'S
 export type Mode = 'racer' | 'crew';
 export type Collections = Record<string, Collection>;
 
+export type Order = 'desc' | 'asc' | 'default';
+export type Filters = { name: string; season: number; collection: string; shards: string };
+export type SortColumn = { columnName: SortableRacerColumns; order: Order };
+
+export type SortableRacerColumns = NumberKeys<IRacer>;
+
+type NumberKeys<T> = {
+  [K in keyof T]: T[K] extends number ? K : never;
+}[keyof T];
+
 export interface Collection {
   racers: IRacer[];
   crews: ICrew[];
@@ -21,6 +31,7 @@ export interface RacerComputed {
   tuneCoinsNeededToMax: number;
   shardsNeededToNextStar: number;
   tuneCoinsNeededToNextStar: number;
+  shardsNeededIfMaxMPL: number;
 }
 
 export interface RacerBlank {
@@ -97,20 +108,20 @@ export interface SettingsSaved {
     role: boolean;
     name: boolean;
     currentStars: boolean;
-    starFragment: boolean;
-    superChargeLevel: boolean;
+    currentStarFragment: boolean;
+    currentSuperChargeLevel: boolean;
     currentShards: boolean;
     currentSuperChargeTokens: boolean;
     currentMPL: boolean;
     highestMPL: boolean;
     maxMPL: boolean;
-    shardsNeeded: boolean;
-    shardsInMPL: boolean;
+    shardsNeededToMax: boolean;
+    shardsToGetInMPL: boolean;
     superChargeTokensNeeded: boolean;
-    tuneCoinsNeeded: boolean;
+    tuneCoinsNeededToMax: boolean;
     free: boolean;
-    shardsNextStar: boolean;
-    coinsNextStar: boolean;
+    shardsNeededToNextStar: boolean;
+    tuneCoinsNeededToNextStar: boolean;
     shardsNeededIfMaxMPL: boolean;
   };
   showCrewColumn: {
@@ -120,9 +131,9 @@ export interface SettingsSaved {
     collection: boolean;
     rarity: boolean;
     name: boolean;
-    level: boolean;
+    currentStars: boolean;
     currentShards: boolean;
-    shardsNeeded: boolean;
+    shardsNeededToMax: boolean;
     free: boolean;
   };
 }
