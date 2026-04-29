@@ -17,7 +17,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
           onClose();
         }
       }}>
-      <div className="relative overflow-scroll mt-5 mb-5 max-h-[90vh] bg-surface-200/50 border border-white rounded-lg text-black backdrop-blur-sm px-8 py-6">
+      <div className="relative overflow-scroll mt-5 mb-5 max-h-[90vh] bg-surface-200/90 border border-white rounded-lg text-black backdrop-blur-sm px-8 py-6">
         <button className="fixed top-1 right-2" onClick={onClose}>
           <X className="bg-black/20 rounded-full w-8 h-8 p-1 hover:scale-[1.1]" />
         </button>
