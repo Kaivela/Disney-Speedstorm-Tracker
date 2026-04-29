@@ -39,7 +39,7 @@ function Racer({ racer }: { racer: IRacer }) {
       <td>
         <div className="flex flex-col gap-2 h-full items-center">
           <ModifyRacerBtn racer={racer} />
-          <button className="btn btn-sm  preset-filled-primary-50-950" data-trad="calculate" data-index="${index}">
+          <button className="btn btn-sm hidden preset-filled-primary-50-950" data-trad="calculate" data-index="${index}">
             Calculate
           </button>
         </div>
