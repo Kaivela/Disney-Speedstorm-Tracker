@@ -13,7 +13,11 @@ function Racer({ racer }: { racer: IRacer }) {
   return (
     <tr>
       {settings.showRacerColumn.releaseSeason && <td>{racer.releaseSeason}</td>}
-      {settings.showRacerColumn.image && <ElementImgHtml element={racer} />}
+      {settings.showRacerColumn.image && (
+        <td className="td-img">
+          <ElementImgHtml element={racer} />
+        </td>
+      )}
       {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{racer.collection}</td>}
       {settings.showRacerColumn.rarity && <td data-trad={racer.rarity}>{racer.rarity}</td>}
       {settings.showRacerColumn.role && <td data-trad={racer.role}>{racer.role}</td>}

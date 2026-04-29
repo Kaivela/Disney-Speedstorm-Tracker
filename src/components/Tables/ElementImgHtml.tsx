@@ -10,15 +10,13 @@ export function ElementImgHtml({ element }: { element: IRacer | ICrew }) {
   else elementtype = 'crews';
   // TEMPLATE
   return (
-    <td className="td-img">
-      <img
-        className="img-cover"
-        src={`/img/${elementtype}/${element.name}.webp`}
-        onError={(e) => {
-          e.currentTarget.onerror = null; // évite une boucle infinie
-          e.currentTarget.src = '/img/Locked.webp';
-        }}
-      />
-    </td>
+    <img
+      className="img-cover"
+      src={`/img/${elementtype}/${element.name}.webp`}
+      onError={(e) => {
+        e.currentTarget.onerror = null; // évite une boucle infinie
+        e.currentTarget.src = '/img/Locked.webp';
+      }}
+    />
   );
 }

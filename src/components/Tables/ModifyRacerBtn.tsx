@@ -44,7 +44,14 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
           <div>
-            <img className="edit-element-img" src={`/img/racers/${racer.name}.webp`} />
+            <img
+              className="edit-element-img"
+              src={`/img/racers/${racer.name}.webp`}
+              onError={(e) => {
+                e.currentTarget.onerror = null; // évite une boucle infinie
+                e.currentTarget.src = '/img/Locked.webp';
+              }}
+            />
             <h2 className="h4">Edit {racer.name}</h2>
           </div>
           <form

@@ -33,7 +33,14 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
           <div className="mb-5">
-            <img className="edit-element-img" src={`/img/crews/${crew.name}.webp`} />
+            <img
+              className="edit-element-img"
+              src={`/img/crews/${crew.name}.webp`}
+              onError={(e) => {
+                e.currentTarget.onerror = null; // évite une boucle infinie
+                e.currentTarget.src = '/img/Locked.webp';
+              }}
+            />
             <h2 className="h4">Edit {crew.name}</h2>
           </div>
           <form

@@ -12,7 +12,11 @@ function Crew({ crew }: { crew: ICrew }) {
     <tr>
       {settings.showCrewColumn.releaseSeason && <td>{crew.releaseSeason}</td>}
       {settings.showCrewColumn.exclusive && <td data-trad={crew.exclusiveTo}>{crew.exclusiveTo}</td>}
-      {settings.showCrewColumn.image && <ElementImgHtml element={crew} />}
+      {settings.showCrewColumn.image && (
+        <td className="td-img">
+          <ElementImgHtml element={crew} />
+        </td>
+      )}
       {settings.showCrewColumn.collection && <td data-trad={crew.collection}>{crew.collection}</td>}
       {settings.showCrewColumn.rarity && <td data-trad={crew.rarity}>{crew.rarity}</td>}
       {settings.showCrewColumn.name && <td data-trad={crew.name}>{crew.name}</td>}
