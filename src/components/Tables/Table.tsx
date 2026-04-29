@@ -10,7 +10,6 @@ function sortRacerClickHandler(
   setSortRacerColumn: (sortOptions: SortRacerColumn) => void
 ) {
   const columnName = event.currentTarget?.dataset.sort as SortableRacerColumns;
-  console.log({ columnName });
   // faire ça proprement
   document.querySelectorAll('[data-sort]').forEach((el) => {
     if (el instanceof HTMLElement) {
@@ -40,7 +39,12 @@ function sortCrewClickHandler(
   setSortCrewColumn: (sortOptions: SortCrewColumn) => void
 ) {
   const columnName = event.currentTarget?.dataset.sort as SortableCrewColumns;
-  console.log({ columnName });
+  // faire ça proprement
+  document.querySelectorAll('[data-sort]').forEach((el) => {
+    if (el instanceof HTMLElement) {
+      el.dataset.order = '';
+    }
+  });
   if (sortColumn.columnName === columnName) {
     const nextOrder =
       (
@@ -51,8 +55,10 @@ function sortCrewClickHandler(
         } as const
       )[sortColumn.order] || 'default';
     setSortCrewColumn({ columnName, order: nextOrder });
+    event.currentTarget.dataset.order = nextOrder;
   } else {
     setSortCrewColumn({ columnName, order: 'asc' });
+    event.currentTarget.dataset.order = 'asc';
   }
 }
 
