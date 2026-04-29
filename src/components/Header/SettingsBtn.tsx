@@ -29,7 +29,7 @@ export function SettingsBtn() {
             <span></span>
 
             <label htmlFor="trad_button" data-trad="change_lang">
-              Lang
+              Lang (coming soon)
             </label>
 
             <ToggleGroup className="bg-black/20 backdrop-blur-xs w-min">
@@ -42,7 +42,7 @@ export function SettingsBtn() {
             </ToggleGroup>
 
             <label htmlFor="darkMode" data-trad="dark_mode">
-              Dark Mode (Work In Progress):
+              Dark Mode (coming soon) :
             </label>
             <input type="checkbox" className="checkbox" />
 
