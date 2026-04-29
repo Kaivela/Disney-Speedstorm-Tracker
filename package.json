@@ -9,7 +9,8 @@
     "test": "vitest",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "start": "npx serve -l 4000 dist/"
   },
   "dependencies": {
     "@fontsource/ubuntu": "^5.2.8",
@@ -39,6 +40,7 @@
     "globals": "^17.4.0",
     "lucide-react": "^1.12.0",
     "prettier": "^3.8.2",
+    "serve": "^14.2.6",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.0",
     "vite": "^8.0.4",
