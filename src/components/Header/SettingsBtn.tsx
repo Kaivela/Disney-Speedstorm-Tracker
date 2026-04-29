@@ -122,7 +122,7 @@ export function SettingsBtn() {
             </select>
           </div>
           <details>
-            <summary className="p-3 border my-4 pointer rounded-md">Show Racer Column</summary>
+            <summary className="p-3 border my-4 cursor-pointer rounded-md">Show Racer Column</summary>
             <div className="details-options">
               <label className={settings.showRacerColumn.releaseSeason ? 'columnShown' : ''}>
                 Season
@@ -345,7 +345,7 @@ export function SettingsBtn() {
             </div>
           </details>
           <details className="mt-4">
-            <summary className="p-3 border mb-4 pointer rounded-md">Show Crew Column</summary>
+            <summary className="p-3 border mb-4 cursor-pointer rounded-md">Show Crew Column</summary>
             <div className="details-options">
               <label className={settings.showCrewColumn.releaseSeason ? 'columnShown' : ''}>
                 Season
