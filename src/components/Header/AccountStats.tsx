@@ -50,7 +50,7 @@ export function AccountStats() {
 
   // TEMPLATE
   return (
-    <div className="AccountStats">
+    <div className="rounded-2xl bg-black/60 py-4 px-8 text-sm flex flex-col gap-0.5 m-auto w-fit backdrop-blur-xs">
       <span>Account Stats</span>
       <p className="statsRow">Tune Coins required to have each Racer at 6 Stars : {formatBigNumber(totalTuneCoinsNeeded)}</p>
       <p className="statsRow">Racer Shards left to collect : {formatBigNumber(totalRacerShardsNeeded)}</p>

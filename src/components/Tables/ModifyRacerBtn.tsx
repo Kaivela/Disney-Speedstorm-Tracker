@@ -38,16 +38,17 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   // TEMPLATE
   return (
     <>
-      <button data-trad="modify" onClick={() => setIsOpen(true)}>
+      <button className="btn btn-sm preset-filled-primary-50-950" data-trad="modify" onClick={() => setIsOpen(true)}>
         Edit
       </button>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
           <div>
             <img className="edit-element-img" src={`/img/racers/${racer.name}.webp`} />
-            <h2>Edit {racer.name}</h2>
+            <h2 className="h4">Edit {racer.name}</h2>
           </div>
           <form
+            className="grid grid-cols-2 gap-2"
             onSubmit={(e) => {
               e.preventDefault();
               saveRacerStateAndStorage();
@@ -56,6 +57,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
             }}>
             <label htmlFor="racerCurrentStars">Current Stars :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max="6"
@@ -67,6 +69,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             <label htmlFor="racerCurrentStarFragment">Current Star Fragments :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max="5"
@@ -79,6 +82,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               <>
                 <label htmlFor="racerCurrentSuperChargeLevel">Current Super Charge Level :</label>
                 <input
+                  className="input"
                   type="number"
                   min="0"
                   max="2"
@@ -91,6 +95,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             <label htmlFor="racerCurrentShards">Current Shards :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max="260"
@@ -103,6 +108,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               <>
                 <label htmlFor="racerCurrentSuperChargeTokens">Current Super Charge Tokens :</label>
                 <input
+                  className="input"
                   type="number"
                   min="0"
                   max="60"
@@ -115,6 +121,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             <label htmlFor="racerCurrentMPL">Current MPL :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max="40"
@@ -125,6 +132,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             <label htmlFor="racerHighestMPL">Highest MPL :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max="40"
@@ -132,15 +140,14 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               onChange={(event) => setHighestMPL(Number(event.currentTarget.value))}
               required
             />
-
-            <div style={{ marginTop: '10px' }}>
-              <button type="button" onClick={() => setIsOpen(false)}>
+            <div className="mt-5 flex justify-around gap-2 col-span-full">
+              <button className="btn preset-filled-error-50-950" onClick={() => setIsOpen(false)}>
                 Cancel
               </button>
+              <button className="btn preset-filled-primary-50-950" type="submit" data-trad="saveRacer">
+                Save Racer
+              </button>
             </div>
-            <button className="btn" type="submit" data-trad="saveRacer">
-              Save Racer
-            </button>
           </form>
         </Modal>
       )}

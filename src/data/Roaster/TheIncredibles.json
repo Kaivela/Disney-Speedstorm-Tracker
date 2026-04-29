@@ -45,6 +45,17 @@
       "MPLTuneCoinReward": "S10ToLatest"
     },
     {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "role": "Trickster",
+      "name": "Syndrome",
+      "superCharge": true,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
+      "MPLTuneCoinReward": "S10ToLatest"
+    },
+    {
       "releaseSeason": 11,
       "rarity": "Rare",
       "role": "Defender",
@@ -57,6 +68,12 @@
     }
   ],
   "crews": [
+    {
+      "releaseSeason": 19,
+      "rarity": "Common",
+      "name": "Robotic Bird",
+      "universalBox": "✘"
+    },
     {
       "releaseSeason": 11,
       "rarity": "Common",
@@ -86,6 +103,12 @@
       "rarity": "Common",
       "name": "Winston Deavor",
       "universalBox": "✔"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "name": "Mirage",
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 11,
@@ -144,6 +167,13 @@
       "name": "Edna Mode",
       "universalBox": "✔",
       "exclusiveTo": "Mrs. Incredible"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Epic",
+      "name": "Nomanisan Island Guards",
+      "universalBox": "✘",
+      "exclusiveTo": "Syndrome"
     },
     {
       "releaseSeason": 11,

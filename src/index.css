@@ -1,57 +1,35 @@
+@import 'tailwindcss';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton-react';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
-  /* font-family: 'Maple Mono', monospace; */
   /* font-family: 'Ubuntu Mono', monospace; */
   font-family: 'Ubuntu', sans-serif;
+  padding: 0;
   margin: 0;
 }
 
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: white;
+  min-height: 100vh;
+}
+
 h1 {
+  font-family: 'Maple Mono', monospace;
   text-align: center;
-  margin: 10px 0;
+  padding-top: 10px;
+  margin: 0 0 10px 0;
   color: white;
-}
-/* 
-.Header {
-  border: 1px solid black;
-} */
-
-.btn {
-  border: 1px solid black;
-  background-color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.btn-group {
-  display: flex;
-  border: 1px solid black;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.lang-btn-group {
-  display: flex;
-  border: 1px solid black;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: auto;
-  width: fit-content;
-}
-
-.btn-group button {
-  border: none;
-  background-color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: 1px solid black;
-}
-
-.btn-group button:hover {
-  background-color: #f0f0f0;
+  background: linear-gradient(#000000aa, #00000000);
+  height: 51px;
 }
 
 .HeaderBtns {
@@ -59,23 +37,24 @@ h1 {
   justify-content: space-around;
 }
 
-.AccountStats {
-  border: 1px solid black;
-  border-radius: 1rem;
-  color: white;
-  background-color: #00000080;
-  width: fit-content;
-  margin: auto;
-  padding: 1rem 3rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .SettingsBtn {
-  background-color: black;
+  border: none;
+  border-radius: 50%;
+  background-color: #00000080;
   position: absolute;
   top: 10px;
   right: 10px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+}
+
+.SettingsBtn:hover {
+  zoom: 1.1;
+  background-color: #33333380;
 }
 
 .settings {
@@ -83,16 +62,13 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-}
-
-.settingsPanel {
-  display: block;
-  backdrop-filter: blur(5px);
+  color: inherit;
 }
 
 table {
   border-collapse: collapse;
   margin: auto;
+  /* width: 100%; */
 }
 
 thead {
@@ -100,7 +76,6 @@ thead {
   top: 0;
 }
 
-th,
 td {
   border: 1px solid black;
   padding: 3px;
@@ -111,7 +86,6 @@ td {
 th {
   max-width: 85px;
   box-sizing: border-box;
-  background-color: black;
   color: white;
 }
 
@@ -186,23 +160,26 @@ th.TuneCoin {
 }
 
 .scrollButton {
-  background-color: #002fff;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000080;
+  height: 40px;
+  width: 40px;
   color: white;
   border: none;
-  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 18px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hidden {
-  display: none;
+.scrollButton:hover {
+  background-color: #33333380;
 }
 
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.hidden {
+  display: none;
 }
 
 .overlay {
@@ -230,14 +207,6 @@ form {
   margin-left: 20px;
   margin-top: 0;
   margin-bottom: 0;
-  /* list-style-position: inside; */
-}
-
-input,
-select,
-.settings button {
-  margin: auto;
-  width: fit-content;
 }
 
 .edit-element-img,
@@ -255,15 +224,6 @@ select,
   right: 0;
 }
 
-.background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: white;
-  min-height: 100vh;
-}
-
 .columnShown {
   opacity: 1;
 }
@@ -277,16 +237,33 @@ details label {
 .details-options {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
 }
 
-.filters {
-  margin-bottom: 1rem;
-  margin: auto;
+.details-options label {
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid black;
   width: fit-content;
-  display: flex;
-  gap: 1rem;
+  cursor: pointer;
+  padding-right: 5px;
 }
 
-.pointer {
-  cursor: pointer;
+th[data-order='asc'],
+th[data-order='desc'] {
+  position: relative;
+}
+
+th[data-order='asc']::after {
+  position: absolute;
+  content: '▲';
+  bottom: 0;
+  right: 0;
+}
+
+th[data-order='desc']::after {
+  position: absolute;
+  content: '▼';
+  bottom: 0;
+  right: 0;
 }

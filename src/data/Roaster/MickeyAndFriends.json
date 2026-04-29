@@ -56,6 +56,17 @@
       "MPLTuneCoinReward": "S0To4"
     },
     {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "role": "Brawler",
+      "name": "Pete",
+      "superCharge": false,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
+      "MPLTuneCoinReward": "S10ToLatest"
+    },
+    {
       "releaseSeason": 15,
       "rarity": "Epic",
       "role": "Defender",
@@ -90,6 +101,12 @@
     }
   ],
   "crews": [
+    {
+      "releaseSeason": 19,
+      "rarity": "Common",
+      "name": "Mortimer Mouse",
+      "universalBox": "✘"
+    },
     {
       "releaseSeason": 15,
       "rarity": "Common",
@@ -149,6 +166,12 @@
       "rarity": "Common",
       "name": "Gus Goose",
       "universalBox": "✔"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "name": "Phantom Blot",
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 15,
@@ -232,6 +255,13 @@
       "name": "Fifi The Peke",
       "universalBox": "✘",
       "exclusiveTo": "Minnie"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Epic",
+      "name": "The Beagle Boys",
+      "universalBox": "✘",
+      "exclusiveTo": "Pete"
     },
     {
       "releaseSeason": 15,

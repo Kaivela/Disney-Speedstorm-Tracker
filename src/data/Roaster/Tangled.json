@@ -1,6 +1,17 @@
 {
   "racers": [
     {
+      "releaseSeason": 19,
+      "rarity": "Epic",
+      "role": "Trickster",
+      "name": "Mother Gothel",
+      "superCharge": false,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
+      "MPLTuneCoinReward": "S10ToLatest"
+    },
+    {
       "releaseSeason": 10,
       "rarity": "Epic",
       "role": "Defender",
@@ -14,6 +25,12 @@
   ],
   "crews": [
     {
+      "releaseSeason": 19,
+      "rarity": "Common",
+      "name": "Attila Buckethead",
+      "universalBox": "✘"
+    },
+    {
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "Shorty",
@@ -23,6 +40,12 @@
       "releaseSeason": 10,
       "rarity": "Common",
       "name": "Vladimir",
+      "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "name": "Big Nose",
       "universalBox": "✘"
     },
     {
@@ -36,6 +59,13 @@
       "rarity": "Rare",
       "name": "King Frederic And Queen Arianna",
       "universalBox": "✘"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Epic",
+      "name": "The Stabbington Brothers",
+      "universalBox": "✘",
+      "exclusiveTo": "Mother Gothel"
     },
     {
       "releaseSeason": 10,

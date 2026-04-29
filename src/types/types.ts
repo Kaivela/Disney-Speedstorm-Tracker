@@ -7,11 +7,34 @@ export type MPLTuneCoinReward = 'Mickey' | 'S0To4' | 'S5To9' | 'S10To14Mid' | 'S
 export type Mode = 'racer' | 'crew';
 export type Collections = Record<string, Collection>;
 
+export type RacerFilters = {
+  name: string;
+  season: number;
+  collection: string;
+  rarity: string;
+  role: string;
+  shardsNeeded: string;
+  currentStars: number;
+  highestMPL: string;
+  universalBox: string;
+  superChargeTokensNeeded: string;
+};
+export type CrewFilters = {
+  name: string;
+  season: number;
+  collection: string;
+  rarity: string;
+  shardsNeeded: string;
+  currentStars: number;
+  universalBox: string;
+};
+
 export type Order = 'desc' | 'asc' | 'default';
-export type Filters = { name: string; season: number; collection: string; shards: string };
-export type SortColumn = { columnName: SortableRacerColumns; order: Order };
+export type SortRacerColumn = { columnName: SortableRacerColumns; order: Order };
+export type SortCrewColumn = { columnName: SortableCrewColumns; order: Order };
 
 export type SortableRacerColumns = NumberKeys<IRacer>;
+export type SortableCrewColumns = NumberKeys<Omit<ICrew, 'exclusiveTo'>>;
 
 type NumberKeys<T> = {
   [K in keyof T]: T[K] extends number ? K : never;

@@ -43,9 +43,26 @@
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
       "MPLTuneCoinReward": "S10ToLatest"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Epic",
+      "role": "Defender",
+      "name": "Yokai",
+      "superCharge": false,
+      "universalBox": "✘",
+      "MPLTokenOld": false,
+      "MPLOldShardsReward": false,
+      "MPLTuneCoinReward": "S10ToLatest"
     }
   ],
   "crews": [
+    {
+      "releaseSeason": 19,
+      "rarity": "Common",
+      "name": "Snips",
+      "universalBox": "✘"
+    },
     {
       "releaseSeason": 18,
       "rarity": "Common",
@@ -75,6 +92,12 @@
       "rarity": "Common",
       "name": "Little Yama",
       "universalBox": "✔"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "name": "Yama's Thugs",
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 18,
@@ -133,6 +156,13 @@
       "name": "Sofia",
       "universalBox": "✘",
       "exclusiveTo": "Honey Lemon"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Epic",
+      "name": "Abigail Callaghan",
+      "universalBox": "✘",
+      "exclusiveTo": "Yokai"
     }
   ]
 }

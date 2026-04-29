@@ -27,16 +27,17 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
   // TEMPLATE
   return (
     <>
-      <button data-trad="modify" onClick={() => setIsOpen(true)}>
+      <button className="btn btn-sm preset-filled-primary-50-950" data-trad="modify" onClick={() => setIsOpen(true)}>
         Edit
       </button>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
-          <div>
+          <div className="mb-5">
             <img className="edit-element-img" src={`/img/crews/${crew.name}.webp`} />
-            <h2>Edit {crew.name}</h2>
+            <h2 className="h4">Edit {crew.name}</h2>
           </div>
           <form
+            className="grid grid-cols-2 gap-2"
             onSubmit={(e) => {
               e.preventDefault();
               saveCrewStateAndStorage();
@@ -44,6 +45,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
             }}>
             <label htmlFor="crewCurrentStars">Current Stars :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max="5"
@@ -55,6 +57,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
 
             <label htmlFor="crewCurrentShards">Current Shards :</label>
             <input
+              className="input"
               type="number"
               min="0"
               max={crew.rarity === 'Epic' ? '100' : '75'}
@@ -62,15 +65,14 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
               onChange={(event) => setCurrentShards(Number(event.currentTarget.value))}
               required
             />
-
-            <div style={{ marginTop: '10px' }}>
-              <button type="button" onClick={() => setIsOpen(false)}>
+            <div className="mt-5 flex justify-around gap-2 col-span-full">
+              <button className="btn preset-filled-error-50-950" type="button" onClick={() => setIsOpen(false)}>
                 Cancel
               </button>
+              <button className="btn preset-filled-primary-50-950" type="submit" data-trad="saveCrew">
+                Save Crew
+              </button>
             </div>
-            <button className="btn" type="submit" data-trad="saveCrew">
-              Save Crew
-            </button>
           </form>
         </Modal>
       )}

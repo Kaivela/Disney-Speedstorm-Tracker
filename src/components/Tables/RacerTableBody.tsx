@@ -4,6 +4,7 @@ import type { IRacer } from '../../types/types';
 import { ModifyRacerBtn } from './ModifyRacerBtn';
 import { buildIElementsArray } from '../../compute/buildIElementArray';
 import { formatBigNumber } from '../../compute/calculs';
+import { ElementImgHtml } from './ElementImgHtml';
 
 function Racer({ racer }: { racer: IRacer }) {
   const { settings } = useContext(AppContext);
@@ -12,11 +13,7 @@ function Racer({ racer }: { racer: IRacer }) {
   return (
     <tr>
       {settings.showRacerColumn.releaseSeason && <td>{racer.releaseSeason}</td>}
-      {settings.showRacerColumn.image && (
-        <td className="td-img">
-          <img className="img-cover" src={`/img/racers/${racer.name}.webp`} />
-        </td>
-      )}
+      {settings.showRacerColumn.image && <ElementImgHtml element={racer} />}
       {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{racer.collection}</td>}
       {settings.showRacerColumn.rarity && <td data-trad={racer.rarity}>{racer.rarity}</td>}
       {settings.showRacerColumn.role && <td data-trad={racer.role}>{racer.role}</td>}
@@ -40,10 +37,12 @@ function Racer({ racer }: { racer: IRacer }) {
       {settings.showRacerColumn.tuneCoinsNeededToNextStar && <td>{formatBigNumber(racer.tuneCoinsNeededToNextStar)}</td>}
       {settings.showRacerColumn.shardsNeededIfMaxMPL && <td>{currentStarMaxed ? 'Maxed' : shardsNeededIfMaxMPL}</td>}
       <td>
-        <ModifyRacerBtn racer={racer} />
-        <button data-trad="calculate" data-index="${index}">
-          Calculate
-        </button>
+        <div className="flex flex-col gap-2 h-full items-center">
+          <ModifyRacerBtn racer={racer} />
+          <button className="btn btn-sm  preset-filled-primary-50-950" data-trad="calculate" data-index="${index}">
+            Calculate
+          </button>
+        </div>
       </td>
     </tr>
   );
@@ -51,22 +50,29 @@ function Racer({ racer }: { racer: IRacer }) {
 
 function RacerList() {
   // LOGIC
-  const { racersSaved, filters, sortColumn } = useContext(AppContext);
+  const { racersSaved, racerFilters, sortRacerColumn } = useContext(AppContext);
   const iRacers = buildIElementsArray(racersSaved);
   return iRacers
     .filter((racer) => {
       let nameFilter = true;
       let seasonFilter = true;
+      let collectionFilter = true;
+      let rarityFilter = true;
+      let roleFilter = true;
       let shardsFilter = true;
+      let highestMPLFilter = true;
+      let starsFilter = true;
+      let freeFilter = true;
+      let superChargeTokensNeededFilter = true;
 
-      if (filters.name) {
-        nameFilter = racer.name.toLowerCase().includes(filters.name.toLowerCase());
+      if (racerFilters.name) {
+        nameFilter = racer.name.toLowerCase().includes(racerFilters.name.toLowerCase());
       }
-      if (filters.season !== -1) {
-        seasonFilter = filters.season === -1 ? true : racer.releaseSeason === filters.season;
+      if (racerFilters.season !== -1) {
+        seasonFilter = racer.releaseSeason === racerFilters.season;
       }
-      if (filters.shards) {
-        switch (filters.shards) {
+      if (racerFilters.shardsNeeded) {
+        switch (racerFilters.shardsNeeded) {
           case 'above50':
             shardsFilter = racer.shardsNeededToMax > 50;
             break;
@@ -88,19 +94,72 @@ function RacerList() {
             break;
         }
       }
-      return nameFilter && seasonFilter && shardsFilter;
+      if (racerFilters.collection) {
+        collectionFilter = racer.collection.toLowerCase().includes(racerFilters.collection.toLowerCase());
+      }
+      if (racerFilters.rarity) {
+        rarityFilter = racer.rarity.toLowerCase().includes(racerFilters.rarity.toLowerCase());
+      }
+      if (racerFilters.role) {
+        roleFilter = racer.role.toLowerCase().includes(racerFilters.role.toLowerCase());
+      }
+      if (racerFilters.highestMPL) {
+        switch (racerFilters.highestMPL) {
+          case 'not40':
+            highestMPLFilter = racer.highestMPL < 40;
+            break;
+
+          case 'between21and50':
+            highestMPLFilter = racer.highestMPL === 40;
+            break;
+        }
+      }
+      if (racerFilters.currentStars !== -1) {
+        starsFilter = racer.currentStars === racerFilters.currentStars;
+      }
+      if (racerFilters.universalBox) {
+        freeFilter = racer.universalBox === racerFilters.universalBox;
+      }
+      if (racerFilters.superChargeTokensNeeded) {
+        switch (racerFilters.superChargeTokensNeeded) {
+          case '40+':
+            superChargeTokensNeededFilter = racer.superChargeTokensNeeded > 40;
+            break;
+
+          case '40-':
+            superChargeTokensNeededFilter = racer.superChargeTokensNeeded <= 40 && racer.superChargeTokensNeeded >= 1;
+            break;
+
+          case '0':
+            superChargeTokensNeededFilter = racer.superChargeTokensNeeded === 0;
+            break;
+        }
+      }
+
+      // TEMPLATE
+      return (
+        nameFilter &&
+        seasonFilter &&
+        shardsFilter &&
+        collectionFilter &&
+        rarityFilter &&
+        roleFilter &&
+        starsFilter &&
+        freeFilter &&
+        highestMPLFilter &&
+        superChargeTokensNeededFilter
+      );
     })
     .sort((racerA: IRacer, racerB: IRacer) => {
-      if (sortColumn.order === 'asc') {
-        return racerA[sortColumn.columnName] - racerB[sortColumn.columnName];
+      if (sortRacerColumn.order === 'asc') {
+        return racerA[sortRacerColumn.columnName] - racerB[sortRacerColumn.columnName];
       }
-      if (sortColumn.order === 'desc') {
-        return racerB[sortColumn.columnName] - racerA[sortColumn.columnName];
+      if (sortRacerColumn.order === 'desc') {
+        return racerB[sortRacerColumn.columnName] - racerA[sortRacerColumn.columnName];
       }
       return 0;
     })
     .map((racer) => {
-      // TEMPLATE
       return <Racer key={racer.name} racer={racer} />;
     });
 }

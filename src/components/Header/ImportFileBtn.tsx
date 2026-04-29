@@ -67,7 +67,7 @@ export function ImportFileBtn() {
   // TEMPLATE
   return (
     <>
-      <button className="btn" onClick={() => inputRef.current?.click()}>
+      <button className="btn preset-filled-surface-500 bg-white/20 text-surface-900 backdrop-blur-xs" onClick={() => inputRef.current?.click()}>
         Import
       </button>
       <input className="hidden" type="file" ref={inputRef} accept=".json" onChange={handleChange} />

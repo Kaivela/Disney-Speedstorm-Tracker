@@ -36,6 +36,12 @@
   ],
   "crews": [
     {
+      "releaseSeason": 19,
+      "rarity": "Common",
+      "name": "Bai Welm and Bao Welm",
+      "universalBox": "✘"
+    },
+    {
       "releaseSeason": 0,
       "rarity": "Common",
       "name": "The Emperor Of China",
@@ -58,6 +64,12 @@
       "rarity": "Common",
       "name": "Chi-Fu",
       "universalBox": "✔"
+    },
+    {
+      "releaseSeason": 19,
+      "rarity": "Rare",
+      "name": "Sheshou",
+      "universalBox": "✘"
     },
     {
       "releaseSeason": 0,

@@ -2,6 +2,8 @@ import { useContext, useState } from 'react';
 import Modal from '../Modal';
 import { AppContext } from '../../context/AppContext';
 import type { SettingsSaved } from '../../types/types';
+import SettingsSvg from '../../img/settings.svg?react';
+import { ToggleGroup } from '@skeletonlabs/skeleton-react';
 
 export function SettingsBtn() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,36 +15,42 @@ export function SettingsBtn() {
 
   return (
     <>
-      <button className="SettingsBtn" onClick={() => setIsOpen(true)}>
-        <img src="img\settings.svg" width="30px" />
+      <button
+        className="duration-100 fixed top-3 right-3 bg-black/50 rounded-full p-2 hover:scale-[1.1] transition-scale"
+        onClick={() => setIsOpen(true)}>
+        <SettingsSvg width="30px" height="30px" />
       </button>
       <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
-        <div className="settingsPanel">
-          <div className="settings">
-            <button className="close-settings-btn" onClick={() => setIsOpen(false)}>
-              ✕
-            </button>
-
-            <h2 data-trad="settings">SETTINGS</h2>
+        <div>
+          <div className="settings gap-4">
+            <h2 className="h4" data-trad="settings">
+              SETTINGS
+            </h2>
             <span></span>
 
             <label htmlFor="trad_button" data-trad="change_lang">
               Lang
             </label>
-            <span className="lang-btn-group">
-              <button>EN</button>
-              <button>FR</button>
-            </span>
+
+            <ToggleGroup className="bg-black/20 backdrop-blur-xs w-min">
+              <ToggleGroup.Item className="px-10 py-2 aspect-auto" value="racer" onClick={() => {}}>
+                EN
+              </ToggleGroup.Item>
+              <ToggleGroup.Item className="px-10 py-2 aspect-auto" value="crew" onClick={() => {}}>
+                FR
+              </ToggleGroup.Item>
+            </ToggleGroup>
 
             <label htmlFor="darkMode" data-trad="dark_mode">
               Dark Mode (Work In Progress):
             </label>
-            <input id="darkMode" type="checkbox" />
+            <input type="checkbox" className="checkbox" />
 
             <label htmlFor="transparantTable" data-trad="transparant_table">
-              Transparancy :
+              Transparency :
             </label>
             <input
+              className="checkbox"
               defaultChecked={settings.transparent}
               onChange={(event) => saveSettings({ transparent: event.currentTarget.checked })}
               type="checkbox"
@@ -52,6 +60,7 @@ export function SettingsBtn() {
               MPL Goal :
             </label>
             <input
+              className="input"
               type="number"
               defaultValue={settings.MPLGoal}
               onChange={(event) => saveSettings({ MPLGoal: Number(event.currentTarget.value) })}
@@ -64,6 +73,7 @@ export function SettingsBtn() {
               Star Goal :
             </label>
             <input
+              className="input"
               type="number"
               defaultValue={settings.starGoal}
               onChange={(event) => saveSettings({ starGoal: Number(event.currentTarget.value) })}
@@ -76,6 +86,7 @@ export function SettingsBtn() {
               SuperCharge Level Goal :
             </label>
             <input
+              className="input"
               type="number"
               defaultValue={settings.superChargeLevelGoal}
               onChange={(event) => saveSettings({ superChargeLevelGoal: Number(event.currentTarget.value) })}
@@ -87,7 +98,7 @@ export function SettingsBtn() {
             <label htmlFor="selectTheme" data-trad="set_up_background">
               Select theme :
             </label>
-            <select defaultValue={settings.theme} onChange={(event) => saveSettings({ theme: event.currentTarget.value })}>
+            <select className="input " defaultValue={settings.theme} onChange={(event) => saveSettings({ theme: event.currentTarget.value })}>
               <option value="1">Saison 1 : Monstres Et Compagnies</option>
               <option value="2">Saison 2 : Toy's Story</option>
               <option value="3">Saison 3 : Lilo Et Stitch</option>
@@ -111,7 +122,7 @@ export function SettingsBtn() {
             </select>
           </div>
           <details>
-            <summary>Show Racer Column</summary>
+            <summary className="p-3 border my-4 pointer rounded-md">Show Racer Column</summary>
             <div className="details-options">
               <label className={settings.showRacerColumn.releaseSeason ? 'columnShown' : ''}>
                 Season
@@ -333,8 +344,8 @@ export function SettingsBtn() {
               </label>
             </div>
           </details>
-          <details>
-            <summary>Show Crew Column</summary>
+          <details className="mt-4">
+            <summary className="p-3 border mb-4 pointer rounded-md">Show Crew Column</summary>
             <div className="details-options">
               <label className={settings.showCrewColumn.releaseSeason ? 'columnShown' : ''}>
                 Season

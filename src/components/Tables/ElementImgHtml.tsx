@@ -1,0 +1,24 @@
+import { useContext } from 'react';
+import type { ICrew, IRacer } from '../../types/types';
+import { AppContext } from '../../context/AppContext';
+
+export function ElementImgHtml({ element }: { element: IRacer | ICrew }) {
+  // LOGIC
+  const { mode } = useContext(AppContext);
+  let elementtype;
+  if (mode === 'racer') elementtype = 'racers';
+  else elementtype = 'crews';
+  // TEMPLATE
+  return (
+    <td className="td-img">
+      <img
+        className="img-cover"
+        src={`/img/${elementtype}/${element.name}.webp`}
+        onError={(e) => {
+          e.currentTarget.onerror = null; // évite une boucle infinie
+          e.currentTarget.src = '/img/Locked.webp';
+        }}
+      />
+    </td>
+  );
+}

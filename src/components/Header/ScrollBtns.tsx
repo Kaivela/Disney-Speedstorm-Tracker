@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 
 // // Gérer l'affichage des boutons selon le scroll
 function handleScroll(setShowTopBtn: (show: boolean) => void, setShowBottomBtn: (show: boolean) => void) {
@@ -41,11 +42,11 @@ export function ScrollBtns() {
   //TEMPLATE
   return (
     <div className="scrollButtons">
-      <button className={`scrollButton ${!showTopBtn && 'hidden'}`} onClick={scrollTop}>
-        ▲
+      <button className={`scrollButton ${!showTopBtn ? 'invisible' : ''}`} onClick={scrollTop}>
+        <ChevronUp />
       </button>
-      <button className={`scrollButton ${!showBottomBtn && 'hidden'}`} onClick={scrollBottom}>
-        ▼
+      <button className={`scrollButton ${!showBottomBtn ? 'invisible' : ''}`} onClick={scrollBottom}>
+        <ChevronDown />
       </button>
     </div>
   );

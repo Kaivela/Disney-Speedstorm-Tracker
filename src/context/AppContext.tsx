@@ -1,6 +1,22 @@
 // src/context/DisplayModeContext.tsx
 import { createContext } from 'react';
-import type { SettingsSaved, Mode, RacerSaved, CrewSaved, Filters, SortColumn } from '../types/types';
+import type { SettingsSaved, Mode, RacerSaved, CrewSaved, RacerFilters, SortRacerColumn, CrewFilters, SortCrewColumn } from '../types/types';
+
+export const filtersDefault = {
+  racer: {
+    name: '',
+    season: -1,
+    collection: '',
+    rarity: '',
+    role: '',
+    shardsNeeded: '',
+    highestMPL: '',
+    currentStars: -1,
+    universalBox: '',
+    superChargeTokensNeeded: '',
+  },
+  crew: { name: '', season: -1, collection: '', rarity: '', shardsNeeded: '', currentStars: -1, universalBox: '' },
+};
 
 export const settingsDefaults: SettingsSaved = {
   lang: 'en',
@@ -41,9 +57,9 @@ export const settingsDefaults: SettingsSaved = {
     collection: true,
     rarity: true,
     name: true,
-    level: true,
+    currentStars: true,
     currentShards: true,
-    shardsNeeded: true,
+    shardsNeededToMax: true,
     free: true,
   },
 };
@@ -60,10 +76,14 @@ export const AppContext = createContext<{
   settings: SettingsSaved;
   setSettings: (settings: SettingsSaved) => void;
   updateSettings: (racers: SettingsSaved) => void;
-  filters: Filters;
-  setFilters: (filters: Filters) => void;
-  sortColumn: SortColumn;
-  setSortColumn: (sortOptions: SortColumn) => void;
+  racerFilters: RacerFilters;
+  setRacerFilters: (filters: RacerFilters) => void;
+  sortRacerColumn: SortRacerColumn;
+  setSortRacerColumn: (sortOptions: SortRacerColumn) => void;
+  crewFilters: CrewFilters;
+  setCrewFilters: (filters: CrewFilters) => void;
+  sortCrewColumn: SortCrewColumn;
+  setSortCrewColumn: (sortOptions: SortCrewColumn) => void;
 }>({
   mode: 'racer',
   setMode: () => {},
@@ -76,8 +96,12 @@ export const AppContext = createContext<{
   settings: settingsDefaults,
   setSettings: () => {},
   updateSettings: () => {},
-  filters: { name: '', season: -1, collection: '', shards: '' },
-  setFilters: () => {},
-  sortColumn: { columnName: 'releaseSeason', order: 'default' },
-  setSortColumn: () => {},
+  racerFilters: filtersDefault.racer,
+  setRacerFilters: () => {},
+  sortRacerColumn: { columnName: 'releaseSeason', order: 'default' },
+  setSortRacerColumn: () => {},
+  crewFilters: filtersDefault.crew,
+  setCrewFilters: () => {},
+  sortCrewColumn: { columnName: 'releaseSeason', order: 'default' },
+  setSortCrewColumn: () => {},
 });

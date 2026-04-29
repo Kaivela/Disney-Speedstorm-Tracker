@@ -1,19 +1,21 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import type { SettingsSaved, Mode, RacerSaved, CrewSaved, Filters, SortColumn } from '../types/types';
+import type { SettingsSaved, Mode, RacerSaved, CrewSaved, RacerFilters, SortRacerColumn, CrewFilters, SortCrewColumn } from '../types/types';
 import { StorageService } from '../services/storage';
 import { migrateCrewsSave, migrateRacersSave, migrateSettingsSave, updateCollections } from '../services/migration';
-import { AppContext, settingsDefaults } from './AppContext';
+import { AppContext, filtersDefault, settingsDefaults } from './AppContext';
 
 const storage = StorageService.getInstance();
 
-export function ModeProvider({ children }: { children: ReactNode }) {
+export function AppProvider({ children }: { children: ReactNode }) {
   // LOGIC
   const [mode, setMode] = useState<Mode>('racer');
   const [racersSaved, setRacersSaved] = useState<RacerSaved[]>([]);
   const [crewsSaved, setCrewsSaved] = useState<CrewSaved[]>([]);
   const [settings, setSettings] = useState<SettingsSaved>(settingsDefaults);
-  const [filters, setFilters] = useState<Filters>({ name: '', season: -1, collection: '', shards: '' });
-  const [sortColumn, setSortColumn] = useState<SortColumn>({ columnName: 'releaseSeason', order: 'default' });
+  const [racerFilters, setRacerFilters] = useState<RacerFilters>(filtersDefault.racer);
+  const [crewFilters, setCrewFilters] = useState<CrewFilters>(filtersDefault.crew);
+  const [sortRacerColumn, setSortRacerColumn] = useState<SortRacerColumn>({ columnName: 'releaseSeason', order: 'default' });
+  const [sortCrewColumn, setSortCrewColumn] = useState<SortCrewColumn>({ columnName: 'releaseSeason', order: 'default' });
 
   function updateRacers(racers: RacerSaved[]) {
     setRacersSaved(racers);
@@ -65,10 +67,14 @@ export function ModeProvider({ children }: { children: ReactNode }) {
         settings,
         setSettings,
         updateSettings,
-        filters,
-        setFilters,
-        sortColumn,
-        setSortColumn,
+        racerFilters: racerFilters,
+        setRacerFilters: setRacerFilters,
+        sortRacerColumn: sortRacerColumn,
+        setSortRacerColumn: setSortRacerColumn,
+        crewFilters: crewFilters,
+        setCrewFilters: setCrewFilters,
+        sortCrewColumn: sortCrewColumn,
+        setSortCrewColumn: setSortCrewColumn,
       }}>
       {children}
     </AppContext.Provider>

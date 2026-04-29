@@ -31,11 +31,11 @@ export function ExportFileBtn() {
 
   return (
     <button
+      className="btn preset-filled-surface-500 bg-white/20 text-surface-900 backdrop-blur-xs"
       onClick={() => {
         const data = mode === 'crew' ? storage.getCrews() : storage.getRacers();
         exportFile(fileName, data);
-      }}
-      className="btn">
+      }}>
       Export
     </button>
   );

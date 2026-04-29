@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="background" style={style}>
+    <div className="background flex flex-col gap-5" style={style}>
       <PreloadImgs />
       <Header />
       <Filters />
