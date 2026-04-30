@@ -10,6 +10,22 @@ function Racer({ racer }: { racer: IRacer }) {
   const { settings } = useContext(AppContext);
   const currentStarMaxed = racer.currentStars === 6;
   const shardsNeededIfMaxMPL = Math.max(racer.shardsNeededToMax - racer.shardsToGetInMPL, 0);
+
+  let roleBgColorClass = '';
+
+  if (racer.role === 'Trickster') {
+    roleBgColorClass = 'bg-purple-500';
+  }
+  if (racer.role === 'Brawler') {
+    roleBgColorClass = 'bg-red-400';
+  }
+  if (racer.role === 'Speedster') {
+    roleBgColorClass = 'bg-blue-400';
+  }
+  if (racer.role === 'Defender') {
+    roleBgColorClass = 'bg-green-400';
+  }
+
   return (
     <tr>
       {settings.showRacerColumn.releaseSeason && <td>{racer.releaseSeason}</td>}
@@ -20,7 +36,11 @@ function Racer({ racer }: { racer: IRacer }) {
       )}
       {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{racer.collection}</td>}
       {settings.showRacerColumn.rarity && <td data-trad={racer.rarity}>{racer.rarity}</td>}
-      {settings.showRacerColumn.role && <td data-trad={racer.role}>{racer.role}</td>}
+      {settings.showRacerColumn.role && (
+        <td className={roleBgColorClass} data-trad={racer.role}>
+          {racer.role}
+        </td>
+      )}
       {settings.showRacerColumn.name && <td data-trad={racer.name}>{racer.name}</td>}
       {settings.showRacerColumn.currentStars && <td>{racer.currentStars}</td>}
       {settings.showRacerColumn.currentStarFragment && <td>{currentStarMaxed ? 'maxed' : racer.currentStarFragment}</td>}
