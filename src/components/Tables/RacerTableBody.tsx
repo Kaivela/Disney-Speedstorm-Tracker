@@ -14,16 +14,16 @@ function Racer({ racer }: { racer: IRacer }) {
   let roleBgColorClass = '';
 
   if (racer.role === 'Trickster') {
-    roleBgColorClass = 'bg-purple-500';
+    roleBgColorClass = 'bg-[#e93fffb3]';
   }
   if (racer.role === 'Brawler') {
-    roleBgColorClass = 'bg-red-400';
+    roleBgColorClass = 'bg-[#ff5a5ab3]';
   }
   if (racer.role === 'Speedster') {
-    roleBgColorClass = 'bg-blue-400';
+    roleBgColorClass = 'bg-[#28d3fdb3]';
   }
   if (racer.role === 'Defender') {
-    roleBgColorClass = 'bg-green-400';
+    roleBgColorClass = 'bg-[#21e221b3]';
   }
 
   return (
