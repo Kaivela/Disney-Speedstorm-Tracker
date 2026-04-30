@@ -76,7 +76,7 @@ function CrewList() {
         }
       }
       if (crewFilters.collection) {
-        collectionFilter = crew.collection.toLowerCase().includes(crewFilters.collection.toLowerCase());
+        collectionFilter = crew.collection.toLowerCase() === crewFilters.collection.toLowerCase();
       }
       if (crewFilters.rarity) {
         rarityFilter = crew.rarity.toLowerCase().includes(crewFilters.rarity.toLowerCase());

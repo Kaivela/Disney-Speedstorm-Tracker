@@ -99,7 +99,7 @@ function RacerList() {
         }
       }
       if (racerFilters.collection) {
-        collectionFilter = racer.collection.toLowerCase().includes(racerFilters.collection.toLowerCase());
+        collectionFilter = racer.collection.toLowerCase() === racerFilters.collection.toLowerCase();
       }
       if (racerFilters.rarity) {
         rarityFilter = racer.rarity.toLowerCase().includes(racerFilters.rarity.toLowerCase());
