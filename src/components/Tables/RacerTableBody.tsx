@@ -5,26 +5,12 @@ import { ModifyRacerBtn } from './ModifyRacerBtn';
 import { buildIElementsArray } from '../../compute/buildIElementArray';
 import { formatBigNumber } from '../../compute/calculs';
 import { ElementImgHtml } from './ElementImgHtml';
+import { getRacerTdColors } from '../../compute/tdColors';
 
 function Racer({ racer }: { racer: IRacer }) {
   const { settings } = useContext(AppContext);
   const currentStarMaxed = racer.currentStars === 6;
   const shardsNeededIfMaxMPL = Math.max(racer.shardsNeededToMax - racer.shardsToGetInMPL, 0);
-
-  let roleBgColorClass = '';
-
-  if (racer.role === 'Trickster') {
-    roleBgColorClass = 'bg-[#e93fffb3]';
-  }
-  if (racer.role === 'Brawler') {
-    roleBgColorClass = 'bg-[#ff5a5ab3]';
-  }
-  if (racer.role === 'Speedster') {
-    roleBgColorClass = 'bg-[#28d3fdb3]';
-  }
-  if (racer.role === 'Defender') {
-    roleBgColorClass = 'bg-[#21e221b3]';
-  }
 
   return (
     <tr>
@@ -35,16 +21,22 @@ function Racer({ racer }: { racer: IRacer }) {
         </td>
       )}
       {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{racer.collection}</td>}
-      {settings.showRacerColumn.rarity && <td data-trad={racer.rarity}>{racer.rarity}</td>}
+      {settings.showRacerColumn.rarity && (
+        <td className={getRacerTdColors(racer).rarityColor} data-trad={racer.rarity}>
+          {racer.rarity}
+        </td>
+      )}
       {settings.showRacerColumn.role && (
-        <td className={roleBgColorClass} data-trad={racer.role}>
+        <td className={getRacerTdColors(racer).roleColor} data-trad={racer.role}>
           {racer.role}
         </td>
       )}
       {settings.showRacerColumn.name && <td data-trad={racer.name}>{racer.name}</td>}
-      {settings.showRacerColumn.currentStars && <td>{racer.currentStars}</td>}
-      {settings.showRacerColumn.currentStarFragment && <td>{currentStarMaxed ? 'maxed' : racer.currentStarFragment}</td>}
-      {settings.showRacerColumn.currentSuperChargeLevel && <td>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>}
+      {settings.showRacerColumn.currentStars && <td className={getRacerTdColors(racer).starColor}>{racer.currentStars}</td>}
+      {settings.showRacerColumn.currentStarFragment && <td>{racer.currentStarFragment}</td>}
+      {settings.showRacerColumn.currentSuperChargeLevel && (
+        <td className={getRacerTdColors(racer).superChargeColor}>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>
+      )}
       {settings.showRacerColumn.currentShards && <td>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>}
       {settings.showRacerColumn.currentSuperChargeTokens && (
         <td>{racer.superCharge ? (racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens) : '✘'}</td>
