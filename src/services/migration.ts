@@ -64,8 +64,18 @@ export function migrateRacersSave(racers: Record<string, unknown>[]): RacerSaved
     // "superCharge": Boolean ........==> EMPTY
 
     // Migration html/js => react
-    if (racer.franchise) {
+    if ('franchise' in racer) {
       racer.collection = racer.franchise;
+      if (racer.collection === '') {
+        // je veux que la collection se mette a jour en fonction du racerBlank
+        const racerBlank = getRacersBlank().find((r) => r.name === racer.name);
+        if (racerBlank) {
+          racer.collection = racerBlank.collection;
+        } else {
+          console.warn(`Racer ${racer.name} has no collection and was not found in racerBlank, setting collection to "Unknown"`);
+          racer.collection = 'Unknown';
+        }
+      }
       delete racer.franchise;
       delete racer.rarity;
       delete racer.role;
