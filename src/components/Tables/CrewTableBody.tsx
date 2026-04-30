@@ -4,6 +4,7 @@ import { ModifyCrewBtn } from './ModifyCrewBtn';
 import { buildIElementsArray } from '../../compute/buildIElementArray';
 import type { ICrew } from '../../types/types';
 import { ElementImgHtml } from './ElementImgHtml';
+import { getCrewTdColors } from '../../compute/tdColors';
 
 function Crew({ crew }: { crew: ICrew }) {
   const { settings } = useContext(AppContext);
@@ -21,8 +22,12 @@ function Crew({ crew }: { crew: ICrew }) {
       {settings.showCrewColumn.rarity && <td data-trad={crew.rarity}>{crew.rarity}</td>}
       {settings.showCrewColumn.name && <td data-trad={crew.name}>{crew.name}</td>}
       {settings.showCrewColumn.currentStars && <td>{crew.currentStars}</td>}
-      {settings.showCrewColumn.currentShards && <td>{crew.currentStars === 5 ? 'maxed' : crew.currentShards}</td>}
-      {settings.showCrewColumn.shardsNeededToMax && <td>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>}
+      {settings.showCrewColumn.currentShards && (
+        <td className={getCrewTdColors(crew).shardsColor}>{crew.currentStars === 5 ? 'maxed' : crew.currentShards}</td>
+      )}
+      {settings.showCrewColumn.shardsNeededToMax && (
+        <td className={getCrewTdColors(crew).shardsColor}>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>
+      )}
       {settings.showCrewColumn.free && <td>{crew.universalBox}</td>}
       <td>
         <ModifyCrewBtn crew={crew} />

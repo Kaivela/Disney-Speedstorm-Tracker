@@ -1,4 +1,4 @@
-import type { IRacer } from '../types/types';
+import type { ICrew, IRacer } from '../types/types';
 
 export function getRacerTdColors(racer: IRacer) {
   let rarityColor;
@@ -31,7 +31,33 @@ export function getRacerTdColors(racer: IRacer) {
     else superChargeColor = '';
   } else superChargeColor = '';
 
-  //   console.log({ rarityColor, roleColor, starColor, superChargeColor });
+  let shardsColor;
+  if (racer.shardsNeededToMax === 0) shardsColor = 'bg-[#000000B3] text-white';
+  // zero = dark: bg : #bfceffb3, color: black
+  //        light: bg: #000000B3, color: white
+  else if (racer.shardsNeededToMax > 20 && racer.shardsNeededToMax <= 50) shardsColor = 'bg-[#FFFF00B3] text-black';
+  // close = dark: bg : #A39000B3, color: #ffffffb3
+  //         light: bg: #FFFF00B3, color: black
+  else if (racer.shardsNeededToMax > 0 && racer.shardsNeededToMax <= 20) shardsColor = 'bg-[#FF0000B3] text-[#ffffffb3]';
+  // warning = dark: bg : #A30202B3, color: #ffffffb3
+  //           light: bg: #FF0000B3, color: white
 
-  return { rarityColor, roleColor, starColor, superChargeColor };
+  return { rarityColor, roleColor, starColor, superChargeColor, shardsColor };
+}
+
+export function getCrewTdColors(crew: ICrew) {
+  let shardsColor;
+  if (crew.shardsNeededToMax === 0) shardsColor = 'bg-[#000000B3] text-white';
+  // zero = dark: bg : #bfceffb3, color: black
+  //        light: bg: #000000B3, color: white
+  else if (crew.shardsNeededToMax > 20 && crew.shardsNeededToMax <= 50) shardsColor = 'bg-[#FFFF00B3] text-black';
+  // close = dark: bg : #A39000B3, color: #ffffffb3
+  //         light: bg: #FFFF00B3, color: black
+  else if (crew.rarity === 'Epic' && crew.shardsNeededToMax && crew.shardsNeededToMax > 0 && crew.shardsNeededToMax <= 25)
+    shardsColor = 'bg-[#FF0000B3] text-[#ffffffb3]';
+  else if (crew.shardsNeededToMax > 0 && crew.shardsNeededToMax <= 20) shardsColor = 'bg-[#FF0000B3] text-[#ffffffb3]';
+  // warning = dark: bg : #A30202B3, color: #ffffffb3
+  //           light: bg: #FF0000B3, color: white
+
+  return { shardsColor };
 }

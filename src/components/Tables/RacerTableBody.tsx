@@ -37,14 +37,18 @@ function Racer({ racer }: { racer: IRacer }) {
       {settings.showRacerColumn.currentSuperChargeLevel && (
         <td className={getRacerTdColors(racer).superChargeColor}>{racer.superCharge ? racer.currentSuperChargeLevel : '✘'}</td>
       )}
-      {settings.showRacerColumn.currentShards && <td>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>}
+      {settings.showRacerColumn.currentShards && (
+        <td className={getRacerTdColors(racer).shardsColor}>{currentStarMaxed ? 'maxed' : racer.currentShards}</td>
+      )}
       {settings.showRacerColumn.currentSuperChargeTokens && (
         <td>{racer.superCharge ? (racer.currentSuperChargeLevel === 2 ? 'maxed' : racer.currentSuperChargeTokens) : '✘'}</td>
       )}
       {settings.showRacerColumn.currentMPL && <td>{racer.currentMPL}</td>}
       {settings.showRacerColumn.highestMPL && <td>{racer.highestMPL}</td>}
       {settings.showRacerColumn.maxMPL && <td>badge max MPL</td>}
-      {settings.showRacerColumn.shardsNeededToMax && <td>{currentStarMaxed ? 'Maxed' : racer.shardsNeededToMax}</td>}
+      {settings.showRacerColumn.shardsNeededToMax && (
+        <td className={getRacerTdColors(racer).shardsColor}>{currentStarMaxed ? 'Maxed' : racer.shardsNeededToMax}</td>
+      )}
       {settings.showRacerColumn.shardsToGetInMPL && <td>{racer.shardsToGetInMPL === 0 ? 'None' : racer.shardsToGetInMPL}</td>}
       {settings.showRacerColumn.superChargeTokensNeeded && <td>{racer.currentSuperChargeLevel === 2 ? 'Maxed' : racer.superChargeTokensNeeded}</td>}
       {settings.showRacerColumn.tuneCoinsNeededToMax && <td>{currentStarMaxed ? 'Maxed' : formatBigNumber(racer.tuneCoinsNeededToMax)}</td>}
