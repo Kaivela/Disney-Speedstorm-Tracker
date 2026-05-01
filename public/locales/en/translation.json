@@ -165,5 +165,8 @@
     "Lightning McQueen": "Lightning McQueen",
     "Tow Matter": "Tow Matter",
     "Mabel": "Mabel"
+  },
+  "settings": {
+    "SETTINGS": "SETTINGS"
   }
 }

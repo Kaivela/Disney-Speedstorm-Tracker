@@ -165,5 +165,8 @@
     "Lightning McQueen": "Flash McQueen",
     "Tow Matter": "Martin Le Dépanneur",
     "Mabel": "Mabel"
+  },
+  "settings": {
+    "SETTINGS": "PARAMETRES"
   }
 }

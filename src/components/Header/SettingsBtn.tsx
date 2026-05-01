@@ -26,7 +26,7 @@ export function SettingsBtn() {
         <div>
           <div className="settings gap-4">
             <h2 className="h4" data-trad="settings">
-              SETTINGS
+              {t('settings.SETTINGS')}
             </h2>
             <span></span>
 
