@@ -31,7 +31,7 @@ export function SettingsBtn() {
             <span></span>
 
             <label htmlFor="trad_button" data-trad="change_lang">
-              Lang (coming soon)
+              {t('settings.lang')}
             </label>
 
             <ToggleGroup value={[settings.lang]} className="bg-black/20 backdrop-blur-xs w-min">
@@ -56,12 +56,12 @@ export function SettingsBtn() {
             </ToggleGroup>
 
             <label htmlFor="darkMode" data-trad="dark_mode">
-              Dark Mode (coming soon) :
+              {t('settings.dark')}
             </label>
             <input type="checkbox" className="checkbox" />
 
             <label htmlFor="transparantTable" data-trad="transparant_table">
-              Transparency :
+              {t('settings.dark')}
             </label>
             <input
               className="checkbox"
@@ -71,7 +71,7 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="buttonGoal" data-trad="change_goal">
-              MPL Goal :
+              {t('settings.MPLGoal')}
             </label>
             <input
               className="input"
@@ -84,7 +84,7 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="starGoal" data-trad="change_level_goal">
-              Star Goal :
+              {t('settings.starGoal')}
             </label>
             <input
               className="input"
@@ -97,7 +97,7 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="superChargeLevelGoal" data-trad="change_level_goal">
-              SuperCharge Level Goal :
+              {t('settings.superChargeGoal')}
             </label>
             <input
               className="input"
@@ -110,36 +110,36 @@ export function SettingsBtn() {
             />
 
             <label htmlFor="selectTheme" data-trad="set_up_background">
-              Select theme :
+              {t('settings.selectTheme')}
             </label>
             <select className="input " defaultValue={settings.theme} onChange={(event) => saveSettings({ theme: event.currentTarget.value })}>
-              <option value="1">Saison 1 : Monstres Et Compagnies</option>
-              <option value="2">Saison 2 : Toy's Story</option>
-              <option value="3">Saison 3 : Lilo Et Stitch</option>
-              <option value="4">Saison 4 : Aladdin</option>
-              <option value="5">Saison 5 : La Reine Des Neiges</option>
-              <option value="6">Saison 6 : La Petite Sirène</option>
-              <option value="7">Saison 7 : Les Mondes De Ralph</option>
-              <option value="8">Saison 8 : Vice-Versa</option>
-              <option value="9">Saison 9 : Pirates Des Caraïbes</option>
-              <option value="10">Saison 10 : L'Étrange Noël De Monsieur Jack</option>
-              <option value="11">Saison 11 : Les Indestructibles</option>
-              <option value="11alt">Saison 11 Alt : Les Indestructibles</option>
-              <option value="12">Saison 12 : Tron</option>
-              <option value="13">Saison 13 : Les Nouveaux Héros</option>
-              <option value="14">Saison 14 : Toy Story</option>
-              <option value="15">Saison 15 : Alice Au Pays Des Merveilles</option>
-              <option value="16">Saison 16 : Winnie L'Ourson</option>
-              <option value="17">Saison 17 : Zootopie</option>
-              <option value="18">Saison 18 : Cars</option>
-              <option value="19">Saison 19 : Villains</option>
+              <option value="1">{t('theme.S1')}</option>
+              <option value="2">{t('theme.S2')}</option>
+              <option value="3">{t('theme.S3')}</option>
+              <option value="4">{t('theme.S4')}</option>
+              <option value="5">{t('theme.S5')}</option>
+              <option value="6">{t('theme.S6')}</option>
+              <option value="7">{t('theme.S7')}</option>
+              <option value="8">{t('theme.S8')}</option>
+              <option value="9">{t('theme.S9')}</option>
+              <option value="10">{t('theme.S10')}</option>
+              <option value="11">{t('theme.S11')}</option>
+              <option value="11alt">{t('theme.S11alt')}</option>
+              <option value="12">{t('theme.S12')}</option>
+              <option value="13">{t('theme.S13')}</option>
+              <option value="14">{t('theme.S14')}</option>
+              <option value="15">{t('theme.S15')}</option>
+              <option value="16">{t('theme.S16')}</option>
+              <option value="17">{t('theme.S17')}</option>
+              <option value="18">{t('theme.S18')}</option>
+              <option value="19">{t('theme.S19')}</option>
             </select>
           </div>
           <details>
-            <summary className="p-3 border my-4 cursor-pointer rounded-md">Show Racer Column</summary>
+            <summary className="p-3 border my-4 cursor-pointer rounded-md">{t('settings.showRacerColumn')}</summary>
             <div className="details-options">
               <label className={settings.showRacerColumn.releaseSeason ? 'columnShown' : ''}>
-                Season
+                {t('showColumn.season')}
                 <input
                   defaultChecked={settings.showRacerColumn.releaseSeason}
                   className="hidden"
@@ -148,7 +148,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.image ? 'columnShown' : ''}>
-                Image
+                {t('showColumn.image')}
                 <input
                   defaultChecked={settings.showRacerColumn.image}
                   className="hidden"
@@ -157,7 +157,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.collection ? 'columnShown' : ''}>
-                Collection
+                {t('showColumn.collection')}
                 <input
                   defaultChecked={settings.showRacerColumn.collection}
                   className="hidden"
@@ -166,7 +166,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.rarity ? 'columnShown' : ''}>
-                Rarity
+                {t('showColumn.rarity')}
                 <input
                   defaultChecked={settings.showRacerColumn.rarity}
                   className="hidden"
@@ -175,7 +175,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.role ? 'columnShown' : ''}>
-                Role
+                {t('showColumn.role')}
                 <input
                   defaultChecked={settings.showRacerColumn.role}
                   className="hidden"
@@ -184,7 +184,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.name ? 'columnShown' : ''}>
-                Name
+                {t('showColumn.name')}
                 <input
                   defaultChecked={settings.showRacerColumn.name}
                   className="hidden"
@@ -193,7 +193,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.currentStars ? 'columnShown' : ''}>
-                currentStars
+                {t('showColumn.currentStars')}
                 <input
                   defaultChecked={settings.showRacerColumn.currentStars}
                   className="hidden"
@@ -202,7 +202,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.currentStarFragment ? 'columnShown' : ''}>
-                currentStarFragment
+                {t('showColumn.currentStarFragment')}
                 <input
                   defaultChecked={settings.showRacerColumn.currentStarFragment}
                   className="hidden"
@@ -213,7 +213,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.currentSuperChargeLevel ? 'columnShown' : ''}>
-                superChargeLevel
+                {t('showColumn.superChargeLevel')}
                 <input
                   defaultChecked={settings.showRacerColumn.currentSuperChargeLevel}
                   className="hidden"
@@ -224,7 +224,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.currentShards ? 'columnShown' : ''}>
-                currentShards
+                {t('showColumn.currentShards')}
                 <input
                   defaultChecked={settings.showRacerColumn.currentShards}
                   className="hidden"
@@ -233,7 +233,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.currentSuperChargeTokens ? 'columnShown' : ''}>
-                currentSuperChargeTokens
+                {t('showColumn.currentSuperChargeTokens')}
                 <input
                   defaultChecked={settings.showRacerColumn.currentSuperChargeTokens}
                   className="hidden"
@@ -244,7 +244,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.currentMPL ? 'columnShown' : ''}>
-                currentMPL
+                {t('showColumn.currentMPL')}
                 <input
                   defaultChecked={settings.showRacerColumn.currentMPL}
                   className="hidden"
@@ -253,7 +253,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.highestMPL ? 'columnShown' : ''}>
-                highestMPL
+                {t('showColumn.highestMPL')}
                 <input
                   defaultChecked={settings.showRacerColumn.highestMPL}
                   className="hidden"
@@ -262,7 +262,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.maxMPL ? 'columnShown' : ''}>
-                maxMPL
+                {t('showColumn.maxMPL')}
                 <input
                   defaultChecked={settings.showRacerColumn.maxMPL}
                   className="hidden"
@@ -271,7 +271,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.shardsNeededToMax ? 'columnShown' : ''}>
-                shardsNeeded
+                {t('showColumn.shardsNeeded')}
                 <input
                   defaultChecked={settings.showRacerColumn.shardsNeededToMax}
                   className="hidden"
@@ -282,7 +282,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.shardsToGetInMPL ? 'columnShown' : ''}>
-                shardsInMPL
+                {t('showColumn.shardsInMPL')}
                 <input
                   defaultChecked={settings.showRacerColumn.shardsToGetInMPL}
                   className="hidden"
@@ -293,7 +293,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.superChargeTokensNeeded ? 'columnShown' : ''}>
-                superChargeTokensNeeded
+                {t('showColumn.superChargeTokensNeeded')}
                 <input
                   defaultChecked={settings.showRacerColumn.superChargeTokensNeeded}
                   className="hidden"
@@ -304,7 +304,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.tuneCoinsNeededToMax ? 'columnShown' : ''}>
-                tuneCoinsNeeded
+                {t('showColumn.tuneCoinsNeeded')}
                 <input
                   defaultChecked={settings.showRacerColumn.tuneCoinsNeededToMax}
                   className="hidden"
@@ -315,7 +315,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.free ? 'columnShown' : ''}>
-                free
+                {t('showColumn.free')}
                 <input
                   defaultChecked={settings.showRacerColumn.free}
                   className="hidden"
@@ -324,7 +324,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.shardsNeededToNextStar ? 'columnShown' : ''}>
-                shardsNextStar
+                {t('showColumn.shardsNext')}
                 <input
                   defaultChecked={settings.showRacerColumn.shardsNeededToNextStar}
                   className="hidden"
@@ -335,7 +335,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.tuneCoinsNeededToNextStar ? 'columnShown' : ''}>
-                tuneCoinsToNextStar
+                {t('showColumn.tuneCoinsNext')}
                 <input
                   defaultChecked={settings.showRacerColumn.tuneCoinsNeededToNextStar}
                   className="hidden"
@@ -346,7 +346,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showRacerColumn.shardsNeededIfMaxMPL ? 'columnShown' : ''}>
-                shardsIfMaxMPL
+                {t('showColumn.shardsIfMaxMPL')}
                 <input
                   defaultChecked={settings.showRacerColumn.shardsNeededIfMaxMPL}
                   className="hidden"
@@ -359,10 +359,10 @@ export function SettingsBtn() {
             </div>
           </details>
           <details className="mt-4">
-            <summary className="p-3 border mb-4 cursor-pointer rounded-md">Show Crew Column</summary>
+            <summary className="p-3 border mb-4 cursor-pointer rounded-md">{t('settings.showCrewColumn')}</summary>
             <div className="details-options">
               <label className={settings.showCrewColumn.releaseSeason ? 'columnShown' : ''}>
-                Season
+                {t('showColumn.season')}
                 <input
                   defaultChecked={settings.showCrewColumn.releaseSeason}
                   className="hidden"
@@ -371,7 +371,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.exclusive ? 'columnShown' : ''}>
-                Exclusive
+                {t('showColumn.exclusiveTo')}
                 <input
                   defaultChecked={settings.showCrewColumn.exclusive}
                   className="hidden"
@@ -380,7 +380,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.image ? 'columnShown' : ''}>
-                Image
+                {t('showColumn.image')}
                 <input
                   defaultChecked={settings.showCrewColumn.image}
                   className="hidden"
@@ -389,7 +389,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.collection ? 'columnShown' : ''}>
-                Collection
+                {t('showColumn.collection')}
                 <input
                   defaultChecked={settings.showCrewColumn.collection}
                   className="hidden"
@@ -398,7 +398,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.rarity ? 'columnShown' : ''}>
-                Rarity
+                {t('showColumn.rarity')}
                 <input
                   defaultChecked={settings.showCrewColumn.rarity}
                   className="hidden"
@@ -407,7 +407,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.name ? 'columnShown' : ''}>
-                Name
+                {t('showColumn.name')}
                 <input
                   defaultChecked={settings.showCrewColumn.name}
                   className="hidden"
@@ -416,7 +416,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.currentStars ? 'columnShown' : ''}>
-                Level
+                {t('showColumn.currentStars')}
                 <input
                   defaultChecked={settings.showCrewColumn.currentStars}
                   className="hidden"
@@ -425,7 +425,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.currentShards ? 'columnShown' : ''}>
-                currentShards
+                {t('showColumn.currentShards')}
                 <input
                   defaultChecked={settings.showCrewColumn.currentShards}
                   className="hidden"
@@ -434,7 +434,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.shardsNeededToMax ? 'columnShown' : ''}>
-                shardsNeeded
+                {t('showColumn.shardsNeeded')}
                 <input
                   defaultChecked={settings.showCrewColumn.shardsNeededToMax}
                   className="hidden"
@@ -445,7 +445,7 @@ export function SettingsBtn() {
                 />
               </label>
               <label className={settings.showCrewColumn.free ? 'columnShown' : ''}>
-                free
+                {t('showColumn.free')}
                 <input
                   defaultChecked={settings.showCrewColumn.free}
                   className="hidden"
@@ -455,7 +455,7 @@ export function SettingsBtn() {
               </label>
             </div>
           </details>
-          <div style={{ marginTop: '30px' }}>
+          <div className="mt-7.5">
             The character images used in this are purely for entertainment and informational purposes.
             <br />
             No ownership is claimed upon the images used, and no copyright infringement is intended.
