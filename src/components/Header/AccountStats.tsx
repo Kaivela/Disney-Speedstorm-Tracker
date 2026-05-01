@@ -56,51 +56,71 @@ export function AccountStats() {
       <span>{t('stats.account')}</span>
       <p className="statsRow">
         {t('stats.tuneCoinsRequired')}
+        {''}
         {settings.starGoal}
+        {''}
         {t('stats.stars')}
+        {''}
         {formatBigNumber(totalTuneCoinsNeeded)}
       </p>
       <p className="statsRow">
         {t('stats.racerShardsLeft')}
+        {''}
         {formatBigNumber(totalRacerShardsNeeded)}
       </p>
       <p className="statsRow">
         {t('stats.crewShardsLeft')}
+        {''}
         {formatBigNumber(totalCrewShardsNeeded)}
       </p>
       <p className="statsRow">
         {t('stats.superChargeTokensLeft')}
+        {''}
         {formatBigNumber(totalSuperChargeTokensNeeded)}
       </p>
       <p className="statsRow">
         {t('stats.shardsLeftInUniBox')}
+        {''}
         {formatBigNumber(totalUniBoxShardsNeeded)}
         <br />
         {t('stats.racers')}
+        {''}
         {formatBigNumber(totalUniBoxRacerShardsNeeded)}
         <br />
         {t('stats.crews')}
+        {''}
         {formatBigNumber(totalUniBoxCrewShardsNeeded)}
       </p>
       <p className="statsRow">
         {t('stats.rewards')}
+        {''}
         <br />
         {t('stats.tuneCoins')}
+        {''}
         {formatBigNumber(totalTuneCoinsToGetInMPL)}
+        {''}
         <br />
         {t('stats.tokens')}
+        {''}
         {formatBigNumber(totalTokensToGetInMPL)}
+        {''}
         <br />
         {t('stats.vanity')}
+        {''}
         {formatBigNumber(totalCosmeticToGetInMPL)}
+        {''}
         <br />
         {t('stats.seasonCoins')}
+        {''}
         {formatBigNumber(totalSeasonCoinsToGetInMPL)}
       </p>
       <p className="statsRow">
         {t('stats.MPL40Left')}
+        {''}
         {settings.MPLGoal}
-        {t('stats.:')}
+        {''}
+        {t('stats.dots')}
+        {''}
         {formatBigNumber(MPL40Count)}
       </p>
     </div>
