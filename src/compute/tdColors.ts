@@ -28,8 +28,8 @@ export function getRacerTdColors(racer: IRacer) {
   if (racer.superCharge) {
     if (racer.currentSuperChargeLevel === 1) superChargeColor = 'bg-[#32F1FF]';
     else if (racer.currentSuperChargeLevel === 2) superChargeColor = 'bg-gradient-to-tr from-[#ff54e8] to-[#32f1ff]';
-    else superChargeColor = '';
-  } else superChargeColor = '';
+    else if (racer.currentSuperChargeLevel === 0) superChargeColor = 'bg-emerald-300';
+  } else superChargeColor = 'bg-surface-950 text-error-950 font-bold';
 
   let shardsColor;
   if (racer.shardsNeededToMax === 0) shardsColor = 'bg-[#000000B3] text-white';

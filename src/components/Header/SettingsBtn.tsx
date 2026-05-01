@@ -61,7 +61,7 @@ export function SettingsBtn() {
             <input type="checkbox" className="checkbox" />
 
             <label htmlFor="transparantTable" data-trad="transparant_table">
-              {t('settings.dark')}
+              {t('settings.transparent')}
             </label>
             <input
               className="checkbox"
