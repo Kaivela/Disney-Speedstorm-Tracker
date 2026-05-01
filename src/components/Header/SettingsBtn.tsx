@@ -4,10 +4,12 @@ import { AppContext } from '../../context/AppContext';
 import type { SettingsSaved } from '../../types/types';
 import SettingsSvg from '../../img/settings.svg?react';
 import { ToggleGroup } from '@skeletonlabs/skeleton-react';
+import { useTranslation } from 'react-i18next';
 
 export function SettingsBtn() {
   const [isOpen, setIsOpen] = useState(false);
   const { settings, updateSettings } = useContext(AppContext);
+  const { t, i18n } = useTranslation();
 
   function saveSettings(newSettings: Partial<SettingsSaved>) {
     updateSettings({ ...settings, ...newSettings });
@@ -33,10 +35,20 @@ export function SettingsBtn() {
             </label>
 
             <ToggleGroup className="bg-black/20 backdrop-blur-xs w-min">
-              <ToggleGroup.Item className="px-10 py-2 aspect-auto" value="racer" onClick={() => {}}>
+              <ToggleGroup.Item
+                className="px-10 py-2 aspect-auto"
+                value="racer"
+                onClick={() => {
+                  i18n.changeLanguage('en');
+                }}>
                 EN
               </ToggleGroup.Item>
-              <ToggleGroup.Item className="px-10 py-2 aspect-auto" value="crew" onClick={() => {}}>
+              <ToggleGroup.Item
+                className="px-10 py-2 aspect-auto"
+                value="crew"
+                onClick={() => {
+                  i18n.changeLanguage('fr');
+                }}>
                 FR
               </ToggleGroup.Item>
             </ToggleGroup>
