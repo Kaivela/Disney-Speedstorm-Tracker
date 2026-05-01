@@ -173,7 +173,7 @@
     "transparent": "Transparence :",
     "MPLGoal": "Objectif LMJ :",
     "starGoal": "Objectif Étoiles :",
-    "superChargeGoal": "Objectif Niveau de Surralimentation :",
+    "superChargeGoal": "Objectif Niveau de Suralimentation :",
     "selectTheme": "Choisis un Theme : ",
     "showRacerColumn": "Afficher Colonne des Pilotes",
     "showCrewColumn": "Afficher Colonne des Équipiers"
@@ -187,9 +187,9 @@
     "name": "Nom",
     "currentStars": "Étoiles",
     "currentStarFragment": "Fragment d'Étoile",
-    "superChargeLevel": "Surralimentation",
+    "superChargeLevel": "Suralimentation",
     "currentShards": "Éclats actuels",
-    "currentSuperChargeTokens": "Jetons de Surralimentation actuels",
+    "currentSuperChargeTokens": "Jetons de Suralimentation actuels",
     "currentMPL": "LMJ actuel",
     "highestMPL": "Meilleur LMJ",
     "maxMPL": "Meilleur Badge LMJ",
@@ -224,5 +224,23 @@
     "S17": "Saison 17 : Zootopie",
     "S18": "Saison 18 : Cars",
     "S19": "Saison 19 : Villains"
+  },
+  "stats": {
+    "account": "Stats du Compte:",
+    "tuneCoinsRequired": "Pièces de Tunning nécéssaires pour avoir chaque Pilote à ",
+    "stars": " Étoiles : ",
+    "racerShardsLeft": "Éclats de Pilote restants à récupérer : ",
+    "crewShardsLeft": "Éclats d'Équipiers restants à récupérer : ",
+    "superChargeTokensLeft": "Jetons de Suralimentation à récupérer : ",
+    "shardsLeftInUniBox": "Éclats restants dans la Boîte Universelle : ",
+    "racers": "Pilotes : ",
+    "crews": "Équipiers : ",
+    "rewards": "Récompenses à récupérer en LMJ :",
+    "tuneCoins": "Pièces de Tunning : ",
+    "tokens": "Jetons : ",
+    "vanity": "Pièces de cosmetique : ",
+    "seasonCoins": "Pièces de Saison : ",
+    "MPL40Left": "Nombre de Pilotes qui peuvent monter LMJ ",
+    ":": ":"
   }
 }
