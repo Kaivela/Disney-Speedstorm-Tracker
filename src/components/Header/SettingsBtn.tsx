@@ -34,19 +34,21 @@ export function SettingsBtn() {
               Lang (coming soon)
             </label>
 
-            <ToggleGroup className="bg-black/20 backdrop-blur-xs w-min">
+            <ToggleGroup value={[settings.lang]} className="bg-black/20 backdrop-blur-xs w-min">
               <ToggleGroup.Item
                 className="px-10 py-2 aspect-auto"
-                value="racer"
+                value="en"
                 onClick={() => {
+                  saveSettings({ lang: 'en' });
                   i18n.changeLanguage('en');
                 }}>
                 EN
               </ToggleGroup.Item>
               <ToggleGroup.Item
                 className="px-10 py-2 aspect-auto"
-                value="crew"
+                value="fr"
                 onClick={() => {
+                  saveSettings({ lang: 'fr' });
                   i18n.changeLanguage('fr');
                 }}>
                 FR

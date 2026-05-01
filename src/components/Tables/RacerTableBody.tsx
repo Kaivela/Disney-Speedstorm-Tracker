@@ -6,9 +6,11 @@ import { buildIElementsArray } from '../../compute/buildIElementArray';
 import { formatBigNumber } from '../../compute/calculs';
 import { ElementImgHtml } from './ElementImgHtml';
 import { getRacerTdColors } from '../../compute/tdColors';
+import { useTranslation } from 'react-i18next';
 
 function Racer({ racer }: { racer: IRacer }) {
   const { settings } = useContext(AppContext);
+  const { t } = useTranslation();
   const currentStarMaxed = racer.currentStars === 6;
   const shardsNeededIfMaxMPL = Math.max(racer.shardsNeededToMax - racer.shardsToGetInMPL, 0);
 
@@ -20,7 +22,7 @@ function Racer({ racer }: { racer: IRacer }) {
           <ElementImgHtml element={racer} />
         </td>
       )}
-      {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{racer.collection}</td>}
+      {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{t(`collection.${racer.collection}`)}</td>}
       {settings.showRacerColumn.rarity && (
         <td className={getRacerTdColors(racer).rarityColor} data-trad={racer.rarity}>
           {racer.rarity}
@@ -31,7 +33,7 @@ function Racer({ racer }: { racer: IRacer }) {
           {racer.role}
         </td>
       )}
-      {settings.showRacerColumn.name && <td data-trad={racer.name}>{racer.name}</td>}
+      {settings.showRacerColumn.name && <td data-trad={racer.name}>{t(`racerName.${racer.name}`)}</td>}
       {settings.showRacerColumn.currentStars && <td className={getRacerTdColors(racer).starColor}>{racer.currentStars}</td>}
       {settings.showRacerColumn.currentStarFragment && <td>{racer.currentStarFragment}</td>}
       {settings.showRacerColumn.currentSuperChargeLevel && (

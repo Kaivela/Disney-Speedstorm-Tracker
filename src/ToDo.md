@@ -18,3 +18,4 @@ aller chercher tous les code hexa light/dark de l'ancien site
 edit form a valider on enter key
 quand on créer app context et quon load settings il faudra utiliser le i18. change language sur le setting de l'utilisateur
 td text color
+check si le script preload peut pas etre simplifié en utilisant directement IRacers/Icrew
