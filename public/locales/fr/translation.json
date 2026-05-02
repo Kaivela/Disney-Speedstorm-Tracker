@@ -96,7 +96,7 @@
     "Hans": "Hans",
     "Kristoff": "Kristoff",
     "Olaf": "Olaf",
-    "Eve": "Eve",
+    "EVE": "Eve",
     "WALL-E": "Wall•E",
     "Ariel": "Ariel",
     "King Triton": "Roi Triton",
@@ -155,7 +155,7 @@
     "Tigger": "Tigrou",
     "Winnie The Pooh": "Winnie The Pooh",
     "Carl Fredricksen": "Carl Fredricksen",
-    "Russel": "Russel",
+    "Russell": "Russell",
     "Flash": "Flash",
     "Judy Hopps": "Judy Hopps",
     "Nick Wilde": "Nick Wilde",
@@ -163,7 +163,7 @@
     "Yzma": "Yzma",
     "Cruz Ramirez": "Cruz Ramirez",
     "Lightning McQueen": "Flash McQueen",
-    "Tow Matter": "Martin Le Dépanneur",
+    "Tow Mater": "Martin Le Dépanneur",
     "Mabel": "Mabel"
   },
   "settings": {
@@ -226,21 +226,19 @@
     "S19": "Saison 19 : Villains"
   },
   "stats": {
-    "account": "Stats du Compte:",
-    "tuneCoinsRequired": "Pièces de Tunning nécéssaires pour avoir chaque Pilote à ",
-    "stars": " Étoiles : ",
-    "racerShardsLeft": "Éclats de Pilote restants à récupérer : ",
-    "crewShardsLeft": "Éclats d'Équipiers restants à récupérer : ",
-    "superChargeTokensLeft": "Jetons de Suralimentation à récupérer : ",
-    "shardsLeftInUniBox": "Éclats restants dans la Boîte Universelle : ",
-    "racers": "Pilotes : ",
-    "crews": "Équipiers : ",
+    "account": "Statut du Compte:",
+    "tuneCoinsRequired": "Pièces de Tunning nécéssaires pour avoir chaque Pilote à {{starsGoal}} Étoiles : {{totalTuneCoinsNeeded}}",
+    "racerShardsLeft": "Éclats de Pilote restants à récupérer : {{totalRacerShardsNeeded}}",
+    "crewShardsLeft": "Éclats d'Équipiers restants à récupérer : {{totalCrewShardsNeeded}}",
+    "superChargeTokensLeft": "Jetons de Suralimentation à récupérer : {{totalSuperChargeTokensNeeded}}",
+    "shardsLeftInUniBox": "Éclats restants dans la Boîte Universelle : {{totalUniBoxShardsNeeded}}",
+    "racers": "Pilotes : {{totalUniBoxRacerShardsNeeded}}",
+    "crews": "Équipiers : {{totalUniBoxCrewShardsNeeded}}",
     "rewards": "Récompenses à récupérer en LMJ :",
-    "tuneCoins": "Pièces de Tunning : ",
-    "tokens": "Jetons : ",
-    "vanity": "Pièces de cosmetique : ",
-    "seasonCoins": "Pièces de Saison : ",
-    "MPL40Left": "Nombre de Pilotes qui peuvent monter LMJ ",
-    "dots": " : "
+    "tuneCoins": "Pièces de Tunning : {{total}}",
+    "tokens": "Jetons : {{total}}",
+    "vanity": "Pièces de cosmetique : {{total}}",
+    "seasonCoins": "Pièces de Saison : {{total}}",
+    "MPL40Left": "Nombre de Pilotes qui peuvent monter LMJ {{MPLGoal}} : {{MPL40Count}}"
   }
 }

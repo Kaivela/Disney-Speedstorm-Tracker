@@ -96,7 +96,7 @@
     "Hans": "Hans",
     "Kristoff": "Kristoff",
     "Olaf": "Olaf",
-    "Eve": "Eve",
+    "EVE": "Eve",
     "WALL-E": "Wall•E",
     "Ariel": "Ariel",
     "King Triton": "King Triton",
@@ -155,7 +155,7 @@
     "Tigger": "Tigger",
     "Winnie The Pooh": "Winnie The Pooh",
     "Carl Fredricksen": "Carl Fredricksen",
-    "Russel": "Russel",
+    "Russell": "Russell",
     "Flash": "Flash",
     "Judy Hopps": "Judy Hopps",
     "Nick Wilde": "Nick Wilde",
@@ -163,7 +163,7 @@
     "Yzma": "Yzma",
     "Cruz Ramirez": "Cruz Ramirez",
     "Lightning McQueen": "Lightning McQueen",
-    "Tow Matter": "Tow Matter",
+    "Tow Mater": "Tow Mater",
     "Mabel": "Mabel"
   },
   "settings": {
@@ -226,21 +226,19 @@
     "S19": "Season 19 : Villains"
   },
   "stats": {
-    "account": "Account Stats :",
-    "tuneCoinsRequired": "Tune Coins required to have each Racer at ",
-    "stars": " Stars : ",
-    "racerShardsLeft": "Racer Shards left to collect : ",
-    "crewShardsLeft": "Crew Shards left to collect : ",
-    "superChargeTokensLeft": "Supercharge tokens left to collect : ",
-    "shardsLeftInUniBox": "Shards left in the Universal Box : ",
-    "racers": "Racers : ",
-    "crews": "Crews : ",
+    "account": "Account Stats:",
+    "tuneCoinsRequired": "Tune Coins required to have each Racer at {{starsGoal}} Stars : {{totalTuneCoinsNeeded}}",
+    "racerShardsLeft": "Racer Shards left to collect : {{totalRacerShardsNeeded}}",
+    "crewShardsLeft": "Crew Shards left to collect : {{totalCrewShardsNeeded}}",
+    "superChargeTokensLeft": "Supercharge tokens left to collect : {{totalSuperChargeTokensNeeded}}",
+    "shardsLeftInUniBox": "Shards left in the Universal Box : {{totalUniBoxShardsNeeded}}",
+    "racers": "Racers : {{totalUniBoxRacerShardsNeeded}}",
+    "crews": "Crews : {{totalUniBoxCrewShardsNeeded}}",
     "rewards": "Rewards you can collect in MPL :",
-    "tuneCoins": "Tune Coins : ",
-    "tokens": "Tokens : ",
-    "vanity": "Vanity Coins : ",
-    "seasonCoins": "Season Coins : ",
-    "MPL40Left": "Number of racers that can reach MPL ",
-    "dots": " : "
+    "tuneCoins": "Tune Coins : {{total}}",
+    "tokens": "Tokens : {{total}}",
+    "vanity": "Vanity Coins : {{total}}",
+    "seasonCoins": "Season Coins : {{total}}",
+    "MPL40Left": "Number of racers that need to reach MPL {{MPLGoal}} : {{MPL40Count}}"
   }
 }

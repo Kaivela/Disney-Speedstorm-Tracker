@@ -55,74 +55,30 @@ export function AccountStats() {
     <div className="rounded-2xl bg-black/60 py-4 px-8 text-sm flex flex-col gap-0.5 m-auto w-fit backdrop-blur-xs">
       <span>{t('stats.account')}</span>
       <p className="statsRow">
-        {t('stats.tuneCoinsRequired')}
-        {''}
-        {settings.starGoal}
-        {''}
-        {t('stats.stars')}
-        {''}
-        {formatBigNumber(totalTuneCoinsNeeded)}
+        {t('stats.tuneCoinsRequired', { starsGoal: settings.starGoal, totalTuneCoinsNeeded: formatBigNumber(totalTuneCoinsNeeded) })}
       </p>
+      <p className="statsRow">{t('stats.racerShardsLeft', { totalRacerShardsNeeded: formatBigNumber(totalRacerShardsNeeded) })}</p>
+      <p className="statsRow">{t('stats.crewShardsLeft', { totalCrewShardsNeeded: formatBigNumber(totalCrewShardsNeeded) })}</p>
+      <p className="statsRow">{t('stats.superChargeTokensLeft', { totalSuperChargeTokensNeeded: formatBigNumber(totalSuperChargeTokensNeeded) })}</p>
       <p className="statsRow">
-        {t('stats.racerShardsLeft')}
-        {''}
-        {formatBigNumber(totalRacerShardsNeeded)}
-      </p>
-      <p className="statsRow">
-        {t('stats.crewShardsLeft')}
-        {''}
-        {formatBigNumber(totalCrewShardsNeeded)}
-      </p>
-      <p className="statsRow">
-        {t('stats.superChargeTokensLeft')}
-        {''}
-        {formatBigNumber(totalSuperChargeTokensNeeded)}
-      </p>
-      <p className="statsRow">
-        {t('stats.shardsLeftInUniBox')}
-        {''}
-        {formatBigNumber(totalUniBoxShardsNeeded)}
+        {t('stats.shardsLeftInUniBox', { totalUniBoxShardsNeeded: formatBigNumber(totalUniBoxShardsNeeded) })}
         <br />
-        {t('stats.racers')}
-        {''}
-        {formatBigNumber(totalUniBoxRacerShardsNeeded)}
+        {t('stats.racers', { totalUniBoxRacerShardsNeeded: formatBigNumber(totalUniBoxRacerShardsNeeded) })}
         <br />
-        {t('stats.crews')}
-        {''}
-        {formatBigNumber(totalUniBoxCrewShardsNeeded)}
+        {t('stats.crews', { totalUniBoxCrewShardsNeeded: formatBigNumber(totalUniBoxCrewShardsNeeded) })}
       </p>
       <p className="statsRow">
         {t('stats.rewards')}
-        {''}
         <br />
-        {t('stats.tuneCoins')}
-        {''}
-        {formatBigNumber(totalTuneCoinsToGetInMPL)}
-        {''}
+        {t('stats.tuneCoins', { total: formatBigNumber(totalTuneCoinsToGetInMPL) })}
         <br />
-        {t('stats.tokens')}
-        {''}
-        {formatBigNumber(totalTokensToGetInMPL)}
-        {''}
+        {t('stats.tokens', { total: formatBigNumber(totalTokensToGetInMPL) })}
         <br />
-        {t('stats.vanity')}
-        {''}
-        {formatBigNumber(totalCosmeticToGetInMPL)}
-        {''}
+        {t('stats.vanity', { total: formatBigNumber(totalCosmeticToGetInMPL) })}
         <br />
-        {t('stats.seasonCoins')}
-        {''}
-        {formatBigNumber(totalSeasonCoinsToGetInMPL)}
+        {t('stats.seasonCoins', { total: formatBigNumber(totalSeasonCoinsToGetInMPL) })}
       </p>
-      <p className="statsRow">
-        {t('stats.MPL40Left')}
-        {''}
-        {settings.MPLGoal}
-        {''}
-        {t('stats.dots')}
-        {''}
-        {formatBigNumber(MPL40Count)}
-      </p>
+      <p className="statsRow">{t('stats.MPL40Left', { MPLGoal: settings.MPLGoal, MPL40Count: formatBigNumber(MPL40Count) })}</p>
     </div>
   );
 }
