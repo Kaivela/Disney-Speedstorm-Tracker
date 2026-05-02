@@ -12,13 +12,13 @@ import {
   formatBigNumber,
   sum,
 } from '../../compute/calculs';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 export function AccountStats() {
   const { racersSaved, crewsSaved, settings } = useContext(AppContext);
   const iRacers = buildIElementsArray(racersSaved);
   const iCrews = buildIElementsArray(crewsSaved);
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   // LOGIC
   const totalRacerShardsNeeded = sum(iRacers.map((IRacer) => IRacer.shardsNeededToMax));
@@ -53,31 +53,75 @@ export function AccountStats() {
   // TEMPLATE
   return (
     <div className="rounded-2xl bg-black/60 py-4 px-8 text-sm flex flex-col gap-0.5 m-auto w-fit backdrop-blur-xs">
-      <span>Account Stats</span>
-      <p className="statsRow">Tune Coins required to have each Racer at 6 Stars : {formatBigNumber(totalTuneCoinsNeeded)}</p>
-      <p className="statsRow">Racer Shards left to collect : {formatBigNumber(totalRacerShardsNeeded)}</p>
-      <p className="statsRow">Crew Shards left to collect : {formatBigNumber(totalCrewShardsNeeded)}</p>
-      <p className="statsRow">Supercharge tokens left to collect : {formatBigNumber(totalSuperChargeTokensNeeded)}</p>
+      <span>{t('stats.account')}</span>
       <p className="statsRow">
-        Shards left in the Universal Box : {formatBigNumber(totalUniBoxShardsNeeded)}
-        <br />
-        Racers : {formatBigNumber(totalUniBoxRacerShardsNeeded)}
-        <br />
-        Crews : {formatBigNumber(totalUniBoxCrewShardsNeeded)}
+        {t('stats.tuneCoinsRequired')}
+        {''}
+        {settings.starGoal}
+        {''}
+        {t('stats.stars')}
+        {''}
+        {formatBigNumber(totalTuneCoinsNeeded)}
       </p>
       <p className="statsRow">
-        Rewards you can collect in MPL :
-        <br />
-        Tune Coins : {formatBigNumber(totalTuneCoinsToGetInMPL)}
-        <br />
-        Tokens : {formatBigNumber(totalTokensToGetInMPL)}
-        <br />
-        Vanity Coins : {formatBigNumber(totalCosmeticToGetInMPL)}
-        <br />
-        Season Coins : {formatBigNumber(totalSeasonCoinsToGetInMPL)}
+        {t('stats.racerShardsLeft')}
+        {''}
+        {formatBigNumber(totalRacerShardsNeeded)}
       </p>
       <p className="statsRow">
-        Number of racers that need to reach MPL {settings.MPLGoal} : {formatBigNumber(MPL40Count)}
+        {t('stats.crewShardsLeft')}
+        {''}
+        {formatBigNumber(totalCrewShardsNeeded)}
+      </p>
+      <p className="statsRow">
+        {t('stats.superChargeTokensLeft')}
+        {''}
+        {formatBigNumber(totalSuperChargeTokensNeeded)}
+      </p>
+      <p className="statsRow">
+        {t('stats.shardsLeftInUniBox')}
+        {''}
+        {formatBigNumber(totalUniBoxShardsNeeded)}
+        <br />
+        {t('stats.racers')}
+        {''}
+        {formatBigNumber(totalUniBoxRacerShardsNeeded)}
+        <br />
+        {t('stats.crews')}
+        {''}
+        {formatBigNumber(totalUniBoxCrewShardsNeeded)}
+      </p>
+      <p className="statsRow">
+        {t('stats.rewards')}
+        {''}
+        <br />
+        {t('stats.tuneCoins')}
+        {''}
+        {formatBigNumber(totalTuneCoinsToGetInMPL)}
+        {''}
+        <br />
+        {t('stats.tokens')}
+        {''}
+        {formatBigNumber(totalTokensToGetInMPL)}
+        {''}
+        <br />
+        {t('stats.vanity')}
+        {''}
+        {formatBigNumber(totalCosmeticToGetInMPL)}
+        {''}
+        <br />
+        {t('stats.seasonCoins')}
+        {''}
+        {formatBigNumber(totalSeasonCoinsToGetInMPL)}
+      </p>
+      <p className="statsRow">
+        {t('stats.MPL40Left')}
+        {''}
+        {settings.MPLGoal}
+        {''}
+        {t('stats.dots')}
+        {''}
+        {formatBigNumber(MPL40Count)}
       </p>
     </div>
   );
