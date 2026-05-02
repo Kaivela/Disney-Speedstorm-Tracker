@@ -3,7 +3,7 @@ ajouter icone de role a gauche du text dans la td "role" pour les racer
 \*\*mettre en forme le site pour que ce soit tout joli tyout beau genre magnifique
 -dark mode a coupler avec la mise en forme
 
-data trad EN FR -- filter, th, td
+data trad EN FR -- filter, th, td, crew
 ACTIONS - calculate racer
 ENORME REFACTO
 
