@@ -251,5 +251,28 @@
     "Brawler": "Brute",
     "none": "Aucune",
     "maxed": "Max"
+  },
+  "th": {
+    "season": "Saison",
+    "img": "Image",
+    "collection": "Collection",
+    "rarity": "Rareté",
+    "role": "Role",
+    "racerName": "Nom du Pilote",
+    "currentShards": "Éclats actuels",
+    "currentSuperChargeTokens": "Jetons de Suralimentation actuels",
+    "currentMPL": "LMJ actuel",
+    "highestMPL": "Meilleur LMJ",
+    "maxMPL": "Meilleur Badge LMJ",
+    "shardsNeeded": "Éclats Manquants",
+    "shardsInMPL": "Éclats en LMJ",
+    "superChargeTokensNeeded": "Jetons de Surralimention manquants",
+    "free": "Boîte Universelle",
+    "shardsNextStar": "Éclats Prochaine Étoile",
+    "coinsNextStar": "Pièces de Tunning Prochaine Étoile",
+    "shardsIfMaxMPL": "Éclats Manquants si max LMJ",
+    "exclusive": "Exclusif à",
+    "crewName": "Nom de l'Équipier",
+    "action": "Actions"
   }
 }

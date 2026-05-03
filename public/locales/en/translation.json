@@ -251,5 +251,28 @@
     "Brawler": "Brawler",
     "none": "None",
     "maxed": "Maxed"
+  },
+  "th": {
+    "season": "Season",
+    "img": "Image",
+    "collection": "Collection",
+    "rarity": "Rarity",
+    "role": "Role",
+    "racerName": "Racer Name",
+    "currentShards": "Current Shards",
+    "currentSuperChargeTokens": "Current Super Charge Tokens",
+    "currentMPL": "Current MPL",
+    "highestMPL": "Highest MPL",
+    "maxMPL": "Max MPL",
+    "shardsNeeded": "Shards Needed",
+    "shardsInMPL": "Shards in MPL",
+    "superChargeTokensNeeded": "Super Charge Tokens Needed",
+    "free": "Universal Box",
+    "shardsNextStar": "Shards Next Star",
+    "coinsNextStar": "Coins Next Star",
+    "shardsIfMaxMPL": "Shards Needed if Max MPL",
+    "exclusive": "Exclusive To",
+    "crewName": "Crew Name",
+    "action": "Actions"
   }
 }
