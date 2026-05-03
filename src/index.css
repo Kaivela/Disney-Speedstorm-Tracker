@@ -88,6 +88,7 @@ th {
   max-width: fit-content;
   box-sizing: border-box;
   color: white;
+  padding: 1px;
 }
 
 td img {
