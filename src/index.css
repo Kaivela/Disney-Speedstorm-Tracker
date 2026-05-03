@@ -84,6 +84,7 @@ td {
 }
 
 th {
+  min-width: 85px;
   max-width: fit-content;
   box-sizing: border-box;
   color: white;
