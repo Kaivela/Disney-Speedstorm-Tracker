@@ -148,7 +148,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               required
             />
             <div className="mt-5 flex justify-around gap-2 col-span-full">
-              <button className="btn preset-filled-error-50-950" onClick={() => setIsOpen(false)}>
+              <button type="button" className="btn preset-filled-error-50-950" onClick={() => setIsOpen(false)}>
                 Cancel
               </button>
               <button className="btn preset-filled-primary-50-950" type="submit" data-trad="saveRacer">
