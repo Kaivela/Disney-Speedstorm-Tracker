@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import type { IRacer } from '../../types/types';
 import { AppContext } from '../../context/AppContext';
 import Modal from '../Modal';
+import { useTranslation } from 'react-i18next';
 
 export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   // LOGIC
@@ -13,6 +14,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   const [currentSuperChargeTokens, setCurrentSuperChargeTokens] = useState(racer.currentSuperChargeTokens);
   const [currentMPL, setCurrentMPL] = useState(racer.currentMPL);
   const [highestMPL, setHighestMPL] = useState(racer.highestMPL);
+  const { t } = useTranslation();
 
   // on doit avoir un tableau de save racers mis à jour avec notre racer modifié
   // on récupère le tableau des save racers non modifié
@@ -39,7 +41,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   return (
     <>
       <button className="btn btn-sm preset-filled-primary-50-950" data-trad="modify" onClick={() => setIsOpen(true)}>
-        Edit
+        {t('edit.edit')}
       </button>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
@@ -52,7 +54,10 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
                 e.currentTarget.src = '/img/Locked.webp';
               }}
             />
-            <h2 className="h4">Edit {racer.name}</h2>
+            {/* <h2 className="h4">Edit {racer.name}</h2> */}
+            <h2 className="h4">
+              {t('edit.edit')} {t(`racerName.${racer.name}`)}
+            </h2>
           </div>
           <form
             className="grid grid-cols-2 gap-2"
@@ -62,7 +67,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               // onClose();
               setIsOpen(false);
             }}>
-            <label htmlFor="racerCurrentStars">Current Stars :</label>
+            <label htmlFor="racerCurrentStars">{t('edit.currentStars')}</label>
             <input
               className="input"
               type="number"
@@ -74,7 +79,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               autoFocus
             />
 
-            <label htmlFor="racerCurrentStarFragment">Current Star Fragments :</label>
+            <label htmlFor="racerCurrentStarFragment">{t('edit.currentStarFragment')}</label>
             <input
               className="input"
               type="number"
@@ -87,7 +92,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             {racer.superCharge && (
               <>
-                <label htmlFor="racerCurrentSuperChargeLevel">Current Super Charge Level :</label>
+                <label htmlFor="racerCurrentSuperChargeLevel">{t('edit.currentSuperChargeLevel')}</label>
                 <input
                   className="input"
                   type="number"
@@ -100,7 +105,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               </>
             )}
 
-            <label htmlFor="racerCurrentShards">Current Shards :</label>
+            <label htmlFor="racerCurrentShards">{t('edit.currentShards')}</label>
             <input
               className="input"
               type="number"
@@ -113,7 +118,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
 
             {racer.superCharge && (
               <>
-                <label htmlFor="racerCurrentSuperChargeTokens">Current Super Charge Tokens :</label>
+                <label htmlFor="racerCurrentSuperChargeTokens">{t('edit.currentSuperChargeTokens')}</label>
                 <input
                   className="input"
                   type="number"
@@ -126,7 +131,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               </>
             )}
 
-            <label htmlFor="racerCurrentMPL">Current MPL :</label>
+            <label htmlFor="racerCurrentMPL">{t('edit.currentMPL')}</label>
             <input
               className="input"
               type="number"
@@ -137,7 +142,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               required
             />
 
-            <label htmlFor="racerHighestMPL">Highest MPL :</label>
+            <label htmlFor="racerHighestMPL">{t('edit.highestMPL')}</label>
             <input
               className="input"
               type="number"
@@ -149,10 +154,10 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
             />
             <div className="mt-5 flex justify-around gap-2 col-span-full">
               <button type="button" className="btn preset-filled-error-50-950" onClick={() => setIsOpen(false)}>
-                Cancel
+                {t('edit.cancel')}
               </button>
               <button className="btn preset-filled-primary-50-950" type="submit" data-trad="saveRacer">
-                Save Racer
+                {t('edit.saveRacer')}
               </button>
             </div>
           </form>

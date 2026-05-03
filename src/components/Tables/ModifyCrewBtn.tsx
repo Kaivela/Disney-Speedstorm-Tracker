@@ -2,12 +2,14 @@ import { useContext, useState } from 'react';
 import type { ICrew } from '../../types/types';
 import { AppContext } from '../../context/AppContext';
 import Modal from '../Modal';
+import { useTranslation } from 'react-i18next';
 
 export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
   // LOGIC
   const [isOpen, setIsOpen] = useState(false);
   const [currentStars, setCurrentStars] = useState(crew.currentStars);
   const [currentShards, setCurrentShards] = useState(crew.currentShards);
+  const { t } = useTranslation();
 
   const { crewsSaved, updateCrews } = useContext(AppContext);
 
@@ -28,7 +30,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
   return (
     <>
       <button className="btn btn-sm preset-filled-primary-50-950" data-trad="modify" onClick={() => setIsOpen(true)}>
-        Edit
+        {t('edit.edit')}
       </button>
       {isOpen && (
         <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
@@ -50,7 +52,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
               saveCrewStateAndStorage();
               setIsOpen(false);
             }}>
-            <label htmlFor="crewCurrentStars">Current Stars :</label>
+            <label htmlFor="crewCurrentStars">{t('edit.currentStars')}</label>
             <input
               className="input"
               type="number"
@@ -62,7 +64,7 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
               autoFocus
             />
 
-            <label htmlFor="crewCurrentShards">Current Shards :</label>
+            <label htmlFor="crewCurrentShards">{t('edit.currentShards')}</label>
             <input
               className="input"
               type="number"
@@ -74,10 +76,10 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
             />
             <div className="mt-5 flex justify-around gap-2 col-span-full">
               <button className="btn preset-filled-error-50-950" type="button" onClick={() => setIsOpen(false)}>
-                Cancel
+                {t('edit.cancel')}
               </button>
               <button className="btn preset-filled-primary-50-950" type="submit" data-trad="saveCrew">
-                Save Crew
+                {t('edit.saveCrew')}
               </button>
             </div>
           </form>

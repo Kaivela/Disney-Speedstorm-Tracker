@@ -20,7 +20,7 @@ function buildCollectionOptions(t: TFunction) {
   return [...new Set(racersBlank.map((racer) => racer.collection))].map((option) => {
     return (
       <option key={option} value={option}>
-        {t(`filters.${option}`)}
+        {t(`collection.${option}`)}
       </option>
     );
   });
