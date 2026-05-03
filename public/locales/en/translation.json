@@ -240,5 +240,16 @@
     "vanity": "Vanity Coins : {{total}}",
     "seasonCoins": "Season Coins : {{total}}",
     "MPL40Left": "Number of racers that need to reach MPL {{MPLGoal}} : {{MPL40Count}}"
+  },
+  "td": {
+    "Common": "Common",
+    "Rare": "Rare",
+    "Epic": "Epic",
+    "Speedster": "Speedster",
+    "Trickster": "Trickster",
+    "Defender": "Defender",
+    "Brawler": "Brawler",
+    "none": "None",
+    "maxed": "Maxed"
   }
 }

@@ -240,5 +240,16 @@
     "vanity": "Pièces de cosmetique : {{total}}",
     "seasonCoins": "Pièces de Saison : {{total}}",
     "MPL40Left": "Nombre de Pilotes qui peuvent monter LMJ {{MPLGoal}} : {{MPL40Count}}"
+  },
+  "td": {
+    "Common": "Commun",
+    "Rare": "Rare",
+    "Epic": "Épique",
+    "Speedster": "Sprinteur",
+    "Trickster": "Canaille",
+    "Defender": "Tank",
+    "Brawler": "Brute",
+    "none": "Aucune",
+    "maxed": "Max"
   }
 }

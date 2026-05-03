@@ -20,3 +20,5 @@ edit form a valider on enter key
 quand on créer app context et quon load settings il faudra utiliser le i18. change language sur le setting de l'utilisateur
 
 check si le script preload peut pas etre simplifié en utilisant directement IRacers/Icrew
+
+transparency pas partout
