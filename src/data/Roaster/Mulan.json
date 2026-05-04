@@ -12,17 +12,6 @@
       "MPLTuneCoinReward": "S0To4"
     },
     {
-      "releaseSeason": 0,
-      "rarity": "Common",
-      "role": "Defender",
-      "name": "Shang",
-      "superCharge": true,
-      "universalBox": "✔",
-      "MPLTokenOld": true,
-      "MPLOldShardsReward": true,
-      "MPLTuneCoinReward": "S0To4"
-    },
-    {
       "releaseSeason": 19,
       "rarity": "Common",
       "role": "Brawler",
@@ -32,6 +21,17 @@
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
       "MPLTuneCoinReward": "S10ToLatest"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Common",
+      "role": "Defender",
+      "name": "Shang",
+      "superCharge": true,
+      "universalBox": "✔",
+      "MPLTokenOld": true,
+      "MPLOldShardsReward": true,
+      "MPLTuneCoinReward": "S0To4"
     }
   ],
   "crews": [
@@ -91,18 +91,18 @@
       "exclusiveTo": "Mulan"
     },
     {
-      "releaseSeason": 0,
-      "rarity": "Epic",
-      "name": "General Li",
-      "universalBox": "✔",
-      "exclusiveTo": "Shang"
-    },
-    {
       "releaseSeason": 19,
       "rarity": "Epic",
       "name": "Hayabusa",
       "universalBox": "✘",
       "exclusiveTo": "Shan Yu"
+    },
+    {
+      "releaseSeason": 0,
+      "rarity": "Epic",
+      "name": "General Li",
+      "universalBox": "✔",
+      "exclusiveTo": "Shang"
     }
   ]
 }

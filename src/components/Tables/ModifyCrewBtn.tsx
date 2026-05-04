@@ -43,7 +43,9 @@ export function ModifyCrewBtn({ crew }: { crew: ICrew }) {
                 e.currentTarget.src = '/img/Locked.webp';
               }}
             />
-            <h2 className="h4">Edit {crew.name}</h2>
+            <h2 className="h4">
+              {t('edit.edit')} {t(`crewName.${crew.name}`)}
+            </h2>
           </div>
           <form
             className="grid grid-cols-2 gap-2"

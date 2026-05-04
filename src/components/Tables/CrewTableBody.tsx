@@ -5,28 +5,30 @@ import { buildIElementsArray } from '../../compute/buildIElementArray';
 import type { ICrew } from '../../types/types';
 import { ElementImgHtml } from './ElementImgHtml';
 import { getCrewTdColors } from '../../compute/tdColors';
+import { useTranslation } from 'react-i18next';
 
 function Crew({ crew }: { crew: ICrew }) {
   const { settings } = useContext(AppContext);
+  const { t } = useTranslation();
 
   return (
     <tr>
       {settings.showCrewColumn.releaseSeason && <td>{crew.releaseSeason}</td>}
-      {settings.showCrewColumn.exclusive && <td data-trad={crew.exclusiveTo}>{crew.exclusiveTo}</td>}
+      {settings.showCrewColumn.exclusive && <td data-trad={crew.exclusiveTo}>{t(`racerName.${crew.exclusiveTo}`)}</td>}
       {settings.showCrewColumn.image && (
         <td className="td-img">
           <ElementImgHtml element={crew} />
         </td>
       )}
-      {settings.showCrewColumn.collection && <td data-trad={crew.collection}>{crew.collection}</td>}
-      {settings.showCrewColumn.rarity && <td data-trad={crew.rarity}>{crew.rarity}</td>}
-      {settings.showCrewColumn.name && <td data-trad={crew.name}>{crew.name}</td>}
+      {settings.showCrewColumn.collection && <td data-trad={crew.collection}>{t(`collection.${crew.collection}`)}</td>}
+      {settings.showCrewColumn.rarity && <td data-trad={crew.rarity}> {t(`td.${crew.rarity}`)}</td>}
+      {settings.showCrewColumn.name && <td data-trad={crew.name}>{t(`crewName.${crew.name}`)}</td>}
       {settings.showCrewColumn.currentStars && <td>{crew.currentStars}</td>}
       {settings.showCrewColumn.currentShards && (
-        <td className={getCrewTdColors(crew).shardsColor}>{crew.currentStars === 5 ? 'maxed' : crew.currentShards}</td>
+        <td className={getCrewTdColors(crew).shardsColor}>{crew.currentStars === 5 ? t('td.maxed') : crew.currentShards}</td>
       )}
       {settings.showCrewColumn.shardsNeededToMax && (
-        <td className={getCrewTdColors(crew).shardsColor}>{crew.shardsNeededToMax === 0 ? 'maxed' : crew.shardsNeededToMax}</td>
+        <td className={getCrewTdColors(crew).shardsColor}>{crew.shardsNeededToMax === 0 ? t('td.maxed') : crew.shardsNeededToMax}</td>
       )}
       {settings.showCrewColumn.free && <td>{crew.universalBox}</td>}
       <td>
