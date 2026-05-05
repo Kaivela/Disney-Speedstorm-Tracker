@@ -6,6 +6,7 @@ import { ImportFileBtn } from './ImportFileBtn';
 import { AccountStats } from './AccountStats';
 import { ToggleGroup } from '@skeletonlabs/skeleton-react';
 import { useTranslation } from 'react-i18next';
+import { GitHub } from './GitHub';
 
 export function Header() {
   const { mode, setMode } = useContext(AppContext);
@@ -13,6 +14,7 @@ export function Header() {
   return (
     <header className="Header">
       <h1 className="h2">Disney Speedstorm Tracker</h1>
+      <GitHub />
       <div className="flex gap-2 items-center justify-around mb-3">
         <ToggleGroup value={[mode]} className="bg-black/20 backdrop-blur-xs">
           <ToggleGroup.Item className="px-10 py-2 aspect-auto" value="racer" onClick={() => setMode('racer')}>

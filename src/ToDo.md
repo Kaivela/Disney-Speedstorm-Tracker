@@ -6,8 +6,6 @@ ajouter icone de role a gauche du text dans la td "role" pour les racer
 ACTIONS - calculate racer
 ENORME REFACTO
 
-ajouter un lien vers mon github qui pointe sur donation !! Kappa
-
 quand on migre une ancienne save il faut ctrl + R pour faire apparaitre les nouveau perso
 
 le tableau s'aplati quand on réduit la taille de la fenetre (n'est pas responsive) mais qui en gros s'adapte a la taille de l'utilisateur
