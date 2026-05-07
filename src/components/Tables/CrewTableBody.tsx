@@ -42,6 +42,7 @@ function CrewList() {
   //LOGIC
   const { crewsSaved, crewFilters, sortCrewColumn } = useContext(AppContext);
   const iCrews = buildIElementsArray(crewsSaved);
+  const { t } = useTranslation();
 
   return iCrews
     .filter((crew) => {
@@ -54,7 +55,7 @@ function CrewList() {
       let freeFilter = true;
 
       if (crewFilters.name) {
-        nameFilter = crew.name.toLowerCase().includes(crewFilters.name.toLowerCase());
+        nameFilter = t(`crewName.${crew.name}`).toLowerCase().includes(crewFilters.name.toLowerCase());
       }
       if (crewFilters.season !== -1) {
         seasonFilter = crew.releaseSeason === crewFilters.season;

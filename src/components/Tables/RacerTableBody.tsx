@@ -76,6 +76,8 @@ function RacerList() {
   // LOGIC
   const { racersSaved, racerFilters, sortRacerColumn } = useContext(AppContext);
   const iRacers = buildIElementsArray(racersSaved);
+  const { t } = useTranslation();
+
   return iRacers
     .filter((racer) => {
       let nameFilter = true;
@@ -90,7 +92,7 @@ function RacerList() {
       let superChargeTokensNeededFilter = true;
 
       if (racerFilters.name) {
-        nameFilter = racer.name.toLowerCase().includes(racerFilters.name.toLowerCase());
+        nameFilter = t(`racerName.${racer.name}`).toLowerCase().includes(racerFilters.name.toLowerCase());
       }
       if (racerFilters.season !== -1) {
         seasonFilter = racer.releaseSeason === racerFilters.season;
