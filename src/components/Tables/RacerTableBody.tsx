@@ -23,18 +23,10 @@ function Racer({ racer }: { racer: IRacer }) {
           <ElementImgHtml element={racer} />
         </td>
       )}
-      {settings.showRacerColumn.collection && <td data-trad={racer.collection}>{t(`collection.${racer.collection}`)}</td>}
-      {settings.showRacerColumn.rarity && (
-        <td className={getRacerTdColors(racer).rarityColor} data-trad={racer.rarity}>
-          {t(`td.${racer.rarity}`)}
-        </td>
-      )}
-      {settings.showRacerColumn.role && (
-        <td className={getRacerTdColors(racer).roleColor} data-trad={racer.role}>
-          {t(`td.${racer.role}`)}
-        </td>
-      )}
-      {settings.showRacerColumn.name && <td data-trad={racer.name}>{t(`racerName.${racer.name}`)}</td>}
+      {settings.showRacerColumn.collection && <td>{t(`collection.${racer.collection}`)}</td>}
+      {settings.showRacerColumn.rarity && <td className={getRacerTdColors(racer).rarityColor}>{t(`td.${racer.rarity}`)}</td>}
+      {settings.showRacerColumn.role && <td className={getRacerTdColors(racer).roleColor}>{t(`td.${racer.role}`)}</td>}
+      {settings.showRacerColumn.name && <td className="p-0.5">{t(`racerName.${racer.name}`)}</td>}
       {settings.showRacerColumn.currentStars && <td className={getRacerTdColors(racer).starColor}>{racer.currentStars}</td>}
       {settings.showRacerColumn.currentStarFragment && <td>{racer.currentStarFragment}</td>}
       {settings.showRacerColumn.currentSuperChargeLevel && (
@@ -74,9 +66,7 @@ function Racer({ racer }: { racer: IRacer }) {
       <td>
         <div className="flex flex-col gap-2 h-full items-center">
           <ModifyRacerBtn racer={racer} />
-          <button className="btn btn-sm hidden preset-filled-primary-50-950" data-trad="calculate" data-index="${index}">
-            Calculate
-          </button>
+          <button className="btn btn-sm hidden preset-filled-primary-50-950">Calculate</button>
         </div>
       </td>
     </tr>

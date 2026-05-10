@@ -14,15 +14,15 @@ function Crew({ crew }: { crew: ICrew }) {
   return (
     <tr>
       {settings.showCrewColumn.releaseSeason && <td>{crew.releaseSeason}</td>}
-      {settings.showCrewColumn.exclusive && <td data-trad={crew.exclusiveTo}>{t(`racerName.${crew.exclusiveTo}`)}</td>}
+      {settings.showCrewColumn.exclusive && <td>{t(`racerName.${crew.exclusiveTo}`)}</td>}
       {settings.showCrewColumn.image && (
         <td className="td-img">
           <ElementImgHtml element={crew} />
         </td>
       )}
-      {settings.showCrewColumn.collection && <td data-trad={crew.collection}>{t(`collection.${crew.collection}`)}</td>}
-      {settings.showCrewColumn.rarity && <td data-trad={crew.rarity}> {t(`td.${crew.rarity}`)}</td>}
-      {settings.showCrewColumn.name && <td data-trad={crew.name}>{t(`crewName.${crew.name}`)}</td>}
+      {settings.showCrewColumn.collection && <td>{t(`collection.${crew.collection}`)}</td>}
+      {settings.showCrewColumn.rarity && <td> {t(`td.${crew.rarity}`)}</td>}
+      {settings.showCrewColumn.name && <td>{t(`crewName.${crew.name}`)}</td>}
       {settings.showCrewColumn.currentStars && <td>{crew.currentStars}</td>}
       {settings.showCrewColumn.currentShards && (
         <td className={getCrewTdColors(crew).shardsColor}>{crew.currentStars === 5 ? t('td.maxed') : crew.currentShards}</td>

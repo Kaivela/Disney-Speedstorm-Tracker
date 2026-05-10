@@ -180,7 +180,6 @@ export function Filters() {
       <div className="flex gap-1 mx-auto">
         <button
           className="btn preset-filled"
-          data-trad="reset_all"
           onClick={() => {
             setCrewFilters(filtersDefault.crew);
           }}>

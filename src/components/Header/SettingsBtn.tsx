@@ -25,15 +25,10 @@ export function SettingsBtn() {
       <Modal onClose={() => setIsOpen(false)} isOpen={isOpen}>
         <div>
           <div className="settings gap-4">
-            <h2 className="h4" data-trad="settings">
-              {t('settings.SETTINGS')}
-            </h2>
+            <h2 className="h4">{t('settings.SETTINGS')}</h2>
             <span></span>
 
-            <label htmlFor="trad_button" data-trad="change_lang">
-              {t('settings.lang')}
-            </label>
-
+            <label htmlFor="trad_button">{t('settings.lang')}</label>
             <ToggleGroup value={[settings.lang]} className="bg-black/20 backdrop-blur-xs w-min">
               <ToggleGroup.Item
                 className="px-10 py-2 aspect-auto"
@@ -55,14 +50,10 @@ export function SettingsBtn() {
               </ToggleGroup.Item>
             </ToggleGroup>
 
-            <label htmlFor="darkMode" data-trad="dark_mode">
-              {t('settings.dark')}
-            </label>
+            <label htmlFor="darkMode">{t('settings.dark')}</label>
             <input type="checkbox" className="checkbox" />
 
-            <label htmlFor="transparantTable" data-trad="transparant_table">
-              {t('settings.transparent')}
-            </label>
+            <label htmlFor="transparantTable">{t('settings.transparent')}</label>
             <input
               className="checkbox"
               defaultChecked={settings.transparent}
@@ -70,9 +61,7 @@ export function SettingsBtn() {
               type="checkbox"
             />
 
-            <label htmlFor="buttonGoal" data-trad="change_goal">
-              {t('settings.MPLGoal')}
-            </label>
+            <label htmlFor="buttonGoal">{t('settings.MPLGoal')}</label>
             <input
               className="input"
               type="number"
@@ -83,9 +72,7 @@ export function SettingsBtn() {
               required
             />
 
-            <label htmlFor="starGoal" data-trad="change_level_goal">
-              {t('settings.starGoal')}
-            </label>
+            <label htmlFor="starGoal">{t('settings.starGoal')}</label>
             <input
               className="input"
               type="number"
@@ -96,9 +83,7 @@ export function SettingsBtn() {
               required
             />
 
-            <label htmlFor="superChargeLevelGoal" data-trad="change_level_goal">
-              {t('settings.superChargeGoal')}
-            </label>
+            <label htmlFor="superChargeLevelGoal">{t('settings.superChargeGoal')}</label>
             <input
               className="input"
               type="number"
@@ -109,9 +94,7 @@ export function SettingsBtn() {
               required
             />
 
-            <label htmlFor="selectTheme" data-trad="set_up_background">
-              {t('settings.selectTheme')}
-            </label>
+            <label htmlFor="selectTheme">{t('settings.selectTheme')}</label>
             <select className="input " defaultValue={settings.theme} onChange={(event) => saveSettings({ theme: event.currentTarget.value })}>
               <option value="1">{t('theme.S1')}</option>
               <option value="2">{t('theme.S2')}</option>

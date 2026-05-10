@@ -76,16 +76,15 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="releaseSeason"
-                  data-trad="season">
+                  data-sort="releaseSeason">
                   {t('th.season')}
                 </th>
               )}
               {settings.showRacerColumn.image && <th>{t('th.img')}</th>}
               {settings.showRacerColumn.collection && <th>{t('th.collection')}</th>}
-              {settings.showRacerColumn.rarity && <th data-trad="rarity">{t('th.rarity')}</th>}
-              {settings.showRacerColumn.role && <th data-trad="role">{t('th.role')}</th>}
-              {settings.showRacerColumn.name && <th data-trad="racer_name_table">{t('th.racerName')}</th>}
+              {settings.showRacerColumn.rarity && <th>{t('th.rarity')}</th>}
+              {settings.showRacerColumn.role && <th>{t('th.role')}</th>}
+              {settings.showRacerColumn.name && <th>{t('th.racerName')}</th>}
               {settings.showRacerColumn.currentStars && (
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
@@ -96,22 +95,19 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="racerCurrentStarFragment cursor-pointer"
-                  data-sort="currentStarFragment"
-                  data-trad="current_starfragment_table"></th>
+                  data-sort="currentStarFragment"></th>
               )}
               {settings.showRacerColumn.currentSuperChargeLevel && (
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="currentSuperChargeLevel cursor-pointer"
-                  data-sort="currentSuperChargeLevel"
-                  data-trad="current_super_charge_level_table"></th>
+                  data-sort="currentSuperChargeLevel"></th>
               )}
               {settings.showRacerColumn.currentShards && (
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="currentShards"
-                  data-trad="current_shards_table">
+                  data-sort="currentShards">
                   {t('th.currentShards')}
                 </th>
               )}
@@ -119,8 +115,7 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="currentSuperChargeTokens"
-                  data-trad="current_super_charge_shards_table">
+                  data-sort="currentSuperChargeTokens">
                   {t('th.currentSuperChargeTokens')}
                 </th>
               )}
@@ -128,8 +123,7 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="currentMPL"
-                  data-trad="current_MPL_table">
+                  data-sort="currentMPL">
                   {t('th.currentMPL')}
                 </th>
               )}
@@ -137,18 +131,16 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="highestMPL"
-                  data-trad="highest_MPL_table">
+                  data-sort="highestMPL">
                   {t('th.highestMPL')}
                 </th>
               )}
-              {settings.showRacerColumn.maxMPL && <th data-trad="max_MPL_table">{t('th.maxMPL')}</th>}
+              {settings.showRacerColumn.maxMPL && <th>{t('th.maxMPL')}</th>}
               {settings.showRacerColumn.shardsNeededToMax && (
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="shardsNeededToMax"
-                  data-trad="shards_needed_table">
+                  data-sort="shardsNeededToMax">
                   {t('th.shardsNeeded')}
                 </th>
               )}
@@ -156,8 +148,7 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="shardsToGetInMPL"
-                  data-trad="shards_MPL_table">
+                  data-sort="shardsToGetInMPL">
                   {t('th.shardsInMPL')}
                 </th>
               )}
@@ -165,8 +156,7 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="superChargeTokensNeeded"
-                  data-trad="super_charge_tokens_to_get_table">
+                  data-sort="superChargeTokensNeeded">
                   {t('th.superChargeTokensNeeded')}
                 </th>
               )}
@@ -176,13 +166,12 @@ export function Table() {
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   data-sort="tuneCoinsNeededToMax"></th>
               )}
-              {settings.showRacerColumn.free && <th data-trad="free_table">{t('th.free')}</th>}
+              {settings.showRacerColumn.free && <th>{t('th.free')}</th>}
               {settings.showRacerColumn.shardsNeededToNextStar && (
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="shardsNeededToNextStar"
-                  data-trad="shards_to_next_star">
+                  data-sort="shardsNeededToNextStar">
                   {t('th.shardsNextStar')}
                 </th>
               )}
@@ -190,8 +179,7 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="tuneCoinsNeededToNextStar"
-                  data-trad="coins_to_next_star">
+                  data-sort="tuneCoinsNeededToNextStar">
                   {t('th.coinsNextStar')}
                 </th>
               )}
@@ -199,12 +187,11 @@ export function Table() {
                 <th
                   onClick={(event) => sortRacerClickHandler(event, sortRacerColumn, setSortRacerColumn)}
                   className="cursor-pointer"
-                  data-sort="shardsNeededIfMaxMPL"
-                  data-trad="shards-if-max-MPL">
+                  data-sort="shardsNeededIfMaxMPL">
                   {t('th.shardsIfMaxMPL')}
                 </th>
               )}
-              <th data-trad="actions">{t('th.action')}</th>
+              <th>{t('th.action')}</th>
             </tr>
           </thead>
           <RacerTableBody />
@@ -221,16 +208,15 @@ export function Table() {
                 <th
                   onClick={(event) => sortCrewClickHandler(event, sortCrewColumn, setSortCrewColumn)}
                   className="cursor-pointer"
-                  data-sort="releaseSeason"
-                  data-trad="season">
+                  data-sort="releaseSeason">
                   {t('th.season')}
                 </th>
               )}
               {settings.showCrewColumn.exclusive && <th>{t('th.exclusive')}</th>}
               {settings.showCrewColumn.image && <th>{t('th.img')}</th>}
               {settings.showCrewColumn.collection && <th>{t('th.collection')}</th>}
-              {settings.showCrewColumn.rarity && <th data-trad="rarity">{t('th.rarity')}</th>}
-              {settings.showCrewColumn.name && <th data-trad="crew_name_table">{t('th.crewName')}</th>}
+              {settings.showCrewColumn.rarity && <th>{t('th.rarity')}</th>}
+              {settings.showCrewColumn.name && <th>{t('th.crewName')}</th>}
               {settings.showCrewColumn.currentStars && [
                 <th
                   onClick={(event) => sortCrewClickHandler(event, sortCrewColumn, setSortCrewColumn)}
@@ -241,8 +227,7 @@ export function Table() {
                 <th
                   onClick={(event) => sortCrewClickHandler(event, sortCrewColumn, setSortCrewColumn)}
                   className="cursor-pointer"
-                  data-sort="currentShards"
-                  data-trad="current_shards_table">
+                  data-sort="currentShards">
                   {t('th.currentShards')}
                 </th>
               )}
@@ -250,13 +235,12 @@ export function Table() {
                 <th
                   onClick={(event) => sortCrewClickHandler(event, sortCrewColumn, setSortCrewColumn)}
                   className="cursor-pointer"
-                  data-sort="shardsNeededToMax"
-                  data-trad="shards_needed_table">
+                  data-sort="shardsNeededToMax">
                   {t('th.shardsNeeded')}
                 </th>
               )}
-              {settings.showCrewColumn.free && <th data-trad="free_table">{t('th.free')}</th>}
-              <th data-trad="actions">{t('th.action')}</th>
+              {settings.showCrewColumn.free && <th>{t('th.free')}</th>}
+              <th>{t('th.action')}</th>
             </tr>
           </thead>
           <CrewTableBody />

@@ -40,7 +40,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
   // TEMPLATE
   return (
     <>
-      <button className="btn btn-sm preset-filled-primary-50-950" data-trad="modify" onClick={() => setIsOpen(true)}>
+      <button className="btn btn-sm preset-filled-primary-50-950" onClick={() => setIsOpen(true)}>
         {t('edit.edit')}
       </button>
       {isOpen && (
@@ -156,7 +156,7 @@ export function ModifyRacerBtn({ racer }: { racer: IRacer }) {
               <button type="button" className="btn preset-filled-error-50-950" onClick={() => setIsOpen(false)}>
                 {t('edit.cancel')}
               </button>
-              <button className="btn preset-filled-primary-50-950" type="submit" data-trad="saveRacer">
+              <button className="btn preset-filled-primary-50-950" type="submit">
                 {t('edit.saveRacer')}
               </button>
             </div>
