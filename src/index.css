@@ -68,7 +68,6 @@ h1 {
 table {
   border-collapse: collapse;
   margin: auto;
-  /* width: 100%; */
   color: black;
 }
 
@@ -79,20 +78,18 @@ thead {
 
 td {
   border: 1px solid black;
-  padding: 3px;
+  padding: 0;
   text-align: center;
 }
 
 th {
-  min-width: 85px;
-  max-width: fit-content;
+  min-width: 80px;
   box-sizing: border-box;
   color: white;
   padding: 1px;
 }
 
 td img {
-  display: block;
   height: 80px;
   border: none;
 }

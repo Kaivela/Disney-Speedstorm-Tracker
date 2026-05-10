@@ -11,7 +11,7 @@ export function ElementImgHtml({ element }: { element: IRacer | ICrew }) {
   // TEMPLATE
   return (
     <img
-      className="img-cover"
+      className="m-auto"
       src={`/img/${elementtype}/${element.name}.webp`}
       onError={(e) => {
         e.currentTarget.onerror = null; // évite une boucle infinie
