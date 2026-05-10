@@ -49,7 +49,7 @@ export function getRacerTdColors(racer: IRacer) {
 
   let currentSuperShardsColor;
   if (racer.superCharge) {
-    if (racer.currentSuperChargeTokens === 0 && racer.superChargeTokensNeeded === 0) currentSuperShardsColor = 'bg-[#000000B3] text-white';
+    if (racer.superChargeTokensNeeded === 0) currentSuperShardsColor = 'bg-[#000000B3] text-white';
     else currentSuperShardsColor = '';
   } else currentSuperShardsColor = 'bg-[#000000B3] text-[#FF0000B3] font-bold';
 
