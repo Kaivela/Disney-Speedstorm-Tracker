@@ -650,9 +650,9 @@
   "stats": {
     "account": "Statut du Compte:",
     "tuneCoinsRequired": "Pièces de Tuning nécéssaires pour avoir chaque Pilote à {{starsGoal}} Étoiles : {{totalTuneCoinsNeeded}}",
-    "racerShardsLeft": "Éclats de Pilote restants à récupérer : {{totalRacerShardsNeeded}}",
-    "crewShardsLeft": "Éclats d'Équipiers restants à récupérer : {{totalCrewShardsNeeded}}",
-    "superChargeTokensLeft": "Jetons de Suralimentation à récupérer : {{totalSuperChargeTokensNeeded}}",
+    "racerShardsLeft": "Éclats de Pilote restants à obtenir : {{totalRacerShardsNeeded}}",
+    "crewShardsLeft": "Éclats d'Équipiers restants à obtenir : {{totalCrewShardsNeeded}}",
+    "superChargeTokensLeft": "Jetons de Suralimentation à obtenir : {{totalSuperChargeTokensNeeded}}",
     "shardsLeftInUniBox": "Éclats restants dans la Boîte Universelle : {{totalUniBoxShardsNeeded}}",
     "racers": "Pilotes : {{totalUniBoxRacerShardsNeeded}}",
     "crews": "Équipiers : {{totalUniBoxCrewShardsNeeded}}",
@@ -682,13 +682,13 @@
     "role": "Classe",
     "racerName": "Nom du Pilote",
     "currentShards": "Éclats actuels",
-    "currentSuperChargeTokens": "Jetons de Suralimentation actuels",
+    "currentSuperChargeTokens": "Jetons Suralim. actuels",
     "currentMPL": "LMJ actuel",
     "highestMPL": "Meilleur LMJ",
     "maxMPL": "Meilleur Badge LMJ",
     "shardsNeeded": "Éclats Manquants",
     "shardsInMPL": "Éclats en LMJ",
-    "superChargeTokensNeeded": "Jetons de Surralimention manquants",
+    "superChargeTokensNeeded": "Jetons Suralim. manquants",
     "free": "Boîte Universelle",
     "shardsNextStar": "Éclats Prochaine Étoile",
     "coinsNextStar": "Pièces de Tuning Prochaine Étoile",
@@ -724,7 +724,7 @@
     "maxOr0": "Max ou 0",
     "currentStars": "Étoiles Actuelles",
     "boxes": "Boîte Universelle",
-    "superChargeTokens": "Jetons de Suralimentation Manquants"
+    "superChargeTokens": "Jetons de Suralim. Manquants"
   },
   "edit": {
     "edit": "Modifier",
