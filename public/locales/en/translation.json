@@ -10,7 +10,7 @@
     "Hercules": "Hercules",
     "BeautyAndTheBeast": "Beauty and the Beast",
     "TheJungleBook": "The Jungle Book",
-    "MonsterInc": "Monster Inc.",
+    "MonsterInc": "Monsters, Inc.",
     "WaltDisneyWorld": "Walt Disney World",
     "ToyStory": "Toy Story",
     "LiloStitch": "Lilo & Stitch",
@@ -626,7 +626,7 @@
     "exclusiveTo": "Exclusive To"
   },
   "theme": {
-    "S1": "Season 1 : Monster Inc.",
+    "S1": "Season 1 : Monsters, Inc.",
     "S2": "Season 2 : Toy Story",
     "S3": "Season 3 : Lilo & Stitch",
     "S4": "Season 4 : Aladdin",
