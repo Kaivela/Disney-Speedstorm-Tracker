@@ -28,14 +28,18 @@ export function AccountStats() {
   );
   const totalUniBoxRacerShardsNeeded = sum(iRacers.filter((racer) => racer.universalBox === '✔').map((IRacer) => IRacer.shardsNeededToMax));
   const totalTuneCoinsToGetInMPL = sum(
-    iRacers.filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0).map((IRacer) => calculateCoinsToGet(IRacer, settings.MPLGoal))
+    iRacers
+      .filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0 || racer.currentShards >= 10)
+      .map((IRacer) => calculateCoinsToGet(IRacer, settings.MPLGoal))
   );
   const totalTokensToGetInMPL = sum(
-    iRacers.filter((racer) => racer.currentMPL > 0 || racer.currentStarFragment > 0).map((IRacer) => calculateTokensToGet(IRacer, settings.MPLGoal))
+    iRacers
+      .filter((racer) => racer.currentMPL > 0 || racer.currentStarFragment > 0 || racer.currentShards >= 10)
+      .map((IRacer) => calculateTokensToGet(IRacer, settings.MPLGoal))
   );
   const totalCosmeticToGetInMPL = sum(
     iRacers
-      .filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0)
+      .filter((racer) => racer.currentStars > 0 || racer.currentStarFragment > 0 || racer.currentShards >= 10)
       .map((IRacer) => calculateCosmeticToGet(IRacer, settings.MPLGoal))
   );
   const totalSeasonCoinsToGetInMPL = sum(
@@ -48,7 +52,14 @@ export function AccountStats() {
   const totalCrewShardsNeeded = sum(iCrews.map((ICrew) => ICrew.shardsNeededToMax));
   const totalUniBoxCrewShardsNeeded = sum(iCrews.filter((crew) => crew.universalBox === '✔').map((ICrew) => ICrew.shardsNeededToMax));
   const totalUniBoxShardsNeeded = totalUniBoxCrewShardsNeeded + totalUniBoxRacerShardsNeeded;
-  const MPL40Count = racersSaved.filter((racer) => racer.highestMPL < 40).reduce((count) => count + 1, 0);
+  const MPL40Count = racersSaved
+    .filter(
+      (racer) =>
+        (racer.currentStars > 0 && racer.highestMPL < 40) ||
+        (racer.currentStarFragment > 0 && racer.highestMPL < 40) ||
+        (racer.currentShards >= 10 && racer.highestMPL < 40)
+    )
+    .reduce((count) => count + 1, 0);
 
   // TEMPLATE
   return (
