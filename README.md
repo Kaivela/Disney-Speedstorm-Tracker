@@ -1,75 +1,124 @@
-# React + TypeScript + Vite
+# Disney Speedstorm Tracker 🏎️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive and modern tracking tool to manage your progression in **Disney Speedstorm**. Track your racers and crews, plan your evolution, and optimize your resources.
 
-Currently, two official plugins are available:
+## 🎯 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 📊 Character Management
 
-## React Compiler
+- **Racer Mode** : Detailed tracking of each racer with :
+  - Current and target star levels
+  - Shards needed for upgrades
+  - Multi Player League (MPL) and rewards
+  - Supercharge tokens
+  - Rarity and Class
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Crew Mode** : Crew management with :
+  - Shards and upgrades
+  - Star levels
+  - Associated collections
 
-Note: This will impact Vite dev & build performances.
+### 🔍 Advanced Filtering and Sorting
 
-## Expanding the ESLint configuration
+- Filter by :
+  - Character name
+  - Release season
+  - Collection
+  - Rarity
+  - Racer classes
+  - Universal box
+  - Upgrade status
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Sort numeric columns in ascending/descending order
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 💾 Data Management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Export** : Download your data in JSON format
+- **Import** : Restore your previous backups
+- **Local Storage** : Automatic persistence in your browser
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+### 🌍 Multilingual Support
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Support for **French** and **English**
+- Automatic system language detection
+- Language switching in settings
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+### 🎨 Customizable Interface
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+- **Themes** : Adapt the appearance to each season's theme
+- **Transparent Mode** : Customize background transparency
+- **Responsive** : Compatible with different screen sizes [not yet]
+
+### 📈 Account Statistics
+
+- Overview of your overall progression
+- Summary of resources and objectives
+
+## 🛠️ Technologies Used
+
+- **Frontend** :
+  - React 19
+  - TypeScript
+  - Vite (build tool)
+  - Tailwind CSS + TailwindCSS/Vite
+  - Skeleton UI (components)
+
+- **Internationalization** :
+  - i18next
+  - react-i18next
+  - i18next-browser-languagedetector
+
+- **Code Quality** :
+  - ESLint
+  - Prettier
+  - Vitest (testing)
+
+## 💡 User Guide
+
+- Use the selector at the top to switch between "Racer" and "Crew".
+
+- Filter Your Data
+  - Use the filter fields at the top of the table
+  - All filters are cumulative
+
+- Edit a Racer/Crew
+  - Click the "Edit" button on the relevant row
+  - Update the values
+  - Confirm to save
+
+- Backup and Restore
+  - Export : Click the export button to download your data
+  - Import : Click the import button to load a previous backup
+
+- Settings
+  - Click the settings icon to customize :
+    - Language
+    - Season theme
+    - Interface transparency
+    - Columns display
+
+## 📝 Developer Notes
+
+- Data is stored locally in your browser (localStorage)
+- Shards needed are calculated automatically
+- MPL rewards vary depending on the racer's release season
+- Automatic migration of old backups (refresh page with Ctrl+R if needed)
+
+## 🐛 Report a Bug
+
+If you find a bug :
+
+1. Check your version
+2. Refresh the page (Ctrl+R)
+3. Clear your browser cache if the issue persists
+4. Report the issue on the repository or directly on the discord channel related
+
+## 🤝 Contributing
+
+Contributions are welcome ! Feel free to :
+
+- Report bugs
+- Suggest new features
+- Propose code improvements
+
+Have fun tracking your progression in Disney Speedstorm ! 🏆

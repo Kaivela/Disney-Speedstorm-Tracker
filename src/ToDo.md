@@ -8,7 +8,7 @@ ENORME REFACTO
 
 quand on migre une ancienne save il faut ctrl + R pour faire apparaitre les nouveau perso
 
-le tableau s'aplati quand on réduit la taille de la fenetre (n'est pas responsive) mais qui en gros s'adapte a la taille de l'utilisateur
+make website responsive
 
 quand on créer app context et quon load settings il faudra utiliser le i18. change language sur le setting de l'utilisateur
 
