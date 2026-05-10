@@ -119,7 +119,7 @@ th.racerCurrentStarFragment {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  min-width: 30px;
+  min-width: 25px;
 }
 
 th.currentSuperChargeLevel {
