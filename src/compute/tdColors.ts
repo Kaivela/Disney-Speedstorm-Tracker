@@ -42,7 +42,22 @@ export function getRacerTdColors(racer: IRacer) {
   // warning = dark: bg : #A30202B3, color: #ffffffb3
   //           light: bg: #FF0000B3, color: white
 
-  return { rarityColor, roleColor, starColor, superChargeColor, shardsColor };
+  let superShardsNeededColor;
+  if (racer.superChargeTokensNeeded === 0) superShardsNeededColor = 'bg-[#000000B3] text-white';
+  else if (racer.superChargeTokensNeeded <= 50 && racer.superChargeTokensNeeded >= 41) superShardsNeededColor = 'bg-[#FFFF00B3] text-black';
+  else if (racer.superChargeTokensNeeded <= 10) superShardsNeededColor = 'bg-[#FF0000B3] text-[#ffffffb3]';
+
+  let currentSuperShardsColor;
+  if (racer.superCharge) {
+    if (racer.currentSuperChargeTokens === 0 && racer.superChargeTokensNeeded === 0) currentSuperShardsColor = 'bg-[#000000B3] text-white';
+    else currentSuperShardsColor = '';
+  } else currentSuperShardsColor = 'bg-[#000000B3] text-[#FF0000B3] font-bold';
+
+  let shardsMPLColor;
+  if (racer.shardsToGetInMPL === 0) shardsMPLColor = 'bg-[#000000B3] text-white';
+  else shardsMPLColor = '';
+
+  return { rarityColor, roleColor, starColor, superChargeColor, shardsColor, superShardsNeededColor, shardsMPLColor, currentSuperShardsColor };
 }
 
 export function getCrewTdColors(crew: ICrew) {
