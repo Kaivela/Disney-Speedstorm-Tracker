@@ -49,7 +49,7 @@
       "rarity": "Rare",
       "role": "Trickster",
       "name": "Syndrome",
-      "superCharge": true,
+      "superCharge": false,
       "universalBox": "✘",
       "MPLTokenOld": false,
       "MPLOldShardsReward": false,
