@@ -20,16 +20,16 @@ export function getRacerTdColors(racer: IRacer) {
   // background-color: dark: #5b0080b3 , light: #e93fffb3
 
   let starColor;
-  if (racer.currentStars === 5) starColor = 'bg-yellow-300';
-  else if (racer.currentStars === 6) starColor = 'bg-amber-500';
+  if (racer.currentStars === 5) starColor = 'bg-[#fde047b3]';
+  else if (racer.currentStars === 6) starColor = 'bg-[#F59E0Bb3]';
   else starColor = '';
 
   let superChargeColor;
   if (racer.superCharge) {
-    if (racer.currentSuperChargeLevel === 1) superChargeColor = 'bg-[#32F1FF]';
-    else if (racer.currentSuperChargeLevel === 2) superChargeColor = 'bg-gradient-to-tr from-[#ff54e8] to-[#32f1ff]';
-    else if (racer.currentSuperChargeLevel === 0) superChargeColor = 'bg-emerald-300';
-  } else superChargeColor = 'bg-surface-950 text-error-950 font-bold';
+    if (racer.currentSuperChargeLevel === 1) superChargeColor = 'bg-[#32F1FFb3]';
+    else if (racer.currentSuperChargeLevel === 2) superChargeColor = 'bg-gradient-to-tr from-[#ff54e8b3] to-[#32f1ffb3]';
+    else if (racer.currentSuperChargeLevel === 0) superChargeColor = 'bg-[#6EE7B7b3]';
+  } else superChargeColor = 'bg-[#000000B3] text-[#FF0000B3] font-bold';
 
   let shardsColor;
   if (racer.shardsNeededToMax === 0) shardsColor = 'bg-[#000000B3] text-white';
