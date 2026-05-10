@@ -86,7 +86,9 @@ th {
   min-width: 80px;
   box-sizing: border-box;
   color: white;
-  padding: 1px;
+  padding: 5px;
+  height: 60px;
+  vertical-align: middle;
 }
 
 td img {
