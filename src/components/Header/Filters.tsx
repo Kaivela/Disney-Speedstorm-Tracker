@@ -123,7 +123,7 @@ export function Filters() {
           {rarityOptions}
         </select>
         <select
-          className="input preset-filled w-17.5"
+          className="input preset-filled w-20"
           value={racerFilters.role}
           onChange={(event) => {
             setRacerFilters({ ...racerFilters, role: event.currentTarget.value });
@@ -132,7 +132,7 @@ export function Filters() {
           {roleOptions}
         </select>
         <select
-          className="input preset-filled w-40"
+          className="input preset-filled w-42"
           value={racerFilters.shardsNeeded}
           onChange={(event) => setRacerFilters({ ...racerFilters, shardsNeeded: event.currentTarget.value })}>
           <option value="">{t('filters.shardsNeeded')}</option>
