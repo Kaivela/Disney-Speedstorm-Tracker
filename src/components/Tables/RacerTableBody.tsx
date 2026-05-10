@@ -7,6 +7,7 @@ import { formatBigNumber } from '../../compute/calculs';
 import { ElementImgHtml } from './ElementImgHtml';
 import { getRacerTdColors } from '../../compute/tdColors';
 import { useTranslation } from 'react-i18next';
+import { MPLBadgeImgHtml } from './MPLBadgeImgHtml';
 
 function Racer({ racer }: { racer: IRacer }) {
   const { settings } = useContext(AppContext);
@@ -47,7 +48,11 @@ function Racer({ racer }: { racer: IRacer }) {
       )}
       {settings.showRacerColumn.currentMPL && <td>{racer.currentMPL}</td>}
       {settings.showRacerColumn.highestMPL && <td>{racer.highestMPL}</td>}
-      {settings.showRacerColumn.maxMPL && <td>badge max MPL</td>}
+      {settings.showRacerColumn.maxMPL && (
+        <td>
+          <MPLBadgeImgHtml highestMPL={racer.highestMPL} />
+        </td>
+      )}
       {settings.showRacerColumn.shardsNeededToMax && (
         <td className={getRacerTdColors(racer).shardsColor}>{currentStarMaxed ? t('td.maxed') : racer.shardsNeededToMax}</td>
       )}
